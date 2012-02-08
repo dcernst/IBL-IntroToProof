@@ -1,0 +1,165 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath, amsthm}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{amsthm}
+\usepackage{simpsons}
+\usepackage{fancyhdr}
+\usepackage[margin=1in]{geometry}
+\usepackage[hang,flushmargin,symbol*]{footmisc}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0, 0, .6}
+\definecolor{grey}{rgb}{.7, .7, .7}
+\usepackage[breaklinks]{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=darkblue,
+	anchorcolor=darkblue,
+	citecolor=darkblue,
+	pagecolor=darkblue,
+	urlcolor=darkblue,
+	pdftitle={},
+	pdfauthor={}
+}
+
+\newcommand{\dom}{\operatorname{Dom}}
+\newcommand{\codom}{\operatorname{Codom}}
+\newcommand{\range}{\operatorname{Rng}}
+
+\pagestyle{fancy}
+
+\lhead{\scriptsize Course Notes for Logic, Proof, \& Axiomatic Systems (Spring 2011)} 
+\rhead{\scriptsize Instructor: \href{http://oz.plymouth.edu/~dcernst}{D.C. Ernst}} 
+\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
+\cfoot{} 
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0.4pt} 
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{journal}[theorem]{Journal}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{question}[theorem]{Question}
+
+\begin{document}
+
+\addtocounter{section}{3}
+
+\begin{section}{Induction}
+
+%\addtocounter{subsection}{4}
+%\addtocounter{theorem}{90}
+
+\begin{subsection}{Introduction to Induction}
+
+In this section, we will explore a technique for proving statements of the form $(\forall n \in \mathbb{N})P(n)$, where $P(n)$ is some predicate.  Notice that this is a statement about natural numbers and not some other set.
+
+Consider the claims:
+\begin{enumerate}
+\item For all $n\in\mathbb{N}$, $\displaystyle 1+2+3+\cdots +n=\frac{n(n+1)}{2}$.
+\item For all $n\in\mathbb{N}$, $n^{2}+n+41$ is prime.
+\end{enumerate}
+Let's take a look at potential proofs.
+
+\bigskip
+
+\noindent \emph{``Proof'' of Claim (1).} If $n=1$, then $1=\frac{1(1+1)}{2}$.  If $n=2$, then $1+2=3=\frac{2(2+1)}{2}$.  If $n=3$, then $1+2+3=6=\frac{3(3+1)}{2}$, and so on. \hfill \qed
+
+\bigskip
+
+\noindent \emph{``Proof'' of Claim (2).} If $n=1$, then $n^{2}+n+41=43$, which is prime.  If $n=2$, then $n^{2}+n+41=47$, which is prime.  If $n=3$, then $n^{2}+n+41=53$, which is prime, and so on. \hfill \qed
+
+\bigskip
+
+Are these actual proofs?  The answer is NO!  In fact, the second claim isn't even true.  If $n=41$, then $n^{2}+n+41=41^{2}+41+41=41(41+1+1)$, which is not prime since it has 41 as a factor.
+
+It turns out that the first claim is true, but what we wrote cannot be a proof since the same type of reasoning when applied to the second claim seems to prove something that isn't actually true.
+
+We need a rigorous way of capturing ``and so on'' and a way to verify whether it really is ``and so on.''
+
+\begin{axiom}[Axiom of Induction]
+Let $S\subseteq \mathbb{N}$ such that both
+\begin{enumerate}
+\item $1\in S$, and
+\item if $k\in S$, then $k+1\in S$.
+\end{enumerate}
+Then $S=\mathbb{N}$.
+\end{axiom}
+
+\begin{remark}
+Recall that an axiom is a basic mathematical assumption.  That is, we are assuming that the Axiom of Induction is true, which I'm hoping that you can agree is a pretty reasonable assumption.  I like to think of the first hypothesis of the Axiom of Induction as saying that we have a first rung of a ladder.  The second hypothesis says that if we have some random rung, we can always get to the next rung.  Taken together, this says that we can get from the first rung to the second, from the second to the third, and so on.  Again, we are assuming that the ``and so on'' works as expected here.
+\end{remark}
+
+\begin{theorem}[Principle of Mathematical Induction, *]
+Let $P_{1}, P_{2}, P_{3}, \ldots$ be a sequence of statements, one for each natural number.  Assume
+\begin{enumerate}
+\item $P_{1}$ is true, and
+\item If $P_{k}$ is true, then $P_{k+1}$ is true.
+\end{enumerate}
+Then $P_{n}$ is true for all $n\in\mathbb{N}$.
+\end{theorem}
+
+\begin{remark}
+The Principal of Mathematical Induction (PMI) provides us with a process for proving statements of the form: ``For all $n\in\mathbb{N}$, $P_{n}$,'' where $P_{n}$ is some statement involving $n\in \mathbb{N}$.  Hypothesis (1) above is called the \textbf{base step} while (2) is called the \textbf{inductive step}.  Here is what a proof by induction looks like (remarks are in parentheses):
+
+\bigskip
+
+\begin{proof}
+We proceed by induction.
+\begin{enumerate}
+\item[(i)] Base step: (Verify that $P_{1}$ is true.  This often amounts to plugging $n=1$ into two sides of some claimed equation and verifying that both sides are actually equal.  Don't assume that they are equal!)
+
+\item[(ii)] Inductive step:  (Your goal is to prove that ``For all $k\in\mathbb{N}$, if $P_{k}$ is true, then $P_{k+1}$ is true.'')  Let $k\in\mathbb{N}$ and assume that $P_{k}$ is true.  (Now, do some stuff to show that $P_{k+1}$ is true.)  Therefore, $P_{k+1}$ is true.
+\end{enumerate}
+Thus, by the PMI, $P_{n}$ is true for all $n\in\mathbb{N}$.
+\end{proof}
+
+\end{remark}
+
+\begin{problem}[*]
+For all $n\in\mathbb{N}$, $\displaystyle \sum_{i=1}^{n}i=\frac{n(n+1)}{2}$.  (\emph{Note:} $\displaystyle \sum_{i=1}^{n}i=1+2+3+\cdots +n$, by definition.)
+\end{problem}
+
+\begin{problem}[*]
+For all $n\in\mathbb{N}$, 3 divides $4^{n}-1$.
+\end{problem}
+
+\begin{problem}[*]
+For all $n\in\mathbb{N}$, 6 divides $n^{3}-n$.
+\end{problem}
+
+\begin{problem}[*]
+Let $p_{1}, p_{2}, \ldots, p_{n}$ be $n$ distinct points arranged on a circle.  Then the number of line segments joining all pairs of points is $\frac{n^{2}-n}{2}$.
+\end{problem}
+
+\begin{theorem}[*]
+Let $A$ be a set with $n$ elements.  Then $\mathcal{P}(A)$ is a set with $2^{n}$ elements.\footnote{We encountered this theorem back in Section 2.2 (see Conjecture 2.33), but we didn't prove it.  Proving this theorem is rather tricky.  If you use induction (which I suggest), at some point, you will need to argue that if you add one more element to a finite set, then you end up with twice as many subsets.}
+\end{theorem}
+
+\end{subsection}
+
+\end{section}
+
+\end{document}

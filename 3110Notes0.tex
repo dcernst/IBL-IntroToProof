@@ -1,0 +1,111 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage[hang,flushmargin,symbol*]{footmisc}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0, 0, .6}
+\definecolor{grey}{rgb}{.7, .7, .7}
+\usepackage[breaklinks]{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=darkblue,
+	anchorcolor=darkblue,
+	citecolor=darkblue,
+	pagecolor=darkblue,
+	urlcolor=darkblue,
+	pdftitle={},
+	pdfauthor={}
+}
+
+\pagestyle{fancy}
+
+\lhead{\scriptsize Course Notes for Logic, Proof, \& Axiomatic Systems (Version 1.1)} 
+\rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}} 
+\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
+\cfoot{} 
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0.4pt} 
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{journal}[theorem]{Journal}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+
+\begin{document}
+
+\addtocounter{section}{-1}
+
+\begin{section}{Preface: Foundations of Higher Mathematics}
+
+\begin{subsection}{What is meant by foundations?}
+
+The foundations of mathematics refers to logic and set theory; the axioms of number and space.  Also, it refers to an introduction to the techniques of proof, and at a larger level the process of \emph{doing Mathematics}.  Proof is central to doing mathematics.
+
+Up to this point, it is likely that your experience of mathematics has been about using formulas and algorithms. That is only one part of mathematics. Mathematicians do much more than just use formulas.  Mathematicians experiment, make conjectures, write definitions, and prove theorems.  In this class, then, we will learn about doing all of these things.
+
+What will this class require?  Daily practice.  Just like learning to play an instrument or sport, you will have to learn new skills and ideas.  Sometimes you'll feel good, sometimes frustrated.  You'll probably go through a range of feelings from being exhilarated, to being stuck.  Figuring it out, victories, defeats, and all that is part of real life is what you can expect.  Most importantly it will be rewarding.  Learning mathematics requires dedication.  It will require that you be patient despite periods of confusion.  It will require that you persevere in order to understand.  As the instructor, I am here to guide you, but I cannot do the learning for you, just as music teacher cannot move your fingers and your heart for you.  Only you can do that.  I can give suggestions, structure the course to assist you, and try to help you figure out how to think through things.  Do your best, be prepared to put in a lot of time, and do all the work.  Ask questions in class, ask questions in office hours, and ask your classmates questions.  When you work hard and you come to understand, you feel good about yourself.  In the meantime, you have to believe that your work will pay off in intellectual development.
+
+How will this class be organized?  You have probably heard that mathematics is not a spectator sport.  Our focus in this class is on learning to DO mathematics, not learning to sit patiently while others do it.  Therefore, class time will be devoted to working on problems, and especially on students presenting conjectures and proofs to the class, asking questions of presenters in order to understand their work and their thinking, and sharing and clarifying our thinking and understanding of each other's ideas.  
+
+The class is fueled by your ability to prove theorems and share your ideas.  As we progress, you will find that you have ideas for proofs, but you are unsure of them.  In that case, you can either bring your idea to the class, or you can bring it to office hours.  By coming to office hours, you have a chance to refine your ideas and get individual feedback before bringing them to the class.  The more you use office hours, the more you will learn.  If the whole class is stuck, we can work on some ego-booster problems to get your ideas flowing.
+
+Finally, this is a very exciting time in your mathematical career.  It's where you learn what mathematics is really about!
+
+\end{subsection}
+
+\begin{subsection}{Your Toolbox, Questions, and Observations}
+
+Throughout the semester, we will develop a list of \emph{tools} that will help you understand and do mathematics. Your job is to keep a list of these tools.  It is suggested that you keep a running list in your portfolio.
+
+Next, it is of utmost importance that you work to understand every proof. (Every!)  Questions are often your best tool for determining whether you understand a proof.  Therefore, here are some sample questions that apply to any proof that you should be prepared to ask of yourself or the presenter:
+\begin{itemize}
+\item What method(s) of proof are you using?
+\item What form will the conclusion take?
+\item How did you know to set up that [equation, set, whatever]?
+\item How did you figure out what the problem was asking?
+\item Was this the first thing you tried?
+\item Can you explain how you went from this line to the next one?
+\item What were you thinking when you introduced this?
+\item Could we have \ldots instead?
+\item Would it be possible to \ldots?
+\item What if \ldots?
+\end{itemize}
+
+Another way to help you process and understand proofs is to try and make observations and connections between different ideas, proof statements and methods, and to compare approaches used by different people. Observations might sound like some of the following:
+\begin{itemize}
+\item When I tried this proof, I thought I needed to \ldots But I didn't need that, because \ldots
+\item I think that \ldots is important to this proof, because \ldots
+\item When I read the statement of this theorem, it seemed similar to this earlier theorem. Now I see that it [is/isn't] because \ldots
+\end{itemize}
+
+Lastly, it is highly important to respect learning and to respect other people's ideas.  Whether you disagree or agree, please praise and encourage your fellow classmates.  Use ideas from others as a starting point rather than something to be judgmental about.  Judgement is not the same as being judgmental.  Helpfulness, encouragement, and compassion are highly valued.
+
+\end{subsection}
+
+\end{section}
+
+\end{document}

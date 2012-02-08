@@ -1,0 +1,288 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage[margin=1in]{geometry}
+\usepackage[hang,flushmargin,symbol*]{footmisc}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0, 0, .6}
+\definecolor{grey}{rgb}{.7, .7, .7}
+\usepackage[breaklinks]{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=darkblue,
+	anchorcolor=darkblue,
+	citecolor=darkblue,
+	pagecolor=darkblue,
+	urlcolor=darkblue,
+	pdftitle={},
+	pdfauthor={}
+}
+
+\pagestyle{fancy}
+
+\lhead{\scriptsize Course Notes for Logic, Proof, \& Axiomatic Systems (Spring 2011)} 
+\rhead{\scriptsize Instructor: \href{http://oz.plymouth.edu/~dcernst}{D.C. Ernst}} 
+\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
+\cfoot{} 
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0.4pt} 
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{journal}[theorem]{Journal}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{question}[theorem]{Question}
+
+\begin{document}
+
+\addtocounter{section}{1}
+
+\begin{section}{Set Theory and Topology}
+
+\addtocounter{subsection}{3}
+\addtocounter{theorem}{58}
+
+\begin{subsection}{Basic Topology of $\mathbb{R}$}
+
+\begin{remark}
+For this entire section, our universe of discourse is the set of real numbers.  You may assume all the usual basic algebraic properties of the real numbers (addition, subtraction, multiplication, division, commutative property, distribution, etc.).
+\end{remark}
+
+Recall that an \textbf{axiom} is a statement that we \emph{assume} to be true.  Here are some useful axioms of the real numbers.
+
+\begin{axiom} If $p$ and $q$ are two different real numbers in $\mathbb{R}$, then there is a number between them. %(For example $(p+q)/2$.) 
+\end{axiom}
+
+\begin{exercise}
+Given real numbers $p$ and $q$ with $p<q$, construct a real number $x$ such that $p<x<q$.  (We know such a point must exist by the previous example, but this exercise is asking you to produce an actual candidate.)
+\end{exercise}
+
+\begin{axiom} (Linear ordering) If $a$, $b$, and $c$ are real numbers, then:
+\begin{enumerate}
+\item If $a < b$ and $b<c$, then $a<c$;
+\item Exactly one of the following is true: (i) $a < b$, (ii) $a=b$, or (iii) $a>b$.
+\end{enumerate}
+\end{axiom}
+
+\begin{axiom} If $p$ is a real number, then there exists $q,r\in\mathbb{R}$ such that $q<p<r$.
+\end{axiom}
+
+\begin{axiom} (Archimedean Property) If $x$ is a real number, then either (i) $x$ is an integer or (ii) there exists an integer $n$, such that $n<x<n+1$. 
+\end{axiom}
+
+\begin{definition}
+Suppose $a,b\in\mathbb{R}$ such that $a<b$.  The intervals $(a,b), (-\infty,b), (a,\infty)$ are called \textbf{open intervals} while the interval $[a,b]$ is called a \textbf{closed interval}.
+\end{definition}
+
+\begin{remark} 
+In this class, we will always assume that any time we write $(a,b), [a,b], (a,b]$, or $[a,b)$ that $a<b$. 
+\end{remark}
+
+\begin{exercise} Give an example of each of the following:
+\begin{enumerate}
+\item an open interval
+\item a closed interval
+\item an interval that is neither open or closed
+\item an infinite set that is not an interval
+\end{enumerate}
+\end{exercise}
+
+\begin{definition} A set $U$ is called an \textbf{open set} iff for every $t \in U$, there exists an open interval containing $t$ such that the open interval is a subset of $U$.  We define the empty set to be open.\end{definition}
+
+%where should this go?
+%\begin{proposition} 
+%Given a number $\varepsilon >0$, there exists a natural number $N$ such that $\frac{1}{N}<\varepsilon$.
+%\end{proposition}
+
+\begin{problem} 
+Prove that the set $I=(1,2)$ is an open set.
+\end{problem}
+
+\begin{theorem}[*]
+Every open interval is an open set. 
+\end{theorem}
+
+\begin{theorem}
+The real numbers form an open set.
+\end{theorem}
+
+\begin{theorem}[*]
+Every closed interval is not an open set.
+\end{theorem}
+
+\begin{theorem}
+Let $x\in\mathbb{R}$.  Then the set $\{x\}$ is not open.
+\end{theorem}
+
+\begin{exercise} 
+Determine whether $\{4,17,42\}$ is an open set, and briefly justify your assertion. 
+\end{exercise}
+
+\begin{theorem}[*]\label{finite union of open sets}
+Let $A$ and $B$ be open sets.  Then $A\cup B$ is an open set. 
+\end{theorem}
+
+\begin{theorem}[*]\label{finite intersection of open sets}
+Let $A$ and $B$ be open sets.  Then $A\cap B$ is an open set.
+\end{theorem}
+
+\begin{theorem}[*]\label{union of open sets}
+Let $\{U_{\alpha}\}_{\alpha\in\Delta}$ be a collection of open sets.  Then
+\[
+\bigcup_{\alpha\in\Delta} U_{\alpha}
+\]
+is an open set.
+\end{theorem}
+
+\begin{exercise}\label{intersection of open sets}\
+\begin{enumerate}
+\item Find a collection of open sets $\{U_{\alpha}\}_{\alpha\in\Delta}$ such that
+\[
+\bigcap_{\alpha\in\Delta} U_{\alpha}
+\]
+is not an open set.
+\item Find a collection of open sets $\{B_{\alpha}\}_{\alpha\in\Delta}$ such that
+\[
+\bigcap_{\alpha\in\Delta} B_{\alpha}
+\]
+is an open set.
+\end{enumerate}
+\end{exercise}
+
+\begin{remark}
+Taken together, Theorems \ref{finite union of open sets}--\ref{union of open sets} and Exercise \ref{intersection of open sets} tell us that the union of open sets is open, but that the intersection of open sets may or may not be open.  However, if we are taking the intersection of finitely many open sets, then the intersection will be open.
+\end{remark}
+
+\begin{exercise}
+Provide an example of an open set that is not an open interval.
+\end{exercise}
+
+\begin{exercise}
+Determine whether each of the following sets are open or not open.
+\begin{enumerate}
+\item $\displaystyle W=\bigcup_{n=2}^{\infty} \left(n - \frac{1}{2},n\right)$
+\item $\displaystyle X=\bigcap_{n=1}^{\infty} \left(-\frac{1}{n}, \frac{1}{n}\right)$
+\end{enumerate}
+\end{exercise}
+
+\begin{definition}
+A point $p$ is a \textbf{limit point of the set $S$} iff for every open interval $I$ containing $p$, there exists a point $q \in I$ such that $q \in S$ with $q\neq p$.
+\end{definition}
+
+\begin{problem}
+Consider the open interval $S=(1,2)$. Prove each of the following.
+\begin{enumerate}
+\item The point $p=2$ is a limit point of $S$.
+\item If $p\in S$, then $p$ is a limit point of $S$.
+\item If $p<1$ or $p>2$, then $p$ is not a limit point of $S$.
+\end{enumerate}
+\end{problem}
+
+\begin{theorem}[*]
+A point $p$ is a limit point of $(a,b)$ iff $p\in [a,b]$.
+\end{theorem}
+
+\begin{problem}
+Prove that the point $p=0$ is a limit point of $S=\{\frac{1}{n}: n \in \mathbb{N}\}$.  Are there any other limit points?
+\end{problem}
+
+\begin{exercise}
+Provide an example of a set $S$ such that 1 is a limit point of $S$, $1\neq S$, and $S$ contains no intervals.
+\end{exercise}
+
+\begin{exercise}
+Provide an example of a set $T$ with exactly two limit points.
+\end{exercise}
+
+\begin{theorem}
+If $p\in\mathbb{R}$, then $p$ is a limit point of $\mathbb{Q}$.
+\end{theorem}
+
+\begin{definition}
+A set is called \textbf{closed} iff it contains all of its limit points.
+\end{definition}
+
+\begin{exercise}
+Provide an example of each of the following.  You do not need to prove that your answers are correct.
+\begin{enumerate}
+\item A closed set.
+\item A set that is not closed.
+\item A set that is open and closed.
+\item A set that neither open or closed.
+\end{enumerate}
+
+\end{exercise}
+
+\begin{theorem}[*]
+The set $[a,b]$ is closed.
+\end{theorem}
+
+\begin{theorem}
+The set $U$ is open iff $U^C$ is closed.
+\end{theorem}
+
+\begin{theorem}[*]
+Every finite set is closed.
+\end{theorem}
+
+\begin{theorem}
+The real numbers are both open and closed.
+\end{theorem}
+
+\begin{theorem}
+The rational numbers are neither open or closed.  (You may use the fact that between any two rational numbers, there exists an irrational number.)
+\end{theorem}
+
+\begin{theorem}
+The empty set is both open and closed.
+\end{theorem}
+
+\begin{theorem}[*]
+Let $\{A_{\alpha}\}_{\alpha\in\Delta}$ be a collection of closed sets.  Then
+\[
+\bigcap_{\alpha\in \Delta} A_{\alpha}
+\]
+is a closed set.
+\end{theorem}
+
+\begin{exercise}
+Provide an example of a collection of closed sets $\{A_{\alpha}\}_{\alpha\in\Delta}$ such that 
+\[
+\bigcup_{\alpha\in \Delta} A_{\alpha}
+\]
+is a \emph{not} closed set.
+\end{exercise}
+
+\begin{problem}
+Let $A$ and $B$ be closed sets.  Determine whether $A\cup B$ is necessarily closed and prove that your answer is correct.
+\end{problem}
+
+\end{subsection}
+
+\end{section}
+
+\end{document}

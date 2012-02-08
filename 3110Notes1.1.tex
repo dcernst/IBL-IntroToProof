@@ -1,0 +1,116 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage[margin=1in]{geometry}
+\usepackage[hang,flushmargin,symbol*]{footmisc}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0, 0, .6}
+\definecolor{grey}{rgb}{.7, .7, .7}
+\usepackage[breaklinks]{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=darkblue,
+	anchorcolor=darkblue,
+	citecolor=darkblue,
+	pagecolor=darkblue,
+	urlcolor=darkblue,
+	pdftitle={},
+	pdfauthor={}
+}
+
+\pagestyle{fancy}
+
+\lhead{\scriptsize Course Notes for Logic, Proof, \& Axiomatic Systems (Version 1.1)} 
+\rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}} 
+\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
+\cfoot{} 
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0.4pt} 
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{journal}[theorem]{Journal}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+
+\begin{document}
+
+\addtocounter{section}{0}
+
+\begin{section}{Introduction to Mathematics}
+
+\begin{subsection}{A Taste of Number Theory}
+
+%This section (or possibly a new section before this one) really needs more of a lead in.  For example, I should add:
+%What is a theorem, proof, axiom, definition?
+%What are the ground rules for doing presentations?
+%Description of a direct proof.
+%Discuss of implicit conditionals.
+
+In this section, we will work with the set of integers, $\mathbb{Z} = \{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\}$.  The purpose of this section is to get started with proving some theorems about numbers and study the properties of $\mathbb{Z}$.
+
+It is important to note that we are diving in head first here.  There are going to be some subtle issues that you will bump into and our goal will be to see what those issues are, and then we will take a step back and start again.  See what you can do!
+
+\begin{definition} An integer $n$ is \textbf{even} if $n=2k$ for some integer $k$. \end{definition}
+
+\begin{definition} An integer $n$ is \textbf{odd} if $n=2k+1$ for some integer $k$. \end{definition}
+
+\begin{theorem} The sum of two consecutive integers is odd. \end{theorem}
+
+\begin{theorem} If $n$ is even, then $n^2$ is even. \end{theorem}
+
+\begin{problem}[*] Prove or Disprove:  the sum of an even number and an odd number is odd. \end{problem}
+
+\begin{problem}
+Prove or Disprove: the product of an odd number and an even number is odd.
+\end{problem}
+
+\begin{problem}[*] Prove or Disprove: the product of an odd number and an odd number is odd. \end{problem}
+
+\begin{problem}[*] Prove or Disprove: the product of two even numbers is even. \end{problem}
+
+\begin{definition} An integer $n$ \textbf{divides} the integer $m$, written $n|m$, if and only if there exists an integer $k$ such that $m=nk$. In the same context, we may also write that $m$ \textbf{is divisible by} $n$.  (Note: In this section on number theory, we allow addition, subtraction, and multiplication.  Division is not allowed since an integer divided by an integer may result in a number that is not an integer. The upshot: don't write $\frac{m}{n}$).  When you feel the urge to divide, switch to an equivalent formulation using multiplication.  \end{definition}
+
+\begin{theorem} Suppose $n$ and $a$ are integers.  If $n$ divides $a$, then $n$ divides $a^2$. \end{theorem}
+
+\begin{problem} Prove or Disprove:  If $a$ and $b$ are integers and $a$ divides $b^2$, then $a$ divides $b$. \end{problem}
+
+\begin{theorem}[*] The sum of any three consecutive integers is always divisible by three.\end{theorem}
+
+\begin{theorem}[*] Assume $a$, $m$, and $n$ are integers. Suppose $a$ divides $m$ and $a$ divides $n$.  Then $a$ divides $m+n$.  \end{theorem}
+
+\begin{problem}[*] Assume $a$, $b$, and $m$ are integers. Determine whether the following statement holds sometimes, always, or never.  If the number $ab$ divides $m$, then $a$ divides $m$ and $b$ divides $m$. \end{problem}
+
+%move the next theorem to immediately after the one following definition of divides
+
+
+\begin{theorem}[*] If $a, b$, and $c$ are integers where $a$ divides $b$ and $b$ divides $c$, then $a$ divides $c$. \end{theorem}
+
+\end{subsection}
+
+\end{section}
+
+\end{document}

@@ -1,0 +1,170 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage[margin=1in]{geometry}
+\usepackage[hang,flushmargin,symbol*]{footmisc}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0, 0, .6}
+\definecolor{grey}{rgb}{.7, .7, .7}
+\usepackage[breaklinks]{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=darkblue,
+	anchorcolor=darkblue,
+	citecolor=darkblue,
+	pagecolor=darkblue,
+	urlcolor=darkblue,
+	pdftitle={},
+	pdfauthor={}
+}
+
+\pagestyle{fancy}
+
+\lhead{\scriptsize Course Notes for Logic, Proof, \& Axiomatic Systems (Spring 2011)} 
+\rhead{\scriptsize Instructor: \href{http://oz.plymouth.edu/~dcernst}{D.C. Ernst}} 
+\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
+\cfoot{} 
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0.4pt} 
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{journal}[theorem]{Journal}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{question}[theorem]{Question}
+
+\begin{document}
+
+\addtocounter{section}{1}
+
+\begin{section}{Set Theory and Topology}
+
+\addtocounter{subsection}{1}
+\addtocounter{theorem}{27}
+
+\begin{subsection}{Power Sets}
+
+We've already seen that using union, intersection, set difference, and complement that we can create new sets (in the same universe) from existing sets.  In this section, we will describe another way to generate new sets; however, the new sets will not ``live" in the same universe this time.
+
+\begin{definition}
+If $S$ is a set, then the \textbf{power set} of $S$ is the set of subsets of $S$.  The power set of $S$ is denoted $\mathcal{P}(S)$.
+\end{definition}
+
+\begin{remark}
+It follows immediately from the definition that $A\subseteq S$ iff $A\in\mathcal{P}(S)$.\footnote{Recall that ``iff" is an abbreviation for `if and only if", which is a statement of the form $A\iff B$ for propositions $A$ and $B$.  Recall that this is short for both $A\implies B$ \emph{and} $B\implies A$.}
+\end{remark}
+
+\begin{example}
+If $S=\{a,b\}$, then $\mathcal{P}=\{\emptyset, \{a\}, \{b\}, S\}$.
+\end{example}
+
+\begin{question}
+Implicit in the definition of power set is that $S$ is a subset of some fixed universe $U$.  In what universe does $\mathcal{P}(S)$ live?
+\end{question}
+
+\begin{exercise}
+For each of the following sets, find the power set.
+\begin{enumerate}
+\item $W=\{\circ, \triangle, \square\}$
+\item $O=\{a,\{a\}\}$
+\item $R=\emptyset$
+\item $D=\{\emptyset\}$
+\end{enumerate}
+\end{exercise}
+
+%\begin{theorem}
+%Let $S$ be a set with $n$ elements, where $n\in\mathbb{N}\cup \{0\}$.  Then the number of elements in $\mathcal{P}(S)$ is equal to $2^n$.\footnote{\emph{Hint:} Consider two cases: (i) $S$ has no elements, and (ii) $S$ has $n>0$ elements.  In case (ii) apply the multiplication principle for counting, which you can take for granted.}
+%\end{theorem}
+
+\begin{conjecture}
+How many subsets do you think that a set with $n$ elements has?  What if $n=0$?  You do not need to prove your conjecture at this time.  We will prove this later using mathematical induction.
+\end{conjecture}
+
+\begin{exercise}
+Do your best to describe $\mathcal{P}(\mathbb{N})$.  You cannot write down all of $\mathcal{P}(\mathbb{N})$.  Why not?
+\end{exercise}
+
+\begin{remark}
+It is important to realize that the concepts of \emph{element} and \emph{subset} need to be carefully delineated.  For example, consider the set $A=\{x,y\}$.  The object $x$ is an element of $A$, but the object $\{x\}$ is both a subset of $A$ and an element of $\mathcal{P}(A)$.  This can get confusing rather quickly.  Consider the set $O$ from the previous example.  The set $\{a\}$ happens to be an element of $O$, a subset of $O$, and an element of  $\mathcal{P}(O)$.
+\end{remark}
+
+\begin{theorem}
+Let $S$ and $T$ be sets.  Then $S\subseteq T$ iff $\mathcal{P}(S)\subseteq \mathcal{P}(T)$.\footnote{To prove this theorem, you have to write two distinct subproofs: $A\implies B$ and $B\implies A$.}
+\end{theorem}
+
+\begin{theorem}
+Let $S$ and $T$ be sets.  Then $\mathcal{P}(S)\cap\mathcal{P}(T)=\mathcal{P}(S\cap T)$.
+\end{theorem}
+
+\begin{theorem}
+Let $S$ and $T$ be sets.  Then $\mathcal{P}(S)\cup\mathcal{P}(T)\subseteq \mathcal{P}(S\cup T)$.
+\end{theorem}
+
+
+\begin{exercise}
+Let $S$ and $T$ be sets.
+\begin{enumerate}
+\item Provide a counterexample to show that it is not necessarily true that $\mathcal{P}(S)\cup\mathcal{P}(T)= \mathcal{P}(S\cup T)$.
+\item Is it ever true that $\mathcal{P}(S)\cup\mathcal{P}(T)= \mathcal{P}(S\cup T)$ or are $\mathcal{P}(S)\cup\mathcal{P}(T)$ and $\mathcal{P}(S\cup T)$ always different sets?
+\end{enumerate}
+\end{exercise}
+
+We now turn out attention to the issue of whether there is one mother of all universal sets.  Before reading any further, consider this for a moment.  That is, is there one largest set that all other sets are a subset of?  Or, in other words, is there a set of all sets?  To help wrap our heads around this issue, consider the following riddle.
+
+\begin{quote}
+In Seville, the barber shaves all those and only those who do not shave themselves.  Who shaves the barber?
+\end{quote}
+
+\begin{problem}
+Discuss the ``Barber of Seville" riddle.  Does the barber shave himself or not?
+\end{problem}
+
+The ``Barber of Seville" riddle is an example of a \textbf{paradox}.  Now, suppose that there is a set of all sets and call it $\mathcal{U}$.  Then we can write $\mathcal{U}=\{A:A\mbox{ is a set}\}$.
+
+\begin{problem}
+Given our definition of $\mathcal{U}$, explain why it is an element of itself.
+\end{problem}
+
+If we continue with this line of reasoning, it must be the case that some sets are elements of themselves and some are not.  Let $X$ be the set of all sets that are elements of themselves and let $Y$ be the set of all sets that are not elements of themselves.
+
+\begin{question}
+Does $Y$ belong to $X$ or $Y$?  Explain why this is a paradox.
+\end{question}
+
+The above paradox is one way of phrasing a paradox referred to as \textbf{Russell's paradox}.  Okay, how did we get into this mess in the first place?!  By assuming the existence of a set of all sets, we can produce all sorts of paradoxes.  The only way to avoid the paradoxes is to conclude that there is no set of all sets.  Here is some more evidence that we shouldn't assume the existence of a set of all sets.
+
+\begin{question}
+If $\mathcal{U}$ is the set of all sets, then what is the relationship between $\mathcal{U}$ and $\mathcal{P}(\mathcal{U})$?  What about $\mathcal{P}(\mathcal{P}(\mathcal{U})$?
+\end{question}
+
+The upshot is that the collection of all sets is \emph{not} a set!  Moreover, there are lots of collections that are not sets.
+
+\end{subsection}
+
+\end{section}
+
+\end{document}
