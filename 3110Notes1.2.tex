@@ -73,7 +73,7 @@ After diving in head first in the last section, we'll take a step back and do a 
 A \textbf{proposition} (or \textbf{statement}) is a sentence that is either true or false.
 \end{definition}
 
-For example, the sentence ``All liberals are hippies'' is a false proposition.  However, the perfectly good sentence ``x=1'' is \emph{not} a proposition all by itself since we don't actually know what $x$ is.
+For example, the sentence ``All liberals are hippies'' is a false proposition.  However, the perfectly good sentence ``$x=1$'' is \emph{not} a proposition all by itself since we don't actually know what $x$ is.
 
 \begin{exercise} Determine whether the following are propositions or not. Explain.
 \begin{enumerate}
@@ -97,18 +97,19 @@ For example, the sentence ``All liberals are hippies'' is a false proposition.  
 
 Given two propositions, we can form more complicated propositions using the logical connectives ``and", ``or", and ``If\ldots, then\ldots".
 
-\begin{definition} Let $A$ and $B$ be propositions.  The proposition ``\textbf{$A$ and $B$}'' is true if and only if both $A$ and $B$ are true.  The statement ``$A$ and $B$'' is expressed symbolically as 
-$$
+\begin{definition}
+Let $A$ and $B$ be propositions.  The proposition ``\textbf{$A$ and $B$}'' is true if and only if both $A$ and $B$ are true.  The statement ``$A$ and $B$'' is expressed symbolically as 
+\[
 A \wedge B
-$$
+\]
 and is know as the \textbf{conjunction} of $A$ and $B$.
 \end{definition}
 
 \begin{definition}
 Let $A$ and $B$ be propositions.  The proposition ``\textbf{$A$ or $B$}'' is true if and only if at least one of $A$ or $B$ is true.  The statement ``$A$ or $B$'' is symbolically represented as
-$$
+\[
 A \vee B
-$$
+\]
 and is know as the \textbf{disjunction} of $A$ and $B$.
 \end{definition}
 
@@ -116,13 +117,14 @@ and is know as the \textbf{disjunction} of $A$ and $B$.
 Let $A$ be a proposition.  The \textbf{negation} of $A$, denoted $\neg A$, is true if and only if $A$ is false.
 \end{definition}
 
-\begin{exercise} Describe the meaning of $\neg (A \wedge B)$ and $\neg (A \vee B)$\end{exercise}
+\begin{exercise}Describe the meaning of $\neg (A \wedge B)$ and $\neg (A \vee B)$.
+\end{exercise}
 
 \begin{definition}\label{def:conditional}
 Let $A$ and $B$ represent propositions.  The conditional proposition ``\textbf{If $A$, then $B$}'' is expressed symbolically as 
-$$
+\[
 A \implies B
-$$
+\]
 and has the following truth table.
 \[
 \begin{tabular}{| c  c  | c |} \hline
@@ -138,14 +140,6 @@ F & F & T  \\ \hline
 \begin{exercise}
 Create a truth table for each of $A \wedge B$, $A \vee B$, $\neg A$ that illustrates all possible truth values.  (See Definition \ref{def:conditional} for an example of what a truth table looks like.)
 \end{exercise}
-
-%\item Using a truth table find an expression equivalent to $\neg (A \wedge B)$ involving ``or'' ($\vee$).  (Recall that two logical statements are equivalent if they agree in truth value for all cases.)
-
-%\item Using a truth table find an expression equivalent to $\neg (A \wedge B \wedge C)$ involving ``or'' ($\vee$).
-
-%\item Describe the practical meaning of $\neg (A \vee B)$ using sentences.
-
-%\item Using a truth table find an expression equivalent to $\neg (A \vee B)$ involving ``and'' ($\wedge$)
 
 \begin{exercise}\label{exer:translations}
 Let $A$ represent ``$N$ is an even number'' and $B$ represent ``$N$ is a multiple of 4.''  Express the following in ordinary English sentences.
@@ -166,18 +160,20 @@ Suppose I am the coach of our co-ed dodgeball team and you all are the players. 
 
 \begin{definition}
 Two statements are \textbf{logically equivalent} (or \textbf{equivalent} if the context is clear) if and only if they have the same truth table.  That is, proposition $P$ is true exactly when proposition $Q$ is true, and $P$ is false exactly when $Q$ is false.  When $P$ and $Q$ are logically equivalent we denote this symbolically as 
-$$
-P \Leftrightarrow Q,
-$$
+\[
+P \iff Q,
+\]
 which we read ``$P$ if and only if $Q$".  It is common to abbreviate ``if and only if'' as ``iff''.
 \end{definition}
+
+Each of the next three facts can be justified using truth tables.
 
 \begin{theorem}
 If $A$ is a proposition, then $\neg(\neg A)$ is equivalent to $A$.
 \end{theorem}
 
 \begin{theorem}\label{thm:demorgan}
-If $A$ and $B$ are propositions, then $\neg(A \wedge B) \Leftrightarrow \neg A \vee \neg B$.  (\emph{Note}: This theorem is referred to as DeMorgan's Law.)
+If $A$ and $B$ are propositions, then $\neg(A \wedge B) \iff \neg A \vee \neg B$.  (\emph{Note}: This theorem is referred to as DeMorgan's Law.)
 \end{theorem}
 
 \begin{problem}[*]
@@ -195,8 +191,8 @@ The \textbf{contrapositive} of $A \implies B$ is $\neg B \implies \neg A$.
 \begin{exercise}
 Let $A$ and $B$ represent the statements from Exercise \ref{exer:translations}.  Express the following in ordinary English sentences.
 \begin{enumerate}
-  \item The converse of $A \implies B$
-  \item The contrapositive of $A \implies B$
+\item The converse of $A \implies B$
+\item The contrapositive of $A \implies B$
 \end{enumerate}
 \end{exercise}
 
@@ -211,32 +207,40 @@ Let $A$ and $B$ represent the statements from Exercise \ref{exer:translations}. 
 Provide an example of a true conditional proposition whose converse is false.
 \end{exercise}
 
-
 \begin{theorem}[*]\label{thm:contrapos}
-Assume $A$ and B are statements.  Then $A \Rightarrow B$ is equivalent to its contrapositive.
+Assume $A$ and B are statements.  Then ${A\implies B}$ is equivalent to its contrapositive.
 \end{theorem}
 
 The upshot of Theorem \ref{thm:contrapos} is that if you want to prove a conditional proposition, you can prove its contrapositive instead.
 
-\begin{problem} Let $x$ be an integer.  Prove or disprove the statement: If 6 divides $x$, then 3 divides $x$.\end{problem}
+\begin{problem}
+Let $x$ be an integer.  Prove or provide a counterexample: If 6 divides $x$, then 3 divides $x$.\end{problem}
 
-\begin{problem} Let $x$ be an integer.  Prove or disprove the statement: If 6 divides $x$, then 4 divides $x$.\end{problem}
-
-\begin{theorem}[*] For all integers $n$, $x$ and $y$, if $n$ divides $x$, and $n$ divides $y$, then $n$ divides $x+y$.\end{theorem}
-
-\begin{theorem} For all integers $n$, $x$, and $y$, if $n$ divides $x$, and $n$ divides $y$, then $n$ divides $x-y$.\end{theorem}
-
-\noindent Prove each of the next two propositions using the contrapositive of the given statement: 
+\begin{problem}
+Let $x$ be an integer.  Prove or provide a counterexample: If 6 divides $x$, then 4 divides $x$
+\end{problem}
 
 \begin{theorem}[*]
-Assume $x,y$ are integers.  If $xy$ is odd, then both $x$ and $y$ are odd. (Prove using contrapositive.)
+For all integers $n$, $x$ and $y$, if $n$ divides $x$ and $n$ divides $y$, then $n$ divides $x+y$
+\end{theorem}
+
+\begin{theorem}
+For all integers $n$, $x$, and $y$, if $n$ divides $x$ and $n$ divides $y$, then $n$ divides $x-y$.
+\end{theorem}
+
+Prove each of the next two propositions using the contrapositive of the given statement.
+
+\begin{theorem}[*]
+Assume $x$ and $y$ are integers.  If $xy$ is odd, then both $x$ and $y$ are odd. (Prove using contrapositive.)
 \end{theorem}
 
 \begin{theorem}[*]
-Assume $x,y$ are integers.  If $xy$ is even, then $x$ or $y$ is even.  (Prove using contrapositive.)
+Assume $x$ and $y$ are integers.  If $xy$ is even, then $x$ or $y$ is even.  (Prove using contrapositive.)
 \end{theorem}
 
-\begin{theorem} For all integers $n$, $x$, and $y$, if $n|x$, then $n|(xy)$.\end{theorem}
+\begin{theorem}
+For all integers $n$, $x$, and $y$, if $n|x$, then $n|(xy)$.
+\end{theorem}
 
 \end{subsection}
 
