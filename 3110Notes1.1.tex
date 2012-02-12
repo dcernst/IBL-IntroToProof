@@ -25,8 +25,8 @@
 
 \pagestyle{fancy}
 
-\lhead{\scriptsize Course Notes for Logic, Proof, \& Axiomatic Systems (Version 1.1)} 
-\rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}} 
+\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.2)} 
+\rhead{\scriptsize Written by \href{http://danaernst.com}{D.C. Ernst}} 
 \lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
 \cfoot{} 
 \renewcommand{\headrulewidth}{0.4pt} 
@@ -104,31 +104,58 @@ Prove or provide a counterexample: The product of an odd number and an odd numbe
 Prove or provide a counterexample: The product of two even numbers is even. \end{problem}
 
 \begin{definition}
-An integer $n$ \textbf{divides} the integer $m$, written $n|m$, if and only if there exists an integer $k$ such that $m=nk$. In the same context, we may also write that $m$ \textbf{is divisible by} $n$.  (Note: In this section on number theory, we allow addition, subtraction, and multiplication.  Division is not allowed since an integer divided by an integer may result in a number that is not an integer. The upshot: don't write $\frac{m}{n}$).  When you feel the urge to divide, switch to an equivalent formulation using multiplication.
+An integer $n$ \textbf{divides} the integer $m$, written $n|m$, if and only if there exists an integer $k$ such that $m=nk$. In the same context, we may also write that $m$ \textbf{is divisible by} $n$.
 \end{definition}
 
-\begin{theorem}
-Suppose $n$ and $a$ are integers.  If $n$ divides $a$, then $n$ divides $a^2$.
-\end{theorem}
+In this section on number theory, we allow addition, subtraction, and multiplication.  Division is not allowed since an integer divided by an integer may result in a number that is not an integer. The upshot: don't write $\frac{m}{n}$.  When you feel the urge to divide, switch to an equivalent formulation using multiplication.
 
 \begin{problem}
-Prove or provide a counterexample:  If $a$ and $b$ are integers and $a$ divides $b^2$, then $a$ divides $b$.
+Let $n$ be an integer.  Prove or provide a counterexample: If 6 divides $n$, then 3 divides $n$.\end{problem}
+
+\begin{problem}
+Let $n$ be an integer.  Prove or provide a counterexample: If 6 divides $n$, then 4 divides $n$.
 \end{problem}
 
 \begin{theorem}[*]
-The sum of any three consecutive integers is always divisible by three.\end{theorem}
+Assume $n$, $m$, and $a$ are integers.  If $a|n$, then $a|mn$.
+\end{theorem}
+
+A theorem that follows almost immediately from another theorem is called a \textbf{corollary}.  See if you can prove the next result quickly using the previous theorem.  Be sure to cite the theorem in your proof.
+
+\begin{corollary}
+Assume $n$ and $a$ are integers.  If $a$ divides $n$, then $a$ divides $n^2$.
+\end{corollary}
+
+\begin{problem}
+Assume $n$ and $a$ are integers.  Prove or provide a counterexample:  If $a$ divides $n^2$, then $a$ divides $n$.
+\end{problem}
+
+\begin{theorem}
+Assume $a$ and $n$ are integers. If $a$ divides $n$, then $a$ divides $-n$. 
+\end{theorem}
 
 \begin{theorem}[*]
-Assume $a$, $m$, and $n$ are integers. Suppose $a$ divides $m$ and $a$ divides $n$.  Then $a$ divides $m+n$. 
+Assume $a$, $m$, and $n$ are integers. If $a$ divides $m$ and $a$ divides $n$, then $a$ divides $m+n$. 
+\end{theorem}
+
+Once we've proved a few theorems, we should be on the look out to see if we can utilize any of our current results to prove new results.  There's no point in reinventing the wheel if we don't have to.  Try to use a couple of our previous results to prove the next theorem.
+
+\begin{theorem}
+Assume $a$, $m$, and $n$ are integers. If $a$ divides $m$ and $a$ divides $n$, then $a$ divides $m-n$.
 \end{theorem}
 
 \begin{problem}[*]
-Assume $a$, $b$, and $m$ are integers. Determine whether the following statement holds sometimes, always, or never.  If the number $ab$ divides $m$, then $a$ divides $m$ and $b$ divides $m$.
+Assume $a$, $b$, and $m$ are integers. Determine whether the following statement holds sometimes, always, or never.  If $ab$ divides $m$, then $a$ divides $m$ and $b$ divides $m$.  Justify with a proof or counterexample.
 \end{problem}
 
 \begin{theorem}[*]
 If $a, b$, and $c$ are integers where $a$ divides $b$ and $b$ divides $c$, then $a$ divides $c$.
 \end{theorem}
+
+The previous theorem is referred to as \textbf{transitivity of division of integers}.
+
+\begin{theorem}[*]
+The sum of any three consecutive integers is always divisible by three.\end{theorem}
 
 \end{subsection}
 
