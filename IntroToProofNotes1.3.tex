@@ -25,8 +25,8 @@
 
 \pagestyle{fancy}
 
-\lhead{\scriptsize Course Notes for Logic, Proof, \& Axiomatic Systems (Spring 2011)} 
-\rhead{\scriptsize Instructor: \href{http://oz.plymouth.edu/~dcernst}{D.C. Ernst}} 
+\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}} 
 \lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
 \cfoot{} 
 \renewcommand{\headrulewidth}{0.4pt} 
@@ -61,29 +61,29 @@
 
 \addtocounter{section}{0}
 
-\begin{section}{Introduction to Mathematics}
+\begin{section}{Introduction to Mathematics (Continued)}
 
 \addtocounter{subsection}{2}
-\addtocounter{theorem}{42}
+\addtocounter{theorem}{38}
 
 \begin{subsection}{Negating Implications and Proof by Contradiction}
 
 So far we have discussed how to negate propositions of the form $A$, $A\wedge B$, and $A\vee B$ for propositions $A$ and $B$.  However, we have yet to discuss how to negate propositions of the form $A\implies B$.
 
-\begin{theorem}\label{thm:implication as disjunction}
+\begin{problem}\label{prob:implication as disjunction}
 Let $A$ and $B$ be propositions.  Conjecture an equivalent way of expressing the conditional proposition $A\implies B$ as a proposition involving the disjunction symbol $\vee$ and possibly the negation symbol $\neg$, but not the implication symbol $\implies$.  Prove your conjecture using a truth table.
-\end{theorem}
+\end{problem}
 
 \begin{exercise}\label{exer:Darth Vader}
-Let $A$ and $B$ be the propositions ``Darth Vader is a hippie" and ``Sarah Palin is a liberal", respectively.  Using Theorem \ref{thm:implication as disjunction}, express $A\implies B$ as an English sentence involving the disjunction ``or."
+Let $A$ and $B$ be the propositions ``Darth Vader is a hippie" and ``Sarah Palin is a liberal", respectively.  Using Problem \ref{prob:implication as disjunction}, express $A\implies B$ as an English sentence involving the disjunction ``or."
 \end{exercise}
 
-\begin{theorem}[*]\label{thm:negation of implication}
+\begin{problem}[*]\label{prob:negation of implication}
 Let $A$ and $B$ be two propositions.  Conjecture an equivalent way of expressing the proposition $\neg(A\implies B)$ as a proposition involving the conjunction symbol $\wedge$ and possibly the negation symbol $\neg$, but not the implication symbol $\implies$.  Prove your conjecture using previous results.
-\end{theorem}
+\end{problem}
 
 \begin{exercise}
-Let $A$ and $B$ be the propositions in Exercise \ref{exer:Darth Vader}.  Using Theorem \ref{thm:negation of implication}, express $\neg(A\implies B)$ as an English sentence involving the conjunction ``and."
+Let $A$ and $B$ be the propositions in Exercise \ref{exer:Darth Vader}.  Using Problem \ref{prob:negation of implication}, express $\neg(A\implies B)$ as an English sentence involving the conjunction ``and."
 \end{exercise}
 
 \begin{exercise}
@@ -118,18 +118,18 @@ Let $A$ and $B$ be propositions.  Describe a general strategy for proving $A\imp
 
 Prove the following theorem in two ways: (i) prove the contrapositive and (ii) use proof by contradiction.
 
-\begin{problem}[*]
-Assume that $x\in\mathbb{Z}$.  If $x$ is odd, then 2 does not divide $x$.
-\end{problem}
+\begin{theorem}[*]
+Assume that $x\in\mathbb{Z}$.  If $x$ is odd, then 2 does not divide $x$. (Prove in two different ways.)
+\end{theorem}
 
 Prove the following theorem by contradiction.
 
 \begin{theorem}[*]
-Assume that $x,y\in\mathbb{N}$.  If $x$ divides $y$, then $x\leq y$.
+Assume that $x,y\in\mathbb{N}$.  If $x$ divides $y$, then $x\leq y$. (Prove using a proof by contradiction.)
 \end{theorem}
 
 \begin{question}
-What obstacles (if any) are there to proving the previous theorem directly without using proof by contradiction.
+What obstacles (if any) are there to proving the previous theorem directly without using proof by contradiction?
 \end{question}
 
 \end{subsection}
