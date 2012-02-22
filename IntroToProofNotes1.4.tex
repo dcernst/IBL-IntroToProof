@@ -25,8 +25,8 @@
 
 \pagestyle{fancy}
 
-\lhead{\scriptsize Course Notes for Logic, Proof, \& Axiomatic Systems (Spring 2011)} 
-\rhead{\scriptsize Instructor: \href{http://oz.plymouth.edu/~dcernst}{D.C. Ernst}} 
+\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}} 
 \lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
 \cfoot{} 
 \renewcommand{\headrulewidth}{0.4pt} 
@@ -36,6 +36,7 @@
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{acknowledgement}[theorem]{Acknowledgement}
 \newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{question}[theorem]{Question}
 \newtheorem{axiom}[theorem]{Axiom}
 \newtheorem{case}[theorem]{Case}
 \newtheorem{claim}[theorem]{Claim}
@@ -60,18 +61,16 @@
 
 \addtocounter{section}{0}
 
-\begin{section}{Introduction to Mathematics}
+\begin{section}{Introduction to Mathematics (Continued)}
 
 \addtocounter{subsection}{3}
-\addtocounter{theorem}{54}
+\addtocounter{theorem}{50}
 
 %%%%  Quantification
 
 \begin{subsection}{Introduction to Quantification}
 
-Quantification is often where students struggle in higher mathematics.  Not only are the concepts abstract, the concepts must be carefully delineated into cases.
-
-Recall that sentences of the form ``$x>0$" are not propositions (unless the context of $x$ is perfectly clear).  In this case, we call $x$ a \textbf{free variable}.
+Recall that sentences of the form ``$x>0$" are not propositions (unless the context of $x$ is perfectly clear).  In this case, we call $x$ a \textbf{free variable}.  In order to turn a sentence with free variables into a proposition, for each free variable, we need to either substitute in a value (not necessarily a number) for the free variable or we must ``quantify" the free variable.  
 
 \begin{definition}
 A sentence with a free variable is called a \textbf{predicate}.
@@ -81,9 +80,16 @@ A sentence with a free variable is called a \textbf{predicate}.
 Give 3 examples of mathematical predicates involving 1, 2, and 3 free variables, respectively.
 \end{exercise}
 
-It is convenient to borrow function notation to represent predicates.  For example: $S(x):=``x^2-4=0"$, $L(a,b):=``a<b"$, $F(x,y):=``x \mbox{ is friends with } y"$.\footnote{The symbol ``$:=$" is used in mathematics to define something as being equal to something else.}  Each of these represents a predicate with the indicated free variables.
+It is convenient to borrow function notation to represent predicates.  For example, each of the following represents a predicate with the indicated free variables.
+\begin{itemize}
+\item $S(x):=``x^2-4=0"$
+\item $L(a,b):=``a<b"$
+\item $F(x,y):=``x \mbox{ is friends with } y"$
+\end{itemize}
 
-We can make propositions out of predicates by assigning specific values to the free variables.  For example, if $P(x)$ is a predicate and $x_0$ is specific value, then $P(x_0)$ is now a proposition (and may be true or false).
+The notation ``$:=$" is used in mathematics to define something as being equal to something else.  Also, note that the use of the quotation marks above removed some ambiguity.  What would $S(x)=x^2-4=0$ mean?  It looks like $S(x)$ equals 0, but actually we want $S(x)$ to be a whole sentence not a noun. 
+
+One way we can make propositions out of predicates is by assigning specific values to the free variables.  That is, if $P(x)$ is a predicate and $x_0$ is specific value, then $P(x_0)$ is now a proposition (and may be true or false).
 
 \begin{exercise}
 Consider $S(x)$ and $L(a,b)$ from the discussion above.  Determine the truth values of $S(2)$, $S(0)$, $S(-2)$, $L(1,2)$, $L(2,1)$, and $L(-3,-2)$.
@@ -111,9 +117,9 @@ Determine the truth value of the two propositions from Example \ref{ex:quantifie
 ``For all" is called the \textbf{universal quantifier} and ``there exists\ldots such that" is called the \textbf{existential quantifier}.
 \end{definition}
 
-The variables in propositions with quantifiers are called \textbf{bound variables}.  In order for a sentence containing variables to be a proposition, \emph{all} variables must be bound.  That is, all variables need to be quantified.  When all variables are quantified, there is no ambiguity (we aren't making any claims about whether a proposition is true or false here).
+The variables in propositions with quantifiers are called \textbf{bound variables}.  In order for a sentence containing variables to be a proposition, \emph{all} variables must be bound.  That is, all variables need to be quantified.  When all variables are quantified, there is no ambiguity (we are not making any claims about whether a proposition is true or false here).
 
-It is important to note that the existential quantifier is making a claim about ``at least one" \emph{not} ``exactly one."    It is also worth noting that ``for all", ``for any", ``for every" are used interchangeably in mathematics (even though they might convey slightly different meanings in colloquial language).  Also, we can replace ``there exists\ldots such that" with ``for some".
+It is important to note that the existential quantifier is making a claim about ``at least one" \emph{not} ``exactly one."    Also, we can replace ``there exists\ldots such that" with phrases (possibly with some other tweaking to the sentence) like ``for some".  It is also worth noting that ``for all", ``for any", ``for every" are used interchangeably in mathematics (even though they might convey slightly different meanings in colloquial language).  
 
 A few additional remarks are in order.  We must take care to specify the universe of acceptable values for the free variables.  Consider for a moment, the proposition ``For all $x$, $x>0$".  Is this proposition true or false?  The answer depends on what $x$'s we are taking \emph{all} of.  For example, if the universe of discourse is the set of integers, then the statement is false.  However, if we take the universe of acceptable values to be the natural numbers, then the proposition is true.  We must be careful to avoid such ambiguities.  Often, the context can resolve such ambiguities, but otherwise, we need to write things like: ``For all $x\in\mathbb{Z}$, $x>0$" or ``For all $x\in\mathbb{N}$, $x>0$".
 
@@ -126,6 +132,14 @@ Suppose our universe of acceptable values is the set of integers.
 \end{exercise}
 
 If a predicate has more than one free variable, then we can build propositions by quantifying each variable.  However, the order of the quantifiers is extremely important!!!
+
+\begin{exercise}\label{exer:ways to quantify}
+Let $P(x,y)$ be a predicate with the free variables $x$ and $y$ (and let's assume the universe of discourse is clear).  Write down all possible ways (where order matters) that the variables could be quantified.  To get you started, here's one: For all $x$, there exists $y$ such that $P(x,y)$.  Find the rest.
+\end{exercise}
+
+\begin{problem}
+Are there any propositions on your list from Exercise~\ref{exer:ways to quantify} that are equivalent to others on your list?  
+\end{problem}
 
 \begin{exercise}
 Suppose that the universe of acceptable values is the set of married people.  Consider the predicate $M(x,y):=``x\mbox{ is married to }y"$.  Discuss the meaning of each of the following.
@@ -147,8 +161,12 @@ Suppose that the universe of acceptable values is the set of real numbers.  Cons
 Repeat the exercise above but replace the existential quantifiers with universal quantifiers.
 \end{exercise}
 
+\begin{problem}
+Conjecture a summary of the various possibilities for quantifying predicates involving two variables.  You do \emph{not} need to prove your conjecture.
+\end{problem}
+
 \begin{exercise}
-Suppose that the universe of acceptable values is the set of real numbers.  Consider the predicate $G(x,y):=``x>y"$.  There are six ways to bind the variables of this predicate (why six?).  Find all six propositions and determine the truth value of each (you do not need to prove your answers).  Do any of the six have the same meaning as one of the others?
+Suppose that the universe of acceptable values is the set of real numbers.  Consider the predicate $G(x,y):=``x>y"$.  Find all possible \emph{distinct} ways to bind the variables to create propositions and then determine the truth value of each (you do not need to prove your answers).  Do any of your propositions have the same meaning as one of the others?
 \end{exercise}
 
 \end{subsection}
