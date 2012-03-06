@@ -25,8 +25,8 @@
 
 \pagestyle{fancy}
 
-\lhead{\scriptsize Course Notes for Logic, Proof, \& Axiomatic Systems (Spring 2011)} 
-\rhead{\scriptsize Instructor: \href{http://oz.plymouth.edu/~dcernst}{D.C. Ernst}} 
+\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}}
 \lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
 \cfoot{} 
 \renewcommand{\headrulewidth}{0.4pt} 
@@ -61,10 +61,10 @@
 
 \addtocounter{section}{0}
 
-\begin{section}{Introduction to Mathematics}
+\begin{section}{Introduction to Mathematics (Continued)}
 
 \addtocounter{subsection}{5}
-\addtocounter{theorem}{80}
+\addtocounter{theorem}{79}
 
 %%%%  More on Quantification
 
@@ -81,7 +81,7 @@ Consider the propositions $(\forall x)(x>3)$ and $(\forall x)(x\geq 4)$.  Are th
 \end{exercise}
 
 \begin{remark}
-At this point it is worth pointing out an important distinction.  Consider the propositions ``All cars are red" and ``All natural numbers are positive".  Both of these are instances of the \textbf{logical form} $(\forall x)P(x)$.  It turns out that the first proposition is false and the second is true; however, the logical form is neither true or false.  A logical form is a blueprint for particular propositions.  If we are careful it makes sense to talk about whether two logical forms are equivalent.  For example, $(\forall x)(P(x)\implies Q(x))$ is equivalent to $(\forall x)(\neg Q(x)\implies \neg P(x))$.  For fixed $P(x)$ and $Q(x)$, these two forms will always have the same truth value independent of the universe of discourse.  If you change $P(x)$ and $Q(x)$, then the truth value may change, but the two forms will still agree.
+At this point it is worth pointing out an important distinction.  Consider the propositions ``All cars are red" and ``All natural numbers are positive".  Both of these are instances of the \textbf{logical form} $(\forall x)P(x)$.  It turns out that the first proposition is false and the second is true; however, the logical form is neither true or false.  A logical form is a blueprint for particular propositions.  If we are careful, it makes sense to talk about whether two logical forms are equivalent.  For example, $(\forall x)(P(x)\implies Q(x))$ is equivalent to $(\forall x)(\neg Q(x)\implies \neg P(x))$.  For fixed $P(x)$ and $Q(x)$, these two forms will always have the same truth value independent of the universe of discourse.  If you change $P(x)$ and $Q(x)$, then the truth value may change, but the two forms will still agree.
 \end{remark}
 
 \begin{theorem}\label{thm:negation of quantifiers}
@@ -109,15 +109,42 @@ Negate each of the following.  Disregard the truth value and the universe of dis
 Using Theorem \ref{thm:negation of quantifiers} and our previous results involving quantification, we can negate complex mathematical propositions by working from left to right.
 
 \begin{example}
-Consider the proposition $(\exists x\in\mathbb{R})(\forall y\in\mathbb{R})(x+y=0)$.  It turns out that this statement is false, which means that its negation is true.  That is, $\neg(\exists x\in\mathbb{R})(\forall y\in\mathbb{R})(x+y=0)$, which is equivalent to $(\forall x\in\mathbb{R})(\exists y\in\mathbb{R})(x+y\neq 0)$, is true.
+Consider the proposition
+\[
+(\exists x\in\mathbb{R})(\forall y\in\mathbb{R})(x+y=0).
+\]
+It turns out that this statement is false, which means that its negation is true.  That is,
+\[
+\neg(\exists x\in\mathbb{R})(\forall y\in\mathbb{R})(x+y=0),
+\]
+which is equivalent to
+\[
+(\forall x\in\mathbb{R})(\exists y\in\mathbb{R})(x+y\neq 0),
+\]
+is true.
 \end{example}
 
 \begin{example}
-Consider the proposition $(\forall x)[x>0\implies (\exists y)(y<0 \wedge xy>0)]$ (which happens to be false).  Then $\neg (\forall x)[x>0\implies (\exists y)(y<0 \wedge xy>0)]$ is equivalent to $(\exists x)[x>0 \wedge \neg (\exists y)(y<0) \wedge xy>0)]$, which is equivalent to $(\exists x)[x>0 \wedge (\forall y)(y\geq 0 \vee xy\leq 0)]$.
+Consider the proposition
+\[
+(\forall x)[x>0\implies (\exists y)(y<0 \wedge xy>0)]
+\]
+(which happens to be false).  Then
+\[
+\neg (\forall x)[x>0\implies (\exists y)(y<0 \wedge xy>0)]
+\]
+is equivalent to
+\[
+(\exists x)[x>0 \wedge \neg (\exists y)(y<0) \wedge xy>0)],
+\]
+which is equivalent to 
+\[
+(\exists x)[x>0 \wedge (\forall y)(y\geq 0 \vee xy\leq 0)].
+\]
 \end{example}
 
 \begin{exercise}
-What previous theorems were used in the negating the proposition in the previous example.
+What previous theorems were used when negating the proposition in the previous example.
 \end{exercise}
 
 \begin{exercise}
