@@ -25,9 +25,10 @@
 
 \pagestyle{fancy}
 
-\lhead{\scriptsize Course Notes for Logic, Proof, \& Axiomatic Systems (Spring 2011)} 
-\rhead{\scriptsize Instructor: \href{http://oz.plymouth.edu/~dcernst}{D.C. Ernst}} 
+\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}}
 \lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
+
 \cfoot{} 
 \renewcommand{\headrulewidth}{0.4pt} 
 \renewcommand{\footrulewidth}{0.4pt} 
@@ -63,14 +64,9 @@
 
 \begin{section}{Set Theory and Topology}
 
-%\addtocounter{subsection}{5}
-%\addtocounter{theorem}{80}
+At its essence, all of mathematics is built on set theory.  In this chapter, we will introduce some of the basics of sets and their properties.
 
-%%%%  More on Quantification
-
-\begin{subsection}{Sets}
-
-At its essence, all of mathematics is built on set theory. 
+\begin{subsection}{Sets} 
 
 \begin{definition}
 A \textbf{set} is a collection of objects called \textbf{elements}. If $A$ is a set and $x$ is an element of $A$, we write
@@ -81,18 +77,20 @@ $x\in A$. Otherwise, we write $x\notin A$.
 The set containing no elements is called the \textbf{empty set}, and is denoted by the symbol $\emptyset$.
 \end{definition}
 
+It we think of a set as a box containing some stuff, then the empty set is a box with nothing in it.
 
 \begin{definition} 
 The language associated to sets is specific.  
 \[
 S=\{x \in A: x \mbox{ satisfies some condition}\}
 \]
-The first part ``$x \in A$" denotes what type of $x$ is being considered.  The statements to the right of the colon are the conditions that $x$ must satisfy, in order to be members of the set.  This notation is read as ``The set of all $x$ in A such that $x$ satisfies some condition,'' where ``some condition" is something specific about the restrictions on $x$ relative to $A$.  This type of notation is often called \textbf{set builder notation}.
+The first part ``$x \in A$" denotes what type of $x$ is being considered.  The statements to the right of the colon are the conditions that $x$ must satisfy in order to be members of the set.  This notation is read as ``The set of all $x$ in $A$ such that $x$ satisfies some condition,'' where ``some condition" is something specific about the restrictions on $x$ relative to $A$.  This notation is often called \textbf{set builder notation}.
 \end{definition}
 
-\begin{exercise} Unpack each of the following sets into a description using a sentence and see if you can determine exactly what elements each set contains.
+\begin{exercise}
+Unpack each of the following sets into a description using a sentence and see if you can determine exactly what elements each set contains.
 \begin{enumerate}
-\item $M=\{x \in \mathbb{R}  :  x \geq 2 \}$
+\item $M=\{x \in \mathbb{R} :  x \geq 2 \}$
 \item $A=\{x \in \mathbb{N} : x = 3k \mbox{ for some } k\in \mathbb{N} \}$
 \item $T=\{t \in \mathbb{R} : t^2 \leq 2 \}$
 \item $H=\{t \in \mathbb{R} : t = 1 - \frac{1}{n} \mbox{, where } n \in \mathbb{Z} \}$
@@ -109,7 +107,7 @@ Write each of the following sentences using set builder notation.
 \end{exercise}
 
 \begin{definition}
-If $A$ and $B$ are sets, then we say that $A$ is a \textbf{subset} of $B$, written $A\subseteq B$, if every element of $A$ is also an element of $B$.
+If $A$ and $B$ are sets, then we say that $A$ is a \textbf{subset} of $B$, written $A\subseteq B$, provided that every element of $A$ is also an element of $B$.
 \end{definition}
 
 \begin{remark}
@@ -152,24 +150,21 @@ We analogously define $[a,b)$, $(a,b]$, $[a,\infty)$, and $(-\infty,b]$.
 \end{definition}
 
 \begin{exercise}
-Provide two examples of proper subsets of $[0,1]$.
+Provide two examples of proper subsets of the interval $[0,1]$.
 \end{exercise}
 
 Here are some more definitions.  In each case, take $U$ to be the universe of discourse.
 
 \begin{definition}
-The \textbf{union} of the sets $A$ and $B$ is
-$A \cup B =\{x\in U : x\in A \mbox{ or } x\in B \}$
+The \textbf{union} of the sets $A$ and $B$ is $A \cup B =\{x\in U : x\in A \mbox{ or } x\in B \}$
 \end{definition}
 
 \begin{definition}
-The \textbf{intersection} of the sets $A$ and $B$ is
-$A \cap B =\{x\in U : x\in A \mbox{ and } x\in B \}$
+The \textbf{intersection} of the sets $A$ and $B$ is $A \cap B =\{x\in U : x\in A \mbox{ and } x\in B \}$
 \end{definition}
 
 \begin{definition}
-The \textbf{set difference} of the sets $A$ and $B$ is
-$A \setminus B =\{x\in U : x\in A \mbox{ and } x\notin B \}$
+The \textbf{set difference} of the sets $A$ and $B$ is $A \setminus B =\{x\in U : x\in A \mbox{ and } x\notin B \}$
 \end{definition}
 
 \begin{definition}
@@ -248,27 +243,6 @@ Let $A$, $B$, and $C$ be sets. Then
 \end{enumerate}
 (You only need to prove one of these; the other is similar.)
 \end{theorem}
-
-
-%\begin{problem} Let $X, A, B$ be sets.  If $X\setminus B \subset X \setminus A$, what additional hypothesis is needed to conclude $A \subset B$? Prove your answer. \end{problem}
-%
-%\begin{definition}
-%For each natural number $n$, let $S_n$ be a subset of some set $X$. Define $$\bigcup_{n=1}^{\infty}S_n= \{ x \in X : \mbox{ There is an }n \mbox{ such that } x \in S_n \}.$$
-%\end{definition}
-%
-%\begin{definition}
-%For each natural number $n$, let $S_n$ be a subset of some set $X$. Define $$\bigcap_{n=1}^{\infty}S_n= \{ x \in X : \mbox{ For all }n \mbox{, }x \in S_n \}.$$
-%\end{definition}
-%
-%\begin{problem}
-%Find what the following set is equal to, if $S_n = \{x \in \mathbb{R} : n-1<x<n \}$
-%$$\bigcup_{n=1}^{\infty}S_n = $$
-%\end{problem}
-%
-%\begin{problem}
-%Find what the following set is equal to, if $S_n = \{x \in \mathbb{R} : -\frac{1}{n}<x< \frac{1}{n} \}$
-%$$\bigcap_{n=1}^{\infty}S_n = $$
-%\end{problem}
 
 \end{subsection}
 
