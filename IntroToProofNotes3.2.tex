@@ -26,10 +26,11 @@
 
 \pagestyle{fancy}
 
-\lhead{\scriptsize Course Notes for Logic, Proof, \& Axiomatic Systems (Spring 2011)} 
-\rhead{\scriptsize Instructor: \href{http://oz.plymouth.edu/~dcernst}{D.C. Ernst}} 
-\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
-\cfoot{} 
+\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}}
+\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.}
+\cfoot{}
+
 \renewcommand{\headrulewidth}{0.4pt} 
 \renewcommand{\footrulewidth}{0.4pt} 
 
@@ -62,7 +63,7 @@
 
 \addtocounter{section}{2}
 
-\begin{section}{Relations and Functions}
+\begin{section}{Relations and Functions (continued)}
 
 \addtocounter{subsection}{1}
 \addtocounter{theorem}{27}
@@ -70,7 +71,7 @@
 \begin{subsection}{Equivalence Relations}
 
 \begin{remark}
-So that we have them handy, let's recall the following definitions. Let $\sim$ be a relation on a set $A$.
+So that we have them handy, let's recall the following definitions. Let $\sim$ be a relation on a set $A$.  Then
 \begin{enumerate}
 \item $\sim$ is \textbf{reflexive} if for all $x\in A$, $x\sim x$ (every element is related to itself).
 \item $\sim$ is \textbf{symmetric} if for all $x,y\in A$, if $x\sim y$, then $y\sim x$.
@@ -130,10 +131,11 @@ Also, define
 \[
 \Omega_{\sim}=\{R_x:x\in A\}.
 \]
+Notice that $\Omega_{\sim}$ is a set of sets.  In particular, an element in $\Omega_{\sim}$ is a subset of $A$.
 \end{definition}
 
 \begin{exercise}
-Let $P_f$ and $F$ be as in part \ref{exer:facebook} of Exercise \ref{exer:lots of them}.  Describe $R_{\text{Bob}}$.  What is $\Omega_F$?
+Let $P_f$ and $F$ be as in part \ref{exer:facebook} of Exercise \ref{exer:lots of them}.  Describe $R_{\text{Bob}}$ (assume you know which Bob we're talking about).  What is $\Omega_F$?
 \end{exercise}
 
 \begin{exercise}
@@ -173,7 +175,7 @@ The upshot of Theorem \ref{thm:equiv yields partition} is that given an equivale
 \end{remark}
 
 \begin{example}
-The set of relatives that you found in part \ref{exer:mod 5} of Exercise \ref{exer:lots of them} is the set of equivalence classes (modulo 5).
+The set of relatives that you found in part \ref{exer:mod 5} of Exercise \ref{exer:lots of them} is the set of equivalence classes modulo 5.
 \end{example}
 
 \begin{exercise}

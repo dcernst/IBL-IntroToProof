@@ -26,10 +26,11 @@
 
 \pagestyle{fancy}
 
-\lhead{\scriptsize Course Notes for Logic, Proof, \& Axiomatic Systems (Spring 2011)} 
-\rhead{\scriptsize Instructor: \href{http://oz.plymouth.edu/~dcernst}{D.C. Ernst}} 
-\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
-\cfoot{} 
+\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}}
+\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.}
+\cfoot{}
+
 \renewcommand{\headrulewidth}{0.4pt} 
 \renewcommand{\footrulewidth}{0.4pt} 
 
@@ -152,6 +153,16 @@ We can often represent relations using graphs or digraphs.  Given a finite set $
 \end{remark}
 
 \begin{example}
+Let $A=\{a,b,c\}$ and define $\sim=\{(a,a),(a,b),(b,c),(c,b),(c,a)\}$.  The digraph for $\sim$ is a graph with vertices $a,b,c$ and the following arrows: $a$ to $a$, $a$ to $b$, $b$ to $c$, $c$ to $b$, $c$ to $a$.
+\end{example}
+
+\begin{exercise}
+Let $A=\{1,2,3,4,5,6\}$  Define $|$ on $A$ via $x|y$ iff $x$ divides $y$.  Draw the digraph for $|$ on $A$.
+\end{exercise}
+
+When $X$ or $Y$ is infinite, it is not practical to draw a digraph.  However, you are familiar with the graphs of some relations involving infinite sets.
+
+\begin{example}
 When we write $x^2+y^2=1$, we are implicitly defining a relation.  In particular, the relation is the set of ordered pairs $(x,y)$ satisfying $x^2+y^2=1$.  In set notation:
 \[
 \{(x,y):x^2+y^2=1\}
@@ -163,13 +174,7 @@ The graph of this relation in $\mathbb{R}^2$ is the standard unit circle.
 Define $\sim$ on $\mathbb{R}^2$ via $x\sim y$ iff $x\leq y$.  Draw a picture of this relation in $\mathbb{R}^2$.
 \end{exercise}
 
-\begin{example}
-Let $A=\{a,b,c\}$ and define $\sim=\{(a,a),(a,b),(b,c),(c,b),(c,a)\}$.  The digraph for $\sim$ is a graph with vertices $a,b,c$ and the following arrows: $a$ to $a$, $a$ to $b$, $b$ to $c$, $c$ to $b$, $c$ to $a$.
-\end{example}
 
-\begin{exercise}
-Let $A=\{1,2,3,4,5,6\}$  Define $|$ on $A$ via $x|y$ iff $x$ divides $y$.  Draw the digraph for $|$ on $A$.
-\end{exercise}
 
 \begin{definition}
 Let $\sim$ be a relation on a set $A$.
@@ -199,7 +204,7 @@ Let $P$ be the set of people at a party and define $N$ via $(x,y)\in N$ iff $x$ 
 \end{exercise}
 
 \begin{exercise}
-Determine whether each of the following relations are reflexive, symmetric, or transitive.
+Determine whether each of the following relations is reflexive, symmetric, or transitive.
 
 \begin{enumerate}
 \item Let $P_f$ denote the set of all people with accounts on Facebook.  Define  $F$ via $xFy$ iff $x$ is friends with $y$. 
