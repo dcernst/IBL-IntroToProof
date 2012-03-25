@@ -25,10 +25,10 @@
 
 \pagestyle{fancy}
 
-\lhead{\scriptsize Course Notes for Logic, Proof, \& Axiomatic Systems (Spring 2011)} 
-\rhead{\scriptsize Instructor: \href{http://oz.plymouth.edu/~dcernst}{D.C. Ernst}} 
+\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}}
 \lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
-\cfoot{} 
+\cfoot{}
 \renewcommand{\headrulewidth}{0.4pt} 
 \renewcommand{\footrulewidth}{0.4pt} 
 
@@ -61,7 +61,7 @@
 
 \addtocounter{section}{1}
 
-\begin{section}{Set Theory and Topology}
+\begin{section}{Set Theory and Topology (Continued)}
 
 \addtocounter{subsection}{1}
 \addtocounter{theorem}{27}
@@ -96,10 +96,6 @@ For each of the following sets, find the power set.
 \end{enumerate}
 \end{exercise}
 
-%\begin{theorem}
-%Let $S$ be a set with $n$ elements, where $n\in\mathbb{N}\cup \{0\}$.  Then the number of elements in $\mathcal{P}(S)$ is equal to $2^n$.\footnote{\emph{Hint:} Consider two cases: (i) $S$ has no elements, and (ii) $S$ has $n>0$ elements.  In case (ii) apply the multiplication principle for counting, which you can take for granted.}
-%\end{theorem}
-
 \begin{conjecture}
 How many subsets do you think that a set with $n$ elements has?  What if $n=0$?  You do not need to prove your conjecture at this time.  We will prove this later using mathematical induction.
 \end{conjecture}
@@ -112,15 +108,15 @@ Do your best to describe $\mathcal{P}(\mathbb{N})$.  You cannot write down all o
 It is important to realize that the concepts of \emph{element} and \emph{subset} need to be carefully delineated.  For example, consider the set $A=\{x,y\}$.  The object $x$ is an element of $A$, but the object $\{x\}$ is both a subset of $A$ and an element of $\mathcal{P}(A)$.  This can get confusing rather quickly.  Consider the set $O$ from the previous example.  The set $\{a\}$ happens to be an element of $O$, a subset of $O$, and an element of  $\mathcal{P}(O)$.
 \end{remark}
 
-\begin{theorem}
+\begin{theorem}[*]
 Let $S$ and $T$ be sets.  Then $S\subseteq T$ iff $\mathcal{P}(S)\subseteq \mathcal{P}(T)$.\footnote{To prove this theorem, you have to write two distinct subproofs: $A\implies B$ and $B\implies A$.}
 \end{theorem}
 
-\begin{theorem}
+\begin{theorem}[*]
 Let $S$ and $T$ be sets.  Then $\mathcal{P}(S)\cap\mathcal{P}(T)=\mathcal{P}(S\cap T)$.
 \end{theorem}
 
-\begin{theorem}
+\begin{theorem}[*]
 Let $S$ and $T$ be sets.  Then $\mathcal{P}(S)\cup\mathcal{P}(T)\subseteq \mathcal{P}(S\cup T)$.
 \end{theorem}
 
