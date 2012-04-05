@@ -25,12 +25,12 @@
 
 \pagestyle{fancy}
 
-\lhead{\scriptsize Course Notes for Logic, Proof, \& Axiomatic Systems (Spring 2011)} 
-\rhead{\scriptsize Instructor: \href{http://oz.plymouth.edu/~dcernst}{D.C. Ernst}} 
+\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}}
 \lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
-\cfoot{} 
+\cfoot{}
 \renewcommand{\headrulewidth}{0.4pt} 
-\renewcommand{\footrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0.4pt}
 
 \theoremstyle{definition}
 \newtheorem{theorem}{Theorem}[section]
@@ -61,7 +61,7 @@
 
 \addtocounter{section}{1}
 
-\begin{section}{Set Theory and Topology}
+\begin{section}{Set Theory and Topology (Continued)}
 
 \addtocounter{subsection}{3}
 \addtocounter{theorem}{58}
@@ -74,24 +74,28 @@ For this entire section, our universe of discourse is the set of real numbers.  
 
 Recall that an \textbf{axiom} is a statement that we \emph{assume} to be true.  Here are some useful axioms of the real numbers.
 
-\begin{axiom} If $p$ and $q$ are two different real numbers in $\mathbb{R}$, then there is a number between them. %(For example $(p+q)/2$.) 
+\begin{axiom} 
+If $p$ and $q$ are two different real numbers in $\mathbb{R}$, then there is a number between them.
 \end{axiom}
 
 \begin{exercise}
 Given real numbers $p$ and $q$ with $p<q$, construct a real number $x$ such that $p<x<q$.  (We know such a point must exist by the previous example, but this exercise is asking you to produce an actual candidate.)
 \end{exercise}
 
-\begin{axiom} (Linear ordering) If $a$, $b$, and $c$ are real numbers, then:
+\begin{axiom}
+(Linear ordering) If $a$, $b$, and $c$ are real numbers, then:
 \begin{enumerate}
 \item If $a < b$ and $b<c$, then $a<c$;
 \item Exactly one of the following is true: (i) $a < b$, (ii) $a=b$, or (iii) $a>b$.
 \end{enumerate}
 \end{axiom}
 
-\begin{axiom} If $p$ is a real number, then there exists $q,r\in\mathbb{R}$ such that $q<p<r$.
+\begin{axiom}
+If $p$ is a real number, then there exists $q,r\in\mathbb{R}$ such that $q<p<r$.
 \end{axiom}
 
-\begin{axiom} (Archimedean Property) If $x$ is a real number, then either (i) $x$ is an integer or (ii) there exists an integer $n$, such that $n<x<n+1$. 
+\begin{axiom}
+(Archimedean Property) If $x$ is a real number, then either (i) $x$ is an integer or (ii) there exists an integer $n$, such that $n<x<n+1$. 
 \end{axiom}
 
 \begin{definition}
@@ -111,7 +115,8 @@ In this class, we will always assume that any time we write $(a,b), [a,b], (a,b]
 \end{enumerate}
 \end{exercise}
 
-\begin{definition} A set $U$ is called an \textbf{open set} iff for every $t \in U$, there exists an open interval containing $t$ such that the open interval is a subset of $U$.  We define the empty set to be open.\end{definition}
+\begin{definition}
+A set $U$ is called an \textbf{open set} iff for every $t \in U$, there exists an open interval containing $t$ such that the open interval is a subset of $U$.  We define the empty set to be open.\end{definition}
 
 %where should this go?
 %\begin{proposition} 
