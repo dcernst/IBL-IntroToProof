@@ -1,7 +1,7 @@
 \documentclass[11pt]{article}
 
 \usepackage{amsfonts}
-\usepackage{amsmath}
+\usepackage{amsmath, amsthm}
 \usepackage{wasysym}
 \usepackage{amssymb}
 \usepackage{stmaryrd}
@@ -24,15 +24,18 @@
 	pdfauthor={}
 }
 
+\newcommand{\dom}{\operatorname{Dom}}
+\newcommand{\codom}{\operatorname{Codom}}
+\newcommand{\range}{\operatorname{Rng}}
+
 \pagestyle{fancy}
 
 \lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
 \rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}}
-\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.}
+\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
 \cfoot{}
-
 \renewcommand{\headrulewidth}{0.4pt} 
-\renewcommand{\footrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0.4pt}
 
 \theoremstyle{definition}
 \newtheorem{theorem}{Theorem}[section]
@@ -63,163 +66,93 @@
 
 \addtocounter{section}{2}
 
-\begin{section}{Relations and Functions}
+\begin{section}{Induction}
 
-%\addtocounter{subsection}{3}
-%\addtocounter{theorem}{58}
+\begin{subsection}{Introduction to Induction}
 
-\begin{subsection}{Relations}
+In this section, we will explore a technique for proving statements of the form $(\forall n \in \mathbb{N})P(n)$, where $P(n)$ is some predicate.  Notice that this is a statement about natural numbers and not some other set.
 
-\begin{definition}
-An \textbf{ordered pair} is an object of the form $(x,y)$. Two ordered pairs $(x,y)$ and $(a,b)$ are \textbf{equal} if $x=a$ and $y=b$. 
-\end{definition}
+Consider the claims:
+\begin{enumerate}
+\item For all $n\in\mathbb{N}$, $\displaystyle 1+2+3+\cdots +n=\frac{n(n+1)}{2}$.
+\item For all $n\in\mathbb{N}$, $n^{2}+n+41$ is prime.
+\end{enumerate}
+Let's take a look at potential proofs.
 
-\begin{definition}
-An \textbf{$n$-tuple} is object of the form $(x_1, x_2,\ldots,x_n)$.  Each $x_i$ is referred to as the $i$th \textbf{component}.
-\end{definition}
+\bigskip
 
-Note that an ordered pair is just a 2-tuple.
+\noindent \emph{``Proof'' of Claim (1).} If $n=1$, then $1=\frac{1(1+1)}{2}$.  If $n=2$, then $1+2=3=\frac{2(2+1)}{2}$.  If $n=3$, then $1+2+3=6=\frac{3(3+1)}{2}$, and so on. \hfill \qed
 
-\begin{definition}
-If $X$ and $Y$ are sets, the \textbf{Cartesian product} of $X$ and $Y$ is defined by
-\[
-X\times Y=\{(x,y): x\in X, y\in Y\}.
-\]
-That is, $X\times Y$ is the set of all ordered pairs where the first element is from $X$ and the second element is from $Y$.  The set $X\times X$ is sometimes denoted by $X^2$.  We similarly define the Cartesian product of $n$ sets, say $X_1, \ldots, X_n$, by
-\[
-\prod_{i=1}^{n} X_i=X_1\times \cdots \times X_n=\{(x_1,\ldots,x_n): \mbox{each } x_i\in X_i\}.
-\]
-\end{definition}
+\bigskip
 
-\begin{example}
-Let $A=\{a,b,c\}$ and $B=\{\smiley,\frownie\}$.  Then 
-\[
-A\times B=\{(a,\smiley), (a,\frownie),(b,\smiley),(b,\frownie), (c,\smiley),(c,\frownie)\}.
-\]
-\end{example}
+\noindent \emph{``Proof'' of Claim (2).} If $n=1$, then $n^{2}+n+41=43$, which is prime.  If $n=2$, then $n^{2}+n+41=47$, which is prime.  If $n=3$, then $n^{2}+n+41=53$, which is prime, and so on. \hfill \qed
 
-\begin{exercise}
-Using the sets $A$ and $B$ from the previous example, find $B\times A$.  
-\end{exercise}
+\bigskip
 
-\begin{exercise}
-Using the set $B$ from the previous examples, find $B\times B$.  
-\end{exercise}
+Are these actual proofs?  The answer is NO!  In fact, the second claim isn't even true.  If $n=41$, then $n^{2}+n+41=41^{2}+41+41=41(41+1+1)$, which is not prime since it has 41 as a factor.
 
-\begin{exercise}
-What general conclusion can you make about $X\times Y$ versus $Y\times X$?  When will they be equal?
-\end{exercise}
+It turns out that the first claim is true, but what we wrote cannot be a proof since the same type of reasoning when applied to the second claim seems to prove something that isn't actually true.
 
-\begin{exercise}
-If $X$ and $Y$ are both finite sets, then how many elements will $X\times Y$ have?  Be as specific as possible.
-\end{exercise}
+We need a rigorous way of capturing ``and so on'' and a way to verify whether it really is ``and so on.''
 
-\begin{exercise} 
-Let $A=\{1, 2, 3\}$, $B=\{1,2\}$, and $C=\{1,3\}$. List the elements of the set $A \times B\times C$. 
-\end{exercise}
-
-\begin{exercise}
-Let $A=\mathbb{N}$ and $B=\mathbb{R}$. Describe the elements of the set $A \times B$. 
-\end{exercise}
-
-\begin{exercise} Let $A$ be the set of all differentiable functions on the open interval $(0,1)$, and let $B$ equal the set of all derivatives of functions in $A$ evaluated at $x=\frac{1}{2}$. Describe the elements of the set $A \times B$. \end{exercise}
-
-\begin{exercise}
-Three space, $\mathbb{R}^{3}$, is a Cartesian product.  Unpack the meaning of $\mathbb{R}^{3}$ using the Cartesian product, and write the complete set notation version.
-\end{exercise}
-
-\begin{exercise}
-Let $X=[0,1]$ and let $Y=\{1\}$.  Describe geometrically what $X\times Y$, $Y\times X$, $X\times X$, and $Y\times Y$ look like.
-\end{exercise}
-
-\begin{definition}
-Let $X$ and $Y$ be sets. A \textbf{relation} from a set $X$ to a set $Y$ is a subset of $X \times Y$. A relation on $X$ is a subset of $X \times X$.  
-\end{definition}
-
-\begin{example}
-You may not realize it, but you are familiar with many relations.  For example, on the real numbers, we have the relation $\leq$.  We could say that $(3,\pi)$ is in the relation since $3\leq \pi$.  However, $(1,-1)$ is not in the relation since $1\nleq -1$.  (Order matters!)
-\end{example}
+\begin{axiom}[Axiom of Induction]
+Let $S\subseteq \mathbb{N}$ such that both
+\begin{enumerate}
+\item $1\in S$, and
+\item if $k\in S$, then $k+1\in S$.
+\end{enumerate}
+Then $S=\mathbb{N}$.
+\end{axiom}
 
 \begin{remark}
-Different notations for relations are used in different contexts.  When talking about relations in the abstract, we indicate that a pair $(a,b)$ is in the relation by some notation like $a\sim b$, which is read ``$a$ is related to $b$."
+Recall that an axiom is a basic mathematical assumption.  That is, we are assuming that the Axiom of Induction is true, which I'm hoping that you can agree is a pretty reasonable assumption.  I like to think of the first hypothesis of the Axiom of Induction as saying that we have a first rung of a ladder.  The second hypothesis says that if we have some random rung, we can always get to the next rung.  Taken together, this says that we can get from the first rung to the second, from the second to the third, and so on.  Again, we are assuming that the ``and so on'' works as expected here.
 \end{remark}
 
-\begin{example}
-Let $P_f$ denote the set of all people with accounts on Facebook.  Define  $F$ via $xFy$ iff $x$ is friends with $y$.  Then $F$ is a relation on $P_f$.
-\end{example}
+\begin{theorem}[Principle of Mathematical Induction, *]
+Let $P_{1}, P_{2}, P_{3}, \ldots$ be a sequence of statements, one for each natural number.  Assume
+\begin{enumerate}
+\item $P_{1}$ is true, and
+\item If $P_{k}$ is true, then $P_{k+1}$ is true.
+\end{enumerate}
+Then $P_{n}$ is true for all $n\in\mathbb{N}$.
+\end{theorem}
 
 \begin{remark}
-We can often represent relations using graphs or digraphs.  Given a finite set $X$ and a relation $\sim$ on $X$, a \textbf{digraph} (short for \emph{directed graph}) is a discrete graph having the members of $X$ as vertices and a directed edge from $x$ to $y$ iff $x\sim y$.
+The Principal of Mathematical Induction (PMI) provides us with a process for proving statements of the form: ``For all $n\in\mathbb{N}$, $P_{n}$,'' where $P_{n}$ is some statement involving $n\in \mathbb{N}$.  Hypothesis (1) above is called the \textbf{base step} while (2) is called the \textbf{inductive step}.  Here is what a proof by induction looks like (remarks are in parentheses):
+
+\bigskip
+
+\begin{proof}
+We proceed by induction.
+\begin{enumerate}
+\item[(i)] Base step: (Verify that $P_{1}$ is true.  This often amounts to plugging $n=1$ into two sides of some claimed equation and verifying that both sides are actually equal.  Don't assume that they are equal!)
+
+\item[(ii)] Inductive step:  (Your goal is to prove that ``For all $k\in\mathbb{N}$, if $P_{k}$ is true, then $P_{k+1}$ is true.'')  Let $k\in\mathbb{N}$ and assume that $P_{k}$ is true.  (Now, do some stuff to show that $P_{k+1}$ is true.)  Therefore, $P_{k+1}$ is true.
+\end{enumerate}
+Thus, by the PMI, $P_{n}$ is true for all $n\in\mathbb{N}$.
+\end{proof}
+
 \end{remark}
 
-\begin{example}
-Let $A=\{a,b,c\}$ and define $\sim=\{(a,a),(a,b),(b,c),(c,b),(c,a)\}$.  The digraph for $\sim$ is a graph with vertices $a,b,c$ and the following arrows: $a$ to $a$, $a$ to $b$, $b$ to $c$, $c$ to $b$, $c$ to $a$.
-\end{example}
+\begin{problem}[*]
+For all $n\in\mathbb{N}$, $\displaystyle \sum_{i=1}^{n}i=\frac{n(n+1)}{2}$.  (\emph{Note:} $\displaystyle \sum_{i=1}^{n}i=1+2+3+\cdots +n$, by definition.)
+\end{problem}
 
-\begin{exercise}
-Let $A=\{1,2,3,4,5,6\}$  Define $|$ on $A$ via $x|y$ iff $x$ divides $y$.  Draw the digraph for $|$ on $A$.
-\end{exercise}
+\begin{problem}[*]
+For all $n\in\mathbb{N}$, 3 divides $4^{n}-1$.
+\end{problem}
 
-When $X$ or $Y$ is infinite, it is not practical to draw a digraph.  However, you are familiar with the graphs of some relations involving infinite sets.
+\begin{problem}[*]
+For all $n\in\mathbb{N}$, 6 divides $n^{3}-n$.
+\end{problem}
 
-\begin{example}
-When we write $x^2+y^2=1$, we are implicitly defining a relation.  In particular, the relation is the set of ordered pairs $(x,y)$ satisfying $x^2+y^2=1$.  In set notation:
-\[
-\{(x,y):x^2+y^2=1\}
-\]
-The graph of this relation in $\mathbb{R}^2$ is the standard unit circle.
-\end{example}
+\begin{problem}[*]
+Let $p_{1}, p_{2}, \ldots, p_{n}$ be $n$ distinct points arranged on a circle.  Then the number of line segments joining all pairs of points is $\frac{n^{2}-n}{2}$.
+\end{problem}
 
-\begin{exercise}
-Define $\sim$ on $\mathbb{R}^2$ via $x\sim y$ iff $x\leq y$.  Draw a picture of this relation in $\mathbb{R}^2$.
-\end{exercise}
-
-
-
-\begin{definition}
-Let $\sim$ be a relation on a set $A$.
-\begin{enumerate}
-\item $\sim$ is \textbf{reflexive} if for all $x\in A$, $x\sim x$ (every element is related to itself).
-\item $\sim$ is \textbf{symmetric} if for all $x,y\in A$, if $x\sim y$, then $y\sim x$.
-\item $\sim$ is \textbf{transitive} if for all $x,y,z\in A$, if $x\sim y$ and $y\sim z$, then $x\sim z$.
-\end{enumerate}
-\end{definition}
-
-\begin{example}\
-\begin{enumerate}
-\item $\leq$ on $\mathbb{R}$ is reflexive and transitive, but not symmetric.
-$<$ on $\mathbb{R}$ is transitive, but not symmetric and not reflexive.
-\item If $S$ is a set, then $\subseteq$ on $\mathcal{P}(S)$ is reflexive and transitive, but not symmetric.
-\item $=$ on $\mathbb{R}$ is reflexive, symmetric, and transitive.
-\end{enumerate}
-
-\end{example}
-
-\begin{exercise}
-Given a finite set $A$ and a relation $\sim$, describe what each of reflexive, symmetric, and transitive look like in terms of a digraph.
-\end{exercise}
-
-\begin{exercise}
-Let $P$ be the set of people at a party and define $N$ via $(x,y)\in N$ iff $x$ knows the name of $y$.  Describe what it would mean for $N$ to be reflexive, symmetric, and transitive.
-\end{exercise}
-
-\begin{exercise}
-Determine whether each of the following relations is reflexive, symmetric, or transitive.
-
-\begin{enumerate}
-\item Let $P_f$ denote the set of all people with accounts on Facebook.  Define  $F$ via $xFy$ iff $x$ is friends with $y$. 
-\item Let $P$ be the set of all people and define $H$ via $xHy$ iff $x$ and $y$ have the same height.
-\item Let $P$ be the set of all people and define $T$ via $xTy$ iff $x$ is taller than $y$.
-\item Consider the relation ``divides" on $\mathbb{N}$.
-\item Let $L$ be the set of lines and define $||$ via $l_1||l_2$ iff $l_1$ is parallel to $l_2$.
-\item Let $C[0,1]$ be the set of continuous functions on $[0,1]$.  Define $f\sim g$ iff
-\[
-\int_0^1|f(x)|\ dx=\int_0^1|g(x)|\ dx.
-\]
-\item Define $\sim$ on $\mathbb{N}$ via $n\sim m$ iff $n+m$ is even.
-\item Define $D$ on $\mathbb{R}$ via $(x,y)\in D$ iff $x=2y$.
-\end{enumerate}
-\end{exercise}
+\begin{theorem}[*]
+Let $A$ be a set with $n$ elements.  Then $\mathcal{P}(A)$ is a set with $2^{n}$ elements.\footnote{We encountered this theorem back in Section 2.2 (see Conjecture 2.33), but we didn't prove it.  Proving this theorem is rather tricky.  If you use induction (which I suggest), at some point, you will need to argue that if you add one more element to a finite set, then you end up with twice as many subsets.}
+\end{theorem}
 
 \end{subsection}
 
