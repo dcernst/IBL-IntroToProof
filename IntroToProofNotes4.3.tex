@@ -1,0 +1,191 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage[margin=1in]{geometry}
+\usepackage[hang,flushmargin,symbol*]{footmisc}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0, 0, .6}
+\definecolor{grey}{rgb}{.7, .7, .7}
+\usepackage[breaklinks]{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=darkblue,
+	anchorcolor=darkblue,
+	citecolor=darkblue,
+	pagecolor=darkblue,
+	urlcolor=darkblue,
+	pdftitle={},
+	pdfauthor={}
+}
+
+\pagestyle{fancy}
+
+\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}}
+\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.}
+\cfoot{}
+
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0.4pt} 
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{journal}[theorem]{Journal}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{question}[theorem]{Question}
+
+\begin{document}
+
+\addtocounter{section}{3}
+
+\begin{section}{Relations and Functions (continued)}
+
+\addtocounter{subsection}{2}
+\addtocounter{theorem}{46}
+
+\begin{subsection}{Partitions}
+
+\begin{remark}
+The upshot of Theorems 3.40 and 3.41 is that if $\sim$ is an equivalence relation on a set $A$, then $\sim$ breaks $A$ up into pairwise disjoint chunks, where each chunk is some $R_{a}$ for $a\in A$. Furthermore, each  pair of elements in the same set of relatives are related via $\sim$.
+\end{remark}
+
+As you've probably already noticed, equivalence relations are intimately related to the following concept.
+
+\begin{definition}
+A collection $\Omega$ of nonempty subsets of a set $A$ is said to be a \textbf{partition} of $A$ if the elements of $\Omega$ satisfy:
+\begin{enumerate}
+\item Given $X,Y\in\Omega$, either $X=Y$ or $X\cap Y=\emptyset$ (We can't have both at the same time. Do you see why?), and
+\item $\displaystyle \bigcup_{X\in\Omega}X=A$.
+\end{enumerate}
+That is, the elements of $\Omega$ are pairwise disjoint and their union is all of $A$.
+\end{definition}
+
+\begin{example}
+The following are all examples of partitions of the given set.  Perhaps you can find exceptions in these examples, but please take them at face value.
+\begin{enumerate}
+\item men, women (set of people)
+\item Democrat, Republican, Independent, Green Party, Libertarian, etc. (set of registered voters)
+\item freshman, sophomore, junior, senior (set of high school students)
+\item evens, odds (set of integers)
+\item rationals, irrationals (set of real numbers)
+\end{enumerate}
+\end{example}
+
+\begin{example}\label{ex:a partition}
+Let $A=\{a,b,c,d,e,f\}$ and $\Omega=\{X_{1},X_{2},X_{3}\}$, where $X_{1}=\{a\}$, $X_{2}=\{b,c,d\}$, and $X_{3}=\{e,f\}$.  Then $\Omega$ is a partition of $A$ since the elements of $\Omega$ are pairwise disjoint and their union is all of $A$.
+\end{example}
+
+\begin{exercise}
+Consider the set $A$ from Example \ref{ex:a partition}.
+\begin{enumerate}
+\item Find a partition of $A$ that has 4 subsets in the partition.
+\item Find a collection of subsets of $A$ that does \emph{not} form a partition.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Find a partition of $\mathbb{N}$ that consists of 3 subsets, where one of the sets is finite and the remaining two sets are infinite.
+\end{exercise}
+
+\begin{exercise}
+Let $P$ be the set of prime numbers, $N$ be the set of odd natural numbers that are not prime, and $E$ be the set of even natural numbers.  Explain why this is not a partition of $\mathbb{N}$.
+\end{exercise}
+
+The next theorem spells out half of the close connection between partitions and equivalence relations.  Hopefully you were anticipating this.
+
+\begin{theorem}[*]
+Let $\sim$ be an equivalence relation on a set $A$.  Then $\Omega_{\sim}$ forms a partition of $A$.
+\end{theorem}
+
+\begin{exercise}
+Consider the equivalence relation
+\[
+\sim=\{(1,1),(1,2),(2,1), (2,2),(3,3),(4,4),(4,5),(5,4),(6,6),(5,6),(6,5),(4,6),(6,4)\}
+\]
+on the set $A=\{1,2,3,4,5,6\}$.  Find the partition determined by $\Omega_{\sim}$.
+\end{exercise}
+
+It turns out that we can reverse the situation, as well.  That is, given a partition, we can form an equivalence relation.  Before proving this, we need a definition.
+
+\begin{definition}
+Let $A$ be a set and $\Omega$ any collection of subsets from $\mathcal{P}(A)$ (not necessarily a partition).  If $a,b\in A$, we will define $a$ to be $\Omega$-related to $b$ if there exists an $R\in \Omega$ that contains both $a$ and $b$.  This relation is denoted by $\sim_{\Omega}$ and is called the \textbf{relation on $A$ associated to $\Omega$}.
+\end{definition}
+
+\begin{remark}
+This definition may look more awkward than the actual underlying concept.  The idea is that if two elements are in the same subset, then they are related.  For example, when my kids pick up all their toys and put them in the appropriate toy bins, we say that two toys are related if they are in the same bin.
+\end{remark}
+
+\begin{remark}
+Notice that we have two notations that looks similar: $\Omega_{\sim}$ and $\sim_{\Omega}$.  
+\begin{enumerate}
+\item $\Omega_{\sim}$ is the collection of subsets of $A$ determined by the relation $\sim$.
+\item $\sim_{\Omega}$ is the relation determined by the collection of subsets $\Omega$.
+\end{enumerate}
+\end{remark}
+
+\begin{exercise}
+Let $A=\{a,b,c,d,e,f\}$ and let $\Omega=\{X_{1},X_{2},X_{3}\}$, where $X_{1}=\{a,c\}$, $X_{2}=\{b,c\}$, and $X_{3}=\{d,f\}$.  List the elements of $\sim_{\Omega}$ by listing ordered pairs or drawing a digraph.
+\end{exercise}
+
+\begin{exercise}
+Let $A$ and $\Omega$ be as in Example \ref{ex:a partition}.  List the elements of $\sim_{\Omega}$ by listing ordered pairs or drawing a digraph.
+\end{exercise}
+
+\begin{theorem}[*]
+Let $A$ be a set and let $\Omega$ be a collection of subsets from $\mathcal{P}(A)$ (not necessarily a partition).  Then $\sim_{\Omega}$ is symmetric.
+\end{theorem}
+
+\begin{exercise}
+Give an example of a set $A$ and a collection $\Omega$ from $\mathcal{P}(A)$ such that the relation $\sim_{\Omega}$ is not reflexive.
+\end{exercise}
+
+\begin{theorem}[*]
+Let $A$ be a set and let $\Omega$ be a collection of subsets from $\mathcal{P}(A)$.  If $\displaystyle \bigcup_{R\in\Omega}R=A$, then $\sim_{\Omega}$ is reflexive.
+\end{theorem}
+
+\begin{theorem}[*]
+Let $A$ be a set and let $\Omega$ be a collection of subsets from $\mathcal{P}(A)$.  If the elements of $\Omega$ are pairwise disjoint, then $\sim_{\Omega}$ is transitive.
+\end{theorem}
+
+\begin{corollary}[*]
+Let $A$ be a set and let $\Omega$ be a partition of $A$.  Then $\sim_{\Omega}$ is an equivalence relation.
+\end{corollary}
+
+\begin{remark}
+The previous corollary says that every partition determines a natural equivalence relation.  Namely, two elements are related if they are in the same equivalence class.
+\end{remark}
+
+\begin{exercise}
+Let $A=\{\circ, \triangle, \blacktriangle, \square, \blacksquare, \bigstar, \smiley, \frownie\}$.  Make up a partition $\Omega$ on $A$ and then draw the digraph corresponding to $\sim_{\Omega}$.
+\end{exercise}
+
+\end{subsection}
+
+\end{section}
+
+\end{document}

@@ -1,0 +1,193 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage[margin=1in]{geometry}
+\usepackage[hang,flushmargin,symbol*]{footmisc}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0, 0, .6}
+\definecolor{grey}{rgb}{.7, .7, .7}
+\usepackage[breaklinks]{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=darkblue,
+	anchorcolor=darkblue,
+	citecolor=darkblue,
+	pagecolor=darkblue,
+	urlcolor=darkblue,
+	pdftitle={},
+	pdfauthor={}
+}
+
+\pagestyle{fancy}
+
+\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}}
+\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.}
+\cfoot{}
+
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0.4pt} 
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{journal}[theorem]{Journal}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{question}[theorem]{Question}
+
+\begin{document}
+
+\addtocounter{section}{3}
+
+\begin{section}{Relations and Functions (continued)}
+
+\addtocounter{subsection}{1}
+\addtocounter{theorem}{27}
+
+\begin{subsection}{Equivalence Relations}
+
+\begin{remark}
+So that we have them handy, let's recall the following definitions. Let $\sim$ be a relation on a set $A$.  Then
+\begin{enumerate}
+\item $\sim$ is \textbf{reflexive} if for all $x\in A$, $x\sim x$ (every element is related to itself).
+\item $\sim$ is \textbf{symmetric} if for all $x,y\in A$, if $x\sim y$, then $y\sim x$.
+\item $\sim$ is \textbf{transitive} if for all $x,y,z\in A$, if $x\sim y$ and $y\sim z$, then $x\sim z$.
+\end{enumerate}
+As we've seen in the previous section of notes, these conditions are mutually exclusive.  That is, a relation may have some combination of these properties, but not necessarily all of them.  However, we have a special name for when a relation does satisfy all three.
+\end{remark}
+
+\begin{definition}
+Let $\sim$ be a relation on a set $A$.  Then $\sim$ is called an \textbf{equivalence relation} if $\sim$ is reflexive, symmetric, and transitive.
+\end{definition}
+
+\begin{exercise}
+Given a finite set $A$ and a relation $\sim$ on $A$, describe what the corresponding digraph would have to look like in order for $\sim$ to be an equivalence relation.
+\end{exercise}
+
+\begin{exercise}\label{exer:made up}
+Let $A=\{a,b,c,d,e\}$.  Make up an equivalence relation on $A$ by drawing a digraph such that $a$ is not related $b$ and $c$ is not related to $b$.
+\end{exercise}
+
+\begin{exercise}\label{exer:digraph}
+Let $S=\{1,2,3,4,5,6\}$ and define
+\[
+\sim=\{(1,1),(1,6),(2,2),(2,3),(2,4),(3,3),(3,2),(3,4),(4,4),(4,2),(4,3),(5,5),(6,6),(6,1)\}.
+\]
+Justify that this is an equivalence relation.
+\end{exercise}
+
+\begin{problem}
+Determine which of the following are equivalence relations.  Some of these occurred in the last section of notes and you are welcome to use your answers from those problems.
+
+\begin{enumerate}\label{exer:lots of them}
+\item\label{exer:facebook} Let $P_f$ denote the set of all people with accounts on Facebook.  Define  $F$ via $xFy$ iff $x$ is friends with $y$. 
+\item Let $P$ be the set of all people and define $H$ via $xHy$ iff $x$ and $y$ have the same height.
+\item Let $P$ be the set of all people and define $T$ via $xTy$ iff $x$ is taller than $y$.
+\item Consider the relation ``divides" on $\mathbb{N}$.
+\item Let $L$ be the set of lines and define $||$ via $l_1||l_2$ iff $l_1$ is parallel to $l_2$.
+\item Let $C[0,1]$ be the set of continuous functions on $[0,1]$.  Define $f\sim g$ iff
+\[
+\int_0^1|f(x)|\ dx=\int_0^1|g(x)|\ dx.
+\]
+\item Define $\sim$ on $\mathbb{N}$ via $n\sim m$ iff $n+m$ is even.
+\item Define $D$ on $\mathbb{R}$ via $(x,y)\in D$ iff $x=2y$.
+\item\label{exer:mod 5} Define $\sim$ on $\mathbb{Z}$ via $a\sim b$ iff $a-b$ is a multiple of 5.
+\item Define $\sim$ on $\mathbb{R}^2$ via $(x_1,y_1)\sim (x_2,y_2)$ iff $x_1^2+y_1^2=x_2^2+y_2^2$.
+\item Define $\sim$ on $\mathbb{R}$ via $x\sim y$ iff $\lfloor x\rfloor =\lfloor y\rfloor$, where $\lfloor x\rfloor$ is the greatest integer less than or equal to $x$ (e.g., $\lfloor \pi\rfloor=3$, $\lfloor -1.5\rfloor=-2$, and $\lfloor 4\rfloor=4$).
+\item Define $\sim$ on $\mathbb{R}$ via $x \sim y$ iff $|x-y|<1$.
+\end{enumerate}
+\end{problem}
+
+\begin{definition}
+Let $\sim$ be a relation on a set $A$ (not necessarily an equivalence relation) and let $x\in A$.  Then we define the \textbf{set of relatives of $x$} via
+\[
+R_x=\{y\in A: x\sim y\}.
+\]
+Also, define
+\[
+\Omega_{\sim}=\{R_x:x\in A\}.
+\]
+Notice that $\Omega_{\sim}$ is a set of sets.  In particular, an element in $\Omega_{\sim}$ is a subset of $A$.
+\end{definition}
+
+\begin{exercise}
+Let $P_f$ and $F$ be as in part \ref{exer:facebook} of Exercise \ref{exer:lots of them}.  Describe $R_{\text{Bob}}$ (assume you know which Bob we're talking about).  What is $\Omega_F$?
+\end{exercise}
+
+\begin{exercise}
+Using your digraph in Exercise \ref{exer:made up}, find $\Omega_{\sim}$ for all $x\in A$.  
+\end{exercise}
+
+\begin{exercise}
+Consider the relation $\leq$ on $\mathbb{R}$.  If $x\in \mathbb{R}$, what is $R_x$?
+\end{exercise}
+
+\begin{exercise}
+Find $R_1$ and $R_{2}$ for the relation given in part \ref{exer:mod 5} of Exercise \ref{exer:lots of them}.  How many different sets of relatives are there?  What are they?
+\end{exercise}
+
+\begin{exercise}
+Find $R_x$ for all $x\in S$ for $S$ and $\sim$ from Exercise \ref{exer:digraph}.  Any observations?
+\end{exercise}
+
+\begin{theorem}[*]
+Suppose $\sim$ is an equivalence relation on a set $A$ and let $a,b\in A$.  Then $R_a=R_b$ iff $a\sim b$.
+\end{theorem}
+
+\begin{theorem}[*]\label{thm:equiv yields partition}
+Suppose $\sim$ is an equivalence relation on a set $A$.  Then
+\begin{enumerate}
+\item $\bigcup_{x\in A}R_x=A$, and
+\item for all $x,y\in A$, either $R_x=R_y$ or $R_x\cap R_y=\emptyset$.
+\end{enumerate}
+\end{theorem}
+
+\begin{definition}
+In light of Theorem \ref{thm:equiv yields partition}, if $\sim$ is an equivalence relation on a set $A$, then we refer to each $R_x$ as the \textbf{equivalence class} of $x$.  In this case, $\Omega_{\sim}$ is the set of equivalence classes determined by $\sim$.
+\end{definition}
+
+\begin{remark}
+The upshot of Theorem \ref{thm:equiv yields partition} is that given an equivalence relation, every element lives in exactly one equivalence class.  We'll see in the next section of notes that we can run this in reverse.  That is, if we separate out the elements of a set so that every element is an element of exactly one subset (like the bins of my kid's toys), then this determines an equivalence relation.  More on this later.
+\end{remark}
+
+\begin{example}
+The set of relatives that you found in part \ref{exer:mod 5} of Exercise \ref{exer:lots of them} is the set of equivalence classes modulo 5.
+\end{example}
+
+\begin{exercise}
+If $\sim$ is an equivalence relation on a finite set $A$, then what is the connection between the equivalence classes and the corresponding digraph?
+\end{exercise}
+
+\begin{exercise}
+For each of the equivalence relations in Exercise \ref{exer:lots of them}, describe the equivalence classes as best as you can.
+\end{exercise}
+
+\end{subsection}
+
+\end{section}
+
+\end{document}
