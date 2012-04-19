@@ -110,7 +110,7 @@ In this class, we will always assume that any time we write $(a,b), [a,b], (a,b]
 \begin{enumerate}
 \item an open interval
 \item a closed interval
-\item an interval that is neither open or closed
+\item an interval that is neither open nor closed
 \item an infinite set that is not an interval
 \end{enumerate}
 \end{exercise}
@@ -178,7 +178,7 @@ is an open set.
 \end{enumerate}
 \end{exercise}
 
-\begin{remark}
+\begin{remark}\label{union vs intersection of open sets}
 Taken together, Theorems \ref{finite union of open sets}--\ref{union of open sets} and Exercise \ref{intersection of open sets} tell us that the union of open sets is open, but that the intersection of open sets may or may not be open.  However, if we are taking the intersection of finitely many open sets, then the intersection will be open.
 \end{remark}
 
@@ -237,7 +237,7 @@ Provide an example of each of the following.  You do not need to prove that your
 \item A closed set.
 \item A set that is not closed.
 \item A set that is open and closed.
-\item A set that neither open or closed.
+\item A set that neither open nor closed.
 \end{enumerate}
 
 \end{exercise}
@@ -259,14 +259,14 @@ The real numbers are both open and closed.
 \end{theorem}
 
 \begin{theorem}
-The rational numbers are neither open or closed.  (You may use the fact that between any two rational numbers, there exists an irrational number.)
+The rational numbers are neither open nor closed.
 \end{theorem}
 
 \begin{theorem}
 The empty set is both open and closed.
 \end{theorem}
 
-\begin{theorem}[*]
+\begin{theorem}[*]\label{intersection of closed sets}
 Let $\{A_{\alpha}\}_{\alpha\in\Delta}$ be a collection of closed sets.  Then
 \[
 \bigcap_{\alpha\in \Delta} A_{\alpha}
@@ -274,7 +274,7 @@ Let $\{A_{\alpha}\}_{\alpha\in\Delta}$ be a collection of closed sets.  Then
 is a closed set.
 \end{theorem}
 
-\begin{exercise}
+\begin{exercise}\label{union of closed sets}
 Provide an example of a collection of closed sets $\{A_{\alpha}\}_{\alpha\in\Delta}$ such that 
 \[
 \bigcup_{\alpha\in \Delta} A_{\alpha}
@@ -285,6 +285,10 @@ is a \emph{not} closed set.
 \begin{problem}
 Let $A$ and $B$ be closed sets.  Determine whether $A\cup B$ is necessarily closed and prove that your answer is correct.
 \end{problem}
+
+\begin{remark}
+You should compare what happened in Theorem \ref{intersection of closed sets} and Exercise \ref{union of closed sets} to what we stated in Remark \ref{union vs intersection of open sets}
+\end{remark}
 
 \end{subsection}
 
