@@ -1,0 +1,236 @@
+\documentclass[letterpaper,11pt,onesided]{book}%
+
+\newif\ifinstructor
+%% uncomment one of the following, depending if you want to include the
+%% instructor notes or not
+\instructortrue
+%\instructorfalse
+
+
+\newif\ifnotes
+%% uncomment one of the following, depending if you want to include the
+%% instructor notes or not
+\notestrue
+%\notesfalse
+
+\usepackage{tabls}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{stmaryrd}
+\usepackage{wasysym}
+\usepackage{microtype}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage[hang,flushmargin,symbol*]{footmisc}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0, 0, .6}
+\definecolor{grey}{rgb}{.7, .7, .7}
+\usepackage[breaklinks]{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=darkblue,
+	anchorcolor=darkblue,
+	citecolor=darkblue,
+	pagecolor=darkblue,
+	urlcolor=darkblue,
+	pdftitle={},
+	pdfauthor={}
+}
+
+
+\usepackage{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Margin notes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[left=1in,right=2.75in,top=1in,bottom=1in]{geometry}
+%\marginparwidth 1.75in
+%\let\oldmarginpar\marginpar
+%\renewcommand\marginpar[1]{\-\oldmarginpar{\raggedright\footnotesize #1}}
+%\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize #1]{\raggedright\footnotesize #1}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Embed the date and time into every page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[12hr]{datetime}
+%\newdateformat{draftdate}{%
+%\shortdayofweekname{\THEDAY}{\THEMONTH}{\THEYEAR}, %
+%\THEDAY\ \shortmonthname[\THEMONTH] \THEYEAR}
+%\draftdate
+%\usepackage{eso-pic}
+%\AddToShipoutPicture{\put(10,10){\small Draft: \today\ at \currenttime }}%--- version: \MakeUppercase{\svnInfoRevision}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Instructor-specific material (answers, helps, etc.)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifinstructor
+  \newcommand{\instructor}[1]{\marginpar{\textbf{Instructor: }#1}}
+\else
+  \newcommand{\instructor}[1]{}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Personal notes about improving the text, etc.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifnotes
+\renewcommand{\thefootnote}{\roman{footnote}}
+\newcommand{\note}[1]{\footnote{#1}\marginpar{\fbox{\textbf{\thefootnote}}}}
+\else
+\newcommand{\note}[1]{}
+\fi
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands to define a term (so that we get nice indexing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\define}[2][]{\textbf{#2}\index{#1#2}}
+\newcommand{\definemargin}[2][]{\marginpar{#2}\define[#1]{#2}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theorems
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{journal}[theorem]{Journal}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Notation shortcuts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\DeclareMathOperator{\dom}{Dom}
+\DeclareMathOperator{\codom}{Codom}
+\DeclareMathOperator{\range}{Rng}
+\newcommand{\blank}[1]{\raisebox{0pt}[14pt]{\rule{#1}{0.7pt}}}
+
+\let\origdoublepage\cleardoublepage
+
+\newcommand{\clearemptydoublepage}{%
+  \clearpage
+  {\pagestyle{empty}\origdoublepage}%
+}
+
+
+
+\begin{document}
+\frontmatter
+\title{Course Notes for Introduction to Proof}
+\author{D.C.~Ernst\thanks{University, \url{email address}}}
+\date{Typeset on \today\\
+\vfill
+  This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.
+%\includegraphics[height=1.3cm]{by-sa}
+\vfill}
+\maketitle
+ \thispagestyle{empty}
+
+% \noindent\copyright{ 2012 Jason Grout and Theron Hitchman.  Some Rights Reserved.\\
+
+% \bigskip
+
+% \noindent Except where otherwise noted, this work is licensed under the Creative Commons
+% Attribution-ShareAlike 3.0 United States License. To view a copy of
+% this license, visit 
+% \begin{center}
+%   \url{http://creativecommons.org/licenses/by-sa/3.0/us/}
+% \end{center}
+% or send a letter to Creative Commons, 171 Second Street, Suite 300,
+% San Francisco, California, 94105, USA.
+
+% \bigskip
+
+% \noindent Please attribute this work to:
+% \smallskip
+
+%  Jason Grout, Mathematics Faculty at Drake University, Des Moines, IA,
+%  \url{jason.grout@drake.edu}, and
+
+% \smallskip
+
+%  Theron Hitchman, Mathematics Faculty at University of Northern Iowa,
+%  Cedar Falls, IA, \url{theron.hitchman@uni.edu}.
+
+% \vfill 
+
+% The source for this work is available at \url{http://github.com/jasongrout/linear-algebra-ibl}.
+% \vfill
+% }
+\tableofcontents
+\clearemptydoublepage
+
+\begin{chapter}{Preface}
+This is preface text.
+\end{chapter}
+
+\clearemptydoublepage
+
+\mainmatter
+
+\begin{chapter}{Introduction to Mathematics}
+\input{IntroToProofNotes1.1}
+\input{IntroToProofNotes1.2}
+\input{IntroToProofNotes1.3}
+\input{IntroToProofNotes1.4}
+\input{IntroToProofNotes1.5}
+\input{IntroToProofNotes1.6}
+\end{chapter}
+
+\begin{chapter}{Set Theory and Topology}
+\input{IntroToProofNotes2.1}
+\input{IntroToProofNotes2.2}
+\input{IntroToProofNotes2.3}
+\input{IntroToProofNotes2.4}
+
+\end{chapter}
+
+\begin{chapter}{Induction}
+\input{IntroToProofNotes3.1}
+\end{chapter}
+
+\begin{chapter}{Relations and Functions}
+\input{IntroToProofNotes4.1}
+\input{IntroToProofNotes4.2}
+\input{IntroToProofNotes4.3}
+\input{IntroToProofNotes4.4}
+\input{IntroToProofNotes4.5}
+\end{chapter}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
