@@ -1,74 +1,6 @@
-\documentclass[11pt]{article}
-
-\usepackage{amsfonts}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{stmaryrd}
-\usepackage{amsthm}
-\usepackage{fancyhdr}
-\usepackage[margin=1in]{geometry}
-\usepackage[hang,flushmargin,symbol*]{footmisc}
-\usepackage{color}
-\definecolor{darkblue}{rgb}{0, 0, .6}
-\definecolor{grey}{rgb}{.7, .7, .7}
-\usepackage[breaklinks]{hyperref}
-\hypersetup{
-	colorlinks=true,
-	linkcolor=darkblue,
-	anchorcolor=darkblue,
-	citecolor=darkblue,
-	pagecolor=darkblue,
-	urlcolor=darkblue,
-	pdftitle={},
-	pdfauthor={}
-}
-
-\pagestyle{fancy}
-
-\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
-\rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}} 
-\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
-\cfoot{} 
-\renewcommand{\headrulewidth}{0.4pt} 
-\renewcommand{\footrulewidth}{0.4pt} 
-
-\theoremstyle{definition}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{acknowledgement}[theorem]{Acknowledgement}
-\newtheorem{algorithm}[theorem]{Algorithm}
-\newtheorem{question}[theorem]{Question}
-\newtheorem{axiom}[theorem]{Axiom}
-\newtheorem{case}[theorem]{Case}
-\newtheorem{claim}[theorem]{Claim}
-\newtheorem{conclusion}[theorem]{Conclusion}
-\newtheorem{condition}[theorem]{Condition}
-\newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{criterion}[theorem]{Criterion}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{exercise}[theorem]{Exercise}
-\newtheorem{journal}[theorem]{Journal}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{notation}[theorem]{Notation}
-\newtheorem{problem}[theorem]{Problem}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{remark}[theorem]{Remark}
-\newtheorem{solution}[theorem]{Solution}
-\newtheorem{summary}[theorem]{Summary}
-
-\begin{document}
-
-\addtocounter{section}{0}
-
-\begin{section}{Introduction to Mathematics (Continued)}
-
-\addtocounter{subsection}{3}
-\addtocounter{theorem}{50}
-
 %%%%  Quantification
 
-\begin{subsection}{Introduction to Quantification}
+\begin{section}{Introduction to Quantification}
 
 Recall that sentences of the form ``$x>0$" are not propositions (unless the context of $x$ is perfectly clear).  In this case, we call $x$ a \textbf{free variable}.  In order to turn a sentence with free variables into a proposition, for each free variable, we need to either substitute in a value (not necessarily a number) for the free variable or we must ``quantify" the free variable.  
 
@@ -169,8 +101,4 @@ Conjecture a summary of the various possibilities for quantifying predicates inv
 Suppose that the universe of acceptable values is the set of real numbers.  Consider the predicate $G(x,y):=``x>y"$.  Find all possible \emph{distinct} ways to bind the variables to create propositions and then determine the truth value of each (you do not need to prove your answers).  Do any of your propositions have the same meaning as one of the others?
 \end{exercise}
 
-\end{subsection}
-
 \end{section}
-
-\end{document}
