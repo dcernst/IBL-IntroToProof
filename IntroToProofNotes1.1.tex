@@ -25,7 +25,7 @@
 
 \pagestyle{fancy}
 
-\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.2)} 
+\lhead{\scriptsize Notes for an Introduction to Proof Course (Version Spring 2013)} 
 \rhead{\scriptsize Written by \href{http://danaernst.com}{D.C. Ernst}} 
 \lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
 \cfoot{} 
@@ -39,6 +39,7 @@
 \newtheorem{axiom}[theorem]{Axiom}
 \newtheorem{case}[theorem]{Case}
 \newtheorem{claim}[theorem]{Claim}
+\newtheorem{question}[theorem]{Question}
 \newtheorem{conclusion}[theorem]{Conclusion}
 \newtheorem{condition}[theorem]{Condition}
 \newtheorem{conjecture}[theorem]{Conjecture}
@@ -62,6 +63,8 @@
 
 \begin{section}{Introduction to Mathematics}
 
+Before you get started, make sure you've read Chapter 0, which sets the tone for the work we will begin doing here.
+
 \begin{subsection}{A Taste of Number Theory}
 
 %This section (or possibly a new section before this one) really needs more of a lead in.  For example, I should add:
@@ -80,7 +83,7 @@ An integer $n$ is \textbf{even} if $n=2k$ for some integer $k$. \end{definition}
 \begin{definition}
 An integer $n$ is \textbf{odd} if $n=2k+1$ for some integer $k$. \end{definition}
 
-\begin{theorem}
+\begin{theorem}\label{two consecutive ints}
 The sum of two consecutive integers is odd.
 \end{theorem}
 
@@ -88,9 +91,13 @@ The sum of two consecutive integers is odd.
 If $n$ is even, then $n^2$ is even.
 \end{theorem}
 
-\begin{problem}[*]
+\begin{problem}[*]\label{sum of even and odd}
 Prove or provide a counterexample:  The sum of an even number and an odd number is odd.
 \end{problem}
+
+\begin{question}
+Did Theorem~\ref{two consecutive ints} need to come before Problem~\ref{sum of even and odd}?  Could we have used Problem~\ref{sum of even and odd} to prove Theorem~\ref{two consecutive ints}?  If so, outline how this alternate proof would go.  Perhaps your original proof utilized the approach I'm hinting at.  If this is true, can you think of a proof that does not rely directly on Problem~\ref{sum of even and odd}?  Is one approach better than the other?
+\end{question}
 
 \begin{problem}
 Prove or provide a counterexample: The product of an odd number and an even number is odd.
@@ -101,7 +108,8 @@ Prove or provide a counterexample: The product of an odd number and an odd numbe
 \end{problem}
 
 \begin{problem}[*]
-Prove or provide a counterexample: The product of two even numbers is even. \end{problem}
+Prove or provide a counterexample: The product of two even numbers is even.
+\end{problem}
 
 \begin{definition}
 An integer $n$ \textbf{divides} the integer $m$, written $n|m$, if and only if there exists an integer $k$ such that $m=nk$. In the same context, we may also write that $m$ \textbf{is divisible by} $n$.
