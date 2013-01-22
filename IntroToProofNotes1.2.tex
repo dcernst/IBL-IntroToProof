@@ -25,7 +25,7 @@
 
 \pagestyle{fancy}
 
-\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\lhead{\scriptsize Notes for an Introduction to Proof Course (Version Spring 2013)}
 \rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}} 
 \lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
 \cfoot{} 
@@ -63,7 +63,7 @@
 \begin{section}{Introduction to Mathematics (Continued)}
 
 \addtocounter{subsection}{1}
-\addtocounter{theorem}{15}
+\addtocounter{theorem}{20}
 
 \begin{subsection}{Logic, Negation, Contrapositive}
 
@@ -102,7 +102,7 @@ Let $A$ and $B$ be propositions.  The proposition ``\textbf{$A$ and $B$}'' is tr
 \[
 A \wedge B
 \]
-and is know as the \textbf{conjunction} of $A$ and $B$.
+and is known as the \textbf{conjunction} of $A$ and $B$.
 \end{definition}
 
 \begin{definition}
@@ -110,7 +110,7 @@ Let $A$ and $B$ be propositions.  The proposition ``\textbf{$A$ or $B$}'' is tru
 \[
 A \vee B
 \]
-and is know as the \textbf{disjunction} of $A$ and $B$.
+and is known as the \textbf{disjunction} of $A$ and $B$.
 \end{definition}
 
 \begin{definition}
@@ -120,6 +120,32 @@ Let $A$ be a proposition.  The \textbf{negation} of $A$, denoted $\neg A$, is tr
 \begin{exercise}Describe the meaning of $\neg (A \wedge B)$ and $\neg (A \vee B)$.
 \end{exercise}
 
+\begin{definition}
+A \textbf{truth table} is a table that illustrates all possible truth values for a proposition.  
+\end{definition}
+
+\begin{example}
+Let $A$ and $B$ be propositions.  Then the truth table for the conjunction $A\wedge B$ is given by the following.
+\[
+\begin{tabular}{| c | c  | c |} \hline
+$A$  &  $B$ & $A \wedge B$  \\ \hline\hline
+T & T & T  \\ 
+T & F & F  \\ 
+F & T & F  \\ 
+F & F & F  \\ \hline
+\end{tabular}
+\]
+Notice that we have columns for each of $A$ and $B$.  The rows for these two columns correspond to all possible combinations for $A$ and $B$.  The third column gives us the truth value of $A\wedge B$ given the possible truth values for $A$ and $B$.
+\end{example}
+
+\begin{exercise}
+Create a truth table for each of $A \vee B$, $\neg A$, $\neg (A \wedge B)$, and $\neg A \wedge \neg B$.  Feel free to add additional columns to your tables to assist you with intermediate steps.
+\end{exercise}
+
+\begin{exercise}
+Suppose $P$ is a complex proposition built out of the propositions $A$, $B$, and $C$.  How many rows would the truth table for $P$ require?
+\end{exercise}
+
 \begin{definition}\label{def:conditional}
 Let $A$ and $B$ represent propositions.  The conditional proposition ``\textbf{If $A$, then $B$}'' is expressed symbolically as 
 \[
@@ -127,7 +153,7 @@ A \implies B
 \]
 and has the following truth table.
 \[
-\begin{tabular}{| c  c  | c |} \hline
+\begin{tabular}{| c | c  | c |} \hline
 $A$  &  $B$ & $A \implies B$  \\ \hline\hline
 T & T & T  \\ 
 T & F & F  \\ 
@@ -137,12 +163,8 @@ F & F & T  \\ \hline
 \]
 \end{definition}
 
-\begin{exercise}
-Create a truth table for each of $A \wedge B$, $A \vee B$, $\neg A$ that illustrates all possible truth values.  (See Definition \ref{def:conditional} for an example of what a truth table looks like.)
-\end{exercise}
-
 \begin{exercise}\label{exer:translations}
-Let $A$ represent ``$N$ is an even number'' and $B$ represent ``$N$ is a multiple of 4.''  Express the following in ordinary English sentences.
+Let $A$ represent ``6 is an even number'' and $B$ represent ``6 is a multiple of 4.''  Express each of the following in ordinary English sentences and state whether the statement is true or false.
 \begin{enumerate}
   \item $A \wedge B$
   \item $A \vee B$
@@ -198,7 +220,7 @@ Let $A$ and $B$ represent the statements from Exercise \ref{exer:translations}. 
 
 \begin{exercise} Find the contrapositive of the following statements: 
 \begin{enumerate}
-\item If $n$ is an even natural number, then $n+1$ is an odd natural number. 
+\item If $n$ is an even natural number, then $n+1$ is an odd natural number.\footnote{Despite the fact that each of ``$n$ is an even natural number" and ``$n+1$ is an odd natural number" are not propositions (since we cannot determine their truth values without know what $n$ is), the implication is a proposition.  We discuss this further when we introduce predicates.}
 \item If it rains today, then I will bring my umbrella.
 \item If it does not rain today, then I will not bring my umbrella.
 \end{enumerate} \end{exercise}
