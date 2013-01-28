@@ -25,7 +25,7 @@
 
 \pagestyle{fancy}
 
-\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\lhead{\scriptsize Notes for an Introduction to Proof Course (Version Spring 2013)}
 \rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}} 
 \lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
 \cfoot{} 
@@ -56,6 +56,10 @@
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{solution}[theorem]{Solution}
 \newtheorem{summary}[theorem]{Summary}
+\newtheorem{skeleton}[theorem]{Skeleton Proof}
+
+\newsavebox{\savepar}
+\newenvironment{textbox}{\noindent\begin{lrbox}{\savepar}\begin{minipage}[c]{.98\textwidth}}{\end{minipage}\end{lrbox}\fcolorbox{black}{white}{\usebox{\savepar}}}
 
 \begin{document}
 
@@ -64,7 +68,7 @@
 \begin{section}{Introduction to Mathematics (Continued)}
 
 \addtocounter{subsection}{2}
-\addtocounter{theorem}{38}
+\addtocounter{theorem}{45}
 
 \begin{subsection}{Negating Implications and Proof by Contradiction}
 
@@ -105,19 +109,57 @@ Let $A$ be a proposition. Then $\neg A\wedge A$ is a contradiction.
 \end{theorem}
 
 \begin{exercise}
-Provide an example of a tautology.
+Provide an example of a tautology using arbitrary positions and any of the logical connectives $\neg$, $\wedge$, and $\vee$.  Then prove that your example is in fact a tautology.
 \end{exercise}
 
-%student feedback is that this part needs to be improves.  Perhaps add a skeleton proof?
-Suppose that we want to prove some proposition $P$ (which might be something like $A\implies B$ or possibly more complicated).  One approach, called \textbf{proof by contradiction}, involves assuming $\neg P$ and then logically deducing a contradiction of the form $Q\wedge \neg Q$, where $Q$ is some proposition (possibly equal to $P$).  Since this is absurd, it cannot be the case that $\neg P$ is true, which implies that $P$ is true.
+Suppose that we want to prove some proposition $P$ (which might be something like $A\implies B$ or possibly more complicated).  One approach, called \textbf{proof by contradiction}, involves assuming $\neg P$ and then logically deducing a contradiction of the form $Q\wedge \neg Q$, where $Q$ is some proposition (possibly equal to $P$).  Since this is absurd, it cannot be the case that $\neg P$ is true, which implies that $P$ is true.  The tricky part about a proof by contradiction is that it is not usually obvious what the statement $Q$ is going to be.  Here is what the general structure for a proof by contradiciton looks like.
 
-Among other situations, proof by contradiction can be useful for proving statements of the form $A\implies B$, where $B$ is worded negatively or $\neg B$ is easier to ``get your hands on."
+\bigskip
+
+\begin{skeleton}[Proof of $P$ by contradiction]
+Here is what the general structure for a proof by contradiciton looks like if we are trying to prove the proposition $P$.
+
+\bigskip
+
+\begin{textbox}
+\begin{proof}
+For sake of a contradiction, assume $\neg P$.
+\begin{center}
+$\vdots$\\
+(Use defintions and previous theorems to derive some $Q$ and its negation $\neg Q$.)\\
+$\vdots$
+\end{center}
+\noindent This is a contradiction.  Therefore, $P$.
+\end{proof}
+\end{textbox}
+
+\end{skeleton}
+
+Among other situations, proof by contradiction can be useful for proving statements of the form $A\implies B$, where $B$ is worded negatively or $\neg B$ is easier to ``get your hands on."  
+
+\begin{skeleton}[Proof of $A\implies B$ by contradiction]\label{pf by contradiction for implication}
+If you want to prove the proposition $A\implies B$ via a proof by contradiction, then the structure of the proof is as follows.
+
+\bigskip
+
+\begin{textbox}
+\begin{proof}
+For sake of a contradiction, assume $A$ and $\neg B$.
+\begin{center}
+$\vdots$\\
+(Use defintions and previous theorems to derive some $Q$ and its negation $\neg Q$.)\\
+$\vdots$
+\end{center}
+\noindent This is a contradiction.  Therefore, if $A$, then $B$.
+\end{proof}
+\end{textbox}
+\end{skeleton}
 
 \begin{question}
-Let $A$ and $B$ be propositions.  Describe a general strategy for proving $A\implies B$ via proof by contradiction.
+In Skeleton Proof \ref{pf by contradiction for implication}, why did we start by assuming $A$ and $\neg B$?
 \end{question}
 
-Prove the following theorem in two ways: (i) prove the contrapositive and (ii) use proof by contradiction.
+Prove the following theorem in two ways: (i) prove the contrapositive, and (ii) prove using a proof by contradiction.
 
 \begin{theorem}[*]
 Assume that $x\in\mathbb{Z}$.  If $x$ is odd, then 2 does not divide $x$. (Prove in two different ways.)
