@@ -23,9 +23,7 @@
 	pdfauthor={}
 }
 
-\pagestyle{fancy}
-
-\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\lhead{\scriptsize Notes for an Introduction to Proof Course (Version Spring 2013)}
 \rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}} 
 \lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
 \cfoot{} 
@@ -56,6 +54,10 @@
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{solution}[theorem]{Solution}
 \newtheorem{summary}[theorem]{Summary}
+\newtheorem{skeleton}[theorem]{Skeleton Proof}
+
+\newsavebox{\savepar}
+\newenvironment{textbox}{\noindent\begin{lrbox}{\savepar}\begin{minipage}[c]{.98\textwidth}}{\end{minipage}\end{lrbox}\fcolorbox{black}{white}{\usebox{\savepar}}}
 
 \begin{document}
 
@@ -64,7 +66,7 @@
 \begin{section}{Introduction to Mathematics (Continued)}
 
 \addtocounter{subsection}{3}
-\addtocounter{theorem}{50}
+\addtocounter{theorem}{59}
 
 %%%%  Quantification
 
