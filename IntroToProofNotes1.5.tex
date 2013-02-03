@@ -25,7 +25,7 @@
 
 \pagestyle{fancy}
 
-\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\lhead{\scriptsize Notes for an Introduction to Proof Course (Version Spring 2013)}
 \rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}}
 \lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
 \cfoot{} 
@@ -36,6 +36,7 @@
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{acknowledgement}[theorem]{Acknowledgement}
 \newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{question}[theorem]{Question}
 \newtheorem{axiom}[theorem]{Axiom}
 \newtheorem{case}[theorem]{Case}
 \newtheorem{claim}[theorem]{Claim}
@@ -55,7 +56,10 @@
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{solution}[theorem]{Solution}
 \newtheorem{summary}[theorem]{Summary}
-\newtheorem{question}[theorem]{Question}
+\newtheorem{skeleton}[theorem]{Skeleton Proof}
+
+\newsavebox{\savepar}
+\newenvironment{textbox}{\noindent\begin{lrbox}{\savepar}\begin{minipage}[c]{.98\textwidth}}{\end{minipage}\end{lrbox}\fcolorbox{black}{white}{\usebox{\savepar}}}
 
 \begin{document}
 
@@ -64,7 +68,7 @@
 \begin{section}{Introduction to Mathematics (Continued)}
 
 \addtocounter{subsection}{4}
-\addtocounter{theorem}{65}
+\addtocounter{theorem}{74}
 
 %%%%  More on Quantification
 
@@ -74,7 +78,7 @@ In the last section, we introduced the universal quantifier ``for all" and the e
 \begin{enumerate}
 \item In order to have a proposition, all variables must be bound.  That is, all variables must be quantified.  This can happen in at least two ways:
 \begin{enumerate}
-\item The variables are explicitly bound by quantifiers in the same sentence,
+\item The variables are explicitly bound by quantifiers in the same sentence, or
 \item The variables are implicitly bound by preceding sentences and/or by context.  \emph{Note:}  Statements of the form ``Let $x=\ldots$" and ``Let $x\in\ldots$" bind the variable $x$ and remove ambiguity.
 \end{enumerate}
 \item The order of the quantification is important.  Reversing the order of the quantifiers can substantially change the meaning of a proposition.
@@ -100,10 +104,10 @@ In order to study the abstract nature of complicated mathematical statements, it
 We use the symbol $\forall$ to denote the universal quantifier ``for all" and the symbol $\exists$ to denote the existential quantifier ``there exists\ldots such that".
 \end{definition}
 
-By using our abbreviations for the logical connectives and quantifiers, we symbolically represent mathematical propositions.
+Using our abbreviations for the logical connectives and quantifiers, we can symbolically represent mathematical propositions.
 
 \begin{example}
-For each of the following suppose our universe of discourse is the set of real numbers.
+For each of the following, suppose our universe of discourse is the set of real numbers.
 \begin{enumerate}
 
 \item Consider the following (true) proposition:
@@ -120,7 +124,7 @@ This proposition can be denoted symbolically as $(\exists x)(x^2-1=0)$.
 For all $x\in \mathbb{N}$, there exists $y\in\mathbb{N}$ such that $y<x$.
 \end{quote}
 
-They can be represented symbolically as $(\forall x)(x\in\mathbb{N}\implies (\exists y)(y\in\mathbb{N}\implies y<x))$ or more simply as $(\forall x\in\mathbb{N})(\exists y\in\mathbb{N})(y<x)$.
+This one can be represented symbolically as $(\forall x)(x\in\mathbb{N}\implies (\exists y)(y\in\mathbb{N}\implies y<x))$ or more simply as $(\forall x\in\mathbb{N})(\exists y\in\mathbb{N})(y<x)$.
 
 \item Consider the following (true) proposition:
 
