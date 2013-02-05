@@ -25,7 +25,7 @@
 
 \pagestyle{fancy}
 
-\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\lhead{\scriptsize Notes for an Introduction to Proof Course (Version Spring 2013)} 
 \rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}}
 \lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
 \cfoot{} 
@@ -56,6 +56,10 @@
 \newtheorem{solution}[theorem]{Solution}
 \newtheorem{summary}[theorem]{Summary}
 \newtheorem{question}[theorem]{Question}
+\newtheorem{skeleton}[theorem]{Skeleton Proof}
+
+\newsavebox{\savepar}
+\newenvironment{textbox}{\noindent\begin{lrbox}{\savepar}\begin{minipage}[c]{.98\textwidth}}{\end{minipage}\end{lrbox}\fcolorbox{black}{white}{\usebox{\savepar}}}
 
 \begin{document}
 
@@ -64,9 +68,7 @@
 \begin{section}{Introduction to Mathematics (Continued)}
 
 \addtocounter{subsection}{5}
-\addtocounter{theorem}{79}
-
-%%%%  More on Quantification
+\addtocounter{theorem}{87}
 
 \begin{subsection}{And Even More on Quantification}
 
@@ -159,63 +161,80 @@ Negate each of the following.  Disregard the truth value and the universe of dis
 
 At this point, we should be able to use our understanding of quantification to construct counterexamples to complicated false propositions and proofs of complicated true propositions.  Here are some general proof structures for various logical forms.
 
-\begin{itemize}
-\item[] \textbf{Direct Proof of $(\forall x)P(x)$:}
+\begin{skeleton}[Direct Proof of $(\forall x)P(x)$]
+Here is what the general structure for a direct proof of the proposition $(\forall x)P(x)$ looks like.
 
+\bigskip
+
+\begin{textbox}
 \begin{proof}
-Let $x$ be arbitrary object in universe of discourse.  
-
-\bigskip
-
-\hspace{2in}\vdots \hspace{1cm}(Use definitions and previous results.)
-
-\bigskip
-
+Let $x \in U$ (where $U$ is whatever the universe of discourse is).
+\begin{center}
+$\vdots$\\
+(Use definitions and previous results.)\\
+$\vdots$
+\end{center}
 \noindent Therefore, $P(x)$ is true.  Since $x$ was arbitrary, for all $x$, $P(x)$.
 \end{proof}
+\end{textbox}
 
-\item[] \textbf{Proof of $(\forall x)P(x)$ by Contradiction:}
+\end{skeleton}
 
+\begin{skeleton}[Proof of $(\forall x)P(x)$ by Contradiction]
+Here is the general structure for a proof of the proposition $(\forall x)P(x)$ via contradiction.
+
+\bigskip
+
+\begin{textbox}
 \begin{proof}
-For sake of a contradiction, assume that there exists $x$ in the universe of discourse such that $\neg P(x)$.
-\bigskip
-
-\hspace{2in}\vdots \hspace{1cm}(Do something to derive a contradiction.)
-
-\bigskip
-
+For sake of a contradiction, assume that there exists $x\in U$ (where $U$ is whatever the universe of discourse is) such that $\neg P(x)$.
+\begin{center}
+$\vdots$\\
+(Do something to derive a contradiction.)\\
+$\vdots$
+\end{center}
 \noindent This is a contradiction.  Therefore, for all $x$, $P(x)$ is true.
 \end{proof}
+\end{textbox}
+\end{skeleton}
 
-\item[] \textbf{Direct Proof of $(\exists x)P(x)$:}
 
+\begin{skeleton}[Direct Proof of $(\exists x)P(x)$]
+Here is what the general structure for a direct proof of the proposition $(\exists x)P(x)$ looks like.
+
+\bigskip
+
+\begin{textbox}
 \begin{proof}
 (Either use definitions and previous results to deduce that an $x$ exists such that $P(x)$ is true or if you think you have an $x$ that works, just verify that it does.)
-
-\bigskip
-
-\hspace{2in}\vdots \hspace{1cm} (Do stuff.)
-
-\bigskip
-
-Therefore, there exists $x$ such that $P(x)$.
+\begin{center}
+$\vdots$\\
+(Do stuff.)\\
+$\vdots$
+\end{center}Therefore, there exists $x$ such that $P(x)$.
 \end{proof}
+\end{textbox}
 
-\item[] \textbf{Proof of $(\exists x)P(x)$ by Contradiction:}
+\end{skeleton}
 
+\begin{skeleton}[Proof of $(\exists x)P(x)$ by Contradiction]
+Here is the general structure for a proof of the proposition $(\forall x)P(x)$ via contradiction.
+
+\bigskip
+
+\begin{textbox}
 \begin{proof}
 For sake of a contradiction, assume that for all $x$, $\neg P(x)$.
-
-\bigskip
-
-\hspace{2in}\vdots \hspace{1cm}(Do something to derive a contradiction.)
-
-\bigskip
-
-This is a contradiction.  Therefore, there exists $x$ such that $P(x)$.
+\begin{center}
+$\vdots$\\
+(Do something to derive a contradiction.)\\
+$\vdots$
+\end{center}
+\noindent This is a contradiction.  Therefore, there exists $x$ such that $P(x)$.
 \end{proof}
+\end{textbox}
 
-\end{itemize}
+\end{skeleton}
 
 \begin{question}
 Suppose $P(x)$ is a proposition such that $(\forall x)P(x)$ is false.  Which of the above proof situations is identical to providing a counterexample to this proposition?
