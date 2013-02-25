@@ -25,7 +25,7 @@
 
 \pagestyle{fancy}
 
-\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\lhead{\scriptsize Notes for an Introduction to Proof Course (Version Spring 2013)}
 \rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}}
 \lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
 \cfoot{}
@@ -64,7 +64,7 @@
 \begin{section}{Set Theory and Topology (Continued)}
 
 \addtocounter{subsection}{2}
-\addtocounter{theorem}{43}
+\addtocounter{theorem}{44}
 
 \begin{subsection}{Indexing Sets}
 
@@ -135,15 +135,27 @@ Suppose we have a collection $\{A_{\alpha}\}_{\alpha\in\Delta}$.
 \end{enumerate}
 \end{definition}
 
-\begin{remark} 
+\begin{example} 
 In the special case that $\Delta=\mathbb{N}$, we write
 \[
-\bigcup_{n=1}^{\infty}A_n= \{ x : x \in A_n \mbox{ for some } n \in \mathbb{N}\}
+\bigcup_{n=1}^{\infty}A_n= \{ x : x \in A_n \mbox{ for some } n \in \mathbb{N}\}= A_1\cup A_2 \cup A_3 \cup \cdots
 \] 
 and
 \[
-\bigcap_{n=1}^{\infty}A_n= \{ x : x \in A_n \mbox{ for all } n \in \mathbb{N}\}.
+\bigcap_{n=1}^{\infty}A_n= \{ x : x \in A_n \mbox{ for all } n \in \mathbb{N}\} = A_1\cap A_2 \cap A_3 \cap \cdots
 \] 
+Similarly, if $\Delta=\{1,2,3,4\}$, then
+\[
+\bigcup_{n=1}^{4}A_n= A_1\cup A_2 \cup A_3 \cup A_4
+\] 
+and
+\[
+\bigcap_{n=1}^{4}A_n= A_1\cap A_2 \cap A_3 \cap A_4.
+\] 
+\end{example}
+
+\begin{remark}
+Notice the difference between ``$\bigcup$" and ``$\cup$" (respectively, ``$\bigcap$" and ``$\cap$").  The larger versions of the union and intersection symbols very much like the notation that you've likely seen for sums (e.g., $\displaystyle \sum_{i=1}^\infty i^2$).
 \end{remark}
 
 \begin{exercise}
