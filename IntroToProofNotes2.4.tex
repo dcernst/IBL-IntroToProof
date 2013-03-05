@@ -25,7 +25,7 @@
 
 \pagestyle{fancy}
 
-\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\lhead{\scriptsize Notes for an Introduction to Proof Course (Version Spring 2013)}
 \rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}}
 \lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
 \cfoot{}
@@ -64,9 +64,14 @@
 \begin{section}{Set Theory and Topology (Continued)}
 
 \addtocounter{subsection}{3}
-\addtocounter{theorem}{58}
+\addtocounter{theorem}{60}
 
 \begin{subsection}{Basic Topology of $\mathbb{R}$}
+
+%should this be included?
+%\begin{proposition} 
+%Given a number $\varepsilon >0$, there exists a natural number $N$ such that $\frac{1}{N}<\varepsilon$.
+%\end{proposition}
 
 \begin{remark}
 For this entire section, our universe of discourse is the set of real numbers.  You may assume all the usual basic algebraic properties of the real numbers (addition, subtraction, multiplication, division, commutative property, distribution, etc.).
@@ -99,29 +104,24 @@ If $p$ is a real number, then there exists $q,r\in\mathbb{R}$ such that $q<p<r$.
 \end{axiom}
 
 \begin{definition}
-Suppose $a,b\in\mathbb{R}$ such that $a<b$.  The intervals $(a,b), (-\infty,b), (a,\infty)$ are called \textbf{open intervals} while the interval $[a,b]$ is called a \textbf{closed interval}.
+Suppose $a,b\in\mathbb{R}$ such that $a<b$.  The intervals $(a,b), (-\infty,b), (a,\infty)$ are called \textbf{open intervals} while the interval $[a,b]$ is called a \textbf{closed interval}.  An interval like $[a,b)$ is neither open nor closed.
 \end{definition}
 
 \begin{remark} 
 In this class, we will always assume that any time we write $(a,b), [a,b], (a,b]$, or $[a,b)$ that $a<b$. 
 \end{remark}
 
-\begin{exercise} Give an example of each of the following:
+\begin{exercise} Give an example of each of the following.
 \begin{enumerate}
-\item an open interval
-\item a closed interval
-\item an interval that is neither open nor closed
-\item an infinite set that is not an interval
+\item An open interval.
+\item A closed interval.
+\item An interval that is neither open nor closed.
+\item An infinite set that is not an interval.
 \end{enumerate}
 \end{exercise}
 
 \begin{definition}
 A set $U$ is called an \textbf{open set} iff for every $t \in U$, there exists an open interval containing $t$ such that the open interval is a subset of $U$.  We define the empty set to be open.\end{definition}
-
-%where should this go?
-%\begin{proposition} 
-%Given a number $\varepsilon >0$, there exists a natural number $N$ such that $\frac{1}{N}<\varepsilon$.
-%\end{proposition}
 
 \begin{problem} 
 Prove that the set $I=(1,2)$ is an open set.
@@ -134,6 +134,10 @@ Every open interval is an open set.
 \begin{theorem}
 The real numbers form an open set.
 \end{theorem}
+
+\begin{exercise}
+Provide an example of an open set that is not a single open interval.
+\end{exercise}
 
 \begin{theorem}[*]
 Every closed interval is not an open set.
@@ -183,10 +187,6 @@ Taken together, Theorems \ref{finite union of open sets}--\ref{union of open set
 \end{remark}
 
 \begin{exercise}
-Provide an example of an open set that is not an open interval.
-\end{exercise}
-
-\begin{exercise}
 Determine whether each of the following sets is open or not open.
 \begin{enumerate}
 \item $\displaystyle W=\bigcup_{n=2}^{\infty} \left(n - \frac{1}{2},n\right)$
@@ -201,7 +201,7 @@ A point $p$ is a \textbf{limit point of the set $S$} iff for every open interval
 \begin{problem}
 Consider the open interval $S=(1,2)$. Prove each of the following.
 \begin{enumerate}
-\item The point $p=2$ is a limit point of $S$.
+\item The points $1$ and $2$ are not limit points of $S$.
 \item If $p\in S$, then $p$ is a limit point of $S$.
 \item If $p<1$ or $p>2$, then $p$ is not a limit point of $S$.
 \end{enumerate}
@@ -254,6 +254,10 @@ The set $U$ is open iff $U^C$ is closed.
 Every finite set is closed.
 \end{theorem}
 
+\begin{problem}
+Prove or provide a counterexample: If a set $S$ is not open, then it is closed.
+\end{problem}
+
 \begin{theorem}
 The real numbers are both open and closed.
 \end{theorem}
@@ -274,6 +278,10 @@ Let $\{A_{\alpha}\}_{\alpha\in\Delta}$ be a collection of closed sets.  Then
 is a closed set.
 \end{theorem}
 
+\begin{problem}
+Prove or provide a counterexeample: If $A$ and $B$ are closed sets, then $A\cup B$ is also closed.
+\end{problem}
+
 \begin{exercise}\label{union of closed sets}
 Provide an example of a collection of closed sets $\{A_{\alpha}\}_{\alpha\in\Delta}$ such that 
 \[
@@ -281,10 +289,6 @@ Provide an example of a collection of closed sets $\{A_{\alpha}\}_{\alpha\in\Del
 \]
 is a \emph{not} closed set.
 \end{exercise}
-
-\begin{problem}
-Let $A$ and $B$ be closed sets.  Determine whether $A\cup B$ is necessarily closed and prove that your answer is correct.
-\end{problem}
 
 \begin{remark}
 You should compare what happened in Theorem \ref{intersection of closed sets} and Exercise \ref{union of closed sets} to what we stated in Remark \ref{union vs intersection of open sets}
