@@ -30,12 +30,13 @@
 
 \pagestyle{fancy}
 
-\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\lhead{\scriptsize Notes for an Introduction to Proof Course (Version Spring 2013)}
 \rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}}
 \lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
 \cfoot{}
 \renewcommand{\headrulewidth}{0.4pt} 
 \renewcommand{\footrulewidth}{0.4pt}
+
 
 \theoremstyle{definition}
 \newtheorem{theorem}{Theorem}[section]
@@ -61,6 +62,10 @@
 \newtheorem{solution}[theorem]{Solution}
 \newtheorem{summary}[theorem]{Summary}
 \newtheorem{question}[theorem]{Question}
+\newtheorem{skeleton}[theorem]{Skeleton Proof}
+
+\newsavebox{\savepar}
+\newenvironment{textbox}{\noindent\begin{lrbox}{\savepar}\begin{minipage}[c]{.98\textwidth}}{\end{minipage}\end{lrbox}\fcolorbox{black}{white}{\usebox{\savepar}}}
 
 \begin{document}
 
@@ -70,9 +75,7 @@
 
 \begin{subsection}{Introduction to Induction}
 
-In this section, we will explore a technique for proving statements of the form $(\forall n \in \mathbb{N})P(n)$, where $P(n)$ is some predicate.  Notice that this is a statement about natural numbers and not some other set.
-
-Consider the claims:
+In this section, we will explore a technique for proving statements of the form $(\forall n \in \mathbb{N})P(n)$, where $P(n)$ is some predicate.  Notice that this is a statement about natural numbers and not some other set.  Consider the claims:
 \begin{enumerate}
 \item For all $n\in\mathbb{N}$, $\displaystyle 1+2+3+\cdots +n=\frac{n(n+1)}{2}$.
 \item For all $n\in\mathbb{N}$, $n^{2}+n+41$ is prime.
@@ -89,11 +92,7 @@ Let's take a look at potential proofs.
 
 \bigskip
 
-Are these actual proofs?  The answer is NO!  In fact, the second claim isn't even true.  If $n=41$, then $n^{2}+n+41=41^{2}+41+41=41(41+1+1)$, which is not prime since it has 41 as a factor.
-
-It turns out that the first claim is true, but what we wrote cannot be a proof since the same type of reasoning when applied to the second claim seems to prove something that isn't actually true.
-
-We need a rigorous way of capturing ``and so on'' and a way to verify whether it really is ``and so on.''
+Are these actual proofs?  The answer is NO!  In fact, the second claim isn't even true.  If $n=41$, then $n^{2}+n+41=41^{2}+41+41=41(41+1+1)$, which is not prime since it has 41 as a factor.  It turns out that the first claim is true, but what we wrote cannot be a proof since the same type of reasoning when applied to the second claim seems to prove something that isn't actually true.  We need a rigorous way of capturing ``and so on'' and a way to verify whether it really is ``and so on.''
 
 \begin{axiom}[Axiom of Induction]
 Let $S\subseteq \mathbb{N}$ such that both
@@ -109,46 +108,52 @@ Recall that an axiom is a basic mathematical assumption.  That is, we are assumi
 \end{remark}
 
 \begin{theorem}[Principle of Mathematical Induction, *]
-Let $P_{1}, P_{2}, P_{3}, \ldots$ be a sequence of statements, one for each natural number.  Assume
+Let $P(1), P(2), P(3), \ldots$ be a sequence of statements, one for each natural number.\footnote{In this case, you should think of $P(n)$ as a predicate, where $P(1)$ is the statement that corresponds to substituting in the value 1 for $n$.} Assume
 \begin{enumerate}
-\item $P_{1}$ is true, and
-\item If $P_{k}$ is true, then $P_{k+1}$ is true.
+\item $P(1)$ is true, and
+\item If $P(k)$ is true, then $P(k+1)$ is true.
 \end{enumerate}
-Then $P_{n}$ is true for all $n\in\mathbb{N}$.
+Then $P(n)$ is true for all $n\in\mathbb{N}$.\footnote{\emph{Hint:} Let $S=\{k\in \mathbb{N}: P_k \text{ is true}\}$ and use the Axiom of Induction.  The set $S$ is sometimes called the \emph{truth set}.  Your job is to show that the truth set is all of $\mathbb{N}$.}
 \end{theorem}
 
 \begin{remark}
-The Principal of Mathematical Induction (PMI) provides us with a process for proving statements of the form: ``For all $n\in\mathbb{N}$, $P_{n}$,'' where $P_{n}$ is some statement involving $n\in \mathbb{N}$.  Hypothesis (1) above is called the \textbf{base step} while (2) is called the \textbf{inductive step}.  Here is what a proof by induction looks like (remarks are in parentheses):
+The Principal of Mathematical Induction (PMI) provides us with a process for proving statements of the form: ``For all $n\in\mathbb{N}$, $P(n)$,'' where $P(n)$ is some predicate involving $n$.  Hypothesis (1) above is called the \textbf{base step} while (2) is called the \textbf{inductive step}.
+\end{remark} 
+
+\begin{skeleton}[Proof by induction for $(\forall n\in\mathbb{N})P(n)$]
+Here is what the general structure for a proof by induction looks like.  Remarks are in parentheses.
 
 \bigskip
 
+\begin{textbox}
 \begin{proof}
 We proceed by induction.
 \begin{enumerate}
-\item[(i)] Base step: (Verify that $P_{1}$ is true.  This often amounts to plugging $n=1$ into two sides of some claimed equation and verifying that both sides are actually equal.  Don't assume that they are equal!)
+\item[(i)] Base step: (Verify that $P(1)$ is true.  This often, but not always, amounts to plugging $n=1$ into two sides of some claimed equation and verifying that both sides are actually equal.  Don't assume that they are equal!)
 
-\item[(ii)] Inductive step:  (Your goal is to prove that ``For all $k\in\mathbb{N}$, if $P_{k}$ is true, then $P_{k+1}$ is true.'')  Let $k\in\mathbb{N}$ and assume that $P_{k}$ is true.  (Now, do some stuff to show that $P_{k+1}$ is true.)  Therefore, $P_{k+1}$ is true.
+\item[(ii)] Inductive step:  (Your goal is to prove that ``For all $k\in\mathbb{N}$, if $P(k)$ is true, then $P(k+1)$ is true.'')  Let $k\in\mathbb{N}$ and assume that $P(k)$ is true.  (Now, do some stuff to show that $P(k+1)$ is true.)  Therefore, $P(k+1)$ is true.
 \end{enumerate}
-Thus, by the PMI, $P_{n}$ is true for all $n\in\mathbb{N}$.
+Thus, by the PMI, $P(n)$ is true for all $n\in\mathbb{N}$.
 \end{proof}
+\end{textbox}
 
-\end{remark}
+\end{skeleton}
 
-\begin{problem}[*]
-For all $n\in\mathbb{N}$, $\displaystyle \sum_{i=1}^{n}i=\frac{n(n+1)}{2}$.  (\emph{Note:} $\displaystyle \sum_{i=1}^{n}i=1+2+3+\cdots +n$, by definition.)
-\end{problem}
+\begin{theorem}[*]
+For all $n\in\mathbb{N}$, $\displaystyle \sum_{i=1}^{n}i=\frac{n(n+1)}{2}$.\footnote{Recall that $\displaystyle \sum_{i=1}^{n}i=1+2+3+\cdots +n$, by definition.  Also, this theorem should look familar from calculus.}
+\end{theorem}
 
-\begin{problem}[*]
+\begin{theorem}[*]
 For all $n\in\mathbb{N}$, 3 divides $4^{n}-1$.
-\end{problem}
+\end{theorem}
 
-\begin{problem}[*]
+\begin{theorem}[*]
 For all $n\in\mathbb{N}$, 6 divides $n^{3}-n$.
-\end{problem}
+\end{theorem}
 
-\begin{problem}[*]
+\begin{theorem}[*]
 Let $p_{1}, p_{2}, \ldots, p_{n}$ be $n$ distinct points arranged on a circle.  Then the number of line segments joining all pairs of points is $\frac{n^{2}-n}{2}$.
-\end{problem}
+\end{theorem}
 
 \begin{theorem}[*]
 Let $A$ be a set with $n$ elements.  Then $\mathcal{P}(A)$ is a set with $2^{n}$ elements.\footnote{We encountered this theorem back in Section 2.2 (see Conjecture 2.33), but we didn't prove it.  Proving this theorem is rather tricky.  If you use induction (which I suggest), at some point, you will need to argue that if you add one more element to a finite set, then you end up with twice as many subsets.}
