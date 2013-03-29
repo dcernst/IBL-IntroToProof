@@ -78,14 +78,14 @@
 
 \begin{subsection}{The infinitude of primes}
 
-The highlight of this section\footnote{This section is derived from work of \href{}{Dave Richeson} of Dickenson College.} is Theorem~\ref{thm:infprimes}, which states that there are infinitely primes. In case you forgot, here is the definition of a prime number.
+The highlight of this section\footnote{This section is derived from work of \href{}{Dave Richeson} of Dickinson College.} is Theorem~\ref{thm:infprimes}, which states that there are infinitely primes. In case you forgot, here is the definition of a prime number.
 
 \begin{definition}
 A natural number $p$ is called \textbf{prime} iff $p$ is divisible by exactly two distinct natural numbers (namely, 1 and $p$ itself).
 \end{definition}
 
 \begin{exercise}
-Is 1 a prime number?
+Is 1 a prime number?  Explain your answer.
 \end{exercise}
 
 The first known proof of Theorem~\ref{thm:infprimes} is in Eulcid's \emph{Elements} (c.\ 300 BCE). Euclid stated it as follows: 
@@ -94,44 +94,25 @@ The first known proof of Theorem~\ref{thm:infprimes} is in Eulcid's \emph{Elemen
 \end{quote}
 There are a few interesting observations to make about Euclid's proposition and his proof. First, notice that the statement of the theorem does not contain the word ``infinity.'' The Greek's were skittish about the idea of infinity. Thus he proved that there were more primes than any given finite number. Today we'd say that they are infinite. In fact, Euclid proved that there are more than \emph{three} primes and concluded that there were more than any finite number. While we you would lose points for such a proof in this class, we can forgive Euclid for this less-than-rigorous proof;  in fact, it is easy to turn his proof into the general one that you will give below. Lastly, Euclid's proof was geometric. He was viewing his numbers as line segments with integral length. The modern concept of number was not developed yet.
 
-Before tackling a proof of Theorem~\ref{thm:infprimes}, we need a few tools.  First, recall Problem~1.15, which asked us to prove or provide a counter example to the following statement:
-\begin{quote}
-Assume $a$ and $n$ are integers.  If $a$ divides $n^2$, then $a$ divides $n$.
-\end{quote}
-It turns out that this statement is false.  However, what if $a$ is prime?
+Prior to tackling a proof of Theorem~\ref{thm:infprimes}, we need to prove a couple lemmas.  The proof of the first lemma is provided for you. 
 
-blah blah
+\begin{lemma}\label{lem:divisorsof1}
+The only natural number that divides $1$ is $1$.  
+\end{lemma}
 
-\begin{theorem}
-\label{thm:infprimes}
-There are infinitely many prime numbers.
+\begin{proof}
+Let $m$ be a natural number that divides $1$. We know that $m\geq 1$ because 1 is the smallest positive integer. Since $m$ divides $1$, there exists $k\in \mathbb{N}$ such that $1=mk$. Since $k\geq 1$, we see that $mk\geq m$.  But $1=mk$, and so $1\geq m$.  Thus, we have $1\leq m \leq 1$, which implies that $m=1$, as desired.
+\end{proof}
+
+\begin{lemma}\label{lem:plus1}
+Let $p$ be a prime number  and let $n\in \mathbb{Z}$. If $p$ divides $n$, then $p$ does not divide $n+1$.\footnote{\emph{Hint:} Use a proof by contradiction and utilize the previous lemma.}
+\end{lemma}
+
+Now, we are ready to prove the following important theorem.
+
+\begin{theorem}\label{thm:infprimes}
+There are infinitely many prime numbers.\footnote{\emph{Hint:} Use a proof by contradiction.  In this case, there are finitely many primes.  Consider the product of all of them and then add 1.}
 \end{theorem}
-
-
-To prove this theorem we need two lemmas. The proof of the first lemma is provided for you. 
-
-\begin{lemma}
-\label{lem:divisorsof1}
-The only integers that divide $1$ are $1$ and $-1$.  
-\end{lemma}
-%\begin{proof}
-%Let $m$ be a integer that divides $1$. Then $m$ is positive or negative.\\
-%Case 1. Suppose $m>0$. We know that $m\ge 1$ because 1 is the smallest positive integer. Because $m|1$ there exists $n\in \mathbb{Z}$ such that $1=mn$. Moreover, we know that $n>0$ because $m>0$ and $mn>0$; hence $1\le n$. Multiplying both sides of $1\le n$ by $m$ gives $m\le mn=1$. Thus $1\le m\le 1$, which implies $m=1$.\\
-%Case 2. Suppose $m<0$. This case is proved similarly and from it we conclude that $m=-1$.
-%\end{proof}
-
-
-\begin{lemma}
-\label{lem:plus1}
-Let $p$ be prime and $n\in \mathbb{Z}$. If $p|n$, then $p\ndv (n+1)$.
-\end{lemma}
-
-%Before we prove Theorem \ref{thm:sqrt2} we prove the following lemma.
-%
-%\begin{lemma}%add this to primes section! 
-%\label{lem:evensquare}
-%Let $n\in \mathbb{Z}$. If $n^{2}$ is even, then $n$ is even.
-%\end{lemma}
 
 \end{subsection}
 
