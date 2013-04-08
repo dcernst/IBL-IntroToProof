@@ -7,6 +7,8 @@
 \usepackage{stmaryrd}
 \usepackage{amsthm}
 \usepackage{fancyhdr}
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata}
 \usepackage[margin=1in]{geometry}
 \usepackage[hang,flushmargin,symbol*]{footmisc}
 \usepackage{color}
@@ -26,9 +28,9 @@
 
 \pagestyle{fancy}
 
-\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\lhead{\scriptsize Notes for an Introduction to Proof Course (Version Spring 2013)}
 \rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}}
-\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.}
+\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
 \cfoot{}
 
 \renewcommand{\headrulewidth}{0.4pt} 
@@ -61,7 +63,7 @@
 
 \begin{document}
 
-\addtocounter{section}{3}
+\addtocounter{section}{4}
 
 \begin{section}{Relations and Functions}
 
@@ -150,8 +152,43 @@ We can often represent relations using graphs or digraphs.  Given a finite set $
 \end{remark}
 
 \begin{example}
-Let $A=\{a,b,c\}$ and define $\sim=\{(a,a),(a,b),(b,c),(c,b),(c,a)\}$.  The digraph for $\sim$ is a graph with vertices $a,b,c$ and the following arrows: $a$ to $a$, $a$ to $b$, $b$ to $c$, $c$ to $b$, $c$ to $a$.
+Figure~\ref{fig:digraph} depicts a digraph that represents a relation $R$ given by
+\[
+R=\{(a,b),(a,c),(b,b),(b,c),(c,d),(c,e),(d,d),(d,a),(e,a)\}.
+\]
+
+\begin{figure}[h]
+\begin{center}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2cm,
+                    semithick]
+  \tikzstyle{every state}=[]
+
+  \node[state] (A)                    {$a$};
+  \node[state]         (B) [above right of=A] {$b$};
+  \node[state]         (D) [below right of=A] {$d$};
+  \node[state]         (C) [below right of=B] {$c$};
+  \node[state]         (E) [below of=D]       {$e$};
+
+  \path (A) edge              node {} (B)
+            edge              node {} (C)
+        (B) edge [loop above] node {} (B)
+            edge              node {} (C)
+        (C) edge              node {} (D)
+            edge [bend left]  node {} (E)
+        (D) edge [loop below] node {} (D)
+            edge              node {} (A)
+        (E) edge [bend left]  node {} (A);
+\end{tikzpicture}
+\caption{An example of a digraph for a relation.}\label{fig:digraph}
+\end{center}
+\end{figure}
+
+
 \end{example}
+
+\begin{exercise}
+Let $A=\{a,b,c\}$ and define $\sim=\{(a,a),(a,b),(b,c),(c,b),(c,a)\}$.  Draw the digraph for $\sim$.
+\end{exercise}
 
 \begin{exercise}
 Let $A=\{1,2,3,4,5,6\}$  Define $|$ on $A$ via $x|y$ iff $x$ divides $y$.  Draw the digraph for $|$ on $A$.
