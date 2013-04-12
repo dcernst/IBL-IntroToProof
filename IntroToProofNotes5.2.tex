@@ -26,9 +26,9 @@
 
 \pagestyle{fancy}
 
-\lhead{\scriptsize Course Notes for Introduction to Proof (Version 1.1)} 
+\lhead{\scriptsize Notes for an Introduction to Proof Course (Version Spring 2013)}
 \rhead{\scriptsize Instructor: \href{http://danaernst.com}{D.C. Ernst}}
-\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.}
+\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.} 
 \cfoot{}
 
 \renewcommand{\headrulewidth}{0.4pt} 
@@ -61,12 +61,12 @@
 
 \begin{document}
 
-\addtocounter{section}{3}
+\addtocounter{section}{4}
 
 \begin{section}{Relations and Functions (continued)}
 
 \addtocounter{subsection}{1}
-\addtocounter{theorem}{27}
+\addtocounter{theorem}{28}
 
 \begin{subsection}{Equivalence Relations}
 
@@ -125,17 +125,17 @@ Determine which of the following are equivalence relations.  Some of these occur
 \begin{definition}
 Let $\sim$ be a relation on a set $A$ (not necessarily an equivalence relation) and let $x\in A$.  Then we define the \textbf{set of relatives of $x$} via
 \[
-R_x=\{y\in A: x\sim y\}.
+[x]=\{y\in A: x\sim y\}.
 \]
 Also, define
 \[
-\Omega_{\sim}=\{R_x:x\in A\}.
+\Omega_{\sim}=\{[x]:x\in A\}.
 \]
-Notice that $\Omega_{\sim}$ is a set of sets.  In particular, an element in $\Omega_{\sim}$ is a subset of $A$.
+Notice that $\Omega_{\sim}$ is a set of sets.  In particular, an element in $\Omega_{\sim}$ is a subset of $A$ (equivalently, an element of $\mathcal{P}(A)$).  Other common notations for $[x]$ include $\overline{x}$ and $R_x$.
 \end{definition}
 
 \begin{exercise}
-Let $P_f$ and $F$ be as in part \ref{exer:facebook} of Exercise \ref{exer:lots of them}.  Describe $R_{\text{Bob}}$ (assume you know which Bob we're talking about).  What is $\Omega_F$?
+Let $P_f$ and $F$ be as in part \ref{exer:facebook} of Exercise \ref{exer:lots of them}.  Describe $[\text{Bob}]$ (assume you know which Bob we're talking about).  What is $\Omega_F$?
 \end{exercise}
 
 \begin{exercise}
@@ -143,15 +143,15 @@ Using your digraph in Exercise \ref{exer:made up}, find $\Omega_{\sim}$ for all 
 \end{exercise}
 
 \begin{exercise}
-Consider the relation $\leq$ on $\mathbb{R}$.  If $x\in \mathbb{R}$, what is $R_x$?
+Consider the relation $\leq$ on $\mathbb{R}$.  If $x\in \mathbb{R}$, what is $[x]$?
 \end{exercise}
 
 \begin{exercise}
-Find $R_1$ and $R_{2}$ for the relation given in part \ref{exer:mod 5} of Exercise \ref{exer:lots of them}.  How many different sets of relatives are there?  What are they?
+Find $[1]$ and $[2]$ for the relation given in part \ref{exer:mod 5} of Exercise \ref{exer:lots of them}.  How many different sets of relatives are there?  What are they?
 \end{exercise}
 
 \begin{exercise}
-Find $R_x$ for all $x\in S$ for $S$ and $\sim$ from Exercise \ref{exer:digraph}.  Any observations?
+Find $[x]$ for all $x\in S$ for $S$ and $\sim$ from Exercise \ref{exer:digraph}.  Any observations?
 \end{exercise}
 
 \begin{theorem}[*]
@@ -161,13 +161,13 @@ Suppose $\sim$ is an equivalence relation on a set $A$ and let $a,b\in A$.  Then
 \begin{theorem}[*]\label{thm:equiv yields partition}
 Suppose $\sim$ is an equivalence relation on a set $A$.  Then
 \begin{enumerate}
-\item $\bigcup_{x\in A}R_x=A$, and
-\item for all $x,y\in A$, either $R_x=R_y$ or $R_x\cap R_y=\emptyset$.
+\item $\bigcup_{x\in A}[x]=A$, and
+\item for all $x,y\in A$, either $[x]=[y]$ or $[x]\cap [y]=\emptyset$.
 \end{enumerate}
 \end{theorem}
 
 \begin{definition}
-In light of Theorem \ref{thm:equiv yields partition}, if $\sim$ is an equivalence relation on a set $A$, then we refer to each $R_x$ as the \textbf{equivalence class} of $x$.  In this case, $\Omega_{\sim}$ is the set of equivalence classes determined by $\sim$.
+In light of Theorem \ref{thm:equiv yields partition}, if $\sim$ is an equivalence relation on a set $A$, then we refer to each $[x]$ as the \textbf{equivalence class} of $x$.  In this case, $\Omega_{\sim}$ is the set of equivalence classes determined by $\sim$.
 \end{definition}
 
 \begin{remark}
