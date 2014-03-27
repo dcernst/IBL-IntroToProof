@@ -130,8 +130,11 @@
 \newtheorem{exercise}[theorem]{Exercise}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
 
 \theoremstyle{definition}
+\newtheorem{theorem-given}{Theorem}[chapter]
+\newtheorem{lemma-given}[theorem]{Lemma}
 \newtheorem{acknowledgement}[theorem]{Acknowledgement}
 \newtheorem{algorithm}[theorem]{Algorithm}
 \newtheorem{axiom}[theorem]{Axiom}
@@ -143,7 +146,6 @@
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{example}[theorem]{Example}
 \newtheorem{journal}[theorem]{Journal}
-\newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{notation}[theorem]{Notation}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{remark}[theorem]{Remark}
@@ -203,14 +205,16 @@
 %\begin{chapter}{Set Theory and Topology}
 \include{2.1-intro-set-theory}
 \clearpage\include{2.2-power-sets}
-%\clearpage\include{2.3-indexing}
-%\clearpage\include{2.4-intro-topology}
+\clearpage\include{2.3-indexing}
+\clearpage\include{2.4-intro-topology}
+\clearpage\include{2.5-induction}
 %\end{chapter}
 
+\include{3.1-sqrt2}
+\clearpage\include{3.2-primes}
+
+
 \begin{comment}
-\begin{chapter}{Induction}
-%\include{IntroToProofNotes3.1}
-\end{chapter}
 
 \begin{chapter}{Relations and Functions}
 %\include{IntroToProofNotes4.1}
