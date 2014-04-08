@@ -1,0 +1,175 @@
+\begin{section}{Introduction to Functions}
+
+The concept of function is one of the most important and fundamental ones in the field of mathematics.  Functions are used in all branches of mathematics to model diverse situations and pull together ideas that at first seem unrelated.  Functions are as vital as numbers.
+
+Undoubtably, you have encountered the concept of function in your prior mathematical experience.  In this section, we will introduce the concept of function as a special type of relation.  As you shall see, this agrees with any previous definition of function that you may have learned.  
+
+Up until this point, you've probably only encountered functions as an algebraic rule, e.g. $f(x)=x^{2}-1$, for transforming one real number into another.  However, we can study functions in a much broader context.  Loosely speaking, the basic building blocks of a function are a first set and a second sets, say $X$ and $Y$, respectively, and a ``correspondence'' that assigns to each element of $X$ to exactly one element of $Y$.  Let's take a look at the actual definition.
+
+\begin{definition}
+Let $X$ and $Y$ be two nonempty sets.  A \textbf{function} from set $X$ to set $Y$, denoted $f:X\to Y$, is a relation (i.e., subset of $X\times Y$) such that:
+
+\begin{enumerate}\label{def:function}
+\item For each $x\in X$, there exists $y\in Y$ such that $(x,y)\in f$, and
+\item If $(x,y_{1}), (x,y_{2}) \in f$, then $y_{1}=y_{2}$.
+\end{enumerate}
+Note that if $(x,y)\in f$, we usually write $y=f(x)$ and say that ``$f$ maps $x$ to $y$.''
+\end{definition}
+
+\begin{remark}
+Item 1 of Definition \ref{def:function} says that every element of $X$ appears in the first coordinate of an ordered pair in the relation.  Item 2 says that each element of $X$ only appears once in the first coordinate of an ordered pair in the relation.  It is important to note that there are no restrictions on whether an element of $Y$ ever appears in the second coordinate.  Furthermore, if an element of $B$ appears in the second coordinate, it may appear again in a different ordered pair.
+\end{remark}
+
+\begin{definition}
+The set $X$ from Definition \ref{def:function} is called the \textbf{domain} of $f$ and is denoted by $\dom(f)$.  The set $Y$ is called the \textbf{codomain} of $f$ and is denoted by $\codom(f)$.  The set
+\[
+\range(f)=\{y\in Y: \mbox{there exists }x\mbox{ such that } y=f(x)\}
+\]
+is called the \textbf{range} of $f$ or the \textbf{image of $X$} under $f$.
+\end{definition}
+
+\begin{remark}
+It follows immediately from the definition that $\range(f)\subseteq \codom(f)$.  However, it is possible that the range of $f$ is strictly smaller.
+\end{remark}
+
+\begin{remark}
+If $f$ is a function and $(x,y)\in f$, then we may refer to $x$ as the \textbf{input} of $f$ and $y$ as the \textbf{output} of $f$.
+\end{remark}
+
+\begin{exercise}\label{exer:lots}
+Let $X=\{\circ, \square,\triangle,\smiley\}$ and $Y=\{a,b,c,d,e\}$.  Determine whether each of the following represent functions.  Explain.  If the relation is a function, determine the domain, codomain, and range.
+
+\begin{enumerate}
+\item $f:X\to Y$ defined via $f=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,d)\}$.
+\item $g:X\to Y$ defined via $g=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,c)\}$.
+\item $h:X\to Y$ defined via $h=\{(\circ, a),(\square,b),(\triangle,c),(\circ,d)\}$.
+\item $k:X\to Y$ defined via $k=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,d),(\square,e)\}$.
+\item $l:X\to Y$ defined via $l=\{(\circ, e),(\square,e),(\triangle,e),(\smiley,e)\}$.
+\item $m:X\to Y$ defined via $m=\{(\circ, a),(\triangle,b),(\smiley,c)\}$.
+\item $\operatorname{happy}:Y\to X$ defined via $\operatorname{happy}(y)=\smiley$ for all $y\in Y$.
+\item $\operatorname{id}:X\to X$ defined via $\operatorname{id}(x)=x$ for all $x\in X$.
+\item $\operatorname{nugget}:X\to X$ defined via 
+\[
+\operatorname{nugget}(x)=\begin{cases}
+x, & \mbox{if } x\mbox{ is a geometric shape},\\
+\square, & \mbox{otherwise}.
+\end{cases}
+\]
+\end{enumerate}
+\end{exercise}
+
+\begin{definition}
+One useful representation of functions on finite sets is via \textbf{bubble diagrams}.  To draw a bubble diagram for a function $f:X\to Y$, draw one circle (i.e, a ``bubble'') for each of $X$ and $Y$ and for each element of each set, put a dot in the corresponding set.  Typically, we draw $X$ on the left and $Y$ on the right.  Now, draw an arrow from $x\in X$ to $y\in Y$ if $f(x)=y$ (i.e., $(x,y)\in f$).  In fact, we can draw bubble diagrams even if $f$ isn't a function.
+\end{definition}
+
+\begin{exercise}
+For each of the relations in Exercise \ref{exer:lots} draw the corresponding bubble diagram.
+\end{exercise}
+
+\begin{problem}
+What properties does a bubble diagram have to have in order to represent a function?
+\end{problem}
+
+\begin{exercise}
+Provide an example of each of the following.  You may draw a bubble diagram, write down a list of ordered pairs, or a write a formula (as long as the domain and codomain are clear).
+\begin{enumerate}
+\item A function $f$ from a set with 4 elements to a set with 3 elements such that $\range(f)=\codom(f)$.
+\item A function $g$ from a set with 4 elements to a set with 3 elements such that $\range(g)$ is strictly smaller than $\codom(g)$.
+\end{enumerate}
+\end{exercise}
+
+\begin{problem}
+Let $f:X\to Y$ be a function and suppose that $X$ and $Y$ have $n$ and $m$ elements in them, respectively.  Also, suppose that $n<m$.  Is it possible for $\range(f)=\codom(f)$?  Explain.
+\end{problem}
+
+\begin{problem}
+In high school I am sure that you were told that a graph represents a function if it passes the \textbf{vertical line test}.  Using our terminology of ordered pairs, explain why this works.
+\end{problem}
+
+\begin{definition}
+Two functions are equal if they have the same domain, same codomain, and the same set of ordered pairs in the relation.
+\end{definition}
+
+\begin{remark}
+If two functions are defined by the same algebraic formula, but have different domains, then they are \emph{not} equal.  For example, the function $f:\mathbb{R}\to \mathbb{R}$ defined via $f(x)=x^{2}$ is not equal to the function $g:\mathbb{N}\to\mathbb{N}$ defined via $g(x)=x^{2}$.
+\end{remark}
+
+\begin{theorem}
+If $f:X\to Y$ and $g:X\to Y$ are functions, then $f=g$ iff $f(x)=g(x)$ for all $x\in X$.
+\end{theorem}
+
+\begin{definition}
+Let $f:X\to Y$ be a function.
+\begin{enumerate}
+\item The function $f$ is said to be \textbf{one-to-one} (or \textbf{injective}) if for all $y\in \range(f)$, there is a unique $x\in X$ such that $y=f(x)$.
+\item The function $f$ is said to be \textbf{onto} (or \textbf{surjective}) if for all $y\in Y$, there exists $x\in X$ such that $y=f(x)$.
+\item If $f$ is both one-to-one and onto, we say that $f$ is a \textbf{one-to-one correspondence} (or a \textbf{bijection}).
+\end{enumerate}
+\end{definition}
+
+\begin{exercise}
+Provide an example of each of the following.  You may draw a bubble diagram, write down a list of ordered pairs, or write a formula (as long as the domain and codomain are clear).  Assume that $X$ and $Y$ are finite sets.
+\begin{enumerate}
+\item A function $f:X\to Y$ that is one-to-one but not onto.
+\item A function $f:X\to Y$ that is onto but not one-to-one.
+\item A function $f:X\to Y$ that is both one-to-one and onto.
+\item A function $f:X\to Y$ that is neither one-to-one nor onto.
+\end{enumerate}
+
+\end{exercise}
+
+\begin{problem}
+Perhaps you've heard of the \textbf{horizontal line test} (i.e., every horizontal line hits the graph of $f:\mathbb{R}\to\mathbb{R}$ at most once).  What is the horizontal line test testing for?  Explain.
+\end{problem}
+
+\begin{exercise}
+Provide an example of each of the following.  You may either draw a graph or write down a formula.  Make sure you have the correct domain.
+\begin{enumerate}
+\item A function $f:\mathbb{R}\to \mathbb{R}$ that is one-to-one but not onto.
+\item A function $f:\mathbb{R}\to \mathbb{R}$ that is onto but not one-to-one.
+\item A function $f:\mathbb{R}\to \mathbb{R}$ that is both one-to-one and onto.
+\item A function $f:\mathbb{R}\to \mathbb{R}$ that is neither one-to-one nor onto.
+\end{enumerate}
+
+\end{exercise}
+
+\begin{theorem}[*]
+Let $f:X\to Y$ be a function.  Then $f$ is one-to-one iff for all $x_{1}, x_{2}\in X$, if $f(x_{1})=f(x_{2})$, then $x_{1}=x_{2}$.
+\end{theorem}
+
+\begin{remark}
+The previous theorem gives a technique for proving that a given function is one-to-one.  Start by assuming that $f(x_{1})=f(x_{2})$ and then work to show that $x_{1}=x_{2}$.
+\end{remark}
+
+\begin{remark}
+To show that a given function is onto, you should start with an arbitrary $y\in \range(f)$ and then work to show that there exists $x\in X$ such that $y=f(x)$.
+\end{remark}
+
+\begin{exercise}
+Determine which of the following functions are one-to-one, onto, both, or neither.  In each case, you should provide proofs and counterexamples as appropriate.
+
+\begin{enumerate}
+\item $f:\mathbb{R}\to \mathbb{R}$ defined via $f(x)=x^{2}$
+\item $g:\mathbb{R}\to [0,\infty)$ defined via $g(x)=x^{2}$
+\item $h:\mathbb{R}\to \mathbb{R}$ defined via $h(x)=x^{3}$
+\item $k:\mathbb{R}\to \mathbb{R}$ defined via $k(x)=x^{3}-x$
+\item $l: \mathbb{R}\times \mathbb{R}\to \mathbb{R}$ defined via $l(x_{1},x_{2})=x_{1}^{2}+x_{2}^{2}$
+\item $N:\mathbb{N}\to \mathbb{N}\times \mathbb{N}$ defined via $N(n)=(n,n)$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $A$ and $B$ be sets and let $S\subseteq A\times B$.  Define $\pi_{1}:S\to A$ and $\pi_{2}:S\to B$ via $\pi_{1}(a,b)=a$ and $\pi_{2}(a,b)=b$.  We call $\pi_{1}$ (respectively, $\pi_{2}$) the \textbf{projections} of $S$ onto $A$ (respectively, $B$).
+\begin{enumerate}
+\item Provide examples to show that $\pi_{1}$ does not need to be one-to-one or onto.
+\item Suppose that $S$ is a function (recall that a function is a set of ordered pairs, so this makes sense).  Is $\pi_{1}$ one-to-one? Is $\pi_{1}$ onto?  How about $\pi_{2}$?
+\end{enumerate} 
+\end{exercise}
+
+\end{section}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "IntroToProof"
+%%% End: 
