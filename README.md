@@ -18,5 +18,5 @@ Under the following conditions:
 
 When attributing this work, please include Stan and Matt, as well as me.
 
-# Comments #
+## Comments
 You can find the most up-to-date version of these notes on [Github](https://github.com/dcernst/IBL-IntroToProof).  I would be thrilled if you used these notes and improved them.  If you make any modifications, you can either make a pull request on Github or submit the improvements to me at [dana@danaernst.com](dana@danaernst.com).
