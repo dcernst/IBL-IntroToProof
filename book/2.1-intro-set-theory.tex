@@ -1,0 +1,188 @@
+\chapter{Introduction to Set Theory and Topology}
+
+At its essence, all of mathematics is built on set theory.  In this chapter, we will introduce some of the basics of sets and their properties.
+
+\begin{section}{Sets} 
+
+\begin{definition}
+A \textbf{set} is a collection of objects called \textbf{elements}. If $A$ is a set and $x$ is an element of $A$, we write
+$x\in A$. Otherwise, we write $x\notin A$.
+\end{definition}
+
+\begin{definition}
+The set containing no elements is called the \textbf{empty set}, and is denoted by the symbol $\emptyset$.
+\end{definition}
+
+If we think of a set as a box containing some stuff, then the empty set is a box with nothing in it.
+
+\begin{definition} 
+The language associated to sets is specific.  We will often define sets using the following notation, called \textbf{set builder notation}.
+\[
+S=\{x \in A: x \text{ satisfies some condition}\}
+\]
+The first part ``$x \in A$" denotes what type of $x$ is being considered.  The statements to the right of the colon are the conditions that $x$ must satisfy in order to be members of the set.  This notation is read as ``The set of all $x$ in $A$ such that $x$ satisfies some condition,'' where ``some condition" is something specific about the restrictions on $x$ relative to $A$.\footnote{Often, a vertical bar is used instead of a colon, like $S=\{x \in A \mid x \text{ satisfies some condition}\}$.}
+\end{definition}
+
+\begin{exercise}
+Unpack each of the following sets into a description using a sentence and see if you can determine exactly what elements each set contains.
+\begin{enumerate}
+\item $M=\{x \in \mathbb{R} :  x \geq 2 \}$
+\item $A=\{x \in \mathbb{N} : x = 3k \mbox{ for some } k\in \mathbb{N} \}$
+\item $T=\{t \in \mathbb{R} : t^2 \leq 2 \}$
+\item $H=\{t \in \mathbb{R} : t = 1 - \frac{1}{n} \mbox{, where } n \in \mathbb{N} \}$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Write each of the following sentences using set builder notation.
+\begin{enumerate}
+\item Suppose $R$ is the set of all real numbers $x$ such that $x$ is less than $-\sqrt{2}$. 
+\item Suppose $A$ is the set of all real numbers $y$, such that $y$ is greater than $-12$ and less than 42.4.
+\item Suppose $D$ is the set of all even natural numbers.
+\end{enumerate}
+\end{exercise}
+
+\begin{definition}
+If $A$ and $B$ are sets, then we say that $A$ is a \textbf{subset} of $B$, written $A\subseteq B$, provided that every element of $A$ is also an element of $B$.
+\end{definition}
+
+\begin{remark}
+Observe that $A\subseteq B$ is equivalent to ``For all $x$ (in the universe of discourse), if $x\in A$, then $x\in B$."  Since we know how to deal with ``for all" statements and conditional propositions, we know how to go about proving $A\subseteq B$.
+\end{remark}
+
+\begin{question}
+Suppose that $A$ and $B$ are sets.  Describe a general strategy for proving that $A\subseteq B$.
+\end{question}
+
+\begin{theorem}
+Let $S$ be a set.  Then
+\begin{enumerate}
+\item $S\subseteq S$,
+\item $\emptyset \subseteq S$.
+\end{enumerate}
+\end{theorem}
+
+\begin{exercise}
+List all of the subsets of $A=\{1,2,3\}$.  Any conjectures about how many there might be for a set with $n$ elements?
+\end{exercise}
+
+\begin{theorem}[*, Transitivity of subsets]
+Suppose that $A$, $B$, and $C$ are sets.  If $A\subseteq B$ and $B\subseteq C$, then $A\subseteq C$.
+\end{theorem}
+
+\begin{definition}
+If $A\subseteq B$, then $A$ is called a \textbf{proper subset} provided that $A\neq B$.  In this case, we may write $A\subset B$ or $A\subsetneq B$.\footnote{\emph{Warning:} Some books use $\subset$ to mean $\subseteq$.}
+\end{definition}
+
+\begin{definition}[Interval Notation]
+For $a,b\in\mathbb{R}$ with $a<b$, we define the following.
+\begin{enumerate}
+\item $(a,b)=\{x\in\mathbb{R}:a<x<b\}$
+\item $(a,\infty)=\{x\in\mathbb{R}:a<x\}$
+\item $(-\infty,b)=\{x\in\mathbb{R}:x<b\}$
+\item $[a,b]=\{x\in\mathbb{R}:a\leq x\leq b\}$
+\end{enumerate}
+We analogously define $[a,b)$, $(a,b]$, $[a,\infty)$, and $(-\infty,b]$.
+\end{definition}
+
+\begin{exercise}
+Provide two examples of proper subsets of the interval $[0,1]$.
+\end{exercise}
+
+Here are some more definitions.  In each case, take $U$ to be the universe of discourse.
+
+\begin{definition}
+The \textbf{union} of the sets $A$ and $B$ is $A \cup B =\{x\in U : x\in A \mbox{ or } x\in B \}$.
+\end{definition}
+
+\begin{definition}
+The \textbf{intersection} of the sets $A$ and $B$ is $A \cap B =\{x\in U : x\in A \mbox{ and } x\in B \}$.
+\end{definition}
+
+\begin{definition}
+The \textbf{set difference} of the sets $A$ and $B$ is $A \setminus B =\{x\in U : x\in A \mbox{ and } x\notin B \}$.
+\end{definition}
+
+\begin{definition}
+The \textbf{complement of $A$} (relative to $U$) is the set $A^c=U \setminus A =\{x \in U : x \notin A\}$.
+\end{definition}
+
+\begin{definition}
+If two sets $A$ and $B$ have the property that $A \cap B = \emptyset$, then we say that $A$ and $B$ are \textbf{disjoint} sets.
+\end{definition}
+
+\begin{exercise}
+Suppose that the universe of discourse is $U=\{1,2,3,4,5,6,7,8,9,10\}$.  Let $A=\{1, 2, 3, 4, 5\}$, $B=\{1, 3, 5\}$, and $C=\{2, 4, 6, 8\}$.  Find each of the following.
+\begin{enumerate}
+  \item $A \cap C$
+  \item $A \cap B$
+  \item $A \cup C$
+  \item $A \cup B$
+  \item $A\setminus B$
+  \item $B \setminus A$
+  \item $C \setminus B$
+  \item $B \cap C$
+  \item $B^c$
+  \item $A^c$
+  \item $(A\cup B)^c$
+  \item $A^c\cap B^c$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Suppose that the universe of discourse is $U=\mathbb{R}$.  Let $A=[-3,-1)$, $B=(-2.5,2)$, and $C=(-2,0]$.  Find each of the following.
+\begin{enumerate}
+\item $A^c$
+  \item $A \cap C$
+  \item $A \cap B$
+  \item $A \cup C$
+  \item $A \cup B$
+  \item $(A\cap B)^c$
+  \item $(A\cup B)^c$
+  \item $A \setminus B$
+  \item $A\setminus (B \cup C)$
+  \item $B \setminus A$
+  \item $B \cap C$
+\end{enumerate}
+\end{exercise}
+
+\begin{theorem}[*]
+Let $A$ and $B$ be sets.  If $A \subseteq B$, then $B^c \subseteq A^c$.
+\end{theorem}
+
+\begin{definition}
+Two sets $A$ and $B$ are \textbf{equal} if and only if $A \subseteq B$ and $B \subseteq A$.  In this case we write $A = B$.
+\end{definition}
+
+\begin{remark}
+Given two sets $A$ and $B$, if we want to prove $A=B$, then we have to do two separate ``mini" proofs: one for $A\subseteq B$ and one for $B\subseteq A$.
+\end{remark}
+
+\begin{theorem}[*]
+Let $A$ and $B$ be sets.  Then $A\setminus B = A \cap B^c$.
+\end{theorem}
+
+\begin{theorem}[*, DeMorgan's Law]
+Let $A$ and $B$ be sets. Then 
+\begin{enumerate}
+\item $(A \cup B)^c = A^c \cap B^c$,
+\item $(A \cap B)^c = A^c \cup B^c$.
+\end{enumerate}
+(You only need to prove one of these; the other is similar.)
+\end{theorem}
+
+\begin{theorem}[*, Distribution of Union and Intersection]
+Let $A$, $B$, and $C$ be sets. Then
+\begin{enumerate}
+\item $A \cup(B\cap C) = (A\cup B)\cap (A\cup C)$,
+\item $A\cap (B\cup C)= (A\cap B)\cup (A\cap C)$.
+\end{enumerate}
+(You only need to prove one of these; the other is similar.)
+\end{theorem}
+
+\end{section}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "IntroToProof"
+%%% End: 

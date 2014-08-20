@@ -1,0 +1,106 @@
+\begin{section}{Negating Implications and Proof by Contradiction}
+
+So far we have discussed how to negate propositions of the form $A$, $A\wedge B$, and $A\vee B$ for propositions $A$ and $B$.  However, we have yet to discuss how to negate propositions of the form $A\implies B$.
+
+\begin{problem}\label{prob:implication as disjunction}
+Let $A$ and $B$ be propositions.  Conjecture an equivalent way of expressing the conditional proposition $A\implies B$ as a proposition involving the disjunction symbol $\vee$ and possibly the negation symbol $\neg$, but not the implication symbol $\implies$.  Prove your conjecture using a truth table.
+\end{problem}
+
+\begin{exercise}\label{exer:Darth Vader}
+Let $A$ and $B$ be the propositions ``Darth Vader is a hippie" and ``Sarah Palin is a liberal", respectively.  Using Problem \ref{prob:implication as disjunction}, express $A\implies B$ as an English sentence involving the disjunction ``or."
+\end{exercise}
+
+\begin{problem}[*]\label{prob:negation of implication}
+Let $A$ and $B$ be two propositions.  Conjecture an equivalent way of expressing the proposition $\neg(A\implies B)$ as a proposition involving the conjunction symbol $\wedge$ and possibly the negation symbol $\neg$, but not the implication symbol $\implies$.  Prove your conjecture using previous results.
+\end{problem}
+
+\begin{exercise}
+Let $A$ and $B$ be the propositions in Exercise \ref{exer:Darth Vader}.  Using Problem \ref{prob:negation of implication}, express $\neg(A\implies B)$ as an English sentence involving the conjunction ``and."
+\end{exercise}
+
+\begin{exercise}
+The following proposition is \emph{false}.  Negate this proposition to obtain a true statement.  Write your statement as a conjunction.
+\begin{quote}
+If $.\overline{99}=\frac{9}{10}+\frac{9}{100}+\frac{9}{1000}+\cdots$, then $.\overline{99}\neq 1$.
+\end{quote}
+You do \emph{not} need to prove your new statement.
+\end{exercise}
+
+Recall that a proposition is exclusively either true or false.  That is, a proposition can never be both true and false.  This idea leads us to the next definition.
+
+\begin{definition}
+A compound proposition that is always false is called a \textbf{contradiction}.  A compound statement that is always true is called a \textbf{tautology}.
+\end{definition}
+
+\begin{theorem}
+Let $A$ be a proposition. Then $\neg A\wedge A$ is a contradiction.
+\end{theorem}
+
+\begin{exercise}
+Provide an example of a tautology using arbitrary positions and any of the logical connectives $\neg$, $\wedge$, and $\vee$.  Then prove that your example is in fact a tautology.
+\end{exercise}
+
+Suppose that we want to prove some proposition $P$ (which might be something like $A\implies B$ or possibly more complicated).  One approach, called \textbf{proof by contradiction}, involves assuming $\neg P$ and then logically deducing a contradiction of the form $Q\wedge \neg Q$, where $Q$ is some proposition (possibly equal to $P$).  Since this is absurd, it cannot be the case that $\neg P$ is true, which implies that $P$ is true.  The tricky part about a proof by contradiction is that it is not usually obvious what the statement $Q$ is going to be.  Here is what the general structure for a proof by contradiction looks like.
+
+\bigskip
+
+\begin{skeleton}[Proof of $P$ by contradiction]
+Here is what the general structure for a proof by contradiction looks like if we are trying to prove the proposition $P$.
+
+\bigskip
+
+\begin{textbox}
+\begin{proof}
+For sake of a contradiction, assume $\neg P$.
+\begin{center}
+$\vdots$\\
+(Use definitions and previous theorems to derive some $Q$ and its negation $\neg Q$.)\\
+$\vdots$
+\end{center}
+\noindent This is a contradiction.  Therefore, $P$.
+\end{proof}
+\end{textbox}
+
+\end{skeleton}
+
+Among other situations, proof by contradiction can be useful for proving statements of the form $A\implies B$, where $B$ is worded negatively or $\neg B$ is easier to ``get your hands on."  
+
+\begin{skeleton}[Proof of $A\implies B$ by contradiction]\label{pf by contradiction for implication}
+If you want to prove the proposition $A\implies B$ via a proof by contradiction, then the structure of the proof is as follows.
+
+\bigskip
+
+\begin{textbox}
+\begin{proof}
+For sake of a contradiction, assume $A$ and $\neg B$.
+\begin{center}
+$\vdots$\\
+(Use definitions and previous theorems to derive some $Q$ and its negation $\neg Q$.)\\
+$\vdots$
+\end{center}
+\noindent This is a contradiction.  Therefore, if $A$, then $B$.
+\end{proof}
+\end{textbox}
+\end{skeleton}
+
+\begin{question}
+In Skeleton Proof \ref{pf by contradiction for implication}, why did we start by assuming $A$ and $\neg B$?
+\end{question}
+
+Prove the following theorem in two ways: (i) prove the contrapositive, and (ii) prove using a proof by contradiction.
+
+\begin{theorem}[*]
+Assume that $x\in\mathbb{Z}$.  If $x$ is odd, then 2 does not divide $x$. (Prove in two different ways.)
+\end{theorem}
+
+Prove the following theorem by contradiction.
+
+\begin{theorem}[*]
+Assume that $x,y\in\mathbb{N}$\footnote{Note that $\mathbb{N}=\{1,2,3,\ldots\}$ is the set of \textbf{natural numbers}. Notice that we did not include $0$ in the set of natural numbers.  It is worth pointing out that there is some disagreement about this---some mathematicians (like set theorists) include $0$ in $\mathbb{N}$, but this will not be our convention.  The given statement is not true if we replace $\mathbb{N}$ with $\mathbb{Z}$.  Do you see why?}.  If $x$ divides $y$, then $x\leq y$. (Prove using a proof by contradiction.)
+\end{theorem}
+
+\begin{question}
+What obstacles (if any) are there to proving the previous theorem directly without using proof by contradiction?
+\end{question}
+
+\end{section}

@@ -1,0 +1,231 @@
+\documentclass[letterpaper,11pt,onesided]{book}%
+
+% After compiling the full document, compile with, for example:
+%
+% pdflatex -jobname=section1-6 "\includeonly{1.6-quantification3}\input{IntroToProof}"
+%
+% to get a file with just section 1.6 in it with the correct theorem numbering, etc.
+
+
+\newif\ifinstructor
+%% uncomment one of the following, depending if you want to include the
+%% instructor notes or not
+\instructortrue
+%\instructorfalse
+
+
+\newif\ifnotes
+%% uncomment one of the following, depending if you want to include the
+%% instructor notes or not
+\notestrue
+%\notesfalse
+
+\usepackage{tabls}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{stmaryrd}
+\usepackage{wasysym}
+\usepackage{microtype}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows,automata}
+\usepackage[hang,flushmargin,symbol*]{footmisc}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0, 0, .6}
+\definecolor{grey}{rgb}{.7, .7, .7}
+\usepackage[breaklinks]{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=darkblue,
+	anchorcolor=darkblue,
+	citecolor=darkblue,
+	pagecolor=darkblue,
+	urlcolor=darkblue,
+	pdftitle={},
+	pdfauthor={}
+}
+
+\usepackage[margin=1in]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Margin notes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[left=1in,right=2.75in,top=1in,bottom=1in]{geometry}
+%\marginparwidth 1.75in
+%\let\oldmarginpar\marginpar
+%\renewcommand\marginpar[1]{\-\oldmarginpar{\raggedright\footnotesize #1}}
+%\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize #1]{\raggedright\footnotesize #1}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Embed the date and time into every page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[12hr]{datetime}
+%\newdateformat{draftdate}{%
+%\shortdayofweekname{\THEDAY}{\THEMONTH}{\THEYEAR}, %
+%\THEDAY\ \shortmonthname[\THEMONTH] \THEYEAR}
+%\draftdate
+%\usepackage{eso-pic}
+%\AddToShipoutPicture{\put(10,10){\small Draft: \today\ at \currenttime }}%--- version: \MakeUppercase{\svnInfoRevision}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Instructor-specific material (answers, helps, etc.)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifinstructor
+  \newcommand{\instructor}[1]{\marginpar{\textbf{Instructor: }#1}}
+\else
+  \newcommand{\instructor}[1]{}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Personal notes about improving the text, etc.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifnotes
+\renewcommand{\thefootnote}{\roman{footnote}}
+\newcommand{\note}[1]{\footnote{#1}\marginpar{\fbox{\textbf{\thefootnote}}}}
+\else
+\newcommand{\note}[1]{}
+\fi
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands to define a term (so that we get nice indexing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\define}[2][]{\textbf{#2}\index{#1#2}}
+\newcommand{\definemargin}[2][]{\marginpar{#2}\define[#1]{#2}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theorems
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtheoremstyle{box}%
+{}{}% standard spacing before and after
+{}% Body style
+{}{\bfseries}{.}% Heading indent, font, and punctuation
+{ }% space after heading
+{\thmname{#1}\thmnumber{ #2}\thmnote{: #3}}% head spec
+
+\newtheoremstyle{problem}%
+{}{}% standard spacing before and after
+{}% Body style
+{}{\bfseries}{}% Heading indent, font, and punctuation
+{1em}% space after heading
+{\fbox{\thmname{#1}\thmnumber{ #2}}\thmnote{ (#3)}}% head spec
+
+
+\theoremstyle{problem}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{theorem-given}{Theorem}[chapter]
+\newtheorem{lemma-given}[theorem]{Lemma}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{journal}[theorem]{Journal}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{skeleton}[theorem]{Skeleton Proof}
+
+
+\newsavebox{\savepar}
+\newenvironment{textbox}{\noindent\begin{lrbox}{\savepar}\begin{minipage}[c]{.98\textwidth}}{\end{minipage}\end{lrbox}\fcolorbox{black}{white}{\usebox{\savepar}}}
+\newenvironment{section*}[1]{\section*{#1}}{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Notation shortcuts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\DeclareMathOperator{\dom}{Dom}
+\DeclareMathOperator{\codom}{Codom}
+\DeclareMathOperator{\range}{Rng}
+\newcommand{\blank}[1]{\raisebox{0pt}[14pt]{\rule{#1}{0.7pt}}}
+
+\let\origdoublepage\cleardoublepage
+
+\newcommand{\clearemptydoublepage}{%
+  \clearpage
+  {\pagestyle{empty}\origdoublepage}%
+}
+
+
+
+\begin{document}
+\frontmatter
+\include{frontmatter}
+\mainmatter
+
+\include{1-intro}
+\include{1.1-intro-number-theory}
+% unfortunately, this semester, there was an inconsistency in how
+% theorems were numbered at the start of section 1.2.  Since we
+% already passed out sheets for these, I am resetting the numbers
+% here.
+\addtocounter{theorem}{-1}
+
+% We add a \clearpage between sections so that it is easy to print off
+% a single section and hand it to the class.
+\clearpage\include{1.2-intro-logic}
+\clearpage\include{1.3-negation}
+% here, we skip 1 to get back on track (see above)...
+\addtocounter{theorem}{1}
+\clearpage\include{1.4-quantification}
+\clearpage\include{1.5-quantification2}
+\clearpage\include{1.6-quantification3}
+
+
+
+%\begin{chapter}{Set Theory and Topology}
+\include{2.1-intro-set-theory}
+\clearpage\include{2.2-power-sets}
+\clearpage\include{2.3-indexing}
+\clearpage\include{2.4-intro-topology}
+\clearpage\include{2.5-induction}
+%\end{chapter}
+
+\include{3.1-sqrt2}
+\clearpage\include{3.2-primes}
+
+
+% Relations and functions
+\include{4.1-relations}
+\clearpage\include{4.2-equivalence}
+\clearpage\include{4.3-partitions}
+\clearpage\include{4.4-functions}
+\clearpage\include{4.5-composition}
+\begin{comment}
+\end{comment}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
