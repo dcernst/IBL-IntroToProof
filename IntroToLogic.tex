@@ -1,0 +1,179 @@
+\begin{section}{Introduction to Logic}
+
+After diving in head first in the last section, we'll take a step back and do a more careful examination of what it is we are actually doing.
+
+\begin{definition}
+A \textbf{proposition} (or \textbf{statement}) is a sentence that is either true or false.
+\end{definition}
+
+For example, the sentence ``All liberals are hippies'' is a false proposition.  However, the perfectly good sentence ``$x=1$'' is \emph{not} a proposition all by itself since we don't actually know what $x$ is.
+
+\begin{exercise} Determine whether the following are propositions or not. Explain.
+\begin{enumerate}
+\item All cars are red.
+\item Van Gogh was the best artist ever. 
+\item If my name is Joe, then my name starts with the letter J.
+\item If my name starts with the letter J, then my name is Joe.
+\item $f$ is continuous.
+\item All functions are continuous.
+\item If $f$ is a differentiable function, then $f$ is continuous function.
+\item The president had eggs for breakfast the morning of his tenth birthday.
+\item What time is it? 
+\item There exists an $x$ such that $x^2=4$.
+\item $x^2=4.$
+\item $\sqrt{2}$ is an irrational number.
+\item For all real numbers $x$, $x^3=x$.
+\item There exists a real number $x$ such that $x^3=x$.
+\item $p$ is prime.
+\end{enumerate}
+\end{exercise}
+
+Given two propositions, we can form more complicated propositions using the logical connectives ``and", ``or", and ``If\ldots, then\ldots".
+
+\begin{definition}
+Let $A$ and $B$ be propositions.  The proposition ``\textbf{$A$ and $B$}'' is true if and only if both $A$ and $B$ are true.  The statement ``$A$ and $B$'' is expressed symbolically as 
+\[
+A \wedge B
+\]
+and is known as the \textbf{conjunction} of $A$ and $B$.
+\end{definition}
+
+\begin{definition}
+Let $A$ and $B$ be propositions.  The proposition ``\textbf{$A$ or $B$}'' is true if and only if at least one of $A$ or $B$ is true.  The statement ``$A$ or $B$'' is symbolically represented as
+\[
+A \vee B
+\]
+and is known as the \textbf{disjunction} of $A$ and $B$.
+\end{definition}
+
+\begin{definition}
+Let $A$ be a proposition.  The \textbf{negation} of $A$, denoted $\neg A$, is true if and only if $A$ is false.
+\end{definition}
+
+\begin{exercise}Describe the meaning of $\neg (A \wedge B)$ and $\neg (A \vee B)$.
+\end{exercise}
+
+\begin{definition}
+A \textbf{truth table} is a table that illustrates all possible truth values for a proposition.  
+\end{definition}
+
+\begin{example}
+Let $A$ and $B$ be propositions.  Then the truth table for the conjunction $A\wedge B$ is given by the following.
+\[
+\begin{tabular}{| c | c  | c |} \hline
+$A$  &  $B$ & $A \wedge B$  \\ \hline\hline
+T & T & T  \\ 
+T & F & F  \\ 
+F & T & F  \\ 
+F & F & F  \\ \hline
+\end{tabular}
+\]
+Notice that we have columns for each of $A$ and $B$.  The rows for these two columns correspond to all possible combinations for $A$ and $B$.  The third column gives us the truth value of $A\wedge B$ given the possible truth values for $A$ and $B$.
+\end{example}
+
+\begin{exercise}
+Create a truth table for each of $A \vee B$, $\neg A$, $\neg (A \wedge B)$, and $\neg A \wedge \neg B$.  Feel free to add additional columns to your tables to assist you with intermediate steps.
+\end{exercise}
+
+\begin{exercise}
+Suppose $P$ is a complex proposition built out of the propositions $A$, $B$, and $C$.  How many rows would the truth table for $P$ require?
+\end{exercise}
+
+\begin{definition}\label{def:conditional}
+Let $A$ and $B$ represent propositions.  The conditional proposition ``\textbf{If $A$, then $B$}'' is expressed symbolically as 
+\[
+A \implies B
+\]
+and has the following truth table.
+\[
+\begin{tabular}{| c | c  | c |} \hline
+$A$  &  $B$ & $A \implies B$  \\ \hline\hline
+T & T & T  \\ 
+T & F & F  \\ 
+F & T & T  \\ 
+F & F & T  \\ \hline
+\end{tabular}
+\]
+\end{definition}
+
+\begin{exercise}\label{exer:translations}
+Let $A$ represent ``6 is an even number'' and $B$ represent ``6 is a multiple of 4.''  Express each of the following in ordinary English sentences and state whether the statement is true or false.
+\begin{enumerate}
+  \item $A \wedge B$
+  \item $A \vee B$
+  \item $\neg A$
+  \item $\neg B$
+  \item $\neg (A \wedge B)$
+  \item $\neg (A \vee B)$
+  \item $A \implies B$
+\end{enumerate}
+\end{exercise}
+
+\begin{problem}
+Suppose I am the coach of our co-ed dodgeball team and you all are the players.  I tell you ``If we win tonight, then I will buy you pizza tomorrow.''  After reviewing the definition of conditional proposition, determine the case(s) in which you can rightly claim to have been lied to.
+\end{problem}
+
+\begin{definition}
+Two statements are \textbf{logically equivalent} (or \textbf{equivalent} if the context is clear) if and only if they have the same truth table.  That is, proposition $P$ is true exactly when proposition $Q$ is true, and $P$ is false exactly when $Q$ is false.  When $P$ and $Q$ are logically equivalent we denote this symbolically as 
+\[
+P \iff Q,
+\]
+which we read ``$P$ if and only if $Q$".  It is common to abbreviate ``if and only if'' as ``iff''.
+\end{definition}
+
+Each of the next three facts can be justified using truth tables.
+
+\begin{theorem}
+If $A$ is a proposition, then $\neg(\neg A)$ is equivalent to $A$.
+\end{theorem}
+
+\begin{theorem}\label{thm:demorgan}
+If $A$ and $B$ are propositions, then $\neg(A \wedge B) \iff \neg A \vee \neg B$.  (\emph{Note}: This theorem is referred to as DeMorgan's Law.)
+\end{theorem}
+
+\begin{problem}
+Let $A$ and $B$ be propositions.  Conjecture a statement similar to Theorem \ref{thm:demorgan} for the proposition $\neg(A\vee B)$ and then prove it.
+\end{problem}
+
+\begin{definition}
+The \textbf{converse} of $A \implies B$ is $B \implies A$.
+\end{definition}
+
+\begin{definition}
+The \textbf{contrapositive} of $A \implies B$ is $\neg B \implies \neg A$.
+\end{definition}
+
+\begin{exercise}
+Let $A$ and $B$ represent the statements from Exercise \ref{exer:translations}.  Express the following in ordinary English sentences.
+\begin{enumerate}
+\item The converse of $A \implies B$
+\item The contrapositive of $A \implies B$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise} Find the contrapositive of the following statements: 
+\begin{enumerate}
+\item If $n$ is an even natural number, then $n+1$ is an odd natural number.\footnote{Despite the fact that each of ``$n$ is an even natural number" and ``$n+1$ is an odd natural number" are not propositions (since we cannot determine their truth values without knowing what $n$ is), the implication is a proposition.  We discuss this further when we introduce predicates.}
+\item If it rains today, then I will bring my umbrella.
+\item If it does not rain today, then I will not bring my umbrella.
+\end{enumerate} \end{exercise}
+
+\begin{exercise}
+Provide an example of a true conditional proposition whose converse is false.
+\end{exercise}
+
+\begin{theorem}\label{thm:contrapos}
+Assume $A$ and B are statements.  Then ${A\implies B}$ is equivalent to its contrapositive.
+\end{theorem}
+
+The upshot of Theorem \ref{thm:contrapos} is that if you want to prove a conditional proposition, you can prove its contrapositive instead.  Prove each of the next two propositions using the contrapositive of the given statement.
+
+\begin{theorem}
+Assume $x$ and $y$ are integers.  If $xy$ is odd, then both $x$ and $y$ are odd. (Prove using contrapositive.)
+\end{theorem}
+
+\begin{theorem}
+Assume $x$ and $y$ are integers.  If $xy$ is even, then $x$ or $y$ is even.  (Prove using contrapositive.)
+\end{theorem}
+
+\end{section}
