@@ -13,21 +13,21 @@ In the last section, we introduced the universal quantifier ``for all" and the e
 Using our logical connectives (``and", ``or", ``If\ldots, then\ldots", and ``not") together with quantification, we can build very complex mathematical statements.
 
 \begin{example}\label{ex:def limit}
-Let $f$ be a function and consider the formal definition of $f$ being continuous at $c$ (in the domain of $f$):
+Let $f$ be a function and consider the formal definition of the calculus statement $\displaystyle\lim_{x\to c}f(x)=L$. This statement about the limit of $f(x)$ at $x=c$ is equivalent to:
 
 \begin{quote}
-For all $\epsilon >0$, there exists $\delta >0$ such that for all $x$, if $|x-c|<\delta$, then $|f(x)-f(c)|<\epsilon$.
+For all $\epsilon >0$, there exists $\delta >0$ such that for all $x$, if $0<|x-c|<\delta$, then $|f(x)-L|<\epsilon$.
 \end{quote}
 \end{example}
 
 \begin{exercise}
-Identify all the quantifiers from Example \ref{ex:def limit} and any logical connectives.  Are there any implicit bound variables?
+Identify all the quantifiers from Example~\ref{ex:def limit} and any logical connectives.  Are there any implicit bound variables?
 \end{exercise}
 
 In order to study the abstract nature of complicated mathematical statements, it is useful to adopt some notation.
 
 \begin{definition}
-We use the symbol $\forall$ to denote the universal quantifier ``for all" and the symbol $\exists$ to denote the existential quantifier ``there exists\ldots such that".
+We use the symbol $\forall$ to denote the universal quantifier ``for all" and the symbol $\exists$ to denote the existential quantifier ``there exists\ldots such that".\footnote{Note that the \LaTeX\ symbol commands are \texttt{\textbackslash forall} and \texttt{\textbackslash exists}, respectively. Here is something fun: What does $\forall \forall \exists\exists$ mean?  For every upside-down A, there exists a backwards E, of course.}
 \end{definition}
 
 Using our abbreviations for the logical connectives and quantifiers, we can symbolically represent mathematical propositions.
@@ -72,7 +72,7 @@ There are several ways of representing this statement symbolically.  However, if
 \end{exercise}
 
 \begin{exercise}
-Convert the statement in Example \ref{ex:def limit} into a statement using only logical symbols.
+Express the definition of the limit in Example~\ref{ex:def limit} using only logic symbols.
 \end{exercise}
 
 \begin{remark}\label{rem:implicit universal}
@@ -80,7 +80,7 @@ If $A(x)$ and $B(x)$ are predicates, then it is standard practice for the statem
 \end{remark}
 
 \begin{exercise}
-Find at least two examples earlier in the notes that exhibit the claim made in Remark \ref{rem:implicit universal}.  Attempt to write the statements symbolically.
+Find at least two examples earlier in the notes that exhibit the claim made in Remark~\ref{rem:implicit universal}.  Attempt to write the statements symbolically using explicit quantifiers.
 \end{exercise}
 
 \begin{exercise}
@@ -88,6 +88,11 @@ Convert the following proposition into a statement using only logical symbols.  
 \begin{quote}
 If $\epsilon >0$, then there exists $N\in\mathbb{N}$ such that $1/N<\epsilon$.
 \end{quote}
++Is this statement true?
+\end{exercise}
+
+\begin{exercise}
+In the previous exercise, you should end up with more than one quantifier.  Reverse the order of the quantifiers to get a new statement.  Does the meaning of the statement change?  If so, how does it change?  Is the new statement true?
 \end{exercise}
 
 \begin{remark}
@@ -114,7 +119,7 @@ How would you go about proving a true statement of the form ``For all $x$\ldots"
 \end{question}
 
 \begin{question}
-If a statement is false, then its negation is true.  How would you go about negating a statement involving quantifiers?  In particular, what are the negations of $\forall$ and $\exists$, respectively?
+If a statement is false, then its negation is true.  How would you go about negating a statement involving quantifiers?  In particular, if $P(x)$ is a predicate, what are the negations of $(\forall x)(P(x))$ and $(\exists x)(P(x))$, respectively?
 \end{question}
 
 \end{section}
