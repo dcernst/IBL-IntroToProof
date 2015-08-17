@@ -26,5 +26,6 @@
 *.mtc
 *.mtc0
 *.pdf
+GroutVersion/IntroToProof.pdf
 !IntroToProof.pdf
 *.DS_Store
