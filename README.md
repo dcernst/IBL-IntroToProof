@@ -1,5 +1,7 @@
 # An Introduction to Proof via Inquiry-Based Learning #
 
+[![Join the chat at https://gitter.im/dcernst/IBL-IntroToProof](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dcernst/IBL-IntroToProof?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.10873.png)](http://dx.doi.org/10.5281/zenodo.10873)
 
 ## Overview
