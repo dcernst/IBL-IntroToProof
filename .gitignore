@@ -26,4 +26,5 @@
 *.mtc
 *.mtc0
 *.pdf
+!IntroToProof.pdf
 *.DS_Store
