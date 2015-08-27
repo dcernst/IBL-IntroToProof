@@ -3,10 +3,10 @@
 [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.10873.png)](http://dx.doi.org/10.5281/zenodo.10873)
 
 ## Overview
-These notes are an IBL task sequence for an introduction to proof course. The task-sequence was written by [Dana Ernst](http://danaernst.com) (Northern Arizona University), but the first half of the notes are an adaptation of notes written by [Stan Yoshinobu](http://www.calpoly.edu/~styoshin/) (Cal Poly) and [Matthew Jones](http://www.csudh.edu/math/mjones/) (California State University, Dominguez Hills). Any errors in the notes are no one's fault but my own. In this vein, if you think you see an error, please [inform me](mailto:dana@danaernst.com), so that it can be remedied.
+These notes are an IBL task sequence for an introduction to proof course. The task-sequence was written by [Dana Ernst](http://danaernst.com) (Northern Arizona University), but the first half of the notes are an adaptation of notes written by [Stan Yoshinobu](http://www.calpoly.edu/~styoshin/) (Cal Poly) and [Matthew Jones](http://www.csudh.edu/math/mjones/) (California State University, Dominguez Hills). Any errors in the notes are no one's fault but my own. In this vein, if you think you see an error, please [inform me](mailto:dana.ernst@nau.edu), so that it can be remedied.
 
 ## License Information
-This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0](http://creativecommons.org/licenses/by-sa/3.0/us/) license.  You are free to:
+This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.  You are free to:
 
 * Share: copy, distribute, and transmit the work,
 * Remix: adapt the work
