@@ -1,6 +1,7 @@
 # An Introduction to Proof via Inquiry-Based Learning #
 
 [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.10873.png)](http://dx.doi.org/10.5281/zenodo.10873)
+[![DOI](https://zenodo.org/badge/5110/dcernst/IBL-IntroToProof.svg)](https://zenodo.org/badge/latestdoi/5110/dcernst/IBL-IntroToProof)
 
 ## Overview
 These notes are an IBL task sequence for an introduction to proof course. The task-sequence was written by [Dana Ernst](http://danaernst.com) (Northern Arizona University), but the first half of the notes are an adaptation of notes written by [Stan Yoshinobu](http://www.calpoly.edu/~styoshin/) (Cal Poly) and [Matthew Jones](http://www.csudh.edu/math/mjones/) (California State University, Dominguez Hills). Any errors in the notes are no one's fault but my own. In this vein, if you think you see an error, please [inform me](mailto:dana.ernst@nau.edu), so that it can be remedied.
