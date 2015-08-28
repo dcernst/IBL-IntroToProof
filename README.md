@@ -1,6 +1,5 @@
 # An Introduction to Proof via Inquiry-Based Learning #
 
-[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.10873.png)](http://dx.doi.org/10.5281/zenodo.10873)
 [![DOI](https://zenodo.org/badge/5110/dcernst/IBL-IntroToProof.svg)](https://zenodo.org/badge/latestdoi/5110/dcernst/IBL-IntroToProof)
 
 ## Overview
