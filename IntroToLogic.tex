@@ -65,15 +65,18 @@ A \textbf{truth table} is a table that illustrates all possible truth values for
 
 \begin{example}
 Let $A$ and $B$ be propositions.  Then the truth table for the conjunction $A\wedge B$ is given by the following.
-\[
-\begin{tabular}{| c | c  | c |} \hline
-$A$  &  $B$ & $A \wedge B$  \\ \hline\hline
+\begin{center}
+\begin{tabular}{@{}ccc@{}}
+\toprule
+$A$  &  $B$ & $A \wedge B$  \\
+\midrule
 T & T & T  \\ 
 T & F & F  \\ 
 F & T & F  \\ 
-F & F & F  \\ \hline
+F & F & F  \\
+\bottomrule
 \end{tabular}
-\]
+\end{center}
 Notice that we have columns for each of $A$ and $B$.  The rows for these two columns correspond to all possible combinations for $A$ and $B$.  The third column gives us the truth value of $A\wedge B$ given the possible truth values for $A$ and $B$.
 \end{example}
 
