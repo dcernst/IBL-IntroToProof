@@ -1,125 +1,203 @@
-\begin{section}{More on Quantification}
+\begin{section}{More About Quantification}
 
-In the last section, we introduced the universal quantifier ``for all" and the existential quantifier ``there exists\ldots such that."  Here are a couple of important points to remember about quantification:
-\begin{enumerate}
-\item In order to have a proposition, all variables must be bound.  That is, all variables must be quantified.  This can happen in at least two ways:
-\begin{enumerate}
-\item The variables are explicitly bound by quantifiers in the same sentence, or
-\item The variables are implicitly bound by preceding sentences and/or by context.  \emph{Note:}  Statements of the form ``Let $x=\ldots$" and ``Let $x\in\ldots$" bind the variable $x$ and remove ambiguity.
-\end{enumerate}
-\item The order of the quantification is important.  Reversing the order of the quantifiers can substantially change the meaning of a proposition.
-\end{enumerate}
-
-Using our logical connectives (``and", ``or", ``If\ldots, then\ldots", and ``not") together with quantification, we can build very complex mathematical statements.
-
-\begin{example}\label{ex:def limit}
-Let $f$ be a function and consider the formal definition of the calculus statement $\displaystyle\lim_{x\to c}f(x)=L$. This statement about the limit of $f(x)$ at $x=c$ is equivalent to:
-
-\begin{quote}
-For all $\epsilon >0$, there exists $\delta >0$ such that for all $x$, if $0<|x-c|<\delta$, then $|f(x)-L|<\epsilon$.
-\end{quote}
-\end{example}
-
-\begin{exercise}
-Identify all the quantifiers from Example~\ref{ex:def limit} and any logical connectives.  Are there any implicit bound variables?
-\end{exercise}
-
-In order to study the abstract nature of complicated mathematical statements, it is useful to adopt some notation.
+Before we get started, it is important to remind you that we will not be explicitly using the symbolic representation of a given statement in terms of quantifiers and logical connectives.  Nonetheless, having this notation at our disposal allows us to compartmentalize the abstract nature of mathematical propositions and will provide us with a way to talk about the meta-concepts surrounding the construction of proofs.
 
 \begin{definition}
-We use the symbol $\forall$ to denote the universal quantifier ``for all" and the symbol $\exists$ to denote the existential quantifier ``there exists\ldots such that".\footnote{Note that the \LaTeX\ symbol commands are \texttt{\textbackslash forall} and \texttt{\textbackslash exists}, respectively. Here is something fun: What does $\forall \forall \exists\exists$ mean?  For every upside-down A, there exists a backwards E, of course.}
+Two quantified propositions are \textbf{equivalent in a given universe of discourse} iff they have the same truth value in that universe.  Two quantified propositions are \textbf{equivalent} iff they are equivalent in every universe of discourse.
 \end{definition}
 
-Using our abbreviations for the logical connectives and quantifiers, we can symbolically represent mathematical propositions.
-
-\begin{example}
-For each of the following, suppose our universe of discourse is the set of real numbers.
-\begin{enumerate}
-
-\item Consider the following (true) proposition:
-
-\begin{quote}
-There exists $x$ such that $x^2-1=0$.
-\end{quote}
-
-This proposition can be denoted symbolically as $(\exists x)(x^2-1=0)$.
-
-\item Consider the following (false) proposition:
-
-\begin{quote}
-For all $x\in \mathbb{N}$, there exists $y\in\mathbb{N}$ such that $y<x$.
-\end{quote}
-
-This one can be represented symbolically as $(\forall x)(x\in\mathbb{N}\implies (\exists y)(y\in\mathbb{N}\implies y<x))$ or more simply as $(\forall x\in\mathbb{N})(\exists y\in\mathbb{N})(y<x)$.
-
-\item Consider the following (true) proposition:
-
-\begin{quote}
-Every positive real number has a multiplicative inverse.
-\end{quote}
-
-There are several ways of representing this statement symbolically.  However, if you unpack what a multiplicative inverse is, you'll get something like $(\forall x)(x>0 \implies (\exists y)(xy=1))$.  Alternatively, you can shorten the statement to $(\forall x>0)(\exists y)(xy=1)$.
-
-\end{enumerate}
-\end{example}
-
-\begin{exercise} Convert the following statements into statements using only logical symbols.  Assume that the universe of discourse is the set of real numbers.
-\begin{enumerate}
-\item There exists a number $x$ such that $x^2+1$ is greater than zero.
-\item There exists a natural number $n$ such that $n^2=36$. 
-\item For every real number $x$, $x^2$ is greater than or equal to zero.
-\end{enumerate}
-\end{exercise}
-
 \begin{exercise}
-Express the definition of the limit in Example~\ref{ex:def limit} using only logic symbols.
-\end{exercise}
-
-\begin{remark}\label{rem:implicit universal}
-If $A(x)$ and $B(x)$ are predicates, then it is standard practice for the statement $A(x)\implies B(x)$ to mean $(\forall x)(A(x)\implies B(x))$ (where the universe of discourse for $x$ needs to be made clear).  In this case, we say that the universal quantifier is implicit.
-\end{remark}
-
-\begin{exercise}
-Find at least two examples earlier in the notes that exhibit the claim made in Remark~\ref{rem:implicit universal}.  Attempt to write the statements symbolically using explicit quantifiers.
-\end{exercise}
-
-\begin{exercise}
-Convert the following proposition into a statement using only logical symbols.  The universe of discourse is the set of real numbers.  (Watch out for implicit quantifiers.)
-\begin{quote}
-If $\epsilon >0$, then there exists $N\in\mathbb{N}$ such that $1/N<\epsilon$.
-\end{quote}
-Is this statement true?
-\end{exercise}
-
-\begin{exercise}
-In the previous exercise, you should end up with more than one quantifier.  Reverse the order of the quantifiers to get a new statement.  Does the meaning of the statement change?  If so, how does it change?  Is the new statement true?
+Consider the propositions $(\forall x)(x>3)$ and $(\forall x)(x\geq 4)$.  Are these propositions equivalent if the universe of discourse is the set of integers?  (\emph{Hint:}  What are their truth values in this case?)  Come up with two different universes of discourse that yield different truth values for these propositions.  What can you conclude?
 \end{exercise}
 
 \begin{remark}
-The symbolic expression $(\forall x)(\forall y)$ can be replaced with the simpler expression $(\forall x,y)$ as long as $x$ and $y$ are coming from the same set.
+At this point it is worth pointing out an important distinction.  Consider the propositions ``All cars are red" and ``All natural numbers are positive".  Both of these are instances of the \textbf{logical form} $(\forall x)P(x)$.  It turns out that the first proposition is false and the second is true; however, the logical form is neither true or false.  A logical form is a blueprint for particular propositions.  If we are careful, it makes sense to talk about whether two logical forms are equivalent.  For example, $(\forall x)(P(x)\implies Q(x))$ is equivalent to $(\forall x)(\neg Q(x)\implies \neg P(x))$.  For fixed $P(x)$ and $Q(x)$, these two forms will always have the same truth value independent of the universe of discourse.  If you change $P(x)$ and $Q(x)$, then the truth value may change, but the two forms will still agree.
 \end{remark}
 
-\begin{exercise}
-For each of the following statements, (i) unpack the statement into words, and (ii) determine whether the statement is true or false.
-
+\begin{theorem}\label{thm:negation of quantifiers}
+Let $P(x)$ be a predicate.  Then
 \begin{enumerate}
-\item $(\forall n \in \mathbb{N})(n^2 \geq 5)$
-\item $(\exists n \in \mathbb{N})(n^2-1=0)$
-\item $(\exists N \in \mathbb{N})(\forall  n > N)(\frac{1}{n} < 0.01)$
-\item $(\forall m, n \in \mathbb{Z})(2|m \wedge 2|n \implies 2|(m+n))$
-\item $(\forall x \in \mathbb{N})(\exists y \in \mathbb{N})(x-2y=0)$
-\item $(\exists x \in \mathbb{N})(\forall y \in \mathbb{N})(y \leq x)$
+\item[1.] $\neg (\forall x)P(x)$ is equivalent to $(\exists x)(\neg P(x))$;
+\item[2.] $\neg (\exists x)P(x)$ is equivalent to $(\forall x)(\neg P(x))$.
+\end{enumerate}
+\end{theorem}
+
+\begin{exercise}
+Negate each of the following.  Disregard the truth value and the universe of discourse.
+\begin{enumerate}
+\item $(\forall x)(x>3)$
+\item $(\exists x)(x \mbox{ is prime}\wedge x \mbox{ is even})$
+\item All cars are red.
+\item Every Wookiee is named Chewbacca.
+\item Some hippies are republican.
+\item For all $x\in\mathbb{N}$, $x^2+x+41$ is prime.
+\item There exists $x\in\mathbb{Z}$ such that $1/x\notin\mathbb{Z}$.
+\item There does not exist a function $f$ such that if $f$ is continuous, then $f$ is not differentiable.
 \end{enumerate}
 \end{exercise}
 
-To whet your appetite for the next section, tackle the following questions.
+Using Theorem~\ref{thm:negation of quantifiers} and our previous results involving quantification, we can negate complex mathematical propositions by working from left to right.
+
+\begin{example}
+Consider the proposition
+\[
+(\exists x\in\mathbb{R})(\forall y\in\mathbb{R})(x+y=0).
+\]
+It turns out that this statement is false, which means that its negation is true.  That is,
+\[
+\neg(\exists x\in\mathbb{R})(\forall y\in\mathbb{R})(x+y=0),
+\]
+which is equivalent to
+\[
+(\forall x\in\mathbb{R})(\exists y\in\mathbb{R})(x+y\neq 0),
+\]
+is true.
+\end{example}
+
+\begin{example}
+Consider the proposition
+\[
+(\forall x)[x>0\implies (\exists y)(y<0 \wedge xy>0)]
+\]
+(which happens to be false).  Then
+\[
+\neg (\forall x)[x>0\implies (\exists y)(y<0 \wedge xy>0)]
+\]
+is equivalent to
+\[
+(\exists x)[x>0 \wedge \neg (\exists y)(y<0) \wedge xy>0)],
+\]
+which is equivalent to 
+\[
+(\exists x)[x>0 \wedge (\forall y)(y\geq 0 \vee xy\leq 0)].
+\]
+\end{example}
+
+\begin{exercise}
+What previous theorems were used when negating the proposition in the previous example?
+\end{exercise}
+
+\begin{exercise}
+Negate each of the following.  Disregard the truth value and the universe of discourse.
+\begin{enumerate}
+\item $(\forall n\in\mathbb{N})(\exists m\in\mathbb{N})(m<n)$
+\item $(\forall x,y,z\in\mathbb{Z})((xy \mbox{ is even}\wedge yz\mbox{ is even})\implies xy\mbox{ is even})$
+\item For all positive real numbers $x$ there exists a real number $y$ such that $y^2=x$.
+\item There exists a married person $x$ such that for all married people $y$, $x$ is married to $y$.
+\end{enumerate}
+\end{exercise}
+
+At this point, we should be able to use our understanding of quantification to construct counterexamples to complicated false propositions and proofs of complicated true propositions.  Here are some general proof structures for various logical forms.
+
+\begin{skeleton}[Direct Proof of $(\forall x)P(x)$]
+Here is what the general structure for a direct proof of the proposition $(\forall x)P(x)$ looks like.
+
+\bigskip
+
+\begin{textbox}
+\begin{proof}
+Let $x \in U$ (where $U$ is whatever the universe of discourse is).
+\begin{center}
+$\vdots$\\
+(Use definitions and previous results.)\\
+$\vdots$
+\end{center}
+\noindent Therefore, $P(x)$ is true.  Since $x$ was arbitrary, for all $x$, $P(x)$.
+\end{proof}
+\end{textbox}
+
+\end{skeleton}
+
+\begin{skeleton}[Proof of $(\forall x)P(x)$ by Contradiction]
+Here is the general structure for a proof of the proposition $(\forall x)P(x)$ via contradiction.
+
+\bigskip
+
+\begin{textbox}
+\begin{proof}
+For sake of a contradiction, assume that there exists $x\in U$ (where $U$ is whatever the universe of discourse is) such that $\neg P(x)$.
+\begin{center}
+$\vdots$\\
+(Do something to derive a contradiction.)\\
+$\vdots$
+\end{center}
+\noindent This is a contradiction.  Therefore, for all $x$, $P(x)$ is true.
+\end{proof}
+\end{textbox}
+\end{skeleton}
+
+\begin{skeleton}[Direct Proof of $(\exists x)P(x)$]
+Here is what the general structure for a direct proof of the proposition $(\exists x)P(x)$ looks like.
+
+\bigskip
+
+\begin{textbox}
+\begin{proof}
+(Either use definitions and previous results to deduce that an $x$ exists such that $P(x)$ is true or if you think you have an $x$ that works, just verify that it does.)
+\begin{center}
+$\vdots$\\
+(Do stuff.)\\
+$\vdots$
+\end{center}Therefore, there exists $x$ such that $P(x)$.
+\end{proof}
+\end{textbox}
+
+\end{skeleton}
+
+\begin{skeleton}[Proof of $(\exists x)P(x)$ by Contradiction]
+Here is the general structure for a proof of the proposition $(\exists x)P(x)$ via contradiction.
+
+\bigskip
+
+\begin{textbox}
+\begin{proof}
+For sake of a contradiction, assume that for all $x$, $\neg P(x)$.
+\begin{center}
+$\vdots$\\
+(Do something to derive a contradiction.)\\
+$\vdots$
+\end{center}
+\noindent This is a contradiction.  Therefore, there exists $x$ such that $P(x)$.
+\end{proof}
+\end{textbox}
+
+\end{skeleton}
 
 \begin{question}
-How would you go about proving a true statement of the form ``For all $x$\ldots"?
+Suppose $P(x)$ is a proposition such that $(\forall x)P(x)$ is false.  Which of the above proof situations is identical to providing a counterexample to this proposition?
 \end{question}
 
-\begin{question}
-If a statement is false, then its negation is true.  How would you go about negating a statement involving quantifiers?  In particular, if $P(x)$ is a predicate, what are the negations of $(\forall x)(P(x))$ and $(\exists x)(P(x))$, respectively?
-\end{question}
+\begin{remark}
+It is important to point out that sometimes we will have to combine various proof techniques in a single proof.  For example, if you wanted to prove a proposition of the form $(\forall x)(P(x) \implies Q(x)$) by contradiction, we would start by assuming that there exists $x$ such that $P(x)$ and $\neg Q(x)$.
+\end{remark}
+
+\begin{problem}
+For each of the following statements, determine its truth value.  If the statement is false, provide a counterexample.  Prove at least two of the true statements.
+\begin{enumerate}
+\item For all $n\in\mathbb{N}$, $n^2\geq 5$.
+
+\item There exists $n \in \mathbb{N}$ such that $n^2-1=0$.
+
+\item There exists $x \in \mathbb{N}$ such that for all $y \in \mathbb{N}$, $y \leq x$.
+
+\item For all $x\in\mathbb{Z}$, $x^3\geq x$.
+
+\item For all $n\in\mathbb{Z}$, there exists $m\in\mathbb{Z}$ such that $n+m=0$.
+
+\item There exists integers $a$ and $b$ such that $2a+7b=1$.
+
+\item There do not exist integers $m$ and $n$ such that $2m+4n=7$.
+
+\item For all integers $a, b, c$, if $a$ divides $bc$, then either $a$ divides $b$ or $a$ divides $c$.
+
+\end{enumerate}
+
+\end{problem}
+
+When proving the following theorem, you might discover that considering two different cases is helpful.
+
+\begin{theorem}
+For all integers, $3n^2+n+14$ is even.
+\end{theorem}
 
 \end{section}
