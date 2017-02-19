@@ -3,42 +3,32 @@
 We've already seen that using union, intersection, set difference, and complement we can create new sets (in the same universe) from existing sets.  In this section, we will describe another way to generate new sets; however, the new sets will not ``live" in the same universe this time.
 
 \begin{definition}
-If $S$ is a set, then the \textbf{power set} of $S$ is the set of subsets of $S$.  The power set of $S$ is denoted $\mathcal{P}(S)$.
+If $S$ is a set, then the \textbf{power set} of $S$ is the set of subsets of $S$.  The power set of $S$ is denoted $\boxed{\mathcal{P}(S)}$.
 \end{definition}
 
-\begin{remark}
-It follows immediately from the definition that $A\subseteq S$ iff $A\in\mathcal{P}(S)$.\footnote{Recall that ``iff" is an abbreviation for `if and only if", which is a statement of the form $A\iff B$ for propositions $A$ and $B$.  Recall that this is short for both $A\implies B$ \emph{and} $B\implies A$.}  It is important to pay close attention to whether ``$\subseteq$" or ``$\in$" is the proper symbol to use.
-\end{remark}
+It follows immediately from the definition that $A\subseteq S$ iff $A\in\mathcal{P}(S)$.\footnote{Recall that ``iff" is an abbreviation for `if and only if", which is a statement of the form $A\iff B$ for propositions $A$ and $B$. Recall that this is short for both $(A\implies B) \wedge (B\implies A)$.}  For example, if $S=\{a,b\}$, then $\mathcal{P}=\{\emptyset, \{a\}, \{b\}, S\}$.
 
-\begin{example}
-If $S=\{a,b\}$, then $\mathcal{P}=\{\emptyset, \{a\}, \{b\}, S\}$.
-\end{example}
-
-\begin{question}
-Implicit in the definition of power set is that $S$ is a subset of some fixed universe $U$.  What universe does it make sense for $\mathcal{P}(S)$ to live in?
-\end{question}
-
-\begin{exercise}
+\begin{exercise}\label{exer:PowerSets}
 For each of the following sets, find the power set.
-\begin{enumerate}
-\item $W=\{\circ, \triangle, \square\}$
-\item $O=\{a,\{a\}\}$
-\item $R=\emptyset$
+\begin{multicols}{2}
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $A=\{\circ, \triangle, \square\}$
+\item $B=\{a,\{a\}\}$
+\item $C=\emptyset$
 \item $D=\{\emptyset\}$
 \end{enumerate}
+\end{multicols}
 \end{exercise}
 
-\begin{conjecture}
+\begin{question}
 How many subsets do you think that a set with $n$ elements has?  What if $n=0$?  You do not need to prove your conjecture at this time.  We will prove this later using mathematical induction.
-\end{conjecture}
+\end{question}
 
-\begin{exercise}
-Do your best to describe $\mathcal{P}(\mathbb{N})$.  You cannot write down all of $\mathcal{P}(\mathbb{N})$.  Why not?
-\end{exercise}
+%\begin{exercise}
+%Do your best to describe $\mathcal{P}(\mathbb{N})$.  You cannot write down all of $\mathcal{P}(\mathbb{N})$.  Why not?
+%\end{exercise}
 
-\begin{remark}
-It is important to realize that the concepts of \emph{element} and \emph{subset} need to be carefully delineated.  For example, consider the set $A=\{x,y\}$.  The object $x$ is an element of $A$, but the object $\{x\}$ is both a subset of $A$ and an element of $\mathcal{P}(A)$.  This can get confusing rather quickly.  Consider the set $O$ from the previous example.  The set $\{a\}$ happens to be an element of $O$, a subset of $O$, and an element of  $\mathcal{P}(O)$.
-\end{remark}
+It is important to realize that the concepts of \emph{element} and \emph{subset} need to be carefully delineated.  For example, consider the set $A=\{x,y\}$.  The object $x$ is an element of $A$, but the object $\{x\}$ is both a subset of $A$ and an element of $\mathcal{P}(A)$.  This can get confusing rather quickly.  Consider the set $C$ from Exercise~\ref{exer:PowerSets}.  The set $\{a\}$ happens to be an element of $C$, a subset of $C$, and an element of  $\mathcal{P}(C)$. The upshot is that it is important to pay close attention to whether ``$\subseteq$" or ``$\in$" is the proper symbol to use.
 
 \begin{theorem}
 Let $S$ and $T$ be sets.  Then $S\subseteq T$ iff $\mathcal{P}(S)\subseteq \mathcal{P}(T)$.\footnote{To prove this theorem, you have to write two distinct subproofs: $A\implies B$ and $B\implies A$.}
@@ -48,18 +38,13 @@ Let $S$ and $T$ be sets.  Then $S\subseteq T$ iff $\mathcal{P}(S)\subseteq \math
 Let $S$ and $T$ be sets.  Then $\mathcal{P}(S)\cap\mathcal{P}(T)=\mathcal{P}(S\cap T)$.
 \end{theorem}
 
-\begin{theorem}
+\begin{theorem}\label{thm:UnionPowerSets}
 Let $S$ and $T$ be sets.  Then $\mathcal{P}(S)\cup\mathcal{P}(T)\subseteq \mathcal{P}(S\cup T)$.
 \end{theorem}
 
-
-\begin{exercise}
-Let $S$ and $T$ be sets.
-\begin{enumerate}
-\item Provide a counterexample to show that it is not necessarily true that $\mathcal{P}(S)\cup\mathcal{P}(T)= \mathcal{P}(S\cup T)$.
-\item Is it ever true that $\mathcal{P}(S)\cup\mathcal{P}(T)= \mathcal{P}(S\cup T)$ or are $\mathcal{P}(S)\cup\mathcal{P}(T)$ and $\mathcal{P}(S\cup T)$ always different sets?
-\end{enumerate}
-\end{exercise}
+\begin{problem}
+Provide a counterexample to show that it is not necessarily true that $\mathcal{P}(S)\cup\mathcal{P}(T)= \mathcal{P}(S\cup T)$. This verifies that the converse of Theorem~\ref{thm:UnionPowerSets} is not true in general. Is it ever true that $\mathcal{P}(S)\cup\mathcal{P}(T)$ and  $\mathcal{P}(S\cup T)$ are equal?
+\end{problem}
 
 We now turn out attention to the issue of whether there is one mother of all universal sets.  Before reading any further, consider this for a moment.  That is, is there one largest set that all other sets are a subset of?  Or, in other words, is there a set of all sets?  To help wrap our heads around this issue, consider the following riddle, known as the \textbf{Barber of Seville Paradox}.
 
@@ -68,43 +53,42 @@ In Seville, there is a barber who shaves all those men, and only those men, who 
 \end{quote}
 
 \begin{problem}\label{barber}
-Discuss the Barber of Seville Paradox.  Does the barber shave himself or not?
+In the Barber of Seville Paradox, does the barber shave himself or not?
 \end{problem}
 
-Problem~\ref{barber} is an example of a \textbf{paradox}.  I haven't defined paradox.  What do you think it means?  Now, suppose that there is a set of all sets and call it $\mathcal{U}$.  Then we can write $\mathcal{U}=\{A:A\mbox{ is a set}\}$.
+Problem~\ref{barber} is an example of a \textbf{paradox}.  What do you think paradox means?  Now, suppose that there is a set of all sets and call it $\mathcal{U}$.  That is, $\mathcal{U}:=\{A\mid A\mbox{ is a set}\}$.
 
 \begin{problem}
-Given our definition of $\mathcal{U}$, explain why it is an element of itself.
+Given our definition of $\mathcal{U}$, explain why $\mathcal{U}$ is an element of itself.
 \end{problem}
 
 If we continue with this line of reasoning, it must be the case that some sets are elements of themselves and some are not.  Let $X$ be the set of all sets that are elements of themselves and let $Y$ be the set of all sets that are not elements of themselves.
 
-\begin{question}
+\begin{problem}
 Does $Y$ belong to $X$ or $Y$?  Explain why this is a paradox.
-\end{question}
+\end{problem}
 
-The above paradox is one way of phrasing a paradox referred to as \textbf{Russell's paradox}.  Okay, how did we get into this mess in the first place?!  By assuming the existence of a set of all sets, we can produce all sorts of paradoxes.  The only way to avoid the paradoxes is to conclude that there is no set of all sets.  Here is some more evidence that we shouldn't assume the existence of a set of all sets.
+The above paradox is one way of phrasing a paradox referred to as \textbf{Russell's Paradox}.  Okay, how did we get into this mess in the first place?!  By assuming the existence of a set of all sets, we can produce all sorts of paradoxes.  The only way to avoid the paradoxes is to conclude that there is no set of all sets.  Here is some more evidence that we shouldn't assume the existence of a set of all sets.
 
-\begin{question}
+\begin{problem}
 If $\mathcal{U}$ is the set of all sets, then what is the relationship between $\mathcal{U}$ and $\mathcal{P}(\mathcal{U})$?  What about $\mathcal{P}(\mathcal{P}(\mathcal{U})$?
-\end{question}
+\end{problem}
 
-The upshot is that the collection of all sets is \emph{not} a set!  Here are some additional paradoxes.
+The upshot is that the collection of all sets is \emph{not} a set!  %Let's tinker with a few more paradoxes.
 
 \begin{problem}
 Pick any two of the paradoxes below and for each one explain why it is a paradox.
-\end{problem}
-
 %The following paradoxes are from Dave Richeson.
-\noindent \textbf{Librarian's Paradox.} A librarian is given the unenviable task of creating two new books for the library. Book A contains the names of all books in the library that reference themselves and Book B contains the names of all books in the library that do not reference themselves. But the librarian just created two new books for the library, so their titles must be in either Book A or Book B. Clearly Book A can be listed in Book B, but where should the librarian list Book B?\\
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item \textbf{Librarian's Paradox.} A librarian is given the unenviable task of creating two new books for the library. Book A contains the names of all books in the library that reference themselves and Book B contains the names of all books in the library that do not reference themselves. But the librarian just created two new books for the library, so their titles must be in either Book A or Book B. Clearly Book A can be listed in Book B, but where should the librarian list Book B?
 
-\noindent \textbf{Liar's Paradox.} Consider the statement: this sentence is false. Is it true or false?\\
+\item \textbf{Liar's Paradox.} Consider the statement: this sentence is false. Is it true or false?
 
-\noindent \textbf{Berry Paradox.} Consider the claim: every natural number can be unambiguously described in fourteen words or less. It seems clear that this statement is false, but if that is so, then there is some smallest natural number which cannot be unambiguously described in fourteen words or less. Let's call it $n$. But now $n$ is ``the smallest natural number that cannot be unambiguously described in fourteen words or less.'' This is a complete and unambiguous description of $n$ in fourteen words, contradicting the fact that $n$ was supposed not to have such a description. Therefore, all natural numbers can be unambiguously described in fourteen words or less!\\
+\item \textbf{Berry Paradox.} Consider the claim: every natural number can be unambiguously described in fourteen words or less. It seems clear that this statement is false, but if that is so, then there is some smallest natural number which cannot be unambiguously described in fourteen words or less. Let's call it $n$. But now $n$ is ``the smallest natural number that cannot be unambiguously described in fourteen words or less.'' This is a complete and unambiguous description of $n$ in fourteen words, contradicting the fact that $n$ was supposed not to have such a description. Therefore, all natural numbers can be unambiguously described in fourteen words or less!
 
-\noindent \textbf{The Naming Numbers Paradox.} Consider the claim: every natural number can be unambiguously described using no more than 50 characters (where a character is a--z, 0--9, and a ``space''). For example, we can describe 9 as ``9'' or ``nine'' or ``the square of the second prime number.'' There are only 37 characters, so we can describe at most $37^{50}$ numbers, which is very large, but not infinite. So the statement is false. However, here is a ``proof'' that it is true. Let $S$ be the set of natural numbers that can be unambiguously described using no more than 50 characters. For the sake of contradiction, suppose it is not all of $\mathbb{N}$. Then there is a smallest number $t\in\mathbb{N}-S$. We can describe $t$ as: the smallest natural number not in $S$.  Thus $t$ can be described using no more than 50 characters. So $t\in S$, a contradiction.\\
+\item \textbf{The Naming Numbers Paradox.} Consider the claim: every natural number can be unambiguously described using no more than 50 characters (where a character is a--z, 0--9, and a ``space''). For example, we can describe 9 as ``9'' or ``nine'' or ``the square of the second prime number.'' There are only 37 characters, so we can describe at most $37^{50}$ numbers, which is very large, but not infinite. So the statement is false. However, here is a ``proof'' that it is true. Let $S$ be the set of natural numbers that can be unambiguously described using no more than 50 characters. For the sake of contradiction, suppose it is not all of $\mathbb{N}$. Then there is a smallest number $t\in\mathbb{N}-S$. We can describe $t$ as: the smallest natural number not in $S$.  Thus $t$ can be described using no more than 50 characters. So $t\in S$, a contradiction.
 
-\noindent \textbf{Euathlus and Protagoras.} Euathlus wanted to become a lawyer but could not pay Protagoras. Protagoras agreed to teach him under the condition that if Euathlus won his first case, he would pay Protagoras, otherwise not. Euathlus finished his course of study and did nothing. Protagoras sued for his fee. He argued:\\
+\item \textbf{Euathlus and Protagoras.} Euathlus wanted to become a lawyer but could not pay Protagoras. Protagoras agreed to teach him under the condition that if Euathlus won his first case, he would pay Protagoras, otherwise not. Euathlus finished his course of study and did nothing. Protagoras sued for his fee. He argued:\\
 
 \noindent If Euathlus loses this case, then he must pay (by the judgment of the court).\\
 If Euathlus wins this case, then he must pay (by the terms of the contract).\\
@@ -117,5 +101,7 @@ Therefore Euathlus must pay me.\\
 If I lose this case, I do not have to pay (by the contract).\\
 I must either win or lose the case.\\
 Therefore, I do not have to pay Protagoras.
+\end{enumerate}
+\end{problem}
 
 \end{section}
