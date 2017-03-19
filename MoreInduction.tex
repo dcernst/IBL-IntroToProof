@@ -1,0 +1,137 @@
+\begin{section}{More on Induction}
+
+In the previous section, we discussed proving statements of the form $(\forall n \in \mathbb{N}) P(n)$. Mathematical induction can actually be used to prove a broader family of results; namely, those of the form
+\begin{center}
+$(\forall n \in \mathbb{Z})(n \geq a \implies P(n))$
+\end{center}
+for any value $a \in \mathbb{Z}$. Theorem~\ref{thm:PMI} handles the special case when $a = 1$.  The ladder analogy from the previous section holds for this more general situation, too.
+
+\begin{theorem}[Principle of Mathematical Induction]\label{thm:generalPMI}
+Let $P(a), P(a+1), P(a+2), \ldots$ be a sequence of statements, one for each integer greater than or equal to $a$. Assume that
+\begin{enumerate}[label=\textrm{(\roman*)}]
+\item $P(a)$ is true, and
+\item if $P(k)$ is true, then $P(k+1)$ is true.
+\end{enumerate}
+Then $P(n)$ is true for all integers $n \geq a$.\footnote{\emph{Hint:} Mimic the proof of Theorem~\ref{thm:PMI}, but this time use the set $S=\{k\in \mathbb{N}\mid P(a-k+1) \text{ is true}\}$.}
+\end{theorem}
+
+Theorem~\ref{thm:generalPMI} gives a process for proving statements of the form: ``For all integers $n\geq a$, $P(n)$.'' As before, hypothesis (i) is called the \textbf{base step}, and (ii) is called the \textbf{inductive step}.
+
+\begin{skeleton}[Proof of $(\forall n \in \mathbb{Z})(n \geq a \implies P(n))$ by Induction]
+Here is the general structure for a proof by induction when the base case does not necessarily involve $a=1$.
+
+\begin{center}
+\framebox{
+\begin{minipage}{6in}
+\vspace{.1in}
+\begin{proof}
+We proceed by induction.
+\begin{enumerate}\setlength{\itemsep}{0in}
+\item[(i)] Base step: \emph{[Verify that $P(a)$ is true. This often, but not always, amounts to plugging $n=a$ into two sides of some claimed equation and \underline{verifying} that both sides are actually equal.]}
+
+\item[(ii)] Inductive step:  \emph{[Your goal is to prove ``For all $k\in\mathbb{Z}$, if $P(k)$ is true, then $P(k+1)$ is true.'']} Let $k \ge a$ be an integer and assume that $P(k)$ is true. \emph{[Do something to derive that $P(k+1)$ is true.]} Therefore, $P(k+1)$ is true.
+\end{enumerate}
+Thus, by the PMI, $P(n)$ is true for all integers $n \ge a$.
+\end{proof}
+\end{minipage}
+}
+\end{center}
+\end{skeleton}
+
+\begin{theorem}
+For all integers $n \ge 0$, $4$ divides $9^n - 5$.
+\end{theorem}
+
+\begin{theorem}
+For all integers $n \ge 0$, $4$ divides $6\cdot 7^n - 2 \cdot 3^n$.
+\end{theorem}
+
+\begin{theorem}
+For all integers $n \ge 2$, $2^n > n + 1$.
+\end{theorem}
+
+\begin{theorem}
+For all integers $n \ge 0$, $1 + 2^1 + 2^2 + \cdots + 2^n = 2^{n+1} - 1$.
+\end{theorem}
+
+\begin{theorem}
+Fix a real number $r \neq 1$. For all integers $n \ge 0$,
+$$\displaystyle{1 + r^1 + r^2 + \cdots + r^n = \frac{r^{n+1} - 1}{r-1}}.$$
+\end{theorem}
+
+\begin{theorem}
+For all integers $n \ge 3$, $\displaystyle{2\cdot 3 + 3 \cdot 4 + \cdots + (n-1)\cdot n = \frac{(n-2)(n^2+2n+3)}{3}}$.
+\end{theorem}
+
+\begin{theorem}
+For all integers $n \ge 1$, $\displaystyle{\frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} + \cdots + \frac{1}{n(n+1)} = \frac{n}{n+1}}$.
+\end{theorem}
+
+\begin{theorem}
+For all integers $n \ge 1$, $\displaystyle{\frac{1}{1\cdot 3} + \frac{1}{3\cdot 5} + \frac{1}{5\cdot7} + \cdots + \frac{1}{(2n-1)(2n+1)} = \frac{n}{2n+1}}$.
+\end{theorem}
+
+\begin{theorem}
+For all integers $n \ge 0$, $3^{2n}-1$ is divisible by $8$.
+\end{theorem}
+
+\begin{theorem}
+For all integers $n \ge 2$, $2^n < (n+1)!$.
+\end{theorem}
+
+\begin{theorem}
+For all integers $n \ge 2$, $2\cdot 9^n - 10 \cdot 3^n$ is divisible by $4$.
+\end{theorem}
+
+Now consider an induction problem of a different sort, where you have to begin with some experimentation.
+
+\begin{problem}
+For any $n \in \mathbb{N}$, say that $n$ straight lines are ``safely drawn in the plane'' if no two of them are parallel and no three of them meet in a single point. Let $S(n)$ be the number of regions formed when $n$ straight lines are safely drawn in the plane.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Compute $S(1)$, $S(2)$, $S(3)$, and $S(4)$.
+\item Conjecture a recursive formula for $S(n)$; that is, a formula for $S(n)$ which may involve some of the previous terms $\{S(n-1), S(n-2), \ldots\}$. (If necessary, first compute a few more values of $S(n)$.)
+\item Prove your conjecture.
+\end{enumerate}
+\end{problem}
+
+%\begin{definition}
+%A \textbf{tromino} is an $L$-shaped region formed by three squares glued together, as follows.
+%$$\begin{tikzpicture}[scale=.5]
+%\foreach \x in {0,1,2} {\draw (\x,0) -- (\x,2); \draw (0,\x) -- (2,\x);}
+%\draw[ultra thick, white] (1.02,0) -- (2,0) -- (2,.98);
+%\end{tikzpicture}
+%\hspace{.25in}
+%\begin{tikzpicture}[scale=.5]
+%\foreach \x in {0,1,2} {\draw (\x,0) -- (\x,2); \draw (0,\x) -- (2,\x);}
+%\draw[ultra thick, white] (2,1.02) -- (2,2) -- (1.02,2);
+%\end{tikzpicture}
+%\hspace{.25in}
+%\begin{tikzpicture}[scale=.5]
+%\foreach \x in {0,1,2} {\draw (\x,0) -- (\x,2); \draw (0,\x) -- (2,\x);}
+%\draw[ultra thick, white] (.98,2) -- (0,2) -- (0,1.02);
+%\end{tikzpicture}
+%\hspace{.25in}
+%\begin{tikzpicture}[scale=.5]
+%\foreach \x in {0,1,2} {\draw (\x,0) -- (\x,2); \draw (0,\x) -- (2,\x);}
+%\draw[ultra thick, white] (0,.98) -- (0,0) -- (.98,0);
+%\end{tikzpicture}
+%$$
+%\end{definition}
+%
+%\begin{definition}
+%Given a region $R$ in the plane, a \textbf{tiling} of $R$ by ``tiles'' $\mathcal{T}$ is a way to cover $R$ by elements of $\mathcal{T}$ (allowing repetition) so that
+%\begin{itemize}\setlength{\itemsep}{0in}
+%\item none of the tiles overlap, and
+%\item all of $R$ is covered.
+%\end{itemize}
+%\end{definition}
+
+%\begin{theorem}
+%For any $n \in \mathbb{N}$, let $R_n$ be a $2^n \times 2^n$ grid from which any single square has been removed. It is possible to tile $R_n$ by trominoes.
+%\end{theorem}
+
+%\begin{theorem}
+%For all integers $n \ge 1$, any checkerboard with dimensions $3 \times 2n$ can be tiled by L-shaped trominoes.
+%\end{theorem}
+
+\end{section}

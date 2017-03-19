@@ -30,11 +30,11 @@ Then $S=\mathbb{N}$.
 
 Recall that an axiom is a basic mathematical assumption.  That is, we are assuming that the Axiom of Induction is true, which I'm hoping that you can agree is a pretty reasonable assumption.  We can think of the first hypothesis as saying that we have a first rung of a ladder.  The second hypothesis says that if we have any arbitrary rung of the ladder, then we can always get to the next rung.  Taken together, this says that we can get from the first rung to the second, from the second to the third, and in general, from any $k$th rung to the $(k+1)$st rung.
 
-\begin{theorem}[Principle of Mathematical Induction]
+\begin{theorem}[Principle of Mathematical Induction]\label{thm:PMI}
 Let $P(1), P(2), P(3), \ldots$ be a sequence of statements, one for each natural number.\footnote{Think of $P(n)$ as a predicate, where $P(1)$ is the statement that corresponds to substituting in the value 1 for $n$.} Assume
 \begin{enumerate}[label=\textrm{(\roman*)}]
 \item $P(1)$ is true, and
-\item If $P(k)$ is true, then $P(k+1)$ is true.
+\item if $P(k)$ is true, then $P(k+1)$ is true.
 \end{enumerate}
 Then $P(n)$ is true for all $n\in\mathbb{N}$.\footnote{\emph{Hint:} Let $S=\{k\in \mathbb{N}\mid P(k) \text{ is true}\}$ and use the Axiom of Induction.  The set $S$ is sometimes called the \textbf{truth set}.  Your job is to show that the truth set is all of $\mathbb{N}$.}
 \end{theorem}
