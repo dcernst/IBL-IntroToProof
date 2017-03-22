@@ -6,7 +6,7 @@ $(\forall n \in \mathbb{Z})(n \geq a \implies P(n))$
 \end{center}
 for any value $a \in \mathbb{Z}$. Theorem~\ref{thm:PMI} handles the special case when $a = 1$.  The ladder analogy from the previous section holds for this more general situation, too.
 
-\begin{theorem}[Principle of Mathematical Induction]\label{thm:generalPMI}
+\begin{theorem}[Principle of Mathematical Induction]\label{thm:PMI2}
 Let $P(a), P(a+1), P(a+2), \ldots$ be a sequence of statements, one for each integer greater than or equal to $a$. Assume that
 \begin{enumerate}[label=\textrm{(\roman*)}]
 \item $P(a)$ is true, and
@@ -15,7 +15,7 @@ Let $P(a), P(a+1), P(a+2), \ldots$ be a sequence of statements, one for each int
 Then $P(n)$ is true for all integers $n \geq a$.\footnote{\emph{Hint:} Mimic the proof of Theorem~\ref{thm:PMI}, but this time use the set $S=\{k\in \mathbb{N}\mid P(a-k+1) \text{ is true}\}$.}
 \end{theorem}
 
-Theorem~\ref{thm:generalPMI} gives a process for proving statements of the form: ``For all integers $n\geq a$, $P(n)$.'' As before, hypothesis (i) is called the \textbf{base step}, and (ii) is called the \textbf{inductive step}.
+Theorem~\ref{thm:PMI2} gives a process for proving statements of the form: ``For all integers $n\geq a$, $P(n)$.'' As before, hypothesis (i) is called the \textbf{base step}, and (ii) is called the \textbf{inductive step}.
 
 \begin{skeleton}[Proof of $(\forall n \in \mathbb{Z})(n \geq a \implies P(n))$ by Induction]
 Here is the general structure for a proof by induction when the base case does not necessarily involve $a=1$.
