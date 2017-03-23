@@ -1,7 +1,7 @@
 \begin{section}{Relations}
 
 \begin{definition}
-An \textbf{ordered pair} is an object of the form $(x,y)$. Two ordered pairs $(x,y)$ and $(a,b)$ are \textbf{equal} if $x=a$ and $y=b$. 
+An \textbf{ordered pair} is an object of the form $(x,y)$. Two ordered pairs $(x,y)$ and $(a,b)$ are \textbf{equal} iff $x=a$ and $y=b$. 
 \end{definition}
 
 \begin{definition}
@@ -67,7 +67,7 @@ Let $X$ and $Y$ be sets. A \textbf{relation} from a set $X$ to a set $Y$ is a su
 \end{definition}
 
 \begin{example}
-You may not realize it, but you are familiar with many relations.  For example, on the real numbers, we have the relation $\leq$.  We could say that $(3,\pi)$ is in the relation since $3\leq \pi$.  However, $(1,-1)$ is not in the relation since $1\nleq -1$.  (Order matters!)
+You may not realize it, but you are familiar with many relations.  For example, on the real numbers, we have the relation $\leq$.  We could say that $(3,\pi)$ is in the relation $\leq$ since $3\leq \pi$.  However, $(1,-1)$ is not in the relation since $1\nleq -1$.  (Order matters!)
 \end{example}
 
 \begin{remark}
@@ -78,9 +78,7 @@ Different notations for relations are used in different contexts.  When talking 
 Let $P_f$ denote the set of all people with accounts on Facebook.  Define  $F$ via $xFy$ iff $x$ is friends with $y$.  Then $F$ is a relation on $P_f$.
 \end{example}
 
-\begin{remark}
 We can often represent relations using graphs or digraphs.  Given a finite set $X$ and a relation $\sim$ on $X$, a \textbf{digraph} (short for \emph{directed graph}) is a discrete graph having the members of $X$ as vertices and a directed edge from $x$ to $y$ iff $x\sim y$.
-\end{remark}
 
 \begin{example}
 Figure~\ref{fig:digraph} depicts a digraph that represents a relation $R$ given by
@@ -88,7 +86,7 @@ Figure~\ref{fig:digraph} depicts a digraph that represents a relation $R$ given 
 R=\{(a,b),(a,c),(b,b),(b,c),(c,d),(c,e),(d,d),(d,a),(e,a)\}.
 \]
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \begin{center}
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2cm,
                     semithick]
@@ -140,7 +138,7 @@ Define $\sim$ on $\mathbb{R}$ via $x\sim y$ iff $x\leq y$.  Draw a picture of th
 
 \begin{definition}
 Let $\sim$ be a relation on a set $A$.
-\begin{enumerate}
+\begin{enumerate}[label=\textrm{(\alph*)}]
 \item $\sim$ is \textbf{reflexive} if for all $x\in A$, $x\sim x$ (every element is related to itself).
 \item $\sim$ is \textbf{symmetric} if for all $x,y\in A$, if $x\sim y$, then $y\sim x$.
 \item $\sim$ is \textbf{transitive} if for all $x,y,z\in A$, if $x\sim y$ and $y\sim z$, then $x\sim z$.
@@ -148,7 +146,7 @@ Let $\sim$ be a relation on a set $A$.
 \end{definition}
 
 \begin{example}\
-\begin{enumerate}
+\begin{enumerate}[label=\textrm{(\alph*)}]
 \item $\leq$ on $\mathbb{R}$ is reflexive and transitive, but not symmetric.
 $<$ on $\mathbb{R}$ is transitive, but not symmetric and not reflexive.
 \item If $S$ is a set, then $\subseteq$ on $\mathcal{P}(S)$ is reflexive and transitive, but not symmetric.
@@ -168,7 +166,7 @@ Let $P$ be the set of people at a party and define $N$ via $(x,y)\in N$ iff $x$ 
 \begin{exercise}
 Determine whether each of the following relations is reflexive, symmetric, or transitive.
 
-\begin{enumerate}
+\begin{enumerate}[label=\textrm{(\alph*)}]
 \item Let $P_f$ denote the set of all people with accounts on Facebook.  Define  $F$ via $xFy$ iff $x$ is friends with $y$. 
 \item Let $P$ be the set of all people and define $H$ via $xHy$ iff $x$ and $y$ have the same height.
 \item Let $P$ be the set of all people and define $T$ via $xTy$ iff $x$ is taller than $y$.

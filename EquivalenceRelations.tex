@@ -1,17 +1,15 @@
 \begin{section}{Equivalence Relations}
 
-\begin{remark}
-So that we have them handy, let's recall the following definitions. Let $\sim$ be a relation on a set $A$.  Then
-\begin{enumerate}
+Let $\sim$ be a relation on a set $A$.  Recall the following definitions:
+\begin{enumerate}[label=\textrm{(\alph*)}]
 \item $\sim$ is \textbf{reflexive} if for all $x\in A$, $x\sim x$ (every element is related to itself).
 \item $\sim$ is \textbf{symmetric} if for all $x,y\in A$, if $x\sim y$, then $y\sim x$.
 \item $\sim$ is \textbf{transitive} if for all $x,y,z\in A$, if $x\sim y$ and $y\sim z$, then $x\sim z$.
 \end{enumerate}
-As we've seen in the previous section of notes, these conditions are mutually exclusive.  That is, a relation may have some combination of these properties, but not necessarily all of them.  However, we have a special name for when a relation does satisfy all three.
-\end{remark}
+As we've seen in the previous section of notes, these conditions are independent.  That is, a relation may have some combination of these properties, but not necessarily all of them.  However, we have a special name for when a relation does satisfy all three.
 
 \begin{definition}
-Let $\sim$ be a relation on a set $A$.  Then $\sim$ is called an \textbf{equivalence relation} if $\sim$ is reflexive, symmetric, and transitive.
+Let $\sim$ be a relation on a set $A$.  Then $\sim$ is called an \textbf{equivalence relation} iff $\sim$ is reflexive, symmetric, and transitive.
 \end{definition}
 
 \begin{exercise}
@@ -33,7 +31,7 @@ Justify that this is an equivalence relation.
 \begin{problem}
 Determine which of the following are equivalence relations.  Some of these occurred in the last section of notes and you are welcome to use your answers from those problems.
 
-\begin{enumerate}\label{exer:lots of them}
+\begin{enumerate}[label=\textrm{(\alph*)}]\label{exer:lots of them}
 \item\label{exer:facebook} Let $P_f$ denote the set of all people with accounts on Facebook.  Define  $F$ via $xFy$ iff $x$ is friends with $y$. 
 \item Let $P$ be the set of all people and define $H$ via $xHy$ iff $x$ and $y$ have the same height.
 \item Let $P$ be the set of all people and define $T$ via $xTy$ iff $x$ is taller than $y$.
