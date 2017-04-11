@@ -63,7 +63,7 @@ on the set $A=\{1,2,3,4,5,6\}$.  Find the partition determined by $\Omega_{\sim}
 It turns out that we can reverse the situation, as well.  That is, given a partition, we can form an equivalence relation.  Before proving this, we need a definition.
 
 \begin{definition}
-Let $A$ be a set and $\Omega$ any collection of subsets from $\mathcal{P}(A)$ (not necessarily a partition).  If $a,b\in A$, we will define $a$ to be $\Omega$-related to $b$ if there exists an $R\in \Omega$ that contains both $a$ and $b$.  This relation is denoted by $\sim_{\Omega}$ and is called the \textbf{relation on $A$ associated to $\Omega$}.
+Let $A$ be a set and $\Omega$ any collection of subsets of $A$ (not necessarily a partition).  If $a,b\in A$, we will define $a$ to be $\Omega$-related to $b$ if there exists an $R\in \Omega$ that contains both $a$ and $b$.  This relation is denoted by $\sim_{\Omega}$ and is called the \textbf{relation on $A$ associated to $\Omega$}.
 \end{definition}
 
 This definition may look more awkward than the actual underlying concept.  The idea is that if two elements are in the same subset, then they are related.  For example, when my kids pick up all their toys and put them in the appropriate toy bins, we say that two toys are related if they are in the same bin.
@@ -83,7 +83,7 @@ Let $A$ and $\Omega$ be as in Example~\ref{ex:a partition}.  List the elements o
 \end{exercise}
 
 \begin{theorem}
-Let $A$ be a set and let $\Omega$ be a collection of subsets from $\mathcal{P}(A)$ (not necessarily a partition).  Then $\sim_{\Omega}$ is symmetric.
+Let $A$ be a set and let $\Omega$ be a collection of subsets of $A$ (not necessarily a partition).  Then $\sim_{\Omega}$ is symmetric.
 \end{theorem}
 
 \begin{exercise}
@@ -91,7 +91,7 @@ Give an example of a set $A$ and a collection $\Omega$ from $\mathcal{P}(A)$ suc
 \end{exercise}
 
 \begin{theorem}
-Let $A$ be a set and let $\Omega$ be a collection of subsets from $\mathcal{P}(A)$.  If
+Let $A$ be a set and let $\Omega$ be a collection of subsets of $A$ (not necessarily a partition).  If
 \[
 \bigcup_{R\in\Omega}R=A,
 \]
@@ -99,7 +99,7 @@ then $\sim_{\Omega}$ is reflexive.
 \end{theorem}
 
 \begin{theorem}
-Let $A$ be a set and let $\Omega$ be a collection of subsets from $\mathcal{P}(A)$.  If the elements of $\Omega$ are pairwise disjoint, then $\sim_{\Omega}$ is transitive.
+Let $A$ be a set and let $\Omega$ be a collection of subsets of $A$ (not necessarily a partition).  If the elements of $\Omega$ are pairwise disjoint, then $\sim_{\Omega}$ is transitive.
 \end{theorem}
 
 \begin{corollary}
