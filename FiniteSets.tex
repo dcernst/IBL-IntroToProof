@@ -8,33 +8,33 @@ For each $n\in \mathbb{N}$, define $[n]=\{1,2,\ldots,n\}$.
 
 For example, $[5]=\{1,2,3,4,5\}$.  Notice that our notation looks just like that for the set of relatives given a relation on some set (see Definition~\ref{def:relatives}), which is an equivalence class if the relation happens to be an equivalence relation.  However, despite the similar notation, these concepts are unrelated. We will have to rely on context to keep them straight.
 
-The next definition should coincide with your intuition about what it means for a set to be finite versus infinite.
+The next definition should coincide with your intuition about what it means for a set to be finite.
 
 \begin{definition}
-A set $A$ is \textbf{finite} iff $A=\emptyset$ or $\card(A)=\card([n])$ for some $n\in\mathbb{N}$. If $A=\emptyset$, then we say that $A$ has \textbf{cardinality} 0 and if $\card(A)=\card([n])$, then we say that $A$ has \textbf{cardinality} $n$. A set $A$ is \textbf{infinite} iff $A$ is not finite.
+A set $A$ is \textbf{finite} iff $A=\emptyset$ or $\card(A)=\card([n])$ for some $n\in\mathbb{N}$. If $A=\emptyset$, then we say that $A$ has \textbf{cardinality} 0 and if $\card(A)=\card([n])$, then we say that $A$ has \textbf{cardinality} $n$.
 \end{definition}
 
 Let's prove a few results about finite sets.
 
-\begin{theorem}
+\begin{theorem}\label{thm:finiteSetsSameCardinality}
 If $A$ is finite and $\card(A)=\card(B)$, then $B$ is finite.\footnote{Don't forget to consider the case when $A=\emptyset$.}
-\end{theorem}
-
-\begin{theorem}\label{thm:subsetsFiniteSets}
-For every $n\in\mathbb{N}$, every subset of $[n]$ is finite.\footnote{\emph{Hint:} Use induction.}
 \end{theorem}
 
 \begin{theorem}\label{thm:increaseCardinality}
 If $A$ has cardinality $n\in\mathbb{N}\cup\{0\}$ and $x\notin A$, then $A\cup\{x\}$ is finite and has cardinality $n+1$.
 \end{theorem}
 
-The previous theorem shows that adding a single element to a finite set increases the cardinality by 1. As you would expect, removing one element from a finite set decreasing the cardinality by 1.
+\begin{theorem}\label{thm:subsetsFiniteSets}
+For every $n\in\mathbb{N}$, every subset of $[n]$ is finite.\footnote{\emph{Hint:} Use induction.}
+\end{theorem}
+
+Theorem~\ref{thm:increaseCardinality} shows that adding a single element to a finite set increases the cardinality by 1. As you would expect, removing one element from a finite set decreasing the cardinality by 1.
 
 \begin{theorem}
 If $A$ has cardinality $n\in\mathbb{N}$, then for all $x\in A$, $A\setminus \{x\}$ is finite and has cardinality $n-1$. 
 \end{theorem}
 
-The next result will not come as a surprise. The proof is not complicated, but is not immediate either. It is a consequence of Theorems~\ref{thm:subsetsFiniteSets} and \ref{thm:increaseCardinality}.
+The next result will not come as a surprise. The proof is not complicated, but is not immediate either. It is a consequence of Theorems~\ref{thm:increaseCardinality} and \ref{thm:subsetsFiniteSets}.
 
 \begin{theorem}
 Every subset of a finite set is finite.
@@ -52,7 +52,7 @@ If $n,k\in\mathbb{N}$ and $f:[n]\to [k]$ with $n>k$, then $f$ is not one-to-one.
 
 The last theorem of this section tells us that the cardinality of a proper subset of a finite set is never the same as the cardinality of the original set.  It turns out that this theorem does not hold for infinite sets. 
 
-\begin{theorem}
+\begin{theorem}\label{thm:cardinalityProperSubsetsFinite}
 If $A$ is a finite set, then $\card(B)<\card(A)$ for all proper subsets $B$ of $A$.
 \end{theorem}
 
