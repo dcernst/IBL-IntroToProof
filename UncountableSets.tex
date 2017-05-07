@@ -7,8 +7,6 @@ Our first task is to prove that the open interval $(0,1)$ is uncountable.  By Ex
 Before we get started, recall that every number in $(0,1)$ can be written in decimal form. However, there may be more than one way to write a given number in decimal form.  For example, $0.2$ equals $0.1\overline{99}$.  A number $x=0.a_1a_2a_3\ldots$ is said to be in \textbf{standard form} iff there is no $k$ such that for all $i>k$, $a_i=9$. That is, a decimal expansion is in standard form iff the expansion doesn't end with a repeating sequence of 9's. For example, $0.2$ is in standard form while $0.1\overline{99}$ is not, even though both represent the same number. It turns out that every real number can be expressed uniquely in standard form.
 
 \begin{problem}
-
-
 For sake of a contradiction, assume the interval $(0,1)$ is countable.  Then there exists a bijection $f:\mathbb{N}\to (0,1)$. For each $n\in\mathbb{N}$, its image under $f$ is some number in $(0,1)$.  Let $f(n):=0.a_{1n}a_{2n}a_{3n}\ldots$, where $a_{1n}$ is the first digit in the decimal form for the image of $n$, $a_{2n}$ is the second digit, and so on. If $f(n)$ terminates after $k$ digits, then our convention will be to continue the decimal form with 0's. Now, define $b=0.b_1b_2b_3\ldots$, where
 \[
 b_i=\begin{cases}
