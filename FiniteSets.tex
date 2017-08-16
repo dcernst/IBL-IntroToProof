@@ -30,14 +30,14 @@ For every $n\in\mathbb{N}$, every subset of $[n]$ is finite.\footnote{\emph{Hint
 
 Theorem~\ref{thm:increaseCardinality} shows that adding a single element to a finite set increases the cardinality by 1. As you would expect, removing one element from a finite set decreases the cardinality by 1.
 
-\begin{theorem}
+\begin{theorem}\label{thm:decreaseCardinality}
 If $A$ has cardinality $n\in\mathbb{N}$, then for all $x\in A$, $A\setminus \{x\}$ is finite and has cardinality $n-1$. 
 \end{theorem}
 
-The next result will not come as a surprise. The proof is not complicated, but is not immediate either. It is a consequence of Theorems~\ref{thm:increaseCardinality} and \ref{thm:subsetsFiniteSets}.
+The next result tells us that the cardinality of a proper subset of a finite set is never the same as the cardinality of the original set.  It turns out that this theorem does not hold for infinite sets. 
 
 \begin{theorem}
-Every subset of a finite set is finite.
+Every subset of a finite set is finite. In particular, if $A$ is a finite set, then $\card(B)<\card(A)$ for all proper subsets $B$ of $A$.
 \end{theorem}
 
 \begin{theorem}
@@ -48,12 +48,6 @@ The next theorem, called the Pigeonhole Principle, is surprisingly useful. It pu
 
 \begin{theorem}[Pigeonhole Principle]
 If $n,k\in\mathbb{N}$ and $f:[n]\to [k]$ with $n>k$, then $f$ is not one-to-one.\footnote{\emph{Hint:} Induct on the number of pigeons. The base case is $n=2$.}
-\end{theorem}
-
-The last theorem of this section tells us that the cardinality of a proper subset of a finite set is never the same as the cardinality of the original set.  It turns out that this theorem does not hold for infinite sets. 
-
-\begin{theorem}\label{thm:cardinalityProperSubsetsFinite}
-If $A$ is a finite set, then $\card(B)<\card(A)$ for all proper subsets $B$ of $A$.
 \end{theorem}
 
 \end{section}
