@@ -26,18 +26,26 @@ Let $n$ be a natural number greater than 1.  Then $n$ can be expressed as a prod
 \[
 n=p_1 p_2 \cdots p_k,
 \]
-where each of $p_1, p_2, \ldots, p_k$ is a prime number (not necessarily distinct).\footnote{\emph{Hint:} Use a proof by contradiction.  Let $n$ be the smallest natural number for which the theorem fails.  Then $n$ cannot be prime since this would satisfy the theorem.  So, it must be the case that $n$ has a divisor other than 1 and itself.  This implies that there exists natural numbers $a$ and $b$ greater than 1 such that $n=ab$.  Since $n$ was our smallest counterexample, what can you conclude about both $a$ and $b$?  Use this information to derive a counterexample for $n$.}
+where each of $p_1, p_2, \ldots, p_k$ is a prime number (not necessarily distinct).\footnote{\emph{Hint:} Use a proof by contradiction.  Let $S$ be the set of natural numbers for which the theorem fails.  For sake of a contradiction, assume $S\neq \emptyset$.  By the Well-Ordering Principle (Theorem~\ref{thm:WOP}), $S$ contains a least element, say $n$. Then $n$ cannot be prime since this would satisfy the theorem.  So, it must be the case that $n$ has a divisor other than 1 and itself.  This implies that there exists natural numbers $a$ and $b$ greater than 1 such that $n=ab$.  Since $n$ was our smallest counterexample, what can you conclude about both $a$ and $b$?  Use this information to derive a counterexample for $n$.}
 \end{lemma}
 
-%Lemma~\ref{lem:prodprimes} states that we can write every natural number greater than 1 as a product of primes, but it does not say that the primes and the number of times each prime appears are unique.  To prove uniqueness, we will need the following result, known as the Division Algorithm. We have the necessary tools to prove this theorem, but we will skip proving it for now. If you are interested in its proof, I encourage you to give it a try yourself or to look up the proof in a textbook or an online resource.  It's worth pointing out that we are stating the Division Algorithm for natural numbers, but the theorem holds more generally for integers, but we must replace $0\leq r<n$ with $0\leq r<|n|$.
+Lemma~\ref{lem:prodprimes} states that we can write every natural number greater than 1 as a product of primes, but it does not say that the primes and the number of times each prime appears are unique.  To prove uniqueness, we will need a special case of Bezout's Lemma (Lemma~\ref{lem:Bezout}), the proof of which relies on the following result, known as the Division Algorithm. One can prove the Division Algorithm using the Well-Ordering Principle (Theorem~\ref{thm:WOP}). We have the necessary tools to prove this theorem, but we will skip proving it for now. If you are interested in the proof of the Division Algorithm, I encourage you to give it a try yourself or to look up the proof in a textbook or an online resource.  It's worth pointing out that we are stating the Division Algorithm for natural numbers, but the theorem holds more generally for integers, but we must replace $0\leq r<n$ with $0\leq r<|n|$.
 
-%\begin{theorem}[Division Algorithm]
-%If $m,n\in\mathbb{N}$, then there exists unique $q,r\in\mathbb{N}$ such that $m=nq+r$ with $0\leq r<n$.
-%\end{theorem}
-%
-%The numbers $q$ and $r$ from the Division Algorithm are referred to as \textbf{quotient} and \textbf{remainder}, respectively.  Now, see if you can prove the next result, known as Bezout's Lemma.
+\begin{theorem}[Division Algorithm]\label{thm:DivisonAlgorthm}
+If $m,n\in\mathbb{N}$, then there exists unique $q,r\in\mathbb{N}$ such that $m=nq+r$ with $0\leq r<n$.
+\end{theorem}
 
-Lemma~\ref{lem:prodprimes} states that we can write every natural number greater than 1 as a product of primes, but it does not say that the primes and the number of times each prime appears are unique.  To prove uniqueness, we will need Lemma~\ref{lem:Bezout}, which is a special case of a theorem known as Bezout's Lemma. It's useful to have some additional terminology.
+The numbers $q$ and $r$ from the Division Algorithm are referred to as \textbf{quotient} and \textbf{remainder}, respectively.
+
+\begin{exercise}
+Suppose $m=27$ and $n=5$. Find the quotient and remainder that are guaranteed to exists by the Division Algorithm.  That is, find the unique $q,r\in\mathbb{N}$ such that $0\leq r<n$ and $m=nq+r$.
+\end{exercise}
+
+\begin{lemma}
+If $p,b\in\mathbb{Z}$ such that $p$ is prime and $b$ not a multiple of $p$, then there exists $x,y\in\mathbb{Z}$ such that $px+by=d$ where $d$ is less than both $p$ and $b$.\footnote{IS THIS NEEDED?}
+\end{lemma}
+
+It's useful to have some additional terminology.
 
 \begin{definition}
 Let $m,n\in\mathbb{Z}$ such that at least one of $m$ or $n$ is nonzero.  The \textbf{greatest common divisor} (gcd) of $m$ and $n$, denoted $\gcd(m,n)$, is the largest positive integer that is a factor of both $m$ and $n$. If $\gcd(m,n)=1$, we say that $m$ and $n$ are \textbf{relatively prime}.
@@ -51,15 +59,15 @@ Find $\gcd(54,72)$.
 Provide an example of two natural numbers that are relatively prime.
 \end{exercise}
 
-The next result is a special case of a theorem known as B\'ezout's Lemma (or sometimes B\'ezout's Identity).  We have provided the proof. 
+The next result is a special case of a theorem known as B\'ezout's Lemma (or sometimes B\'ezout's Identity). Ultimately, we will need this theorem to prove Euclid's Lemma (Theorem~\ref{thm:Euclid}), which we then use to prove uniqueness for the Fundamental Theorem of Arithmetic (Theorem~\ref{thm:FTA}).
 
 \begin{lemma}[Special Case of B\'ezout's Lemma]\label{lem:Bezout}
-If $m,n\in\mathbb{Z}$ such that $m$ and $n$ are relatively prime, then there exists $s,t\in\mathbb{Z}$ such that $ns+mt=1$.
+If $m,n\in\mathbb{Z}$ such that $m$ and $n$ are relatively prime, then there exists $s,t\in\mathbb{Z}$ such that $ns+mt=1$.\footnote{IN PROGRESS! \emph{Hint:} Consider the set
+\[
+S:=\{ns+mt\geq 0\mid s,t\in \mathbb{Z}\}.
+\]
+It is clear that there exist choices of $s$ and $t$ that yield positive values of $ns+mt$.  That is, there must exist natural numbers in $S$. By the Well-Ordering Principle (Theorem~\ref{thm:WOP}), $S$ contains a least element, say $d$. Our goal is to show that $d=1$. For sake of a contradiction, assume $d>1$. Since $d<p$ and $p$ is prime, $d$ does not divide $p$. By the Division Algorithm, $p=dq+r$ for some $1\leq r<d$. Rearranging gives $r = p-dq = p-(px+by) = p(1-x)+b(-y)$. Why does this contradict the minimality of $d$?}
 \end{lemma}
-
-\begin{proof}
-Coming soon.
-\end{proof}
 
 \begin{exercise}
 Consider the natural numbers 2 and 7, which happen to be relatively prime.  Find integers $s$ and $t$ guaranteed to exist according to Lemma~\ref{lem:Bezout}.  That is, find $s,t\in\mathbb{Z}$ such that $2s+7t=1$.

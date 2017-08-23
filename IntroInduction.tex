@@ -19,7 +19,7 @@ Let's take a look at potential proofs.
 
 Are these actual proofs?  \textbf{NO!}  In fact, the second claim isn't even true.  If $n=41$, then $n^{2}+n+41=41^{2}+41+41=41(41+1+1)$, which is not prime since it has 41 as a factor.  It turns out that the first claim is true, but what we wrote cannot be a proof since the same type of reasoning when applied to the second claim seems to prove something that isn't actually true.  We need a rigorous way of capturing ``and so on'' and a way to verify whether it really is ``and so on.''
 
-\begin{axiom}[Axiom of Induction]
+\begin{axiom}[Axiom of Induction]\label{axiom:induction}
 Let $S\subseteq \mathbb{N}$ such that both
 \begin{enumerate}[label=\textrm{(\roman*)}]
 \item $1\in S$, and
@@ -98,7 +98,5 @@ Another chessboard is $2^n$ squares wide and $2^n$ squares long.  However, one o
 \caption{One possible covering for the case involving $n=2$ for Problem~\ref{prob:L-shapes}.}
 \label{fig:L-shapes}
 \end{figure}
-
-
 
 \end{section}
