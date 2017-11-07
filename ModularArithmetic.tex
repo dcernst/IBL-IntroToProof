@@ -29,7 +29,7 @@ For each  $m\in \mathbb{N}$,  define a relation on $\mathbb{Z}$ via $a\equiv_m b
 \end{definition}
 
 \begin{theorem}
-For  $m\in \mathbb{N}$, the relation $\equiv_m$ is an equivalence relation on $\mathbb{Z}$.%\footnote{Compare with part~\ref{exer:mod 5} of Exercise~\ref{exer:lots of them}}
+For  $m\in \mathbb{N}$, the relation $\equiv_m$ is an equivalence relation on $\mathbb{Z}$.
 \end{theorem}
 
 Since we know that $\equiv_m$ is an equivalence relation, we introduce some more notation.
@@ -51,10 +51,6 @@ For  $m\in \mathbb{N}$ and $a,b\in \mathbb{Z}$, $[a]_m = [b]_m$ iff $(a-b)$ is d
 \begin{theorem}\label{thm.divisibleiffzeromod}
 For  $m\in \mathbb{N}$ and $a\in \mathbb{Z}$, $[a]_m = [0]_m$ iff $a$ is divisible by $m$.
 \end{theorem}
-
-%\begin{theorem}
-%For  $m\in \mathbb{N}$ and $a\in \mathbb{Z}$, $[a]_m = \{n \in \mathbb{Z}  \mid n = mk + a \text{ for some } k \in \mathbb{Z}\}.$
-%\end{theorem}
 
 \begin{exercise}
 Find $[0]_3$, $[1]_3$, $[2]_3$, $[4]_3$, and $[-2]_3$. How many elements are in $\mathbb{Z}/3\mathbb{Z}$?
@@ -117,10 +113,6 @@ For each of the following, find a number $a$ with $0\le a \le 6$ such that the g
 \end{enumerate}
 \end{exercise}
 
-%\begin{exercise}
-%Explain why $[10^k]_3 = [1]_3$ for all $k\in \mathbb{N}$. Use this to explain why $[4851]_3 = [4+8+5+1]_3$.\footnote{Note that $4851 = 4\cdot 10^3 + 8\cdot 10^2 +  5\cdot 10 + 1$.}
-%\end{exercise}
-
 \begin{theorem}
 Let $n\in \mathbb{N}$, and let $a_k, a_{k-1}, \ldots, a_1, a_0$ be the digits of $n$, i.e. $n=a_k10^k + a_{k-1}10^{k-1} + \cdots + a_110 + a_0$. Then $[n]_3 =  [a_k + a_{k-1} + \cdots + a_1 + a_0]_3$.
 \end{theorem}
@@ -129,28 +121,8 @@ Let $n\in \mathbb{N}$, and let $a_k, a_{k-1}, \ldots, a_1, a_0$ be the digits of
 An integer is divisible by $3$ iff the sum of its digits is divisible by $3$.\footnote{Consider using Theorem~\ref{thm.divisibleiffzeromod}.}
 \end{theorem}
 
-
 \begin{exercise}
 Using modular arithmetic, prove that for all integers $n \ge 0$, $3^{2n}-1$ is divisible by $8$.\footnote{By Theorem~\ref{thm.divisibleiffzeromod}, you just need to show that $[3^{2n}-1]_8 = [0]_8$.} Did you find this easier than, harder than, or the same as using induction?
 \end{exercise}
-
-%\begin{example}
-%Have you ever noticed that a number is divisible by $3$ if and only if the sum of its digits is divisible by $3$? For example, you can quickly check that $4851$ is divisible by $3$ since $4+8+5+1 = 18$ is divisible by $3$. Why? Well, first note that (by Theorem~\ref{thm.divisibleiffzeromod})  $4851$ is divisible by $3$ iff $[4851]_3 = 0$ . Now, $4851 = 4\cdot 10^3 + 8\cdot 10^2 +  5\cdot 10 + 1$, so 
-%\begin{align*} 
-%[4851]_3 &= [4\cdot 10^3 + 8\cdot 10^2 +  5\cdot 10 + 1]_3\\
-%& =  [4]_3\cdot [10^3]_3 +  [8]_3\cdot [10^2]_3 +  [5]_3\cdot [10]_3 + [1]_3\\
-%& = [4]_3\cdot ([10]_3)^3 +[8]_3\cdot ([10]_3)^2 +  [5]_3\cdot [10]_3 + [1]_3\\
-%& = [4]_3\cdot ([1]_3)^3 + [8]_3\cdot ([1]_3)^2 +  [5]_3\cdot [1]_3 + [1]_3\\
-%& = [4]_3\cdot [1]_3 + [8]_3\cdot [1]_3 +  [5]_3\cdot [1]_3 + [1]_3\\
-%& = [4]_3 + [8]_3 +  [5]_3 + [1]_3\\
-%& = [4 + 8 +  5 + 1]_3.
-%\end{align*}
-%Thus, $4851$ is divisible by $3$ iff $[4851]_3 = 0$ iff $[4 + 8 +  3 + 1]_3 = 0$ iff $(4 + 8 +  5 + 1)$ is divisible by $3$. (Note that this all rests on the fact that $[10]_3 = [1]_3$.)
-%\end{example}
-
-
-
-
-
 
 \end{section}
