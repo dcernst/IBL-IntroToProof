@@ -19,6 +19,4 @@ Under the following conditions:
 When attributing this work, please include Stan and Matt, as well as me.
 
 ## Comments
-You can find the most up-to-date version of these notes on [Github](https://github.com/dcernst/IBL-IntroToProof).  I would be thrilled if you used these notes and improved them.  If you make any modifications, you can either make a pull request on Github or submit the improvements to me via email.
-
-[![Join the chat at https://gitter.im/dcernst/IBL-IntroToProof](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dcernst/IBL-IntroToProof?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+You can find the most up-to-date version of these notes on [GitHub](https://github.com/dcernst/IBL-IntroToProof).  I would be thrilled if you used these notes and improved them.  If you make any modifications, you can either make a pull request on GitHub or submit the improvements to me via email.

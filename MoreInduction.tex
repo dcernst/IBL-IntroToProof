@@ -12,7 +12,7 @@ Let $P(a), P(a+1), P(a+2), \ldots$ be a sequence of statements, one for each int
 \item $P(a)$ is true, and
 \item if $P(k)$ is true, then $P(k+1)$ is true.
 \end{enumerate}
-Then $P(n)$ is true for all integers $n \geq a$.\footnote{\emph{Hint:} Mimic the proof of Theorem~\ref{thm:PMI}, but this time use the set $S=\{k\in \mathbb{N}\mid P(a-k+1) \text{ is true}\}$.}
+Then $P(n)$ is true for all integers $n \geq a$.\footnote{\emph{Hint:} Mimic the proof of Theorem~\ref{thm:PMI}, but this time use the set $S=\{k\in \mathbb{N}\mid P(a+k-1) \text{ is true}\}$.}
 \end{theorem}
 
 Theorem~\ref{thm:PMI2} gives a process for proving statements of the form: ``For all integers $n\geq a$, $P(n)$.'' As before, hypothesis (i) is called the \textbf{base step}, and (ii) is called the \textbf{inductive step}.
