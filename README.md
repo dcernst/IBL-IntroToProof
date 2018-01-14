@@ -3,7 +3,10 @@
 <!-- [![DOI](https://zenodo.org/badge/5110/dcernst/IBL-IntroToProof.svg)](https://zenodo.org/badge/latestdoi/5110/dcernst/IBL-IntroToProof) -->
 
 ## Overview
-These notes are an IBL task sequence for an introduction to proof course. The majority of the material was written by me ([Dana C. Ernst](http://danaernst.com)), but several others have contributed content.  Below is a partial list of people (alphabetical by last name) that I need to thank for supplying content, advice, and feedback.
+These notes are an IBL task sequence for an introduction to proof course. I would be thrilled if you used these notes and improved them.  If you make any modifications, you can either make a pull request on GitHub or submit the improvements to me via email.
+
+The majority of the material was written by me ([Dana C. Ernst](http://danaernst.com)), but several others have contributed content.  Below is a partial list of people (alphabetical by last name) that I need to thank for supplying content, advice, and feedback.
+
   - [Paul Ellis](http://www.paulellis.org) (Manhattanville College). Paul has provided lots of useful feedback and several suggestions for improvements.
   - [Jason Grout](http://jasongrout.org) (Bloomberg, L.P.).  I'm extremely grateful to Jason for feedback on early versions of this material, as well as helping me with a variety of technical aspects of writing these notes.
   - [Anders Hendrickson](http://home.snc.edu/andershendrickson/) (St. Norbert College). Anders is the original author of the content in Appendix A: Elements of Style for Proofs. The current version in Appendix A is a result of modifications made by myself with some suggestions from Dave Richeson.
@@ -27,5 +30,14 @@ Under the following conditions:
 
 When attributing this work, please include the individuals listed above, as well as me.
 
-## Comments
-You can find the most up-to-date version of these notes on [GitHub](https://github.com/dcernst/IBL-IntroToProof).  I would be thrilled if you used these notes and improved them.  If you make any modifications, you can either make a pull request on GitHub or submit the improvements to me via email.
+## Contributing
+
+I would love to see people contributing to this project. In particular, I'm looking for folks to contribute to the following items:
+
+  1. A section on partially order sets (see [Issue 60](https://github.com/dcernst/IBL-IntroToProof/issues/60))
+  2. Intersperse more historical tidbits (see [Issue 49](https://github.com/dcernst/IBL-IntroToProof/issues/49))
+  3. Add some discussion about Axiom of Choice (see [Issue 50](https://github.com/dcernst/IBL-IntroToProof/issues/50))
+  4. Add section on Schroder-Bernstein (see [Issue 51](https://github.com/dcernst/IBL-IntroToProof/issues/51))
+  5. Add section/discussion about continuum hypothesis (see [Issue 52](https://github.com/dcernst/IBL-IntroToProof/issues/52))
+
+Check out the other [issues](https://github.com/dcernst/IBL-IntroToProof/issues/) for ways to contribute.
