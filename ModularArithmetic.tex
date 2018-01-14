@@ -1,4 +1,4 @@
-\begin{section}{Modular Arithmetic}
+\begin{section}{Modular Arithmetic}\label{sec:ModularArithmetic}
 In this section, we look at a particular family of equivalence relations on the integers and explore the way in which arithmetic interacts with them.
 
 \begin{definition}
@@ -33,7 +33,7 @@ For  $m\in \mathbb{N}$, the relation $\equiv_m$ is an equivalence relation on $\
 Since we know that $\equiv_m$ is an equivalence relation, we introduce some more notation.
 
 \begin{definition}\label{def:modulo}
-For  $m\in \mathbb{N}$, let $[a]_m$ denote the equivalence class of $a$ with respect to $\equiv_m$ (see Definitions~\ref{def:relatives} and \ref{def:equivalenceclass}. ). The class $[a]_m$ is called the \textbf{class of $a$ modulo $m$}. The set of all equivalence classes determined by  $\equiv_m$ is denoted $\mathbb{Z}/m\mathbb{Z}$.
+For  $m\in \mathbb{N}$, let $[a]_m$ denote the equivalence class of $a$ with respect to $\equiv_m$ (see Definitions~\ref{def:relatives} and \ref{def:equivalence class}). The class $[a]_m$ is called the \textbf{class of $a$ modulo $m$}. The set of all equivalence classes determined by  $\equiv_m$ is denoted $\mathbb{Z}/m\mathbb{Z}$.
 \end{definition}
 
 \begin{example}\label{exam:twomodseven}
@@ -59,7 +59,7 @@ For  $m\in \mathbb{N}$ and $a\in \mathbb{Z}$, $[a]_m = [0]_m$ iff $a$ is divisib
 
 \begin{theorem}
 Let $m\in \mathbb{N}$, and let $a_1,a_2,b_1,b_2 \in \mathbb{Z}$. If $[a_1]_m = [a_2]_m$ and $[b_1]_m = [b_2]_m$, then 
-\begin{enumerate}
+\begin{enumerate}[label=\textrm{(\alph*)}]
 \item $[a_1+b_1]_m = [a_2+b_2]_m,$\footnote{Consider using Theorem~\ref{thm.congclassesequal}.} and
 \item $[a_1\cdot b_1]_m = [a_2\cdot b_2]_m$.\footnote{Hint: note that $a_1b_1-a_2b_2 = a_1b_1 -a_2b_1 + a_2b_1-a_2b_2$.}
 \end{enumerate}
@@ -101,19 +101,19 @@ Notice that $2x = 1$ has no solution in $\mathbb{Z}$. Show that  $[2]_7[x]_7 = [
 
 \begin{theorem}\label{thm.modularsumsproducts}
 Let $m\in \mathbb{N}$.  For all $k\in \mathbb{N}$, if $[a_1]_m,[a_2]_m,\ldots, [a_k]_m \in \mathbb{Z}/m\mathbb{Z}$, then 
-\begin{enumerate}
+\begin{enumerate}[label=\textrm{(\alph*)}]
 \item $[a_1]_m+[a_2]_m+\cdots+ [a_k]_m = [a_1 + a_2 +\cdots+ a_k]_m$, and
 \item $[a_1]_m [a_2]_m \cdots  [a_k]_m = [a_1 a_2 \cdots a_k]_m$.
 \end{enumerate}
 \end{theorem}
 
 \begin{remark}\label{rmk.modularpower}
-Part two of Theorem~\ref{thm.modularsumsproducts} implies that $([a]_m)^k = [a^k]_m$.
+Part~(b) of Theorem~\ref{thm.modularsumsproducts} implies that $([a]_m)^k = [a^k]_m$.
 \end{remark}
 
 \begin{exercise}
 For each of the following, find a number $a$ with $0\le a \le 6$ such that the given quantity is equal to $[a]_7$. The first one is done as an example.
-\begin{enumerate}
+\begin{enumerate}[label=\textrm{(\alph*)}]
 \item $[8^{179}]_7$
  \quad\textit{Solution:}  $[8^{179}]_7 = ([8]_7)^{179} =  ([1]_7)^{179} =  [1^{179}]_7 = [1]_7$. Thus, \fbox{$a=1$.} \footnote{Remark~\ref{rmk.modularpower} was used twice. We also used that  $[8]_7 = [1]_7$.}
 \item $[6^{179}]_7$ \quad(There is a hint in the footnotes.\footnote{Hint:  $[6]_7 = [-1]_7$.})
