@@ -27,4 +27,5 @@
 *.mtc0
 *.pdf
 !IntroToProof.pdf
+!MathematicalArgumentLanguageAndProof.pdf
 *.DS_Store
