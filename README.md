@@ -7,6 +7,7 @@ These notes are an IBL task sequence for an introduction to proof course. I woul
 
 The majority of the material was written by me ([Dana C. Ernst](http://danaernst.com)), but several others have contributed content.  Below is a partial list of people (alphabetical by last name) that I need to thank for supplying content, advice, and feedback.
 
+  - [Joshua Bowman](https://thalestriangles.blogspot.com) (Pepperdine University). The Preface is a modified version of Joshua's *An IBL preface*.
   - [Paul Ellis](http://www.paulellis.org) (Manhattanville College). Paul has provided lots of useful feedback and several suggestions for improvements.
   - [Jason Grout](http://jasongrout.org) (Bloomberg, L.P.).  I'm extremely grateful to Jason for feedback on early versions of this material, as well as helping me with a variety of technical aspects of writing these notes.
   - [Anders Hendrickson](http://home.snc.edu/andershendrickson/) (St. Norbert College). Anders is the original author of the content in Appendix A: Elements of Style for Proofs. The current version in Appendix A is a result of modifications made by myself with some suggestions from Dave Richeson.

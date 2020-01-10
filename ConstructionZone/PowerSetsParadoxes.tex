@@ -6,7 +6,7 @@ We've already seen that using union, intersection, set difference, and complemen
 If $S$ is a set, then the \textbf{power set} of $S$ is the set of subsets of $S$.  The power set of $S$ is denoted $\boxed{\mathcal{P}(S)}$.
 \end{definition}
 
-It follows immediately from the definition that $A\subseteq S$ iff $A\in\mathcal{P}(S)$.\footnote{Recall that ``iff" is an abbreviation for `if and only if", which is a statement of the form $A\iff B$ for propositions $A$ and $B$. Recall that this is short for both $(A\implies B) \wedge (B\implies A)$.}  For example, if $S=\{a,b\}$, then $\mathcal{P}=\{\emptyset, \{a\}, \{b\}, S\}$.
+It follows immediately from the definition that $A\subseteq S$ if and only if $A\in\mathcal{P}(S)$.\footnote{Recall that ``iff" is an abbreviation for `if and only if", which is a statement of the form $A\iff B$ for propositions $A$ and $B$. Recall that this is short for both $(A\implies B) \wedge (B\implies A)$.}  For example, if $S=\{a,b\}$, then $\mathcal{P}=\{\emptyset, \{a\}, \{b\}, S\}$.
 
 \begin{exercise}\label{exer:PowerSets}
 For each of the following sets, find the power set.
@@ -31,7 +31,7 @@ How many subsets do you think that a set with $n$ elements has?  What if $n=0$? 
 It is important to realize that the concepts of \emph{element} and \emph{subset} need to be carefully delineated.  For example, consider the set $A=\{x,y\}$.  The object $x$ is an element of $A$, but the object $\{x\}$ is both a subset of $A$ and an element of $\mathcal{P}(A)$.  This can get confusing rather quickly.  Consider the set $B$ from Exercise~\ref{exer:PowerSets}.  The set $\{a\}$ happens to be an element of $B$, a subset of $B$, and an element of  $\mathcal{P}(B)$. The upshot is that it is important to pay close attention to whether ``$\subseteq$" or ``$\in$" is the proper symbol to use.
 
 \begin{theorem}
-Let $S$ and $T$ be sets.  Then $S\subseteq T$ iff $\mathcal{P}(S)\subseteq \mathcal{P}(T)$.\footnote{To prove this theorem, you have to write two distinct subproofs: $A\implies B$ and $B\implies A$.}
+Let $S$ and $T$ be sets.  Then $S\subseteq T$ if and only if $\mathcal{P}(S)\subseteq \mathcal{P}(T)$.\footnote{To prove this theorem, you have to write two distinct subproofs: $A\implies B$ and $B\implies A$.}
 \end{theorem}
 
 \begin{theorem}

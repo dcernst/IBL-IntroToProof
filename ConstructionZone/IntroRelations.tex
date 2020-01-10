@@ -1,7 +1,7 @@
 \begin{section}{Introduction to Relations}
 
 \begin{definition}
-An \textbf{ordered pair} is an object of the form $(x,y)$. Two ordered pairs $(x,y)$ and $(a,b)$ are \textbf{equal} iff $x=a$ and $y=b$. 
+An \textbf{ordered pair} is an object of the form $(x,y)$. Two ordered pairs $(x,y)$ and $(a,b)$ are \textbf{equal} if and only if $x=a$ and $y=b$. 
 \end{definition}
 
 \begin{definition}
@@ -75,10 +75,10 @@ Different notations for relations are used in different contexts.  When talking 
 \end{remark}
 
 \begin{example}
-Let $P_f$ denote the set of all people with accounts on Facebook.  Define  $F$ via $xFy$ iff $x$ is friends with $y$.  Then $F$ is a relation on $P_f$.
+Let $P_f$ denote the set of all people with accounts on Facebook.  Define  $F$ via $xFy$ if and only if $x$ is friends with $y$.  Then $F$ is a relation on $P_f$.
 \end{example}
 
-We can often represent relations using graphs or digraphs.  Given a finite set $X$ and a relation $\sim$ on $X$, a \textbf{digraph} (short for \emph{directed graph}) is a discrete graph having the members of $X$ as vertices and a directed edge from $x$ to $y$ iff $x\sim y$.
+We can often represent relations using graphs or digraphs.  Given a finite set $X$ and a relation $\sim$ on $X$, a \textbf{digraph} (short for \emph{directed graph}) is a discrete graph having the members of $X$ as vertices and a directed edge from $x$ to $y$ if and only if $x\sim y$.
 
 \begin{example}
 Figure~\ref{fig:digraph} depicts a digraph that represents a relation $R$ given by
@@ -119,7 +119,7 @@ Let $A=\{a,b,c\}$ and define $\sim=\{(a,a),(a,b),(b,c),(c,b),(c,a)\}$.  Draw the
 \end{exercise}
 
 \begin{exercise}
-Let $A=\{1,2,3,4,5,6\}$.  Define $|$ on $A$ via $x|y$ iff $x$ divides $y$.  Draw the digraph for $|$ on $A$.
+Let $A=\{1,2,3,4,5,6\}$.  Define $|$ on $A$ via $x|y$ if and only if $x$ divides $y$.  Draw the digraph for $|$ on $A$.
 \end{exercise}
 
 When $X$ or $Y$ is infinite, it is not practical to draw a digraph.  However, you are familiar with the graphs of some relations involving infinite sets.
@@ -133,7 +133,7 @@ The graph of this relation in $\mathbb{R}^2$ is the standard unit circle.
 \end{example}
 
 \begin{exercise}
-Define $\sim$ on $\mathbb{R}$ via $x\sim y$ iff $x\leq y$.  Draw a picture of this relation in $\mathbb{R}^2$. In other words, draw all points $(x,y)$ where $x\sim y$.
+Define $\sim$ on $\mathbb{R}$ via $x\sim y$ if and only if $x\leq y$.  Draw a picture of this relation in $\mathbb{R}^2$. In other words, draw all points $(x,y)$ where $x\sim y$.
 \end{exercise}
 
 \begin{definition}
@@ -160,24 +160,24 @@ Given a finite set $A$ and a relation $\sim$, describe what each of reflexive, s
 \end{exercise}
 
 \begin{exercise}
-Let $P$ be the set of people at a party and define $N$ via $(x,y)\in N$ iff $x$ knows the name of $y$.  Describe what it would mean for $N$ to be reflexive, symmetric, and transitive.
+Let $P$ be the set of people at a party and define $N$ via $(x,y)\in N$ if and only if $x$ knows the name of $y$.  Describe what it would mean for $N$ to be reflexive, symmetric, and transitive.
 \end{exercise}
 
 \begin{exercise}
 Determine whether each of the following relations is reflexive, symmetric, or transitive.
 
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item Let $P_f$ denote the set of all people with accounts on Facebook.  Define  $F$ via $xFy$ iff $x$ is friends with $y$. 
-\item Let $P$ be the set of all people and define $H$ via $xHy$ iff $x$ and $y$ have the same height.
-\item Let $P$ be the set of all people and define $T$ via $xTy$ iff $x$ is taller than $y$.
+\item Let $P_f$ denote the set of all people with accounts on Facebook.  Define  $F$ via $xFy$ if and only if $x$ is friends with $y$. 
+\item Let $P$ be the set of all people and define $H$ via $xHy$ if and only if $x$ and $y$ have the same height.
+\item Let $P$ be the set of all people and define $T$ via $xTy$ if and only if $x$ is taller than $y$.
 \item Consider the relation ``divides" on $\mathbb{N}$.
-\item Let $L$ be the set of lines and define $||$ via $l_1||l_2$ iff $l_1$ is parallel to $l_2$.
+\item Let $L$ be the set of lines and define $||$ via $l_1||l_2$ if and only if $l_1$ is parallel to $l_2$.
 \item Let $C[0,1]$ be the set of continuous functions on $[0,1]$.  Define $f\sim g$ iff
 \[
 \int_0^1|f(x)|\ dx=\int_0^1|g(x)|\ dx.
 \]
-\item Define $\sim$ on $\mathbb{N}$ via $n\sim m$ iff $n+m$ is even.
-\item Define $D$ on $\mathbb{R}$ via $(x,y)\in D$ iff $x=2y$.
+\item Define $\sim$ on $\mathbb{N}$ via $n\sim m$ if and only if $n+m$ is even.
+\item Define $D$ on $\mathbb{R}$ via $(x,y)\in D$ if and only if $x=2y$.
 \end{enumerate}
 \end{exercise}
 

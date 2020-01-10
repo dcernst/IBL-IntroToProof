@@ -3,7 +3,7 @@
 In the previous section, we explored finite sets.  Now, let's tinker with infinite sets.
 
 \begin{definition}\label{def:infiniteSet}
-A set $A$ is \textbf{infinite} iff $A$ is not finite.
+A set $A$ is \textbf{infinite} if and only if $A$ is not finite.
 \end{definition}
 
 Let's see if we can utilize this definition to prove that the set of natural numbers is infinite.
@@ -40,7 +40,7 @@ The Infinite Hotel has rooms numbered $1,2,3,4,\ldots$. Every room in the Infini
 The previous problem verifies that a proper subset of the natural numbers is in bijection with the natural numbers themselves. We also witnessed this in parts (a) and (b) of Exercise~\ref{exer:someInfiniteSets}. Notice that Theorem~\ref{thm:cardinalityProperSubsetsFinite} forbids this type of behavior for finite sets. It turns out that this phenomenon is true for all infinite sets. The next theorem verifies that that the two viewpoints of infinite sets discussed above are valid.
 
 \begin{theorem}\label{thm:infiniteSetTFAE}
-Let $A$ be a set. Then the following statements are equivalent.\footnote{\emph{Hint:} Prove (i) iff (ii) and (ii) iff (iii). For (i) implies (ii), construct $f$ recursively. For (ii) implies (i), try a proof by contradiction. For (ii) implies (iii), let $B=A\setminus \{f(1),f(2),\ldots\}$ and show that $A$ can be put in bijection with $B\cup\{f(2),f(3),\ldots\}$. Lastly, for (iii) implies (ii), suppose $g:A\to C$ is a bijection for some proper subset $C$ of $A$. Let $a\in A\setminus C$. Define $f:\mathbb{N}\to A$ via $f(n)=g^n(a)$, where $g^n$ means compose $g$ with itself $n$ times.}
+Let $A$ be a set. Then the following statements are equivalent.\footnote{\emph{Hint:} Prove (i) if and only if (ii) and (ii) if and only if (iii). For (i) implies (ii), construct $f$ recursively. For (ii) implies (i), try a proof by contradiction. For (ii) implies (iii), let $B=A\setminus \{f(1),f(2),\ldots\}$ and show that $A$ can be put in bijection with $B\cup\{f(2),f(3),\ldots\}$. Lastly, for (iii) implies (ii), suppose $g:A\to C$ is a bijection for some proper subset $C$ of $A$. Let $a\in A\setminus C$. Define $f:\mathbb{N}\to A$ via $f(n)=g^n(a)$, where $g^n$ means compose $g$ with itself $n$ times.}
 \begin{enumerate}[label=\textrm{(\roman*)}]
 \item $A$ is an infinite set.
 \item There exists a one-to-one function $f:\mathbb{N}\to A$.
@@ -49,7 +49,7 @@ Let $A$ be a set. Then the following statements are equivalent.\footnote{\emph{H
 \end{theorem}
 
 \begin{corollary}\label{cor:infiniteSetInfiniteSubset}
-A set is infinite iff it has an infinite subset.
+A set is infinite if and only if it has an infinite subset.
 \end{corollary}
 
 \begin{corollary}

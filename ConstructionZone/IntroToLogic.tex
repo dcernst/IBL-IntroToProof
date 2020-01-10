@@ -6,7 +6,7 @@ After diving in head first in the last section, we'll take a step back and do a 
 A \textbf{proposition} (or \textbf{statement}) is a sentence that is either true or false.
 \end{definition}
 
-For example, the sentence ``All liberals are hippies'' is a false proposition.  However, the perfectly good sentence ``$x=1$'' is \emph{not} a proposition all by itself since we don't actually know what $x$ is.
+For example, the sentence ``All cars are red'' is a false proposition.  However, the perfectly good sentence ``$x=1$'' is \emph{not} a proposition all by itself since we don't actually know what $x$ is.
 
 \begin{exercise} Determine whether the following are propositions or not. Explain.
 \begin{enumerate}[label=\textrm{(\alph*)}]
@@ -35,10 +35,10 @@ Given two propositions, we can form more complicated propositions using logical 
 \begin{definition}
 Let $A$ and $B$ be propositions.  
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item The proposition ``\textbf{not $A$}" is true iff\footnote{Throughout mathematics, the phrase ``if and only if'' is common enough that it is often abbreviated ``iff.'' Roughly speaking, this phrase/word means ``exactly when.''} $A$ is false; expressed symbolically as $\boxed{\neg A}$ and called the \textbf{negation} of $A$.
-\item The proposition ``\textbf{$A$ and $B$}'' is true iff both $A$ and $B$ are true; expressed symbolically as $\boxed{A \wedge B}$ and called the \textbf{conjunction} of $A$ and $B$.
-\item The proposition ``\textbf{$A$ or $B$}'' is true iff at least one of $A$ or $B$ is true; expressed symbolically as $\boxed{A \vee B}$ and called the \textbf{disjunction} of $A$ and $B$.
-\item The proposition ``\textbf{If $A$, then $B$}'' is true iff both $A$ and $B$ are true, or $A$ is false; expressed symbolically as $\boxed{A \implies B}$ and called an \textbf{implication} or \textbf{conditional statement}. Note that $A \implies B$ may also be read as ``$A$ implies $B$" or ``$A$ only if $B$". 
+\item The proposition ``\textbf{not $A$}" is true if and only if\footnote{Throughout mathematics, the phrase ``if and only if'' is common enough that it is sometimes abbreviated ``iff.'' Roughly speaking, this phrase/word means ``exactly when.''} $A$ is false; expressed symbolically as $\boxed{\neg A}$ and called the \textbf{negation} of $A$.
+\item The proposition ``\textbf{$A$ and $B$}'' is true if and only if both $A$ and $B$ are true; expressed symbolically as $\boxed{A \wedge B}$ and called the \textbf{conjunction} of $A$ and $B$.
+\item The proposition ``\textbf{$A$ or $B$}'' is true if and only if at least one of $A$ or $B$ is true; expressed symbolically as $\boxed{A \vee B}$ and called the \textbf{disjunction} of $A$ and $B$.
+\item The proposition ``\textbf{If $A$, then $B$}'' is true if and only if both $A$ and $B$ are true, or $A$ is false; expressed symbolically as $\boxed{A \implies B}$ and called an \textbf{implication} or \textbf{conditional statement}. Note that $A \implies B$ may also be read as ``$A$ implies $B$" or ``$A$ only if $B$". 
 \end{enumerate}
 \end{definition}
 
@@ -91,7 +91,7 @@ A coach promises, ``If we win tonight, then I will buy you pizza tomorrow.''  De
 \end{problem}
 
 \begin{definition}
-Two statements $P$ and $Q$ are (\textbf{logically}) \textbf{equivalent}, expressed symbolically as $\boxed{P\iff Q}$ and read ``$P$ iff $Q$", iff they have the same truth table.
+Two statements $P$ and $Q$ are (\textbf{logically}) \textbf{equivalent}, expressed symbolically as $\boxed{P\iff Q}$ and read ``$P$ if and only if $Q$", if and only if they have the same truth table.
 \end{definition}
 
 Each of the next three facts can be justified using truth tables.
@@ -147,7 +147,34 @@ Use truth tables to prove the following theorem.
 The implication ${A\implies B}$ is equivalent to its contrapositive.
 \end{theorem}
 
-The upshot of Theorem~\ref{thm:contrapos} is that if you want to prove a conditional proposition, you can prove its contrapositive instead.  Try proving each of the next three theorems by proving the contrapositive of the given statement instead.
+The upshot of Theorem~\ref{thm:contrapos} is that if you want to prove a conditional proposition, you can prove its contrapositive instead.
+
+\begin{problem}
+Consider the following statement:
+\begin{quote}
+Assume $x\in\mathbb{Z}$. If $x^2$ is odd, then $x$ is odd integer.
+\end{quote}
+The items below can be assembled to form a proof of this statement, but they are currently out of order.  Put them in the proper order.
+\begin{enumerate}
+\item Thus, we assume that $x$ is an even integer.
+
+\item We will prove this by contraposition.
+\item Thus, $x^2$ is twice an integer.
+\item Since $x=2k$, we have that $x^2 =(2k)^2 =4k$.
+\item Since $k$ is an integer, $2k$ is also an integer.
+\item By the definition of even, there is an integer $k$ such that $x=2k$.
+\item Since the contrapositive is equivalent to the original statement and we have proved the contrapositive, the original statement is true.
+\item By the definition of even integer, $x^2$ is an even integer.
+\item The contrapositive is ``If $x$ is an even integer, then $x^2$ is an even integer."
+\item Notice that $x^2 = 2(2k)$.
+\end{enumerate}
+\end{problem}
+
+Try proving each of the next three theorems by proving the contrapositive of the given statement.
+
+\begin{theorem}
+Assume $x\in\mathbb{Z}$. If $x^2$ is even, then $x$ is even.
+\end{theorem}
 
 \begin{theorem}
 Assume $x,y\in\mathbb{Z}$.  If $xy$ is odd, then both $x$ and $y$ are odd.
@@ -155,10 +182,6 @@ Assume $x,y\in\mathbb{Z}$.  If $xy$ is odd, then both $x$ and $y$ are odd.
 
 \begin{theorem}
 Assume $x,y\in\mathbb{Z}$.  If $xy$ is even, then $x$ or $y$ is even.
-\end{theorem}
-
-\begin{theorem}
-Assume $x\in\mathbb{Z}$. If $x^2$ is even, then $x$ is even.
 \end{theorem}
 
 \end{section}
