@@ -1,0 +1,80 @@
+\begin{section}{Introduction to Cardinality}
+
+What does it mean for two sets to have the same ``size"?  If the sets are finite, this is easy: just count how many elements are in each set.  Another approach would be to pair up the elements in each set and see if there are any left over.  In other words, check to see if there is a one-to-one correspondence (i.e., bijection) between the two sets.  
+
+But what if the sets are infinite?  For example, consider the set of natural numbers $\mathbb{N}$ and the set of even natural numbers $2\mathbb{N}:=\{2n\mid n\in \mathbb{N}\}$. Clearly, $2\mathbb{N}$ is a proper subset of $\mathbb{N}$.  Moreover, both sets are infinite.  In this case, you might be thinking that $\mathbb{N}$ is ``larger than" $2\mathbb{N}$  However, it turns out that there is a one-to-one correspondence between these two sets.  In particular, consider the function $f:\mathbb{N}\to 2\mathbb{N}$ defined via $f(n)=2n$.  It is easily verified that $f$ is both one-to-one and onto.  In this case, mathematics has determined that the right viewpoint is that $\mathbb{N}$ and $2\mathbb{N}$ do have the same ``size". However, it is clear that ``size" is a bit too imprecise when it comes to infinite sets. We need something more rigorous.
+
+\begin{definition}
+Let $A$ and $B$ be sets. We say that $A$ and $B$ have the same \textbf{cardinality} iff there exists a one-to-one correspondence between $A$ and $B$. If $A$ and $B$ have the same cardinality, then we write $\boxed{\card(A)=\card(B)}$.
+\end{definition}
+
+Note that we have not defined $\card(A)$ by itself. Doing so would not be too difficult for finite sets, but making such a notation precise in general is tricky business.  When we write $\card(A)=\card(B)$ (and later $\card(A)\leq \card(B)$ and $\card(A)<\card(B)$), we are asserting the existence of a certain type of function from $A$ to $B$.
+
+\begin{problem}\label{prob:cardinalityPractice}
+Prove each of the following. In each case, you should create a bijection between the two sets. Briefly justify that your functions are in fact bijections.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Let $A=\{a,b,c\}$ and $B=\{x,y,z\}$. Then $\card(A)=\card(B)$.
+\item Let $\mathcal{O}$ denote the set of odd natural numbers. Then $\card(\mathbb{N})=\card(\mathcal{O})$. 
+\item $\card(\mathbb{N})=\card(\mathbb{Z})$.
+\item Let $a,b,c,d\in\mathbb{R}$ with $a<b$ and $c<d$. Then $\card((a,b))=\card((c,d))$.\footnote{\emph{Hint:} Try creating a linear function $f:(a,b)\to (c,d)$. Drawing a picture should help.}
+\item Let $R=\{\frac{1}{2^n}\mid n\in \mathbb{N}\}$. Then $\card(\mathbb{N})=\card(R)$.
+\item Let $\mathcal{F}$ be the set of functions from $\mathbb{N}$ to $\{0,1\}$. Then $\card(\mathcal{F})=\card(\mathcal{P}(\mathbb{N}))$.\footnote{\emph{Hint:} Define $\phi:\mathcal{F}\to \mathcal{P}(\mathbb{N})$ so that $\phi(f)$ outputs a subset of $\mathbb{N}$ determined by when $f$ outputs a 1.}
+\item Let $A$ be any set. Then $\card(A)=\card(A\times \{x\})$.
+\end{enumerate}
+\end{problem}
+
+\begin{theorem}
+Let $A$, $B$, and $C$ be sets. Then we have the following:
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\card(A)=\card(A)$.
+\item If $\card(A)=\card(B)$, then $\card(B)=\card(A)$.
+\item If $\card(A)=\card(B)$ and $\card(B)=\card(C)$, then $\card(A)=\card(C)$.
+\end{enumerate}
+\end{theorem}
+
+In light of the previous theorem, the next result should not be surprising.
+
+\begin{corollary}
+If $X$ is a set, then ``has the same cardinality as" is an equivalence relation on $\mathcal{P}(X)$.
+\end{corollary}
+
+\begin{theorem}
+Let $A$, $B$, $C$, and $D$ be sets such that $\card(A)=\card(C)$ and $\card(B)=\card(D)$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item If $A$ and $B$ are disjoint and $C$ and $D$ are disjoint, then $\card(A\cup B)=\card(C\cup D)$.
+\item $\card(A\times B)=\card(C\times D)$.
+\end{enumerate}
+\end{theorem}
+
+Given two finite sets, it makes sense to say that one set is ``larger than" another provided one set contains more elements than the other. We would like to generalize this idea to handle both finite and infinite sets. 
+
+\begin{definition}
+Let $A$ and $B$ be sets. If there is a one-to-one function (i.e., injection) from $A$ to $B$, then we say that the \textbf{cardinality of $A$ is less than or equal to the cardinality of $B$}. In this case, we write $\boxed{\card(A)\leq\card(B)}$.
+\end{definition}
+
+\begin{theorem}
+Let $A$, $B$, and $C$ be sets. Then we have the following:
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item If $A\subseteq B$, then $\card(A)\leq \card(B)$.
+\item If $\card(A)\leq \card(B)$ and $\card(B)\leq \card(C)$, then $\card(A)\leq \card(C)$.
+\item If $C\subseteq A$ while $\card(B)=\card(C)$, then $\card(B)\leq \card(A)$.
+\end{enumerate}
+\end{theorem}
+
+It might be tempting to think that the existence of a one-to-one function from a set $A$ to a set $B$ that is \emph{not} onto would verify that $\card(A)\leq \card(B)$ and $\card(A)\neq \card(B)$. While this is true for finite sets, it is not true for infinite sets as the next exercise asks you to verify.
+
+\begin{exercise}
+Provide an example of sets $A$ and $B$ such that $\card(A)=\card(B)$ despite the fact that there exists a one-to-one function from $A$ to $B$ that is not onto.
+\end{exercise}
+
+\begin{definition}
+Let $A$ and $B$ be sets. We write $\boxed{\card(A)< \card(B)}$ provided $\card(A)\leq \card(B)$ and $\card(A)\neq \card(B)$.
+\end{definition}
+
+It is important to point out that the statements $\card(A)= \card(B)$ and $\card(A)\leq \card(B)$ are symbolic ways of asserting the existence of certain types of functions from $A$ to $B$. When we write $\card(A)<\card(B)$, we are saying something much stronger than ``There exists a function $f:A\to B$ that is one-to-one but not onto." The statement $\card(A)<\card(B)$ is asserting that \emph{every} one-to-one function from $A$ to $B$ is not onto. In general, it is difficult to prove statements like $\card(A)\neq \card(B)$ or $\card(A)<\card(B)$.
+
+%Contrary to what you might be thinking, it is not the case that all infinite sets
+
+
+
+\end{section}

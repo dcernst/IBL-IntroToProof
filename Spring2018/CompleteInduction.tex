@@ -1,0 +1,79 @@
+\begin{section}{Complete Induction}\label{sec:CompleteInduction}
+
+There is another formulation of induction, where the inductive step begins with a set of assumptions rather than one single assumption.  This method is sometimes called \textbf{complete induction} or \textbf{strong induction}.  
+
+\begin{theorem}[Principle of Complete Mathematical Induction]
+Let $P(1), P(2), P(3), \ldots$ be a sequence of statements, one for each natural number.  Assume that
+\begin{enumerate}[label=\textrm{(\roman*)}]
+\item $P(1)$ is true, and
+\item For all $k \in \mathbb{N}$, if $P(j)$ is true for all $j\in \mathbb{N}$ such that $j \leq k$, then $P(k+1)$ is true.  
+\end{enumerate}
+Then $P(n)$ is true for all $n\in\mathbb{N}$.
+\end{theorem}
+
+Note the difference between ordinary induction (Theorems~\ref{thm:PMI} and \ref{thm:PMI2}) and complete induction. For the induction step of complete induction, we are not only assuming that $P(k)$ is true, but rather that $P(j)$ is true for all $j$ from 1 to $k$.  Despite the name, complete induction is not any stronger or more powerful than ordinary induction.  It is worth pointing out that anytime ordinary induction is an appropriate proof technique, so is complete induction. So, when should we use complete induction?
+
+In the inductive step, you need to reach $P(k+1)$, and you should ask yourself which of the previous cases you need to get there. If all you need, is the statement $P(k)$, then ordinary induction is the way to go. If two preceding cases, $P(k - 1)$ and $P(k)$, are necessary to reach $P(k + 1)$, then complete induction is appropriate. In the extreme, if one needs the full range of preceding cases (i.e., all statements $P(1), P(2),\ldots,P(k)$), then again complete induction should be utilized.
+
+Note that in situations where complete induction is appropriate, it might be the case that you need to verify more than one case in the base step. The number of base cases to be checked depends on how one needs to ``look back" in the induction step.
+
+\begin{skeleton}[Proof of $(\forall n\in\mathbb{N})P(n)$ by Complete Induction]
+Here is the general structure for a proof by complete induction.
+
+\begin{center}
+\framebox{
+\begin{minipage}{6in}
+\vspace{.1in}
+\begin{proof}
+We proceed by induction.
+\begin{enumerate}\setlength{\itemsep}{0in}
+\item[(i)] Base step: \emph{[Verify that $P(1)$ is true.  Depending on the statement, you may also need to verify that $P(k)$ is true for other specific values of $k$.]}
+
+\item[(ii)] Inductive step:  \emph{[Your goal is to prove ``For all $k\in\mathbb{N}$, if for each $k \in \mathbb{N}$, $P(j)$ is true for all $j\in \mathbb{N}$ such that $j \leq k$, then $P(k+1)$ is true.'']} Let $k \in \mathbb{N}$.  Suppose $P(j)$ is true for all $j \leq k$. \emph{[Do something to derive that $P(k+1)$ is true.]} Therefore, $P(k+1)$ is true.
+\end{enumerate}
+Thus, by the PCMI, $P(n)$ is true for all integers $n \ge a$.
+\end{proof}
+\end{minipage}
+}
+\end{center}
+\end{skeleton}
+
+Recall that Theorem~\ref{thm:PMI2} generalized Theorem~\ref{thm:PMI} and allowed us to handle situations where the base case was something other than $P(1)$.  We can generalize complete induction in the same way, but we won't write this down as a formal theorem.
+
+\begin{theorem}
+Define a sequence of numbers by $a_1 = 1$, $a_2 = 3$, and $a_n = 3a_{n-1} - 2a_{n-2}$ for all natural numbers $n \geq 3$.  Then $a_n = 2^n - 1$ for all $n \in \mathbb{N}$.  
+\end{theorem}
+
+\begin{theorem}
+Define a sequence of numbers by $a_1 = 3, a_2 = 5, a_3 = 9$ and $a_n = 2a_{n-1} + a_{n-2}-2a_{n-3}$ for all natural numbers $n \geq 4$.  Then $a_n = 2^n + 1$ for all $n \in \mathbb{N}$.  
+\end{theorem}
+
+\begin{theorem}
+Define a sequence of numbers by $a_1=1$, $a_2=3$, and $a_n=a_{n-1}+a_{n-2}$ for all natural numbers $n \geq 3$.  Then $a_n < \left( \frac{7}{4} \right)^n$ for all $n \in \mathbb{N}$.
+\end{theorem}
+
+\begin{theorem}
+Define a sequence of numbers by $a_1=1$, $a_2=2$, $a_3=3$ and $a_n=a_{n-1}+a_{n-2}+a_{n-3}$ for all natural numbers $n\geq 4$.  Then $a_n<2^n$ for all $n\in\mathbb N$.
+\end{theorem}
+
+\begin{theorem}
+Define a sequence of numbers by $a_1=1$, $a_2=1$, and $a_n=a_{n-1}+a_{n-2}$ for all natural numbers $n \geq 3$.  Then $a_n < \left ( \frac{5}{3} \right )^n$ for all $n \in \mathbb{N}.$
+\end{theorem}
+
+\begin{problem}
+Prove that every amount of postage that is at least $12$ cents can be made from $4$-cent and $5$-cent stamps.
+\end{problem}
+
+\begin{problem}
+Prove that for any $n \geq 4$, one can obtain $n$ dollars using only \$2 bills and \$5 bills.
+\end{problem}
+
+The final theorem of this chapter is known as the Well-Ordering Principle (WOP). As you shall see, this seemingly obvious theorem requires a bit of work to prove. It is worth noting that in some axiomatic systems, the WOP is sometimes taken as an axiom.  However, in our case, the result follows from complete induction.
+
+\begin{theorem}[Well-Ordering Principle]\label{thm:WOP}
+Every nonempty subset of the natural numbers contains a least element.\footnote{\emph{Hint:} Towards a contradiction, suppose $S$ is a nonempty subset of $\mathbb{N}$ that does not have a least element.  Define the proposition $P(n):=$``$n$ is not an element of $S$". Use complete induction.}
+\end{theorem}
+
+It turns out that the Well-Ordering Principle (Theorem~\ref{thm:WOP}) and the Axiom of Induction (Axiom~\ref{axiom:induction}) are equivalent.  In other words, one can prove the Well-Ordering Principle from the Axiom of Induction, as we have done, but one can also prove the Axiom of Induction if the Well-Ordering Principle is assumed.
+
+\end{section}

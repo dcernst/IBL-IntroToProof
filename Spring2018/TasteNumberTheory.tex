@@ -1,0 +1,119 @@
+\begin{section}{A Taste of Number Theory}
+
+In this section, we will work with the set of integers, $\mathbb{Z} = \{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\}$.  The purpose of this section is to get started with proving some theorems about numbers and study the properties of $\mathbb{Z}$. Because you are so familiar with properties of the integers, one of the issues that we will bump into knowing which facts about the integers we can take for granted.  As a general rule of thumb, you should attempt to use the definitions provided without relying too much on your prior knowledge.  We will likely need to discuss this further as issues arise.
+
+It is important to note that we are diving in head first here.  There are going to be some subtle issues that you will bump into and our goal will be to see what those issues are, and then we will take a step back and start again.  See what you can do!
+
+Recall that we use the symbol ``$\in$" as an abbreviation for the phrase ``is an element of" or sometimes simply ``in."  For example, the mathematical expression ``$n\in\mathbb{Z}$" means ``$n$ is an element of the integers."
+
+\begin{definition}
+An integer $n$ is \textbf{even} if $n=2k$ for some $k\in\mathbb{Z}$.
+\end{definition}
+
+\begin{definition}
+An integer $n$ is \textbf{odd} if $n=2k+1$ for some $k\in\mathbb{Z}$.
+\end{definition}
+
+Notice that we did not define ``even" as being divisible by 2.  When tackling the next few theorems and problems, you should use the formal definition of even as opposed to the well-known divisibility condition.  For the remainder of this section, you may assume that every integer is either even or odd but never both.
+
+\begin{theorem}\label{two consecutive ints}
+The sum of two consecutive integers is odd.
+\end{theorem}
+
+\begin{theorem}\label{thm:n even implies n^2 even}
+If $n$ is an even integer, then $n^2$ is an even integer.
+\end{theorem}
+
+\begin{problem}\label{prob:sum of even and odd}
+Prove or provide a counterexample:  The sum of an even integer and an odd integer is odd.
+\end{problem}
+
+\begin{question}
+Did Theorem~\ref{two consecutive ints} need to come before Problem~\ref{prob:sum of even and odd}?  Could we have used Problem~\ref{prob:sum of even and odd} to prove Theorem~\ref{two consecutive ints}?  If so, outline how this alternate proof would go.  Perhaps your original proof utilized the approach I'm hinting at.  If this is true, can you think of a proof that does not rely directly on Problem~\ref{prob:sum of even and odd}?  Is one approach better than the other?
+\end{question}
+
+\begin{problem}
+Prove or provide a counterexample: The product of an odd integer and an even integer is odd.
+\end{problem}
+
+\begin{problem}
+Prove or provide a counterexample: The product of an odd integer and an odd integer is odd.
+\end{problem}
+
+\begin{problem}
+Prove or provide a counterexample: The product of two even integers is even.
+\end{problem}
+
+\begin{definition}
+An integer $n$ \textbf{divides} the integer $m$, written $n|m$, if and only if there exists $k\in\mathbb{Z}$ such that $m=nk$. In the same context, we may also write that $m$ \textbf{is divisible by} $n$.
+\end{definition}
+
+\begin{question}
+For integers $n$ and $m$, how are following mathematical expressions similar and how are they different?
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $m|n$
+\item $\displaystyle \frac{m}{n}$
+\item $m/n$
+\end{enumerate}
+\end{question}
+
+In this section on number theory, we allow addition, subtraction, and multiplication of integers.  In general, division is not allowed since an integer divided by an integer may result in a number that is not an integer. The upshot: don't write $\frac{m}{n}$.  When you feel the urge to divide, switch to an equivalent formulation using multiplication. This will make your life much easier when proving statements involving divisibility.
+
+\begin{problem}
+Let $n\in\mathbb{Z}$.  Prove or provide a counterexample: If 6 divides $n$, then 3 divides $n$.\end{problem}
+
+\begin{problem}
+Let $n\in\mathbb{Z}$.  Prove or provide a counterexample: If 6 divides $n$, then 4 divides $n$.
+\end{problem}
+
+\begin{theorem}
+Assume $n,m,a\in\mathbb{Z}$.  If $a|n$, then $a|mn$.
+\end{theorem}
+
+A theorem that follows almost immediately from another theorem is called a \textbf{corollary} (see Appendix~\ref{appendix:fancy_math_terms}).  See if you can prove the next result quickly using the previous theorem.  Be sure to cite the theorem in your proof.
+
+\begin{corollary}
+Assume $n,a\in\mathbb{Z}$.  If $a$ divides $n$, then $a$ divides $n^2$.
+\end{corollary}
+
+\begin{problem}
+Assume $n,a\in\mathbb{Z}$.  Prove or provide a counterexample:  If $a$ divides $n^2$, then $a$ divides $n$.
+\end{problem}
+
+\begin{theorem}
+Assume $n,a\in\mathbb{Z}$. If $a$ divides $n$, then $a$ divides $-n$. 
+\end{theorem}
+
+\begin{theorem}\label{thm:divide sum}
+Assume $n,m,a\in\mathbb{Z}$. If $a$ divides $m$ and $a$ divides $n$, then $a$ divides $m+n$. 
+\end{theorem}
+
+\begin{problem}
+Is the converse\footnote{See Definition~\ref{def:converse} for the formal definition of converse.} of Theorem~\ref{thm:divide sum} true?  That is, is the following statement true?
+\begin{quote}
+Assume $n,m,a\in\mathbb{Z}$. If $a$ divides $m+n$, then $a$ divides $m$ and $a$ divides $n$.
+\end{quote}
+If the statement is true, prove it.  If the statement is false, provide a counterexample.
+\end{problem}
+
+Once we've proved a few theorems, we should be on the look out to see if we can utilize any of our current results to prove new results.  There's no point in reinventing the wheel if we don't have to.  Try to use a couple of our previous results to prove the next theorem.
+
+\begin{theorem}
+Assume $n,m,a\in\mathbb{Z}$. If $a$ divides $m$ and $a$ divides $n$, then $a$ divides $m-n$.
+\end{theorem}
+
+\begin{problem}
+Assume $a,b,m\in\mathbb{Z}$. Determine whether the following statement holds sometimes, always, or never.  If $ab$ divides $m$, then $a$ divides $m$ and $b$ divides $m$.  Justify with a proof or counterexample.
+\end{problem}
+
+\begin{theorem}
+If $a,b,c\in\mathbb{Z}$ such that $a$ divides $b$ and $b$ divides $c$, then $a$ divides $c$.
+\end{theorem}
+
+The previous theorem is referred to as \textbf{transitivity of division of integers}.
+
+\begin{theorem}
+The sum of any three consecutive integers is always divisible by three.
+\end{theorem}
+
+\end{section}
