@@ -1,12 +1,7 @@
 \begin{section}{Sets}
 
 \begin{definition}
-A \textbf{set} is a collection of objects called \textbf{elements}. If $A$ is a set and $x$ is an element of $A$, we write
-$x\in A$. Otherwise, we write $x\notin A$.
-\end{definition}
-
-\begin{definition}
-The set containing no elements is called the \textbf{empty set}, and is denoted by the symbol $\emptyset$.
+A \textbf{set} is a collection of objects called \textbf{elements}. If $A$ is a set and $x$ is an element of $A$, we write $x\in A$. Otherwise, we write $x\notin A$. The set containing no elements is called the \textbf{empty set}, and is denoted by the symbol $\emptyset$.
 \end{definition}
 
 If we think of a set as a box potentially containing some stuff, then the empty set is a box with nothing in it.
@@ -18,6 +13,14 @@ The language associated to sets is specific.  We will often define sets using th
 \]
 The first part ``$x \in A$" denotes what type of $x$ is being considered.  The statements to the right of the vertical bar (not to be confused with ``divides") are the conditions that $x$ must satisfy in order to be members of the set.  This notation is read as ``The set of all $x$ in $A$ such that $x$ satisfies some condition,'' where ``some condition" is something specific about the restrictions on $x$ relative to $A$.
 \end{definition}
+
+There are a few sets that are commonly discussed in mathematics and have predefined symbols to denote them. We've already encountered the integers, natural numbers, and real numbers. Notice that our definition of the rational numbers uses set builder notation.
+\begin{itemize}
+\item \textbf{Real Numbers:} $\mathbb{R}$ denotes the set of real numbers.
+\item \textbf{Integers:} $\mathbb{Z}:=\{0, \pm 1, \pm2, \pm 3, \ldots\}$
+\item \textbf{Natural numbers:} $\mathbb{N}:=\{1,2,3,\ldots\}$. Since this set consists of the positive integers, the natural numbers are sometimes denoted by $\mathbb{Z}^+$. Some books will include zero in the set of natural numbers, but we will not do that.
+\item \textbf{Rational Numbers:} $\mathbb{Q}:=\{a/b \mid a, b \in \mathbb{Z} \text{ and } b \neq 0\}$.
+\end{itemize}
 
 \begin{exercise}
 Unpack each of the following sets and see if you can find a simple description of the elements that each set contains.
@@ -105,8 +108,6 @@ Let $A$ and $B$ be sets in some universe of discourse $U$.
 \begin{definition}
 If two sets $A$ and $B$ have the property that $A \cap B = \emptyset$, then we say that $A$ and $B$ are \textbf{disjoint} sets.
 \end{definition}
-
-\newpage
 
 \begin{exercise}
 Suppose that the universe of discourse is $U=\{1,2,3,4,5,6,7,8,9,10\}$.  Let $A=\{1, 2, 3, 4, 5\}$, $B=\{1, 3, 5\}$, and $C=\{2, 4, 6, 8\}$.  Find each of the following.

@@ -6,27 +6,18 @@ After diving in head first in the last section, we'll take a step back and do a 
 A \textbf{proposition} (or \textbf{statement}) is a sentence that is either true or false.
 \end{definition}
 
-For example, the sentence ``All cars are red'' is a false proposition.  However, the perfectly good sentence ``$x=1$'' is \emph{not} a proposition all by itself since we don't actually know what $x$ is.
+For example, the sentence ``All dogs have four legs'' is a false proposition.  However, the perfectly good sentence ``$x=1$'' is \emph{not} a proposition all by itself since we don't actually know what $x$ is.
 
 \begin{exercise} Determine whether the following are propositions or not. Explain.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item All cars are red.
-\item Led Zeppelin is the best band of all time. 
-%\item Van Gogh was the best artist ever. 
-%\item If my name is Joe, then my name starts with the letter J.
-\item If my name starts with the letter J, then my name is Joe.
-%\item $f$ is continuous.
-%\item All functions are continuous.
-%\item If $f$ is a differentiable function, then $f$ is continuous function.
-%\item The president had eggs for breakfast the morning of his tenth birthday.
-%\item What time is it?
+\item Every person whose name begins with J has the name Joe.
 \item $x^2=4$.
 \item There exists an $x$ such that $x^2=4$.
 \item For all real numbers $x$, $x^2=4$.
 \item $\sqrt{2}$ is an irrational number.
-%\item For all real numbers $x$, $x^3=x$.
-%\item There exists a real number $x$ such that $x^3=x$.
 \item $p$ is prime.
+\item Led Zeppelin is the best band of all time.
 \end{enumerate}
 \end{exercise}
 
@@ -41,6 +32,34 @@ Let $A$ and $B$ be propositions.
 \item The proposition ``\textbf{If $A$, then $B$}'' is true if and only if both $A$ and $B$ are true, or $A$ is false; expressed symbolically as $\boxed{A \implies B}$ and called an \textbf{implication} or \textbf{conditional statement}. Note that $A \implies B$ may also be read as ``$A$ implies $B$" or ``$A$ only if $B$". 
 \end{enumerate}
 \end{definition}
+
+Each of the theorems that we proved in Section~\ref{sec:baby number theory} are examples of conditional statements. However, some of the statements were disguised as such. For example, Theorem~\ref{thm:two consecutive ints} states, ``The sum of two consecutive integers is odd." We can reword this theorem as, ``If $x\in\mathbb{Z}$, then $x+(x+1)$ is odd."
+
+\begin{exercise}
+Reword Theorem~\ref{thm:sum of three consecutive integers} so that it explicitly reads as a conditional statement.
+\end{exercise}
+
+The proofs of each of the theorems in Section~\ref{sec:baby number theory} had the same format, which we refer to as a \textbf{direct proof}. 
+
+\begin{skeleton}[Proof of $A\implies B$ by direct proof]
+
+If you want to prove the implication $A\implies B$ via a direct proof, then the structure of the proof is as follows.
+
+\begin{center}
+\framebox{
+\begin{minipage}{6in}
+\vspace{.1in}
+\begin{proof}
+Assume $A$.
+\begin{center}
+$\ldots$ \ \emph{[Use definitions and known results to derive $B$]} \ $\ldots$\\
+\end{center}
+\noindent Therefore, $B$.
+\end{proof}
+\end{minipage}
+}
+\end{center}
+\end{skeleton}
 
 \begin{exercise}
 Describe the meaning of $\neg (A \wedge B)$ and $\neg (A \vee B)$.
@@ -116,6 +135,14 @@ The \textbf{converse} of $A \implies B$ is $B \implies A$.
 Provide an example of a true conditional proposition whose converse is false.
 \end{exercise}
 
+\begin{definition}\label{def:converse}
+The \textbf{inverse} of $A \implies B$ is $\neg A \implies \neg B$.
+\end{definition}
+
+\begin{exercise}
+Provide an example of a true conditional proposition whose inverse is false.
+\end{exercise}
+
 \begin{definition}
 The \textbf{contrapositive} of $A \implies B$ is $\neg B \implies \neg A$.
 \end{definition}
@@ -141,13 +168,32 @@ Find the converse and the contrapositive of the following statement: ``If a pers
 %\end{enumerate}
 %\end{exercise}
 
-Use truth tables to prove the following theorem.
+Use a truth table to prove the following theorem.
 
 \begin{theorem}\label{thm:contrapos}
 The implication ${A\implies B}$ is equivalent to its contrapositive.
 \end{theorem}
 
-The upshot of Theorem~\ref{thm:contrapos} is that if you want to prove a conditional proposition, you can prove its contrapositive instead.
+The upshot of Theorem~\ref{thm:contrapos} is that if you want to prove a conditional proposition, you can prove its contrapositive instead, called \textbf{proof by contraposition}.
+
+\begin{skeleton}[Proof of $A\implies B$ by contraposition]\label{pf by contraposition}
+If you want to prove the implication $A\implies B$ by proving its contrapositive $\neg B\implies \neg A$ instead, then the structure of the proof is as follows.
+
+\begin{center}
+\framebox{
+\begin{minipage}{6in}
+\vspace{.1in}
+\begin{proof}
+We will prove that if $A$, then $B$ by proving its contrapositive.  Assume $\neg B$.
+\begin{center}
+$\ldots$ \ \emph{[Use definitions and known results to derive $\neg A$]} \ $\ldots$\\
+\end{center}
+\noindent This proves that if $\neg B$, then $\neg A$.  Therefore, if $A$, then $B$.
+\end{proof}
+\end{minipage}
+}
+\end{center}
+\end{skeleton}
 
 \begin{problem}
 Consider the following statement:
