@@ -29,7 +29,7 @@ If $f:X\to Y$ and $g:Y\to Z$ are both one-to-one correspondences, then $g\circ f
 \end{corollary}
 
 \begin{problem}
-Assume that $f:X\to Y$ and $g:Y\to Z$ are both functions.  For each of the following statements, if the statement is true, then prove it.  If the statement is false, provide a counterexample.
+Assume that $f:X\to Y$ and $g:Y\to Z$ are both functions.  Determine whether each of the following statements is true or false. If the statement is true, prove it.  Otherwise, provide a counterexample.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item If $g\circ f$ is one-to-one, then $f$ is one-to-one.
 \item If $g\circ f$ is one-to-one, then $g$ is one-to-one.
@@ -79,6 +79,17 @@ Let $f:X\to Y$ and $g:Y\to X$ be functions satisfying $(f\circ g)(x)=x$ for all 
 
 \begin{theorem}
 Let $f:X\to Y$ and $g:Y\to Z$ be functions.  If $f$ and $g$ are both one-to-one correspondences, then $(g\circ f)^{-1}=f^{-1}\circ g^{-1}$.
+\end{theorem}
+
+The previous theorem is sometimes referred to as the ``socks and shoes theorem".  Do you see how it got this name?
+
+\begin{theorem}
+Let $f:X\to Y$ be a function and define $\sim$ on $X$ via $a\sim b$ if and only if $f(a) = f(b)$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item The relation $\sim$ is an equivalence relation,
+\item Each equivalence class $[a]$ is equal to $f^{-1}(f(a))$,
+\item The function $g:X/\mathord\sim\to f(X)$ defined via $g([a]) = f(a)$ is a bijection.
+\end{enumerate}
 \end{theorem}
 
 \end{section}

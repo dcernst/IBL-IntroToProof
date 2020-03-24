@@ -37,7 +37,7 @@ Determine which of the following are equivalence relations.  Some of these occur
 \item Let $P$ be the set of all people and define $T$ via $xTy$ if and only if $x$ is taller than $y$.
 \item Consider the relation ``divides" on $\mathbb{N}$.
 \item Let $L$ be the set of lines and define $||$ via $l_1||l_2$ if and only if $l_1$ is parallel to $l_2$.
-\item Let $C[0,1]$ be the set of continuous functions on $[0,1]$.  Define $f\sim g$ iff
+\item Let $C[0,1]$ be the set of continuous functions on $[0,1]$.  Define $f\sim g$ if and only if
 \[
 \int_0^1|f(x)|\ dx=\int_0^1|g(x)|\ dx.
 \]
@@ -51,16 +51,17 @@ Determine which of the following are equivalence relations.  Some of these occur
 \end{exercise}
 
 \begin{definition}\label{def:relatives}
-Let $\sim$ be a relation on a set $A$ (not necessarily an equivalence relation) and let $x\in A$.  Then we define the \textbf{set of relatives of $x$} via
+Let $\sim$ be a relation on a set $A$ (not necessarily an equivalence relation) and let $x\in A$.  Then we define the \textbf{set of relatives of $x$ with respect to $\sim$} via
 \[
-[x]=\{y\in A\mid x\sim y\}.
+[x]_{\sim}=\{y\in A\mid x\sim y\}.
 \]
-Also, define
+We also define
 \[
 \Omega_{\sim}=\{[x]\mid x\in A\}.
 \]
-Notice that $\Omega_{\sim}$ is a set of sets.  In particular, an element in $\Omega_{\sim}$ is a subset of $A$ (equivalently, an element of $\mathcal{P}(A)$).  Other common notations for $[x]$ include $\overline{x}$ and $R_x$.
 \end{definition}
+
+If $\sim$ is clear from he context, we will often write $[x]$ in place of $[x]_{\sim}$. Another common notation for the set of relatives of $x$ is $\overline{x}$. Notice that $\Omega_{\sim}$ is a set of sets.  In particular, an element in $\Omega_{\sim}$ is a subset of $A$---equivalently, an element of $\mathcal{P}(A)$.
 
 \begin{exercise}
 Let $P_f$ and $F$ be as in part~\ref{exer:facebook} of Exercise~\ref{exer:lots of them}.  Describe $[\text{Bob}]$ (assume you know which Bob we're talking about).  What is $\Omega_F$?
@@ -89,19 +90,23 @@ Suppose $\sim$ is an equivalence relation on a set $A$ and let $a,b\in A$.  Then
 \begin{theorem}\label{thm:equiv yields partition}
 Suppose $\sim$ is an equivalence relation on a set $A$.  Then
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $\bigcup_{x\in A}[x]=A$, and
+\item $\displaystyle \bigcup_{x\in A}\ [x]=A$, and
 \item For all $x,y\in A$, either $[x]=[y]$ or $[x]\cap [y]=\emptyset$.
 \end{enumerate}
 \end{theorem}
 
+In light of Theorem~\ref{thm:equiv yields partition}, we have the following definition.
+
 \begin{definition}\label{def:equivalence class}
-In light of Theorem~\ref{thm:equiv yields partition}, if $\sim$ is an equivalence relation on a set $A$, then we refer to each $[x]$ as the \textbf{equivalence class} of $x$.  In this case, $\Omega_{\sim}$ is the set of equivalence classes determined by $\sim$.
+If $\sim$ is an equivalence relation on a set $A$, then we refer to each $[x]$ as the \textbf{equivalence class} of $x$.
 \end{definition}
+
+When $\sim$ is an equivalence relation on a set $A$, the collection of equivalence classes is denoted by $A/\mathord\sim$, which is read as ``$A$ modulo $\sim$" or ``$A$ mod $\sim$".  The collection $A/\mathord\sim$ is sometimes referred to as the \textbf{quotient set of $A$ by $\sim$}. Note that $\Omega_{\sim}$ equals $A/\mathord\sim$ whenever $\sim$ is an equivalence relation.
 
 The upshot of Theorem~\ref{thm:equiv yields partition} is that given an equivalence relation, every element lives in exactly one equivalence class.  We'll see in the next section of notes that we can run this in reverse.  That is, if we separate out the elements of a set so that every element is an element of exactly one subset (like the bins of my kid's toys), then this determines an equivalence relation.  More on this later.
 
 \begin{example}
-The set of relatives that you found in part~\ref{exer:mod 5} of Exercise~\ref{exer:lots of them} is the set of equivalence classes modulo 5.
+The collection of sets of relatives that you found in part~\ref{exer:mod 5} of Exercise~\ref{exer:lots of them} is the set of equivalence classes modulo 5.
 \end{example}
 
 \begin{exercise}
