@@ -1,7 +1,5 @@
 \begin{section}{Introduction to Functions}
 
-The concept of function is one of the most important and fundamental ones in the field of mathematics.  Functions are used in all branches of mathematics to model diverse situations and pull together ideas that at first seem unrelated.  Functions are as vital as numbers.
-
 Undoubtably, you have encountered the concept of function in your prior mathematical experience.  In this section, we will introduce the concept of function as a special type of relation.  As you shall see, this agrees with any previous definition of function that you may have learned.  
 
 Up until this point, you've probably only encountered functions as an algebraic rule, e.g., $f(x)=x^{2}-1$, for transforming one real number into another.  However, we can study functions in a much broader context.  Loosely speaking, the basic building blocks of a function are a first set and a second sets, say $X$ and $Y$, respectively, and a ``correspondence'' that assigns each element of $X$ to exactly one element of $Y$.  Let's take a look at the actual definition.
@@ -108,7 +106,7 @@ Let $f:X\to Y$ be a function.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item The function $f$ is said to be \textbf{one-to-one} (or \textbf{injective}) if for all $y\in \range(f)$, there is a unique $x\in X$ such that $y=f(x)$.
 \item The function $f$ is said to be \textbf{onto} (or \textbf{surjective}) if for all $y\in Y$, there exists $x\in X$ such that $y=f(x)$.
-\item If $f$ is both one-to-one and onto, we say that $f$ is a \textbf{one-to-one correspondence} (or a \textbf{bijection}).
+\item If $f$ is both one-to-one and onto, we say that $f$ is a \textbf{bijection} (or \textbf{one-to-one correspondence}).
 \end{enumerate}
 \end{definition}
 
@@ -121,7 +119,7 @@ Provide an example of each of the following.  You may draw a bubble diagram, wri
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item A function $f:X\to Y$ that is one-to-one but not onto.
 \item A function $f:X\to Y$ that is onto but not one-to-one.
-\item A function $f:X\to Y$ that is both one-to-one and onto.
+\item A function $f:X\to Y$ that is a bijection.
 \item A function $f:X\to Y$ that is neither one-to-one nor onto.
 \end{enumerate}
 
@@ -136,7 +134,7 @@ Provide an example of each of the following.  You may either draw a graph or wri
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item A function $f:\mathbb{R}\to \mathbb{R}$ that is one-to-one but not onto.
 \item A function $f:\mathbb{R}\to \mathbb{R}$ that is onto but not one-to-one.
-\item A function $f:\mathbb{R}\to \mathbb{R}$ that is both one-to-one and onto.
+\item A function $f:\mathbb{R}\to \mathbb{R}$ that is a bijection.
 \item A function $f:\mathbb{R}\to \mathbb{R}$ that is neither one-to-one nor onto.
 \end{enumerate}
 \end{exercise}
@@ -152,6 +150,14 @@ Determine which of the following functions are one-to-one, onto, both, or neithe
 \item $N:\mathbb{N}\to \mathbb{N}\times \mathbb{N}$ defined via $N(n)=(n,n)$
 \end{enumerate}
 \end{exercise}
+
+\begin{definition}
+If $X$ is a nonempty set, then the function $i_X:X\to X$ defined via $i_X(x)=x$ is called the \emph{identity function} on $X$.
+\end{definition}
+
+\begin{theorem}
+The identity function on a nonempty set $X$ is a bijection.
+\end{theorem}
 
 \begin{exercise}
 Let $A$ and $B$ be sets and let $S\subseteq A\times B$.  Define $\pi_{1}:S\to A$ and $\pi_{2}:S\to B$ via $\pi_{1}(a,b)=a$ and $\pi_{2}(a,b)=b$.  We call $\pi_{1}$ (respectively, $\pi_{2}$) the \textbf{projections} of $S$ onto $A$ (respectively, $B$).
