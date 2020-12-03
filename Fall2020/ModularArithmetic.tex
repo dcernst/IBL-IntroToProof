@@ -1,0 +1,135 @@
+\begin{section}{Modular Arithmetic}\label{sec:ModularArithmetic}
+In this section, we look at a particular family of equivalence relations on the integers and explore the way in which arithmetic interacts with them.
+
+\begin{definition}
+For each $m\in \mathbb{N}$, define $m\mathbb{Z}$ to be the set of all integers that are divisible by $m$; in set-builder notation, we have   $m\mathbb{Z} = \{n \in \mathbb{Z}  \mid n = mk \text{ for some } k \in \mathbb{Z}\}.$
+
+\end{definition}
+
+For example, $5 \mathbb{Z} = \{ \ldots,-10,-5,0,5,10,\ldots\}$ (the integers divisible by $5$), and $2\mathbb{Z}$ is the set of even integers. What is $3\mathbb{Z}$? What about $1\mathbb{Z}$?
+
+\begin{exercise} 
+Consider the sets $3 \mathbb{Z}$, $5 \mathbb{Z}$, $15 \mathbb{Z}$, and $20 \mathbb{Z}$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item List at least five elements in each of the above sets.
+\item Notice that $3 \mathbb{Z} \cap5 \mathbb{Z} = m\mathbb{Z}$ for some $m$; what is $m$? Describe $15 \mathbb{Z}\cap 20 \mathbb{Z}$ a similar way.
+\item Draw a Venn diagram illustrating how the sets $3 \mathbb{Z}$, $5 \mathbb{Z}$, and $15 \mathbb{Z}$ intersect.  
+\item Draw a Venn diagram illustrating how the sets $5 \mathbb{Z}$, $15 \mathbb{Z}$, and $20 \mathbb{Z}$ intersect.
+\end{enumerate}
+\end{exercise}
+
+\begin{theorem}
+Let $m\in \mathbb{N}$. If $a,b \in m \mathbb{Z}$, then $-a$, $a+b$, and $ab$ are also in $m \mathbb{Z}$.\footnote{You are encouraged to make use of what you proved in Chapter~\ref{chap:IntroToMath}.}
+\end{theorem}
+
+\begin{definition}\label{def:modulo}
+For each  $m\in \mathbb{N}$,  define a relation on $\mathbb{Z}$ via $a\equiv_m b$ if and only if $(a-b) \in m\mathbb{Z}$. We read $a\equiv_m b$ as ``$a$ is congruent to $b$ modulo $m$.''
+\end{definition}
+
+\begin{theorem}
+For  $m\in \mathbb{N}$, the relation $\equiv_m$ is an equivalence relation on $\mathbb{Z}$.
+\end{theorem}
+
+Since we know that $\equiv_m$ is an equivalence relation, we introduce some more notation.
+
+\begin{definition}\label{def:modulo}
+For  $m\in \mathbb{N}$, let $[a]_m$ denote the equivalence class of $a$ with respect to $\equiv_m$ (see Definitions~\ref{def:relatives} and \ref{def:equivalence class}). The class $[a]_m$ is called the \textbf{class of $a$ modulo $m$}. The set of all equivalence classes determined by  $\equiv_m$ is denoted $\mathbb{Z}/m\mathbb{Z}$.
+\end{definition}
+
+\begin{example}\label{exam:twomodseven}
+You computed $[1]_5$ and $[2]_5$ in Exercise~\ref{exer:mod5classes}. Now, let's compute $[2]_7$ together. 
+Tracing back through the definitions, we find that \[n \in [2]_7 \iff n \equiv_7 2 \iff (n-2)\in 7\mathbb{Z} \iff n-2 = 7k \text{ for some $k\in \mathbb{Z}$}.\] Thus, $n \in [2]_7 \iff n = 7k +2$ for some $k\in \mathbb{Z}$, so the elements of $[2]_7$ are those numbers that are $2$ more than a multiple of $7$. The multiples of $7$ are $7\mathbb{Z} = \{\ldots,-14,-7,0,7,14,\ldots\}$, so we can find $[2]_7$ by adding $2$ to each element of $7\mathbb{Z}$ to get $[2]_7 = \{\ldots,-12,-5,2,9,16,\ldots\}$. 
+\end{example}
+
+\begin{exercise}
+Find five elements in $[4]_7$ with at least one greater than $70$ and one less than $70$. Repeat for $[-3]_7$ and $[7]_7$.
+\end{exercise}
+
+\begin{exercise}
+Describe $[0]_3$, $[1]_3$, $[2]_3$, $[4]_3$, and $[-2]_3$ with lists as in Example~\ref{exam:twomodseven}. Which of these are equal?   How many (different) classes are in $\mathbb{Z}/3\mathbb{Z}$? (Theorem~\ref{thm:equiv yields partition} is helpful.)
+\end{exercise}
+
+\begin{theorem}\label{thm.congclassesequal}
+For  $m\in \mathbb{N}$ and $a,b\in \mathbb{Z}$, $[a]_m = [b]_m$ if and only if $(a-b)$ is divisible by $m$.\footnote{Theorem~\ref{thm:related if and only if same class} is very helpful.} 
+\end{theorem}
+
+\begin{theorem}\label{thm.divisibleiffzeromod}
+For  $m\in \mathbb{N}$ and $a\in \mathbb{Z}$, $[a]_m = [0]_m$ if and only if $a$ is divisible by $m$.
+\end{theorem}
+
+\begin{theorem}
+Let $m\in \mathbb{N}$, and let $a_1,a_2,b_1,b_2 \in \mathbb{Z}$. If $[a_1]_m = [a_2]_m$ and $[b_1]_m = [b_2]_m$, then 
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $[a_1+b_1]_m = [a_2+b_2]_m,$\footnote{Consider using Theorem~\ref{thm.congclassesequal}.} and
+\item $[a_1\cdot b_1]_m = [a_2\cdot b_2]_m$.\footnote{Hint: note that $a_1b_1-a_2b_2 = a_1b_1 -a_2b_1 + a_2b_1-a_2b_2$.}
+\end{enumerate}
+\end{theorem}
+
+The previous theorem allows us to define addition and multiplication for $\mathbb{Z}/m\mathbb{Z}$. 
+
+\begin{definition}\label{def:modulararithmetic}
+Let $m\in \mathbb{N}$. For $[a]_m, [b]_m \in \mathbb{Z}/m\mathbb{Z}$, define the sum $[a]_m + [b]_m$ to be $[a+b]_m$, and define the product $[a]_m \cdot [b]_m$ to be $ [a\cdot b]_m$.
+\end{definition}
+
+\begin{example}
+By Definition~\ref{def:modulararithmetic}, $[2]_7+[6]_7 = [2+6]_7 = [8]_7$. Since $[8]_7 = [1]_7$ (by Theorem~\ref{thm.congclassesequal}), we can write this as $[2]_7+[6]_7 = [1]_7$. Similarly, $[2]_7\cdot[6]_7 = [2\cdot6]_7 = [12]_7 = [5]_7$.
+\end{example}
+
+Addition and multiplication for $\mathbb{Z}/m\mathbb{Z}$ has many familiar (and some not so familiar) properties. For example, addition and multiplication are both associative and commutative. But, it is possible for $[a]_m\cdot[b]_m = [0]_m$ even when $[a]_m \neq [0]_m$ and $[b]_m \neq [0]_m$.
+
+\begin{exercise}
+Find $a$ and $b$ such that $[a]_6\cdot[b]_6 = [0]_6$ but $[a]_6 \neq [0]_6$ and $[b]_6 \neq [0]_6$. Do the same in $\mathbb{Z}/15\mathbb{Z}$: find $a$ and $b$ such that $[a]_{15}\cdot[b]_{15} = [0]_{15}$ but $[a]_{15} \neq [0]_{15}$ and $[b]_{15} \neq [0]_{15}$.
+\end{exercise}
+
+\begin{theorem}
+Let $m\in \mathbb{N}$. If $m$ is not prime, then there exists $[a]_m, [b]_m \in \mathbb{Z}/m\mathbb{Z}$ such that $[a]_m\cdot[b]_m = [0]_m$ but $[a]_m \neq [0]_m$ and $[b]_m \neq [0]_m$.
+\end{theorem}
+
+\begin{theorem}
+Let $m\in \mathbb{N}$. Then addition in $\mathbb{Z}/m\mathbb{Z}$ is associative and commutative.\footnote{This means for all $[a]_m, [b]_m, [c]_m \in \mathbb{Z}/m\mathbb{Z}$, $([a]_m + [b]_m) + [c]_m = [a]_m + ([b]_m + [c]_m)$ and $[a]_m + [b]_m = [b]_m + [a]_m$.}
+\end{theorem}
+
+\begin{theorem}
+Let $m\in \mathbb{N}$. Then multiplication in $\mathbb{Z}/m\mathbb{Z}$ is associative and commutative.
+\end{theorem}
+
+\begin{exercise}
+Notice that $2x = 1$ has no solution in $\mathbb{Z}$. Show that  $[2]_7[x]_7 = [1]_7$ does have a solution with $x$ in $\mathbb{Z}$. What about $[14]_7[x]_7 = [1]_7$?
+\end{exercise}
+
+\begin{theorem}\label{thm.modularsumsproducts}
+Let $m\in \mathbb{N}$.  For all $k\in \mathbb{N}$, if $[a_1]_m,[a_2]_m,\ldots, [a_k]_m \in \mathbb{Z}/m\mathbb{Z}$, then 
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $[a_1]_m+[a_2]_m+\cdots+ [a_k]_m = [a_1 + a_2 +\cdots+ a_k]_m$, and
+\item $[a_1]_m [a_2]_m \cdots  [a_k]_m = [a_1 a_2 \cdots a_k]_m$.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}\label{rmk.modularpower}
+Part~(b) of Theorem~\ref{thm.modularsumsproducts} implies that $([a]_m)^k = [a^k]_m$.
+\end{remark}
+
+\begin{exercise}
+For each of the following, find a number $a$ with $0\le a \le 6$ such that the given quantity is equal to $[a]_7$. The first one is done as an example.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $[8^{179}]_7$
+ \quad\textit{Solution:}  $[8^{179}]_7 = ([8]_7)^{179} =  ([1]_7)^{179} =  [1^{179}]_7 = [1]_7$. Thus, \fbox{$a=1$.} \footnote{Remark~\ref{rmk.modularpower} was used twice. We also used that  $[8]_7 = [1]_7$.}
+\item $[6^{179}]_7$ \quad(There is a hint in the footnotes.\footnote{Hint:  $[6]_7 = [-1]_7$.})
+\item $[2^{300}]_7$ \quad(There is a hint in the footnotes.\footnote{Hint:  $[2^3]_7 = [1]_7$.})
+\item $[2^{301} +5]_7$
+\end{enumerate}
+\end{exercise}
+
+\begin{theorem}
+Let $n\in \mathbb{N}$, and let $a_k, a_{k-1}, \ldots, a_1, a_0$ be the digits of $n$, i.e. $n=a_k10^k + a_{k-1}10^{k-1} + \cdots + a_110 + a_0$. Then $[n]_3 =  [a_k + a_{k-1} + \cdots + a_1 + a_0]_3$.
+\end{theorem}
+
+\begin{theorem}
+An integer is divisible by $3$ if and only if the sum of its digits is divisible by $3$.\footnote{Consider using Theorem~\ref{thm.divisibleiffzeromod}.}
+\end{theorem}
+
+\begin{exercise}
+Using modular arithmetic, prove that for all integers $n \ge 0$, $3^{2n}-1$ is divisible by $8$.\footnote{By Theorem~\ref{thm.divisibleiffzeromod}, you just need to show that $[3^{2n}-1]_8 = [0]_8$.} Did you find this easier than, harder than, or the same as using induction?
+\end{exercise}
+
+\end{section}

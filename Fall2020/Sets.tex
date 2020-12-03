@@ -1,0 +1,187 @@
+\begin{section}{Sets}
+
+\begin{definition}
+A \textbf{set} is a collection of objects called \textbf{elements}. If $A$ is a set and $x$ is an element of $A$, we write $x\in A$. Otherwise, we write $x\notin A$. The set containing no elements is called the \textbf{empty set}, and is denoted by the symbol $\emptyset$.
+\end{definition}
+
+If we think of a set as a box potentially containing some stuff, then the empty set is a box with nothing in it. One assumption we will make is that for any set $A$, $A\notin A$.
+
+\begin{definition} 
+The language associated to sets is specific.  We will often define sets using the following notation, called \textbf{set builder notation}:
+\[
+\boxed{S=\{x \in A\mid x \mbox{ satisfies some condition}\}}
+\]
+The first part ``$x \in A$" denotes what type of $x$ is being considered.  The statements to the right of the vertical bar (not to be confused with ``divides") are the conditions that $x$ must satisfy in order to be members of the set.  This notation is read as ``The set of all $x$ in $A$ such that $x$ satisfies some condition,'' where ``some condition" is something specific about the restrictions on $x$ relative to $A$.
+\end{definition}
+
+There are a few sets that are commonly discussed in mathematics and have predefined symbols to denote them. We've already encountered the integers, natural numbers, and real numbers. Notice that our definition of the rational numbers uses set builder notation.
+\begin{itemize}
+\item \textbf{Real Numbers:} $\mathbb{R}$ denotes the set of real numbers.
+\item \textbf{Integers:} $\mathbb{Z}:=\{0, \pm 1, \pm2, \pm 3, \ldots\}$
+\item \textbf{Natural numbers:} $\mathbb{N}:=\{1,2,3,\ldots\}$. Since this set consists of the positive integers, the natural numbers are sometimes denoted by $\mathbb{Z}^+$. Some books will include zero in the set of natural numbers, but we will not do that.
+\item \textbf{Rational Numbers:} $\mathbb{Q}:=\{a/b \mid a, b \in \mathbb{Z} \text{ and } b \neq 0\}$.
+\end{itemize}
+
+\begin{exercise}
+Unpack each of the following sets and see if you can find a simple description of the elements that each set contains.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+%\item $M=\{x \in \mathbb{R} \mid  x \geq 2 \}$
+\item $A=\{x \in \mathbb{N} \mid x = 3k \mbox{ for some } k\in \mathbb{N} \}$
+\item $B=\{t \in \mathbb{R} \mid t^2 \leq 2 \}$
+\item $C=\{t \in \mathbb{Z} \mid t^2 \leq 2 \}$
+\item $D=\{m \in \mathbb{R} \mid m = 1 - \frac{1}{n} \mbox{, where } n \in \mathbb{N} \}$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Write each of the following sentences using set builder notation.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item The set of all real numbers less than $-\sqrt{2}$. 
+\item The set of all real numbers greater than $-12$ and less than or equal to 42.
+\item The set of all even natural numbers.
+\end{enumerate}
+\end{exercise}
+
+\begin{definition}
+If $A$ and $B$ are sets, then we say that $A$ is a \textbf{subset} of $B$, written $\boxed{A\subseteq B}$, provided that every element of $A$ is also an element of $B$.
+\end{definition}
+
+Observe that $A\subseteq B$ is equivalent to ``For all $x$ (in the universe of discourse), if $x\in A$, then $x\in B$."  Since we know how to deal with ``for all" statements and conditional propositions, we know how to go about proving $A\subseteq B$.
+
+\begin{problem}
+Suppose $A$ and $B$ are sets.  Describe a skeleton proof for proving that $A\subseteq B$.
+\end{problem}
+
+Every set always has two rather boring subsets.
+
+\begin{theorem}
+Let $S$ be a set.  Then
+\begin{multicols}{2}
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $S\subseteq S$
+\item $\emptyset \subseteq S$.
+\end{enumerate}
+\end{multicols}
+\end{theorem}
+
+\begin{exercise}
+List all of the subsets of $A=\{1,2,3\}$.  %Any conjectures about how many there might be for a set with $n$ elements?
+\end{exercise}
+
+\begin{theorem}[Transitivity of subsets]
+Suppose that $A$, $B$, and $C$ are sets.  If $A\subseteq B$ and $B\subseteq C$, then $A\subseteq C$.
+\end{theorem}
+
+\begin{definition}
+If $A\subseteq B$, then $A$ is called a \textbf{proper subset} provided that $A\neq B$.  In this case, we may write $\boxed{A\subset B}$ or $\boxed{A\subsetneq B}$.\footnote{\emph{Warning:} Some books use $\subset$ to mean $\subseteq$.}
+\end{definition}
+
+The following definitions should look familiar from precalculus.
+
+\begin{definition}[Interval Notation]
+For $a,b\in\mathbb{R}$ with $a<b$, we define the following.
+\begin{multicols}{2}
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $(a,b)=\{x\in\mathbb{R}\mid a<x<b\}$
+\item $(a,\infty)=\{x\in\mathbb{R}\mid a<x\}$
+\item $(-\infty,b)=\{x\in\mathbb{R}\mid x<b\}$
+\item $[a,b]=\{x\in\mathbb{R}\mid a\leq x\leq b\}$
+\end{enumerate}
+\end{multicols}
+\noindent We analogously define $[a,b)$, $(a,b]$, $[a,\infty)$, and $(-\infty,b]$.
+\end{definition}
+
+%\begin{exercise}
+%Provide two examples of proper subsets of the interval $[0,1]$.
+%\end{exercise}
+
+\begin{definition}
+Let $A$ and $B$ be sets in some universe of discourse $U$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item The \textbf{union} of the sets $A$ and $B$ is $\boxed{A \cup B} =\{x\in U \mid x\in A \mbox{ or } x\in B \}$.
+\item The \textbf{intersection} of the sets $A$ and $B$ is $\boxed{A \cap B} =\{x\in U \mid x\in A \mbox{ and } x\in B \}$.
+\item The \textbf{set difference} of the sets $A$ and $B$ is $\boxed{A \setminus B} =\{x\in U \mid x\in A \mbox{ and } x\notin B \}$.
+\item The \textbf{complement of $A$} (relative to $U$) is the set $\boxed{A^c}=U \setminus A =\{x \in U \mid x \notin A\}$.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}
+If two sets $A$ and $B$ have the property that $A \cap B = \emptyset$, then we say that $A$ and $B$ are \textbf{disjoint} sets.
+\end{definition}
+
+\begin{exercise}
+Suppose that the universe of discourse is $U=\{1,2,3,4,5,6,7,8,9,10\}$.  Let $A=\{1, 2, 3, 4, 5\}$, $B=\{1, 3, 5\}$, and $C=\{2, 4, 6, 8\}$.  Find each of the following.
+\begin{multicols}{2}
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $A \cap C$
+%\item $A \cap B$
+\item $B \cap C$
+%\item $A \cup C$
+\item $A \cup B$
+\item $A\setminus B$
+\item $B \setminus A$
+\item $C \setminus B$
+\item $B^c$
+\item $A^c$
+\item $(A\cup B)^c$
+\item $A^c\cap B^c$
+\end{enumerate}
+\end{multicols}
+\end{exercise}
+
+\begin{exercise}
+Suppose that the universe of discourse is $U=\mathbb{R}$.  Let $A=[-3,-1)$, $B=(-2.5,2)$, and $C=(-2,0]$.  Find each of the following.
+\begin{multicols}{2}
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $A^c$
+\item $A \cap C$
+\item $A \cap B$
+%\item $A \cup C$
+\item $A \cup B$
+\item $(A\cap B)^c$
+\item $(A\cup B)^c$
+\item $A \setminus B$
+\item $A\setminus (B \cup C)$
+\item $B \setminus A$
+%\item $B \cap C$
+\end{enumerate}
+\end{multicols}
+\end{exercise}
+
+\begin{theorem}
+Let $A$ and $B$ be sets.  If $A \subseteq B$, then $B^c \subseteq A^c$.
+\end{theorem}
+
+\begin{definition}
+Two sets $A$ and $B$ are \textbf{equal}, denoted $\boxed{A=B}$, if and only if $A \subseteq B$ and $B \subseteq A$.
+\end{definition}
+
+Given two sets $A$ and $B$, if we want to prove $A=B$, then we have to do two separate mini-proofs: one for $A\subseteq B$ and one for $B\subseteq A$. It is common to label each mini-proof with ``$(\subseteq)$" and ``$(\supseteq)$", respectively.
+
+\begin{theorem}
+Let $A$ and $B$ be sets.  Then $A\setminus B = A \cap B^c$.
+\end{theorem}
+
+For each of the next two theorems, you can choose to prove either part (a) or part (b). Of course, you are welcome to prove both parts, but you do not have to.
+
+\begin{theorem}[DeMorgan's Law]
+Let $A$ and $B$ be sets. Then
+\begin{multicols}{2}
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $(A \cup B)^c = A^c \cap B^c$
+\item $(A \cap B)^c = A^c \cup B^c$.
+\end{enumerate}
+\end{multicols}
+\end{theorem}
+
+\begin{theorem}[Distribution of Union and Intersection]
+Let $A$, $B$, and $C$ be sets. Then
+\begin{multicols}{2}
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $A \cup(B\cap C) = (A\cup B)\cap (A\cup C)$
+\item $A\cap (B\cup C)= (A\cap B)\cup (A\cap C)$.
+\end{enumerate}
+\end{multicols}
+\end{theorem}
+
+\end{section}
