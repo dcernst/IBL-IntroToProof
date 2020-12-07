@@ -8,49 +8,68 @@ As you've probably already noticed, equivalence relations are intimately related
 A collection $\Omega$ of subsets of a set $A$ is said to be a \textbf{partition} of $A$ if the elements of $\Omega$ satisfy:
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item Each $X\in \Omega$ is nonempty,
-\item Given $X,Y\in\Omega$, either $X=Y$ or $X\cap Y=\emptyset$, and
+\item For all $X,Y\in\Omega$, $X\cap Y=\emptyset$ when $X\neq Y$, and
 \item $\displaystyle \bigcup_{X\in\Omega}X=A$.
 \end{enumerate}
-That is, the elements of $\Omega$ are pairwise disjoint and their union is all of $A$.
+That is, the elements of $\Omega$ are pairwise disjoint and their union is all of $A$. Each $X\in \Omega$ is called a \textbf{block} of the partition.
 \end{definition}
 
-Notice that in the second condition of Definition~\ref{def:partition}, we cannot have both $X=Y$ and $X\cap Y=\emptyset$ at the same time.
-
 \begin{example}
-The following are all examples of partitions of the given set.  Perhaps you can find exceptions in these examples, but please take them at face value.
+The following are examples of partitions of the given set.  Perhaps you can find exceptions in the first two examples, but please take them at face value.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item Democrat, Republican, Independent, Green Party, Libertarian, etc. (set of registered voters)
-\item freshman, sophomore, junior, senior (set of high school students)
-\item evens, odds (set of integers)
-\item rationals, irrationals (set of real numbers)
+\item Freshman, sophomore, junior, senior (set of high school students)
+\item Evens, odds (set of integers)
+\item Rationals, irrationals (set of real numbers)
 \end{enumerate}
 \end{example}
 
 \begin{example}\label{ex:a partition}
-Let $A=\{a,b,c,d,e,f\}$ and $\Omega=\{\{a\}, \{b,c,d\}, \{e,f\}\}$.  Then $\Omega$ is a partition of $A$ since the elements of $\Omega$ are nonempty subsets of $A$, pairwise disjoint, and their union is all of $A$.
+Let $A=\{a,b,c,d,e,f\}$ and $\Omega=\{\{a\}, \{b,c,d\}, \{e,f\}\}$. Since the elements of $\Omega$ are pairwise disjoint nonempty subsets of $A$ such that their union is all of $A$, $\Omega$ is a partition of $A$ consisting of three blocks.
 \end{example}
 
 \begin{exercise}
 Consider the set $A$ from Example~\ref{ex:a partition}.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item Find a partition of $A$ that has 4 subsets in the partition.
+\item Find a partition of $A$ consisting of four blocks.
 \item Find a collection of subsets of $A$ that does \emph{not} form a partition.
 \end{enumerate}
 \end{exercise}
 
 \begin{exercise}
-Find a partition of $\mathbb{N}$ that consists of 3 subsets, where one of the sets is finite and the remaining two sets are infinite.
+Let $P$ be the set of prime numbers, $N$ the set of odd natural numbers that are not prime, and $E$ the set of even natural numbers.  Determine whether $\{P, N, E\}$ is a partition of $\mathbb{N}$.
 \end{exercise}
 
 \begin{exercise}
-Let $P$ be the set of prime numbers, $N$ be the set of odd natural numbers that are not prime, and $E$ be the set of even natural numbers.  Explain why this is not a partition of $\mathbb{N}$.
+Find a partition of $\mathbb{R}$ that consists of three blocks, where one of the blocks is finite and the remaining two blocks are infinite.
 \end{exercise}
+
+\begin{exercise}
+For each of the following, find a partition of $\mathbb{Z}$ with the given properties.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item A partition of $\mathbb{Z}$ that consists of finitely many blocks, where each of the blocks is infinite.
+\item A partition of $\mathbb{Z}$ that consists of infinitely many blocks, where each of the blocks is finite.
+\item A partition of $\mathbb{Z}$ that consists of infinitely many blocks, where each of the blocks is infinite.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+For each relation in Exercise~\ref{exer:lots of relations}, determine whether the corresponding collection of distinct sets of relatives forms a partition of the given set.
+\end{exercise}
+
+\begin{problem}
+Can we partition the empty set?  If so, describe a partition.  If not, explain why.
+\end{problem}
 
 The next theorem spells out half of the close connection between partitions and equivalence relations.  Hopefully you were anticipating this.
 
 \begin{theorem}\label{thm:equiv yields partition2}
-Let $\sim$ be an equivalence relation on a set $A$.  Then $\Omega_{\sim}$ forms a partition of~$A$.
+If $\sim$ is an equivalence relation on a nonempty set $A$, then $\Omega_{\sim}$ forms a partition of~$A$.
 \end{theorem}
+
+\begin{problem}
+In the previous theorem, why did we require $A$ to be nonempty?
+\end{problem}
 
 \begin{exercise}
 Consider the equivalence relation
@@ -60,30 +79,30 @@ Consider the equivalence relation
 on the set $A=\{1,2,3,4,5,6\}$.  Find the partition determined by $\Omega_{\sim}$.
 \end{exercise}
 
-It turns out that we can reverse the situation, as well.  That is, given a partition, we can form an equivalence relation.  Before proving this, we need a definition.
+It turns out that we can reverse the situation, as well.  That is, given a partition, we can form an equivalence relation such that the equivalence classes correspond to the blocks of the partition.  Before proving this, we need a definition.
 
 \begin{definition}
 Let $A$ be a set and $\Omega$ any collection of subsets of $A$ (not necessarily a partition).  If $a,b\in A$, we will define $a$ to be $\Omega$-related to $b$ if there exists an $R\in \Omega$ that contains both $a$ and $b$.  This relation is denoted by $\sim_{\Omega}$ and is called the \textbf{relation on $A$ associated to $\Omega$}.
 \end{definition}
 
-This definition may look more awkward than the actual underlying concept.  The idea is that if two elements are in the same subset, then they are related.  For example, when my kids pick up all their toys and put them in the appropriate toy bins, we say that two toys are related if they are in the same bin.
+This definition may look more awkward than the actual underlying concept.  The idea is that if two elements are in the same subset, then they are related.  For example, when my kids pick up all their toys and put each toy in the appropriate toy bin, we say that two toys are related if they are in the same bin.
 
-Notice that we have two notations that look similar: $\Omega_{\sim}$ and $\sim_{\Omega}$.  
+Notice that we have two notations that look similar: $\Omega_{\sim}$ and $\sim_{\Omega}$.  As a reminder:
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $\Omega_{\sim}$ is the collection of subsets of $A$ determined by the relation $\sim$.
-\item $\sim_{\Omega}$ is the relation determined by the collection of subsets $\Omega$.
+\item The collection of subsets of $A$ determined by the relation $\sim$ is denoted by $\Omega_{\sim}$.  If $\sim$ is an equivalence relation, then $\Omega_{\sim}=A/\mathord\sim$.
+\item The relation determined by the collection of subsets $\Omega$ is denoted by $\sim_{\Omega}$.
 \end{enumerate}
 
 \begin{exercise}
-Let $A=\{a,b,c,d,e,f\}$ and let $\Omega=\{X_{1},X_{2},X_{3}\}$, where $X_{1}=\{a,c\}$, $X_{2}=\{b,c\}$, and $X_{3}=\{d,f\}$.  List the elements of $\sim_{\Omega}$ by listing ordered pairs or drawing a digraph.
+Let $A=\{a,b,c,d,e,f\}$ and let $\Omega=\{X_{1},X_{2},X_{3}\}$, where $X_{1}=\{a,c\}$, $X_{2}=\{b,c\}$, and $X_{3}=\{d,f\}$.  List the elements of $\sim_{\Omega}$ by listing ordered pairs and then draw the corresponding digraph.
 \end{exercise}
 
 \begin{exercise}
-Let $A$ and $\Omega$ be as in Example~\ref{ex:a partition}.  List the elements of $\sim_{\Omega}$ by listing ordered pairs or drawing a digraph.
+Let $A$ and $\Omega$ be as in Example~\ref{ex:a partition}.  List the elements of $\sim_{\Omega}$ by listing ordered pairs and then draw the corresponding digraph.
 \end{exercise}
 
 \begin{theorem}
-Let $A$ be a set and let $\Omega$ be a collection of subsets of $A$ (not necessarily a partition).  Then $\sim_{\Omega}$ is symmetric.
+If $\Omega$ is a collection of subsets of a set $A$ (not necessarily a partition), then $\sim_{\Omega}$ is symmetric.
 \end{theorem}
 
 \begin{exercise}
@@ -91,7 +110,7 @@ Give an example of a set $A$ and a collection $\Omega$ from $\mathcal{P}(A)$ suc
 \end{exercise}
 
 \begin{theorem}
-Let $A$ be a set and let $\Omega$ be a collection of subsets of $A$ (not necessarily a partition).  If
+If $\Omega$ is a collection of subsets of a set $A$ (not necessarily a partition) such that
 \[
 \bigcup_{R\in\Omega}R=A,
 \]
@@ -99,14 +118,14 @@ then $\sim_{\Omega}$ is reflexive.
 \end{theorem}
 
 \begin{theorem}
-Let $A$ be a set and let $\Omega$ be a collection of subsets of $A$ (not necessarily a partition).  If the elements of $\Omega$ are pairwise disjoint, then $\sim_{\Omega}$ is transitive.
+If $\Omega$ is a collection of subsets of a set $A$ (not necessarily a partition) such that the elements of $\Omega$ are pairwise disjoint, then $\sim_{\Omega}$ is transitive.
 \end{theorem}
 
 \begin{corollary}
-Let $A$ be a set and let $\Omega$ be a partition of $A$.  Then $\sim_{\Omega}$ is an equivalence relation.
+If $\Omega$ is a partition of a set $A$, then $\sim_{\Omega}$ is an equivalence relation.
 \end{corollary}
 
-The previous corollary says that every partition determines a natural equivalence relation.  Namely, two elements are related if and only if they are elements of the same set in the partition.
+The previous corollary says that every partition determines a natural equivalence relation.  Namely, two elements are related if and only if they are elements of the same block from the partition.
 
 \begin{exercise}
 Let $A=\{\circ, \triangle, \blacktriangle, \square, \blacksquare, \bigstar, \smiley, \frownie\}$.  Make up a partition $\Omega$ on $A$ and then draw the digraph corresponding to $\sim_{\Omega}$.

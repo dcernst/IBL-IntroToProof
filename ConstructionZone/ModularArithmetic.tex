@@ -58,7 +58,7 @@ For  $m\in \mathbb{N}$ and $a\in \mathbb{Z}$, $[a]_m = [0]_m$ if and only if $a$
 \end{theorem}
 
 \begin{theorem}
-Let $m\in \mathbb{N}$, and let $a_1,a_2,b_1,b_2 \in \mathbb{Z}$. If $[a_1]_m = [a_2]_m$ and $[b_1]_m = [b_2]_m$, then 
+Let $m\in \mathbb{N}$ and let $a_1,a_2,b_1,b_2 \in \mathbb{Z}$. If $[a_1]_m = [a_2]_m$ and $[b_1]_m = [b_2]_m$, then 
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $[a_1+b_1]_m = [a_2+b_2]_m,$\footnote{Consider using Theorem~\ref{thm.congclassesequal}.} and
 \item $[a_1\cdot b_1]_m = [a_2\cdot b_2]_m$.\footnote{Hint: note that $a_1b_1-a_2b_2 = a_1b_1 -a_2b_1 + a_2b_1-a_2b_2$.}
@@ -75,22 +75,26 @@ Let $m\in \mathbb{N}$. For $[a]_m, [b]_m \in \mathbb{Z}/m\mathbb{Z}$, define the
 By Definition~\ref{def:modulararithmetic}, $[2]_7+[6]_7 = [2+6]_7 = [8]_7$. Since $[8]_7 = [1]_7$ (by Theorem~\ref{thm.congclassesequal}), we can write this as $[2]_7+[6]_7 = [1]_7$. Similarly, $[2]_7\cdot[6]_7 = [2\cdot6]_7 = [12]_7 = [5]_7$.
 \end{example}
 
-Addition and multiplication for $\mathbb{Z}/m\mathbb{Z}$ has many familiar (and some not so familiar) properties. For example, addition and multiplication are both associative and commutative. But, it is possible for $[a]_m\cdot[b]_m = [0]_m$ even when $[a]_m \neq [0]_m$ and $[b]_m \neq [0]_m$.
+Addition and multiplication for $\mathbb{Z}/m\mathbb{Z}$ has many familiar (and some not so familiar) properties. For example, addition and multiplication are both associative and commutative. However, it is possible for $[a]_m\cdot[b]_m = [0]_m$ even when $[a]_m \neq [0]_m$ and $[b]_m \neq [0]_m$.
 
 \begin{exercise}
 Find $a$ and $b$ such that $[a]_6\cdot[b]_6 = [0]_6$ but $[a]_6 \neq [0]_6$ and $[b]_6 \neq [0]_6$. Do the same in $\mathbb{Z}/15\mathbb{Z}$: find $a$ and $b$ such that $[a]_{15}\cdot[b]_{15} = [0]_{15}$ but $[a]_{15} \neq [0]_{15}$ and $[b]_{15} \neq [0]_{15}$.
 \end{exercise}
 
 \begin{theorem}
-Let $m\in \mathbb{N}$. If $m$ is not prime, then there exists $[a]_m, [b]_m \in \mathbb{Z}/m\mathbb{Z}$ such that $[a]_m\cdot[b]_m = [0]_m$ but $[a]_m \neq [0]_m$ and $[b]_m \neq [0]_m$.
+If $m\in \mathbb{N}$ such that $m$ is not prime, then there exists $[a]_m, [b]_m \in \mathbb{Z}/m\mathbb{Z}$ such that $[a]_m\cdot[b]_m = [0]_m$ while $[a]_m \neq [0]_m$ and $[b]_m \neq [0]_m$.
 \end{theorem}
 
 \begin{theorem}
-Let $m\in \mathbb{N}$. Then addition in $\mathbb{Z}/m\mathbb{Z}$ is associative and commutative.\footnote{This means for all $[a]_m, [b]_m, [c]_m \in \mathbb{Z}/m\mathbb{Z}$, $([a]_m + [b]_m) + [c]_m = [a]_m + ([b]_m + [c]_m)$ and $[a]_m + [b]_m = [b]_m + [a]_m$.}
+If $m\in \mathbb{N}$, then addition in $\mathbb{Z}/m\mathbb{Z}$ is associative and commutative. That is, for all $[a]_m, [b]_m, [c]_m \in \mathbb{Z}/m\mathbb{Z}$, we have
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $([a]_m + [b]_m) + [c]_m = [a]_m + ([b]_m + [c]_m)$, and 
+\item $[a]_m + [b]_m = [b]_m + [a]_m$.
+\end{enumerate}
 \end{theorem}
 
 \begin{theorem}
-Let $m\in \mathbb{N}$. Then multiplication in $\mathbb{Z}/m\mathbb{Z}$ is associative and commutative.
+If $m\in \mathbb{N}$, then multiplication in $\mathbb{Z}/m\mathbb{Z}$ is associative and commutative.
 \end{theorem}
 
 \begin{exercise}

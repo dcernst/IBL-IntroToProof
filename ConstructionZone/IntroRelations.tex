@@ -74,10 +74,14 @@ You may not realize it, but you are familiar with many relations.  For example, 
 Different notations for relations are used in different contexts.  When talking about relations in the abstract, we indicate that a pair $(a,b)$ is in the relation by some notation like $a\sim b$, which is read ``$a$ is related to $b$."
 
 \begin{example}
-Let $P_f$ denote the set of all people with accounts on Facebook.  Define  $F$ via $xFy$ if and only if $x$ is friends with $y$.  Then $F$ is a relation on $P_f$.
+Let $P$ denote the set of all people with accounts on Facebook and define $F$ on $P$ via $xFy$ if and only if $x$ is friends with $y$.  Then $F$ is a relation on $P$.
 \end{example}
 
-We can often represent relations using graphs or digraphs.  Given a finite set $X$ and a relation $\sim$ on $X$, a \textbf{digraph} (short for \emph{directed graph}) is a discrete graph having the members of $X$ as vertices and a directed edge from $x$ to $y$ if and only if $x\sim y$.
+\begin{example}
+Let $A$ be any set.  Since $\emptyset \subseteq A\times A$, the empty set forms a relation on $A$. This relation is called the \textbf{empty relation} on $A$.
+\end{example}
+
+We can often represent relations using digraphs.  Given a finite set $X$ and a relation $\sim$ on $X$, a \textbf{digraph} (short for \emph{directed graph}) is a discrete graph having the members of $X$ as vertices and a directed edge from $x$ to $y$ if and only if $x\sim y$.
 
 \begin{example}
 Figure~\ref{fig:digraph} depicts a digraph that represents a relation $R$ given by
@@ -87,8 +91,7 @@ R=\{(a,b),(a,c),(b,b),(b,c),(c,d),(c,e),(d,d),(d,a),(e,a)\}.
 
 \begin{figure}[h!]
 \begin{center}
-\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2cm,
-                    semithick]
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2cm,semithick]
   \tikzstyle{every state}=[]
 
   \node[state] (A)                    {$a$};
@@ -114,7 +117,11 @@ R=\{(a,b),(a,c),(b,b),(b,c),(c,d),(c,e),(d,d),(d,a),(e,a)\}.
 \end{example}
 
 \begin{exercise}
-Let $A=\{a,b,c\}$ and define $\sim=\{(a,a),(a,b),(b,c),(c,b),(c,a)\}$.  Draw the digraph for $\sim$.
+Let $A=\{a,b,c\}$ and define ${\sim}=\{(a,a),(a,b),(b,c),(c,b),(c,a)\}$.  
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Draw the digraph for $\sim$.
+\item Draw the digraph for the empty relation on $A$.
+\end{enumerate}
 \end{exercise}
 
 \begin{exercise}
@@ -124,11 +131,7 @@ Let $A=\{1,2,3,4,5,6\}$.  Define $|$ on $A$ via $x|y$ if and only if $x$ divides
 When $X$ or $Y$ is infinite, it is not practical to draw a digraph.  However, you are familiar with the graphs of some relations involving infinite sets.
 
 \begin{example}
-When we write $x^2+y^2=1$, we are implicitly defining a relation.  In particular, the relation is the set of ordered pairs $(x,y)$ satisfying $x^2+y^2=1$.  In set notation:
-\[
-\{(x,y)\mid x^2+y^2=1\}
-\]
-The graph of this relation in $\mathbb{R}^2$ is the standard unit circle.
+When we write $x^2+y^2=1$, we are implicitly defining a relation.  In particular, the relation is the set of ordered pairs $(x,y)$ satisfying $x^2+y^2=1$, namely $\{(x,y)\mid x^2+y^2=1\}$. The graph of this relation in $\mathbb{R}^2$ is the unit circle centered at the origin.
 \end{example}
 
 \begin{exercise}
@@ -138,18 +141,18 @@ Define $\sim$ on $\mathbb{R}$ via $x\sim y$ if and only if $x\leq y$.  Draw a pi
 \begin{definition}
 Let $\sim$ be a relation on a set $A$.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $\sim$ is \textbf{reflexive} if for all $x\in A$, $x\sim x$ (every element is related to itself).
-\item $\sim$ is \textbf{symmetric} if for all $x,y\in A$, if $x\sim y$, then $y\sim x$.
-\item $\sim$ is \textbf{transitive} if for all $x,y,z\in A$, if $x\sim y$ and $y\sim z$, then $x\sim z$.
+\item The relation $\sim$ is \textbf{reflexive} if for all $x\in A$, $x\sim x$ (every element is related to itself).
+\item The relation $\sim$ is \textbf{symmetric} if for all $x,y\in A$, if $x\sim y$, then $y\sim x$.
+\item The relation $\sim$ is \textbf{transitive} if for all $x,y,z\in A$, if $x\sim y$ and $y\sim z$, then $x\sim z$.
 \end{enumerate}
 \end{definition}
 
-\begin{example}\
+\begin{example}
+Here are a few examples that illustrate the concepts in the previous definition.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $\leq$ on $\mathbb{R}$ is reflexive and transitive, but not symmetric.
-$<$ on $\mathbb{R}$ is transitive, but not symmetric and not reflexive.
+\item The relation $=$ on $\mathbb{R}$ is reflexive, symmetric, and transitive.
+\item The relation $\leq$ is reflexive and transitive on $\mathbb{R}$, but not symmetric. However, notice that $<$ is transitive on $\mathbb{R}$, but neither symmetric nor reflexive.
 \item If $S$ is a set, then $\subseteq$ on $\mathcal{P}(S)$ is reflexive and transitive, but not symmetric.
-\item $=$ on $\mathbb{R}$ is reflexive, symmetric, and transitive.
 \end{enumerate}
 
 \end{example}
@@ -162,21 +165,22 @@ Given a finite set $A$ and a relation $\sim$, describe what each of reflexive, s
 Let $P$ be the set of people at a party and define $N$ via $(x,y)\in N$ if and only if $x$ knows the name of $y$.  Describe what it would mean for $N$ to be reflexive, symmetric, and transitive.
 \end{exercise}
 
-\begin{exercise}
+\begin{exercise}\label{exer:lots of relations}
 Determine whether each of the following relations is reflexive, symmetric, or transitive.
-
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item Let $P_f$ denote the set of all people with accounts on Facebook.  Define  $F$ via $xFy$ if and only if $x$ is friends with $y$. 
+\item Let $P$ denote the set of all people with accounts on Facebook and define $F$ on $P$ via $xFy$ if and only if $x$ is friends with $y$. 
+\item\label{exer:twitter} Let $P$ denote the set of all people with accounts on Twitter and define $T$ on $P$ via $xTy$ if and only if $x$ follows $y$ on Twitter. 
 \item Let $P$ be the set of all people and define $H$ via $xHy$ if and only if $x$ and $y$ have the same height.
 \item Let $P$ be the set of all people and define $T$ via $xTy$ if and only if $x$ is taller than $y$.
 \item Consider the relation ``divides" on $\mathbb{N}$.
 \item Let $L$ be the set of lines and define $||$ via $l_1||l_2$ if and only if $l_1$ is parallel to $l_2$.
-\item Let $C[0,1]$ be the set of continuous functions on $[0,1]$.  Define $f\sim g$ iff
+\item Let $C[0,1]$ be the set of continuous functions on $[0,1]$.  Define $f\sim g$ if and only if
 \[
 \int_0^1|f(x)|\ dx=\int_0^1|g(x)|\ dx.
 \]
 \item Define $\sim$ on $\mathbb{N}$ via $n\sim m$ if and only if $n+m$ is even.
 \item Define $D$ on $\mathbb{R}$ via $(x,y)\in D$ if and only if $x=2y$.
+\item Consider the empty relation on the set $A=\{a,b,c\}$.
 \end{enumerate}
 \end{exercise}
 
