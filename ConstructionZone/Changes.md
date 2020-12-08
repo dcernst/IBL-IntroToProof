@@ -8,15 +8,21 @@
 ## Reviewer 1
 
 - Section 1.7: My students are helped by an encouragement to rewrite, if necessary, a theorem statement in the form of “If p, then q.” Describe this idea. Consider recommending every theorem be rewritten in this way before starting a proof. In fact, a step-by-step process to deliver a proof might be helpful. Also, try something else that is still fanciful instead of “kick some butt!”
+    * Todo.
 - Just before Definition 2.1 add, “...or, equivalently “n ∈ Z.”
-    * Don't understand this suggestion.
+    * I don't understand this suggestion.
 - Section 2.3: Revise “...it never be both.”
-    * Already done.
+    * Fixed.
 - Exercise 2.68. The instructions are not clear. What does “Discuss the meaning of...” mean? Revise.
+    * I hope that my fix is sufficient.
 - Section 3.1: The order of the bulleted sets could be revised so that they progress as nested. Then this can have powerful consequences in a student’s thinking of these sets for modern algebraic considerations.
+    * Done.
 - Exercise 3.3. Clarity needed. What is a “simple description”?
+    * Todo.
 - Definition 3.33. Something more is needed. Maybe insert “We read this as...” before the boxed formulas? Also, in the bullets preceding the definition, revise to ...“the set of S-sub-alpha, taken over alpha in Delta.”
+    * Todo.
 - Section 8.1: This is a spot where lots and lots and lots of examples would help. Expand the ideas to sets of non-numeric structures. Non-real sets. Such as the set of stars or the set of dog types recognized by AKC or the set of subsets of {Mom, Dad, Tracy}.
+    * Todo.
 
 ## Reviewer 3
 
@@ -169,9 +175,9 @@ Appendix A
 - Item 7: The statement breaks rule 4, that it is bad style to start a sentence with a symbol.
     * Fixed.
 - Item 8: Include quantifiers and other logic symbols in the “avoid in formal write-ups” pile.(∀,∃,∨,∧,and ⇐⇒)
-    * Todo. I should add a new item for this one.
+    * Done. I added a new item for this one.
 - Item 13: I love this! I call it “bad math.” I’d like to see the backwards example written correctly, as a demonstration.
-    * Todo.
+    * Done.
 - Item 15: Thank you.
      * Nothing to address.
 - Item 22: Thank you.

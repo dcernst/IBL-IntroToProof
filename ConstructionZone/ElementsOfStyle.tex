@@ -73,8 +73,10 @@ The following rules apply whenever you write a proof.  Keep these rules handy so
         the symbol ``$\implies$'' is an abbreviation for ``implies'' and connects two \emph{statements},
         as in ``$a+b=a \implies b=0$.''  You should avoid using $\implies$ in your formal write-ups.
 
+\item \textbf{Avoid logical symbols in your proofs.}  Similar to $\implies$, you should avoid using the logical symbols $\forall, \exists, \vee, \wedge$, and $\iff$ in your formal write-ups.  These symbols are useful for abbreviating in your scratch work. 
+
 \item \textbf{Say exactly what you mean.}
-        Just as the $=$ is sometimes abused,
+        Just as $=$ is sometimes abused,
         so too people sometimes write $A\in B$ when they mean $A\subseteq B$,
         or write $a_{ij}\in A$ when they mean that $a_{ij}$ is an entry in matrix $A$.
         Mathematics is a very precise language, and there is a way to say exactly what you mean;
@@ -111,12 +113,12 @@ The following rules apply whenever you write a proof.  Keep these rules handy so
 \item \textbf{Don't write the proof backwards.}
         Beginning students often attempt to write ``proofs'' like the following, which attempts to prove that $\tan^2(x)  = \sec^2(x) - 1$:
 \begin{align*}
- \tan^2(x) =& \sec^2(x) - 1 \\
-\left(\frac{\sin(x)}{\cos(x)}\right)^2 =& \frac{1}{\cos^2(x)} - 1 \\
-\frac{\sin^2(x)}{\cos^2(x)} =&  \frac{1-\cos^2(x)}{\cos^2(x)} \\
-\sin^2(x) =& 1-\cos^2(x) \\
-\sin^2(x) + \cos^2(x) =& 1 \\
-1 =& 1
+ \tan^2(x) & = \sec^2(x) - 1 \\
+\left(\frac{\sin(x)}{\cos(x)}\right)^2 & = \frac{1}{\cos^2(x)} - 1 \\
+\frac{\sin^2(x)}{\cos^2(x)} & =  \frac{1-\cos^2(x)}{\cos^2(x)} \\
+\sin^2(x) & = 1-\cos^2(x) \\
+\sin^2(x) + \cos^2(x) & = 1 \\
+1 & = 1
 \end{align*}        
         Notice what has happened here:  the student \emph{started} with the conclusion,
         and deduced the true statement ``$1=1$.''
@@ -127,6 +129,16 @@ The following rules apply whenever you write a proof.  Keep these rules handy so
         Working backwards from your goal often is a good strategy \emph{on your scratch paper},
         but when it's time to \emph{write} your proof,
         you have to start with the hypotheses and work to the conclusion.
+
+Here is an example of a suitable proof for the desired result, where each expression follows from the one immediately proceeding it:
+\begin{align*}
+\sec^2(x) - 1 & = \frac{1}{\cos^2(x)} - 1\\
+& = \frac{1-\cos^2(x)}{\cos^2(x)} \\
+& = \frac{\sin^2(x)}{\cos^2(x)} \\
+& = \left(\frac{\sin(x)}{\cos(x)}\right)^2 \\
+& = \left(\tan(x)\right)^2 \\
+& = \tan^2(x).
+\end{align*}
 
 \item \textbf{Be concise.}
         Most students err by writing their proofs too short,
@@ -179,6 +191,8 @@ The following rules apply whenever you write a proof.  Keep these rules handy so
         Most problems ask you to prove that something is true ``for all''---%
         You \emph{cannot} prove this by giving a single example, or even a hundred.
         Your answer will need to be a logical argument that holds for \emph{every example there possibly could be}.
+
+On the other hand, if the claim that you are trying to prove involves the existence of a mathematical object with a particular property, then providing a specific example is sufficient.
         
 \item \textbf{Write ``Let $x=\dots$,'' not ``Let $\dots=x$.''} 
         When you have an existing expression, say $a^{2}$,
@@ -217,7 +231,7 @@ The following rules apply whenever you write a proof.  Keep these rules handy so
         Do all that on scratch paper
         until you find a real proof,
         and only then break out your clean paper to write your final proof carefully.
-        \emph{Do not hand in your scratch work!}
+        %\emph{Do not hand in your scratch work!}
         
         Only sentences that actually contribute to your proof 
         should be part of the proof.
