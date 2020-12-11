@@ -13,9 +13,9 @@ Recall that an \textbf{axiom} is a statement that we \emph{assume} to be true.  
 If $p$ and $q$ are two different real numbers in $\mathbb{R}$, then there is a number between them.
 \end{axiom}
 
-\begin{exercise}
-Given real numbers $p$ and $q$ with $p<q$, construct a real number $x$ such that $p<x<q$.  We know such a point must exist by the previous axiom, but this exercise is asking you to produce an actual candidate.
-\end{exercise}
+\begin{problem}
+Given real numbers $p$ and $q$ with $p<q$, construct a real number $x$ such that $p<x<q$.  We know such a point must exist by the previous axiom, but this problem is asking you to produce an actual candidate.
+\end{problem}
 
 \begin{axiom}
 (Linear ordering) If $a$, $b$, and $c$ are real numbers, then:
@@ -39,7 +39,7 @@ Suppose $a,b\in\mathbb{R}$ such that $a<b$.  The intervals $(a,b), (-\infty,b), 
 
 We will always assume that any time we write $(a,b), [a,b], (a,b]$, or $[a,b)$ that $a<b$. 
 
-\begin{exercise}
+\begin{problem}
 Give an example of each of the following.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item An open interval.
@@ -47,7 +47,7 @@ Give an example of each of the following.
 \item An interval that is neither open nor closed.
 \item An infinite set that is not an interval.
 \end{enumerate}
-\end{exercise}
+\end{problem}
 
 \begin{definition}
 A set $U$ is called an \textbf{open set} if and only if for every $t \in U$, there exists an open interval containing $t$ such that the open interval is a subset of $U$.  We define the empty set to be open.\end{definition}
@@ -64,9 +64,9 @@ Every open interval is an open set.
 The set of real numbers forms an open set.
 \end{theorem}
 
-\begin{exercise}
+\begin{problem}
 Provide an example of an open set that is not a single open interval.
-\end{exercise}
+\end{problem}
 
 \begin{theorem}
 Every closed interval is not an open set.
@@ -76,9 +76,9 @@ Every closed interval is not an open set.
 If $x\in\mathbb{R}$, then the set $\{x\}$ is not open.
 \end{theorem}
 
-\begin{exercise} 
+\begin{problem} 
 Determine whether $\{4,17,42\}$ is an open set. Briefly justify your assertion. 
-\end{exercise}
+\end{problem}
 
 \begin{theorem}\label{finite union of open sets}
 If $A$ and $B$ are open sets, then 
@@ -92,19 +92,19 @@ If $A$ and $B$ are open sets, then
 If $\{U_{\alpha}\}_{\alpha\in\Delta}$ is a collection of open sets, then $\bigcup_{\alpha\in\Delta} U_{\alpha}$ is an open set.
 \end{theorem}
 
-\begin{exercise}\label{intersection of open sets}
+\begin{problem}\label{intersection of open sets}
 Give an example of each of the following.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item A collection of open sets $\{B_{\alpha}\}_{\alpha\in\Delta}$ such that $\bigcap_{\alpha\in\Delta} B_{\alpha}$ is an open set.
 \item A collection of open sets $\{U_{\alpha}\}_{\alpha\in\Delta}$ such that $\bigcap_{\alpha\in\Delta} U_{\alpha}$ is not an open set.
 \end{enumerate}
-\end{exercise}
+\end{problem}
 
 \begin{remark}\label{rem:union vs intersection of open sets}
-Taken together, Theorems~\ref{finite union of open sets}--\ref{union of open sets} and Exercise~\ref{intersection of open sets} tell us that the union of any collection of open sets is open, but that the intersection of open sets may or may not be open.  However, if we are taking the intersection of finitely many open sets, then the intersection will be open.
+Taken together, Theorems~\ref{finite union of open sets}--\ref{union of open sets} and Problem~\ref{intersection of open sets} tell us that the union of any collection of open sets is open, but that the intersection of open sets may or may not be open.  However, if we are taking the intersection of finitely many open sets, then the intersection will be open.
 \end{remark}
 
-\begin{exercise}
+\begin{problem}
 Determine whether each of the following sets is open or not open.
 \begin{multicols}{2}
 \begin{enumerate}[label=\textrm{(\alph*)}]
@@ -112,7 +112,7 @@ Determine whether each of the following sets is open or not open.
 \item $\displaystyle X=\bigcap_{n=1}^{\infty} \left(-\frac{1}{n}, \frac{1}{n}\right)$
 \end{enumerate}
 \end{multicols}
-\end{exercise}
+\end{problem}
 
 \begin{definition}
 A point $p$ is a \textbf{limit point of the set $S$} if and only if for every open interval $I$ containing $p$, there exists a point $q \in I$ such that $q \in S$ with $q\neq p$.
@@ -135,13 +135,13 @@ A point $p$ is a limit point of $(a,b)$ if and only if $p\in [a,b]$.
 Prove that the point $p=0$ is a limit point of $S=\{\frac{1}{n}: n \in \mathbb{N}\}$.  Are there any other limit points?
 \end{problem}
 
-\begin{exercise}
+\begin{problem}
 Provide an example of a set $S$ such that 1 is a limit point of $S$, $1\neq S$, and $S$ contains no intervals.
-\end{exercise}
+\end{problem}
 
-\begin{exercise}
+\begin{problem}
 Provide an example of a set $T$ with exactly two limit points.
-\end{exercise}
+\end{problem}
 
 \begin{theorem}
 If $p\in\mathbb{R}$, then $p$ is a limit point of $\mathbb{Q}$.
@@ -151,7 +151,7 @@ If $p\in\mathbb{R}$, then $p$ is a limit point of $\mathbb{Q}$.
 A set is called \textbf{closed} if and only if it contains all of its limit points.
 \end{definition}
 
-\begin{exercise}
+\begin{problem}
 Provide an example of each of the following.  You do not need to prove that your answers are correct.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item A closed set.
@@ -160,7 +160,7 @@ Provide an example of each of the following.  You do not need to prove that your
 \item A set that neither open nor closed.
 \end{enumerate}
 
-\end{exercise}
+\end{problem}
 
 \begin{theorem}
 The set $[a,b]$ is closed.
@@ -198,12 +198,12 @@ If $\{A_{\alpha}\}_{\alpha\in\Delta}$ is a collection of closed sets, then $\big
 Prove or provide a counterexample: If $A$ and $B$ are closed sets, then $A\cup B$ is also closed.
 \end{problem}
 
-\begin{exercise}\label{union of closed sets}
+\begin{problem}\label{union of closed sets}
 Provide an example of a collection of closed sets $\{A_{\alpha}\}_{\alpha\in\Delta}$ such that $\bigcup_{\alpha\in \Delta} A_{\alpha}$ is a \emph{not} closed set.
-\end{exercise}
+\end{problem}
 
 \begin{remark}
-You should compare what happened in Theorem~\ref{intersection of closed sets} and Exercise~\ref{union of closed sets} to what we stated in Remark~\ref{rem:union vs intersection of open sets}.
+You should compare what happened in Theorem~\ref{intersection of closed sets} and Problem~\ref{union of closed sets} to what we stated in Remark~\ref{rem:union vs intersection of open sets}.
 \end{remark}
 
 \end{section}

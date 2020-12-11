@@ -11,13 +11,13 @@ Let $n\in\mathbb{Z}$.
 \end{enumerate}
 \end{definition}
 
-\begin{exercise}
+\begin{problem}
 Is 1 a prime number or composite number?  Explain your answer.
-\end{exercise}
+\end{problem}
 
-\begin{exercise}
+\begin{problem}
 List the first 10 prime numbers.
-\end{exercise}
+\end{problem}
 
 The next theorem makes up half of the Fundamental Theorem of Arithmetic.
 
@@ -37,9 +37,9 @@ If $m,n\in\mathbb{N}$, then there exists unique $q,r\in\mathbb{N}\cup\{0\}$ such
 
 The numbers $q$ and $r$ from the Division Algorithm are referred to as \textbf{quotient} and \textbf{remainder}, respectively.
 
-\begin{exercise}
+\begin{problem}
 Suppose $m=27$ and $n=5$. Find the quotient and remainder that are guaranteed to exists by the Division Algorithm.  That is, find the unique $q,r\in\mathbb{N}$ such that $0\leq r<n$ and $m=nq+r$.
-\end{exercise}
+\end{problem}
 
 It's useful to have some additional terminology.
 
@@ -47,13 +47,13 @@ It's useful to have some additional terminology.
 Let $m,n\in\mathbb{Z}$ such that at least one of $m$ or $n$ is nonzero.  The \textbf{greatest common divisor} (gcd) of $m$ and $n$, denoted $\gcd(m,n)$, is the largest positive integer that is a factor of both $m$ and $n$. If $\gcd(m,n)=1$, we say that $m$ and $n$ are \textbf{relatively prime}.
 \end{definition}
 
-\begin{exercise}
+\begin{problem}
 Find $\gcd(54,72)$.
-\end{exercise}
+\end{problem}
 
-\begin{exercise}
+\begin{problem}
 Provide an example of two natural numbers that are relatively prime.
-\end{exercise}
+\end{problem}
 
 The next result is a special case of a theorem known as B\'ezout's Lemma (or B\'ezout's Identity). Ultimately, we will need this theorem to prove Euclid's Lemma (Theorem~\ref{thm:Euclid}), which we then use to prove uniqueness for the Fundamental Theorem of Arithmetic (Theorem~\ref{thm:FTA}).
 
@@ -61,9 +61,9 @@ The next result is a special case of a theorem known as B\'ezout's Lemma (or B\'
 If $p,a\in\mathbb{Z}$ such that $p$ is prime and $p$ and $a$ are relatively prime, then there exists $s,t\in\mathbb{Z}$ such that $ps+at=1$.\footnote{\emph{Hint:} Consider the set $S:=\{ps+at> 0\mid s,t\in \mathbb{Z}\}$. First, observe that $p\in S$ (choose $s=1$ and $t=0$). It follows that $S$ is nonempty. By the Well-Ordering Principle (Theorem~\ref{thm:WOP}), $S$ contains a least element, say $d$. Then there exists $s_1,t_1\in \mathbb{Z}$ such that $d=ps_1+at_1$. Our goal is to show that $d=1$. Now, choose $m\in S$. Then there exists $s_2,t_2\in \mathbb{Z}$ such that $m=ps_2+at_2$. By the definition of $d$, we know $d\leq m$. By the Division Algorithm, there exists unique $q,r\in \mathbb{N}\cup\{0\}$ such that $m=qd+r$ with $0\leq r < d$. Now, solve for $r$ and then replace $m$ and $d$ with $ps_1+at_1$ and $ps_2+at_2$, respectively.  You should end up with an expression for $r$ involving $p, a, s_1, s_2, t_1$, and $t_2$.  Next, rearrange this expression to obtain something of the form $r=p(\text{junk})+a(\text{stuff})$.  What does the minimality of $d$ imply about $r$?  You should be able to conclude that $m$ is a multiple of $d$.  That is, every element of $S$ is a multiple of $d$.  However, recall that $p\in S$, $p$ is prime, and $p$ and $a$ are relatively prime.  What can you conclude about $d$?}
 \end{lemma}
 
-\begin{exercise}
+\begin{problem}
 Consider the natural numbers 2 and 7, which happen to be relatively prime.  Find integers $s$ and $t$ guaranteed to exist according to Lemma~\ref{lem:Bezout}.  That is, find $s,t\in\mathbb{Z}$ such that $2s+7t=1$.
-\end{exercise}
+\end{problem}
 
 The following theorem is known as Euclid's Lemma. See if you can prove it using Lemma~\ref{lem:Bezout}.
 

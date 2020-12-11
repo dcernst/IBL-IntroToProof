@@ -17,7 +17,9 @@ Let's take a look at potential proofs.
 
 \bigskip
 
-Are these actual proofs?  \textbf{NO!}  In fact, the second claim isn't even true.  If $n=41$, then $n^{2}+n+41=41^{2}+41+41=41(41+1+1)$, which is not prime since it has 41 as a factor.  It turns out that the first claim is true, but what we wrote cannot be a proof since the same type of reasoning when applied to the second claim seems to prove something that isn't actually true.  We need a rigorous way of capturing ``and so on'' and a way to verify whether it really is ``and so on.''
+Are these actual proofs?  No!  In fact, the second claim isn't even true.  If $n=41$, then $n^{2}+n+41=41^{2}+41+41=41(41+1+1)$, which is not prime since it has 41 as a factor.  It turns out that the first claim is true, but what we wrote cannot be a proof since the same type of reasoning when applied to the second claim seems to prove something that isn't actually true.  We need a rigorous way of capturing ``and so on'' and a way to verify whether it really is ``and so on.''
+
+Recall that an axiom is a basic mathematical assumption.  The following axiom is one of the Peano Axioms, which is a collection of axioms for the natural numbers introduced in the 19th century by Italian mathematician Giuseppe Peano.
 
 \begin{axiom}[Axiom of Induction]\label{axiom:induction}
 Let $S\subseteq \mathbb{N}$ such that both
@@ -28,7 +30,9 @@ Let $S\subseteq \mathbb{N}$ such that both
 Then $S=\mathbb{N}$.
 \end{axiom}
 
-Recall that an axiom is a basic mathematical assumption.  That is, we are assuming that the Axiom of Induction is true, which I'm hoping that you can agree is a pretty reasonable assumption.  We can think of the first hypothesis as saying that we have a first rung of a ladder.  The second hypothesis says that if we have any arbitrary rung of the ladder, then we can always get to the next rung.  Taken together, this says that we can get from the first rung to the second, from the second to the third, and in general, from any $k$th rung to the $(k+1)$st rung.
+We can think of the set $S$ as a ladder, where the first hypothesis as saying that we have a first rung of a ladder.  The second hypothesis says that if we are on any arbitrary rung of the ladder, then we can always get to the next rung.  Taken together, this says that we can get from the first rung to the second, from the second to the third, and in general, from any $k$th rung to the $(k+1)$st rung, so that our ladder is actually $\mathbb{N}$. I am hoping that you agree that the Axiom of Induction is a pretty reasonable assumption.  
+
+At the end of Section~\ref{sec:RussellsParadox}, we briefly discussed ZFC, which is the standard choice for axiomatic set theory. It turns out that one can prove the Axiom of Induction as a theorem in ZFC.  However, that will not be the approach we take.  Instead, we are assuming the Axiom of Induction is true. Using this axiom, we can prove the following theorem, known as the Principle of Mathematical Induction, or PMI for short.  
 
 \begin{theorem}[Principle of Mathematical Induction]\label{thm:PMI}
 Let $P(1), P(2), P(3), \ldots$ be a sequence of statements, one for each natural number.\footnote{Think of $P(n)$ as a predicate, where $P(1)$ is the statement that corresponds to substituting in the value 1 for $n$.} Assume
@@ -39,7 +43,7 @@ Let $P(1), P(2), P(3), \ldots$ be a sequence of statements, one for each natural
 Then $P(n)$ is true for all $n\in\mathbb{N}$.\footnote{\emph{Hint:} Let $S=\{k\in \mathbb{N}\mid P(k) \text{ is true}\}$ and use the Axiom of Induction.  The set $S$ is sometimes called the \textbf{truth set}.  Your job is to show that the truth set is all of $\mathbb{N}$.}
 \end{theorem}
 
-The Principle of Mathematical Induction (PMI) provides us with a process for proving statements of the form: ``For all $n\in\mathbb{N}$, $P(n)$,'' where $P(n)$ is some predicate involving $n$.  Hypothesis (i) above is called the \textbf{base step} while (ii) is called the \textbf{inductive step}.
+The Principle of Mathematical Induction (PMI) provides us with a process for proving statements of the form: ``For all $n\in\mathbb{N}$, $P(n)$,'' where $P(n)$ is some predicate involving $n$.  Hypothesis (i) above is called the \textbf{base step} (or \textbf{base case}) while (ii) is called the \textbf{inductive step}.
 
 You should not confuse \emph{mathematical induction} with \emph{inductive reasoning} associated with the natural sciences. Inductive reasoning is a scientific method whereby one induces general principles from observations. On the other hand, mathematical induction is a deductive form of reasoning used to establish the validity of a proposition.
 
@@ -57,7 +61,7 @@ We proceed by induction.
 
 \item[(ii)] Inductive step:  \emph{[Your goal is to prove ``For all $k\in\mathbb{N}$, if $P(k)$ is true, then $P(k+1)$ is true.'']} Let $k\in\mathbb{N}$ and assume that $P(k)$ is true. \emph{[Do something to derive that $P(k+1)$ is true.]} Therefore, $P(k+1)$ is true.
 \end{enumerate}
-Thus, by the PMI, $P(n)$ is true for all $n\in\mathbb{N}$.
+Thus, by induction, $P(n)$ is true for all $n\in\mathbb{N}$.
 \end{proof}
 \end{minipage}
 }

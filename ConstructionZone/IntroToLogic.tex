@@ -8,7 +8,7 @@ A \textbf{proposition} (or \textbf{statement}) is a sentence that is either true
 
 For example, the sentence ``All dogs have four legs.''~is a false proposition.  However, the perfectly good sentence ``$x=1$'' is \emph{not} a proposition all by itself since we don't actually know what $x$ is.
 
-\begin{exercise} Determine whether the following are propositions or not. Explain.
+\begin{problem} Determine whether the following are propositions or not. Explain.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item All cars are red.
 \item Every person whose name begins with J has the name Joe.
@@ -19,7 +19,7 @@ For example, the sentence ``All dogs have four legs.''~is a false proposition.  
 \item $p$ is prime.
 \item Led Zeppelin is the best band of all time.
 \end{enumerate}
-\end{exercise}
+\end{problem}
 
 Given two propositions, we can form more complicated propositions using logical connectives.
 
@@ -35,9 +35,9 @@ Let $A$ and $B$ be propositions.
 
 Each of the theorems that we proved in Section~\ref{sec:baby number theory} are examples of conditional statements. However, some of the statements were disguised as such. For example, Theorem~\ref{thm:two consecutive ints} states, ``The sum of two consecutive integers is odd." We can reword this theorem as, ``If $x\in\mathbb{Z}$, then $x+(x+1)$ is odd."
 
-\begin{exercise}
+\begin{problem}
 Reword Theorem~\ref{thm:sum of three consecutive integers} so that it explicitly reads as a conditional statement.
-\end{exercise}
+\end{problem}
 
 The proofs of each of the theorems in Section~\ref{sec:baby number theory} had the same format, which we refer to as a \textbf{direct proof}. 
 
@@ -61,11 +61,11 @@ $\ldots$ \ \emph{[Use definitions and known results to derive $B$]} \ $\ldots$\\
 \end{center}
 \end{skeleton}
 
-\begin{exercise}
+\begin{problem}
 Describe the meaning of $\neg (A \wedge B)$ and $\neg (A \vee B)$.
-\end{exercise}
+\end{problem}
 
-\begin{exercise}\label{exer:translations}
+\begin{problem}\label{prob:translations}
 Let $A$ represent ``6 is an even number'' and $B$ represent ``6 is a multiple of 4.''  Express each of the following in ordinary English sentences and state whether the statement is true or false.
 \begin{enumerate}[label=\textrm{(\alph*)}]
   \item $A \wedge B$
@@ -76,7 +76,7 @@ Let $A$ represent ``6 is an even number'' and $B$ represent ``6 is a multiple of
   \item $\neg (A \vee B)$
   \item $A \implies B$
 \end{enumerate}
-\end{exercise}
+\end{problem}
 
 \begin{definition}
 A \textbf{truth table} is a table that illustrates all possible truth values for a proposition.  
@@ -101,9 +101,9 @@ Notice that we have columns for each of $A$ and $B$.  The rows for these two col
 
 Note that each proposition has two possible truth values: true or false. Thus, if a compound proposition $P$ is built from $n$ propositions, then the truth table for $P$ will require $2^n$ rows.
 
-\begin{exercise}
+\begin{problem}
 Create a truth table for each of $A \vee B$, $\neg A$, $\neg (A \wedge B)$, and $\neg A \wedge \neg B$.  Feel free to add additional columns to your tables to assist you with intermediate steps.
-\end{exercise}
+\end{problem}
 
 \begin{problem}
 A coach promises, ``If we win tonight, then I will buy you pizza tomorrow.''  Determine the case(s) in which the players can rightly claim to have been lied to. Use this to help create a truth table for $A \implies B$.
@@ -131,42 +131,42 @@ Let $A$ and $B$ be propositions.  Conjecture a statement similar to Theorem~\ref
 The \textbf{converse} of $A \implies B$ is $B \implies A$.
 \end{definition}
 
-\begin{exercise}
+\begin{problem}
 Provide an example of a true conditional proposition whose converse is false.
-\end{exercise}
+\end{problem}
 
 \begin{definition}\label{def:inverse}
 The \textbf{inverse} of $A \implies B$ is $\neg A \implies \neg B$.
 \end{definition}
 
-\begin{exercise}
+\begin{problem}
 Provide an example of a true conditional proposition whose inverse is false.
-\end{exercise}
+\end{problem}
 
 \begin{definition}
 The \textbf{contrapositive} of $A \implies B$ is $\neg B \implies \neg A$.
 \end{definition}
 
-\begin{exercise}
-Let $A$ and $B$ represent the statements from Exercise~\ref{exer:translations}.  Express the following in ordinary English sentences.
+\begin{problem}
+Let $A$ and $B$ represent the statements from Problem~\ref{prob:translations}.  Express the following in ordinary English sentences.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item The converse of $A \implies B$.
 \item The contrapositive of $A \implies B$.
 \end{enumerate}
-\end{exercise}
+\end{problem}
 
-\begin{exercise}
+\begin{problem}
 Find the converse and the contrapositive of the following statement: ``If a person lives in Flagstaff, then that person lives in Arizona."
-\end{exercise}
+\end{problem}
 
-%\begin{exercise}
+%\begin{problem}
 %Find the contrapositive of the following statements: 
 %\begin{enumerate}
 %\item If $n$ is an even natural number, then $n+1$ is an odd natural number.\footnote{Despite the fact that each of ``$n$ is an even natural number" and ``$n+1$ is an odd natural number" are not propositions (since we cannot determine their truth values without knowing what $n$ is), the implication is a proposition.  We discuss this further when we introduce predicates.}
 %\item If it rains today, then I will bring my umbrella.
 %\item If it does not rain today, then I will not bring my umbrella.
 %\end{enumerate}
-%\end{exercise}
+%\end{problem}
 
 Use a truth table to prove the following theorem.
 

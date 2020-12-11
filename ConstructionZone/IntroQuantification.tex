@@ -2,9 +2,9 @@
 
 The sentence ``$x>0$'' is not itself a proposition because $x$ is a \textbf{free variable}. A sentence with a free variable is a \textbf{predicate}. To turn a predicate into a proposition, we must either substitute values for each free variable, or else ``quantify'' the free variables.
 
-%\begin{exercise}
+%\begin{problem}
 %Give 3 examples of mathematical predicates involving 1, 2, and 3 free variables, respectively.
-%\end{exercise}
+%\end{problem}
 
 Function notation is a convenient way to represent predicates. For example, each of the following represents a predicate with the indicated free variables.
 \begin{itemize}
@@ -16,19 +16,19 @@ The notation $:=$ indicates a definition.  Also, note that the use of the quotat
 
 One way we can make propositions out of predicates is by assigning specific values to the free variables.  That is, if $P(x)$ is a predicate and $x_0$ is specific value for $x$, then $P(x_0)$ is now a proposition (and is either true or false).
 
-\begin{exercise}
+\begin{problem}
 Consider $S(x)$ and $L(a,b)$ as defined above. Determine the truth values of $S(0)$, $S(-2)$, $L(2,1)$, and $L(-3,-2)$. Is $L(2,b)$ a proposition or a predicate?  Explain.
-\end{exercise}
+\end{problem}
 
 Besides substituting specific values for free variables in a predicate, we can also make a claim about which values of the free variables apply to the predicate.
 
-\begin{exercise}\label{ex:quantified predicates}
+\begin{problem}\label{ex:quantified predicates}
 Both of the following sentences are propositions. Decide whether each is true or false. What would it take to justify your answers?
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item For all $x\in\mathbb{R}$, $x^2-4=0$.\footnote{The symbol $\mathbb{R}$ denotes the set of all real numbers.}
 \item There exists $x\in\mathbb{R}$ such that $x^2-4=0$.
 \end{enumerate}
-\end{exercise}
+\end{problem}
 
 \begin{definition}
 ``For all" is the \textbf{universal quantifier} and ``there exists\ldots such that" is the \textbf{existential quantifier}.
@@ -40,23 +40,23 @@ Variables that are quantified with a universal or existential quantifier are sai
 
 We must take care to specify the universe of acceptable values for the free variables. Consider the sentence ``For all $x$, $x>0$.'' Is this sentence true or false? The answer depends on what set the universal quantifier applies to. Certainly, the sentence is false if we apply it for all $x\in\mathbb{Z}$. However, the sentence is true for all $x\in\mathbb{N}$. Context may resolve ambiguities, but otherwise, we must write clearly: ``For all $x\in\mathbb{Z}$, $x>0$'' or ``For all $x\in\mathbb{N}$, $x>0$.'' The set of acceptable values for a variable is called the \textbf{universe (of discourse)}.
 
-\begin{exercise}
+\begin{problem}
 Suppose our universe of discourse is the set of integers.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item Provide an example of a predicate $P(x)$ such that ``For all $x$, $P(x)$" is true.
 \item Provide an example of a predicate $Q(x)$ such that ``For all $x$, $Q(x)$" is false, but ``There exists $x$ such that $Q(x)$" is true.
 \end{enumerate}
-\end{exercise}
+\end{problem}
 
 If a predicate has more than one free variable, then we can build propositions by quantifying each variable.  However, \emph{the order of the quantifiers is extremely important!}
 
-\begin{exercise}\label{exer:ways to quantify}
+\begin{problem}\label{prob:ways to quantify}
 Let $P(x,y)$ be a predicate with free variables $x$ and $y$ in a universe of discourse $U$. One way to quantify the variables is ``For all $x \in U$, there exists $y \in U$ such that $P(x,y)$.'' How else can the variables be quantified?
-\end{exercise}
+\end{problem}
 
-The next exercise illustrates that at least some of the possibilities listed in the previous exercise are \emph{not} equivalent to each other.
+The next problem illustrates that at least some of the possibilities listed in the previous problem are \emph{not} equivalent to each other.
 
-\begin{exercise}
+\begin{problem}
 Suppose the universe of discourse is the set of people and consider the predicate $M(x,y):=``x\mbox{ is married to }y"$.  We can interpret the formal statement ``For all $x$, there exists $y$ such that $M(x,y)$" as meaning ``Everybody is married to somebody."  Interpret the meaning of each of the following statements in a similar way.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item For all $x$, there exists $y$ such that $M(x,y)$.
@@ -64,20 +64,20 @@ Suppose the universe of discourse is the set of people and consider the predicat
 \item For all $x$, for all $y$, $M(x,y)$.
 \item There exists $x$ such that there exists $y$ such that $M(x,y)$.
 \end{enumerate}
-\end{exercise}
+\end{problem}
 
-\begin{exercise}
+\begin{problem}
 Suppose the universe of discourse is the set of real numbers and consider the predicate $F(x,y):=``x=y^2"$. Interpret the meaning of each of the following statements.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item There exists $x$ such that there exists $y$ such that $F(x,y)$.
 \item There exists $y$ such that there exists $x$ such that $F(x,y)$.
 \item For all $y$, for all $x$, $F(x,y)$.
 \end{enumerate}
-\end{exercise}
+\end{problem}
 
-%\begin{exercise}
+%\begin{problem}
 %Suppose that the universe of discourse is the set of real numbers.  Consider the predicate $G(x,y):=``x>y"$.  Find all possible \emph{distinct} ways to quantify the variables to create propositions and then determine the truth value of each (you do not need to prove your answers).
-%\end{exercise}
+%\end{problem}
 
 There are a couple of key points to keep in mind about quantification. To be a proposition, all variables must be quantified.  This can happen in at least two ways:
 \begin{itemize}
@@ -99,35 +99,35 @@ The universal quantifier ``for all'' is denoted $\boxed{\forall}$, and the exist
 
 Using our abbreviations for the logical connectives and quantifiers, we can symbolically represent mathematical propositions. For example, the (true) proposition ``There exists $x \in \mathbb{R}$ such that $x^2-1=0$'' becomes ``$(\exists x \in \mathbb{R})(x^2-1=0)$,'' while the (false) proposition ``For all $x\in \mathbb{N}$, there exists $y\in\mathbb{N}$ such that $y<x$'' becomes ``$(\forall x)(x\in\mathbb{N}\implies (\exists y)(y\in\mathbb{N}\implies y<x))$'' or ``$(\forall x\in\mathbb{N})(\exists y\in\mathbb{N})(y<x)$.''
 
-\begin{exercise} Convert the following statements into statements using only logical symbols.  Assume that the universe of discourse is the set of real numbers.
+\begin{problem} Convert the following statements into statements using only logical symbols.  Assume that the universe of discourse is the set of real numbers.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item There exists a number $x$ such that $x^2+1$ is greater than zero.
 \item There exists a natural number $n$ such that $n^2=36$. 
 \item For every real number $x$, $x^2$ is greater than or equal to zero.
 \end{enumerate}
-\end{exercise}
+\end{problem}
 
-\begin{exercise}
+\begin{problem}
 Express the formal definition of a limit (given above Definition~\ref{def:quantifiers}) in logical symbols.
-\end{exercise}
+\end{problem}
 
 If $A(x)$ and $B(x)$ are predicates, then it is standard practice for the sentence $A(x)\implies B(x)$ to mean $(\forall x)(A(x)\implies B(x))$ (where the universe of discourse for $x$ needs to be made clear).  In this case, we say that the universal quantifier is implicit.
 
-\begin{exercise}
+\begin{problem}
 Consider the proposition ``If $\epsilon >0$, then there exists $N\in\mathbb{N}$ such that $1/N<\epsilon$."  Assume the universe of discourse is the set $\mathbb{R}$.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item Express the statement in logical symbols. Is the statement true?
 \item Reverse the order of the quantifiers to get a new statement. Does the meaning change?  If so, how?  Is the new statement true?
 \end{enumerate}
-\end{exercise}
+\end{problem}
 
 The symbolic expression $(\forall x)(\forall y)$ can be replaced with the simpler expression $(\forall x,y)$ as long as $x$ and $y$ are elements of the same universe.
 
-\begin{exercise}
+\begin{problem}
 Express the statement ``For all $x,y\in\mathbb{R}$ with $x<y$, there exists $m\in\mathbb{R}$ such that $x<m<y$" using logical symbols.
-\end{exercise}
+\end{problem}
 
-\begin{exercise}
+\begin{problem}
 Rewrite the following statements in words and determine whether each is true or false.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $(\forall n \in \mathbb{N})(n^2 \geq 5)$
@@ -137,7 +137,7 @@ Rewrite the following statements in words and determine whether each is true or 
 \item $(\forall x \in \mathbb{N})(\exists y \in \mathbb{N})(x-2y=0)$
 \item $(\exists x \in \mathbb{N})(\forall y \in \mathbb{N})(y \leq x)$
 \end{enumerate}
-\end{exercise}
+\end{problem}
 
 To whet your appetite for the next section, consider how you might prove a statement of the form ``For all $x$\ldots.'' If a statement is false, then its negation is true. How would you go about negating a statement involving quantifiers? 
 

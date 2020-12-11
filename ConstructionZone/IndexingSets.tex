@@ -59,7 +59,7 @@ Similarly, if $\Delta=\{1,2,3,4\}$, then
 \] 
 Notice the difference between ``$\bigcup$" and ``$\cup$" (respectively, ``$\bigcap$" and ``$\cap$").  %The larger versions of the union and intersection symbols very much like the notation that you've likely seen for sums (e.g., $\sum_{i=1}^\infty i^2$).
 
-\begin{exercise}
+\begin{problem}
 Let $\{I_n\}_{n\in\mathbb{N}}$ be the collection of open intervals from the beginning of the section.  Find each of the following.
 \begin{multicols}{2}
 \begin{enumerate}[label=\textrm{(\alph*)}]
@@ -67,13 +67,13 @@ Let $\{I_n\}_{n\in\mathbb{N}}$ be the collection of open intervals from the begi
 \item $\displaystyle \bigcap_{n\in\mathbb{N}}I_n$
 \end{enumerate}
 \end{multicols}
-\end{exercise}
+\end{problem}
 
-%\begin{exercise}
-%Repeat the previous exercise, but assume that the sets are closed intervals.
-%\end{exercise}
+%\begin{problem}
+%Repeat the previous problem, but assume that the sets are closed intervals.
+%\end{problem}
 
-\begin{exercise}
+\begin{problem}
 Let $\{A_n\}_{n=1}^{26}$ be the collection from earlier in the section.  Find each of the following.
 \begin{multicols}{2}
 \begin{enumerate}[label=\textrm{(\alph*)}]
@@ -81,9 +81,9 @@ Let $\{A_n\}_{n=1}^{26}$ be the collection from earlier in the section.  Find ea
 \item $\displaystyle \bigcap_{n=1}^{26}A_n$
 \end{enumerate}
 \end{multicols}
-\end{exercise}
+\end{problem}
 
-\begin{exercise}
+\begin{problem}
 Let $S_n = \{x \in \mathbb{R} \ \mid  \ n-1<x<n \}$, where $n\in \mathbb{N}$.  Find each of the following.
 \begin{multicols}{2}
 \begin{enumerate}[label=\textrm{(\alph*)}]
@@ -91,9 +91,9 @@ Let $S_n = \{x \in \mathbb{R} \ \mid  \ n-1<x<n \}$, where $n\in \mathbb{N}$.  F
 \item $\displaystyle \bigcap_{n=1}^{\infty}S_n$
 \end{enumerate}
 \end{multicols}
-\end{exercise}
+\end{problem}
 
-\begin{exercise}
+\begin{problem}
 Let $T_n = \{x \in \mathbb{R} \ \mid  \ -\frac{1}{n}<x< \frac{1}{n} \}$, where $n\in \mathbb{N}$.  Find each of the following.
 \begin{multicols}{2}
 \begin{enumerate}[label=\textrm{(\alph*)}]
@@ -101,9 +101,9 @@ Let $T_n = \{x \in \mathbb{R} \ \mid  \ -\frac{1}{n}<x< \frac{1}{n} \}$, where $
 \item $\displaystyle \bigcap_{n=1}^{\infty}T_n$
 \end{enumerate}
 \end{multicols}
-\end{exercise}
+\end{problem}
 
-\begin{exercise}
+\begin{problem}
 For each $r\in\mathbb{Q}$ (the rational numbers), let $N_r$ be the set containing all real numbers \emph{except} $r$.  Find each of the following.
 \begin{multicols}{2}
 \begin{enumerate}[label=\textrm{(\alph*)}]
@@ -111,19 +111,19 @@ For each $r\in\mathbb{Q}$ (the rational numbers), let $N_r$ be the set containin
 \item $\displaystyle \bigcap_{r\in\mathbb{Q}}N_r$
 \end{enumerate}
 \end{multicols}
-\end{exercise}
+\end{problem}
 
 \begin{definition}
 A collection of sets $\{A_{\alpha}\}_{\alpha\in\Delta}$ is \textbf{pairwise disjoint} if $A_{\alpha} \cap A_{\beta}=\emptyset$ for $\alpha\neq \beta$.
 \end{definition}
 
-\begin{exercise}
+\begin{problem}
 Draw a Venn diagram of a collection of 3 sets that are pairwise disjoint.
-\end{exercise}
+\end{problem}
 
-\begin{exercise}
+\begin{problem}
 Provide an example of a collection of three sets, say $\{A_1, A_2, A_3\}$, such that the collection is \emph{not} pairwise disjoint, but $\bigcap_{n=1}^3 A_n=\emptyset$.
-\end{exercise}
+\end{problem}
 
 For each of the next two theorems, you can choose to prove either part (a) or part (b).
 
@@ -142,5 +142,11 @@ Let $\{A_{\alpha}\}_{\alpha\in\Delta}$ be a collection of sets.  Then
 \item $\displaystyle \left(\bigcap_{\alpha\in\Delta} A_{\alpha}\right)^C=\bigcup_{\alpha\in\Delta}A_{\alpha}^{C}$.
 \end{enumerate}
 \end{theorem}
+
+At the end of Section~\ref{sec:RussellsParadox}, we mentioned the Axiom of Choice.  Using the language of indexing sets, we can now state this axiom precisely.
+
+\begin{axiom}[Axiom of Choice]
+For every indexed collection $\{A_{\alpha}\}_{\alpha\in\Delta}$ of nonempty sets, there exists an indexed collection $\{a_{\alpha}\}_{\alpha\in\Delta}$ of elements such that $a_{\alpha}\in A_{\alpha}$ for each $\alpha\in \Delta$.
+\end{axiom}
 
 \end{section}

@@ -4,6 +4,9 @@
 
 - Added page numbers.
 - Rewrote most theorem statements in the form "If..., then..." as opposed to "Let... . Then ...".
+- Added more history on Russell's Paradox, made this a stand alone section, and moved the additional paradoxes to an appendix.
+- Converted all "Exercise" and "Question" types to "Problem".
+- Added formal statement of Axiom of Choice to end of section on indexing sets.
 
 ## Reviewer 1
 

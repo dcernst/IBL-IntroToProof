@@ -25,7 +25,7 @@ is called the \textbf{range} of $f$ or the \textbf{image of $X$} under $f$. If $
 
 It follows immediately from the definition that $\range(f)\subseteq \codom(f)$.  However, it is possible that the range of $f$ is a proper subset of the codomain.
 
-\begin{exercise}\label{exer:lots}
+\begin{problem}\label{prob:lots}
 Let $X=\{\circ, \square,\triangle,\smiley\}$ and $Y=\{a,b,c,d,e\}$.  Determine whether each of the following represent functions.  Explain.  If the relation is a function, determine the domain, codomain, and range.
 
 \begin{enumerate}[label=\textrm{(\alph*)}]
@@ -45,7 +45,7 @@ x, & \mbox{if } x\mbox{ is a geometric shape},\\
 \end{cases}
 \]
 \end{enumerate}
-\end{exercise}
+\end{problem}
 
 One useful representation of functions on finite sets is via \textbf{bubble diagrams}.  To draw a bubble diagram for a function $f:X\to Y$, draw one circle (i.e, a ``bubble'') for each of $X$ and $Y$ and for each element of each set, put a dot in the corresponding set.  Typically, we draw $X$ on the left and $Y$ on the right.  Next, draw an arrow from $x\in X$ to $y\in Y$ if $f(x)=y$ (i.e., $(x,y)\in f$). Note that we can draw bubble diagrams even if $f$ is not a function. 
 
@@ -71,21 +71,21 @@ Figure~\ref{fig:bubble} depicts a bubble diagram for a function from domain $X=\
 \caption{An example of a bubble diagram for a function.}\label{fig:bubble}
 \end{figure}
 
-\begin{exercise}
-For each of the relations in Exercise~\ref{exer:lots} draw the corresponding bubble diagram.
-\end{exercise}
+\begin{problem}
+For each of the relations in Problem~\ref{prob:lots} draw the corresponding bubble diagram.
+\end{problem}
 
 \begin{problem}
 What properties does a bubble diagram have to have in order to represent a function?
 \end{problem}
 
-\begin{exercise}
+\begin{problem}
 Provide an example of each of the following.  You may draw a bubble diagram, write down a list of ordered pairs, or a write a formula (as long as the domain and codomain are clear).
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item A function $f$ from a set with 4 elements to a set with 3 elements such that $\range(f)=\codom(f)$.
 \item A function $g$ from a set with 4 elements to a set with 3 elements such that $\range(g)$ is strictly smaller than $\codom(g)$.
 \end{enumerate}
-\end{exercise}
+\end{problem}
 
 \begin{problem}
 Let $f:X\to Y$ be a function and suppose that $X$ and $Y$ are finite sets with $n$ and $m$ elements, respectively, such that $n<m$.  Is it possible for $\range(f)=\codom(f)$?  Explain.
@@ -114,7 +114,7 @@ Let $f:X\to Y$ be a function.
 Let $f:X\to Y$ be a function. To prove that $f$ is one-to-one, start by assuming that $f(x_{1})=f(x_{2})$ and then work to show that $x_{1}=x_{2}$.  That is, a function $f$ is one-to-one if and only if for all $x_{1}, x_{2}\in X$, if $f(x_{1})=f(x_{2})$, then $x_{1}=x_{2}$. To show that $f$ is onto, you should start with an arbitrary $y\in Y$ and then work to show that there exists $x\in X$ such that $y=f(x)$.
 \end{remark}
 
-\begin{exercise}
+\begin{problem}
 Provide an example of each of the following.  You may draw a bubble diagram, write down a list of ordered pairs, or write a formula (as long as the domain and codomain are clear).  Assume that $X$ and $Y$ are finite sets.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item A function $f:X\to Y$ that is one-to-one but not onto.
@@ -123,13 +123,13 @@ Provide an example of each of the following.  You may draw a bubble diagram, wri
 \item A function $f:X\to Y$ that is neither one-to-one nor onto.
 \end{enumerate}
 
-\end{exercise}
+\end{problem}
 
 \begin{problem}
 Perhaps you've heard of the \textbf{horizontal line test} (i.e., every horizontal line hits the graph of $f:\mathbb{R}\to\mathbb{R}$ at most once).  What is the horizontal line test testing for?
 \end{problem}
 
-\begin{exercise}
+\begin{problem}
 Provide an example of each of the following.  You may either draw a graph or write down a formula.  Make sure you have the correct domain.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item A function $f:\mathbb{R}\to \mathbb{R}$ that is one-to-one but not onto.
@@ -137,9 +137,9 @@ Provide an example of each of the following.  You may either draw a graph or wri
 \item A function $f:\mathbb{R}\to \mathbb{R}$ that is a bijection.
 \item A function $f:\mathbb{R}\to \mathbb{R}$ that is neither one-to-one nor onto.
 \end{enumerate}
-\end{exercise}
+\end{problem}
 
-\begin{exercise}
+\begin{problem}
 Determine which of the following functions are one-to-one, onto, both, or neither.  In each case, you should provide proofs and counterexamples as appropriate.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $f:\mathbb{R}\to \mathbb{R}$ defined via $f(x)=x^{2}$
@@ -149,7 +149,7 @@ Determine which of the following functions are one-to-one, onto, both, or neithe
 \item $l: \mathbb{R}\times \mathbb{R}\to \mathbb{R}$ defined via $l(x_{1},x_{2})=x_{1}^{2}+x_{2}^{2}$
 \item $N:\mathbb{N}\to \mathbb{N}\times \mathbb{N}$ defined via $N(n)=(n,n)$
 \end{enumerate}
-\end{exercise}
+\end{problem}
 
 \begin{definition}
 If $X$ is a nonempty set, then the function $i_X:X\to X$ defined via $i_X(x)=x$ is called the \emph{identity function} on $X$.
@@ -159,13 +159,13 @@ If $X$ is a nonempty set, then the function $i_X:X\to X$ defined via $i_X(x)=x$ 
 The identity function on a nonempty set $X$ is a bijection.
 \end{theorem}
 
-\begin{exercise}
+\begin{problem}
 Let $A$ and $B$ be sets and let $S\subseteq A\times B$.  Define $\pi_{1}:S\to A$ and $\pi_{2}:S\to B$ via $\pi_{1}(a,b)=a$ and $\pi_{2}(a,b)=b$.  We call $\pi_{1}$ (respectively, $\pi_{2}$) the \textbf{projections} of $S$ onto $A$ (respectively, $B$).
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item Provide examples to show that $\pi_{1}$ does not need to be one-to-one or onto.
 \item Suppose that $S$ is a function (recall that a function is a set of ordered pairs, so this makes sense).  Is $\pi_{1}$ one-to-one? Is $\pi_{1}$ onto?  How about $\pi_{2}$?
 \end{enumerate} 
-\end{exercise}
+\end{problem}
 
 \begin{theorem}
 Let $A$ be a nonempty set and suppose $\sim$ is an equivalence relation on $A$. Then the function $\phi:A\to A/\mathord\sim$ defined via $\phi(x)=[x]$ is onto.\footnote{Recall that $A/\mathord\sim$ is the set of equivalence classes induced by the equivalence relation $\sim$.}
