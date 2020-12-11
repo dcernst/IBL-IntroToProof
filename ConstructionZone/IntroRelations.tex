@@ -13,54 +13,69 @@ Note that an ordered pair is just a 2-tuple.
 \begin{definition}
 If $X$ and $Y$ are sets, the \textbf{Cartesian product} of $X$ and $Y$ is defined by
 \[
-X\times Y=\{(x,y)\mid x\in X, y\in Y\}.
+X\times Y:=\{(x,y)\mid x\in X, y\in Y\}.
 \]
-That is, $X\times Y$ is the set of all ordered pairs where the first element is from $X$ and the second element is from $Y$.  The set $X\times X$ is sometimes denoted by $X^2$.  We similarly define the Cartesian product of $n$ sets, say $X_1, \ldots, X_n$, by
+That is, $X\times Y$ is the set of all ordered pairs where the first element is from $X$ and the second element is from $Y$.  We similarly define the Cartesian product of $n$ sets, say $X_1, \ldots, X_n$, by
 \[
-\prod_{i=1}^{n} X_i=X_1\times \cdots \times X_n=\{(x_1,\ldots,x_n)\mid \mbox{each } x_i\in X_i\}.
+\prod_{i=1}^{n} X_i:=X_1\times \cdots \times X_n:=\{(x_1,\ldots,x_n)\mid  x_j\in X_j \mbox{ for all }1\leq j\leq n\},
 \]
+where $X_i$ is referred to as the $i$th \textbf{factor} of the Cartesian product and $x_j$ is referred to as the $j$th \textbf{coordinate} of $(x_1,\ldots,x_n)$. The set 
+\[
+\underbrace{X\times \cdots \times X}_{n\text{ factors}}
+\]
+is often abbreviated as $X^n$.
 \end{definition}
 
-\begin{example}
-Let $A=\{a,b,c\}$ and $B=\{\smiley,\frownie\}$.  Then 
+\begin{example}\label{ex:CartesianProduct}
+If $A=\{a,b,c\}$ and $B=\{\smiley,\frownie\}$, then 
 \[
 A\times B=\{(a,\smiley), (a,\frownie),(b,\smiley),(b,\frownie), (c,\smiley),(c,\frownie)\}.
 \]
 \end{example}
 
+\begin{example}\label{ex:CartesianProduct}
+The standard two-dimensional plane $\mathbb{R}^2$ and standard three space $\mathbb{R}^{3}$ are familiar examples of Cartesian products.  In particular, we have
+\[
+\mathbb{R}^2=\mathbb{R}\times \mathbb{R}=\{(x,y)\mid x,y\in \mathbb{R}\}
+\]
+and
+\[
+\mathbb{R}^3=\mathbb{R}\times \mathbb{R}\times \mathbb{R}=\{(x,y,z)\mid x,y,z\in \mathbb{R}\}.
+\]
+\end{example}
+
 \begin{problem}
-Using the sets $A$ and $B$ from the previous example, find $B\times A$.  
+Consider the sets $A$ and $B$ from Example~\ref{ex:CartesianProduct}
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Find $B\times A$. 
+\item Find $B\times B$.
+\end{enumerate}
 \end{problem}
 
 \begin{problem}
-Using the set $B$ from the previous examples, find $B\times B$.  
-\end{problem}
-
-\begin{problem}
-What general conclusion can you make about $X\times Y$ versus $Y\times X$?  When will they be equal?
-\end{problem}
-
-\begin{problem}
-If $X$ and $Y$ are both finite sets, then how many elements will $X\times Y$ have?  Be as specific as possible.
+If $X$ and $Y$ are both finite sets, then how many elements will $X\times Y$ have?
 \end{problem}
 
 \begin{problem} 
-Let $A=\{1, 2, 3\}$, $B=\{1,2\}$, and $C=\{1,3\}$. List the elements of the set $A \times B\times C$. 
+Let $A=\{1, 2, 3\}$, $B=\{1,2\}$, and $C=\{1,3\}$. Find $A \times B\times C$. 
 \end{problem}
 
 \begin{problem}
-Let $A=\mathbb{N}$ and $B=\mathbb{R}$. Describe the elements of the set $A \times B$. 
+Let $X=[0,1]$ and $Y=\{1\}$.  Write each of the following using set builder notation and then describe the set geometrically (e.g., draw a picture). 
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $X\times Y$
+\item $Y\times X$
+\item $X\times X$
+\item $Y\times Y$
+\end{enumerate}
 \end{problem}
 
-\begin{problem} Let $A$ be the set of all differentiable functions on the open interval $(0,1)$, and let $B$ equal the set of all derivatives of functions in $A$ evaluated at $x=\frac{1}{2}$. Describe the elements of the set $A \times B$.
+\begin{problem}\label{prob:some lines}
+Write $\mathbb{N}\times \mathbb{R}$ using set builder notation and then describe this set geometrically by interpreting it as a subset of $\mathbb{R}^2$.
 \end{problem}
 
 \begin{problem}
-Three space, $\mathbb{R}^{3}$, is a Cartesian product.  Unpack the meaning of $\mathbb{R}^{3}$ using the Cartesian product, and write the complete set notation version.
-\end{problem}
-
-\begin{problem}
-Let $X=[0,1]$ and let $Y=\{1\}$.  Describe geometrically (e.g., draw a picture) what $X\times Y$, $Y\times X$, $X\times X$, and $Y\times Y$ look like.
+Given sets $X$ and $Y$, when will $X\times Y$ be equal to $Y\times X$?
 \end{problem}
 
 \begin{definition}
@@ -71,13 +86,17 @@ Let $X$ and $Y$ be sets. A \textbf{relation} from a set $X$ to a set $Y$ is a su
 You may not realize it, but you are familiar with many relations.  For example, on the real numbers, we have the relation $\leq$.  We could say that $(3,\pi)$ is in the relation $\leq$ since $3\leq \pi$.  However, $(1,-1)$ is not in the relation since $1\nleq -1$.  Order matters!
 \end{example}
 
+\begin{example}
+The set $\mathbb{N}\times \mathbb{R}$ from Problem~\ref{prob:some lines} is an example of a relation on $\mathbb{R}$.
+\end{example}
+
 Different notations for relations are used in different contexts.  When talking about relations in the abstract, we indicate that a pair $(a,b)$ is in the relation by some notation like $a\sim b$, which is read ``$a$ is related to $b$."
 
 \begin{example}
-Let $P$ denote the set of all people with accounts on Facebook and define $F$ on $P$ via $xFy$ if and only if $x$ is friends with $y$.  Then $F$ is a relation on $P$.
+REPLACE THIS ONE. Let $P$ denote the set of all people with accounts on Facebook and define $F$ on $P$ via $xFy$ if and only if $x$ is friends with $y$.  Then $F$ is a relation on $P$.
 \end{example}
 
-\begin{example}
+\begin{example}\label{ex:digraph}
 Let $A$ be any set.  Since $\emptyset \subseteq A\times A$, the empty set forms a relation on $A$. This relation is called the \textbf{empty relation} on $A$.
 \end{example}
 
@@ -86,7 +105,7 @@ We can often represent relations using digraphs.  Given a finite set $X$ and a r
 \begin{example}
 Figure~\ref{fig:digraph} depicts a digraph that represents a relation $R$ given by
 \[
-R=\{(a,b),(a,c),(b,b),(b,c),(c,d),(c,e),(d,d),(d,a),(e,a)\}.
+R=\{(a,a),(a,b),(a,c),(b,b),(b,a),(b,c),(c,d),(c,e),(d,d),(d,a),(d,c),(e,a)\}.
 \]
 
 \begin{figure}[h!]
@@ -100,12 +119,15 @@ R=\{(a,b),(a,c),(b,b),(b,c),(c,d),(c,e),(d,d),(d,a),(e,a)\}.
   \node[state]         (C) [below right of=B] {$c$};
   \node[state]         (E) [below of=D]       {$e$};
 
-  \path (A) edge              node {} (B)
+  \path (B) edge [bend left]  node {} (A)
+        (A) edge [bend left]  node {} (B)
             edge              node {} (C)
         (B) edge [loop above] node {} (B)
-            edge              node {} (C)
-        (C) edge              node {} (D)
+            edge [bend left]  node {} (C)
+        (D) edge [bend left]  node {} (C)
+        (C) edge [bend left]  node {} (D)
             edge [bend left]  node {} (E)
+        (A) edge [loop left] node {} (A)
         (D) edge [loop below] node {} (D)
             edge              node {} (A)
         (E) edge [bend left]  node {} (A);
@@ -154,11 +176,14 @@ Here are a few examples that illustrate the concepts in the previous definition.
 \item The relation $\leq$ is reflexive and transitive on $\mathbb{R}$, but not symmetric. However, notice that $<$ is transitive on $\mathbb{R}$, but neither symmetric nor reflexive.
 \item If $S$ is a set, then $\subseteq$ on $\mathcal{P}(S)$ is reflexive and transitive, but not symmetric.
 \end{enumerate}
-
 \end{example}
 
 \begin{problem}
-Given a finite set $A$ and a relation $\sim$, describe what each of reflexive, symmetric, and transitive look like in terms of a digraph. That is, draw a picture that represents reflexive, symmetric, and transitive.
+Determine whether the relation given in Example~\ref{ex:digraph} is reflexive, symmetric, or transitive.
+\end{problem}
+
+\begin{problem}
+Given a relation $\sim$ on a finite set $A$, describe what each of reflexive, symmetric, and transitive look like in terms of a digraph. That is, draw a picture that represents reflexive, symmetric, and transitive. One thing to keep in mind is that the elements used in the definitions of symmetric and transitive do not have to be distinct.  So, you might need to consider multiple cases.
 \end{problem}
 
 \begin{problem}
@@ -180,8 +205,45 @@ Determine whether each of the following relations is reflexive, symmetric, or tr
 \]
 \item Define $\sim$ on $\mathbb{N}$ via $n\sim m$ if and only if $n+m$ is even.
 \item Define $D$ on $\mathbb{R}$ via $(x,y)\in D$ if and only if $x=2y$.
+\item\label{prob:mod 5} Define $\sim$ on $\mathbb{Z}$ via $a\sim b$ if and only if $a-b$ is a multiple of 5.
+\item Define $\sim$ on $\mathbb{R}^2$ via $(x_1,y_1)\sim (x_2,y_2)$ if and only if $x_1^2+y_1^2=x_2^2+y_2^2$.
+\item Define $\sim$ on $\mathbb{R}$ via $x\sim y$ if and only if $\lfloor x\rfloor =\lfloor y\rfloor$, where $\lfloor x\rfloor$ is the greatest integer less than or equal to $x$ (e.g., $\lfloor \pi\rfloor=3$, $\lfloor -1.5\rfloor=-2$, and $\lfloor 4\rfloor=4$).
+\item Define $\sim$ on $\mathbb{R}$ via $x \sim y$ if and only if $|x-y|<1$.
 \item Consider the empty relation on the set $A=\{a,b,c\}$.
 \end{enumerate}
+\end{problem}
+
+\begin{definition}\label{def:relatives}
+Let $\sim$ be a relation on a set $A$. For each $x\in A$, we define the \textbf{set of relatives of $x$ with respect to $\sim$} via
+\[
+[x]_{\sim}=\{y\in A\mid x\sim y\}.
+\]
+We also define
+\[
+\Omega_{\sim}=\{[x]\mid x\in A\}.
+\]
+\end{definition}
+
+If $\sim$ is clear from the context, we will often write $[x]$ in place of $[x]_{\sim}$.  In terms of digraphs, $[x]$ is the collection of vertices that have arrows pointing towards them from the vertex labeled by $x$. Notice that $\Omega_{\sim}$ is a set of sets.  In particular, an element in $\Omega_{\sim}$ is a subset of $A$---equivalently, an element of $\mathcal{P}(A)$.
+
+\begin{problem}
+Consider the relation given in Example~\ref{ex:digraph}. Find $\Omega_R$ by determining $[x]$ for each $x\in A$.
+\end{problem}
+
+\begin{problem}
+Let $P$ and $F$ be as in part~\ref{prob:facebook} of Problem~\ref{prob:lots of relations}.  Describe $[\text{Bob}]$, where Bob is the name of a specific Facebook user.  What is $\Omega_F$?
+\end{problem}
+
+\begin{problem}
+Let $P$ and $T$ be as in part~\ref{prob:twitter} of Problem~\ref{prob:lots of relations}.  Describe $[\text{Maria}]$, where Maria is the name of a specific Twitter user.  What is $\Omega_T$?
+\end{problem}
+
+\begin{problem}
+Consider the relation $\leq$ on $\mathbb{R}$.  If $x\in \mathbb{R}$, what is $[x]$?
+\end{problem}
+
+\begin{problem}\label{prob:mod5classes}
+Find $[1]$ and $[2]$ for the relation given in part~\ref{prob:mod 5} of Problem~\ref{prob:lots of relations}.  How many different sets of relatives are there?  What are they?
 \end{problem}
 
 \end{section}

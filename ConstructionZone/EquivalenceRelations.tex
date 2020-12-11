@@ -6,86 +6,83 @@ As we have seen in the previous section, the notions of reflexive, symmetric, an
 Let $\sim$ be a relation on a set $A$.  Then $\sim$ is called an \textbf{equivalence relation} if and only if $\sim$ is reflexive, symmetric, and transitive.
 \end{definition}
 
-\begin{problem}
-Given a finite set $A$ and a relation $\sim$ on $A$, describe what the corresponding digraph would have to look like in order for $\sim$ to be an equivalence relation.
-\end{problem}
-
-\begin{problem}\label{prob:made up}
-Let $A=\{a,b,c,d,e\}$.  Make up an equivalence relation on $A$ by drawing a digraph such that $a$ is not related to $b$ and $c$ is not related to $b$.
-\end{problem}
-
 \begin{problem}\label{prob:digraph}
 Let $S=\{1,2,3,4,5,6\}$ and define
 \[
 {\sim}=\{(1,1),(1,6),(2,2),(2,3),(2,4),(3,3),(3,2),(3,4),(4,4),(4,2),(4,3),(5,5),(6,6),(6,1)\}.
 \]
-Determine whether $\sim$ is an equivalence relation on $A$.
+Using $\sim$, complete each of the following.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Draw the digraph for $\sim$.
+\item Determine whether $\sim$ is an equivalence relation on $A$.
+\item Find $\Omega_{\sim}$ by determining $[x]$ for each $x\in S$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}\label{prob:made up}
+Let $A=\{a,b,c,d,e\}$.  
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Make up an equivalence relation $\sim$ on $A$ by drawing a digraph such that $a$ is not related to $b$ and $c$ is not related to $b$.  
+\item Using your digraph, find $\Omega_{\sim}$ by determining $[x]$ for each $x\in A$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Given a finite set $A$ and a relation $\sim$ on $A$, describe what the corresponding digraph would have to look like in order for $\sim$ to be an equivalence relation.
 \end{problem}
 
 \begin{problem}\label{prob:lots of them}
-Determine which of the following are equivalence relations.  Some of these occurred in the previous section and you are welcome to use your answers from those problems.
-
-\begin{enumerate}[label=\textrm{(\alph*)}]
-\item\label{prob:facebook} Let $P$ denote the set of all people with accounts on Facebook and define $F$ on $P$ via $xFy$ if and only if $x$ is friends with $y$ on Facebook. 
-\item\label{prob:twitter} Let $P$ denote the set of all people with accounts on Twitter and define $T$ on $P$ via $xTy$ if and only if $x$ follows $y$ on Twitter. 
-\item Let $P$ be the set of all people and define $H$ via $xHy$ if and only if $x$ and $y$ have the same height.
-\item Let $P$ be the set of all people and define $T$ via $xTy$ if and only if $x$ is taller than $y$.
-\item Consider the relation ``divides" on $\mathbb{N}$.
-\item Let $L$ be the set of lines in the plane $\mathbb{R}^2$ and define $||$ via $l_1||l_2$ if and only if $l_1$ is parallel to $l_2$.
-\item Let $C[0,1]$ be the set of continuous functions on $[0,1]$ and define $f\sim g$ if and only if
-\[
-\int_0^1|f(x)|\ dx=\int_0^1|g(x)|\ dx.
-\]
-\item Define $\sim$ on $\mathbb{N}$ via $n\sim m$ if and only if $n+m$ is even.
-\item Define $D$ on $\mathbb{R}$ via $(x,y)\in D$ if and only if $x=2y$.
-\item\label{prob:mod 5} Define $\sim$ on $\mathbb{Z}$ via $a\sim b$ if and only if $a-b$ is a multiple of 5.
-\item Define $\sim$ on $\mathbb{R}^2$ via $(x_1,y_1)\sim (x_2,y_2)$ if and only if $x_1^2+y_1^2=x_2^2+y_2^2$.
-\item Define $\sim$ on $\mathbb{R}$ via $x\sim y$ if and only if $\lfloor x\rfloor =\lfloor y\rfloor$, where $\lfloor x\rfloor$ is the greatest integer less than or equal to $x$ (e.g., $\lfloor \pi\rfloor=3$, $\lfloor -1.5\rfloor=-2$, and $\lfloor 4\rfloor=4$).
-\item Define $\sim$ on $\mathbb{R}$ via $x \sim y$ if and only if $|x-y|<1$.
-\item Consider the empty relation on the set $A=\{a,b,c\}$.
-\end{enumerate}
+Determine which relations given in Problem~\ref{prob:lots of relations} are equivalence relations.
 \end{problem}
 
 \begin{problem}
 If possible, construct an equivalence relation on the empty set.  If this is not possible, explain why.
 \end{problem}
 
-\begin{definition}\label{def:relatives}
-Let $\sim$ be a relation on a set $A$ (not necessarily an equivalence relation) and let $x\in A$.  We define the \textbf{set of relatives of $x$ with respect to $\sim$} via
-\[
-[x]_{\sim}=\{y\in A\mid x\sim y\}.
-\]
-We also define
-\[
-\Omega_{\sim}=\{[x]\mid x\in A\}.
-\]
-\end{definition}
 
-If $\sim$ is clear from the context, we will often write $[x]$ in place of $[x]_{\sim}$. Another common notation for the set of relatives of $x$ is $\overline{x}$. Notice that $\Omega_{\sim}$ is a set of sets.  In particular, an element in $\Omega_{\sim}$ is a subset of $A$---equivalently, an element of $\mathcal{P}(A)$.
 
-\begin{problem}
-Let $P$ and $F$ be as in part~\ref{prob:facebook} of Problem~\ref{prob:lots of them}.  Describe $[\text{Bob}]$, where Bob is the name of a specific Facebook user.  What is $\Omega_F$?
-\end{problem}
+!!!!!!
 
-\begin{problem}
-Let $P$ and $T$ be as in part~\ref{prob:twitter} of Problem~\ref{prob:lots of them}.  Describe $[\text{Maria}]$, where Maria is the name of a specific Twitter user.  What is $\Omega_T$?
-\end{problem}
+Another common notation for the set of relatives of $x$ is $\overline{x}$.
 
-\begin{problem}
-Using your digraph in Problem~\ref{prob:made up}, find $\Omega_{\sim}$.  
-\end{problem}
+!!!!!
 
-\begin{problem}
-Consider the relation $\leq$ on $\mathbb{R}$.  If $x\in \mathbb{R}$, what is $[x]$?
-\end{problem}
-
-\begin{problem}\label{prob:mod5classes}
-Find $[1]$ and $[2]$ for the relation given in part~\ref{prob:mod 5} of Problem~\ref{prob:lots of them}.  How many different sets of relatives are there?  What are they?
-\end{problem}
-
-\begin{problem}
-Find $[x]$ for all $x\in S$ for $S$ and $\sim$ from Problem~\ref{prob:digraph}.  Any observations?
-\end{problem}
+%\begin{definition}\label{def:relatives}
+%Let $\sim$ be a relation on a set $A$ (not necessarily an equivalence relation) and let $x\in A$.  We define the \textbf{set of relatives of $x$ with respect to $\sim$} via
+%\[
+%[x]_{\sim}=\{y\in A\mid x\sim y\}.
+%\]
+%We also define
+%\[
+%\Omega_{\sim}=\{[x]\mid x\in A\}.
+%\]
+%\end{definition}
+%
+%If $\sim$ is clear from the context, we will often write $[x]$ in place of $[x]_{\sim}$. Another common notation for the set of relatives of $x$ is $\overline{x}$. Notice that $\Omega_{\sim}$ is a set of sets.  In particular, an element in $\Omega_{\sim}$ is a subset of $A$---equivalently, an element of $\mathcal{P}(A)$.
+%
+%\begin{problem}
+%Let $P$ and $F$ be as in part~\ref{prob:facebook} of Problem~\ref{prob:lots of them}.  Describe $[\text{Bob}]$, where Bob is the name of a specific Facebook user.  What is $\Omega_F$?
+%\end{problem}
+%
+%\begin{problem}
+%Let $P$ and $T$ be as in part~\ref{prob:twitter} of Problem~\ref{prob:lots of them}.  Describe $[\text{Maria}]$, where Maria is the name of a specific Twitter user.  What is $\Omega_T$?
+%\end{problem}
+%
+%\begin{problem}
+%Using your digraph in Problem~\ref{prob:made up}, find $\Omega_{\sim}$.  
+%\end{problem}
+%
+%\begin{problem}
+%Consider the relation $\leq$ on $\mathbb{R}$.  If $x\in \mathbb{R}$, what is $[x]$?
+%\end{problem}
+%
+%\begin{problem}\label{prob:mod5classes}
+%Find $[1]$ and $[2]$ for the relation given in part~\ref{prob:mod 5} of Problem~\ref{prob:lots of them}.  How many different sets of relatives are there?  What are they?
+%\end{problem}
+%
+%\begin{problem}
+%Find $[x]$ for all $x\in S$ for $S$ and $\sim$ from Problem~\ref{prob:digraph}.  Any observations?
+%\end{problem}
 
 \begin{theorem}\label{thm:related if and only if same class}
 Suppose $\sim$ is an equivalence relation on a set $A$ and let $a,b\in A$.  Then $[a]=[b]$ if and only if $a\sim b$.
@@ -108,6 +105,9 @@ If $\sim$ is an equivalence relation on a set $A$, then for each $x\in A$, we re
 When $\sim$ is an equivalence relation on a set $A$, the collection of equivalence classes is denoted by $A/\mathord\sim$, which is read as ``$A$ modulo $\sim$" or ``$A$ mod $\sim$".  The collection $A/\mathord\sim$ is sometimes referred to as the \textbf{quotient set of $A$ by $\sim$}. Note that $\Omega_{\sim}$ equals $A/\mathord\sim$ whenever $\sim$ is an equivalence relation.
 
 The upshot of Theorem~\ref{thm:equiv yields partition} is that given an equivalence relation, every element lives in exactly one equivalence class.  In the next section, we will see that we can run this in reverse.  That is, if we separate out the elements of a set so that every element is an element of exactly one subset (like the bins of my kids' toys), then this determines an equivalence relation.
+
+
+!!!!!!
 
 \begin{example}
 The collection of sets of relatives that you found in part~\ref{prob:mod 5} of Problem~\ref{prob:lots of them} is the set of equivalence classes modulo 5.
