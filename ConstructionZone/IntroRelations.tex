@@ -119,9 +119,9 @@ Let $X$ be any set.  Since $\emptyset \subseteq X\times X$, the empty set forms 
 We can often represent relations using digraphs.  Given a finite set $X$ and a relation $\sim$ on $X$, a \textbf{digraph} (short for \emph{directed graph}) is a discrete graph having the members of $X$ as vertices and a directed edge from $x$ to $y$ if and only if $x\sim y$.
 
 \begin{example}\label{ex:digraph}
-Figure~\ref{fig:digraph} depicts a digraph that represents a relation $R$ on $\{a,b,c,d,e\}$ given by
+Figure~\ref{fig:digraph} depicts a digraph that represents a relation $\sim$ on $A=\{a,b,c,d,e\}$ given by
 \[
-R=\{(a,a),(a,b),(a,c),(b,b),(b,a),(b,c),(c,d),(c,e),(d,d),(d,a),(d,c),(e,a)\}.
+{\sim}=\{(a,a),(a,b),(a,c),(b,b),(b,a),(b,c),(c,d),(c,e),(d,d),(d,a),(d,c),(e,a)\}.
 \]
 
 \begin{figure}[h!]
@@ -245,8 +245,10 @@ We also define
 
 If $\sim$ is clear from the context, we will often write $[x]$ in place of $[x]_{\sim}$.  In terms of digraphs, $[x]$ is the collection of vertices that have arrows pointing towards them from the vertex labeled by $x$. Notice that $\Omega_{\sim}$ is a set of sets.  In particular, an element in $\Omega_{\sim}$ is a subset of $X$---equivalently, an element of $\mathcal{P}(X)$.
 
+ADD MORE PROBLEMS THAT CORRESPOND TO THE EXAMPLES I ADDED???
+
 \begin{problem}
-Consider the relation given in Example~\ref{ex:digraph}. Find $\Omega_R$ by determining $[x]$ for each $x\in A$.
+Consider the relation given in Example~\ref{ex:digraph}. Find $\Omega_{\sim}$ by determining $[x]$ for each $x\in A$.
 \end{problem}
 
 \begin{problem}
@@ -262,7 +264,7 @@ Consider the relation $\leq$ on $\mathbb{R}$.  If $x\in \mathbb{R}$, what is $[x
 \end{problem}
 
 \begin{problem}\label{prob:mod5classes}
-Find $[1]$ and $[2]$ for the relation given in part~\ref{prob:mod 5} of Problem~\ref{prob:lots of relations}.  How many different sets of relatives are there?  What are they?
+Find $[1]$ and $[2]$ for the relation given in part~\ref{prob:mod 5} of Problem~\ref{prob:lots of relations}.  List all of the distinct sets of relatives for this relation.
 \end{problem}
 
 \begin{problem}
