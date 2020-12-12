@@ -93,7 +93,19 @@ The set $\mathbb{N}\times \mathbb{R}$ from Problem~\ref{prob:some lines} is an e
 Different notations for relations are used in different contexts.  When talking about relations in the abstract, we indicate that a pair $(a,b)$ is in the relation by some notation like $a\sim b$, which is read ``$a$ is related to $b$."
 
 \begin{example}
-REPLACE THIS ONE. Let $P$ denote the set of all people with accounts on Facebook and define $F$ on $P$ via $xFy$ if and only if $x$ is friends with $y$.  Then $F$ is a relation on $P$.
+Let $P$ denote the set of all people and let $F$ denote the set of all possible first names.  Define the relation $N$ from $P$ to $F$ via
+\[
+N:=\{(p,f)\mid p\text{ has first name }f\}.
+\]
+That is, $pNf$ if and only if $p$ has first name $f$.  Then $N$ is a relation from $P$ to $F$.
+\end{example}
+
+\begin{example}
+Let $P$ denote the set of all people. Define $\mapsto$ on $P$ via $x\mapsto y$ if and only if $x$ is friends with $y$.  Then $\mapsto$ is a relation on $P$.
+\end{example}
+
+\begin{example}
+Define $S$ from $\{-1,1\}$ to $\mathbb{Z}$ via $1Sx$ if and only if $x$ is even and $-1Sx$ if and only if $x$ is odd.  That is, $1$ is related to all even integers and $-1$ is related to all odd integers.  Then $S$ is a relation from $\{-1,1\}$ to $\mathbb{Z}$.
 \end{example}
 
 \begin{example}\label{ex:digraph}
@@ -147,7 +159,7 @@ Let $A=\{a,b,c\}$ and define ${\sim}=\{(a,a),(a,b),(b,c),(c,b),(c,a)\}$.
 \end{problem}
 
 \begin{problem}
-Let $A=\{1,2,3,4,5,6\}$.  Define $|$ on $A$ via $x|y$ if and only if $x$ divides $y$.  Draw the digraph for $|$ on $A$.
+Let $A=\{1,2,3,4,5,6\}$ and define $|$ on $A$ via $x|y$ if and only if $x$ divides $y$.  Draw the digraph for $|$ on $A$.
 \end{problem}
 
 When $X$ or $Y$ is infinite, it is not practical to draw a digraph.  However, you are familiar with the graphs of some relations involving infinite sets.
@@ -193,7 +205,7 @@ Let $P$ be the set of people at a party and define $N$ via $(x,y)\in N$ if and o
 \begin{problem}\label{prob:lots of relations}
 Determine whether each of the following relations is reflexive, symmetric, or transitive.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item Let $P$ denote the set of all people with accounts on Facebook and define $F$ on $P$ via $xFy$ if and only if $x$ is friends with $y$. 
+\item\label{prob:facebook} Let $P$ denote the set of all people with accounts on Facebook and define $F$ on $P$ via $xFy$ if and only if $x$ is friends with $y$. 
 \item\label{prob:twitter} Let $P$ denote the set of all people with accounts on Twitter and define $T$ on $P$ via $xTy$ if and only if $x$ follows $y$ on Twitter. 
 \item Let $P$ be the set of all people and define $H$ via $xHy$ if and only if $x$ and $y$ have the same height.
 \item Let $P$ be the set of all people and define $T$ via $xTy$ if and only if $x$ is taller than $y$.
@@ -244,6 +256,10 @@ Consider the relation $\leq$ on $\mathbb{R}$.  If $x\in \mathbb{R}$, what is $[x
 
 \begin{problem}\label{prob:mod5classes}
 Find $[1]$ and $[2]$ for the relation given in part~\ref{prob:mod 5} of Problem~\ref{prob:lots of relations}.  How many different sets of relatives are there?  What are they?
+\end{problem}
+
+\begin{problem}
+DRAFT: Suppose $\sim$ is a relation on a finite set $A$.  If $\Omega_{\sim}=\{???\}$, find $A$ (smallest $A$?) and $\sim$...
 \end{problem}
 
 \end{section}
