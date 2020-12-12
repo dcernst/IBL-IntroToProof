@@ -1,5 +1,9 @@
 \begin{section}{Introduction to Relations}
 
+ADD INTRO BLURB HERE...
+
+USE X OR A???  I USE A GENERALLY IN CHAPTER 3.
+
 \begin{definition}
 An \textbf{ordered pair} is an object of the form $(x,y)$. Two ordered pairs $(x,y)$ and $(a,b)$ are \textbf{equal} if and only if $x=a$ and $y=b$. 
 \end{definition}
@@ -79,18 +83,18 @@ Given sets $X$ and $Y$, when will $X\times Y$ be equal to $Y\times X$?
 \end{problem}
 
 \begin{definition}
-Let $X$ and $Y$ be sets. A \textbf{relation} from a set $X$ to a set $Y$ is a subset of $X \times Y$. A relation on $X$ is a subset of $X \times X$.  
+Let $X$ and $Y$ be sets. A \textbf{relation $\sim$ from a set $X$ to a set $Y$} is a subset of $X \times Y$. If $\sim$ is a relation from $X$ to $X$, then we say that $\sim$ is a \textbf{relation on $X$}.  
 \end{definition}
 
 \begin{example}
-You may not realize it, but you are familiar with many relations.  For example, on the real numbers, we have the relation $\leq$.  We could say that $(3,\pi)$ is in the relation $\leq$ since $3\leq \pi$.  However, $(1,-1)$ is not in the relation since $1\nleq -1$.  Order matters!
+The set $\mathbb{N}\times \mathbb{R}$ from Problem~\ref{prob:some lines} is an example of a relation on $\mathbb{R}$ since $\mathbb{N}\times \mathbb{R}$ is a subset of $\mathbb{R}\times \mathbb{R}$.
 \end{example}
+
+Different notations for relations are used in different contexts.  If $\sim$ is a relation from $X$ to $Y$ and $(x,y)\in {\sim}$, then we say that \textbf{$x$ is related $y$}.  In this case, we may also write $x\sim y$.
 
 \begin{example}
-The set $\mathbb{N}\times \mathbb{R}$ from Problem~\ref{prob:some lines} is an example of a relation on $\mathbb{R}$.
+You are already familiar with many relations.  For example, $=$, $\leq$, and $<$ are each examples of relations on the real numbers. We could say that $(3,\pi)$ is in the relation $\leq$ and the relation $<$ since $3\leq \pi$ and $3<\pi$.  However, $(3,\pi)$ is not in the relation $=$ since $3\neq \pi$.  Also, notice that sometime order matters. For example, $(-\sqrt{2}, 4)$ is in the relation $\leq$ while $(4,-\sqrt{2})$ is not.
 \end{example}
-
-Different notations for relations are used in different contexts.  When talking about relations in the abstract, we indicate that a pair $(a,b)$ is in the relation by some notation like $a\sim b$, which is read ``$a$ is related to $b$."
 
 \begin{example}
 Let $P$ denote the set of all people and let $F$ denote the set of all possible first names.  Define the relation $N$ from $P$ to $F$ via
@@ -108,14 +112,14 @@ Let $P$ denote the set of all people. Define $\mapsto$ on $P$ via $x\mapsto y$ i
 Define $S$ from $\{-1,1\}$ to $\mathbb{Z}$ via $1Sx$ if and only if $x$ is even and $-1Sx$ if and only if $x$ is odd.  That is, $1$ is related to all even integers and $-1$ is related to all odd integers.  Then $S$ is a relation from $\{-1,1\}$ to $\mathbb{Z}$.
 \end{example}
 
-\begin{example}\label{ex:digraph}
-Let $A$ be any set.  Since $\emptyset \subseteq A\times A$, the empty set forms a relation on $A$. This relation is called the \textbf{empty relation} on $A$.
+\begin{example}
+Let $X$ be any set.  Since $\emptyset \subseteq X\times X$, the empty set forms a relation on $X$. This relation is called the \textbf{empty relation} on $X$.
 \end{example}
 
 We can often represent relations using digraphs.  Given a finite set $X$ and a relation $\sim$ on $X$, a \textbf{digraph} (short for \emph{directed graph}) is a discrete graph having the members of $X$ as vertices and a directed edge from $x$ to $y$ if and only if $x\sim y$.
 
-\begin{example}
-Figure~\ref{fig:digraph} depicts a digraph that represents a relation $R$ given by
+\begin{example}\label{ex:digraph}
+Figure~\ref{fig:digraph} depicts a digraph that represents a relation $R$ on $\{a,b,c,d,e\}$ given by
 \[
 R=\{(a,a),(a,b),(a,c),(b,b),(b,a),(b,c),(c,d),(c,e),(d,d),(d,a),(d,c),(e,a)\}.
 \]
@@ -139,9 +143,9 @@ R=\{(a,a),(a,b),(a,c),(b,b),(b,a),(b,c),(c,d),(c,e),(d,d),(d,a),(d,c),(e,a)\}.
         (D) edge [bend left]  node {} (C)
         (C) edge [bend left]  node {} (D)
             edge [bend left]  node {} (E)
-        (A) edge [loop left] node {} (A)
+        (A) edge [loop left]  node {} (A)
         (D) edge [loop below] node {} (D)
-            edge              node {} (A)
+            edge [bend left]  node {} (A)
         (E) edge [bend left]  node {} (A);
 \end{tikzpicture}
 \caption{An example of a digraph for a relation.}\label{fig:digraph}
@@ -169,15 +173,15 @@ When we write $x^2+y^2=1$, we are implicitly defining a relation.  In particular
 \end{example}
 
 \begin{problem}
-Define $\sim$ on $\mathbb{R}$ via $x\sim y$ if and only if $x\leq y$.  Draw a picture of this relation in $\mathbb{R}^2$. In other words, draw all points $(x,y)$ where $x\sim y$.
+Consider the relation $\leq$ on $\mathbb{R}$. Draw a picture of this relation in $\mathbb{R}^2$. In other words, identify all points $(x,y)$ where $x\leq y$.
 \end{problem}
 
 \begin{definition}
-Let $\sim$ be a relation on a set $A$.
+Let $\sim$ be a relation on a set $X$.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item The relation $\sim$ is \textbf{reflexive} if for all $x\in A$, $x\sim x$ (every element is related to itself).
-\item The relation $\sim$ is \textbf{symmetric} if for all $x,y\in A$, if $x\sim y$, then $y\sim x$.
-\item The relation $\sim$ is \textbf{transitive} if for all $x,y,z\in A$, if $x\sim y$ and $y\sim z$, then $x\sim z$.
+\item The relation $\sim$ is \textbf{reflexive} if for all $x\in X$, $x\sim x$ (every element is related to itself).
+\item The relation $\sim$ is \textbf{symmetric} if for all $x,y\in X$, if $x\sim y$, then $y\sim x$.
+\item The relation $\sim$ is \textbf{transitive} if for all $x,y,z\in X$, if $x\sim y$ and $y\sim z$, then $x\sim z$.
 \end{enumerate}
 \end{definition}
 
@@ -193,6 +197,8 @@ Here are a few examples that illustrate the concepts in the previous definition.
 \begin{problem}
 Determine whether the relation given in Example~\ref{ex:digraph} is reflexive, symmetric, or transitive.
 \end{problem}
+
+ADD OTHER EXAMPLES ABOVE TO PREVIOUS PROBLEM???
 
 \begin{problem}
 Given a relation $\sim$ on a finite set $A$, describe what each of reflexive, symmetric, and transitive look like in terms of a digraph. That is, draw a picture that represents reflexive, symmetric, and transitive. One thing to keep in mind is that the elements used in the definitions of symmetric and transitive do not have to be distinct.  So, you might need to consider multiple cases.
@@ -217,6 +223,7 @@ Determine whether each of the following relations is reflexive, symmetric, or tr
 \]
 \item Define $\sim$ on $\mathbb{N}$ via $n\sim m$ if and only if $n+m$ is even.
 \item Define $D$ on $\mathbb{R}$ via $(x,y)\in D$ if and only if $x=2y$.
+\item Define $F$ on $\mathbb{Z}\times \left(\mathbb{Z}\setminus \{0\}\right)$ via $(a,b)F(c,d)$ if and only $\frac{a}{b}=\frac{c}{d}$.
 \item\label{prob:mod 5} Define $\sim$ on $\mathbb{Z}$ via $a\sim b$ if and only if $a-b$ is a multiple of 5.
 \item Define $\sim$ on $\mathbb{R}^2$ via $(x_1,y_1)\sim (x_2,y_2)$ if and only if $x_1^2+y_1^2=x_2^2+y_2^2$.
 \item Define $\sim$ on $\mathbb{R}$ via $x\sim y$ if and only if $\lfloor x\rfloor =\lfloor y\rfloor$, where $\lfloor x\rfloor$ is the greatest integer less than or equal to $x$ (e.g., $\lfloor \pi\rfloor=3$, $\lfloor -1.5\rfloor=-2$, and $\lfloor 4\rfloor=4$).
@@ -226,17 +233,17 @@ Determine whether each of the following relations is reflexive, symmetric, or tr
 \end{problem}
 
 \begin{definition}\label{def:relatives}
-Let $\sim$ be a relation on a set $A$. For each $x\in A$, we define the \textbf{set of relatives of $x$ with respect to $\sim$} via
+Let $\sim$ be a relation on a set $X$. For each $x\in X$, we define the \textbf{set of relatives of $x$ with respect to $\sim$} via
 \[
-[x]_{\sim}=\{y\in A\mid x\sim y\}.
+[x]_{\sim}=\{y\in X\mid x\sim y\}.
 \]
 We also define
 \[
-\Omega_{\sim}=\{[x]\mid x\in A\}.
+\Omega_{\sim}=\{[x]\mid x\in X\}.
 \]
 \end{definition}
 
-If $\sim$ is clear from the context, we will often write $[x]$ in place of $[x]_{\sim}$.  In terms of digraphs, $[x]$ is the collection of vertices that have arrows pointing towards them from the vertex labeled by $x$. Notice that $\Omega_{\sim}$ is a set of sets.  In particular, an element in $\Omega_{\sim}$ is a subset of $A$---equivalently, an element of $\mathcal{P}(A)$.
+If $\sim$ is clear from the context, we will often write $[x]$ in place of $[x]_{\sim}$.  In terms of digraphs, $[x]$ is the collection of vertices that have arrows pointing towards them from the vertex labeled by $x$. Notice that $\Omega_{\sim}$ is a set of sets.  In particular, an element in $\Omega_{\sim}$ is a subset of $X$---equivalently, an element of $\mathcal{P}(X)$.
 
 \begin{problem}
 Consider the relation given in Example~\ref{ex:digraph}. Find $\Omega_R$ by determining $[x]$ for each $x\in A$.
