@@ -3,7 +3,7 @@
 As we have seen in the previous section, the notions of reflexive, symmetric, and transitive are independent of each other. That is, a relation may have some combination of these properties, possibly none of them and possibly all of them.  However, we have a special name for when a relation satisfies all three.
 
 \begin{definition}
-Let $\sim$ be a relation on a set $A$.  Then $\sim$ is called an \textbf{equivalence relation} if and only if $\sim$ is reflexive, symmetric, and transitive.
+Let $\sim$ be a relation on a set $A$.  Then $\sim$ is called an \textbf{equivalence relation} on $A$ if and only if $\sim$ is reflexive, symmetric, and transitive.
 \end{definition}
 
 \begin{problem}\label{prob:digraph}
@@ -36,53 +36,12 @@ Determine which relations given in Problem~\ref{prob:lots of relations} are equi
 \end{problem}
 
 \begin{problem}
-If possible, construct an equivalence relation on the empty set.  If this is not possible, explain why.
+Let $\mathcal{T}$ be the set of all triangles and define $\sim$ on $\mathcal{T}$ via $T_1\sim T_2$ if and only if $T_1$ is similar to $T_2$.  Determine whether $\sim$ is an equivalence relation on $\mathcal{T}$.
 \end{problem}
 
-
-
-!!!!!!
-
-Another common notation for the set of relatives of $x$ is $\overline{x}$.
-
-!!!!!
-
-%\begin{definition}\label{def:relatives}
-%Let $\sim$ be a relation on a set $A$ (not necessarily an equivalence relation) and let $x\in A$.  We define the \textbf{set of relatives of $x$ with respect to $\sim$} via
-%\[
-%[x]_{\sim}=\{y\in A\mid x\sim y\}.
-%\]
-%We also define
-%\[
-%\Omega_{\sim}=\{[x]\mid x\in A\}.
-%\]
-%\end{definition}
-%
-%If $\sim$ is clear from the context, we will often write $[x]$ in place of $[x]_{\sim}$. Another common notation for the set of relatives of $x$ is $\overline{x}$. Notice that $\Omega_{\sim}$ is a set of sets.  In particular, an element in $\Omega_{\sim}$ is a subset of $A$---equivalently, an element of $\mathcal{P}(A)$.
-%
-%\begin{problem}
-%Let $P$ and $F$ be as in part~\ref{prob:facebook} of Problem~\ref{prob:lots of them}.  Describe $[\text{Bob}]$, where Bob is the name of a specific Facebook user.  What is $\Omega_F$?
-%\end{problem}
-%
-%\begin{problem}
-%Let $P$ and $T$ be as in part~\ref{prob:twitter} of Problem~\ref{prob:lots of them}.  Describe $[\text{Maria}]$, where Maria is the name of a specific Twitter user.  What is $\Omega_T$?
-%\end{problem}
-%
-%\begin{problem}
-%Using your digraph in Problem~\ref{prob:made up}, find $\Omega_{\sim}$.  
-%\end{problem}
-%
-%\begin{problem}
-%Consider the relation $\leq$ on $\mathbb{R}$.  If $x\in \mathbb{R}$, what is $[x]$?
-%\end{problem}
-%
-%\begin{problem}\label{prob:mod5classes}
-%Find $[1]$ and $[2]$ for the relation given in part~\ref{prob:mod 5} of Problem~\ref{prob:lots of them}.  How many different sets of relatives are there?  What are they?
-%\end{problem}
-%
-%\begin{problem}
-%Find $[x]$ for all $x\in S$ for $S$ and $\sim$ from Problem~\ref{prob:digraph}.  Any observations?
-%\end{problem}
+\begin{problem}
+If possible, construct an equivalence relation on the empty set.  If this is not possible, explain why.
+\end{problem}
 
 \begin{theorem}\label{thm:related if and only if same class}
 Suppose $\sim$ is an equivalence relation on a set $A$ and let $a,b\in A$.  Then $[a]=[b]$ if and only if $a\sim b$.
@@ -91,23 +50,20 @@ Suppose $\sim$ is an equivalence relation on a set $A$ and let $a,b\in A$.  Then
 \begin{theorem}\label{thm:equiv yields partition}
 Suppose $\sim$ is an equivalence relation on a set $A$.  Then
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $\displaystyle \bigcup_{x\in A}\ [x]=A$, and
-\item For all $x,y\in A$, either $[x]=[y]$ or $[x]\cap [y]=\emptyset$.
+\item $\displaystyle \bigcup_{a\in A}\ [a]=A$, and
+\item For all $a,b\in A$, either $[a]=[b]$ or $[a]\cap [b]=\emptyset$.
 \end{enumerate}
 \end{theorem}
 
 In light of Theorem~\ref{thm:equiv yields partition}, we have the following definition.
 
 \begin{definition}\label{def:equivalence class}
-If $\sim$ is an equivalence relation on a set $A$, then for each $x\in A$, we refer to $[x]$ as the \textbf{equivalence class} of $x$.
+If $\sim$ is an equivalence relation on a set $A$, then for each $a\in A$, we refer to $[a]$ as the \textbf{equivalence class} of $a$.
 \end{definition}
 
-When $\sim$ is an equivalence relation on a set $A$, the collection of equivalence classes is denoted by $A/\mathord\sim$, which is read as ``$A$ modulo $\sim$" or ``$A$ mod $\sim$".  The collection $A/\mathord\sim$ is sometimes referred to as the \textbf{quotient set of $A$ by $\sim$}. Note that $\Omega_{\sim}$ equals $A/\mathord\sim$ whenever $\sim$ is an equivalence relation.
+Another common notation for the equivalence class of $x$ is $\overline{x}$.  When $\sim$ is an equivalence relation on a set $A$, the collection of equivalence classes is denoted by $A/\mathord\sim$, which is read as ``$A$ modulo $\sim$" or ``$A$ mod $\sim$".  The collection $A/\mathord\sim$ is sometimes referred to as the \textbf{quotient set of $A$ by $\sim$}. Note that $\Omega_{\sim}$ equals $A/\mathord\sim$ whenever $\sim$ is an equivalence relation.
 
 The upshot of Theorem~\ref{thm:equiv yields partition} is that given an equivalence relation, every element lives in exactly one equivalence class.  In the next section, we will see that we can run this in reverse.  That is, if we separate out the elements of a set so that every element is an element of exactly one subset (like the bins of my kids' toys), then this determines an equivalence relation.
-
-
-!!!!!!
 
 \begin{example}
 The collection of sets of relatives that you found in part~\ref{prob:mod 5} of Problem~\ref{prob:lots of them} is the set of equivalence classes modulo 5.

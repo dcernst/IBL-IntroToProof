@@ -8,6 +8,7 @@
 - Converted all "Exercise" and "Question" types to "Problem".
 - Added formal statement of Axiom of Choice to end of section on indexing sets.
 - Moved the definition of set of relatives up a section.
+- Moved discussion of Cartesian products of sets to its own section.
 
 ## Reviewer 1
 

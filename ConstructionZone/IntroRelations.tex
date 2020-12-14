@@ -2,98 +2,18 @@
 
 ADD INTRO BLURB HERE...
 
-USE X OR A???  I USE A GENERALLY IN CHAPTER 3.
-
 \begin{definition}
-An \textbf{ordered pair} is an object of the form $(x,y)$. Two ordered pairs $(x,y)$ and $(a,b)$ are \textbf{equal} if and only if $x=a$ and $y=b$. 
-\end{definition}
-
-\begin{definition}
-An \textbf{$n$-tuple} is an object of the form $(x_1, x_2,\ldots,x_n)$.  Each $x_i$ is referred to as the $i$th \textbf{component}.
-\end{definition}
-
-Note that an ordered pair is just a 2-tuple.
-
-\begin{definition}
-If $X$ and $Y$ are sets, the \textbf{Cartesian product} of $X$ and $Y$ is defined by
-\[
-X\times Y:=\{(x,y)\mid x\in X, y\in Y\}.
-\]
-That is, $X\times Y$ is the set of all ordered pairs where the first element is from $X$ and the second element is from $Y$.  We similarly define the Cartesian product of $n$ sets, say $X_1, \ldots, X_n$, by
-\[
-\prod_{i=1}^{n} X_i:=X_1\times \cdots \times X_n:=\{(x_1,\ldots,x_n)\mid  x_j\in X_j \mbox{ for all }1\leq j\leq n\},
-\]
-where $X_i$ is referred to as the $i$th \textbf{factor} of the Cartesian product and $x_j$ is referred to as the $j$th \textbf{coordinate} of $(x_1,\ldots,x_n)$. The set 
-\[
-\underbrace{X\times \cdots \times X}_{n\text{ factors}}
-\]
-is often abbreviated as $X^n$.
-\end{definition}
-
-\begin{example}\label{ex:CartesianProduct}
-If $A=\{a,b,c\}$ and $B=\{\smiley,\frownie\}$, then 
-\[
-A\times B=\{(a,\smiley), (a,\frownie),(b,\smiley),(b,\frownie), (c,\smiley),(c,\frownie)\}.
-\]
-\end{example}
-
-\begin{example}\label{ex:CartesianProduct}
-The standard two-dimensional plane $\mathbb{R}^2$ and standard three space $\mathbb{R}^{3}$ are familiar examples of Cartesian products.  In particular, we have
-\[
-\mathbb{R}^2=\mathbb{R}\times \mathbb{R}=\{(x,y)\mid x,y\in \mathbb{R}\}
-\]
-and
-\[
-\mathbb{R}^3=\mathbb{R}\times \mathbb{R}\times \mathbb{R}=\{(x,y,z)\mid x,y,z\in \mathbb{R}\}.
-\]
-\end{example}
-
-\begin{problem}
-Consider the sets $A$ and $B$ from Example~\ref{ex:CartesianProduct}
-\begin{enumerate}[label=\textrm{(\alph*)}]
-\item Find $B\times A$. 
-\item Find $B\times B$.
-\end{enumerate}
-\end{problem}
-
-\begin{problem}
-If $X$ and $Y$ are both finite sets, then how many elements will $X\times Y$ have?
-\end{problem}
-
-\begin{problem} 
-Let $A=\{1, 2, 3\}$, $B=\{1,2\}$, and $C=\{1,3\}$. Find $A \times B\times C$. 
-\end{problem}
-
-\begin{problem}
-Let $X=[0,1]$ and $Y=\{1\}$.  Write each of the following using set builder notation and then describe the set geometrically (e.g., draw a picture). 
-\begin{enumerate}[label=\textrm{(\alph*)}]
-\item $X\times Y$
-\item $Y\times X$
-\item $X\times X$
-\item $Y\times Y$
-\end{enumerate}
-\end{problem}
-
-\begin{problem}\label{prob:some lines}
-Write $\mathbb{N}\times \mathbb{R}$ using set builder notation and then describe this set geometrically by interpreting it as a subset of $\mathbb{R}^2$.
-\end{problem}
-
-\begin{problem}
-Given sets $X$ and $Y$, when will $X\times Y$ be equal to $Y\times X$?
-\end{problem}
-
-\begin{definition}
-Let $X$ and $Y$ be sets. A \textbf{relation $\sim$ from a set $X$ to a set $Y$} is a subset of $X \times Y$. If $\sim$ is a relation from $X$ to $X$, then we say that $\sim$ is a \textbf{relation on $X$}.  
+Let $A$ and $B$ be sets. A \textbf{relation $\sim$ from a set $A$ to a set $B$} is a subset of $A \times B$. If $\sim$ is a relation from $A$ to $A$, then we say that $\sim$ is a \textbf{relation on $A$}.  
 \end{definition}
 
 \begin{example}
 The set $\mathbb{N}\times \mathbb{R}$ from Problem~\ref{prob:some lines} is an example of a relation on $\mathbb{R}$ since $\mathbb{N}\times \mathbb{R}$ is a subset of $\mathbb{R}\times \mathbb{R}$.
 \end{example}
 
-Different notations for relations are used in different contexts.  If $\sim$ is a relation from $X$ to $Y$ and $(x,y)\in {\sim}$, then we say that \textbf{$x$ is related $y$}.  In this case, we may also write $x\sim y$.
+Different notations for relations are used in different contexts.  If $\sim$ is a relation from $A$ to $B$ and $(a,b)\in {\sim}$, then we say that \textbf{$a$ is related $b$}.  In this case, we may also write $a\sim b$.  It's important to notice that order matters here.  That is, if $a\sim b$, it may or may not be the case that $b\sim a$.
 
 \begin{example}
-You are already familiar with many relations.  For example, $=$, $\leq$, and $<$ are each examples of relations on the real numbers. We could say that $(3,\pi)$ is in the relation $\leq$ and the relation $<$ since $3\leq \pi$ and $3<\pi$.  However, $(3,\pi)$ is not in the relation $=$ since $3\neq \pi$.  Also, notice that sometime order matters. For example, $(-\sqrt{2}, 4)$ is in the relation $\leq$ while $(4,-\sqrt{2})$ is not.
+You are already familiar with many relations.  For example, $=$, $\leq$, and $<$ are each examples of relations on the real numbers. We could say that $(3,\pi)$ is in the relation $\leq$ and the relation $<$ since $3\leq \pi$ and $3<\pi$.  However, $(3,\pi)$ is not in the relation $=$ since $3\neq \pi$.  Also, notice that order matters for the relation $\leq$ yet does not for $=$. For example, $(-\sqrt{2}, 4)$ is in the relation $\leq$ while $(4,-\sqrt{2})$ is not.
 \end{example}
 
 \begin{example}
@@ -113,10 +33,10 @@ Define $S$ from $\{-1,1\}$ to $\mathbb{Z}$ via $1Sx$ if and only if $x$ is even 
 \end{example}
 
 \begin{example}
-Let $X$ be any set.  Since $\emptyset \subseteq X\times X$, the empty set forms a relation on $X$. This relation is called the \textbf{empty relation} on $X$.
+Let $A$ be any set.  Since $\emptyset \subseteq A\times A$, the empty set forms a relation on $A$. This relation is called the \textbf{empty relation} on $A$.
 \end{example}
 
-We can often represent relations using digraphs.  Given a finite set $X$ and a relation $\sim$ on $X$, a \textbf{digraph} (short for \emph{directed graph}) is a discrete graph having the members of $X$ as vertices and a directed edge from $x$ to $y$ if and only if $x\sim y$.
+We can often represent relations using digraphs.  Given a finite set $A$ and a relation $\sim$ on $A$, a \textbf{digraph} (short for \emph{directed graph}) is a discrete graph having the members of $A$ as vertices and a directed edge from $a$ to $b$ if and only if $a\sim b$.
 
 \begin{example}\label{ex:digraph}
 Figure~\ref{fig:digraph} depicts a digraph that represents a relation $\sim$ on $A=\{a,b,c,d,e\}$ given by
@@ -166,7 +86,7 @@ Let $A=\{a,b,c\}$ and define ${\sim}=\{(a,a),(a,b),(b,c),(c,b),(c,a)\}$.
 Let $A=\{1,2,3,4,5,6\}$ and define $|$ on $A$ via $x|y$ if and only if $x$ divides $y$.  Draw the digraph for $|$ on $A$.
 \end{problem}
 
-When $X$ or $Y$ is infinite, it is not practical to draw a digraph.  However, you are familiar with the graphs of some relations involving infinite sets.
+When $A$ or $B$ is infinite, it is not practical to draw a digraph.  However, you are familiar with the graphs of some relations involving infinite sets.
 
 \begin{example}
 When we write $x^2+y^2=1$, we are implicitly defining a relation.  In particular, the relation is the set of ordered pairs $(x,y)$ satisfying $x^2+y^2=1$, namely $\{(x,y)\mid x^2+y^2=1\}$. The graph of this relation in $\mathbb{R}^2$ is the unit circle centered at the origin.
@@ -232,6 +152,8 @@ Determine whether each of the following relations is reflexive, symmetric, or tr
 \end{enumerate}
 \end{problem}
 
+CHANGE NOTATION FOR SET OF RELATIVES???
+
 \begin{definition}\label{def:relatives}
 Let $\sim$ be a relation on a set $X$. For each $x\in X$, we define the \textbf{set of relatives of $x$ with respect to $\sim$} via
 \[
@@ -267,8 +189,8 @@ Consider the relation $\leq$ on $\mathbb{R}$.  If $x\in \mathbb{R}$, what is $[x
 Find $[1]$ and $[2]$ for the relation given in part~\ref{prob:mod 5} of Problem~\ref{prob:lots of relations}.  List all of the distinct sets of relatives for this relation.
 \end{problem}
 
-\begin{problem}
-DRAFT: Suppose $\sim$ is a relation on a finite set $A$.  If $\Omega_{\sim}=\{???\}$, find $A$ (smallest $A$?) and $\sim$...
+\begin{problem}\label{prob:find sim from Omega}
+Suppose $\sim$ is a relation on $A=\{1,2,3,4,5\}$ such that $[1]=\{1,3,4\}$, $[2]=\{4\}$, $[3]=\{3,4,5\}$, $[4]=\{1,2\}$, and $[5]=\emptyset$. List the ordered pairs in $\sim$ and draw the corresponding digraph.
 \end{problem}
 
 \end{section}
