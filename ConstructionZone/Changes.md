@@ -48,7 +48,7 @@
     * Nothing to address.
 - p. 15 skeleton of proof - this is good and more like this before the theorems would
 be helpful.
-    * * Nothing to address.
+    * Nothing to address.
 - p. 17 “The items below can be assembled...” Again, this is much better, very helpful.
     * Nothing to address.
 - p. 17 Theorem 2.49-2.51 these are good ideas.
@@ -166,7 +166,7 @@ be helpful.
 - I appreciated the variety in the examples of relations and equivalence relations throughout Chapter 6.
     * Nothing to address.
 - I would like to see Proof Skeletons for proving a relation is reflexive, proving a relation is symmetric, and proving a relation is transitive. Particularly, students struggle with the reflexive property and proving that a relation is reflexive so that proof skeleton would be quite useful – but then, it would look weird not to include the others, too.
-    * Todo.
+    * Done.
 - Section 6.3, Exercises 6.46 - 6.50: Again, personal preference: I think it is good for students to wrestle with collections of subsets of R, and it may be good to ask a question along the lines of, “For each of the following collections of subsets of R, decide (and support your decision with a proof or counterexample) whether or not the collection is a partition of R.”
     * I added several new problems and tweaked the relevant sections that should address this item.
 - In Section 7.1, I would like to see proof skeletons for the proofs that a function is surjective and that a function is injective. Students really struggle with surjectivity proofs so providing a clear skeleton here would be very beneficial. Students also consistently mix up the definitions of injective and function so again, a skeleton can help set the structure of the proof and how provide some fodder for discussion about how the proofs for injectivity and “function-ness” differ.

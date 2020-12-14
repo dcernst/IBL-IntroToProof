@@ -97,11 +97,11 @@ Consider the relation $\leq$ on $\mathbb{R}$. Draw a picture of this relation in
 \end{problem}
 
 \begin{definition}
-Let $\sim$ be a relation on a set $X$.
+Let $\sim$ be a relation on a set $A$.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item The relation $\sim$ is \textbf{reflexive} if for all $x\in X$, $x\sim x$ (every element is related to itself).
-\item The relation $\sim$ is \textbf{symmetric} if for all $x,y\in X$, if $x\sim y$, then $y\sim x$.
-\item The relation $\sim$ is \textbf{transitive} if for all $x,y,z\in X$, if $x\sim y$ and $y\sim z$, then $x\sim z$.
+\item The relation $\sim$ is \textbf{reflexive} if for all $a\in A$, $a\sim a$ (every element is related to itself).
+\item The relation $\sim$ is \textbf{symmetric} if for all $a,b\in A$, if $a\sim b$, then $b\sim a$.
+\item The relation $\sim$ is \textbf{transitive} if for all $a,b,c\in A$, if $a\sim b$ and $b\sim c$, then $a\sim c$.
 \end{enumerate}
 \end{definition}
 
@@ -128,8 +128,66 @@ Given a relation $\sim$ on a finite set $A$, describe what each of reflexive, sy
 Let $P$ be the set of people at a party and define $N$ via $(x,y)\in N$ if and only if $x$ knows the name of $y$.  Describe what it would mean for $N$ to be reflexive, symmetric, and transitive.
 \end{problem}
 
+Below, we provide skeleton proofs for proving that a relation is reflexive, symmetric, or transitive.  Notice that the skeleton proof for proving that a relation is reflexive is a special case of Skeleton Proof~\ref{skeleton:for all}. Similarly, the skeleton proofs involving symmetric and transitive are both special cases of Skeleton Proof~\ref{skeleton:for all direct proof}. It is important to point out that every relation on the empty set is vacuously reflexive, symmetric, and transitive.  In the skeleton proofs below, we are implicitly assuming that the set in question is nonempty.  In some circumstances, it may be necessary to mention the possibility of the empty set.
+
+\begin{skeleton}[Proof that a relation is reflexive]
+Here is the general structure for proving that a relation is reflexive. 
+\begin{center}
+\framebox{
+\begin{minipage}{6in}
+\vspace{.1in}
+\begin{proof}
+Assume $\sim$ is a relation on $A$.  Let $a\in A$.
+\begin{center}
+$\ldots$ \ \emph{[Use the definition of $\sim$ to verify that $a\sim a$]} \ $\ldots$\\
+\end{center}
+\noindent Therefore, the relation $\sim$ is reflexive on $A$.
+\end{proof}
+\end{minipage}
+}
+\end{center}
+\end{skeleton}
+
+\begin{skeleton}[Proof that a relation is symmetric]
+Here is the general structure for proving that a relation is symmetric.
+\begin{center}
+\framebox{
+\begin{minipage}{6in}
+\vspace{.1in}
+\begin{proof}
+Assume $\sim$ is a relation on $A$.  Let $a, b\in A$ and suppose $a\sim b$.
+\begin{center}
+$\ldots$ \ \emph{[Use assumption that $a\sim b$ with definition of $\sim$ to verify that $b\sim a$]} \ $\ldots$\\
+\end{center}
+\noindent Therefore, the relation $\sim$ is symmetric on $A$.
+\end{proof}
+\end{minipage}
+}
+\end{center}
+\end{skeleton}
+
+\begin{skeleton}[Proof that a relation is transitive]
+Here is the general structure for proving that a relation is transitiv.
+\begin{center}
+\framebox{
+\begin{minipage}{6in}
+\vspace{.1in}
+\begin{proof}
+Assume $\sim$ is a relation on $A$.  Let $a, b, c\in A$ and suppose $a\sim b$ and $b\sim c$.
+\begin{center}
+$\ldots$ \ \emph{[Use assumption that $a\sim b$ and $b\sim c$ with definition of $\sim$ to verify that $a\sim c$]} \ $\ldots$\\
+\end{center}
+\noindent Therefore, the relation $\sim$ is transitive on $A$.
+\end{proof}
+\end{minipage}
+}
+\end{center}
+\end{skeleton}
+
+
+
 \begin{problem}\label{prob:lots of relations}
-Determine whether each of the following relations is reflexive, symmetric, or transitive.
+Determine whether each of the following relations is reflexive, symmetric, or transitive. In each case, you should either provide a specific counterexample or a proof.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item\label{prob:facebook} Let $P$ denote the set of all people with accounts on Facebook and define $F$ on $P$ via $xFy$ if and only if $x$ is friends with $y$. 
 \item\label{prob:twitter} Let $P$ denote the set of all people with accounts on Twitter and define $T$ on $P$ via $xTy$ if and only if $x$ follows $y$ on Twitter. 
