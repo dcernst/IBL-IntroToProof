@@ -14,13 +14,16 @@ The Pythagoreans were an ancient secret society that followed their spiritual le
 
 Thus they were stunned when one of their own---Hippasus of Metapontum (c.\ 5th century BCE)---discovered that the side and the diagonal of a square are incommensurable. That is, the ratio of the length of the diagonal to the length of the side is irrational. Indeed, if the side of the square has length $a$, then the diagonal will have length $a\sqrt{2}$; the ratio is $\sqrt{2}$ (see Figure~\ref{fig:square}).
 
-\begin{figure}[ht]
-\begin{center}
-\includegraphics{square.png}
-\end{center}
-\vspace{-.5cm}
-\caption{The side and diagonal of a square are incommensurable.}
-\label{fig:square}
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[scale=3,angle/.style={fill=white},point/.style={}]
+\draw [thick] (0,0) -- (1,0) -- (1,1) -- (0,1) -- (0,0);
+\draw [thick] (0,0) -- (1,1);
+\node at (0,.5) [left] {$a$};
+\node at (.5,0) [below] {$a$};
+\node at (.35,.6) {$a\sqrt{2}$};
+\end{tikzpicture}
+\caption{The side and diagonal of a square are incommensurable.}\label{fig:square}
 \end{figure}
 
 %The following lemma is useful.
