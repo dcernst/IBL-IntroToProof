@@ -10,7 +10,7 @@ Let $A$ and $B$ be sets. A \textbf{relation $\sim$ from a set $A$ to a set $B$} 
 The set $\mathbb{N}\times \mathbb{R}$ from Problem~\ref{prob:some lines} is an example of a relation on $\mathbb{R}$ since $\mathbb{N}\times \mathbb{R}$ is a subset of $\mathbb{R}\times \mathbb{R}$.
 \end{example}
 
-Different notations for relations are used in different contexts.  If $\sim$ is a relation from $A$ to $B$ and $(a,b)\in {\sim}$, then we say that \textbf{$a$ is related $b$}.  In this case, we may also write $a\sim b$.  It is important to notice that order matters here.  That is, if $a\sim b$, it may or may not be the case that $b\sim a$.
+Different notations for relations are used in different contexts.  If $\sim$ is a relation from $A$ to $B$ and $(a,b)\in {\sim}$, then we say that \textbf{$a$ is related to $b$}.  In this case, we may also write $a\sim b$.  It is important to notice that order matters here.  That is, if $a\sim b$, it may or may not be the case that $b\sim a$.
 
 \begin{example}\label{ex:relation finite to finite}
 Let $A=\{a,b,c,d,e\}$ and $B=\{1,2,3,4\}$. Then the set of ordered pairs
@@ -51,7 +51,7 @@ Define the relation $S$ from $\{-1,1\}$ to $\mathbb{Z}$ via $1Sx$ if and only if
 Let $A$ be any set.  Since $\emptyset \subseteq A\times A$, the empty set forms a relation on $A$. This relation is called the \textbf{empty relation} on $A$.
 \end{example}
 
-We can visually represent relations using digraphs. A \textbf{digraph} (short for \emph{directed graph}) is a discrete graph that consists of a set of vertices connected by edges, where the edges have a direction associated with them. If $\sim$ is a relation from $A$ to $B$, then the elements of $A$ and $B$ are the vertices of the digraph and there is a directed edge from $a\in A$ to $b\in B$ if and only if $(a,b)$ is in the relation $\sim$ (i.e., $a\sim b$).  Utilizing a digraph may be impractical if there is a larger number of directed edges.
+We can visually represent relations using digraphs. A \textbf{digraph} (short for \emph{directed graph}) is a discrete graph that consists of a set of vertices connected by edges, where the edges have a direction associated with them. If $\sim$ is a relation from $A$ to $B$, then the elements of $A$ and $B$ are the vertices of the digraph and there is a directed edge from $a\in A$ to $b\in B$ if and only if $(a,b)$ is in the relation $\sim$ (i.e., $a\sim b$).  Utilizing a digraph may be impractical if there is a large number of directed edges.
 
 \begin{example}
 Consider the relation given in Example~\ref{ex:relation finite to finite}.  The corresponding digraph is depicted in Figure~\ref{fig:digraph finite to finite}. Notice that we have placed the vertices corresponding to elements of $A$ on the left and the elements of $B$ on the right.  This is standard practice, but what really matters is the edge connections not how the vertices are placed on the page.
@@ -175,7 +175,7 @@ Let $A=\{a,b,c\}$ and define ${\sim}=\{(a,a),(a,b),(b,c),(c,b),(c,a)\}$.
 \end{problem}
 
 \begin{problem}
-Let $A=\{1,2,3,4,5,6\}$ and define $|$ on $A$ via $x|y$ if and only if $x$ divides $y$.  List the ordered pairs in $|$ draw the corresponding digraph.
+Let $A=\{1,2,3,4,5,6\}$ and define $|$ on $A$ via $x|y$ if and only if $x$ divides $y$.  List the ordered pairs in $|$ and draw the corresponding digraph.
 \end{problem}
 
 Often it is not feasible to draw the complete diagram for the digraph of a relation (e.g., when the sets involved are infinite).  However, sometimes we can still provide a visual representation of the relation by plotting points that are in the relation.
@@ -327,17 +327,17 @@ Determine whether each of the following relations is reflexive, symmetric, or tr
 CHANGE NOTATION FOR SET OF RELATIVES???
 
 \begin{definition}\label{def:relatives}
-Let $\sim$ be a relation on a set $X$. For each $x\in X$, we define the \textbf{set of relatives of $x$ with respect to $\sim$} via
+Let $\sim$ be a relation on a set $A$. For each $a\in A$, we define the \textbf{set of relatives of $a$ with respect to $\sim$} via
 \[
-[x]_{\sim}=\{y\in X\mid x\sim y\}.
+[a]_{\sim}=\{b\in A\mid a\sim b\}.
 \]
 We also define
 \[
-\Omega_{\sim}=\{[x]\mid x\in X\}.
+\Omega_{\sim}=\{[a]\mid a\in A}.
 \]
 \end{definition}
 
-If $\sim$ is clear from the context, we will often write $[x]$ in place of $[x]_{\sim}$.  In terms of digraphs, $[x]$ is the collection of vertices that have arrows pointing towards them from the vertex labeled by $x$. Notice that $\Omega_{\sim}$ is a set of sets.  In particular, an element in $\Omega_{\sim}$ is a subset of $X$---equivalently, an element of $\mathcal{P}(X)$.
+If $\sim$ is clear from the context, we will often write $[a]$ in place of $[a]_{\sim}$.  In terms of digraphs, $[a]$ is the collection of vertices that have directed edges pointing towards them from the vertex labeled by $a$. Notice that $\Omega_{\sim}$ is a set of sets.  In particular, an element in $\Omega_{\sim}$ is a subset of $A$---equivalently, an element of $\mathcal{P}(A)$.
 
 ADD MORE PROBLEMS THAT CORRESPOND TO THE EXAMPLES I ADDED???
 
