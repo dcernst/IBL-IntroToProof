@@ -9,6 +9,8 @@
 - Added formal statement of Axiom of Choice to end of section on indexing sets.
 - Moved the definition of set of relatives up a section.
 - Moved discussion of Cartesian products of sets to its own section.
+- Lots of changes, additions, improvements to Chapter 6.  Too numerous to list.
+- Changed notation for set of relatives from [a] to rel(a) as [a] was somewhat non-standard in situations when relation is not an equivalence relation.
 
 ## Reviewer 1
 

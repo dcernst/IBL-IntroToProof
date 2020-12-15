@@ -166,16 +166,19 @@ Figure~\ref{fig:digraph on finite}\subref{fig:digraphA} represents the relation 
 \caption{Two variations of digraphs for a relation on $A=\{a,b,c,d,e\}$.}\label{fig:digraph on finite}
 \end{figure}
 
-\begin{problem}
-Let $A=\{a,b,c\}$ and define ${\sim}=\{(a,a),(a,b),(b,c),(c,b),(c,a)\}$.  
+\begin{problem}\label{prob:divides}
+Let $A=\{1,2,3,4,5,6\}$ and define $|$ on $A$ via $x|y$ if and only if $x$ divides $y$.  List the ordered pairs in $|$ and draw the corresponding digraph.
+\end{problem}
+
+\begin{problem}\label{prob:relation on finite}
+Let $A=\{a,b,c,d\}$ and define $\sim$ on $A$ via
+\[
+{\sim}=\{(a,a),(a,b),(a,c),(b,b),(b,a),(b,c),(c,c),(c,a),(c,b),(d,d)\}.
+\]  
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item Draw the digraph for $\sim$.
 \item Draw the digraph for the empty relation on $A$.
 \end{enumerate}
-\end{problem}
-
-\begin{problem}
-Let $A=\{1,2,3,4,5,6\}$ and define $|$ on $A$ via $x|y$ if and only if $x$ divides $y$.  List the ordered pairs in $|$ and draw the corresponding digraph.
 \end{problem}
 
 Often it is not feasible to draw the complete diagram for the digraph of a relation (e.g., when the sets involved are infinite).  However, sometimes we can still provide a visual representation of the relation by plotting points that are in the relation.
@@ -210,6 +213,53 @@ Draw a graph that represents the relation $\{(x,y)\in \mathbb{Z}^2 \mid y=x^2\}$
 Consider the relation $\leq$ on $\mathbb{R}$. Draw a picture of this relation in $\mathbb{R}^2$. In other words, identify all points $(x,y)$ where $x\leq y$.
 \end{problem}
 
+BLURB???
+
+\begin{definition}\label{def:relatives}
+Let $\sim$ be a relation on a set $A$. For each $a\in A$, we define the \textbf{set of relatives of $a$ with respect to $\sim$} via
+\[
+\rel(a,\sim):=\{b\in A\mid a\sim b\}.
+\]
+We also define the \textbf{collection of the set of relatives with respect to $\sim$} by
+\[
+\Rel(\sim):=\{\rel(a)\mid a\in A\}.
+\]
+\end{definition}
+
+If $\sim$ is clear from the context, we will often write $\rel(a)$ in place of $\rel(a,\sim)$.  In terms of digraphs, $\rel(a)$ is the collection of vertices that have a directed edge pointing towards them from the vertex labeled by $a$. In graph theory, this collection of vertices is called the \textbf{out neighborhood} of $a$ and each such vertex is called an \textbf{out neighbor}. Notice that $\Rel(\sim)$ is a set of sets.  In particular, an element in $\Rel(\sim)$ is a subset of $A$---equivalently, an element of $\mathcal{P}(A)$.
+
+\begin{example}
+Consider the relation given in Example~\ref{ex:relation on finite}.  By inspecting the ordered pairs in $\sim$ or by looking at the digraph in Figure~\ref{fig:digraph on finite}\subref{fig:digraphB}, we see that
+\[
+\rel(a) = \{a,b,c\},\ \rel(b) = \{a,b,c\},\ \rel(c) = \{d,e\},\ \rel(d) = \{a,c,d\},\ \rel(e) = \{a\},
+\]
+so that $\Rel(\sim) = \{\{a,b,c\},\{d,e\},\{a,c,d\},\{a\}\}$.
+\end{example}
+
+\begin{problem}
+Consider the relation given in Problem~\ref{prob:relation on finite}(a).  Find $\Rel(\sim)$ by determining $\rel(x)$ for each $x\in A$.
+\end{problem}
+
+\begin{problem}
+Describe the collection of the set of relatives with respect to the empty relation from Problem~\ref{prob:relation on finite}(b).
+\end{problem}
+
+\begin{problem}\label{prob:facebook}
+Let $P$ denote the set of all people with accounts on Facebook and define the relation $F$ on $P$ via $xFy$ if and only if $x$ is friends with $y$. Describe $\rel(\text{Bob})$, where Bob is the name of a specific Facebook user.  What is $\Rel(F)$?
+\end{problem}
+
+\begin{problem}\label{prob:mod 5}
+Define the relation $\equiv_5$ on $\mathbb{Z}$ via $a\equiv_5 b$ if and only if $a-b$ is a multiple of 5. Find $\rel(1)$, $\rel(2)$, and $\rel(6)$.  How many distinct sets are in $\Rel(\equiv_5)$?
+\end{problem}
+
+\begin{problem}
+Consider the relation $\leq$ on $\mathbb{R}$.  If $x\in \mathbb{R}$, what is $\rel(x)$?
+\end{problem}
+
+\begin{problem}\label{prob:find sim from Rel}
+Suppose $\sim$ is a relation on $A=\{1,2,3,4,5\}$ such that $\rel(1)=\{1,3,4\}$, $\rel(2)=\{4\}$, $\rel(3)=\{3,4,5\}$, $\rel(4)=\{1,2\}$, and $\rel(5)=\emptyset$. List the ordered pairs in $\sim$ and draw the corresponding digraph.
+\end{problem}
+
 ADD TRANSITION BLURB HERE...
 
 \begin{definition}
@@ -234,15 +284,25 @@ Here are a few examples that illustrate the concepts in the previous definition.
 Determine whether the relation given in Example~\ref{ex:relation on finite} is reflexive, symmetric, or transitive.
 \end{problem}
 
-ADD OTHER EXAMPLES ABOVE TO PREVIOUS PROBLEM???
+\begin{problem}
+Determine whether the two relations given in Problem~\ref{ex:relation on finite} are reflexive, symmetric, or transitive.
+\end{problem}
+
+%\begin{problem}
+%Determine whether the relation $F$ described in Problem~\ref{prob:facebook} is reflexive, symmetric, or transitive.
+%\end{problem}
+%
+%\begin{problem}
+%Determine whether the relation $\equiv_5$ described in Problem~\ref{prob:mod 5} is reflexive, symmetric, or transitive.
+%\end{problem}
 
 \begin{problem}
 Given a relation $\sim$ on a finite set $A$, describe what each of reflexive, symmetric, and transitive look like in terms of a digraph. That is, draw pictureS that represent each of reflexive, symmetric, and transitive. One thing to keep in mind is that the elements used in the definitions of symmetric and transitive do not have to be distinct.  So, you might need to consider multiple cases.
 \end{problem}
 
-\begin{problem}
-Let $P$ be the set of people at a party and define $N$ via $(x,y)\in N$ if and only if $x$ knows the name of $y$.  Describe what it would mean for $N$ to be reflexive, symmetric, and transitive.
-\end{problem}
+%\begin{problem}
+%Let $P$ be the set of people at a party and define $N$ via $(x,y)\in N$ if and only if $x$ knows the name of $y$.  Describe what it would mean for $N$ to be reflexive, symmetric, and transitive.
+%\end{problem}
 
 Below, we provide skeleton proofs for proving that a relation is reflexive, symmetric, or transitive.  Notice that the skeleton proof for proving that a relation is reflexive is a special case of Skeleton Proof~\ref{skeleton:for all}. Similarly, the skeleton proofs involving symmetric and transitive are both special cases of Skeleton Proof~\ref{skeleton:for all direct proof}. It is important to point out that every relation on the empty set is vacuously reflexive, symmetric, and transitive.  In the skeleton proofs below, we are implicitly assuming that the set in question is nonempty.  In some circumstances, it may be necessary to mention the possibility of the empty set.
 
@@ -303,8 +363,9 @@ $\ldots$ \ \emph{[Use assumption that $a\sim b$ and $b\sim c$ with definition\\ 
 \begin{problem}\label{prob:lots of relations}
 Determine whether each of the following relations is reflexive, symmetric, or transitive. In each case, you should either provide a specific counterexample or a proof.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item\label{prob:facebook} Let $P$ denote the set of all people with accounts on Facebook and define $F$ on $P$ via $xFy$ if and only if $x$ is friends with $y$. 
-\item\label{prob:twitter} Let $P$ denote the set of all people with accounts on Twitter and define $T$ on $P$ via $xTy$ if and only if $x$ follows $y$ on Twitter. 
+\item Consider the relation $F$ described in Problem~\ref{prob:facebook}.
+\item Consider the relation $\equiv_5$ described in Problem~\ref{prob:mod 5}.
+%\item\label{prob:twitter} Let $P$ denote the set of all people with accounts on Twitter and define $T$ on $P$ via $xTy$ if and only if $x$ follows $y$ on Twitter. 
 \item Let $P$ be the set of all people and define $H$ via $xHy$ if and only if $x$ and $y$ have the same height.
 \item Let $P$ be the set of all people and define $T$ via $xTy$ if and only if $x$ is taller than $y$.
 \item Consider the relation ``divides" on $\mathbb{N}$.
@@ -316,53 +377,11 @@ Determine whether each of the following relations is reflexive, symmetric, or tr
 \item Define $\sim$ on $\mathbb{N}$ via $n\sim m$ if and only if $n+m$ is even.
 \item Define $D$ on $\mathbb{R}$ via $(x,y)\in D$ if and only if $x=2y$.
 \item Define $F$ on $\mathbb{Z}\times \left(\mathbb{Z}\setminus \{0\}\right)$ via $(a,b)F(c,d)$ if and only $\frac{a}{b}=\frac{c}{d}$.
-\item\label{prob:mod 5} Define $\sim$ on $\mathbb{Z}$ via $a\sim b$ if and only if $a-b$ is a multiple of 5.
 \item Define $\sim$ on $\mathbb{R}^2$ via $(x_1,y_1)\sim (x_2,y_2)$ if and only if $x_1^2+y_1^2=x_2^2+y_2^2$.
 \item Define $\sim$ on $\mathbb{R}$ via $x\sim y$ if and only if $\lfloor x\rfloor =\lfloor y\rfloor$, where $\lfloor x\rfloor$ is the greatest integer less than or equal to $x$ (e.g., $\lfloor \pi\rfloor=3$, $\lfloor -1.5\rfloor=-2$, and $\lfloor 4\rfloor=4$).
 \item Define $\sim$ on $\mathbb{R}$ via $x \sim y$ if and only if $|x-y|<1$.
-\item Consider the empty relation on the set $A=\{a,b,c\}$.
+%\item Consider the empty relation on the set $A$ from Problem~\ref{prob:relation on finite}(b).
 \end{enumerate}
-\end{problem}
-
-CHANGE NOTATION FOR SET OF RELATIVES???
-
-\begin{definition}\label{def:relatives}
-Let $\sim$ be a relation on a set $A$. For each $a\in A$, we define the \textbf{set of relatives of $a$ with respect to $\sim$} via
-\[
-[a]_{\sim}=\{b\in A\mid a\sim b\}.
-\]
-We also define
-\[
-\Omega_{\sim}=\{[a]\mid a\in A}.
-\]
-\end{definition}
-
-If $\sim$ is clear from the context, we will often write $[a]$ in place of $[a]_{\sim}$.  In terms of digraphs, $[a]$ is the collection of vertices that have directed edges pointing towards them from the vertex labeled by $a$. Notice that $\Omega_{\sim}$ is a set of sets.  In particular, an element in $\Omega_{\sim}$ is a subset of $A$---equivalently, an element of $\mathcal{P}(A)$.
-
-ADD MORE PROBLEMS THAT CORRESPOND TO THE EXAMPLES I ADDED???
-
-\begin{problem}
-Consider the relation given in Example~\ref{ex:digraph}. Find $\Omega_{\sim}$ by determining $[x]$ for each $x\in A$.
-\end{problem}
-
-\begin{problem}
-Let $P$ and $F$ be as in part~\ref{prob:facebook} of Problem~\ref{prob:lots of relations}.  Describe $[\text{Bob}]$, where Bob is the name of a specific Facebook user.  What is $\Omega_F$?
-\end{problem}
-
-\begin{problem}
-Let $P$ and $T$ be as in part~\ref{prob:twitter} of Problem~\ref{prob:lots of relations}.  Describe $[\text{Maria}]$, where Maria is the name of a specific Twitter user.  What is $\Omega_T$?
-\end{problem}
-
-\begin{problem}
-Consider the relation $\leq$ on $\mathbb{R}$.  If $x\in \mathbb{R}$, what is $[x]$?
-\end{problem}
-
-\begin{problem}\label{prob:mod5classes}
-Find $[1]$ and $[2]$ for the relation given in part~\ref{prob:mod 5} of Problem~\ref{prob:lots of relations}.  List all of the distinct sets of relatives for this relation.
-\end{problem}
-
-\begin{problem}\label{prob:find sim from Omega}
-Suppose $\sim$ is a relation on $A=\{1,2,3,4,5\}$ such that $[1]=\{1,3,4\}$, $[2]=\{4\}$, $[3]=\{3,4,5\}$, $[4]=\{1,2\}$, and $[5]=\emptyset$. List the ordered pairs in $\sim$ and draw the corresponding digraph.
 \end{problem}
 
 \end{section}

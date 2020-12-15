@@ -1,13 +1,13 @@
 \begin{section}{Equivalence Relations}
 
-As we have seen in the previous section, the notions of reflexive, symmetric, and transitive are independent of each other. That is, a relation may have some combination of these properties, possibly none of them and possibly all of them.  However, we have a special name for when a relation satisfies all three.
+As we have seen in the previous section, the notions of reflexive, symmetric, and transitive are independent of each other. That is, a relation may have some combination of these properties, possibly none of them and possibly all of them.  However, we have a special name for when a relation satisfies all three properties.
 
 \begin{definition}
 Let $\sim$ be a relation on a set $A$.  Then $\sim$ is called an \textbf{equivalence relation} on $A$ if and only if $\sim$ is reflexive, symmetric, and transitive.
 \end{definition}
 
 \begin{problem}\label{prob:digraph}
-Let $S=\{1,2,3,4,5,6\}$ and define
+Let $A=\{1,2,3,4,5,6\}$ and define
 \[
 {\sim}=\{(1,1),(1,6),(2,2),(2,3),(2,4),(3,3),(3,2),(3,4),(4,4),(4,2),(4,3),(5,5),(6,6),(6,1)\}.
 \]
@@ -15,7 +15,7 @@ Using $\sim$, complete each of the following.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item Draw the digraph for $\sim$.
 \item Determine whether $\sim$ is an equivalence relation on $A$.
-\item Find $\Omega_{\sim}$ by determining $[x]$ for each $x\in S$.
+\item Find $\Rel(\sim)$ by determining $\rel(x)$ for each $x\in A$.
 \end{enumerate}
 \end{problem}
 
@@ -23,7 +23,7 @@ Using $\sim$, complete each of the following.
 Let $A=\{a,b,c,d,e\}$.  
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item Make up an equivalence relation $\sim$ on $A$ by drawing a digraph such that $a$ is not related to $b$ and $c$ is not related to $b$.  
-\item Using your digraph, find $\Omega_{\sim}$ by determining $[x]$ for each $x\in A$.
+\item Using your digraph, find $\Rel(\sim)$ by determining $\rel(x)$ for each $x\in A$.
 \end{enumerate}
 \end{problem}
 
@@ -31,7 +31,7 @@ Let $A=\{a,b,c,d,e\}$.
 Given a finite set $A$ and a relation $\sim$ on $A$, describe what the corresponding digraph would have to look like in order for $\sim$ to be an equivalence relation.
 \end{problem}
 
-\begin{problem}\label{prob:lots of them}
+\begin{problem}\label{prob:equiv from lots of relations}
 Determine which relations given in Problem~\ref{prob:lots of relations} are equivalence relations.
 \end{problem}
 
@@ -44,29 +44,30 @@ If possible, construct an equivalence relation on the empty set.  If this is not
 \end{problem}
 
 \begin{theorem}\label{thm:related if and only if same class}
-Suppose $\sim$ is an equivalence relation on a set $A$ and let $a,b\in A$.  Then $[a]=[b]$ if and only if $a\sim b$.
+Suppose $\sim$ is an equivalence relation on a set $A$ and let $a,b\in A$.  Then $\rel(a)=\rel(b)$ if and only if $a\sim b$.
 \end{theorem}
 
 \begin{theorem}\label{thm:equiv yields partition}
 Suppose $\sim$ is an equivalence relation on a set $A$.  Then
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $\displaystyle \bigcup_{a\in A}\ [a]=A$, and
-\item For all $a,b\in A$, either $[a]=[b]$ or $[a]\cap [b]=\emptyset$.
+\item $\displaystyle \bigcup_{a\in A}\ \rel(a)=A$, and
+\item For all $a,b\in A$, either $\rel(a)=\rel(b)$ or $\rel(a)\cap \rel(b)=\emptyset$.
 \end{enumerate}
 \end{theorem}
 
 In light of Theorem~\ref{thm:equiv yields partition}, we have the following definition.
 
 \begin{definition}\label{def:equivalence class}
-If $\sim$ is an equivalence relation on a set $A$, then for each $a\in A$, we refer to $[a]$ as the \textbf{equivalence class} of $a$.
+If $\sim$ is an equivalence relation on a set $A$, then for each $a\in A$, we refer to $\rel(a)$ as the \textbf{equivalence class} of $a$.
 \end{definition}
 
-Another common notation for the equivalence class of $x$ is $\overline{x}$.  When $\sim$ is an equivalence relation on a set $A$, the collection of equivalence classes is denoted by $A/\mathord\sim$, which is read as ``$A$ modulo $\sim$" or ``$A$ mod $\sim$".  The collection $A/\mathord\sim$ is sometimes referred to as the \textbf{quotient set of $A$ by $\sim$}. Note that $\Omega_{\sim}$ equals $A/\mathord\sim$ whenever $\sim$ is an equivalence relation.
+When $\sim$ is an equivalence relation on a set $A$, it is common to write each equivalence class $\rel(a)$ as $[a]$ or $\overline{a}$. 
+In addition, the collection of equivalence classes $\Rel(\sim)$ is often denoted by $A/\mathord\sim$, which is read as ``$A$ modulo $\sim$" or ``$A$ mod $\sim$".  The collection $A/\mathord\sim$ is sometimes referred to as the \textbf{quotient set of $A$ by $\sim$}.
 
-The upshot of Theorem~\ref{thm:equiv yields partition} is that given an equivalence relation, every element lives in exactly one equivalence class.  In the next section, we will see that we can run this in reverse.  That is, if we separate out the elements of a set so that every element is an element of exactly one subset (like the bins of my kids' toys), then this determines an equivalence relation.
+The upshot of Theorem~\ref{thm:equiv yields partition} is that given an equivalence relation, every element lives in exactly one equivalence class.  In the next section, we will see that we can run this in reverse.  That is, if we separate out the elements of a set so that every element is an element of exactly one subset, then this determines an equivalence relation.
 
 \begin{example}
-The collection of sets of relatives that you found in part~\ref{prob:mod 5} of Problem~\ref{prob:lots of them} is the set of equivalence classes modulo 5.
+The five distinct sets of relatives that you identified in Problem~\ref{prob:mod 5} are the equivalence classes for $\equiv_5$ on $\mathbb{Z}$. These equivalence classes are often called the \textbf{congruence classes modulo 5}.
 \end{example}
 
 \begin{problem}
@@ -74,7 +75,7 @@ If $\sim$ is an equivalence relation on a finite set $A$, describe $A/\mathord\s
 \end{problem}
 
 \begin{problem}
-For each of the equivalence relations in Problem~\ref{prob:lots of them}, succinctly describe the corresponding equivalence classes.
+For each of the equivalence relations you identified in Problem~\ref{prob:equiv from lots of relations}, succinctly describe the corresponding equivalence classes.
 \end{problem}
 
 \end{section}

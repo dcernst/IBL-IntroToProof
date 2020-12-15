@@ -15,13 +15,17 @@ That is, the elements of $\Omega$ are pairwise disjoint nonempty sets and their 
 \end{definition}
 
 \begin{example}
-The following are examples of partitions of the given set.  Perhaps you can find exceptions in the first two examples, but please take them at face value.
+Each of the following is an example of a partition of the set given in parentheses.  %Perhaps you can find exceptions in the first two examples, but please take them at face value.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item Democrat, Republican, Independent, Green Party, Libertarian, etc. (set of registered voters)
 \item Freshman, sophomore, junior, senior (set of high school students)
 \item Evens, odds (set of integers)
 \item Rationals, irrationals (set of real numbers)
 \end{enumerate}
+\end{example}
+
+\begin{example}\label{ex:toys}
+My kids have three types of toys in their room: Legos, wooden blocks, and Transformers.  This determines a partition of my kids' toys consisting of three blocks, where each block corresponds to the type of toy.
 \end{example}
 
 \begin{example}\label{ex:a partition}
@@ -76,22 +80,16 @@ Consider the equivalence relation
 \[
 \sim\ =\{(1,1),(1,2),(2,1), (2,2),(3,3),(4,4),(4,5),(5,4),(5,5),(6,6),(5,6),(6,5),(4,6),(6,4)\}
 \]
-on the set $A=\{1,2,3,4,5,6\}$.  Find the partition determined by $\Omega_{\sim}$.
+on the set $A=\{1,2,3,4,5,6\}$.  Find the partition determined by $\Rel(\sim)$.
 \end{problem}
 
 It turns out that we can reverse the situation, as well.  That is, given a partition, we can form an equivalence relation such that the equivalence classes correspond to the blocks of the partition.  Before proving this, we need a definition.
 
 \begin{definition}
-Let $A$ be a set and $\Omega$ any collection of subsets of $A$ (not necessarily a partition).  If $a,b\in A$, we will define $a$ to be $\Omega$-related to $b$ if there exists $R\in \Omega$ that contains both $a$ and $b$.  This relation is denoted by $\sim_{\Omega}$ and is called the \textbf{relation on $A$ associated to $\Omega$}.
+Let $A$ be a set and $\Omega$ any collection of subsets of $A$ (not necessarily a partition).  If $a,b\in A$, we will define $a$ to be $\Omega$-related to $b$ if and only if there exists $R\in \Omega$ that contains both $a$ and $b$.  This relation is denoted by $\sim_{\Omega}$ and is called the \textbf{relation on $A$ associated to $\Omega$}.
 \end{definition}
 
-This definition may look more awkward than the underlying concept.  The idea is that if two elements are in the same subset, then they are related.  For example, when my kids pick up all their toys and put each toy in the appropriate toy bin, we say that two toys are related if they are in the same bin.
-
-Notice that we have two similar-looking notations: $\Omega_{\sim}$ and $\sim_{\Omega}$.  As a reminder:
-\begin{enumerate}[label=\textrm{(\alph*)}]
-\item The collection of subsets of $A$ determined by the relation $\sim$ is denoted by $\Omega_{\sim}$.  If $\sim$ is an equivalence relation, then $\Omega_{\sim}=A/\mathord\sim$.
-\item The relation induced by the collection of subsets $\Omega$ is denoted by $\sim_{\Omega}$.
-\end{enumerate}
+In other words, two elements are related if and only if they are in the same subset. For example, if you consider the partition of my kids' toys described in Example~\ref{ex:toys}, we say that two toys are related if and only if they are of the same type.
 
 \begin{problem}
 Let $A=\{a,b,c,d,e,f\}$ and let $\Omega=\{\{a,c\},\{b,c\},\{d,f\}\}$.  List the ordered pairs in $\sim_{\Omega}$ and draw the corresponding digraph.
@@ -102,7 +100,7 @@ Let $A$ and $\Omega$ be as in Example~\ref{ex:a partition}. List the ordered pai
 \end{problem}
 
 \begin{problem}
-Let $A$ and $\Omega_{\sim}$ be as in Problem~\ref{prob:find sim from Omega}. Find the relation on $A$ associated to $\Omega_{\sim}$ and compare with what you obtained for $\sim$ in Problem~\ref{prob:find sim from Omega}.
+Consider Problem~\ref{prob:find sim from Rel}. Find the relation on $A$ associated to $\Rel(\sim)$ and compare with what you obtained for $\sim$ in Problem~\ref{prob:find sim from Rel}.
 \end{problem}
 
 \begin{problem}
