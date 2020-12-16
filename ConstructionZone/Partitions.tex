@@ -44,9 +44,9 @@ Consider the set $A$ from Example~\ref{ex:a partition}.
 Let $P$ be the set of prime numbers, $N$ the set of odd natural numbers that are not prime, and $E$ the set of even natural numbers.  Determine whether $\{P, N, E\}$ is a partition of $\mathbb{N}$.
 \end{problem}
 
-\begin{problem}
-Find a partition of $\mathbb{R}$ that consists of three blocks, where one of the blocks is finite and the remaining two blocks are infinite.
-\end{problem}
+%\begin{problem}
+%Find a partition of $\mathbb{R}$ that consists of three blocks, where one of the blocks is finite and the remaining two blocks are infinite.
+%\end{problem}
 
 \begin{problem}
 For each of the following, find a partition of $\mathbb{Z}$ with the given properties.
@@ -58,7 +58,7 @@ For each of the following, find a partition of $\mathbb{Z}$ with the given prope
 \end{problem}
 
 \begin{problem}
-For each relation in Problem~\ref{prob:lots of relations}, determine whether the corresponding collection of sets of relatives forms a partition of the given set.
+For each relation in Problem~\ref{prob:lots of relations}, determine whether the corresponding collection of the sets of relatives forms a partition of the given set.
 \end{problem}
 
 \begin{problem}
@@ -89,7 +89,7 @@ It turns out that we can reverse the situation, as well.  That is, given a parti
 Let $A$ be a set and $\Omega$ any collection of subsets of $A$ (not necessarily a partition).  If $a,b\in A$, we will define $a$ to be $\Omega$-related to $b$ if and only if there exists $R\in \Omega$ that contains both $a$ and $b$.  This relation is denoted by $\sim_{\Omega}$ and is called the \textbf{relation on $A$ associated to $\Omega$}.
 \end{definition}
 
-In other words, two elements are related if and only if they are in the same subset. For example, if you consider the partition of my kids' toys described in Example~\ref{ex:toys}, we say that two toys are related if and only if they are of the same type.
+In other words, two elements are related if and only if they are in the same subset. For example, if you consider the partition of my kids' toys described in Example~\ref{ex:toys}, then two toys are related if and only if they are of the same type.
 
 \begin{problem}
 Let $A=\{a,b,c,d,e,f\}$ and let $\Omega=\{\{a,c\},\{b,c\},\{d,f\}\}$.  List the ordered pairs in $\sim_{\Omega}$ and draw the corresponding digraph.
@@ -138,6 +138,10 @@ If $\Omega$ is a partition of a set $A$, then $\sim_{\Omega}$ is an equivalence 
 \end{theorem}
 
 Together, Theorems~\ref{thm:equiv yields partition2} and \ref{thm:partition yields equivalence relation} tell us that equivalence relations and partitions are two different ways of viewing the same thing.
+
+\begin{corollary}\label{cor:partition yields equivalence relation}
+If $\sim$ is a relation on a nonempty set $A$ such that the collection of the set of relatives with respect to $\sim$ is a partition of $A$, then $\sim$ is an equivalence relation.
+\end{corollary}
 
 \begin{problem}
 Let $A=\{\circ, \triangle, \blacktriangle, \square, \blacksquare, \bigstar, \smiley, \frownie\}$.  Make up a partition $\Omega$ on $A$ and then draw the digraph corresponding to $\sim_{\Omega}$.
