@@ -19,7 +19,7 @@
 - Just before Definition 2.1 add, “...or, equivalently “n ∈ Z.”
     * I don't understand this suggestion.
 - Section 2.3: Revise “...it never be both.”
-    * Fixed.
+    * Done.
 - Exercise 2.68. The instructions are not clear. What does “Discuss the meaning of...” mean? Revise.
     * I hope that my fix is sufficient.
 - Section 3.1: The order of the bulleted sets could be revised so that they progress as nested. Then this can have powerful consequences in a student’s thinking of these sets for modern algebraic considerations.

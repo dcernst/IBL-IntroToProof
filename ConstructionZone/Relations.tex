@@ -1,23 +1,25 @@
 \begin{section}{Relations}
 
-ADD INTRO BLURB HERE...
+While there is no agreed upon universal definition of mathematics, one could argue that mathematics focuses on the study of patterns and relationships. Certain types of relationships occur over and over in mathematics.  One way of formalizing the abstract nature and structure of these relationships is with the notion of \emph{relations}. In Chapter~\ref{chap:Functions}, we will see that a function is a special type of relation.
+
+Recall from Section~\ref{sec:Cartesian Products} that the Cartesian product of two sets $A$ and $B$, written $A\times B$, is the set of all ordered pairs $(a,b)$, where $a\in A$ and $b\in B$. That is, $A\times B=\{(a,b)\mid a\in A, b\in B\}$.
 
 \begin{definition}
-Let $A$ and $B$ be sets. A \textbf{relation $\sim$ from a set $A$ to a set $B$} is a subset of $A \times B$. If $\sim$ is a relation from $A$ to the same set $A$, then we say that $\sim$ is a \textbf{relation on $A$}.  
+Let $A$ and $B$ be sets. A \textbf{relation $\sim$ from a set $A$ to a set $B$} is a subset of $A \times B$. If $\sim$ is a relation from $A$ to $B$ and $(a,b)\in {\sim}$, then we say that \textbf{$a$ is related to $b$}.  In this case, we may also write $a\sim b$. If $\sim$ is a relation from $A$ to the same set $A$, then we say that $\sim$ is a \textbf{relation on $A$}.
 \end{definition}
 
 \begin{example}
 The set $\mathbb{N}\times \mathbb{R}$ from Problem~\ref{prob:some lines} is an example of a relation on $\mathbb{R}$ since $\mathbb{N}\times \mathbb{R}$ is a subset of $\mathbb{R}\times \mathbb{R}$.
 \end{example}
 
-Different notations for relations are used in different contexts.  If $\sim$ is a relation from $A$ to $B$ and $(a,b)\in {\sim}$, then we say that \textbf{$a$ is related to $b$}.  In this case, we may also write $a\sim b$.  It is important to notice that order matters here.  That is, if $a\sim b$, it may or may not be the case that $b\sim a$.
+It is important to notice that the order in which we write things for relations matters.  In particular, if $\sim$ is a relation from $A$ to $B$ and $a \sim b$, then it may or may not be the case that $b\sim a$.
 
 \begin{example}\label{ex:relation finite to finite}
 Let $A=\{a,b,c,d,e\}$ and $B=\{1,2,3,4\}$. Then the set of ordered pairs
 \[
 {\sim}=\{(a,1),(a,2),(a,4),(c,2),(d,2),(e,2),(e,4)\}
 \]
-is one possible example of a relation from $A$ to $B$. In this case, we could write $(c,2)\in{\sim}$ or $c\sim 2$. We could also say that $a$ is related to 1, 2, and 4. 
+is an example of a relation from $A$ to $B$. In this case, we could write $(c,2)\in{\sim}$ or $c\sim 2$. We could also say that $a$ is related to 1, 2, and 4. 
 \end{example}
 
 \begin{example}\label{ex:relation on finite}
@@ -27,16 +29,15 @@ As in the previous example, let $A=\{a,b,c,d,e\}$. One possible relation on $A$ 
 \]
 \end{example}
 
-\begin{example}
-You are already familiar with many relations.  For example, $=$, $\leq$, and $<$ are each examples of relations on the real numbers. We could say that $(3,\pi)$ is in the relation $\leq$ and the relation $<$ since $3\leq \pi$ and $3<\pi$.  However, $(3,\pi)$ is not in the relation $=$ since $3\neq \pi$.  Also, notice that order matters for the relations $\leq$ and $<$ yet does not for $=$. For example, $(-\sqrt{2}, 4)$ is in the relation $\leq$ while $(4,-\sqrt{2})$ is not.
+\begin{example}\label{ex:Twitter}
+Consider the set of accounts $A$ on the social media platform Twitter.  On Twitter, each account has a set of accounts that they follow.  We can model this situation mathematically using a relation on $A$.  Define $T$ on $A$ via $xTy$ if and only if $x$ follows $y$ on Twitter. As a set
+\[
+T=\{(x,y)\in A\times A\mid x\text{ follows }y\text{ on Twitter}\}.
+\]
 \end{example}
 
 \begin{example}
-Let $P$ denote the set of all people and let $F$ denote the set of all possible first names.  Define the relation $N$ from $P$ to $F$ via
-\[
-N:=\{(p,f)\mid p\text{ has first name }f\}.
-\]
-That is, $pNf$ if and only if $p$ has first name $f$. 
+You are already familiar with many relations.  For example, $=$, $\leq$, and $<$ are each examples of relations on the real numbers. We could say that $(3,\pi)$ is in the relation $\leq$ and the relation $<$ since $3\leq \pi$ and $3<\pi$.  However, $(3,\pi)$ is not in the relation $=$ since $3\neq \pi$.  Also, notice that order matters for the relations $\leq$ and $<$ yet does not for $=$. For example, $(-\sqrt{2}, 4)$ is in the relation $\leq$ while $(4,-\sqrt{2})$ is not.
 \end{example}
 
 %\begin{example}
@@ -170,7 +171,7 @@ Figure~\ref{fig:digraph on finite}\subref{fig:digraphA} represents the relation 
 Let $A=\{1,2,3,4,5,6\}$ and define $|$ on $A$ via $x|y$ if and only if $x$ divides $y$.  List the ordered pairs in $|$ and draw the corresponding digraph.
 \end{problem}
 
-\begin{problem}\label{prob:relation on finite}
+\begin{problem}\label{prob:another relation on finite}
 Let $A=\{a,b,c,d\}$ and define $\sim$ on $A$ via
 \[
 {\sim}=\{(a,a),(a,b),(a,c),(b,b),(b,a),(b,c),(c,c),(c,a),(c,b),(d,d)\}.
@@ -202,18 +203,18 @@ When we write $x^2+y^2=1$, we are implicitly defining a relation.  In particular
 \end{figure}
 
 \begin{problem}
-Draw a graph that represents the relation $\{(x,y)\in \mathbb{R}^2 \mid y=x^2\}$.
-\end{problem}
-
-\begin{problem}
-Draw a graph that represents the relation $\{(x,y)\in \mathbb{Z}^2 \mid y=x^2\}$.
+For each of the following, draw a portion of the graph that represents the relation as a subset of $\mathbb{R}^2$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\{(x,y)\in \mathbb{R}^2 \mid y=x^2\}$
+\item $\{(x,y)\in \mathbb{Z}^2 \mid y=x^2\}$
+\end{enumerate}
 \end{problem}
 
 \begin{problem}
 Consider the relation $\leq$ on $\mathbb{R}$. Draw a picture of this relation in $\mathbb{R}^2$. In other words, identify all points $(x,y)$ where $x\leq y$.
 \end{problem}
 
-BLURB???
+For a relation on a set, it is natural to consider the collection of elements that a given element is related to.  For example, a user's ``Following List" on Twitter is the set of accounts on Twitter that the user is following. %Be careful not to confuse ``Following List" with ``Followers List".  The latter is the set of accounts that follow a user.  
 
 \begin{definition}\label{def:relatives}
 Let $\sim$ be a relation on a set $A$. For each $a\in A$, we define the \textbf{set of relatives of $a$ with respect to $\sim$} via
@@ -226,7 +227,7 @@ We also define the \textbf{collection of the sets of relatives with respect to $
 \]
 \end{definition}
 
-If $\sim$ is clear from the context, we will often write $\rel(a)$ in place of $\rel(a,\sim)$.  In terms of digraphs, $\rel(a)$ is the collection of vertices that have a directed edge pointing towards them from the vertex labeled by $a$. In graph theory, this collection of vertices is called the \textbf{out neighborhood} of $a$ and each such vertex is called an \textbf{out neighbor}. Notice that $\Rel(\sim)$ is a set of sets.  In particular, an element in $\Rel(\sim)$ is a subset of $A$---equivalently, an element of $\mathcal{P}(A)$.
+If $\sim$ is clear from the context, we will usually write $\rel(a)$ in place of $\rel(a,\sim)$.  In terms of digraphs, $\rel(a)$ is the collection of vertices that have a directed edge pointing towards them from the vertex labeled by $a$. In graph theory, this collection of vertices is called the \textbf{out neighborhood} of $a$ and each such vertex is called an \textbf{out neighbor}. Notice that $\Rel(\sim)$ is a set of sets.  In particular, an element in $\Rel(\sim)$ is a subset of $A$---equivalently, an element of $\mathcal{P}(A)$.
 
 \begin{example}
 Consider the relation given in Example~\ref{ex:relation on finite}.  By inspecting the ordered pairs in $\sim$ or by looking at the digraph in Figure~\ref{fig:digraph on finite}\subref{fig:digraphB}, we see that
@@ -237,11 +238,11 @@ so that $\Rel(\sim) = \{\{a,b,c\},\{d,e\},\{a,c,d\},\{a\}\}$.
 \end{example}
 
 \begin{problem}
-Consider the relation given in Problem~\ref{prob:relation on finite}(a).  Find $\Rel(\sim)$ by determining $\rel(x)$ for each $x\in A$.
+Consider the relation given in Problem~\ref{prob:another relation on finite}(a).  Find $\Rel(\sim)$ by determining $\rel(x)$ for each $x\in A$.
 \end{problem}
 
 \begin{problem}
-Describe the collection of the sets of relatives with respect to the empty relation from Problem~\ref{prob:relation on finite}(b).
+Describe the collection of the sets of relatives with respect to the empty relation from Problem~\ref{prob:another relation on finite}(b).
 \end{problem}
 
 \begin{problem}\label{prob:facebook}
@@ -285,7 +286,16 @@ Determine whether the relation given in Example~\ref{ex:relation on finite} is r
 \end{problem}
 
 \begin{problem}
-Determine whether the two relations given in Problem~\ref{ex:relation on finite} are reflexive, symmetric, or transitive.
+Determine whether the two relations given in Problem~\ref{prob:another relation on finite} are reflexive, symmetric, or transitive.
+\end{problem}
+
+\begin{problem}
+Let $A=\{a,b,c,d,e\}$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Define a relation $R$ on $A$ that is reflexive, but not symmetric or transitive.
+\item Define a relation $S$ on $A$ that is symmetric, but not reflexive or transitive.
+\item Define a relation $T$ on $A$ that is transitive, but not reflexive or symmetric.
+\end{enumerate}
 \end{problem}
 
 %\begin{problem}
@@ -363,9 +373,9 @@ $\ldots$ \ \emph{[Use assumption that $a\sim b$ and $b\sim c$ with definition\\ 
 \begin{problem}\label{prob:lots of relations}
 Determine whether each of the following relations is reflexive, symmetric, or transitive. In each case, you should either provide a specific counterexample or a proof.
 \begin{enumerate}[label=\textrm{(\alph*)}]
+\item Consider the relation $T$ described in Example~\ref{ex:Twitter}.
 \item Consider the relation $F$ described in Problem~\ref{prob:facebook}.
 \item Consider the relation $\equiv_5$ described in Problem~\ref{prob:mod 5}.
-%\item\label{prob:twitter} Let $P$ denote the set of all people with accounts on Twitter and define $T$ on $P$ via $xTy$ if and only if $x$ follows $y$ on Twitter. 
 \item Let $P$ be the set of all people and define $H$ via $xHy$ if and only if $x$ and $y$ have the same height.
 \item Let $P$ be the set of all people and define $T$ via $xTy$ if and only if $x$ is taller than $y$.
 \item Consider the relation ``divides" on $\mathbb{N}$.
