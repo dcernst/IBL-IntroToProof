@@ -1,85 +1,115 @@
 \begin{section}{Introduction to Functions}
 
-SPECIAL TYPE OF RELATION...
+In this section, we will introduce the concept of function as a special type of relation.  Our definition should agree with any previous definition of function that you may have learned.
 
-Undoubtably, you have encountered the concept of function in your prior mathematical experience.  In this section, we will introduce the concept of function as a special type of relation.  As you shall see, this agrees with any previous definition of function that you may have learned.  
-
-Up until this point, you've probably only encountered functions as an algebraic rule, e.g., $f(x)=x^{2}-1$, for transforming one real number into another.  However, we can study functions in a much broader context.  Loosely speaking, the basic building blocks of a function are a first set and a second sets, say $X$ and $Y$, respectively, and a ``correspondence'' that assigns each element of $X$ to exactly one element of $Y$.  Let's take a look at the actual definition.
+Up until this point, you may have only encountered functions as an algebraic rule, e.g., $f(x)=x^{2}-1$, for transforming one real number into another.  However, we can study functions in a much broader context.  The basic building blocks of a function are a first set and a second set, say $X$ and $Y$, and a ``correspondence'' that assigns each element of $X$ to exactly one element of $Y$.  Let's take a look at the actual definition.
 
 \begin{definition}\label{def:function}
-Let $X$ and $Y$ be two nonempty sets.  A \textbf{function} from set $X$ to set $Y$, denoted $f:X\to Y$, is a relation (i.e., subset of $X\times Y$) such that:
-\begin{enumerate}[label=\textrm{(\alph*)}]
-\item For each $x\in X$, there exists $y\in Y$ such that $(x,y)\in f$, and
-\item If $(x,y_{1}), (x,y_{2}) \in f$, then $y_{1}=y_{2}$.
-\end{enumerate}
-Note that if $(x,y)\in f$, we usually write $y=f(x)$ and say that ``$f$ maps $x$ to $y$.''
-\end{definition}
-
-Part (a) of Definition~\ref{def:function} says that every element of $X$ appears in the first coordinate of an ordered pair in the relation.  Part (b) says that each element of $X$ only appears once in the first coordinate of an ordered pair in the relation.  It is important to note that there are no restrictions on whether an element of $Y$ ever appears in the second coordinate.  Furthermore, if an element of $Y$ appears in the second coordinate, it may appear again in a different ordered pair.
-
-\begin{definition}
-The set $X$ from Definition~\ref{def:function} is called the \textbf{domain} of $f$ and is denoted by $\dom(f)$.  The set $Y$ is called the \textbf{codomain} of $f$ and is denoted by $\codom(f)$.  The set
+Let $X$ and $Y$ be two nonempty sets.  A \textbf{function} $f$ from $X$ to set $Y$ is a relation (i.e., subset of $X\times Y$) such that for every $x\in X$, there exists a unique $y\in Y$ such that $(x,y)\in f$. The set $X$ is called the \textbf{domain} of $f$ and is denoted by $\dom(f)$.  The set $Y$ is called the \textbf{codomain} of $f$ and is denoted by $\codom(f)$ while the subset of the codomain defined via
 \[
-\range(f)=\{y\in Y\mid \mbox{there exists }x\mbox{ such that } y=f(x)\}
+\range(f):=\{y\in Y\mid \mbox{there exists }x\mbox{ such that } (x,y)\in f\}
 \]
-is called the \textbf{range} of $f$ or the \textbf{image of $X$} under $f$. If $f$ is a function and $(x,y)\in f$, then we may refer to $x$ as the \textbf{input} of $f$ and $y$ as the \textbf{output} of $f$.
+is called the \textbf{range} of $f$ or the \textbf{image of $X$} under $f$.
 \end{definition}
 
-It follows immediately from the definition that $\range(f)\subseteq \codom(f)$.  However, it is possible that the range of $f$ is a proper subset of the codomain.
+We will often write $f:X\to Y$ to indicate that $f$ is a function from $X$ to $Y$. Sometimes the word \textbf{mapping} (or \textbf{map}) is used in place of the word function.  If $(x,y)\in f$ for a function $f$, we often write $y=f(x)$ and say that ``$f$ maps $x$ to $y$'', ``$y$ is the image of $x$ under $f$", or ``$y$ equals $f$ of $x$". The function is clear from the context, we may write $x\mapsto y$. We may also refer to $x$ as the \textbf{input} of $f$ and $y$ as the \textbf{output} of $f$. In this case, the domain of a function is the set of inputs while the range is the set of outputs for the function.
+ 
+Notice that we can interpret our definition of function in terms of existence and uniqueness.  That is, $f:X\to Y$ is a function provided:
+\begin{enumerate}
+\item (Existence) For each $x\in X$, there exists $y\in Y$ such that $y=f(x)$, and
+\item (Uniqueness) If $y_1=f(x)$ and $y_2=f(x)$, then $y_{1}=y_{2}$.
+\end{enumerate}
+In other words, every element of the domain is utilized and is utilized exactly once. However, there are no restrictions on whether an element of the codomain ever appears in the second coordinate of an ordered pair in the relation.  Yet if an element of $Y$ is in the range of $f$, it may appear in more than one ordered pair in the relation.
+
+It follows immediately from the definition of function that two functions are equal if and only if they have the same domain, same codomain, and the same set of ordered pairs in the relation. That is, functions $f$ and $g$ are equal if and only if $\dom(f)=\dom(g)$, $\codom(f)=\codom(g)$, and $f(x)=g(x)$ for all $x\in X$.
+
+Since functions are special types of relations, we can represent them using digraphs when practical. These digraphs are called \textbf{function diagrams} or \textbf{mapping diagrams}. When drawing digraphs for functions, it is standard practice to put the vertices for the domain on the left and the vertices for the codomain on the right, so that all directed edges point from left to right. We may also draw an additional arrow labeled by the name of the function from the domain to the codomain.
+
+\begin{example}
+Let $X=\{a,b,c,d\}$ to $Y=\{1,2,3,4\}$ and define the relation $f$ from $X$ to $Y$ via
+\[
+f=\{(a,2),(b,4),(c,4),(d,1)\}.
+\]
+Since each element $X$ appears exactly once as a first coordinate, $f$ is a function with domain $X$ and codomain $Y$ (i.e., $f:X\to Y$). In this case, we see that $\range(f)=\{1,2,4\}$.  Moreover, we can write things like $f(a)=2$ and $c\mapsto 4$, and say things like ``$f$ maps $b$ to 4" and ``the image of $d$ is 1."  The function diagram for $f$ is depicted in Figure~\ref{fig:function digraph}.
+\end{example}
+
+\tikzset{every loop/.style={min distance=8mm}}
+\tikzstyle{vert} = [circle, draw, fill=grey,inner sep=0pt, minimum size=5mm]
+\tikzstyle{b} = [draw,-stealth]
+
+\begin{figure}[h!]
+\begin{center}
+\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2cm,semithick,scale=1.2]
+
+\node[vert] (A) at (0,4) {\scriptsize $a$};
+\node[vert] (B) at (0,3) {\scriptsize $b$};
+\node[vert] (C) at (0,2) {\scriptsize $c$};
+\node[vert] (D) at (0,1) {\scriptsize $d$};
+
+\node[vert] (1) at (2.5,4) {\scriptsize $1$};
+\node[vert] (2) at (2.5,3) {\scriptsize $2$};
+\node[vert] (3) at (2.5,2) {\scriptsize $3$};
+\node[vert] (4) at (2.5,1) {\scriptsize $4$};
+
+\path (A) edge node {} (2)
+(B) edge node {} (4)
+(C) edge node {} (4)
+(D) edge node {} (1);
+
+\node[draw,fit=(A) (B) (C) (D),minimum width=1.5cm,gray] {};
+\node[draw,fit=(1) (2) (3) (4),minimum width=1.5cm,gray] {};
+\node (X) at (0,4.7) {$X$};
+\node (Y) at (2.5,4.7) {$Y$};
+\path (X) edge [bend left] node {$f$} (Y);
+\end{tikzpicture}
+\caption{Digraph for a function from $X=\{a,b,c,d,\}$ to $Y=\{1,2,3,4\}$.}\label{fig:function digraph}
+\end{center}
+\end{figure}
+
+\begin{problem}
+Provide at least two reasons why the relation in Example~\ref{ex:relation finite to finite} (see Figure~\ref{fig:digraph finite to finite}) is not a function.
+\end{problem}
+
+\begin{problem}
+What properties does the digraph for a relation from $X$ to $Y$ need to have in order for it to represent a function?
+\end{problem}
+
+Sometimes we can define a functions involving sets of numbers using a formula. For example, we can write $f(x)=x^2-1$ to mean that each $x$ in the domain of $f$ maps to the quantity $x^2-1$ in the codomain. However, notice that providing only a formula is ambiguous!  A function is determined by itss domain, codomain, and the correspondence between these two sets. If we only provide a description for the correspondence, it's not clear what the domain and codomain are.  Two functions that are defined by the same algebraic formula, but have different domains or codomains are \emph{not} equal.  For example, the function $f:\mathbb{R}\to \mathbb{R}$ defined via $f(x)=x^{2}-1$ is not equal to the function $g:\mathbb{N}\to\mathbb{R}$ defined by $g(x)=x^{2}-1$.
+
+Sometimes we rely on context to interpret the domain and codomain.  For example, in a first-semester calculus class, when we describe a function in terms of a formula, we are implicitly assuming that the domain is the largest allowable subset of $\mathbb{R}$---sometimes called the \textbf{default domain}---that makes sense for the given formula while the codomain is $\mathbb{R}$. If we write $f(x)=x^2-1$, $g(x)=\sqrt{x}$, and $h(x)=\frac{1}{x}$ in a calculus class, we would interpret these as the functions $f:\mathbb{R}\to \mathbb{R}$, $g:[0,\infty)\to \mathbb{R}$, and $h:\mathbb{R}\setminus \{0\}\to \mathbb{R}$ that are determined by their respective formulas. 
+
+%When defining a function by a formula, we will usually write something of the form ``Define the function $f:X\to Y$ via $f(x)=\mbox{some algebraic expression}$", where we interpret the formula to apply to all $x\in X$.
 
 \begin{problem}\label{prob:lots}
-Let $X=\{\circ, \square,\triangle,\smiley\}$ and $Y=\{a,b,c,d,e\}$.  Determine whether each of the following represent functions.  Explain.  If the relation is a function, determine the domain, codomain, and range.
-
+Let $X=\{\circ, \square,\triangle,\smiley\}$ and $Y=\{a,b,c,d,e\}$. For each of the following relations, draw the corresponding digraph and determine whether the relation represents a function from $X$ to $Y$, $Y$ to $X$, $X$ to $X$, or does not represent a function. If the relation is a function, determine the domain, codomain, and range.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $f:X\to Y$ defined via $f=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,d)\}$.
-\item $g:X\to Y$ defined via $g=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,c)\}$.
-\item $h:X\to Y$ defined via $h=\{(\circ, a),(\square,b),(\triangle,c),(\circ,d)\}$.
-\item $k:X\to Y$ defined via $k=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,d),(\square,e)\}$.
-\item $l:X\to Y$ defined via $l=\{(\circ, e),(\square,e),(\triangle,e),(\smiley,e)\}$.
-\item $m:X\to Y$ defined via $m=\{(\circ, a),(\triangle,b),(\smiley,c)\}$.
-\item $\operatorname{happy}:Y\to X$ defined via $\operatorname{happy}(y)=\smiley$ for all $y\in Y$.
-\item $\operatorname{id}:X\to X$ defined via $\operatorname{id}(x)=x$ for all $x\in X$.
-\item $\operatorname{nugget}:X\to X$ defined via 
+\item $f=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,d)\}$.
+\item $g=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,c)\}$.
+\item $h=\{(\circ, a),(\square,b),(\triangle,c),(\circ,d)\}$.
+\item $k=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,d),(\square,e)\}$.
+\item $l=\{(\circ, e),(\square,e),(\triangle,e),(\smiley,e)\}$.
+\item $m=\{(\circ, a),(\triangle,b),(\smiley,c)\}$.
+\item Define the relation $\operatorname{happy}$ from $Y$ to $X$ via $(y,\smiley)\in\operatorname{happy}$ for all $y\in Y$.
+\item Define the relation $\operatorname{id}$ from $X$ to $X$ via $(x,x)\in \operatorname{id}$ for all $x\in X$.
+\end{enumerate}
+\end{problem}
+
+PICK UP HERE...
+
+
+Piecewise functions....
+
+$\operatorname{nugget}:X\to X$ defined via 
 \[
 \operatorname{nugget}(x)=\begin{cases}
 x, & \mbox{if } x\mbox{ is a geometric shape},\\
 \square, & \mbox{otherwise}.
 \end{cases}
 \]
-\end{enumerate}
-\end{problem}
 
-One useful representation of functions on finite sets is via \textbf{bubble diagrams}.  To draw a bubble diagram for a function $f:X\to Y$, draw one circle (i.e, a ``bubble'') for each of $X$ and $Y$ and for each element of each set, put a dot in the corresponding set.  Typically, we draw $X$ on the left and $Y$ on the right.  Next, draw an arrow from $x\in X$ to $y\in Y$ if $f(x)=y$ (i.e., $(x,y)\in f$). Note that we can draw bubble diagrams even if $f$ is not a function. 
 
-\begin{example}
-Figure~\ref{fig:bubble} depicts a bubble diagram for a function from domain $X=\{a,b,c,d\}$ to codomain $Y=\{1,2,3,4\}$. In this case, the range is equal to $\{1,2,4\}$.
-\end{example} 
 
-\begin{figure}
-\centering
-\begin{tikzpicture}[>=stealth,  bullet/.style={fill=black, circle, minimum width=1pt, inner sep=1pt}, projection/.style={->, thick, shorten <=2pt, shorten >=2pt}, every fit/.style={ellipse, draw, inner sep=0pt}]
-\foreach \y/\l in {1/d,2/c/,3/b,4/a}
-\node[bullet,label=left:$\l$] (a\y) at (0,\y) {}; 
-\foreach \y/\l in {1/4,2/3,3/2,4/1} \node[bullet,label=right:$\l$] (b\y) at (4,\y) {};
-\node[draw,fit=(a1) (a2) (a3) (a4),minimum width=2cm] {} ;
-\node[draw,fit=(b1) (b2) (b3) (b4),minimum width=2cm] {} ; 
-\draw[projection] (a1) -- (b4);
-\draw[projection] (a2) -- (b1);
-\draw[projection] (a3) -- (b1);
-\draw[projection] (a4) -- (b3);
-\node at (0,-.25) {$X$};
-\node at (4,-.25) {$Y$};
-\end{tikzpicture}
-\caption{An example of a bubble diagram for a function.}\label{fig:bubble}
-\end{figure}
 
-\begin{problem}
-For each of the relations in Problem~\ref{prob:lots} draw the corresponding bubble diagram.
-\end{problem}
-
-\begin{problem}
-What properties does a bubble diagram have to have in order to represent a function?
-\end{problem}
 
 \begin{problem}
 Provide an example of each of the following.  You may draw a bubble diagram, write down a list of ordered pairs, or a write a formula (as long as the domain and codomain are clear).
@@ -96,12 +126,6 @@ Let $f:X\to Y$ be a function and suppose that $X$ and $Y$ are finite sets with $
 \begin{problem}
 In high school I am sure that you were told that a graph represents a function if it passes the \textbf{vertical line test}.  Using our terminology of ordered pairs, explain why this works.
 \end{problem}
-
-\begin{definition}
-Two functions are equal if they have the same domain, same codomain, and the same set of ordered pairs in the relation. That is, if $f:X\to Y$ and $g:X\to Y$ are functions, then $f=g$ if and only if $f(x)=g(x)$ for all $x\in X$.
-\end{definition}
-
-If two functions are defined by the same algebraic formula, but have different domains, then they are \emph{not} equal.  For example, the function $f:\mathbb{R}\to \mathbb{R}$ defined via $f(x)=x^{2}$ is not equal to the function $g:\mathbb{N}\to\mathbb{N}$ defined via $g(x)=x^{2}$.
 
 \begin{definition}
 Let $f:X\to Y$ be a function.
