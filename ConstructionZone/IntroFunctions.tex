@@ -12,18 +12,18 @@ Let $X$ and $Y$ be two nonempty sets.  A \textbf{function} $f$ from $X$ to set $
 is called the \textbf{range} of $f$ or the \textbf{image of $X$} under $f$.
 \end{definition}
 
-We will often write $f:X\to Y$ to indicate that $f$ is a function from $X$ to $Y$. Sometimes the word \textbf{mapping} (or \textbf{map}) is used in place of the word function.  If $(x,y)\in f$ for a function $f$, we often write $y=f(x)$ and say that ``$f$ maps $x$ to $y$'', ``$y$ is the image of $x$ under $f$", or ``$y$ equals $f$ of $x$". The function is clear from the context, we may write $x\mapsto y$. We may also refer to $x$ as the \textbf{input} of $f$ and $y$ as the \textbf{output} of $f$. In this case, the domain of a function is the set of inputs while the range is the set of outputs for the function.
+We will write $f:X\to Y$ to indicate that $f$ is a function from $X$ to $Y$. We will make use of statements such as ``Let $f:X\to Y$ be the function defined via\ldots" or ``Define $f:X\to Y$ via\ldots", where $f$ is understood to be a function in the second statement. Sometimes the word \textbf{mapping} (or \textbf{map}) is used in place of the word function.  If $(a,b)\in f$ for a function $f$, we often write $f(a)=b$ and say that ``$f$ maps $a$ to $b$'', ``$b$ is the image of $a$ under $f$", or ``$f$ of $a$ equals $b$". If the function is clear from the context, we may write $a\mapsto b$. We may also refer to $a$ as an \textbf{input} of $f$ and $f(a)$ (or $b$) as an \textbf{output} of $f$. In this case, the domain of a function is the set of inputs while the range is the set of outputs for the function.
  
 Notice that we can interpret our definition of function in terms of existence and uniqueness.  That is, $f:X\to Y$ is a function provided:
 \begin{enumerate}
 \item (Existence) For each $x\in X$, there exists $y\in Y$ such that $y=f(x)$, and
-\item (Uniqueness) If $y_1=f(x)$ and $y_2=f(x)$, then $y_{1}=y_{2}$.
+\item (Uniqueness) If $f(x)=y_1$ and $f(x)=y_2$, then $y_{1}=y_{2}$.
 \end{enumerate}
 In other words, every element of the domain is utilized and is utilized exactly once. However, there are no restrictions on whether an element of the codomain ever appears in the second coordinate of an ordered pair in the relation.  Yet if an element of $Y$ is in the range of $f$, it may appear in more than one ordered pair in the relation.
 
 It follows immediately from the definition of function that two functions are equal if and only if they have the same domain, same codomain, and the same set of ordered pairs in the relation. That is, functions $f$ and $g$ are equal if and only if $\dom(f)=\dom(g)$, $\codom(f)=\codom(g)$, and $f(x)=g(x)$ for all $x\in X$.
 
-Since functions are special types of relations, we can represent them using digraphs when practical. These digraphs are called \textbf{function diagrams} or \textbf{mapping diagrams}. When drawing digraphs for functions, it is standard practice to put the vertices for the domain on the left and the vertices for the codomain on the right, so that all directed edges point from left to right. We may also draw an additional arrow labeled by the name of the function from the domain to the codomain.
+Since functions are special types of relations, we can represent them using digraphs and graphs when practical. Digraphs for functions are often called \textbf{function} (or \textbf{mapping}) \textbf{diagrams}. When drawing function diagrams, it is standard practice to put the vertices for the domain on the left and the vertices for the codomain on the right, so that all directed edges point from left to right. We may also draw an additional arrow labeled by the name of the function from the domain to the codomain.
 
 \begin{example}
 Let $X=\{a,b,c,d\}$ to $Y=\{1,2,3,4\}$ and define the relation $f$ from $X$ to $Y$ via
@@ -71,16 +71,18 @@ Provide at least two reasons why the relation in Example~\ref{ex:relation finite
 \end{problem}
 
 \begin{problem}
-What properties does the digraph for a relation from $X$ to $Y$ need to have in order for it to represent a function?
+Determine whether the relation defined in Example~\ref{ex:circle} (see Figure~\ref{fig:unit circle}) is a function.
 \end{problem}
 
-Sometimes we can define a functions involving sets of numbers using a formula. For example, we can write $f(x)=x^2-1$ to mean that each $x$ in the domain of $f$ maps to the quantity $x^2-1$ in the codomain. However, notice that providing only a formula is ambiguous!  A function is determined by itss domain, codomain, and the correspondence between these two sets. If we only provide a description for the correspondence, it's not clear what the domain and codomain are.  Two functions that are defined by the same algebraic formula, but have different domains or codomains are \emph{not} equal.  For example, the function $f:\mathbb{R}\to \mathbb{R}$ defined via $f(x)=x^{2}-1$ is not equal to the function $g:\mathbb{N}\to\mathbb{R}$ defined by $g(x)=x^{2}-1$.
+\begin{problem}
+Determine whether each of the relations defined in Problem~\ref{prob:parabola} is a function.
+\end{problem}
 
-Sometimes we rely on context to interpret the domain and codomain.  For example, in a first-semester calculus class, when we describe a function in terms of a formula, we are implicitly assuming that the domain is the largest allowable subset of $\mathbb{R}$---sometimes called the \textbf{default domain}---that makes sense for the given formula while the codomain is $\mathbb{R}$. If we write $f(x)=x^2-1$, $g(x)=\sqrt{x}$, and $h(x)=\frac{1}{x}$ in a calculus class, we would interpret these as the functions $f:\mathbb{R}\to \mathbb{R}$, $g:[0,\infty)\to \mathbb{R}$, and $h:\mathbb{R}\setminus \{0\}\to \mathbb{R}$ that are determined by their respective formulas. 
+\begin{problem}
+Determine whether the relation defined in Problem~\ref{prob:facebook} is a function.
+\end{problem}
 
-%When defining a function by a formula, we will usually write something of the form ``Define the function $f:X\to Y$ via $f(x)=\mbox{some algebraic expression}$", where we interpret the formula to apply to all $x\in X$.
-
-\begin{problem}\label{prob:lots}
+\begin{problem}\label{prob:lots of potential functions}
 Let $X=\{\circ, \square,\triangle,\smiley\}$ and $Y=\{a,b,c,d,e\}$. For each of the following relations, draw the corresponding digraph and determine whether the relation represents a function from $X$ to $Y$, $Y$ to $X$, $X$ to $X$, or does not represent a function. If the relation is a function, determine the domain, codomain, and range.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $f=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,d)\}$.
@@ -89,30 +91,36 @@ Let $X=\{\circ, \square,\triangle,\smiley\}$ and $Y=\{a,b,c,d,e\}$. For each of 
 \item $k=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,d),(\square,e)\}$.
 \item $l=\{(\circ, e),(\square,e),(\triangle,e),(\smiley,e)\}$.
 \item $m=\{(\circ, a),(\triangle,b),(\smiley,c)\}$.
-\item Define the relation $\operatorname{happy}$ from $Y$ to $X$ via $(y,\smiley)\in\operatorname{happy}$ for all $y\in Y$.
-\item Define the relation $\operatorname{id}$ from $X$ to $X$ via $(x,x)\in \operatorname{id}$ for all $x\in X$.
+\item \label{prob:identity} $i=\{(\circ,\circ),(\square, \square),(\triangle,\triangle),(\smiley,\smiley)\}$.
+\item\label{prob:happy} Define the relation $\operatorname{happy}$ from $Y$ to $X$ via $(y,\smiley)\in\operatorname{happy}$ for all $y\in Y$.
+\item\label{prob:nugget} $\operatorname{nugget}=\{(\circ,\circ),(\square, \square),(\triangle,\triangle),(\smiley,\square)\}$.
 \end{enumerate}
 \end{problem}
 
-PICK UP HERE...
-
-
-Piecewise functions....
-
-$\operatorname{nugget}:X\to X$ defined via 
-\[
-\operatorname{nugget}(x)=\begin{cases}
-x, & \mbox{if } x\mbox{ is a geometric shape},\\
-\square, & \mbox{otherwise}.
-\end{cases}
-\]
-
-
-
-
+The last two parts of the previous problem make it clear that functions may have names consisting of more than one letter.  The function names $\sin$, $\cos$, $\log$, and $\ln$ are instances of this that you have likely encountered in your previous mathematics experience. One thing that you may nave never noticed is the type of font that we use for function names. It is common to italicize generic function names like $f$ but not common function names like $\sin$.  However, we always italicize the variables used to represent the input and output for a function. For example, consider the font types used in the expressions $\sin(x)$ and $\ln(a)$.
 
 \begin{problem}
-Provide an example of each of the following.  You may draw a bubble diagram, write down a list of ordered pairs, or a write a formula (as long as the domain and codomain are clear).
+What properties does the digraph for a relation from $X$ to $Y$ need to have in order for it to represent a function?
+\end{problem}
+
+\begin{problem}
+In high school I am sure that you were told that a graph represents a function if it passes the \textbf{vertical line test}.  Carefully state what the vertical line test says and then explain why it works.
+\end{problem}
+
+Sometimes we can define a function using a formula. For example, we can write $f(x)=x^2-1$ to mean that each $x$ in the domain of $f$ maps to the quantity $x^2-1$ in the codomain. However, notice that providing only a formula is ambiguous!  A function is determined by its domain, codomain, and the correspondence between these two sets. If we only provide a description for the correspondence, it's not clear what the domain and codomain are.  Two functions that are defined by the same formula, but have different domains or codomains are \emph{not} equal.  
+
+\begin{example}
+The function $f:\mathbb{R}\to \mathbb{R}$ defined via $f(x)=x^{2}-1$ is not equal to the function $g:\mathbb{N}\to\mathbb{R}$ defined by $g(x)=x^{2}-1$ since the two functions do not have the same domain.
+\end{example}
+
+Sometimes we rely on context to interpret the domain and codomain.  For example, in a calculus class, when we describe a function in terms of a formula, we are implicitly assuming that the domain is the largest allowable subset of $\mathbb{R}$---sometimes called the \textbf{default domain}---that makes sense for the given formula while the codomain is $\mathbb{R}$. 
+
+\begin{example}
+If we write $f(x)=x^2-1$, $g(x)=\sqrt{x}$, and $h(x)=\frac{1}{x}$ without mentioning the domains, we would typically interpret these as the functions $f:\mathbb{R}\to \mathbb{R}$, $g:[0,\infty)\to \mathbb{R}$, and $h:\mathbb{R}\setminus \{0\}\to \mathbb{R}$ that are determined by their respective formulas.
+\end{example}
+
+\begin{problem}
+Provide an example of each of the following.  You may draw a function diagram, write down a list of ordered pairs, or a write a formula as long as the domain and codomain are clear.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item A function $f$ from a set with 4 elements to a set with 3 elements such that $\range(f)=\codom(f)$.
 \item A function $g$ from a set with 4 elements to a set with 3 elements such that $\range(g)$ is strictly smaller than $\codom(g)$.
@@ -120,12 +128,60 @@ Provide an example of each of the following.  You may draw a bubble diagram, wri
 \end{problem}
 
 \begin{problem}
-Let $f:X\to Y$ be a function and suppose that $X$ and $Y$ are finite sets with $n$ and $m$ elements, respectively, such that $n<m$.  Is it possible for $\range(f)=\codom(f)$?  Explain.
+Let $f:X\to Y$ be a function and suppose that $X$ and $Y$ are finite sets with $n$ and $m$ elements, respectively, such that $n<m$.  Is it possible for $\range(f)=\codom(f)$?  If so, provide an example.  If this is not possible, explain why.
 \end{problem}
 
+There are a few special functions that we should know the names of.
+
+\begin{definition}
+If $X$ is a nonempty set, then the function $i_X:X\to X$ defined via $i_X(x)=x$ is called the \textbf{identity function on $X$}.
+\end{definition}
+
+\begin{example}
+The relation defined in Problem~\ref{prob:lots of potential functions}\ref{prob:identity} is the identity function on $X=\{\circ, \square,\triangle,\smiley\}$.
+\end{example}
+
 \begin{problem}
-In high school I am sure that you were told that a graph represents a function if it passes the \textbf{vertical line test}.  Using our terminology of ordered pairs, explain why this works.
+Draw a portion of the graph of the identity function on $\mathbb{R}$ as a subset of $\mathbb{R}^2$.
 \end{problem}
+
+\begin{definition}
+Any function $f:X\to Y$ defined via $f(x)=c$ for a fixed $c\in Y$ is called a \textbf{constant function}.
+\end{definition}
+
+\begin{example}
+The function defined in Problem~\ref{prob:lots of potential functions}\ref{prob:happy} is an example of a constant function.  Notice that we can succinctly describe this function using the formula $\operatorname{happy}(y)=\smiley$.
+\end{example}
+
+\begin{definition}
+A \textbf{piecewise-defined function} (or \textbf{piecewise function}) is a function defined by specifying its output on a partition of the domain.
+\end{definition}
+
+Note that ``piecewise" is a way of expressing the function, rather than a property of the function.
+
+\begin{example}
+We can express the function in Problem~\ref{prob:lots of potential functions}\ref{prob:nugget} as a piecewise function using the formula
+\[
+\operatorname{nugget}(x)=\begin{cases}
+x, & \mbox{if } x\mbox{ is a geometric shape},\\
+\square, & \mbox{otherwise}.
+\end{cases}
+\]
+\end{example}
+
+\begin{example}
+The function $f:\mathbb{R}\to \mathbb{R}$ defined via
+\[
+f(x)=\begin{cases}
+x^2-1, & \mbox{if } x\geq 0,\\
+17, & \mbox{if } -2\leq x< 0,\\
+-x, & \mbox{if } x<-2
+\end{cases}
+\]
+is an example of a piecewise-defined function.
+\end{example}
+
+It is important to point out that not every function, even one involving sets of numbers, can be described using a formula! Despite your prior experience, functions that can be represented succinctly using a formula are rare.
 
 \begin{definition}
 Let $f:X\to Y$ be a function.
@@ -177,12 +233,8 @@ Determine which of the following functions are one-to-one, onto, both, or neithe
 \end{enumerate}
 \end{problem}
 
-\begin{definition}
-If $X$ is a nonempty set, then the function $i_X:X\to X$ defined via $i_X(x)=x$ is called the \emph{identity function} on $X$.
-\end{definition}
-
 \begin{theorem}
-The identity function on a nonempty set $X$ is a bijection.
+The identity function $i_X$ on a nonempty set $X$ is a bijection.
 \end{theorem}
 
 \begin{problem}
@@ -196,5 +248,15 @@ Let $A$ and $B$ be sets and let $S\subseteq A\times B$.  Define $\pi_{1}:S\to A$
 \begin{theorem}
 Let $A$ be a nonempty set and suppose $\sim$ is an equivalence relation on $A$. Then the function $\phi:A\to A/\mathord\sim$ defined via $\phi(x)=[x]$ is onto.\footnote{Recall that $A/\mathord\sim$ is the set of equivalence classes induced by the equivalence relation $\sim$.}
 \end{theorem}
+
+
+--------
+
+Various ways of not being well defined:
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $f:\{1,2,3\}\to \{1,2,3\}$ defined via $f(x)=x-1$.
+\item $f:\mathbb{Q}\to \mathbb{Z}$ defined via $f(a/b)=a+b$.
+\end{enumerate}
+
 
 \end{section}
