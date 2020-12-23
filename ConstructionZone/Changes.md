@@ -56,7 +56,7 @@ be helpful.
 - p. 17 Theorem 2.49-2.51 these are good ideas.
     * Nothing to address.
 - p 19 “Skeleton Proof” : it would be nice to follow the skeletons of proofs or replace them at times in the book by some worked out examples.
-    * Hopefully this will addressed by adding more examples throughout
+    * Hopefully this will be addressed by adding more examples throughout.
 - p. 19 “The sentence x > 0” : ideally change this to “The sentence x > 0.” since without the period it is not actually a sentence and it helps point out that proper grammar should be used in math.
     * Done.
 - p. 27 Exercises 3.3 -3.4 good.
@@ -172,7 +172,7 @@ be helpful.
 - Section 6.3, Exercises 6.46 - 6.50: Again, personal preference: I think it is good for students to wrestle with collections of subsets of R, and it may be good to ask a question along the lines of, “For each of the following collections of subsets of R, decide (and support your decision with a proof or counterexample) whether or not the collection is a partition of R.”
     * I added several new problems and tweaked the relevant sections that should address this item.
 - In Section 7.1, I would like to see proof skeletons for the proofs that a function is surjective and that a function is injective. Students really struggle with surjectivity proofs so providing a clear skeleton here would be very beneficial. Students also consistently mix up the definitions of injective and function so again, a skeleton can help set the structure of the proof and how provide some fodder for discussion about how the proofs for injectivity and “function-ness” differ.
-    * Todo.
+    * Done.
 - Again, I appreciate the variety of examples of functions in this chapter.
     * Nothing to address.
 

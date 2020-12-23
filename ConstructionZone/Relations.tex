@@ -5,8 +5,10 @@ While there is no agreed upon universal definition of mathematics, one could arg
 Recall from Section~\ref{sec:Cartesian Products} that the Cartesian product of two sets $A$ and $B$, written $A\times B$, is the set of all ordered pairs $(a,b)$, where $a\in A$ and $b\in B$. That is, $A\times B=\{(a,b)\mid a\in A, b\in B\}$.
 
 \begin{definition}
-Let $A$ and $B$ be sets. A \textbf{relation $\sim$ from a set $A$ to a set $B$} is a subset of $A \times B$. If $\sim$ is a relation from $A$ to $B$ and $(a,b)\in {\sim}$, then we say that \textbf{$a$ is related to $b$}.  In this case, we may also write $a\sim b$. If $\sim$ is a relation from $A$ to the same set $A$, then we say that $\sim$ is a \textbf{relation on $A$}.
+Let $A$ and $B$ be sets. A \textbf{relation $\sim$ from $A$ to $B$} is a subset of $A \times B$. If $\sim$ is a relation from $A$ to $B$ and $(a,b)\in {\sim}$, then we say that \textbf{$a$ is related to $b$}.  In this case, we may write $a\sim b$ in place of $(a,b)\in{\sim}$. If $\sim$ is a relation from $A$ to the same set $A$, then we say that $\sim$ is a \textbf{relation on $A$}.
 \end{definition}
+
+The symbol ``$\sim$" is usually pronounced as ``twiddle" or ``tilde" and the phrase ``$a\sim b$" could be read as ``$a$ is related to $b$" or ``$a$ twiddles $b$".
 
 \begin{example}
 The set $\mathbb{N}\times \mathbb{R}$ from Problem~\ref{prob:some lines} is an example of a relation on $\mathbb{R}$ since $\mathbb{N}\times \mathbb{R}$ is a subset of $\mathbb{R}\times \mathbb{R}$.
@@ -15,7 +17,7 @@ The set $\mathbb{N}\times \mathbb{R}$ from Problem~\ref{prob:some lines} is an e
 It is important to notice that the order in which we write things for relations matters.  In particular, if $\sim$ is a relation from $A$ to $B$ and $a \sim b$, then it may or may not be the case that $b\sim a$.
 
 \begin{example}\label{ex:relation finite to finite}
-Let $A=\{a,b,c,d,e\}$ and $B=\{1,2,3,4\}$. Then the set of ordered pairs
+If $A=\{a,b,c,d,e\}$ and $B=\{1,2,3,4\}$, then the set of ordered pairs
 \[
 {\sim}=\{(a,1),(a,2),(a,4),(c,2),(d,2),(e,2),(e,4)\}
 \]
@@ -52,7 +54,7 @@ Define the relation $S$ from $\{-1,1\}$ to $\mathbb{Z}$ via $1Sx$ if and only if
 Let $A$ be any set.  Since $\emptyset \subseteq A\times A$, the empty set forms a relation on $A$. This relation is called the \textbf{empty relation} on $A$.
 \end{example}
 
-We can visually represent relations using digraphs. A \textbf{digraph} (short for \emph{directed graph}) is a discrete graph that consists of a set of vertices connected by edges, where the edges have a direction associated with them. If $\sim$ is a relation from $A$ to $B$, then the elements of $A$ and $B$ are the vertices of the digraph and there is a directed edge from $a\in A$ to $b\in B$ if and only if $(a,b)$ is in the relation $\sim$ (i.e., $a\sim b$).  Utilizing a digraph may be impractical if there is a large number of directed edges.
+Relations can be represented using digraphs. A \textbf{digraph} (short for \emph{directed graph}) is a discrete graph that consists of a set of vertices connected by edges, where the edges have a direction associated with them. If $\sim$ is a relation from $A$ to $B$, then the elements of $A$ and $B$ are the vertices of the digraph and there is a directed edge from $a\in A$ to $b\in B$ if and only if $(a,b)$ is in the relation $\sim$ (i.e., $a\sim b$). We can visually represent digraphs by using dots to represent the vertices and arrows to represent directed edges. We will not make a distinction between a digraph and its visual representation. Utilizing a digraph to represent a relation may be impractical if there is a large number of vertices or directed edges. 
 
 \begin{example}
 Consider the relation given in Example~\ref{ex:relation finite to finite}.  The corresponding digraph is depicted in Figure~\ref{fig:digraph finite to finite}. Notice that we have placed the vertices corresponding to elements of $A$ on the left and the elements of $B$ on the right.  This is standard practice, but what really matters is the edge connections not how the vertices are placed on the page.
@@ -182,10 +184,12 @@ Let $A=\{a,b,c,d\}$ and define $\sim$ on $A$ via
 \end{enumerate}
 \end{problem}
 
-Often it is not feasible to draw the complete diagram for the digraph of a relation (e.g., when the sets involved are infinite).  However, sometimes we can still provide a visual representation of the relation by plotting points that are in the relation. The \textbf{graph} of a relation $\sim$ from $A$ to $B$ is the visual representation that results from plotting all points $(a,b)$ that satisfy $a\sim b$.
+%Often it is not feasible to draw the complete diagram for the digraph of a relation (e.g., when the sets involved are infinite).  However, sometimes we can still provide a visual representation of the relation by plotting points that are in the relation. 
+
+We can also visually represent a relation by plotting the points in the relation.  In particular, if $\sim$ is a relation from $A$ to $B$ and $a\sim b$, we can plot all points $(a,b)$ that satisfy $a\sim b$ in two dimensions, where we interpret the set $A$ to be the horizontal axis and $B$ to be the vertical axis. We will refer to this visual representation of a relation as the \textbf{graph} of the relation.%\footnote{Some mathematics texts do not make a distinction between a relation and the graph of a relation.}
 
 \begin{example}\label{ex:circle}
-When we write $x^2+y^2=1$, we are implicitly defining a relation.  In particular, the relation is the set of ordered pairs $(x,y)$ satisfying $x^2+y^2=1$, namely $\{(x,y)\in \mathbb{R}^2 \mid x^2+y^2=1\}$. The graph of this relation in $\mathbb{R}^2$ is the unit circle centered at the origin as shown in Figure~\ref{fig:unit circle}.
+When we write $x^2+y^2=1$, we are implicitly defining a relation.  In particular, the relation is the set of ordered pairs $(x,y)$ satisfying $x^2+y^2=1$, namely $\{(x,y)\in \mathbb{R}^2 \mid x^2+y^2=1\}$. The graph of this relation in $\mathbb{R}^2$ is the unit circle centered at the origin in the plane as shown in Figure~\ref{fig:unit circle}.
 \end{example}
 
 \begin{figure}[h!]
@@ -248,7 +252,7 @@ Describe the collection of the sets of relatives with respect to the empty relat
 \end{problem}
 
 \begin{problem}\label{prob:facebook}
-Let $P$ denote the set of all people with accounts on Facebook and define the relation $F$ on $P$ via $xFy$ if and only if $x$ is friends with $y$. Describe $\rel(\text{Bob})$, where Bob is the name of a specific Facebook user.  What is $\Rel(F)$?
+Let $P$ denote the set of all people with accounts on Facebook and define the relation $F$ on $P$ via $xFy$ if and only if $x$ is friends with $y$. Describe $\rel(\text{Maria})$, where Maria is the name of a specific Facebook user.  What is $\Rel(F)$?
 \end{problem}
 
 \begin{problem}\label{prob:mod 5}

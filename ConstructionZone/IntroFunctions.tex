@@ -5,7 +5,7 @@ In this section, we will introduce the concept of function as a special type of 
 Up until this point, you may have only encountered functions as an algebraic rule, e.g., $f(x)=x^{2}-1$, for transforming one real number into another.  However, we can study functions in a much broader context.  The basic building blocks of a function are a first set and a second set, say $X$ and $Y$, and a ``correspondence'' that assigns each element of $X$ to exactly one element of $Y$.  Let's take a look at the actual definition.
 
 \begin{definition}\label{def:function}
-Let $X$ and $Y$ be two nonempty sets.  A \textbf{function} $f$ from $X$ to set $Y$ is a relation (i.e., subset of $X\times Y$) such that for every $x\in X$, there exists a unique $y\in Y$ such that $(x,y)\in f$. The set $X$ is called the \textbf{domain} of $f$ and is denoted by $\dom(f)$.  The set $Y$ is called the \textbf{codomain} of $f$ and is denoted by $\codom(f)$ while the subset of the codomain defined via
+Let $X$ and $Y$ be two nonempty sets.  A \textbf{function $f$ from $X$ to set $Y$} is a relation from $X$ to $Y$ such that for every $x\in X$, there exists a unique $y\in Y$ such that $(x,y)\in f$. The set $X$ is called the \textbf{domain} of $f$ and is denoted by $\dom(f)$.  The set $Y$ is called the \textbf{codomain} of $f$ and is denoted by $\codom(f)$ while the subset of the codomain defined via
 \[
 \range(f):=\{y\in Y\mid \mbox{there exists }x\mbox{ such that } (x,y)\in f\}
 \]
@@ -30,7 +30,7 @@ Let $X=\{a,b,c,d\}$ to $Y=\{1,2,3,4\}$ and define the relation $f$ from $X$ to $
 \[
 f=\{(a,2),(b,4),(c,4),(d,1)\}.
 \]
-Since each element $X$ appears exactly once as a first coordinate, $f$ is a function with domain $X$ and codomain $Y$ (i.e., $f:X\to Y$). In this case, we see that $\range(f)=\{1,2,4\}$.  Moreover, we can write things like $f(a)=2$ and $c\mapsto 4$, and say things like ``$f$ maps $b$ to 4" and ``the image of $d$ is 1."  The function diagram for $f$ is depicted in Figure~\ref{fig:function digraph}.
+Since each element $X$ appears exactly once as a first coordinate, $f$ is a function with domain $X$ and codomain $Y$ (i.e., $f:X\to Y$). In this case, we see that $\range(f)=\{1,2,4\}$.  Moreover, we can write things like $f(a)=2$ and $c\mapsto 4$, and say things like ``$f$ maps $b$ to 4" and ``the image of $d$ is 1."  The function diagram for $f$ is depicted in Figure~\ref{fig:function diagram}.
 \end{example}
 
 \tikzset{every loop/.style={min distance=8mm}}
@@ -62,38 +62,32 @@ Since each element $X$ appears exactly once as a first coordinate, $f$ is a func
 \node (Y) at (2.5,4.7) {$Y$};
 \path (X) edge [bend left] node {$f$} (Y);
 \end{tikzpicture}
-\caption{Digraph for a function from $X=\{a,b,c,d,\}$ to $Y=\{1,2,3,4\}$.}\label{fig:function digraph}
+\caption{Function diagram for a function from $X=\{a,b,c,d,\}$ to $Y=\{1,2,3,4\}$.}\label{fig:function diagram}
 \end{center}
 \end{figure}
 
 \begin{problem}
-Provide at least two reasons why the relation in Example~\ref{ex:relation finite to finite} (see Figure~\ref{fig:digraph finite to finite}) is not a function.
-\end{problem}
-
-\begin{problem}
-Determine whether the relation defined in Example~\ref{ex:circle} (see Figure~\ref{fig:unit circle}) is a function.
-\end{problem}
-
-\begin{problem}
-Determine whether each of the relations defined in Problem~\ref{prob:parabola} is a function.
-\end{problem}
-
-\begin{problem}
-Determine whether the relation defined in Problem~\ref{prob:facebook} is a function.
+Determine whether each of the relations defined in the following examples and problems is a function.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Example~\ref{ex:relation finite to finite} (see Figure~\ref{fig:digraph finite to finite})
+\item Example~\ref{ex:circle} (see Figure~\ref{fig:unit circle})
+\item Problem~\ref{prob:parabola}
+\item Problem~\ref{prob:facebook}
+\end{enumerate}
 \end{problem}
 
 \begin{problem}\label{prob:lots of potential functions}
 Let $X=\{\circ, \square,\triangle,\smiley\}$ and $Y=\{a,b,c,d,e\}$. For each of the following relations, draw the corresponding digraph and determine whether the relation represents a function from $X$ to $Y$, $Y$ to $X$, $X$ to $X$, or does not represent a function. If the relation is a function, determine the domain, codomain, and range.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $f=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,d)\}$.
-\item $g=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,c)\}$.
-\item $h=\{(\circ, a),(\square,b),(\triangle,c),(\circ,d)\}$.
-\item $k=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,d),(\square,e)\}$.
-\item $l=\{(\circ, e),(\square,e),(\triangle,e),(\smiley,e)\}$.
-\item $m=\{(\circ, a),(\triangle,b),(\smiley,c)\}$.
-\item \label{prob:identity} $i=\{(\circ,\circ),(\square, \square),(\triangle,\triangle),(\smiley,\smiley)\}$.
+\item $f=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,d)\}$
+\item $g=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,c)\}$
+\item $h=\{(\circ, a),(\square,b),(\triangle,c),(\circ,d)\}$
+\item $k=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,d),(\square,e)\}$
+\item $l=\{(\circ, e),(\square,e),(\triangle,e),(\smiley,e)\}$
+\item $m=\{(\circ, a),(\triangle,b),(\smiley,c)\}$
+\item \label{prob:identity} $i=\{(\circ,\circ),(\square, \square),(\triangle,\triangle),(\smiley,\smiley)\}$
 \item\label{prob:happy} Define the relation $\operatorname{happy}$ from $Y$ to $X$ via $(y,\smiley)\in\operatorname{happy}$ for all $y\in Y$.
-\item\label{prob:nugget} $\operatorname{nugget}=\{(\circ,\circ),(\square, \square),(\triangle,\triangle),(\smiley,\square)\}$.
+\item\label{prob:nugget} $\operatorname{nugget}=\{(\circ,\circ),(\square, \square),(\triangle,\triangle),(\smiley,\square)\}$
 \end{enumerate}
 \end{problem}
 
@@ -107,7 +101,7 @@ What properties does the digraph for a relation from $X$ to $Y$ need to have in 
 In high school I am sure that you were told that a graph represents a function if it passes the \textbf{vertical line test}.  Carefully state what the vertical line test says and then explain why it works.
 \end{problem}
 
-Sometimes we can define a function using a formula. For example, we can write $f(x)=x^2-1$ to mean that each $x$ in the domain of $f$ maps to the quantity $x^2-1$ in the codomain. However, notice that providing only a formula is ambiguous!  A function is determined by its domain, codomain, and the correspondence between these two sets. If we only provide a description for the correspondence, it's not clear what the domain and codomain are.  Two functions that are defined by the same formula, but have different domains or codomains are \emph{not} equal.  
+Sometimes we can define a function using a formula. For example, we can write $f(x)=x^2-1$ to mean that each $x$ in the domain of $f$ maps to $x^2-1$ in the codomain. However, notice that providing only a formula is ambiguous!  A function is determined by its domain, codomain, and the correspondence between these two sets. If we only provide a description for the correspondence, it is not clear what the domain and codomain are.  Two functions that are defined by the same formula, but have different domains or codomains are \emph{not} equal.  
 
 \begin{example}
 The function $f:\mathbb{R}\to \mathbb{R}$ defined via $f(x)=x^{2}-1$ is not equal to the function $g:\mathbb{N}\to\mathbb{R}$ defined by $g(x)=x^{2}-1$ since the two functions do not have the same domain.
@@ -157,7 +151,7 @@ The function defined in Problem~\ref{prob:lots of potential functions}\ref{prob:
 A \textbf{piecewise-defined function} (or \textbf{piecewise function}) is a function defined by specifying its output on a partition of the domain.
 \end{definition}
 
-Note that ``piecewise" is a way of expressing the function, rather than a property of the function.
+Note that ``piecewise" is a way of expressing the function, rather than a property of the function itself.
 
 \begin{example}
 We can express the function in Problem~\ref{prob:lots of potential functions}\ref{prob:nugget} as a piecewise function using the formula
@@ -183,46 +177,89 @@ is an example of a piecewise-defined function.
 
 It is important to point out that not every function, even one involving sets of numbers, can be described using a formula! Despite your prior experience, functions that can be represented succinctly using a formula are rare.
 
+We now turn our attention to a couple of properties that a function may or may not possess.
+
 \begin{definition}
 Let $f:X\to Y$ be a function.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item The function $f$ is said to be \textbf{one-to-one} (or \textbf{injective}) if for all $y\in \range(f)$, there is a unique $x\in X$ such that $y=f(x)$.
-\item The function $f$ is said to be \textbf{onto} (or \textbf{surjective}) if for all $y\in Y$, there exists $x\in X$ such that $y=f(x)$.
-\item If $f$ is both one-to-one and onto, we say that $f$ is a \textbf{bijection} (or \textbf{one-to-one correspondence}).
+\item The function $f$ is said to be \textbf{injective} (or \textbf{one-to-one}) if for all $y\in \range(f)$, there is a unique $x\in X$ such that $y=f(x)$.
+\item The function $f$ is said to be \textbf{surjective} (or \textbf{onto}) if for all $y\in Y$, there exists $x\in X$ such that $y=f(x)$.
+\item If $f$ is both one-to-one and onto, we say that $f$ is \textbf{bijective} (or a \textbf{one-to-one correspondence}).
 \end{enumerate}
 \end{definition}
 
-\begin{remark}
-Let $f:X\to Y$ be a function. To prove that $f$ is one-to-one, start by assuming that $f(x_{1})=f(x_{2})$ and then work to show that $x_{1}=x_{2}$.  That is, a function $f$ is one-to-one if and only if for all $x_{1}, x_{2}\in X$, if $f(x_{1})=f(x_{2})$, then $x_{1}=x_{2}$. To show that $f$ is onto, you should start with an arbitrary $y\in Y$ and then work to show that there exists $x\in X$ such that $y=f(x)$.
-\end{remark}
+An injective function is also be called an \textbf{injection}, a surjective function is called a \textbf{surjection}, and a bijective function is called a \textbf{bijection}. To prove that a function $f:X\to Y$ is an injection, we must prove that if $f(x_{1})=f(x_{2})$, then $x_{1}=x_{2}$. To show that $f$ is surjective, you should start with an arbitrary $y\in Y$ and then work to show that there exists $x\in X$ such that $y=f(x)$.
+
+%To do this, start by assuming that $f(x_{1})=f(x_{2})$ and then work to show that $x_{1}=x_{2}$.  That is, a function $f$ is one-to-one if and only if for all $x_{1}, x_{2}\in X$, if $f(x_{1})=f(x_{2})$, then $x_{1}=x_{2}$. To show that $f$ is onto, you should start with an arbitrary $y\in Y$ and then work to show that there exists $x\in X$ such that $y=f(x)$.
+
+The next two skeleton proofs are special cases of Skeleton Proof~\ref{skeleton:uniqueness} and Skeleton Proof~\ref{skeleton:existence}, respectively.
+
+\begin{skeleton}[Proof that a function is injective]
+Here is the general structure for proving that a function is injective.
+\begin{center}
+\framebox{
+\begin{minipage}{6in}
+\vspace{.1in}
+\begin{proof}
+Assume $f:X\to Y$ is a function defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $f$]}.  Let $x_1,x_2\in X$ and suppose $f(x_1)=f(x_2)$.
+\begin{center}
+$\ldots$ \ \emph{[Use the definition (or property) of $f$ to verify that $x_1=x_2$]} \ $\ldots$
+\end{center}
+\noindent Therefore, the function $f$ is injective.
+\end{proof}
+\end{minipage}
+}
+\end{center}
+\end{skeleton}
+
+\begin{skeleton}[Proof that a function is surjective]
+Here is the general structure for proving that a function is surjective.
+\begin{center}
+\framebox{
+\begin{minipage}{6in}
+\vspace{.1in}
+\begin{proof}
+Assume $f:X\to Y$ is a function defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $f$]}.  Let $y\in Y$.
+\begin{center}
+$\ldots$ \ \emph{[Use the definition (or property) of $f$ to find some $x\in X$ such that $f(x)=y$]} \ $\ldots$
+\end{center}
+\noindent Therefore, the function $f$ is surjective.
+\end{proof}
+\end{minipage}
+}
+\end{center}
+\end{skeleton}
 
 \begin{problem}
-Provide an example of each of the following.  You may draw a bubble diagram, write down a list of ordered pairs, or write a formula (as long as the domain and codomain are clear).  Assume that $X$ and $Y$ are finite sets.
+Assume that $X$ and $Y$ are finite sets. Provide an example of each of the following.  You may draw a function diagram, write down a list of ordered pairs, or a write a formula as long as the domain and codomain are clear. 
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item A function $f:X\to Y$ that is one-to-one but not onto.
-\item A function $f:X\to Y$ that is onto but not one-to-one.
+\item A function $f:X\to Y$ that is injective but not surjective.
+\item A function $f:X\to Y$ that is surjective but not injective.
 \item A function $f:X\to Y$ that is a bijection.
-\item A function $f:X\to Y$ that is neither one-to-one nor onto.
+\item A function $f:X\to Y$ that is neither injective nor surjective.
 \end{enumerate}
-
-\end{problem}
-
-\begin{problem}
-Perhaps you've heard of the \textbf{horizontal line test} (i.e., every horizontal line hits the graph of $f:\mathbb{R}\to\mathbb{R}$ at most once).  What is the horizontal line test testing for?
 \end{problem}
 
 \begin{problem}
 Provide an example of each of the following.  You may either draw a graph or write down a formula.  Make sure you have the correct domain.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item A function $f:\mathbb{R}\to \mathbb{R}$ that is one-to-one but not onto.
-\item A function $f:\mathbb{R}\to \mathbb{R}$ that is onto but not one-to-one.
+\item A function $f:\mathbb{R}\to \mathbb{R}$ that is injective but not surjective.
+\item A function $f:\mathbb{R}\to \mathbb{R}$ that is surjective but not injective.
 \item A function $f:\mathbb{R}\to \mathbb{R}$ that is a bijection.
-\item A function $f:\mathbb{R}\to \mathbb{R}$ that is neither one-to-one nor onto.
+\item A function $f:\mathbb{R}\to \mathbb{R}$ that is neither injective nor surjective.
 \end{enumerate}
 \end{problem}
 
 \begin{problem}
-Determine which of the following functions are one-to-one, onto, both, or neither.  In each case, you should provide proofs and counterexamples as appropriate.
+Fill in the blank with the appropriate word.
+\begin{quote}
+A function $f:X\to Y$ is \underline{\ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ } if and only if every horizontal line hits the graph of $f$ at most once.
+\end{quote}
+This statement is often called the \textbf{horizontal line test}.  Explain why the horizontal line test is true.
+\end{problem}
+
+\begin{problem}
+Determine whether each of the following functions is one-to-one, onto, both, or neither.  In each case, you should provide a proof or a counterexamples as appropriate.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $f:\mathbb{R}\to \mathbb{R}$ defined via $f(x)=x^{2}$
 \item $g:\mathbb{R}\to [0,\infty)$ defined via $g(x)=x^{2}$
@@ -238,16 +275,20 @@ The identity function $i_X$ on a nonempty set $X$ is a bijection.
 \end{theorem}
 
 \begin{problem}
-Let $A$ and $B$ be sets and let $S\subseteq A\times B$.  Define $\pi_{1}:S\to A$ and $\pi_{2}:S\to B$ via $\pi_{1}(a,b)=a$ and $\pi_{2}(a,b)=b$.  We call $\pi_{1}$ (respectively, $\pi_{2}$) the \textbf{projections} of $S$ onto $A$ (respectively, $B$).
+Let $A$ and $B$ be nonempty sets and let $S$ be a nonempty subset of $A\times B$.  Define $\pi_{1}:S\to A$ and $\pi_{2}:S\to B$ via $\pi_{1}(a,b)=a$ and $\pi_{2}(a,b)=b$.  We call $\pi_{1}$ and $\pi_{2}$ the \textbf{projections} of $S$ onto $A$ and $B$, respectively.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item Provide examples to show that $\pi_{1}$ does not need to be one-to-one or onto.
-\item Suppose that $S$ is a function (recall that a function is a set of ordered pairs, so this makes sense).  Is $\pi_{1}$ one-to-one? Is $\pi_{1}$ onto?  How about $\pi_{2}$?
+\item Provide examples to show that $\pi_{1}$ does not need to be injective nor surjective.
+\item Suppose that $S$ is a function. Recall that a function is a set of ordered pairs, so this makes sense.  Is $\pi_{1}$ injective? Is $\pi_{1}$ surjective?  How about $\pi_{2}$?
 \end{enumerate} 
 \end{problem}
 
 \begin{theorem}
-Let $A$ be a nonempty set and suppose $\sim$ is an equivalence relation on $A$. Then the function $\phi:A\to A/\mathord\sim$ defined via $\phi(x)=[x]$ is onto.\footnote{Recall that $A/\mathord\sim$ is the set of equivalence classes induced by the equivalence relation $\sim$.}
+If $\sim$ is an equivalence relation on a nonempty $A$, then the function $\phi:A\to A/\mathord\sim$ defined via $\phi(x)=[x]$ is a surjection.
 \end{theorem}
+
+\begin{problem}
+Under what circumstances would the function from the previous theorem also be injective?
+\end{problem}
 
 
 --------
@@ -256,6 +297,7 @@ Various ways of not being well defined:
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $f:\{1,2,3\}\to \{1,2,3\}$ defined via $f(x)=x-1$.
 \item $f:\mathbb{Q}\to \mathbb{Z}$ defined via $f(a/b)=a+b$.
+\item Something like $f([x])=???$
 \end{enumerate}
 
 
