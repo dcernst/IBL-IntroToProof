@@ -5,7 +5,7 @@ In this section, we will introduce the concept of function as a special type of 
 Up until this point, you may have only encountered functions as an algebraic rule, e.g., $f(x)=x^{2}-1$, for transforming one real number into another.  However, we can study functions in a much broader context.  The basic building blocks of a function are a first set and a second set, say $X$ and $Y$, and a ``correspondence'' that assigns each element of $X$ to exactly one element of $Y$.  Let's take a look at the actual definition.
 
 \begin{definition}\label{def:function}
-Let $X$ and $Y$ be two nonempty sets.  A \textbf{function $f$ from $X$ to set $Y$} is a relation from $X$ to $Y$ such that for every $x\in X$, there exists a unique $y\in Y$ such that $(x,y)\in f$. The set $X$ is called the \textbf{domain} of $f$ and is denoted by $\dom(f)$.  The set $Y$ is called the \textbf{codomain} of $f$ and is denoted by $\codom(f)$ while the subset of the codomain defined via
+Let $X$ and $Y$ be two nonempty sets.  A \textbf{function $f$ from $X$ to $Y$} is a relation from $X$ to $Y$ such that for every $x\in X$, there exists a unique $y\in Y$ such that $(x,y)\in f$. The set $X$ is called the \textbf{domain} of $f$ and is denoted by $\dom(f)$.  The set $Y$ is called the \textbf{codomain} of $f$ and is denoted by $\codom(f)$ while the subset of the codomain defined via
 \[
 \range(f):=\{y\in Y\mid \mbox{there exists }x\mbox{ such that } (x,y)\in f\}
 \]
@@ -25,7 +25,7 @@ It follows immediately from the definition of function that two functions are eq
 
 Since functions are special types of relations, we can represent them using digraphs and graphs when practical. Digraphs for functions are often called \textbf{function} (or \textbf{mapping}) \textbf{diagrams}. When drawing function diagrams, it is standard practice to put the vertices for the domain on the left and the vertices for the codomain on the right, so that all directed edges point from left to right. We may also draw an additional arrow labeled by the name of the function from the domain to the codomain.
 
-\begin{example}
+\begin{example}\label{ex:function}
 Let $X=\{a,b,c,d\}$ to $Y=\{1,2,3,4\}$ and define the relation $f$ from $X$ to $Y$ via
 \[
 f=\{(a,2),(b,4),(c,4),(d,1)\}.
@@ -91,7 +91,7 @@ Let $X=\{\circ, \square,\triangle,\smiley\}$ and $Y=\{a,b,c,d,e\}$. For each of 
 \end{enumerate}
 \end{problem}
 
-The last two parts of the previous problem make it clear that functions may have names consisting of more than one letter.  The function names $\sin$, $\cos$, $\log$, and $\ln$ are instances of this that you have likely encountered in your previous mathematics experience. One thing that you may nave never noticed is the type of font that we use for function names. It is common to italicize generic function names like $f$ but not common function names like $\sin$.  However, we always italicize the variables used to represent the input and output for a function. For example, consider the font types used in the expressions $\sin(x)$ and $\ln(a)$.
+The last two parts of the previous problem make it clear that functions may have names consisting of more than one letter.  The function names $\sin$, $\cos$, $\log$, and $\ln$ are instances of this that you have likely encountered in your previous experience in mathematics. One thing that you may have never noticed is the type of font that we use for function names. It is common to italicize generic function names like $f$ but not common function names like $\sin$.  However, we always italicize the variables used to represent the input and output for a function. For example, consider the font types used in the expressions $\sin(x)$ and $\ln(a)$.
 
 \begin{problem}
 What properties does the digraph for a relation from $X$ to $Y$ need to have in order for it to represent a function?
@@ -175,7 +175,11 @@ x^2-1, & \mbox{if } x\geq 0,\\
 is an example of a piecewise-defined function.
 \end{example}
 
-It is important to point out that not every function, even one involving sets of numbers, can be described using a formula! Despite your prior experience, functions that can be represented succinctly using a formula are rare.
+\begin{problem}
+Define $f:\mathbb{R}\setminus\{0\}\to \mathbb{R}$ via $f(x)=\frac{|x|}{x}$. Express $f$ as a piecewise function.
+\end{problem}
+
+It is important to point out that not every function can be described using a formula! Despite your prior experience, functions that can be represented succinctly using a formula are rare.
 
 We now turn our attention to a couple of properties that a function may or may not possess.
 
@@ -184,11 +188,11 @@ Let $f:X\to Y$ be a function.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item The function $f$ is said to be \textbf{injective} (or \textbf{one-to-one}) if for all $y\in \range(f)$, there is a unique $x\in X$ such that $y=f(x)$.
 \item The function $f$ is said to be \textbf{surjective} (or \textbf{onto}) if for all $y\in Y$, there exists $x\in X$ such that $y=f(x)$.
-\item If $f$ is both one-to-one and onto, we say that $f$ is \textbf{bijective} (or a \textbf{one-to-one correspondence}).
+\item If $f$ is both injective and surjective, we say that $f$ is \textbf{bijective}.
 \end{enumerate}
 \end{definition}
 
-An injective function is also be called an \textbf{injection}, a surjective function is called a \textbf{surjection}, and a bijective function is called a \textbf{bijection}. To prove that a function $f:X\to Y$ is an injection, we must prove that if $f(x_{1})=f(x_{2})$, then $x_{1}=x_{2}$. To show that $f$ is surjective, you should start with an arbitrary $y\in Y$ and then work to show that there exists $x\in X$ such that $y=f(x)$.
+An injective function is also be called an \textbf{injection}, a surjective function is called a \textbf{surjection}, and a bijective function is called a \textbf{bijection} (or a \textbf{one-to-one correspondence}). To prove that a function $f:X\to Y$ is an injection, we must prove that if $f(x_{1})=f(x_{2})$, then $x_{1}=x_{2}$. To show that $f$ is surjective, you should start with an arbitrary $y\in Y$ and then work to show that there exists $x\in X$ such that $y=f(x)$.
 
 %To do this, start by assuming that $f(x_{1})=f(x_{2})$ and then work to show that $x_{1}=x_{2}$.  That is, a function $f$ is one-to-one if and only if for all $x_{1}, x_{2}\in X$, if $f(x_{1})=f(x_{2})$, then $x_{1}=x_{2}$. To show that $f$ is onto, you should start with an arbitrary $y\in Y$ and then work to show that there exists $x\in X$ such that $y=f(x)$.
 
@@ -258,17 +262,23 @@ A function $f:X\to Y$ is \underline{\ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ } if and 
 This statement is often called the \textbf{horizontal line test}.  Explain why the horizontal line test is true.
 \end{problem}
 
-\begin{problem}
-Determine whether each of the following functions is one-to-one, onto, both, or neither.  In each case, you should provide a proof or a counterexamples as appropriate.
+\begin{problem}\label{prob:injective surjective functions}
+Determine whether each of the following functions is injective, surjective, both, or neither.  In each case, you should provide a proof or a counterexamples as appropriate.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $f:\mathbb{R}\to \mathbb{R}$ defined via $f(x)=x^{2}$
 \item $g:\mathbb{R}\to [0,\infty)$ defined via $g(x)=x^{2}$
 \item $h:\mathbb{R}\to \mathbb{R}$ defined via $h(x)=x^{3}$
 \item $k:\mathbb{R}\to \mathbb{R}$ defined via $k(x)=x^{3}-x$
-\item $l: \mathbb{R}\times \mathbb{R}\to \mathbb{R}$ defined via $l(x_{1},x_{2})=x_{1}^{2}+x_{2}^{2}$
+\item\label{circles} $c: \mathbb{R}\times \mathbb{R}\to \mathbb{R}$ defined via $l(x,y)=x^{2}+y^{2}$
 \item $N:\mathbb{N}\to \mathbb{N}\times \mathbb{N}$ defined via $N(n)=(n,n)$
 \end{enumerate}
 \end{problem}
+
+\begin{problem}
+Compare and contrast the definition of ``function" with the definition of ``injective function". Consider the vertical line test and horizontal line test in your discussion.  Moreover, attempt to capture what it means for a relation to not be a function and for a function to not be an injection by drawing portions of a digraph.
+\end{problem}
+
+The next theorem should come as no surprise.
 
 \begin{theorem}
 The identity function $i_X$ on a nonempty set $X$ is a bijection.
@@ -278,27 +288,118 @@ The identity function $i_X$ on a nonempty set $X$ is a bijection.
 Let $A$ and $B$ be nonempty sets and let $S$ be a nonempty subset of $A\times B$.  Define $\pi_{1}:S\to A$ and $\pi_{2}:S\to B$ via $\pi_{1}(a,b)=a$ and $\pi_{2}(a,b)=b$.  We call $\pi_{1}$ and $\pi_{2}$ the \textbf{projections} of $S$ onto $A$ and $B$, respectively.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item Provide examples to show that $\pi_{1}$ does not need to be injective nor surjective.
-\item Suppose that $S$ is a function. Recall that a function is a set of ordered pairs, so this makes sense.  Is $\pi_{1}$ injective? Is $\pi_{1}$ surjective?  How about $\pi_{2}$?
-\end{enumerate} 
+\item Suppose that $S$ is also a function. Is $\pi_{1}$ injective? Is $\pi_{1}$ surjective?  How about $\pi_{2}$?
+\end{enumerate}
 \end{problem}
 
-\begin{theorem}
+The next theorem says that if we have an equivalence relation on a nonempty set, the mapping that assigns each element to its respective equivalence class is a surjective function.  
+
+\begin{theorem}\label{thm:canonical projection}
 If $\sim$ is an equivalence relation on a nonempty $A$, then the function $\phi:A\to A/\mathord\sim$ defined via $\phi(x)=[x]$ is a surjection.
 \end{theorem}
+
+The function from the previous theorem is sometimes called the \textbf{canonical projection} induced by $\sim$.
 
 \begin{problem}
 Under what circumstances would the function from the previous theorem also be injective?
 \end{problem}
 
+Let's explore whether we can weaken the hypotheses of Theorem~\ref{thm:canonical projection}. 
 
---------
-
-Various ways of not being well defined:
+\begin{problem}
+Let $R$ be a relation on a nonempty set $A$.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $f:\{1,2,3\}\to \{1,2,3\}$ defined via $f(x)=x-1$.
-\item $f:\mathbb{Q}\to \mathbb{Z}$ defined via $f(a/b)=a+b$.
-\item Something like $f([x])=???$
+\item What conditions on $R$ must hold in order for $f:A\to \Rel(R)$ defined via $f(a)=\rel(a)$ to be a function?
+\item What additional conditions, if any, must hold on $R$ in order for $f$ to be a surjective function?
 \end{enumerate}
+\end{problem}
 
+\begin{problem}
+Let $A$ be a nonempty set.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Suppose $R$ is an equivalence relation on $A$. Under what conditions is $R$ a function from $A$ to $A$?
+\item Suppose $f:A\to A$ is a function. Under what condition is $f$ an equivalence relation on $A$?
+\end{enumerate}
+\end{problem}
+
+The next problem illustrates that some care must be taken when attempting to define a function.
+
+\begin{problem}\label{prob:not well defined}
+For each of the following, explain why the given description does not define a function.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Define $f:\{1,2,3\}\to \{1,2,3\}$ via $f(a)=a-1$.
+\item Define $g:\mathbb{N}\to \mathbb{Q}$ via $g(n)=\frac{n}{n-1}$.
+\item Let $A_1=\{1,2,3\}$ and $A_2=\{3,4,5\}$. Define $h:A\cup B\to \{1,2\}$ via
+\[
+h(x)=\begin{cases}
+1, & \mbox{if }x\in A_1\\
+2, & \mbox{if }x\in A_2.
+\end{cases}
+\]
+\item Define $s:\mathbb{Q}\to \mathbb{Z}$ via $s(a/b)=a+b$.
+\end{enumerate}
+\end{problem}
+
+In mathematics, we say that an expression is \textbf{well defined} (or \textbf{unambiguous}) if its definition yields a unique interpretation.  Otherwise, we say that the expression is not well defined (or is \textbf{ambiguous}).  For example, if $a,b,c\in\mathbb{R}$, then the expression $abc$ is well defined since it does not matter if we interpret this as $(ab)c$ or $a(bc)$ (i.e., the real numbers are associative under multiplication).  This issue was lurking behind the scenes in the statement of Theorem~\ref{thm:modular sums products}.  In particular, the expressions
+\[
+[a_1]_n+[a_2]_n+\cdots+ [a_k]_n
+\]
+and
+\[
+[a_1]_n [a_2]_n \cdots  [a_k]_n
+\]
+are well defined in $\mathbb{Z}/n\mathbb{Z}$ in light of Theorems~\ref{thm:modular add comm assoc}\ref{modular add assoc} and \ref{thm:modular mult comm assoc}\ref{modular mult assoc}.
+
+When we attempt to define a function, it may not be clear without doing some work that our definition really does yield a function. If there is some potential ambiguity in the definition of a function that ends up not causing any issues, we say that the function is well defined. However, this phrase is a bit of misnomer since all functions are well defined. The issue of whether a description for a proposed function is well defined often arises when defining things in terms of representatives of equivalence classes, or more generally in terms of how an element of the domain is written.  For example, the descriptions given in parts (c) and (d) of Problem~\ref{prob:not well defined} are not well defined.  To show that a potentially ambiguous description for a function $f:X\to Y$ is well defined prove that if $a$ and $b$ are two representations for the same element in $X$, then $f(a)=f(b)$.
+
+\begin{problem}
+For each of the following, determine whether the description determines a well-defined function.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Define $f:\mathbb{Z}/5\mathbb{Z}\to \mathbb{N}$ via
+\[
+f([a]_5)=\begin{cases}
+0, & \mbox{if } a\mbox{ is even}\\
+1, & \mbox{if } a\mbox{ is odd}.
+\end{cases}
+\]
+\item Define $g:\mathbb{Z}/6\mathbb{Z}\to \mathbb{N}$ via
+\[
+g([a]_6)=\begin{cases}
+0, & \mbox{if } a\mbox{ is even}\\
+1, & \mbox{if } a\mbox{ is odd}.
+\end{cases}
+\]
+\end{enumerate}
+\end{problem}
+
+Given any function, we can define an equivalence relation on its domain, where the equivalence classes correspond to the elements that map to the same element of the range.
+
+\begin{theorem}\label{thm:equiv relation from inverse images}
+Let $f:X\to Y$ be a function and define $\sim$ on $X$ via $a\sim b$ if and only if $f(a) = f(b)$. Then $\sim$ is an equivalence relation on $X$.
+\end{theorem}
+
+It follows immediately from Theorem~\ref{thm:equiv yields partition2} that the equivalence classes induced by the equivalence relation in Theorem~\ref{thm:equiv relation from inverse images} partition the domain of a function.
+
+\begin{problem}\label{prob:equiv classes from inverse images}
+For each of the functions defined in the following example and problem, identify the equivalence classes induced by the equivalence relation from Theorem~\ref{thm:equiv relation from inverse images} for the given function.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Example~\ref{ex:function}
+\item Problem~\ref{prob:injective surjective functions}\ref{circles}
+\end{enumerate}
+\end{problem}
+
+If $f$ is a function, the equivalence relation in Theorem~\ref{thm:equiv relation from inverse images} allows us to construct a bijective function whose domain is the set of equivalence classes and whose range coincides with the range of $f$.  This is an important idea that manifests itself in many areas of mathematics.  One such instance is the First Isomorphism Theorem for Groups, which is a fundamental theorem in a branch of mathematics called group theory.  When proving the following theorem, the first thing you should do is verify that the description for $g$ is well defined.
+
+\begin{theorem}\label{thm:iso theorem for sets}
+Let $f:X\to Y$ be a function and define $\sim$ on $X$ via $a\sim b$ if and only if $f(a) = f(b)$. Then the function $\overline{f}:X/\mathord\sim\to \range(f)$ defined via $\overline{f}([a]) = f(a)$ is a bijection.
+\end{theorem}
+
+\begin{problem}
+Consider the equivalence classes you identified in parts (a) and (b) of Problem~\ref{prob:equiv classes from inverse images}.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Draw the function diagram for the function $\overline{f}$ as defined in Theorem~\ref{thm:iso theorem for sets}, where $f$ is the function defined in Example~\ref{ex:function}.
+\item Describe the function $\overline{c}$ as defined in Theorem~\ref{thm:iso theorem for sets}, where $c$ is the function defined in Problem~\ref{prob:injective surjective functions}\ref{circles}.
+\end{enumerate}
+\end{problem}
 
 \end{section}

@@ -119,7 +119,7 @@ Addition and multiplication for $\mathbb{Z}/n\mathbb{Z}$ has many familiar---and
 If $n\in \mathbb{N}$, then addition in $\mathbb{Z}/n\mathbb{Z}$ is commutative and associative. That is, for all $[a]_n, [b]_n, [c]_n \in \mathbb{Z}/n\mathbb{Z}$, we have
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $[a]_n + [b]_n = [b]_n + [a]_n$, and
-\item $([a]_n + [b]_n) + [c]_n = [a]_n + ([b]_n + [c]_n)$. 
+\item\label{modular add assoc} $([a]_n + [b]_n) + [c]_n = [a]_n + ([b]_n + [c]_n)$. 
 \end{enumerate}
 \end{theorem}
 
@@ -127,11 +127,11 @@ If $n\in \mathbb{N}$, then addition in $\mathbb{Z}/n\mathbb{Z}$ is commutative a
 If $n\in \mathbb{N}$, then multiplication in $\mathbb{Z}/n\mathbb{Z}$ is commutative and associative. That is, for all $[a]_n, [b]_n, [c]_n \in \mathbb{Z}/n\mathbb{Z}$, we have
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $[a]_n \cdot [b]_n = [b]_n \cdot [a]_n$, and
-\item $([a]_n \cdot [b]_n) \cdot [c]_n = [a]_n \cdot ([b]_n \cdot [c]_n)$.
+\item\label{modular mult assoc} $([a]_n \cdot [b]_n) \cdot [c]_n = [a]_n \cdot ([b]_n \cdot [c]_n)$.
 \end{enumerate}
 \end{theorem}
 
-One consequence of Theorems~\ref{thm:modular add comm assoc} and \ref{thm:modular mult comm assoc} is that parentheses are not needed when adding or multiplying congruence classes.  The next theorem follows from Definition~\ref{def:modular arithmetic} and induction on $k$.
+One consequence of Theorems~\ref{thm:modular add comm assoc}\ref{modular add assoc} and \ref{thm:modular mult comm assoc}\ref{modular mult assoc} is that parentheses are not needed when adding or multiplying congruence classes.  The next theorem follows from Definition~\ref{def:modular arithmetic} together with Theorems~\ref{thm:modular add comm assoc}\ref{modular add assoc} and \ref{thm:modular mult comm assoc}\ref{modular mult assoc} and induction on $k$.
 
 \begin{theorem}\label{thm:modular sums products}
 Let $n\in \mathbb{N}$.  For all $k\in \mathbb{N}$, if $[a_1]_n,[a_2]_n,\ldots, [a_k]_n \in \mathbb{Z}/n\mathbb{Z}$, then 
