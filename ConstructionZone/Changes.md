@@ -11,8 +11,9 @@
 - Moved discussion of Cartesian products of sets to its own section.
 - Lots of changes, additions, improvements to Chapter 6.  Too numerous to list.
 - Changed notation for set of relatives from [a] to rel(a) as [a] was somewhat non-standard in situations when relation is not an equivalence relation.
-- Add some discussion of well-defined functions to the end of Section 7.1.
+- Added some discussion of well-defined functions to the end of Section 7.1.
 - Replaced most occurrences of one-to-one and onto with injective and surjective.
+- Moved the content on injective and surjective to its own section.
 
 ## Reviewer 1
 

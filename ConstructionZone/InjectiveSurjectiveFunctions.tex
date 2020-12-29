@@ -1,0 +1,185 @@
+\begin{section}{Injective and Surjective Functions}
+
+We now turn our attention to a couple of properties that a function may or may not possess.
+
+\begin{definition}
+Let $f:X\to Y$ be a function.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item The function $f$ is said to be \textbf{injective} (or \textbf{one-to-one}) if for all $y\in \range(f)$, there is a unique $x\in X$ such that $y=f(x)$.
+\item The function $f$ is said to be \textbf{surjective} (or \textbf{onto}) if for all $y\in Y$, there exists $x\in X$ such that $y=f(x)$.
+\item If $f$ is both injective and surjective, we say that $f$ is \textbf{bijective}.
+\end{enumerate}
+\end{definition}
+
+An injective function is also be called an \textbf{injection}, a surjective function is called a \textbf{surjection}, and a bijective function is called a \textbf{bijection} (or a \textbf{one-to-one correspondence}). To prove that a function $f:X\to Y$ is an injection, we must prove that if $f(x_{1})=f(x_{2})$, then $x_{1}=x_{2}$. To show that $f$ is surjective, you should start with an arbitrary $y\in Y$ and then work to show that there exists $x\in X$ such that $y=f(x)$.
+
+%To do this, start by assuming that $f(x_{1})=f(x_{2})$ and then work to show that $x_{1}=x_{2}$.  That is, a function $f$ is one-to-one if and only if for all $x_{1}, x_{2}\in X$, if $f(x_{1})=f(x_{2})$, then $x_{1}=x_{2}$. To show that $f$ is onto, you should start with an arbitrary $y\in Y$ and then work to show that there exists $x\in X$ such that $y=f(x)$.
+
+The next two skeleton proofs are special cases of Skeleton Proof~\ref{skeleton:uniqueness} and Skeleton Proof~\ref{skeleton:existence}, respectively.
+
+\begin{skeleton}[Proof that a function is injective]
+Here is the general structure for proving that a function is injective.
+\begin{center}
+\framebox{
+\begin{minipage}{6in}
+\vspace{.1in}
+\begin{proof}
+Assume $f:X\to Y$ is a function defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $f$]}.  Let $x_1,x_2\in X$ and suppose $f(x_1)=f(x_2)$.
+\begin{center}
+$\ldots$ \ \emph{[Use the definition (or property) of $f$ to verify that $x_1=x_2$]} \ $\ldots$
+\end{center}
+\noindent Therefore, the function $f$ is injective.
+\end{proof}
+\end{minipage}
+}
+\end{center}
+\end{skeleton}
+
+\begin{skeleton}[Proof that a function is surjective]
+Here is the general structure for proving that a function is surjective.
+\begin{center}
+\framebox{
+\begin{minipage}{6in}
+\vspace{.1in}
+\begin{proof}
+Assume $f:X\to Y$ is a function defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $f$]}.  Let $y\in Y$.
+\begin{center}
+$\ldots$ \ \emph{[Use the definition (or property) of $f$ to find some $x\in X$ such that $f(x)=y$]} \ $\ldots$
+\end{center}
+\noindent Therefore, the function $f$ is surjective.
+\end{proof}
+\end{minipage}
+}
+\end{center}
+\end{skeleton}
+
+\begin{problem}
+Assume that $X$ and $Y$ are finite sets. Provide an example of each of the following.  You may draw a function diagram, write down a list of ordered pairs, or a write a formula as long as the domain and codomain are clear. 
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item A function $f:X\to Y$ that is injective but not surjective.
+\item A function $f:X\to Y$ that is surjective but not injective.
+\item A function $f:X\to Y$ that is a bijection.
+\item A function $f:X\to Y$ that is neither injective nor surjective.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Provide an example of each of the following.  You may either draw a graph or write down a formula.  Make sure you have the correct domain.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item A function $f:\mathbb{R}\to \mathbb{R}$ that is injective but not surjective.
+\item A function $f:\mathbb{R}\to \mathbb{R}$ that is surjective but not injective.
+\item A function $f:\mathbb{R}\to \mathbb{R}$ that is a bijection.
+\item A function $f:\mathbb{R}\to \mathbb{R}$ that is neither injective nor surjective.
+\item A function $f:\mathbb{N}\times\mathbb{N}\to \mathbb{N}$ that is injective.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Suppose $X\subseteq \mathbb{R}$ and $f:X\to \mathbb{R}$ is a function. Fill in the blank with the appropriate word.
+\begin{quote}
+The function $f:X\to \mathbb{R}$ $f:X\to Y$ is \underline{\ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ } if and only if every horizontal line hits the graph of $f$ \emph{at most once}.
+\end{quote}
+This statement is often called the \textbf{horizontal line test}.  Explain why the horizontal line test is true.
+\end{problem}
+
+\begin{problem}
+Suppose $X\subseteq \mathbb{R}$ and $f:X\to \mathbb{R}$ is a function. Fill in the blank with the appropriate word.
+\begin{quote}
+The function $f:X\to \mathbb{R}$ is \underline{\ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ } if and only if every horizontal line hits the graph of $f$ \emph{at least once}.
+\end{quote}
+Explain why this statement is true.
+\end{problem}
+
+\begin{problem}
+Suppose $X\subseteq \mathbb{R}$ and $f:X\to \mathbb{R}$ is a function. Fill in the blank with the appropriate word.
+\begin{quote}
+The function $f:X\to \mathbb{R}$ is \underline{\ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ } if and only if every horizontal line hits the graph of $f$ \emph{exactly once}.
+\end{quote}
+Explain why this statement is true.
+\end{problem}
+
+\begin{problem}\label{prob:injective surjective functions}
+Determine whether each of the following functions is injective, surjective, both, or neither.  In each case, you should provide a proof or a counterexamples as appropriate.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $f:\mathbb{R}\to \mathbb{R}$ defined via $f(x)=x^{2}$
+\item $g:\mathbb{R}\to [0,\infty)$ defined via $g(x)=x^{2}$
+\item $h:\mathbb{R}\to \mathbb{R}$ defined via $h(x)=x^{3}$
+\item $k:\mathbb{R}\to \mathbb{R}$ defined via $k(x)=x^{3}-x$
+\item\label{circles} $c: \mathbb{R}\times \mathbb{R}\to \mathbb{R}$ defined via $l(x,y)=x^{2}+y^{2}$
+\item $f:\mathbb{N}\to \mathbb{N}\times \mathbb{N}$ defined via $f(n)=(n,n)$
+\item $g:\mathbb{Z}\to \mathbb{Z}$ defined via
+\[
+f(n)=\begin{cases}
+\frac{n}{2}, & \text{if }n\text{ is even}\\
+\frac{n+1}{2}, & \text{if }n\text{ is odd}\\
+\end{cases}
+\]
+\item $\ell:\mathbb{Z}\to \mathbb{N}$ defined via
+\[
+\ell(n)=\begin{cases}
+2n+1, & \text{if }n\geq 0\\
+-2n, & \text{if }n<0\\
+\end{cases}
+\]
+\item $h:\mathbb{Z}/43\mathbb{Z}\to \mathbb{Z}/43\mathbb{Z}$ defined via $h([x]_{43})=[11x-5]_{43}$ (see Problem~\ref{prob:well defined}\ref{mod 43 to mod 43})
+\item $k:\mathbb{Z}/15\mathbb{Z}\to \mathbb{Z}/15\mathbb{Z}$ defined via $k([x]_{15})=[5x-11]_{15}$ (see Problem~\ref{prob:well defined}\ref{mod 15 to mod 15})
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Suppose $X$ and $Y$ are nonempty sets with $m$ and $n$ elements, respectively, where $m\leq  n$. How many injections are there from $X$ to $Y$?
+\end{problem}
+
+\begin{problem}
+Compare and contrast the definition of ``function" with the definition of ``injective function". Consider the vertical line test and horizontal line test in your discussion.  Moreover, attempt to capture what it means for a relation to not be a function and for a function to not be an injection by drawing portions of a digraph.
+\end{problem}
+
+The next two theorems should not come as as surprise.
+
+\begin{theorem}
+The inclusion map $\iota:X\to Y$ for $X\subseteq Y$ is an injection.
+\end{theorem}
+
+\begin{theorem}
+The identity function $i_X:X\to X$ is a bijection.
+\end{theorem}
+
+\begin{problem}
+Let $A$ and $B$ be nonempty sets and let $S$ be a nonempty subset of $A\times B$.  Define $\pi_{1}:S\to A$ and $\pi_{2}:S\to B$ via $\pi_{1}(a,b)=a$ and $\pi_{2}(a,b)=b$.  We call $\pi_{1}$ and $\pi_{2}$ the \textbf{projections} of $S$ onto $A$ and $B$, respectively.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Provide examples to show that $\pi_{1}$ does not need to be injective nor surjective.
+\item Suppose that $S$ is also a function. Is $\pi_{1}$ injective? Is $\pi_{1}$ surjective?  How about $\pi_{2}$?
+\end{enumerate}
+\end{problem}
+
+The next theorem says that if we have an equivalence relation on a nonempty set, the mapping that assigns each element to its respective equivalence class is a surjective function.  
+
+\begin{theorem}\label{thm:canonical projection}
+If $\sim$ is an equivalence relation on a nonempty set $A$, then the function $f:A\to A/\mathord\sim$ defined via $f(x)=[x]$ is a surjection.
+\end{theorem}
+
+The function from the previous theorem is sometimes called the \textbf{canonical projection map} induced by $\sim$.
+
+\begin{problem}
+Under what circumstances would the function from the previous theorem also be injective?
+\end{problem}
+
+Let's explore whether we can weaken the hypotheses of Theorem~\ref{thm:canonical projection}. 
+
+\begin{problem}
+Let $R$ be a relation on a nonempty set $A$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item What conditions on $R$ must hold in order for $f:A\to \Rel(R)$ defined via $f(a)=\rel(a)$ to be a function?
+\item What additional conditions, if any, must hold on $R$ in order for $f$ to be a surjective function?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Let $A$ be a nonempty set.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Suppose $R$ is an equivalence relation on $A$. Under what conditions is $R$ a function from $A$ to $A$?
+\item Suppose $f:A\to A$ is a function. Under what conditions is $f$ an equivalence relation on $A$?
+\end{enumerate}
+\end{problem}
+
+\end{section}

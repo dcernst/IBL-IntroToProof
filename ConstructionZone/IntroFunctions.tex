@@ -12,7 +12,7 @@ Let $X$ and $Y$ be two nonempty sets.  A \textbf{function $f$ from $X$ to $Y$} i
 is called the \textbf{range} of $f$ or the \textbf{image of $X$} under $f$.
 \end{definition}
 
-We will write $f:X\to Y$ to indicate that $f$ is a function from $X$ to $Y$. We will make use of statements such as ``Let $f:X\to Y$ be the function defined via\ldots" or ``Define $f:X\to Y$ via\ldots", where $f$ is understood to be a function in the second statement. Sometimes the word \textbf{mapping} (or \textbf{map}) is used in place of the word function.  If $(a,b)\in f$ for a function $f$, we often write $f(a)=b$ and say that ``$f$ maps $a$ to $b$'', ``$b$ is the image of $a$ under $f$", or ``$f$ of $a$ equals $b$". If the function is clear from the context, we may write $a\mapsto b$. We may also refer to $a$ as an \textbf{input} of $f$ and $f(a)$ (or $b$) as an \textbf{output} of $f$. In this case, the domain of a function is the set of inputs while the range is the set of outputs for the function.
+There is a variety of notation and terminology associated to functions. We will write $f:X\to Y$ to indicate that $f$ is a function from $X$ to $Y$. We will make use of statements such as ``Let $f:X\to Y$ be the function defined via\ldots" or ``Define $f:X\to Y$ via\ldots", where $f$ is understood to be a function in the second statement. Sometimes the word \textbf{mapping} (or \textbf{map}) is used in place of the word function.  If $(a,b)\in f$ for a function $f$, we often write $f(a)=b$ and say that ``$f$ maps $a$ to $b$'' or ``$f$ of $a$ equals $b$". In this case, $a$ may be called an \textbf{input} of $f$ and is the \textbf{preimage} of $b$ under $f$ while $b$ is called an \textbf{output} of $f$ and is the \textbf{image} of $a$ under $f$. Note that the domain of a function is the set of inputs while the range is the set of outputs for the function.
  
 Notice that we can interpret our definition of function in terms of existence and uniqueness.  That is, $f:X\to Y$ is a function provided:
 \begin{enumerate}
@@ -128,15 +128,27 @@ Let $f:X\to Y$ be a function and suppose that $X$ and $Y$ are finite sets with $
 There are a few special functions that we should know the names of.
 
 \begin{definition}
-If $X$ is a nonempty set, then the function $i_X:X\to X$ defined via $i_X(x)=x$ is called the \textbf{identity function on $X$}.
+If $X$ and $Y$ are nonempty sets such that $X\subseteq Y$, then the function $\iota:X\to Y$ defined via $\iota(x)=x$ is called the \textbf{inclusion map from $X$ into $Y$}.
+\end{definition}
+
+Note that ``$\iota$" is the Greek letter ``iota".
+
+\begin{problem}
+Let $X=\{a,b,c\}$ and $Y=\{a,b,c,d\}$.  Draw the function diagram of the inclusion map from $X$ into $Y$.
+\end{problem}
+
+If the domain and codomain are equal, the inclusion map has a special name.
+
+\begin{definition}
+If $X$ is a nonempty set, then the function $i_X:X\to X$ defined via $i_X(x)=x$ is called the \textbf{identity map} (or \textbf{function}) \textbf{on $X$}.
 \end{definition}
 
 \begin{example}
-The relation defined in Problem~\ref{prob:lots of potential functions}\ref{prob:identity} is the identity function on $X=\{\circ, \square,\triangle,\smiley\}$.
+The relation defined in Problem~\ref{prob:lots of potential functions}\ref{prob:identity} is the identity map on $X=\{\circ, \square,\triangle,\smiley\}$.
 \end{example}
 
 \begin{problem}
-Draw a portion of the graph of the identity function on $\mathbb{R}$ as a subset of $\mathbb{R}^2$.
+Draw a portion of the graph of the identity map on $\mathbb{R}$ as a subset of $\mathbb{R}^2$.
 \end{problem}
 
 \begin{definition}
@@ -181,147 +193,6 @@ Define $f:\mathbb{R}\setminus\{0\}\to \mathbb{R}$ via $f(x)=\frac{|x|}{x}$. Expr
 
 It is important to point out that not every function can be described using a formula! Despite your prior experience, functions that can be represented succinctly using a formula are rare.
 
-We now turn our attention to a couple of properties that a function may or may not possess.
-
-\begin{definition}
-Let $f:X\to Y$ be a function.
-\begin{enumerate}[label=\textrm{(\alph*)}]
-\item The function $f$ is said to be \textbf{injective} (or \textbf{one-to-one}) if for all $y\in \range(f)$, there is a unique $x\in X$ such that $y=f(x)$.
-\item The function $f$ is said to be \textbf{surjective} (or \textbf{onto}) if for all $y\in Y$, there exists $x\in X$ such that $y=f(x)$.
-\item If $f$ is both injective and surjective, we say that $f$ is \textbf{bijective}.
-\end{enumerate}
-\end{definition}
-
-An injective function is also be called an \textbf{injection}, a surjective function is called a \textbf{surjection}, and a bijective function is called a \textbf{bijection} (or a \textbf{one-to-one correspondence}). To prove that a function $f:X\to Y$ is an injection, we must prove that if $f(x_{1})=f(x_{2})$, then $x_{1}=x_{2}$. To show that $f$ is surjective, you should start with an arbitrary $y\in Y$ and then work to show that there exists $x\in X$ such that $y=f(x)$.
-
-%To do this, start by assuming that $f(x_{1})=f(x_{2})$ and then work to show that $x_{1}=x_{2}$.  That is, a function $f$ is one-to-one if and only if for all $x_{1}, x_{2}\in X$, if $f(x_{1})=f(x_{2})$, then $x_{1}=x_{2}$. To show that $f$ is onto, you should start with an arbitrary $y\in Y$ and then work to show that there exists $x\in X$ such that $y=f(x)$.
-
-The next two skeleton proofs are special cases of Skeleton Proof~\ref{skeleton:uniqueness} and Skeleton Proof~\ref{skeleton:existence}, respectively.
-
-\begin{skeleton}[Proof that a function is injective]
-Here is the general structure for proving that a function is injective.
-\begin{center}
-\framebox{
-\begin{minipage}{6in}
-\vspace{.1in}
-\begin{proof}
-Assume $f:X\to Y$ is a function defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $f$]}.  Let $x_1,x_2\in X$ and suppose $f(x_1)=f(x_2)$.
-\begin{center}
-$\ldots$ \ \emph{[Use the definition (or property) of $f$ to verify that $x_1=x_2$]} \ $\ldots$
-\end{center}
-\noindent Therefore, the function $f$ is injective.
-\end{proof}
-\end{minipage}
-}
-\end{center}
-\end{skeleton}
-
-\begin{skeleton}[Proof that a function is surjective]
-Here is the general structure for proving that a function is surjective.
-\begin{center}
-\framebox{
-\begin{minipage}{6in}
-\vspace{.1in}
-\begin{proof}
-Assume $f:X\to Y$ is a function defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $f$]}.  Let $y\in Y$.
-\begin{center}
-$\ldots$ \ \emph{[Use the definition (or property) of $f$ to find some $x\in X$ such that $f(x)=y$]} \ $\ldots$
-\end{center}
-\noindent Therefore, the function $f$ is surjective.
-\end{proof}
-\end{minipage}
-}
-\end{center}
-\end{skeleton}
-
-\begin{problem}
-Assume that $X$ and $Y$ are finite sets. Provide an example of each of the following.  You may draw a function diagram, write down a list of ordered pairs, or a write a formula as long as the domain and codomain are clear. 
-\begin{enumerate}[label=\textrm{(\alph*)}]
-\item A function $f:X\to Y$ that is injective but not surjective.
-\item A function $f:X\to Y$ that is surjective but not injective.
-\item A function $f:X\to Y$ that is a bijection.
-\item A function $f:X\to Y$ that is neither injective nor surjective.
-\end{enumerate}
-\end{problem}
-
-\begin{problem}
-Provide an example of each of the following.  You may either draw a graph or write down a formula.  Make sure you have the correct domain.
-\begin{enumerate}[label=\textrm{(\alph*)}]
-\item A function $f:\mathbb{R}\to \mathbb{R}$ that is injective but not surjective.
-\item A function $f:\mathbb{R}\to \mathbb{R}$ that is surjective but not injective.
-\item A function $f:\mathbb{R}\to \mathbb{R}$ that is a bijection.
-\item A function $f:\mathbb{R}\to \mathbb{R}$ that is neither injective nor surjective.
-\end{enumerate}
-\end{problem}
-
-\begin{problem}
-Fill in the blank with the appropriate word.
-\begin{quote}
-A function $f:X\to Y$ is \underline{\ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ } if and only if every horizontal line hits the graph of $f$ at most once.
-\end{quote}
-This statement is often called the \textbf{horizontal line test}.  Explain why the horizontal line test is true.
-\end{problem}
-
-\begin{problem}\label{prob:injective surjective functions}
-Determine whether each of the following functions is injective, surjective, both, or neither.  In each case, you should provide a proof or a counterexamples as appropriate.
-\begin{enumerate}[label=\textrm{(\alph*)}]
-\item $f:\mathbb{R}\to \mathbb{R}$ defined via $f(x)=x^{2}$
-\item $g:\mathbb{R}\to [0,\infty)$ defined via $g(x)=x^{2}$
-\item $h:\mathbb{R}\to \mathbb{R}$ defined via $h(x)=x^{3}$
-\item $k:\mathbb{R}\to \mathbb{R}$ defined via $k(x)=x^{3}-x$
-\item\label{circles} $c: \mathbb{R}\times \mathbb{R}\to \mathbb{R}$ defined via $l(x,y)=x^{2}+y^{2}$
-\item $N:\mathbb{N}\to \mathbb{N}\times \mathbb{N}$ defined via $N(n)=(n,n)$
-\end{enumerate}
-\end{problem}
-
-\begin{problem}
-Compare and contrast the definition of ``function" with the definition of ``injective function". Consider the vertical line test and horizontal line test in your discussion.  Moreover, attempt to capture what it means for a relation to not be a function and for a function to not be an injection by drawing portions of a digraph.
-\end{problem}
-
-The next theorem should come as no surprise.
-
-\begin{theorem}
-The identity function $i_X$ on a nonempty set $X$ is a bijection.
-\end{theorem}
-
-\begin{problem}
-Let $A$ and $B$ be nonempty sets and let $S$ be a nonempty subset of $A\times B$.  Define $\pi_{1}:S\to A$ and $\pi_{2}:S\to B$ via $\pi_{1}(a,b)=a$ and $\pi_{2}(a,b)=b$.  We call $\pi_{1}$ and $\pi_{2}$ the \textbf{projections} of $S$ onto $A$ and $B$, respectively.
-\begin{enumerate}[label=\textrm{(\alph*)}]
-\item Provide examples to show that $\pi_{1}$ does not need to be injective nor surjective.
-\item Suppose that $S$ is also a function. Is $\pi_{1}$ injective? Is $\pi_{1}$ surjective?  How about $\pi_{2}$?
-\end{enumerate}
-\end{problem}
-
-The next theorem says that if we have an equivalence relation on a nonempty set, the mapping that assigns each element to its respective equivalence class is a surjective function.  
-
-\begin{theorem}\label{thm:canonical projection}
-If $\sim$ is an equivalence relation on a nonempty $A$, then the function $\phi:A\to A/\mathord\sim$ defined via $\phi(x)=[x]$ is a surjection.
-\end{theorem}
-
-The function from the previous theorem is sometimes called the \textbf{canonical projection} induced by $\sim$.
-
-\begin{problem}
-Under what circumstances would the function from the previous theorem also be injective?
-\end{problem}
-
-Let's explore whether we can weaken the hypotheses of Theorem~\ref{thm:canonical projection}. 
-
-\begin{problem}
-Let $R$ be a relation on a nonempty set $A$.
-\begin{enumerate}[label=\textrm{(\alph*)}]
-\item What conditions on $R$ must hold in order for $f:A\to \Rel(R)$ defined via $f(a)=\rel(a)$ to be a function?
-\item What additional conditions, if any, must hold on $R$ in order for $f$ to be a surjective function?
-\end{enumerate}
-\end{problem}
-
-\begin{problem}
-Let $A$ be a nonempty set.
-\begin{enumerate}[label=\textrm{(\alph*)}]
-\item Suppose $R$ is an equivalence relation on $A$. Under what conditions is $R$ a function from $A$ to $A$?
-\item Suppose $f:A\to A$ is a function. Under what condition is $f$ an equivalence relation on $A$?
-\end{enumerate}
-\end{problem}
-
 The next problem illustrates that some care must be taken when attempting to define a function.
 
 \begin{problem}\label{prob:not well defined}
@@ -352,7 +223,7 @@ are well defined in $\mathbb{Z}/n\mathbb{Z}$ in light of Theorems~\ref{thm:modul
 
 When we attempt to define a function, it may not be clear without doing some work that our definition really does yield a function. If there is some potential ambiguity in the definition of a function that ends up not causing any issues, we say that the function is well defined. However, this phrase is a bit of misnomer since all functions are well defined. The issue of whether a description for a proposed function is well defined often arises when defining things in terms of representatives of equivalence classes, or more generally in terms of how an element of the domain is written.  For example, the descriptions given in parts (c) and (d) of Problem~\ref{prob:not well defined} are not well defined.  To show that a potentially ambiguous description for a function $f:X\to Y$ is well defined prove that if $a$ and $b$ are two representations for the same element in $X$, then $f(a)=f(b)$.
 
-\begin{problem}
+\begin{problem}\label{prob:well defined}
 For each of the following, determine whether the description determines a well-defined function.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item Define $f:\mathbb{Z}/5\mathbb{Z}\to \mathbb{N}$ via
@@ -369,6 +240,8 @@ g([a]_6)=\begin{cases}
 1, & \mbox{if } a\mbox{ is odd}.
 \end{cases}
 \]
+\item\label{mod 43 to mod 43} Define $h:\mathbb{Z}/43\mathbb{Z}\to \mathbb{Z}/43\mathbb{Z}$ defined via $h([x]_{43})=[11x-5]_{43}$
+\item\label{mod 15 to mod 15} Define $k:\mathbb{Z}/15\mathbb{Z}\to \mathbb{Z}/15\mathbb{Z}$ defined via $k([x]_{15})=[5x-11]_{15}$
 \end{enumerate}
 \end{problem}
 
