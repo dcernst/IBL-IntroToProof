@@ -1,4 +1,4 @@
-\begin{section}{Compositions and Inverse Functions}
+\begin{section}{Compositions and Inverse Functions}\label{sec:Compositions and Inverse Functions}
 
 We begin this section with a method for combining two functions together that have compatible domains and codomains.
 
@@ -28,9 +28,9 @@ It is important to notice that the function on the right is the one that ``goes 
 \path (A) edge (B);
 \path (B) edge (C);
 
-\node[draw,fit=(A),minimum width=1.5cm,minimum height=2.75cm,gray] {};
-\node[draw,fit=(B),minimum width=1.5cm,minimum height=2.75cm,gray] {};
-\node[draw,fit=(C),minimum width=1.5cm,minimum height=2.75cm,gray] {};
+\node[draw,rounded corners,fit=(A),minimum width=1.3cm,minimum height=2.75cm,gray] {};
+\node[draw,rounded corners,fit=(B),minimum width=1.3cm,minimum height=2.75cm,gray] {};
+\node[draw,rounded corners,fit=(C),minimum width=1.3cm,minimum height=2.75cm,gray] {};
 \node (X) at (0,4.7) {$X$};
 \node (Y) at (3,4.7) {$Y$};
 \node (Z) at (6,4.7) {$Z$};
@@ -157,14 +157,14 @@ If $f:X\to Y$ and $g:Y\to X$ are functions satisfying $g\circ f=i_X$ and  $f\cir
 
 In the previous result, the functions $f$ and $g$ ``cancel" each other out. In this case, we say that $g$ is a \textbf{two-sided inverse} of $f$.
 
-\begin{definition}
+\begin{definition}\label{def:inverse of a function}
 Let $f:X\to Y$ be a function.  The relation $f^{-1}$ from $Y$ to $X$, called\textbf{$f$ inverse}, is defined via
 \[
 f^{-1}=\{(f(x),x)\in Y\times X\mid x\in X\}.
 \] 
 \end{definition}
 
-Notice that we called $f^{-1}$ a relation and not a function.  In some circumstances $f^{-1}$ will be a function and sometimes it will not be. Given a function $f$, the inverse relation is simply the set of ordered pairs that results from reversing the ordered pairs in $f$.
+Notice that we called $f^{-1}$ a relation and not a function.  In some circumstances $f^{-1}$ will be a function and sometimes it will not be. Given a function $f$, the inverse relation is simply the set of ordered pairs that results from reversing the ordered pairs in $f$.  It is worth pointing out that we have only defined inverse relations for functions.  However, one can easily adapt our definition to handle arbitrary relations.
 
 \begin{problem}
 Consider the function $f$ given in Example~\ref{ex:function} (see Figure~\ref{fig:function diagram}). List the ordered pairs in the relation $f^{-1}$ and draw the corresponding digraph. Is $f^{-1}$ a function?
@@ -182,7 +182,7 @@ Provide an example of a function $f:X\to Y$ such that $f^{-1}$ is a function. Dr
 Suppose $X\subseteq \mathbb{R}$ and $f:X\to \mathbb{R}$ is a function. What is the relationship between the graph of the function $f$ and the graph of the inverse relation $f^{-1}$?
 \end{problem}
 
-\begin{theorem}
+\begin{theorem}\label{thm:inverse function iff bijection}
 Let $f:X\to Y$ be a function.  Then $f^{-1}:Y\to X$ is a function if and only if $f$ is a bijection.
 \end{theorem}
 
@@ -213,9 +213,11 @@ If $f:X\to Y$ and $g:Y\to X$ are functions such that $g\circ f=i_X$ and $f\circ 
 
 The upshot of Theorems~\ref{thm:comp of inverses} and \ref{thm:unique inverse} is that if $f^{-1}$ is a function, then it is the only one satisfying the two-sided inverse property exhibited in Corollary~\ref{cor:two-sided inverse} and Theorem~\ref{thm:comp of inverses}. That is, inverse functions are unique when they exist. When the relation $f^{-1}$ is a function, we call it the \textbf{inverse function} of $f$.
 
-\begin{theorem}
+\begin{theorem}\label{thm:inverse of inverse}
 If $f:X\to Y$ is a bijection, then $(f^{-1})^{-1}=f$.
 \end{theorem}
+
+In the previous theorem, we restricted our attention to bijections so that $f^{-1}$ would be a function, thus making $(f^{-1})^{-1}$ a sensible inverse relation in light of Definition~\ref{def:inverse of a function}.  If we had defined inverses for arbitrary relations, then we would not have needed to require the function in Theorem~\ref{thm:inverse of inverse} to be a bijection. In fact, we do not even need to require the relation to be a function.  That is, if $R$ is a relation from $X$ to $Y$, then $(R^{-1})^{-1}=R$, as expected. Similarly, the next result generalizes to arbitrary relations.
 
 \begin{theorem}
 If $f:X\to Y$ and $g:Y\to Z$ are both bijections, then $(g\circ f)^{-1}=f^{-1}\circ g^{-1}$.

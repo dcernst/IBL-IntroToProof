@@ -9,11 +9,12 @@
 - Added formal statement of Axiom of Choice to end of section on indexing sets.
 - Moved the definition of set of relatives up a section.
 - Moved discussion of Cartesian products of sets to its own section.
-- Lots of changes, additions, improvements to Chapter 6.  Too numerous to list.
+- Lots of changes, additions, improvements to Chapters 6 and 7.  Too numerous to list.
 - Changed notation for set of relatives from [a] to rel(a) as [a] was somewhat non-standard in situations when relation is not an equivalence relation.
 - Added some discussion of well-defined functions to the end of Section 7.1.
 - Replaced most occurrences of one-to-one and onto with injective and surjective.
 - Moved the content on injective and surjective to its own section.
+- Added several new figures to the chapters on relations and functions.
 
 ## Reviewer 1
 

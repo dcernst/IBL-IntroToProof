@@ -1,8 +1,6 @@
-\begin{section}{Images and Inverse Images of Functions}\label{sec:Images and Inverse Images}
+\begin{section}{Images and Preimages of Functions}\label{sec:Images and Inverse Images}
 
-CONNECT DEFINITION TO THEOREM AT END OF PREVIOUS SECTION...
-
-There are two important sets related to functions.
+There are two important types of sets related to functions.
 
 \begin{definition}
 Let $f:X\to Y$ be a function.  \begin{enumerate}[label=\textrm{(\alph*)}]
@@ -10,35 +8,45 @@ Let $f:X\to Y$ be a function.  \begin{enumerate}[label=\textrm{(\alph*)}]
 \[
 f(S):=\{f(x) \mid  x\in S\}.
 \]
-\item  If $T\subseteq Y$, the \textbf{inverse image} (or \textbf{preimage}) of $T$ under $f$ is defined via
+\item  If $T\subseteq Y$, the \textbf{preimage} (or \textbf{inverse image}) of $T$ under $f$ is defined via
 \[
 f^{-1}(T):=\{x\in X \mid  f(x)\in T\}.
 \]
 \end{enumerate}
 \end{definition}
 
-You've likely encountered inverse \emph{functions} before. But in this context, we are discussing inverse \emph{images}. It's important to point out that the use of the notation $f^{-1}$ does not make any assumptions about whether the inverse function exists. We will tackle inversion functions in the next section.
+The image of a subset $S$ of the domain is simply the subset of the codomain we obtain by mapping the elements of $S$. It is important to emphasize that the function $f$ maps \emph{elements} of $X$ to \emph{elements} of $Y$, but we can apply $f$ to a \emph{subset} of $X$ to yield a \emph{subset} of $Y$.  That is, if $S\subseteq X$, then $f(S)\subseteq Y$. Note that the image of the domain is the same as the range of the function.  That is, $f(X)=\range(f)$. 
 
-Note that the image of the domain is the same as the range of the function.  That is, $f(X)=\range(f)$. Similarly, the inverse image of the codomain is the domain.  That is, $f^{-1}(Y)=X$.
-
-REWORD THIS AND PUT IN APPROPRIATE PLACE: There is real opportunity for confusion here: the letter f is being used in two different, though related, ways. We can apply f to elements of A to get elements of B, or we can apply it to subsets of A to get subsets of B. Similarly, we can talk about the images or preimages of either elements or subsets. Context should always make it clear what is meant, but you should be aware of the problem.
+When it comes to preimages, there is a real opportunity for confusion.  In Section~\ref{sec:Compositions and Inverse Functions}, we introduced the inverse relation $f^{-1}$ of a function $f$ (see Defintion~\ref{def:inverse of a function}) and proved that this relation is a function exactly when $f$ is a bijection (see Theorem~\ref{thm:inverse function iff bijection}). If $f^{-1}:Y\to X$ is a function, then it is sensible to write $f^{-1}(y)$ for $y\in Y$.  Notice that we defined the preimage of a subset of the codomain regardless of whether $f^{-1}$ is a function or not. In particular, for $T\subseteq Y$, $f^{-1}(T)$ is the set of elements in the domain that map to elements in $T$. As a special case, $f^{-1}(\{y\})$ is the set of elements in the domain that map to $y\in Y$.  If $y\notin \range(f)$, then $f^{-1}(\{y\})=\emptyset$. Notice that if $y\in Y$, $f^{-1}(\{y\})$ is always a sensible thing to write while $f^{-1}(y)$ only makes sense if $f^{-1}$ is a function. Also, note that the preimage of the codomain is the domain.  That is, $f^{-1}(Y)=X$.
 
 \begin{problem}
-Define $f:\mathbb{Z}\to\mathbb{Z}$ via $f(x)=x^2$. Find $f(\{0,1,2\})$ and $f^{-1}(\{0,1,4\})$.
+Define $f:\mathbb{Z}\to\mathbb{Z}$ via $f(x)=x^2$. List elements in each of the following sets.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $f(\{0,1,2\})$
+\item $f^{-1}(\{0,1,4\})$
+\end{enumerate}
 \end{problem}
 
 \begin{problem}
 Define $f:\mathbb{R}\to\mathbb{R}$ via $f(x)=3x^2-4$.
-Find each of the following.
+Find each of the following sets.
 \begin{enumerate}[label=\textrm{(\alph*)}]
+\item $f(\{-1,1\})$
 \item $f([-2,4])$
 \item $f((-2,4))$
 \item $f^{-1}([-10,1])$
 \item $f^{-1}((-3,3))$
 \item $f(\emptyset)$
 \item $f(\mathbb{R})$
+\item $f^{-1}(\{-1\})$
 \item $f^{-1}(\emptyset)$
 \item $f^{-1}(\mathbb{R})$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Define $f:\mathbb{R}\to\mathbb{R}$ via $f(x)=x^2$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
 \item Find two nonempty subsets $A$ and $B$ of $\mathbb{R}$ such that $A\cap B=\emptyset$ but $f^{-1}(A)=f^{-1}(B)$.
 \item Find two nonempty subsets $A$ and $B$ of $\mathbb{R}$ such that $A\cap B=\emptyset$ but $f(A)=f(B)$.
 \end{enumerate}
