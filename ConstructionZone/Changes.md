@@ -10,6 +10,7 @@
 - Moved the definition of set of relatives up a section.
 - Moved discussion of Cartesian products of sets to its own section.
 - Lots of changes, additions, improvements to Chapters 6 and 7.  Too numerous to list.
+- Replaced most occurrences of $\sim$ that were used to represent an arbitrary relation with $R$.  The symbol $\sim$ occurs only when have an equivalence relation.
 - Changed notation for set of relatives from [a] to rel(a) as [a] was somewhat non-standard in situations when relation is not an equivalence relation.
 - Added some discussion of well-defined functions to the end of Section 7.1.
 - Replaced most occurrences of one-to-one and onto with injective and surjective.
@@ -33,7 +34,7 @@
 - Definition 3.33. Something more is needed. Maybe insert “We read this as...” before the boxed formulas? Also, in the bullets preceding the definition, revise to ...“the set of S-sub-alpha, taken over alpha in Delta.”
     * Todo.
 - Section 8.1: This is a spot where lots and lots and lots of examples would help. Expand the ideas to sets of non-numeric structures. Non-real sets. Such as the set of stars or the set of dog types recognized by AKC or the set of subsets of {Mom, Dad, Tracy}.
-    * Todo.
+    * Done.
 
 ## Reviewer 3
 
@@ -122,7 +123,9 @@ be helpful.
 - I think the text would benefit from a conclusion. What is the final message that the author wants to send students away from, at the end of this arduous journey? What have students achieved over the course of working through this text? The introduction is so well done, I’m confident the author can produce a well done conclusion to match.
    * Todo.
 - I appreciated the diagrams, and I would like to see more. This is always tricky in a textbook. The quotes in the introductory chapter worked well to break up the blocks of text. Here are some ideas for insertions to continue that trend through the later chapters.
+      * I added several new figures.
     - Include more quotes!
+      * Todo
     - Include proofs by picture, as food for thought. Clearly state that these are not proofs, but might be good ideas to work off. For instance, I know there’s a proof by picture showing the development of the formula of the sum of the triangular numbers. That would be good in the induction section.
     - Play off the colloquial nature of some of the exercises and examples.
        * Todo.

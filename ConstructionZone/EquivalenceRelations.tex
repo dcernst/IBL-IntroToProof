@@ -6,16 +6,18 @@ As we have seen in the previous section, the notions of reflexive, symmetric, an
 Let $\sim$ be a relation on a set $A$.  Then $\sim$ is called an \textbf{equivalence relation} on $A$ if and only if $\sim$ is reflexive, symmetric, and transitive.
 \end{definition}
 
+The symbol ``$\sim$" is usually pronounced as ``twiddle" or ``tilde" and the phrase ``$a\sim b$" could be read as ``$a$ is related to $b$" or ``$a$ twiddles $b$".
+
 \begin{problem}\label{prob:digraph}
 Let $A=\{1,2,3,4,5,6\}$ and define
 \[
-{\sim}=\{(1,1),(1,6),(2,2),(2,3),(2,4),(3,3),(3,2),(3,4),(4,4),(4,2),(4,3),(5,5),(6,6),(6,1)\}.
+R=\{(1,1),(1,6),(2,2),(2,3),(2,4),(3,3),(3,2),(3,4),(4,4),(4,2),(4,3),(5,5),(6,6),(6,1)\}.
 \]
-Using $\sim$, complete each of the following.
+Using $R$, complete each of the following.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item Draw the digraph for $\sim$.
-\item Determine whether $\sim$ is an equivalence relation on $A$.
-\item Find $\Rel(\sim)$ by determining $\rel(x)$ for each $x\in A$.
+\item Draw the digraph for $R$.
+\item Determine whether $R$ is an equivalence relation on $A$.
+\item Find $\Rel(R)$ by determining $\rel(x)$ for each $x\in A$.
 \end{enumerate}
 \end{problem}
 
@@ -28,7 +30,7 @@ Let $A=\{a,b,c,d,e\}$.
 \end{problem}
 
 \begin{problem}
-Given a finite set $A$ and a relation $\sim$ on $A$, describe what the corresponding digraph would have to look like in order for $\sim$ to be an equivalence relation.
+Given a finite set $A$ and an equivalence relation $\sim$ on $A$, describe what the corresponding digraph would have to look like.
 \end{problem}
 
 \begin{problem}\label{prob:equiv from lots of relations}
@@ -61,13 +63,17 @@ In light of Theorem~\ref{thm:equiv yields partition}, we have the following defi
 If $\sim$ is an equivalence relation on a set $A$, then for each $a\in A$, we refer to $\rel(a)$ as the \textbf{equivalence class} of $a$.
 \end{definition}
 
-When $\sim$ is an equivalence relation on a set $A$, it is common to write each equivalence class $\rel(a)$ as $[a]$ (or $\overline{a}$). In addition, the collection of equivalence classes $\Rel(\sim)$ is often denoted by $A/\mathord\sim$, which is read as ``$A$ modulo $\sim$" or ``$A$ mod $\sim$".  The collection $A/\mathord\sim$ is sometimes referred to as the \textbf{quotient of $A$ by $\sim$}.
+When $\sim$ is an equivalence relation on a set $A$, it is common to write each equivalence class $\rel(a)$ as $\boxed{[a]}$ (or sometimes $\overline{a}$). The element $a$ inside the square brackets is called the \textbf{representative of the equivalence class} $[a]$.  Theorem~\ref{thm:related if and only if same class} implies that an equivalence class can be represented by any element of the equivalence class.  For example, in Problem~\ref{prob:digraph}, we have $[1]=[6]$ since 1 and 6 are in the same equivalence class. The collection of equivalence classes $\Rel(\sim)$ is often denoted by $\boxed{A/\mathord\sim}$, which is read as ``$A$ modulo $\sim$" or ``$A$ mod $\sim$".  The collection $A/\mathord\sim$ is sometimes referred to as the \textbf{quotient of $A$ by $\sim$}.
 
-The upshot of Theorem~\ref{thm:equiv yields partition} is that given an equivalence relation, every element lives in exactly one equivalence class.  In the next section, we will see that we can run this in reverse.  That is, if we separate out the elements of a set so that every element is an element of exactly one subset, then this determines an equivalence relation.
+\begin{example}\label{ex:last name}
+Let $P$ denote the residents of a particular town and define $\sim$ on $P$ via $a\sim b$ if and only if $a$ and $b$ have the same last name. It is easily seen that this relation is reflexive, symmetric, and transitive, and hence $\sim$ is an equivalence relation on $P$.  The equivalence classes correspond to collections of individuals with the same last name.  For example, Maria Garcia, Anthony Garcia, and Ariana Garcia all belong to the same equivalence class.  Any Garcia can be used as a representative for the corresponding equivalence class, so we can denote it as $[\text{Maria Garcia}]$, for example. The collection $P/\mathord\sim$ consists of the various sets of people with the same last name.  In particular, $[\text{Maria Garcia}]\in P/\mathord\sim$.
+\end{example}
 
 \begin{example}
 The five distinct sets of relatives that you identified in Problem~\ref{prob:mod 5} are the equivalence classes for $\equiv_5$ on $\mathbb{Z}$. These equivalence classes are often called the \textbf{congruence classes modulo 5}.
 \end{example}
+
+The upshot of Theorem~\ref{thm:equiv yields partition} is that given an equivalence relation, every element lives in exactly one equivalence class.  In the next section, we will see that we can run this in reverse.  That is, if we separate out the elements of a set so that every element is an element of exactly one subset, then this determines an equivalence relation.
 
 \begin{problem}
 If $\sim$ is an equivalence relation on a finite set $A$, describe $A/\mathord\sim$ in terms of the digraph corresponding to $\sim$.

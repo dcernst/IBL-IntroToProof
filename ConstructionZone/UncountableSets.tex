@@ -2,12 +2,12 @@
 
 Recall from Definition~\ref{def:countable} that a set $A$ is \textbf{uncountable} if and only if $A$ is not countable.  Since all finite sets are countable, the only way a set could be uncountable is if it is infinite.  It follows that a set $A$ is uncountable if and only if there is never a bijection between $\mathbb{N}$ and $A$.  It's not clear that uncountable sets even exist!  It turns out that uncountable sets do exist and in this section, we will discover a few of them.
 
-Our first task is to prove that the open interval $(0,1)$ is uncountable.  By Problem~\ref{prob:moreInfiniteSets}(h), we know that $(0,1)$ is an infinite set, so it is at least plausible that $(0,1)$ is uncountable.  The following problem outlines the proof of Theorem~\ref{thm:(0,1)uncountable}.  Our approach is often referred to as \textbf{Cantor's Diagonalization Argument}.
+Our first task is to prove that the interval $(0,1)$ is uncountable.  By Problem~\ref{prob:moreInfiniteSets}(h), we know that $(0,1)$ is an infinite set, so it is at least plausible that $(0,1)$ is uncountable.  The following problem outlines the proof of Theorem~\ref{thm:(0,1)uncountable}.  Our approach is often referred to as \textbf{Cantor's Diagonalization Argument}.
 
-Before we get started, recall that every number in $(0,1)$ can be written in decimal form. However, there may be more than one way to write a given number in decimal form.  For example, $0.2$ equals $0.1\overline{99}$.  A number $x=0.a_1a_2a_3\ldots$ is said to be in \textbf{standard form} if and only if there is no $k$ such that for all $i>k$, $a_i=9$. That is, a decimal expansion is in standard form if and only if the expansion doesn't end with a repeating sequence of 9's. For example, $0.2$ is in standard form while $0.1\overline{99}$ is not, even though both represent the same number. It turns out that every real number can be expressed uniquely in standard form.
+Before we get started, recall that every number in $(0,1)$ can be written in decimal form. However, there may be more than one way to write a given number in decimal form.  For example, $0.2$ equals $0.1\overline{99}$.  A number $0.a_1a_2a_3\ldots$ in $(0,1)$ is said to be in \textbf{standard decimal form} if and only if there is no $k$ such that for all $i>k$, $a_i=9$. That is, a number is in standard decimal form if and only if its decimal expansion does not end with a repeating sequence of 9's. For example, $0.2$ is in standard decimal form while $0.1\overline{99}$ is not, even though both represent the same number. It turns out that every real number can be expressed uniquely in standard decimal form. We will take this fact for granted.
 
 \begin{problem}
-For sake of a contradiction, assume the interval $(0,1)$ is countable.  Then there exists a bijection $f:\mathbb{N}\to (0,1)$. For each $n\in\mathbb{N}$, its image under $f$ is some number in $(0,1)$.  Let $f(n):=0.a_{1n}a_{2n}a_{3n}\ldots$, where $a_{1n}$ is the first digit in the decimal form for the image of $n$, $a_{2n}$ is the second digit, and so on. If $f(n)$ terminates after $k$ digits, then our convention will be to continue the decimal form with 0's. Now, define $b=0.b_1b_2b_3\ldots$, where
+For sake of a contradiction, assume the interval $(0,1)$ is countable.  Then there exists a bijection $f:\mathbb{N}\to (0,1)$. For each $n\in\mathbb{N}$, its image under $f$ is some number in $(0,1)$.  Write $f(n)=0.a_{1n}a_{2n}a_{3n}\ldots$, where $a_{1n}$ is the first digit in the standard decimal form for the image of $n$, $a_{2n}$ is the second digit, and so on. If $f(n)$ terminates after $k$ digits, then our convention will be to continue the decimal expansion with 0's. Now, define $b=0.b_1b_2b_3\ldots$, where
 \[
 b_i=\begin{cases}
 2, & \text{if }a_{ii}\neq 2\\
@@ -15,23 +15,20 @@ b_i=\begin{cases}
 \end{cases}
 \]
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item Prove that the decimal expansion that defines $b$ above is in standard form.
+\item Prove that the decimal expansion that defines $b$ above is in standard decimal form.
 \item Prove that for all $n\in\mathbb{N}$, $f(n)\neq b$.
-\item Prove that $f$ is not onto.
-\item Explain why we have a contradiction.
-\item Explain why it follows that the open interval $(0,1)$ cannot be countable.
+\item Explain why $f$ is cannot be surjective and why this is a contradiction.
 \end{enumerate}
+You just proved that the interval $(0,1)$ cannot be countable!
 \end{problem}
 
-The steps above prove the following theorem.
+The previous problem proves following theorem.
 
 \begin{theorem}\label{thm:(0,1)uncountable}
 The open interval $(0,1)$ is uncountable.
 \end{theorem}
 
-Loosely speaking, what Theorem~\ref{thm:(0,1)uncountable} says is that the open interval $(0,1)$ is ``bigger" in terms of the number of elements it contains than the natural numbers and even the rational numbers.  This shows that there are infinite sets of different sizes!
-
-One consequence of Theorem~\ref{thm:(0,1)uncountable} is that we know there is at least one uncountable set.  The next three results are useful for finding other uncountable sets.
+Loosely speaking, what Theorem~\ref{thm:(0,1)uncountable} says is that the open interval $(0,1)$ is ``bigger" in terms of the number of elements it contains than the natural numbers and even the rational numbers.  This shows that there are infinite sets of different sizes! We now know there is at least one uncountable set.  The next three results are useful for finding other uncountable sets.
 
 \begin{theorem}\label{thm:containsUncountableSubset}
 If $A$ and $B$ are sets such that $A\subseteq B$ and $A$ is uncountable, then $B$ is uncountable.\footnote{\emph{Hint:} Try a proof by contradiction. Take a look at Theorem~\ref{thm:subsetsCountableSets}.}
@@ -42,11 +39,11 @@ If $A$ and $B$ are sets such that $A$ is uncountable and $B$ is countable, then 
 \end{corollary}
 
 \begin{theorem}
-If $f:A\to B$ is a one-to-one function and $A$ is uncountable, then $B$ is uncountable.
+If $f:A\to B$ is an injective function and $A$ is uncountable, then $B$ is uncountable.
 \end{theorem}
 
 \begin{theorem}
-The set $\mathbb{R}$ of real numbers is uncountable.  Moreover, $\card((0,1))=\card(\mathbb{R})$.\footnote{\emph{Hint:} To show that $\mathbb{R}$ is uncountable, appeal to Theorem~\ref{thm:containsUncountableSubset}. To show that $\card((0,1))=\card(\mathbb{R})$, consider the function $f:(0,1)\to \mathbb{R}$ defined via $f(x)=\tan(\pi x-\frac{\pi}{2})$. It is worth pointing out that proving $\card((0,1))=\card(\mathbb{R})$ automatically proves that $\mathbb{R}$ is uncountable.}
+The set of real numbers is uncountable.  Moreover, $\card((0,1))=\card(\mathbb{R})$.\footnote{\emph{Hint:} To show that $\mathbb{R}$ is uncountable, appeal to Theorem~\ref{thm:containsUncountableSubset}. To show that $\card((0,1))=\card(\mathbb{R})$, consider the function $f:(0,1)\to \mathbb{R}$ defined via $f(x)=\tan(\pi x-\frac{\pi}{2})$. It is worth pointing out that proving $\card((0,1))=\card(\mathbb{R})$ automatically proves that $\mathbb{R}$ is uncountable.}
 \end{theorem}
 
 \begin{theorem}
@@ -84,7 +81,7 @@ If $A$ is a set, then $\card(A)<\card(\mathcal{P}(A))$.\footnote{\emph{Hint:} Mi
 Recall that cardinality provides a way for talking about ``how big" a set is. The fact that the natural numbers and the real numbers have different cardinality (one countable, the other uncountable), tells us that there are at least two different ``sizes of infinity".  Theorem~\ref{thm:cardPowerSet} tells us that there are infinitely many ``sizes of infinity."
 
 \begin{theorem}
-Consider the set $S$ from Problem~\ref{prob:sequence01}. Then $\card(\mathcal{P}(\mathbb{N}))=\card(S)$.
+If $S$ is the set from Problem~\ref{prob:sequence01}, then $\card(\mathcal{P}(\mathbb{N}))=\card(S)$.
 \end{theorem}
 
 \end{section}

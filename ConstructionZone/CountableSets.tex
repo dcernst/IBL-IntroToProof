@@ -6,7 +6,7 @@ Recall that if $A=\emptyset$, then we say that $A$ has cardinality 0.  Also, if 
 If $A$ is a set such that $\card(A)=\card(\mathbb{N})$, then we say that $A$ is \textbf{denumerable} and has \textbf{cardinality} $\mathbf{\aleph_0}$ (read ``aleph naught").
 \end{definition}
 
-Notice if a set $A$ has cardinality $1,2,\ldots$, or $\aleph_0$, we can label the elements in $A$ as ``first", ``second", and so on.  That is, we can ``count" the elements in these situations. Certainly, if a set has cardinality 0, counting isn't an issue.  This idea leads to the following definition.
+Notice if a set $A$ has cardinality $1,2,\ldots$, or $\aleph_0$, we can label the elements in $A$ as ``first", ``second", and so on.  That is, we can ``count" the elements in these situations. Certainly, if a set has cardinality 0, counting is not an issue.  This idea leads to the following definition.
 
 \begin{definition}\label{def:countable}
 A set $A$ is called \textbf{countable} if and only if $A$ is finite or denumerable. A set is called \textbf{uncountable} if and only if it is not countable.
@@ -15,13 +15,13 @@ A set $A$ is called \textbf{countable} if and only if $A$ is finite or denumerab
 \begin{problem}
 Quickly justify that each of the following sets is countable. Feel free to appeal to previous problems.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item The set $A:=\{a,b,c\}$
-\item The set of odd natural numbers.
-\item The set of even natural numbers.
-\item The set $R:=\{\frac{1}{2^n}\mid n\in \mathbb{N}\}$.
-\item The set of perfect squares.
-\item The integers.
-\item The set $\mathbb{N}\times \{x\}$, where $x\notin \mathbb{N}$.
+\item $A:=\{a,b,c\}$
+\item Set of odd natural numbers
+\item Set of even natural numbers
+\item $R:=\{\frac{1}{2^n}\mid n\in \mathbb{N}\}$
+\item Set of perfect squares in $\mathbb{N}$
+\item $\mathbb{Z}$
+\item $\mathbb{N}\times \{a\}$
 %\item The set $\mathbb{N}\times \mathbb{N}$.
 \end{enumerate}
 \end{problem}
@@ -39,7 +39,7 @@ A set is countable if and only if it has the same cardinality of some subset of 
 \end{theorem}
 
 \begin{theorem}
-If $f:\mathbb{N}\to A$ is an onto function, then $A$ is countable.
+If $f:\mathbb{N}\to A$ is a surjective function, then $A$ is countable.
 \end{theorem}
 
 Loosely speaking, the next theorem tells us that we can arrange all of the rational numbers then count them ``first", ``second", ``third", etc. Given the fact that between any two distinct rational numbers on the number line, there are an infinite number of other rational numbers (justified by taking repeated midpoints), this may seem counterintuitive.  
@@ -48,14 +48,14 @@ Loosely speaking, the next theorem tells us that we can arrange all of the ratio
 The set of rational numbers $\mathbb{Q}$ is countable.\footnote{\emph{Hint:} Make a table with column headings $0, 1, -1, 2,-2,\ldots$ and row headings $1,2,3,4,5,\ldots$.  If a column has heading $m$ and a row has heading $n$, then the corresponding entry in the table is given by the fraction $m/n$.  Find a way to zig-zag through the table making sure to hit every entry in the table (not including column and row headings) exactly once.  This justifies that there is a bijection between $\mathbb{N}$ and the entries in the table.  Do you see why?  Now, we aren't done yet because every rational number appears an infinite number of times in the table. Appeal to Theorem~\ref{thm:subsetsCountableSets}.}
 \end{theorem}
 
-\begin{theorem}
+\begin{theorem}\label{thm:union of countable sets}
 If $A$ and $B$ are countable sets, then $A\cup B$ is countable.
 \end{theorem}
 
-We would like to prove a stronger result than the previous theorem. To do so, we need a lemma.
+We would like to prove a stronger result than the previous theorem. To do so, we need a lemma. 
 
-\begin{lemma}
-Let $\{A_n\}_{n=1}^{\infty}$ be a (countable) collection of sets. Define $B_1:=A_1$ and for each natural number $n>1$, define
+\begin{lemma}\label{lem:retool infinite collection}
+Let $\{A_n\}_{n=1}^{\infty}$ be a collection of sets. Define $B_1:=A_1$ and for each natural number $n>1$, define
 \[
 B_n:=A_n\setminus \bigcup_{i=1}^{n-1}A_i.
 \]
@@ -66,8 +66,68 @@ Then we we have the following:
 \end{enumerate}
 \end{lemma}
 
-\begin{theorem}
-Every countable union of countable sets is countable.\footnote{\emph{Hint:} A countable union is a union of countably many sets.  Recall that a countable set may be finite or infinite.  Consider three cases: (1) finite union of countable sets (use induction with base case $n=2$), (2) countably infinite union of finite sets, (3) countably infinite union of countably infinite sets.}
+%Notice that the collection $\{A_n\}_{n=1}^{\infty}$ in the hypothesis of the lemma above is a countable collection of sets.
+The next theorem states that the union of a countable collection of countable sets is countable. To prove this, consider two cases:
+To prove the next theorem, consider two cases:
+\begin{enumerate}
+\item The collection of sets is finite.  
+\item The collection of sets is infinite.
+\end{enumerate}
+To handle the first case, use induction together with Theorem~\ref{thm:union of countable sets}. The second case is substantially more challenging.  First, use Lemma~\ref{lem:retool infinite collection} to construct a collection $\{B_n\}$ of pairwise disjoint sets whose union is equal to the union of the original collection. Since each $B_n$ is a subset of one of the sets in the original collection and each of these sets is countable, each $B_n$ is also countable by Theorem~\ref{thm:subsetsCountableSets}. This implies that for each $n$, we can write $B_n=\{b_{n,1}, b_{n,2},b_{n,3},\ldots\}$, where the set may be finite or infinite. From here, we outline two different approaches for continuing.  One approach is to construct a bijection from $\mathbb{N}$ to $\bigcup_{n=1}^{\infty}B_n$ using Figure~\ref{fig:zig zag} as inspiration.  One thing you will need to address is what to do when a set in the collection $\{B_n\}$ is finite. For the second approach, define $f:\bigcup_{n=1}^{\infty}B_n\to \mathbb{N}$ via $f(b_{n,m})=2^n3^m$, verify that this function is injective, and then appeal to Theorem~\ref{thm:subsetsCountableSets}.  Try using both of these approaches when tackling the proof of the following theorem.
+
+\tikzstyle{vert} = [circle, draw, fill=black,inner sep=0pt, minimum size=.7mm]
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[xscale=2.1,->,>=stealth,shorten >=.5pt,label distance=-.9mm,semithick]
+
+\node[vert,label=below:{\scriptsize $b_{1,1}$}] at (1,1) (b11) {};
+\node[vert,label=below:{\scriptsize $b_{1,2}$}] at (2,1) (b12) {};
+\node[vert,label=below:{\scriptsize $b_{1,3}$}] at (3,1) (b13) {};
+\node[vert,label=below:{\scriptsize $b_{1,4}$}] at (4,1) (b14) {};
+\node[vert,label=below:{\scriptsize $b_{1,5}$}] at (5,1) (b15) {};
+
+\node[vert,label=left:{\scriptsize $b_{2,1}$}] at (2,2) (b21) {};
+\node[vert,label=left:{\scriptsize $b_{2,2}$}] at (3,2) (b22) {};
+\node[vert,label=left:{\scriptsize $b_{2,3}$}] at (4,2) (b23) {};
+\node[vert,label=left:{\scriptsize $b_{2,4}$}] at (5,2) (b24) {};
+
+\node[vert,label=left:{\scriptsize $b_{3,1}$}] at (3,3) (b31) {};
+\node[vert,label=left:{\scriptsize $b_{3,2}$}] at (4,3) (b32) {};
+\node[vert,label=left:{\scriptsize $b_{3,3}$}] at (5,3) (b33) {};
+
+\node[vert,label=left:{\scriptsize $b_{4,1}$}] at (4,4) (b41) {};
+\node[vert,label=left:{\scriptsize $b_{4,2}$}] at (5,4) (b42) {};
+
+\node[vert,label=left:{\scriptsize $b_{5,1}$}] at (5,5) (b51) {};
+
+\node at (5.25,1) {\scriptsize $\cdots$};
+\node at (5.25,2) {\scriptsize $\cdots$};
+\node at (5.25,3) {\scriptsize $\cdots$};
+\node at (5.25,4) {\scriptsize $\cdots$};
+\node at (5.25,5) {\scriptsize $\cdots$};
+
+\path (b11) edge (b12);
+\path (b12) edge (b21);
+\path (b21) edge (b13);
+\path (b13) edge (b22);
+\path (b22) edge (b31);
+\path (b31) edge (b14);
+\path (b14) edge (b23);
+\path (b23) edge (b32);
+\path (b32) edge (b41);
+\path (b41) edge (b15);
+\path (b15) edge (b24);
+\path (b24) edge (b33);
+\path (b33) edge (b42);
+\path (b42) edge (b51);
+
+\end{tikzpicture}
+\caption{Inspiration for one possible approach to proving Theorem~\ref{thm:countable union of countable sets}.}\label{fig:zig zag}
+\end{figure}
+
+\begin{theorem}\label{thm:countable union of countable sets}
+Let $\Delta$ be equal to either $\mathbb{N}$ or $[k]$ for some $k\in\mathbb{N}$. If $\{A_n\}_{n\in\Delta}$ is a countable collection of sets such that each $A_n$ is countable, then $\bigcup_{n\in \Delta}A_n$ is countable.
 \end{theorem}
 
 \begin{theorem}
@@ -76,6 +136,10 @@ If $A$ and $B$ are countable sets, then $A\times B$ is countable.
 
 \begin{theorem}
 The set of all finite sequences of 0's and 1's (e.g., $0110010$) is countable. 
+\end{theorem}
+
+\begin{theorem}
+The collection of all finite subsets of a countable set is countable.
 \end{theorem}
 
 \end{section}

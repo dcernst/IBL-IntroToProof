@@ -5,29 +5,27 @@ While there is no agreed upon universal definition of mathematics, one could arg
 Recall from Section~\ref{sec:Cartesian Products} that the Cartesian product of two sets $A$ and $B$, written $A\times B$, is the set of all ordered pairs $(a,b)$, where $a\in A$ and $b\in B$. That is, $A\times B=\{(a,b)\mid a\in A, b\in B\}$.
 
 \begin{definition}
-Let $A$ and $B$ be sets. A \textbf{relation $\sim$ from $A$ to $B$} is a subset of $A \times B$. If $\sim$ is a relation from $A$ to $B$ and $(a,b)\in {\sim}$, then we say that \textbf{$a$ is related to $b$}.  In this case, we may write $a\sim b$ in place of $(a,b)\in{\sim}$. If $\sim$ is a relation from $A$ to the same set $A$, then we say that $\sim$ is a \textbf{relation on $A$}.
+Let $A$ and $B$ be sets. A \textbf{relation $R$ from $A$ to $B$} is a subset of $A \times B$. If $R$ is a relation from $A$ to $B$ and $(a,b)\in {R}$, then we say that \textbf{$a$ is related to $b$} and we may write $aR b$ in place of $(a,b)\in{R}$. If $R$ is a relation from $A$ to the same set $A$, then we say that $R$ is a \textbf{relation on $A$}.
 \end{definition}
-
-The symbol ``$\sim$" is usually pronounced as ``twiddle" or ``tilde" and the phrase ``$a\sim b$" could be read as ``$a$ is related to $b$" or ``$a$ twiddles $b$".
 
 \begin{example}
 The set $\mathbb{N}\times \mathbb{R}$ from Problem~\ref{prob:some lines} is an example of a relation on $\mathbb{R}$ since $\mathbb{N}\times \mathbb{R}$ is a subset of $\mathbb{R}\times \mathbb{R}$.
 \end{example}
 
-It is important to notice that the order in which we write things for relations matters.  In particular, if $\sim$ is a relation from $A$ to $B$ and $a \sim b$, then it may or may not be the case that $b\sim a$.
+It is important to notice that the order in which we write things for relations matters.  In particular, if $R$ is a relation from $A$ to $B$ and $a R b$, then it may or may not be the case that $bR a$.
 
 \begin{example}\label{ex:relation finite to finite}
 If $A=\{a,b,c,d,e\}$ and $B=\{1,2,3,4\}$, then the set of ordered pairs
 \[
-{\sim}=\{(a,1),(a,2),(a,4),(c,2),(d,2),(e,2),(e,4)\}
+R=\{(a,1),(a,2),(a,4),(c,2),(d,2),(e,2),(e,4)\}
 \]
-is an example of a relation from $A$ to $B$. In this case, we could write $(c,2)\in{\sim}$ or $c\sim 2$. We could also say that $a$ is related to 1, 2, and 4. 
+is an example of a relation from $A$ to $B$. In this case, we could write $(c,2)\in{R}$ or $cR 2$. We could also say that $a$ is related to 1, 2, and 4. 
 \end{example}
 
 \begin{example}\label{ex:relation on finite}
 As in the previous example, let $A=\{a,b,c,d,e\}$. One possible relation on $A$ is given by
 \[
-{\sim}=\{(a,a),(a,b),(a,c),(b,b),(b,a),(b,c),(c,d),(c,e),(d,d),(d,a),(d,c),(e,a)\}.
+R=\{(a,a),(a,b),(a,c),(b,b),(b,a),(b,c),(c,d),(c,e),(d,d),(d,a),(d,c),(e,a)\}.
 \]
 \end{example}
 
@@ -54,7 +52,7 @@ Define the relation $S$ from $\{-1,1\}$ to $\mathbb{Z}$ via $1Sx$ if and only if
 Let $A$ be any set.  Since $\emptyset \subseteq A\times A$, the empty set forms a relation on $A$. This relation is called the \textbf{empty relation} on $A$.
 \end{example}
 
-Relations can be represented using digraphs. A \textbf{digraph} (short for \emph{directed graph}) is a discrete graph that consists of a set of vertices connected by edges, where the edges have a direction associated with them. If $\sim$ is a relation from $A$ to $B$, then the elements of $A$ and $B$ are the vertices of the digraph and there is a directed edge from $a\in A$ to $b\in B$ if and only if $(a,b)$ is in the relation $\sim$ (i.e., $a\sim b$). We can visually represent digraphs by using dots to represent the vertices and arrows to represent directed edges. We will not make a distinction between a digraph and its visual representation. Utilizing a digraph to represent a relation may be impractical if there is a large number of vertices or directed edges. 
+Relations can be represented using digraphs. A \textbf{digraph} (short for \emph{directed graph}) is a discrete graph that consists of a set of vertices connected by edges, where the edges have a direction associated with them. If $R$ is a relation from $A$ to $B$, then the elements of $A$ and $B$ are the vertices of the digraph and there is a directed edge from $a\in A$ to $b\in B$ if and only if $(a,b)$ is in the relation $R$ (i.e., $aR b$). We can visually represent digraphs by using dots to represent the vertices and arrows to represent directed edges. We will not make a distinction between a digraph and its visual representation. Utilizing a digraph to represent a relation may be impractical if there is a large number of vertices or directed edges. 
 
 \begin{example}
 Consider the relation given in Example~\ref{ex:relation finite to finite}.  The corresponding digraph is depicted in Figure~\ref{fig:digraph finite to finite}. Notice that we have placed the vertices corresponding to elements of $A$ on the left and the elements of $B$ on the right.  This is standard practice, but what really matters is the edge connections not how the vertices are placed on the page.
@@ -100,7 +98,7 @@ Consider the relation given in Example~\ref{ex:relation finite to finite}.  The 
 Let $A=\{1,2,3,4,5,6\}$ and $B=\{1,2,3,4\}$ and define $D$ from $A$ to $B$ via $(a,b)\in D$ if and only if $a-b$ is divisible by 2.  List the ordered pairs in $D$ and draw the corresponding digraph.
 \end{problem}
 
-If $\sim$ is a relation on $A$ (i.e., a relation from $A$ to $A$), then we can simplify the structure of the digraph by only utilizing one copy of $A$ for the vertices. In this case, we may have directed edges that point from a vertex to itself.  When drawing digraphs for a relation on a set, we will default to this simplified digraph (like the one depicted in Figure~\ref{fig:digraph on finite}\subref{fig:digraphB}).
+If $R$ is a relation on $A$ (i.e., a relation from $A$ to $A$), then we can simplify the structure of the digraph by only utilizing one copy of $A$ for the vertices. In this case, we may have directed edges that point from a vertex to itself.  When drawing digraphs for a relation on a set, we will default to this simplified digraph (like the one depicted in Figure~\ref{fig:digraph on finite}\subref{fig:digraphB}).
 
 \begin{example}\label{ex:digraph}
 Figure~\ref{fig:digraph on finite}\subref{fig:digraphA} represents the relation of Example~\ref{ex:relation on finite} as a digraph from $A$ to $A$ while the digraph in Figure~\ref{fig:digraph on finite}\subref{fig:digraphB} provides a streamlined representation of the same relation that uses the elements in $A$ only once instead of twice.
@@ -174,19 +172,19 @@ Let $A=\{1,2,3,4,5,6\}$ and define $|$ on $A$ via $x|y$ if and only if $x$ divid
 \end{problem}
 
 \begin{problem}\label{prob:another relation on finite}
-Let $A=\{a,b,c,d\}$ and define $\sim$ on $A$ via
+Let $A=\{a,b,c,d\}$ and define $R$ on $A$ via
 \[
-{\sim}=\{(a,a),(a,b),(a,c),(b,b),(b,a),(b,c),(c,c),(c,a),(c,b),(d,d)\}.
+{R}=\{(a,a),(a,b),(a,c),(b,b),(b,a),(b,c),(c,c),(c,a),(c,b),(d,d)\}.
 \]  
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item Draw the digraph for $\sim$.
+\item Draw the digraph for $R$.
 \item Draw the digraph for the empty relation on $A$.
 \end{enumerate}
 \end{problem}
 
 %Often it is not feasible to draw the complete diagram for the digraph of a relation (e.g., when the sets involved are infinite).  However, sometimes we can still provide a visual representation of the relation by plotting points that are in the relation. 
 
-We can also visually represent a relation by plotting the points in the relation.  In particular, if $\sim$ is a relation from $A$ to $B$ and $a\sim b$, we can plot all points $(a,b)$ that satisfy $a\sim b$ in two dimensions, where we interpret the set $A$ to be the horizontal axis and $B$ to be the vertical axis. We will refer to this visual representation of a relation as the \textbf{graph} of the relation.%\footnote{Some mathematics texts do not make a distinction between a relation and the graph of a relation.}
+We can also visually represent a relation by plotting the points in the relation.  In particular, if $R$ is a relation from $A$ to $B$ and $aR b$, we can plot all points $(a,b)$ that satisfy $aR b$ in two dimensions, where we interpret the set $A$ to be the horizontal axis and $B$ to be the vertical axis. We will refer to this visual representation of a relation as the \textbf{graph} of the relation.%\footnote{Some mathematics texts do not make a distinction between a relation and the graph of a relation.}
 
 \begin{example}\label{ex:circle}
 When we write $x^2+y^2=1$, we are implicitly defining a relation.  In particular, the relation is the set of ordered pairs $(x,y)$ satisfying $x^2+y^2=1$, namely $\{(x,y)\in \mathbb{R}^2 \mid x^2+y^2=1\}$. The graph of this relation in $\mathbb{R}^2$ is the unit circle centered at the origin in the plane as shown in Figure~\ref{fig:unit circle}.
@@ -223,28 +221,28 @@ Draw a portion of the graph that represents the relation $\leq$ on $\mathbb{R}$.
 For a relation on a set, it is natural to consider the collection of elements that a given element is related to.  For example, a user's ``Following List" on Twitter is the set of accounts on Twitter that the user is following. %Be careful not to confuse ``Following List" with ``Followers List".  The latter is the set of accounts that follow a user.  
 
 \begin{definition}\label{def:relatives}
-Let $\sim$ be a relation on a set $A$. For each $a\in A$, we define the \textbf{set of relatives of $a$ with respect to $\sim$} via
+Let $R$ be a relation on a set $A$. For each $a\in A$, we define the \textbf{set of relatives of $a$ with respect to $R$} via
 \[
-\rel(a,\sim):=\{b\in A\mid a\sim b\}.
+\boxed{\rel(a,R):=\{b\in A\mid aR b\}}.
 \]
-We also define the \textbf{collection of the sets of relatives with respect to $\sim$} by
+We also define the \textbf{collection of the sets of relatives with respect to $R$} by
 \[
-\Rel(\sim):=\{\rel(a)\mid a\in A\}.
+\boxed{\Rel(R):=\{\rel(a)\mid a\in A\}}.
 \]
 \end{definition}
 
-If $\sim$ is clear from the context, we will usually write $\rel(a)$ in place of $\rel(a,\sim)$.  In terms of digraphs, $\rel(a)$ is the collection of vertices that have a directed edge pointing towards them from the vertex labeled by $a$. In graph theory, this collection of vertices is called the \textbf{out neighborhood} of $a$ and each such vertex is called an \textbf{out neighbor}. Notice that $\Rel(\sim)$ is a set of sets.  In particular, an element in $\Rel(\sim)$ is a subset of $A$---equivalently, an element of $\mathcal{P}(A)$.
+If $R$ is clear from the context, we will usually write $\boxed{\rel(a)}$ in place of $\rel(a,R)$.  In terms of digraphs, $\rel(a)$ is the collection of vertices that have a directed edge pointing towards them from the vertex labeled by $a$. In graph theory, this collection of vertices is called the \textbf{out neighborhood} of $a$ and each such vertex is called an \textbf{out neighbor}. Notice that $\Rel(R)$ is a set of sets.  In particular, an element in $\Rel(R)$ is a subset of $A$---equivalently, an element of $\mathcal{P}(A)$.
 
 \begin{example}
-Consider the relation given in Example~\ref{ex:relation on finite}.  By inspecting the ordered pairs in $\sim$ or by looking at the digraph in Figure~\ref{fig:digraph on finite}\subref{fig:digraphB}, we see that
+Consider the relation given in Example~\ref{ex:relation on finite}.  By inspecting the ordered pairs in $R$ or by looking at the digraph in Figure~\ref{fig:digraph on finite}\subref{fig:digraphB}, we see that
 \[
 \rel(a) = \{a,b,c\},\ \rel(b) = \{a,b,c\},\ \rel(c) = \{d,e\},\ \rel(d) = \{a,c,d\},\ \rel(e) = \{a\},
 \]
-so that $\Rel(\sim) = \{\{a,b,c\},\{d,e\},\{a,c,d\},\{a\}\}$.
+so that $\Rel(R) = \{\{a,b,c\},\{d,e\},\{a,c,d\},\{a\}\}$.
 \end{example}
 
 \begin{problem}
-Consider the relation given in Problem~\ref{prob:another relation on finite}(a).  Find $\Rel(\sim)$ by determining $\rel(x)$ for each $x\in A$.
+Consider the relation given in Problem~\ref{prob:another relation on finite}(a).  Find $\Rel(R)$ by determining $\rel(x)$ for each $x\in A$.
 \end{problem}
 
 \begin{problem}
@@ -264,17 +262,17 @@ Consider the relation $\leq$ on $\mathbb{R}$.  If $x\in \mathbb{R}$, what is $\r
 \end{problem}
 
 \begin{problem}\label{prob:find sim from Rel}
-Suppose $\sim$ is a relation on $A=\{1,2,3,4,5\}$ such that $\rel(1)=\{1,3,4\}$, $\rel(2)=\{4\}$, $\rel(3)=\{3,4,5\}$, $\rel(4)=\{1,2\}$, and $\rel(5)=\emptyset$. List the ordered pairs in $\sim$ and draw the corresponding digraph.
+Suppose $R$ is a relation on $A=\{1,2,3,4,5\}$ such that $\rel(1)=\{1,3,4\}$, $\rel(2)=\{4\}$, $\rel(3)=\{3,4,5\}$, $\rel(4)=\{1,2\}$, and $\rel(5)=\emptyset$. List the ordered pairs in $R$ and draw the corresponding digraph.
 \end{problem}
 
 We will now examine three important properties that a relation on a set may or may not possess.
 
 \begin{definition}
-Let $\sim$ be a relation on a set $A$.
+Let $R$ be a relation on a set $A$.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item The relation $\sim$ is \textbf{reflexive} if for all $a\in A$, $a\sim a$.
-\item The relation $\sim$ is \textbf{symmetric} if for all $a,b\in A$, if $a\sim b$, then $b\sim a$.
-\item The relation $\sim$ is \textbf{transitive} if for all $a,b,c\in A$, if $a\sim b$ and $b\sim c$, then $a\sim c$.
+\item The relation $R$ is \textbf{reflexive} if for all $a\in A$, $aR a$.
+\item The relation $R$ is \textbf{symmetric} if for all $a,b\in A$, if $aR b$, then $bR a$.
+\item The relation $R$ is \textbf{transitive} if for all $a,b,c\in A$, if $aR b$ and $bR c$, then $aR c$.
 \end{enumerate}
 \end{definition}
 
@@ -288,19 +286,19 @@ Here are a few examples that illustrate the concepts in the previous definition.
 \end{example}
 
 \begin{problem}
-Determine whether the relation given in Example~\ref{ex:relation on finite} is reflexive, symmetric, or transitive.
-\end{problem}
-
-\begin{problem}
-Determine whether the two relations given in Problem~\ref{prob:another relation on finite} are reflexive, symmetric, or transitive.
-\end{problem}
-
-\begin{problem}
-Suppose $\sim$ is a relation on a set $A$.
+Determine whether the relations given in each of the following is reflexive, symmetric, or transitive.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item Explain what it means for $\sim$ to \emph{not} be reflexive.
-\item Explain what it means for $\sim$ to \emph{not} be symmetric.
-\item Explain what it means for $\sim$ to \emph{not} be transitive.
+\item Example~\ref{ex:relation on finite}
+\item Problem~\ref{prob:another relation on finite}
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Suppose $R$ is a relation on a set $A$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Explain what it means for $R$ to \emph{not} be reflexive.
+\item Explain what it means for $R$ to \emph{not} be symmetric.
+\item Explain what it means for $R$ to \emph{not} be transitive.
 \end{enumerate}
 \end{problem}
 
@@ -322,7 +320,7 @@ Let $A=\{a,b,c,d,e\}$.
 %\end{problem}
 
 \begin{problem}
-Given a relation $\sim$ on a finite set $A$, describe what each of reflexive, symmetric, and transitive look like in terms of a digraph. That is, draw pictureS that represent each of reflexive, symmetric, and transitive. One thing to keep in mind is that the elements used in the definitions of symmetric and transitive do not have to be distinct.  So, you might need to consider multiple cases.
+Given a relation $R$ on a finite set $A$, describe what each of reflexive, symmetric, and transitive look like in terms of a digraph. That is, draw pictureS that represent each of reflexive, symmetric, and transitive. One thing to keep in mind is that the elements used in the definitions of symmetric and transitive do not have to be distinct.  So, you might need to consider multiple cases.
 \end{problem}
 
 %\begin{problem}
@@ -338,11 +336,11 @@ Here is the general structure for proving that a relation is reflexive.
 \begin{minipage}{6in}
 \vspace{.1in}
 \begin{proof}
-Assume $\sim$ is a relation on $A$ defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $\sim$]}.  Let $a\in A$.
+Assume $R$ is a relation on $A$ defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $R$]}.  Let $a\in A$.
 \begin{center}
-$\ldots$ \ \emph{[Use the definition (or property) of $\sim$ to verify that $a\sim a$]} \ $\ldots$
+$\ldots$ \ \emph{[Use the definition (or property) of $R$ to verify that $aR a$]} \ $\ldots$
 \end{center}
-\noindent Therefore, the relation $\sim$ is reflexive on $A$.
+\noindent Therefore, the relation $R$ is reflexive on $A$.
 \end{proof}
 \end{minipage}
 }
@@ -356,11 +354,11 @@ Here is the general structure for proving that a relation is symmetric.
 \begin{minipage}{6in}
 \vspace{.1in}
 \begin{proof}
-Assume $\sim$ is a relation on $A$ defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $\sim$]}.  Let $a, b\in A$ and suppose $a\sim b$.
+Assume $R$ is a relation on $A$ defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $R$]}.  Let $a, b\in A$ and suppose $aR b$.
 \begin{center}
-$\ldots$ \ \emph{[Use assumption that $a\sim b$ with definition (or property)\\ of $\sim$ to verify that $b\sim a$]} \ $\ldots$
+$\ldots$ \ \emph{[Use assumption that $aR b$ with definition (or property)\\ of $R$ to verify that $bR a$]} \ $\ldots$
 \end{center}
-\noindent Therefore, the relation $\sim$ is symmetric on $A$.
+\noindent Therefore, the relation $R$ is symmetric on $A$.
 \end{proof}
 \end{minipage}
 }
@@ -374,11 +372,11 @@ Here is the general structure for proving that a relation is transitiv.
 \begin{minipage}{6in}
 \vspace{.1in}
 \begin{proof}
-Assume $\sim$ is a relation on $A$ defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $\sim$]}.  Let $a, b, c\in A$ and suppose $a\sim b$ and $b\sim c$.
+Assume $R$ is a relation on $A$ defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $R$]}.  Let $a, b, c\in A$ and suppose $aR b$ and $bR c$.
 \begin{center}
-$\ldots$ \ \emph{[Use assumption that $a\sim b$ and $b\sim c$ with definition\\ (or property) of $\sim$ to verify that $a\sim c$]} \ $\ldots$
+$\ldots$ \ \emph{[Use assumption that $aR b$ and $bR c$ with definition\\ (or property) of $R$ to verify that $aR c$]} \ $\ldots$
 \end{center}
-\noindent Therefore, the relation $\sim$ is transitive on $A$.
+\noindent Therefore, the relation $R$ is transitive on $A$.
 \end{proof}
 \end{minipage}
 }
@@ -399,12 +397,12 @@ Determine whether each of the following relations is reflexive, symmetric, or tr
 \[
 \int_0^1|f(x)|\ dx=\int_0^1|g(x)|\ dx.
 \]
-\item Define $\sim$ on $\mathbb{N}$ via $n\sim m$ if and only if $n+m$ is even.
+\item Define $R$ on $\mathbb{N}$ via $nR m$ if and only if $n+m$ is even.
 \item Define $D$ on $\mathbb{R}$ via $(x,y)\in D$ if and only if $x=2y$.
 \item Define $F$ on $\mathbb{Z}\times \left(\mathbb{Z}\setminus \{0\}\right)$ via $(a,b)F(c,d)$ if and only $\frac{a}{b}=\frac{c}{d}$.
 \item Define $\sim$ on $\mathbb{R}^2$ via $(x_1,y_1)\sim (x_2,y_2)$ if and only if $x_1^2+y_1^2=x_2^2+y_2^2$.
-\item Define $\sim$ on $\mathbb{R}$ via $x\sim y$ if and only if $\lfloor x\rfloor =\lfloor y\rfloor$, where $\lfloor x\rfloor$ is the greatest integer less than or equal to $x$ (e.g., $\lfloor \pi\rfloor=3$, $\lfloor -1.5\rfloor=-2$, and $\lfloor 4\rfloor=4$).
-\item Define $\sim$ on $\mathbb{R}$ via $x \sim y$ if and only if $|x-y|<1$.
+\item Define $S$ on $\mathbb{R}$ via $xS y$ if and only if $\lfloor x\rfloor =\lfloor y\rfloor$, where $\lfloor x\rfloor$ is the greatest integer less than or equal to $x$ (e.g., $\lfloor \pi\rfloor=3$, $\lfloor -1.5\rfloor=-2$, and $\lfloor 4\rfloor=4$).
+\item Define $C$ on $\mathbb{R}$ via $xCy$ if and only if $|x-y|<1$.
 %\item Consider the empty relation on the set $A$ from Problem~\ref{prob:relation on finite}(b).
 \end{enumerate}
 \end{problem}
