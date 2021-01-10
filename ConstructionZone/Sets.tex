@@ -1,7 +1,7 @@
 \begin{section}{Sets}
 
 \begin{definition}
-A \textbf{set} is a collection of objects called \textbf{elements}. If $A$ is a set and $x$ is an element of $A$, we write $x\in A$. Otherwise, we write $x\notin A$. The set containing no elements is called the \textbf{empty set}, and is denoted by the symbol $\emptyset$. Any set that contains at least one element is referred to as a \textbf{nonempty set}.
+A \textbf{set} is a collection of objects called \textbf{elements}. If $A$ is a set and $x$ is an element of $A$, we write $\boxed{x\in A}$. Otherwise, we write $\boxed{x\notin A}$. The set containing no elements is called the \textbf{empty set}, and is denoted by the symbol $\boxed{\emptyset}$. Any set that contains at least one element is referred to as a \textbf{nonempty set}.
 \end{definition}
 
 If we think of a set as a box potentially containing some stuff, then the empty set is a box with nothing in it. One assumption we will make is that for any set $A$, $A\notin A$. The language associated to sets is specific.  We will often define sets using the following notation, called \textbf{set-builder notation}:
@@ -52,10 +52,10 @@ Suppose $A$ and $B$ are sets.  Describe a skeleton proof for proving that $A\sub
 Every nonempty set always has two rather boring subsets.
 
 \begin{theorem}
-Let $S$ be a set.  Then
+Let $A$ be a set.  Then
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $S\subseteq S$, and
-\item $\emptyset \subseteq S$.
+\item $A\subseteq A$, and
+\item $\emptyset \subseteq A$.
 \end{enumerate}
 \end{theorem}
 
@@ -70,25 +70,6 @@ Suppose that $A$, $B$, and $C$ are sets.  If $A\subseteq B$ and $B\subseteq C$, 
 \begin{definition}
 If $A\subseteq B$, then $A$ is called a \textbf{proper subset} provided that $A\neq B$.  In this case, we may write $\boxed{A\subset B}$ or $\boxed{A\subsetneq B}$.\footnote{\emph{Warning:} Some books use $\subset$ to mean $\subseteq$.}
 \end{definition}
-
-The following definitions should look familiar from precalculus.
-
-\begin{definition}[Interval Notation]
-For $a,b\in\mathbb{R}$ with $a<b$, we define the following.
-\begin{multicols}{2}
-\begin{enumerate}[label=\textrm{(\alph*)}]
-\item $(a,b)=\{x\in\mathbb{R}\mid a<x<b\}$
-\item $(a,\infty)=\{x\in\mathbb{R}\mid a<x\}$
-\item $(-\infty,b)=\{x\in\mathbb{R}\mid x<b\}$
-\item $[a,b]=\{x\in\mathbb{R}\mid a\leq x\leq b\}$
-\end{enumerate}
-\end{multicols}
-\noindent We analogously define $[a,b)$, $(a,b]$, $[a,\infty)$, and $(-\infty,b]$.
-\end{definition}
-
-%\begin{problem}
-%Provide two examples of proper subsets of the interval $[0,1]$.
-%\end{problem}
 
 \begin{definition}
 Let $A$ and $B$ be sets in some universe of discourse $U$.
@@ -147,6 +128,8 @@ Suppose that the universe of discourse is $U=\mathbb{R}$.  Let $A=[-3,-1)$, $B=(
 Let $A$ and $B$ be sets.  If $A \subseteq B$, then $B^c \subseteq A^c$.
 \end{theorem}
 
+DEFINITION BELOW IS OUT OF PLACE SINCE PROPER SUBSET DEPENDS ON EQUALITY BEING DEFINED.
+
 \begin{definition}
 Two sets $A$ and $B$ are \textbf{equal}, denoted $\boxed{A=B}$, if and only if $A \subseteq B$ and $B \subseteq A$.
 \end{definition}
@@ -176,5 +159,26 @@ Let $A$, $B$, and $C$ be sets. Then
 \item $A\cap (B\cup C)= (A\cap B)\cup (A\cap C)$.
 \end{enumerate}
 \end{theorem}
+
+The following definitions likely look familiar.
+
+\begin{definition}[Interval Notation]
+For $a,b\in\mathbb{R}$ with $a<b$, we define the following.
+\begin{multicols}{2}
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $(a,b)=\{x\in\mathbb{R}\mid a<x<b\}$
+\item $(a,\infty)=\{x\in\mathbb{R}\mid a<x\}$
+\item $(-\infty,b)=\{x\in\mathbb{R}\mid x<b\}$
+\item $[a,b]=\{x\in\mathbb{R}\mid a\leq x\leq b\}$
+\end{enumerate}
+\end{multicols}
+\noindent We analogously define $[a,b)$, $(a,b]$, $[a,\infty)$, and $(-\infty,b]$.
+\end{definition}
+
+ADD SOME PROBLEMS INVOLVING INTERVALS...
+
+%\begin{problem}
+%Provide two examples of proper subsets of the interval $[0,1]$.
+%\end{problem}
 
 \end{section}
