@@ -3,32 +3,32 @@
 Mathematical proofs do not explicitly use the symbolic representation of a given statement in terms of quantifiers and logical connectives.  Nonetheless, having this notation at our disposal allows us to compartmentalize the abstract nature of mathematical propositions and will provide us with a way to talk about the meta-concepts surrounding the construction of proofs.
 
 \begin{definition}
-Two quantified propositions are \textbf{equivalent in a given universe of discourse} if and only if they have the same truth value in that universe.  Two quantified propositions are \textbf{equivalent} if and only if they are equivalent in every universe of discourse.
+Two quantified propositions are \textbf{logically equivalent in a given universe of discourse} if and only if they have the same truth value in that universe.  Two quantified propositions are \textbf{logically equivalent} if and only if they are logically equivalent in every universe of discourse.
 \end{definition}
 
 \begin{problem}
 Consider the propositions $(\exists x)(x^2-4=0)$ and $(\exists x)(x^2-2=0)$.  
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item Are these propositions equivalent if the universe of discourse is the set of real numbers?
+\item Are these propositions logically equivalent if the universe of discourse is the set of real numbers?
 \item Give two different universes of discourse that yield different truth values for these propositions.  
 \item What can you conclude about the equivalence of these statements?
 \end{enumerate}
 \end{problem}
 
-It is worth pointing out an important distinction.  Consider the propositions ``All cars are red" and ``All natural numbers are positive".  Both of these are instances of the \textbf{logical form} $(\forall x)P(x)$.  It turns out that the first proposition is false and the second is true; however, it does not make sense to attach a truth value to the logical form.  A logical form is a blueprint for particular propositions.  If we are careful, it makes sense to talk about whether two logical forms are equivalent.  For example, $(\forall x)(P(x)\implies Q(x))$ is equivalent to $(\forall x)(\neg Q(x)\implies \neg P(x))$.  For fixed $P(x)$ and $Q(x)$, these two forms will always have the same truth value independent of the universe of discourse.  If you change $P(x)$ and $Q(x)$, then the truth value may change, but the two forms will still agree.
+It is worth pointing out an important distinction.  Consider the propositions ``All cars are red" and ``All natural numbers are positive".  Both of these are instances of the \textbf{logical form} $(\forall x)P(x)$.  It turns out that the first proposition is false and the second is true; however, it does not make sense to attach a truth value to the logical form.  A logical form is a blueprint for particular propositions.  If we are careful, it makes sense to talk about whether two logical forms are logically equivalent.  For example, $(\forall x)(P(x)\implies Q(x))$ is logically equivalent to $(\forall x)(\neg Q(x)\implies \neg P(x))$.  For fixed $P(x)$ and $Q(x)$, these two forms will always have the same truth value independent of the universe of discourse.  If you change $P(x)$ and $Q(x)$, then the truth value may change, but the two forms will still agree.
 
-The next theorem tell us how to negate logical forms involving quantifiers.
+The next theorem tells us how to negate logical forms involving quantifiers.
 
 \begin{theorem}\label{thm:negation of quantifiers}
 Let $P(x)$ be a predicate.  Then
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $\neg (\forall x)P(x)$ is equivalent to $(\exists x)(\neg P(x))$
-\item $\neg (\exists x)P(x)$ is equivalent to $(\forall x)(\neg P(x))$.
+\item $\neg (\forall x)P(x)$ is logically equivalent to $(\exists x)(\neg P(x))$
+\item $\neg (\exists x)P(x)$ is logically equivalent to $(\forall x)(\neg P(x))$.
 \end{enumerate}
 \end{theorem}
 
 \begin{problem}
-Negate each of the following.  Disregard the truth value and the universe of discourse.
+Negate each of the following propositions.  Disregard the truth value and the universe of discourse.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $(\forall x)(x>3)$
 \item $(\exists x)(x \mbox{ is prime}\wedge x \mbox{ is even})$
@@ -41,16 +41,46 @@ Negate each of the following.  Disregard the truth value and the universe of dis
 \end{enumerate}
 \end{problem}
 
-Using Theorem~\ref{thm:negation of quantifiers} and our previous results involving quantification, we can negate complex mathematical propositions by working from left to right. For example, if we negate the (false) proposition $(\exists x\in\mathbb{R})(\forall y\in\mathbb{R})(x+y=0)$, we obtain the proposition $\neg(\exists x\in\mathbb{R})(\forall y\in\mathbb{R})(x+y=0)$, which is equivalent to $(\forall x\in\mathbb{R})(\exists y\in\mathbb{R})(x+y\neq 0)$. 
-
-For a more complicated example, consider the (false) proposition $(\forall x)[x>0\implies (\exists y)(y<0 \wedge xy>0)]$. Then its negation $\neg (\forall x)[x>0\implies (\exists y)(y<0 \wedge xy>0)]$ is equivalent to $(\exists x)[x>0 \wedge \neg (\exists y)(y<0 \wedge xy>0)]$, which happens to be equivalent to $(\exists x)[x>0 \wedge (\forall y)(y\geq 0 \vee xy\leq 0)]$. Can you identify the previous theorems that were used when negating this proposition?
+Using Theorem~\ref{thm:negation of quantifiers} and our previous results involving quantification, we can negate complex mathematical propositions by working from left to right. For example, if we negate the false proposition
+\[
+(\exists x\in\mathbb{R})(\forall y\in\mathbb{R})(x+y=0),
+\]
+we obtain the proposition
+\[
+\neg(\exists x\in\mathbb{R})(\forall y\in\mathbb{R})(x+y=0),
+\]
+which is logically equivalent to
+\[
+(\forall x\in\mathbb{R})(\exists y\in\mathbb{R})(x+y\neq 0)
+\]
+and must be true. For a more complicated example, consider the (false) proposition
+\[
+(\forall x)[x>0\implies (\exists y)(y<0 \wedge xy>0)].
+\]
+Then its negation
+\[
+\neg (\forall x)[x>0\implies (\exists y)(y<0 \wedge xy>0)]
+\]
+is logically equivalent to
+\[
+(\exists x)[x>0 \wedge \neg (\exists y)(y<0 \wedge xy>0)],
+\]
+which happens to be logically equivalent to
+\[
+(\exists x)[x>0 \wedge (\forall y)(y\geq 0 \vee xy\leq 0)].
+\]
+Can you identify the theorems that were used in the two examples above?
 
 \begin{problem}
-Negate each of the following.  Disregard the truth value and the universe of discourse.
+Negate each of the following propositions.  Disregard the truth value and the universe of discourse.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $(\forall n\in\mathbb{N})(\exists m\in\mathbb{N})(m<n)$
+\item For every $y\in \mathbb{R}$, there exists $x\in \mathbb{R}$ such that $y=x^2$.
+\item For all $y\in \mathbb{R}$, if $y$ is not negative, then there exists $x\in\mathbb{R}$ such that $y=x^2$.
+\item For every $x\in \mathbb{R}$, there exists $y\in \mathbb{R}$ such that $y=x^2$.
+\item There exists $x\in \mathbb{R}$ such that for all $y\in \mathbb{R}$, $y=x^2$.
+\item There exists $y\in \mathbb{R}$ such that for all $x\in \mathbb{R}$, $y=x^2$.
 \item $(\forall x,y,z\in\mathbb{Z})((xy \mbox{ is even}\wedge yz\mbox{ is even})\implies xz\mbox{ is even})$
-\item For all positive real numbers $x$, there exists a real number $y$ such that $y^2=x$.
 \item There exists a married person $x$ such that for all married people $y$, $x$ is married to $y$.
 \end{enumerate}
 \end{problem}
@@ -58,14 +88,14 @@ Negate each of the following.  Disregard the truth value and the universe of dis
 At this point, we should be able to use our understanding of quantification to construct counterexamples to complicated false propositions and proofs of complicated true propositions.  Here are some general proof structures for various logical forms.
 
 \begin{skeleton}[Direct Proof of $(\forall x)P(x)$]\label{skeleton:for all}
-Here is the general structure for a direct proof of the proposition $(\forall x)P(x)$.
+Here is the general structure for a direct proof of the proposition $(\forall x)P(x)$. Assume $U$ is the universe of discourse.
 
 \begin{center}
 \framebox{
 \begin{minipage}{6in}
 \vspace{.1in}
 \begin{proof}
-Let $x \in U$. \emph{[$U$ is the universe of discourse]}
+\emph{[State any upfront assumptions.]} Let $x \in U$. 
 \begin{center}
 $\ldots$ \ \emph{[Use definitions and known results.]} \ $\ldots$\\
 \end{center}
@@ -76,21 +106,36 @@ $\ldots$ \ \emph{[Use definitions and known results.]} \ $\ldots$\\
 \end{center}
 \end{skeleton}
 
-COMBINE PREVIOUS WITH Skeleton Proof~\ref{skeleton:direct proof}...
+Combining Skeleton Proof~\ref{skeleton:for all} with Skeleton Proof~\ref{skeleton:direct proof}, we obtain the following skeleton proof.
 
 \begin{skeleton}[Proof of $(\forall x)(P(x)\implies Q(x))$]\label{skeleton:for all direct proof}
-blah	
-\end{skeleton}
-
-\begin{skeleton}[Proof of $(\forall x)P(x)$ by Contradiction]
-Here is the general structure for a proof of the proposition $(\forall x)P(x)$ via contradiction.
+Below is the general structure for a direct proof of the proposition $(\forall x)(A(x)\implies B(x)$. Assume $U$ is the universe of discourse.
 
 \begin{center}
 \framebox{
 \begin{minipage}{6in}
 \vspace{.1in}
 \begin{proof}
-For sake of a contradiction, assume that there exists $x\in U$ such that $\neg P(x)$. \emph{[$U$ is the universe of discourse]}
+\emph{[State any upfront assumptions.]} Let $x \in U$.  Assume $A(x)$.
+\begin{center}
+$\ldots$ \ \emph{[Use definitions and known results to derive $B(x)$]} \ $\ldots$\\
+\end{center}
+\noindent Therefore, $B(x)$.
+\end{proof}
+\end{minipage}
+}
+\end{center}
+\end{skeleton}
+
+\begin{skeleton}[Proof of $(\forall x)P(x)$ by Contradiction]
+Here is the general structure for a proof of the proposition $(\forall x)P(x)$ via contradiction. Assume $U$ is the universe of discourse.
+
+\begin{center}
+\framebox{
+\begin{minipage}{6in}
+\vspace{.1in}
+\begin{proof}
+\emph{[State any upfront assumptions.]} For sake of a contradiction, assume that there exists $x\in U$ such that $\neg P(x)$. 
 \begin{center}
 $\ldots$ \ \emph{[Do something to derive a contradiction.]} \ $\ldots$\\
 \end{center}
@@ -101,17 +146,19 @@ $\ldots$ \ \emph{[Do something to derive a contradiction.]} \ $\ldots$\\
 \end{center}
 \end{skeleton}
 
-\begin{skeleton}[Direct Proof of $(\exists x)P(x)$]
-Here is the general structure for a direct proof of the proposition $(\exists x)P(x)$.
+\begin{skeleton}[Direct Proof of $(\exists x)P(x)$]\label{skeleton:exists}
+Here is the general structure for a direct proof of the proposition $(\exists x)P(x)$. Assume $U$ is the universe of discourse.
 
 \begin{center}
 \framebox{
 \begin{minipage}{6in}
 \vspace{.1in}
 \begin{proof}
-$\ldots$ \ \emph{[Use definitions and previous results to deduce that an $x$ exists for which $P(x)$ is true; or if you have an $x$ that works, just verify that it does.]} $\ldots$ 
-
-\noindent Therefore, there exists $x$ such that $P(x)$.
+\emph{[State any upfront assumptions.]} $\ldots$ 
+\begin{center}
+$\ldots$ \ \emph{[Use definitions and previous results to deduce that an $x$ exists for which $P(x)$ is true; or if you have an $x$ that works, just verify that it does.]} \ $\ldots$ 
+\end{center}
+\noindent Therefore, there exists $x\in U$ such that $P(x)$.
 \end{proof}
 \end{minipage}
 }
@@ -119,27 +166,27 @@ $\ldots$ \ \emph{[Use definitions and previous results to deduce that an $x$ exi
 \end{skeleton}
 
 \begin{skeleton}[Proof of $(\exists x)P(x)$ by Contradiction]
-Here is the general structure for a proof of the proposition $(\exists x)P(x)$ via contradiction.
+Below is the general structure for a proof of the proposition $(\exists x)P(x)$ via contradiction. Assume $U$ is the universe of discourse.
 
 \begin{center}
 \framebox{
 \begin{minipage}{6in}
 \vspace{.1in}
 \begin{proof}
-For sake of a contradiction, assume that for all $x$, $\neg P(x)$.
+\emph{[State any upfront assumptions.]} For sake of a contradiction, assume that for all $x\in U$, $\neg P(x)$.
 \begin{center}
 $\ldots$ \ \emph{[Do something to derive a contradiction.]} \ $\ldots$\\
 \end{center}
-\noindent This is a contradiction. Therefore, there exists $x$ such that $P(x)$.
+\noindent This is a contradiction. Therefore, there exists $x\in U$ such that $P(x)$.
 \end{proof}
 \end{minipage}
 }
 \end{center}
 \end{skeleton}
 
-Note that if $Q(x)$ is a proposition for which $(\forall x)Q(x)$ is false, then a counterexample to this proposition amounts to showing $(\exists x)(\neg Q(x))$, which might be proved via the third scenario above.
+Note that if $Q(x)$ is a predicate for which $(\forall x)Q(x)$ is false, then a counterexample to this proposition amounts to showing $(\exists x)(\neg Q(x))$, which can be proved by following the structure of Skeleton Proof~\ref{skeleton:exists}.
 
-It is important to point out that sometimes we will have to combine various proof techniques in a single proof.  For example, if you wanted to prove a proposition of the form $(\forall x)(P(x) \implies Q(x)$) by contradiction, we would start by assuming that there exists $x$ such that $P(x)$ and $\neg Q(x)$.
+It is important to point out that sometimes we will have to combine various proof techniques in a single proof.  For example, if you wanted to prove a proposition of the form $(\forall x)(P(x) \implies Q(x)$) by contradiction, we would start by assuming that there exists $x$ in the universe of discourse such that $P(x)$ and $\neg Q(x)$.
 
 \begin{problem}
 For each of the following statements, determine its truth value.  If the statement is false, provide a counterexample.  Prove at least two of the true statements.

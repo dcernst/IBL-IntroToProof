@@ -1,15 +1,15 @@
 \begin{section}{Negating Implications and Proof by Contradiction}
 
-So far we have discussed how to negate propositions of the form $A$, $A\wedge B$, and $A\vee B$ for propositions $A$ and $B$.  However, we have yet to discuss how to negate propositions of the form $A\implies B$.  To begin, try proving the following result with a truth table.
+So far we have discussed how to negate propositions of the form $A$, $A\wedge B$, and $A\vee B$ for propositions $A$ and $B$.  However, we have yet to discuss how to negate propositions of the form $A\implies B$.  Prove the following result with a truth table.
 
 \begin{theorem}\label{thm:ImplicationAsDisjuction}
-The implication $A\implies B$ is equivalent to the disjunction $\neg A \vee B$.
+If $A$ and $B$ are propositions, then the implication $A\implies B$ is logically equivalent to the disjunction $\neg A \vee B$.
 \end{theorem}
 
-The next result follows quickly from Theorem~\ref{thm:ImplicationAsDisjuction} together with DeMorgan's Law.
+The next result follows quickly from Theorem~\ref{thm:ImplicationAsDisjuction} together with DeMorgan's Law. You can also verify this result using a truth table.
 
 \begin{corollary}\label{cor:NegateImplication}
-The proposition $\neg(A \implies B)$ is equivalent to $A \wedge \neg B$.
+If $A$ and $B$ are propositions, then $\neg(A \implies B)$ is logically equivalent to $A \wedge \neg B$.
 \end{corollary}
 
 \begin{problem}\label{prob:Darth Vader}
@@ -31,7 +31,7 @@ A compound proposition that is always false is called a \textbf{contradiction}. 
 \end{definition}
 
 \begin{theorem}
-For any proposition $A$, the proposition $\neg A\wedge A$ is a contradiction.
+If $A$ is a proposition, then the proposition $\neg A\wedge A$ is a contradiction.
 \end{theorem}
 
 \begin{problem}
@@ -48,7 +48,7 @@ Here is what the general structure for a proof by contradiction looks like if we
 \begin{minipage}{6in}
 \vspace{.1in}
 \begin{proof}
-For sake of a contradiction, assume $\neg P$.
+\emph{[State any upfront assumptions.]} For sake of a contradiction, assume $\neg P$.
 \begin{center}
 $\ldots$ \ \emph{[Use definitions and known results to derive\\ some $Q$ and its negation $\neg Q$.]} \ $\ldots$\\
 \end{center}
@@ -59,7 +59,7 @@ $\ldots$ \ \emph{[Use definitions and known results to derive\\ some $Q$ and its
 \end{center}
 \end{skeleton}
 
-Proof by contradiction can be useful for proving statements of the form $A\implies B$, where $\neg B$ is easier to ``get your hands on,'' because $\neg(A \implies B)$ is equivalent to $A \wedge \neg B$ (see Corollary~\ref{cor:NegateImplication}).
+Proof by contradiction can be useful for proving statements of the form $A\implies B$, where $\neg B$ is easier to ``get your hands on,'' because $\neg(A \implies B)$ is logically equivalent to $A \wedge \neg B$ (see Corollary~\ref{cor:NegateImplication}).
 
 \begin{skeleton}[Proof of $A\implies B$ by contradiction]\label{pf by contradiction for implication}
 If you want to prove the implication $A\implies B$ via a proof by contradiction, then the structure of the proof is as follows.
@@ -69,7 +69,7 @@ If you want to prove the implication $A\implies B$ via a proof by contradiction,
 \begin{minipage}{6in}
 \vspace{.1in}
 \begin{proof}
-For sake of a contradiction, assume $A$ and $\neg B$.
+\emph{[State any upfront assumptions.]} For sake of a contradiction, assume $A$ and $\neg B$.
 \begin{center}
 $\ldots$ \ \emph{[Use definitions and known results to derive\\ some $Q$ and its negation $\neg Q$.]} \ $\ldots$\\
 \end{center}
@@ -89,7 +89,9 @@ Assume that $x\in\mathbb{Z}$.  If $x$ is odd, then 2 does not divide $x$. (Prove
 Prove the following theorem via contradiction. Afterward, consider the difficulties one might encounter when trying to prove the result more directly.
 
 \begin{theorem}
-Assume that $x,y\in\mathbb{N}$.\footnote{$\mathbb{N}=\{1,2,3,\ldots\}$ is the set of \textbf{natural numbers}. Some mathematicians (set theorists, in particular) include $0$ in $\mathbb{N}$, but this will not be our convention. The given statement is not true if we replace $\mathbb{N}$ with $\mathbb{Z}$. Do you see why?} If $x$ divides $y$, then $x\leq y$.
+Assume that $x,y\in\mathbb{N}$.\footnote{The given statement is not true if we replace $\mathbb{N}$ with $\mathbb{Z}$. Do you see why?} If $x$ divides $y$, then $x\leq y$.
 \end{theorem}
+
+Oftentimes a conditional proposition can be proved via a direct proof and by using a proof by contradiction.  Most mathematicians view a direct proof to be more elegant than a proof by contradiction. When approaching the proof of a conditional proposition, you should strive for a direct proof.  In general, if you are attempting to prove $A\implies B$ using a proof by contradiction and you end up with $\neg B$ and $B$ (which yields a contradiction), then this is evidence that a proof by contradiction was unnecessary.  On the other hand, if you end up with $\neg Q$ and $Q$, where $Q$ is not the same as $B$, then a proof by contradiction is a reasonable approach.
 
 \end{section}

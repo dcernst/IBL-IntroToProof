@@ -104,7 +104,7 @@ be helpful.
 - I was a little confused about Definition 2.35 which seems to equate “if and only if” with “logically equivalent” even then though the if-and-only-if terminology has been used in in Definition 2.26.
     * Todo. I agree that there is something to be done here. Perhaps move to Definition 2.26.
 - In Section 2.4, I found the use of function notation to describe predicates a little confusing. What is the domain? What is the range? Given that Chapter 7 is devoted to functions, this struck me as a little odd.
-    * Todo. It's just notation, but I agree that I should specify what the notation means (and maybe not reference function notation).
+    * Done. I eliminated reference to function notation and just defined the notation.
 - In Lemmas 5.4 and 5.10 and in Theorem 8.24, I found labeling the extensive footnotes as “Hints” to be slightly misleading. It seems like these activities would be better described as a fill-in-the-details exercise where the hints are included in the body of the text.
     * This suggestion clashes with another reviewer's comment who liked the footnotes.
 - As an extremely minor note, the page numbers missing from most pages. I suspect this is a simple typesetting fix.
@@ -134,7 +134,7 @@ be helpful.
 - The author might consider adding chapters on other topics that are commonly covered in an introduction to proof course, such as beginning graph theory, a brief introduction to sequences and recurrence relations, and introductory combinatorics and discrete probability.
        * ??? Not sure I want to go there.  I could add "counting" easily as Stephanie wrote something already.
 - Many education majors with math concentrations take an introduction to proof course and might benefit from exercises or problems that ask students to think about a concept from the perspective of a younger learner. For example, I can see having a few questions about negating inequalities, followed up with questions requesting a paragraph explanation to another person why the negation of x < a is x = a or x>a, and how to negate a<x<b (for some variable x). (This is kind of a stretch from my area of expertise, but this sort of exercise has been mentioned to me as being beneficial to education majors.) Occasional paragraph explanations might be suitable.
-      * Todo. Adding the question about negating inequalities is a good idea.
+      * Done.
 - The text has a small typos that don’t impact the overall meaning and value of the text, but will be tricky/tedious to hunt down and fix. In some cases, little words like “is” are missing or repeated (e.g., “the the”) or words are misspelled but correct in some other context/meaning (e.g., “our” became “out”).
       * Hopefully, I'll hunt these down.  All "the the" and "out" vs "our" instances have been fixed.
 - Some of the hints for Chapter 5 are extensive. If the problems can’t be stepped out further to avoid such hints, it would be good to hide the hints at the back of the chapter. The footnotes detract from the text, and intimidate the reader.
