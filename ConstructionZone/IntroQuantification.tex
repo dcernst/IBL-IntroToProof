@@ -6,7 +6,7 @@ The sentence ``$x>0$'' is not itself a proposition because its truth value depen
 \item $L(a,b)\coloneqq ``a<b"$
 \item $F(x,y)\coloneqq ``x \mbox{ is friends with } y"$
 \end{itemize}
-Note that we used quotation marks above to remove some ambiguity.  What would $S(x)=x^2-4=0$ mean?  It looks like $S(x)$ equals 0, but actually we want $S(x)$ to represent the whole sentence ``$x^2-4=0$". 
+Note that we used quotation marks above to remove some ambiguity.  What would $S(x)=x^2-4=0$ mean?  It looks like $S(x)$ equals 0, but actually we want $S(x)$ to represent the whole sentence ``$x^2-4=0$". Also, notice that the order in which we utilize the free variables might matter.  For example, compare $L(a,b)$ with $L(b,a)$.
 
 One way we can make propositions out of predicates is by assigning specific values to the free variables.  That is, if $P(x)$ is a predicate and $x_0$ is specific value for $x$, then $P(x_0)$ is now a proposition (and is either true or false).
 
@@ -105,7 +105,11 @@ Using our abbreviations for the logical connectives and quantifiers, we can symb
 Express the formal definition of a limit (given above Definition~\ref{def:quantifiers}) in logical symbols.
 \end{problem}
 
-If $A(x)$ and $B(x)$ are predicates, then it is standard practice for the sentence $A(x)\implies B(x)$ to mean $(\forall x)(A(x)\implies B(x))$ (where the universe of discourse for $x$ needs to be made clear).  In this case, we say that the universal quantifier is implicit.
+If you look closely, many of the theorems that we have encountered up until this point were of the form $A(x)\implies B(x)$, where $A(x)$ and $B(x)$ are predicates.  For example, consider Theorem~\ref{thm:n even implies n^2 even}, which states, ``If $n$ is an even integer, then $n^2$ is an even integer." In this case, ``$n$ is an even integer" and ``$n^2$ is an even integer" are both predicates.  So, it would be reasonable to assume that the entire theorem statement is a predicate.  However, it is standard practice to interpret the sentence $A(x)\implies B(x)$ to mean $(\forall x)(A(x)\implies B(x))$ (where the universe of discourse for $x$ needs to be made clear). We can also retool such statements to ``hide" the implication. In particular, $(\forall x)(A(x)\implies B(x))$ has the same meaning as $(\forall x \in U')B(x)$, where $U'$ is the collection of items from the universe of discourse $U$ that makes $A(x)$ true. For example, we could rewrite the statement of Theorem~\ref{thm:n even implies n^2 even} as ``For every even integer $n$, $n^2$ is even."
+
+\begin{problem}
+Find at least two instances of theorem statements that appeared earlier in the book and are written in the form $A(x)\implies B(x)$. Rewrite each in an equivalent way that makes the universal quantifier explicit while possibly suppressing the implication.
+\end{problem}
 
 \begin{problem}
 Consider the proposition ``If $\epsilon >0$, then there exists $N\in\mathbb{N}$ such that $1/N<\epsilon$."  Assume the universe of discourse is the set $\mathbb{R}$.
@@ -115,7 +119,7 @@ Consider the proposition ``If $\epsilon >0$, then there exists $N\in\mathbb{N}$ 
 \end{enumerate}
 \end{problem}
 
-The symbolic expression $(\forall x)(\forall y)$ can be replaced with the simpler expression $\boxed{\forall x,y}$ as long as $x$ and $y$ are elements of the same universe.
+The symbolic expression $(\forall x)(\forall y)$ can be abbreviated as $\boxed{\forall x,y}$ as long as $x$ and $y$ are elements of the same universe.
 
 \begin{problem}
 Express the statement ``For all $x,y\in\mathbb{R}$ with $x<y$, there exists $m\in\mathbb{R}$ such that $x<m<y$" using logical symbols.
@@ -127,7 +131,7 @@ Rewrite each of the following statements in words and determine whether the stat
 \item $(\forall n \in \mathbb{N})(n^2 \geq 5)$
 \item $(\exists n \in \mathbb{N})(n^2-1=0)$
 \item $(\exists N \in \mathbb{N})(\forall  n > N)(\frac{1}{n} < 0.01)$
-\item $(\forall m, n \in \mathbb{Z})(2|m \wedge 2|n \implies 2|(m+n))$
+\item $(\forall m, n \in \mathbb{Z})((2|m \wedge 2|n) \implies 2|(m+n))$
 \item $(\forall x \in \mathbb{N})(\exists y \in \mathbb{N})(x-2y=0)$
 \item $(\exists x \in \mathbb{N})(\forall y \in \mathbb{N})(y \leq x)$
 \end{enumerate}

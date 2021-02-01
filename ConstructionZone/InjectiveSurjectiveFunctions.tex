@@ -1,6 +1,6 @@
 \begin{section}{Injective and Surjective Functions}
 
-We now turn our attention to a couple of properties that a function may or may not possess.
+We now turn our attention to some important properties that a function may or may not possess. Recall that if $f$ is a function, then every element in its domain is mapped to a unique element in the range.  However, there are no restrictions on whether more than one element of the domain is mapped to the same element in the range. If each element in the range has a unique element in the domain mapping to it, then we say that the function is injective. Moreover, the range of a function is not required to be all of the codomain.  If every element of the codomain has at least one element in the domain that maps to it, then we say that the function is surjective.  Let's make these definitions a bit more precise.
 
 \begin{definition}
 Let $f:X\to Y$ be a function.
@@ -11,46 +11,13 @@ Let $f:X\to Y$ be a function.
 \end{enumerate}
 \end{definition}
 
-
-%To do this, start by assuming that $f(x_{1})=f(x_{2})$ and then work to show that $x_{1}=x_{2}$.  That is, a function $f$ is one-to-one if and only if for all $x_{1}, x_{2}\in X$, if $f(x_{1})=f(x_{2})$, then $x_{1}=x_{2}$. To show that $f$ is onto, you should start with an arbitrary $y\in Y$ and then work to show that there exists $x\in X$ such that $y=f(x)$.
-
-The next two skeleton proofs are special cases of Skeleton Proof~\ref{skeleton:uniqueness} and Skeleton Proof~\ref{skeleton:existence}, respectively.
-
-\begin{skeleton}[Proof that a function is injective]
-Here is the general structure for proving that a function is injective.
-\begin{center}
-\framebox{
-\begin{minipage}{6in}
-\vspace{.1in}
-\begin{proof}
-Assume $f:X\to Y$ is a function defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $f$]}.  Let $x_1,x_2\in X$ and suppose $f(x_1)=f(x_2)$.
-\begin{center}
-$\ldots$ \ \emph{[Use the definition (or property) of $f$ to verify that $x_1=x_2$]} \ $\ldots$
-\end{center}
-\noindent Therefore, the function $f$ is injective.
-\end{proof}
-\end{minipage}
-}
-\end{center}
-\end{skeleton}
-
-\begin{skeleton}[Proof that a function is surjective]
-Here is the general structure for proving that a function is surjective.
-\begin{center}
-\framebox{
-\begin{minipage}{6in}
-\vspace{.1in}
-\begin{proof}
-Assume $f:X\to Y$ is a function defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $f$]}.  Let $y\in Y$.
-\begin{center}
-$\ldots$ \ \emph{[Use the definition (or property) of $f$ to find some $x\in X$ such that $f(x)=y$]} \ $\ldots$
-\end{center}
-\noindent Therefore, the function $f$ is surjective.
-\end{proof}
-\end{minipage}
-}
-\end{center}
-\end{skeleton}
+\begin{problem}
+Compare and contrast the following statements.  Do they mean the same thing?
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item For all $x\in X$, there exists a unique $y\in Y$ such that $f(x)=y$.
+\item For all $y\in \range(f)$, there is a unique $x\in X$ such that $y=f(x)$.
+\end{enumerate}
+\end{problem}
 
 \begin{problem}
 Assume that $X$ and $Y$ are finite sets. Provide an example of each of the following.  You may draw a function diagram, write down a list of ordered pairs, or a write a formula as long as the domain and codomain are clear. 
@@ -96,6 +63,46 @@ The function $f:X\to \mathbb{R}$ is \underline{\ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ 
 \end{quote}
 Explain why this statement is true.
 \end{problem}
+
+How do we prove that a function $f$ is injective? We would need to show that every element in the range has a unique element from the domain that maps to it. First, notice that each element in the range can be written as $f(x)$ for at least one $x$ in the domain.  To argue that each such element in domain is unique, we can suppose $f(x_{1})=f(x_{2})$ for arbitrary $x_1$ and $x_2$ in the domain and then work to show that $x_{1}=x_{2}$.  It is important to point out that when we suppose $f(x_{1})=f(x_{2})$ for some $x_1$ and $x_2$, we are not assuming that $x_1$ and $x_2$ are different. In general, when we write ``Let $x_1,x_2\in X$\ldots", we are leaving open the possibility that $x_1$ and $x_2$ are actually the same element. One could approach proving that a function is injective by utilizing a proof by contradiction, but this is not usually necessary.
+
+\begin{skeleton}[Proof that a function is injective]
+Here is the general structure for proving that a function is injective.
+\begin{center}
+\framebox{
+\begin{minipage}{6in}
+\vspace{.1in}
+\begin{proof}
+Assume $f:X\to Y$ is a function defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $f$]}.  Let $x_1,x_2\in X$ and suppose $f(x_1)=f(x_2)$.
+\begin{center}
+$\ldots$ \ \emph{[Use the definition (or property) of $f$ to verify that $x_1=x_2$]} \ $\ldots$
+\end{center}
+\noindent Therefore, the function $f$ is injective.
+\end{proof}
+\end{minipage}
+}
+\end{center}
+\end{skeleton}
+
+How do we prove that a function $f$ is surjective? We would need to argue that every element in the codomain is also in the range.  Sometimes, the proof that a particular function is surjective is extremely short, so don't second guess yourself if you find yourself in this situation.  
+
+\begin{skeleton}[Proof that a function is surjective]
+Here is the general structure for proving that a function is surjective.
+\begin{center}
+\framebox{
+\begin{minipage}{6in}
+\vspace{.1in}
+\begin{proof}
+Assume $f:X\to Y$ is a function defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $f$]}.  Let $y\in Y$.
+\begin{center}
+$\ldots$ \ \emph{[Use the definition (or property) of $f$ to find some $x\in X$ such that $f(x)=y$]} \ $\ldots$
+\end{center}
+\noindent Therefore, the function $f$ is surjective.
+\end{proof}
+\end{minipage}
+}
+\end{center}
+\end{skeleton}
 
 \begin{problem}\label{prob:injective surjective functions}
 Determine whether each of the following functions is injective, surjective, both, or neither.  In each case, you should provide a proof or a counterexample as appropriate.
