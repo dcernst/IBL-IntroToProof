@@ -1,0 +1,140 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage[margin=1in]{geometry}
+\usepackage[hang,flushmargin,symbol*]{footmisc}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0, 0, .6}
+\definecolor{grey}{rgb}{.7, .7, .7}
+\usepackage[breaklinks]{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=darkblue,
+	anchorcolor=darkblue,
+	citecolor=darkblue,
+	pagecolor=darkblue,
+	urlcolor=darkblue,
+	pdftitle={},
+	pdfauthor={}
+}
+
+\newcommand{\dom}{\operatorname{Dom}}
+\newcommand{\codom}{\operatorname{Codom}}
+\newcommand{\range}{\operatorname{Rng}}
+
+\pagestyle{fancy}
+
+\lhead{\scriptsize Notes for an Introduction to Proof Course}
+\rhead{\scriptsize Instructor: {Paul Ellis}}
+%\lfoot{\scriptsize This work is an adaptation of notes written by Stan Yoshinobu of Cal Poly and Matthew Jones of California State University, Dominguez Hills.}
+\cfoot{}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{journal}[theorem]{Journal}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{question}[theorem]{Question}
+
+\begin{document}
+
+\addtocounter{section}{5}
+
+\begin{section}{Relations and Functions}
+
+\addtocounter{subsection}{5}
+\addtocounter{theorem}{109}
+
+\begin{subsection}{Image and inverse Image}
+
+\begin{definition}
+If $f:X\to Y$ is a function and $A\subseteq X$, then the \textbf{image of $A$ under $f$} is
+$$f[A]=\{y\in Y: (\exists x\in A)(f(x)=y)\}$$
+\end{definition}
+
+\begin{definition}
+
+If $f:X\to Y$ is a function and $C\subseteq Y$, then the
+\textbf{inverse image (or preimage) of $C$ under $f$} is
+$$f^{-1}[C]=\{x\in X: f(x)\in C\}$$
+
+\end{definition}
+
+\begin{exercise}
+
+Let $f:\mathbb{R}\to\mathbb{R}$ be defined by $f(x)=3x^2-4$.
+Find all of the following. You probably want to draw the graph
+of $f(x)$ first.
+\begin{enumerate}
+\item $f[[-2,4]]$
+\item $f[(-2,4)]$
+\item $f^{-1}[[-10,1]]$
+\item $f^{-1}[(-3,3)]$
+\item $f[\emptyset]$
+\item $f[\mathbb{R}]$
+\item $f^{-1}[\emptyset]$
+\item $f^{-1}[\mathbb{R}]$
+\item Find two non-empty subsets $A$, $B$ of $\mathbb{R}$ such that $A\cap B=\emptyset$ and $f^{-1}[A]=f^{-1}[B]$
+\item Find two non-empty subsets $A$, $B$ of $\mathbb{R}$ such that $A\cap B=\emptyset$ and $f[A]=f[B]$
+\end{enumerate}
+
+\end{exercise}
+
+\begin{theorem}
+Let $f:X\to Y$ be a function and let $A\subseteq X$, $B\subseteq X$.
+\begin{enumerate}
+\item[(a)] If $A\subseteq B$, then $f[A]\subseteq f[B]$
+\item[(b)] $f[A\cup B]=f[A]\cup f[B]$
+\item[(c)] $f[A\cap B]\subseteq f[A]\cap f[B]$ (When are they equal?)
+\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+Let $f:X\to Y$ be a function and let $C\subseteq Y$, $D\subseteq Y$.
+\begin{enumerate}
+\item[(a)] If $C\subseteq D$, then $f^{-1}[C]\subseteq f^{-1}[D]$
+\item[(b)] $f^{-1}[C\cup D]=f^{-1}[C]\cup f^{-1}[D]$
+\item[(c)] $f^{-1}[C\cap D]=f^{-1}[C]\cap f^{-1}[D]$
+\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+Let $f:X\to Y$ be a function and let $A\subseteq X$, $C\subseteq Y$.
+\begin{enumerate}
+\item[(a)] $A\subseteq f^{-1}[f[A]]$ (When are they equal?)
+\item[(b)] $f[f^{-1}[C]]\subseteq C$ (When are they equal?)
+\end{enumerate}
+\end{theorem}
+
+\end{subsection}
+
+\end{section}
+
+\end{document}

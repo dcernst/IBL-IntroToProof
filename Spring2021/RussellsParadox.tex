@@ -1,0 +1,31 @@
+\begin{section}{Russell's Paradox}\label{sec:RussellsParadox}
+
+We now turn our attention to the issue of whether there is one mother of all universal sets.  Before reading any further, consider this for a moment.  That is, is there one largest set that all other sets are a subset of?  Or, in other words, is there a set of all sets?  To help wrap our heads around this issue, consider the following riddle, known as the \textbf{Barber of Seville Paradox}.
+
+\begin{quote}
+In Seville, there is a barber who shaves all those men, and only those men, who do not shave themselves.  Who shaves the barber?
+\end{quote}
+
+\begin{problem}\label{prob:barber}
+In the Barber of Seville Paradox, does the barber shave himself or not?
+\end{problem}
+
+Problem~\ref{prob:barber} is an example of a \textbf{paradox}. A paradox is a statement that can be shown, using a given set of axioms and definitions, to be both true and false. Recall that an axiom is a statement that is assumed to be true without proof. These are the basic building blocks from which all theorems are proved. Paradoxes are often used to show the inconsistencies in a flawed axiomatic theory.  The term paradox is also used informally to describe a surprising or counterintuitive result that follows from a given set of rules.  Now, suppose that there is a set of all sets and call it $\mathcal{U}$.  That is, $\mathcal{U}\coloneqq \{A\mid A\mbox{ is a set}\}$.
+
+\begin{problem}
+Given our definition of $\mathcal{U}$, explain why $\mathcal{U}$ is an element of itself.
+\end{problem}
+
+If we continue with this line of reasoning, it must be the case that some sets are elements of themselves and some are not.  Let $X$ be the set of all sets that are elements of themselves and let $Y$ be the set of all sets that are not elements of themselves.
+
+\begin{problem}\label{prob:russell}
+Does $Y$ belong to $X$ or $Y$?  Explain why this is a paradox.
+\end{problem}
+
+The above paradox is one way of phrasing a paradox referred to as \textbf{Russell's Paradox}.  How did we get into this mess in the first place?!  By assuming the existence of a set of all sets, we can produce all sorts of paradoxes.  The only way to avoid these types of paradoxes is to conclude that there is no set of all sets.  That is, the collection of all sets cannot be a set itself.
+
+According to naive set theory (i.e., approaching set theory using natural language as opposed to formal logic), any definable collection is a set. As Russell's Paradox illustrates, this leads to problems.  It turns out that any proposition can be proved from a contradiction, and hence the presence of contradictions like Russell's Paradox would appear to be catastrophic for mathematics.  Since set theory is often viewed as the basis for axiomatic development in mathematics, Russell's Paradox calls the foundations of mathematics into question. In response to this threat, a great deal of research went into developing consistent axioms (i.e., free of contradictions) for set theory in the early 20th century. In 1908, Ernst Zermelo proposed a collection of axioms for set theory that avoided the inconsistencies of naive set theory. In the 1920s, adjustments to Zermelo's axioms were made by Abraham Fraenkel, Thoralf Skolem, and Zermelo that resulted in a collection of nine axioms, called ZFC, where ZF stands for Zermelo and Fraenkel and C stands for the Axiom of Choice, which one of the nine axioms. Loosely speaking, the Axiom of Choice states that says that given any collection of sets, each containing at least one element, it is possible to make a selection of exactly one object from each set, even if the collection of sets is infinite. There was a period of time in mathematics when the Axiom of Choice was controversial, but nowadays it is generally accepted.  There is a fascinating history concerning the Axiom of Choice, including its controversy, that I encourage you to read up on.  The Wikipedia page for the Axiom of Choice is a good place to start. There are several competing axiomatic approaches to set theory, but ZFC is considered the canonical collection of axioms by most mathematicians.
+
+Appendix~\ref{appendix:paradoxes} includes a few more examples of paradoxes.  I suggest you spend some time thinking about a few of them.
+
+\end{section}

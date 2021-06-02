@@ -1,0 +1,212 @@
+\begin{section}{Modular Arithmetic}\label{sec:ModularArithmetic}
+In this section, we look at a particular family of equivalence relations on the integers and explore the way in which arithmetic interacts with them.
+
+\begin{definition}
+For each $n\in \mathbb{N}$, define $n\mathbb{Z}$ to be the set of all integers that are divisible by $n$. In set-builder notation, we have
+\[
+\boxed{n\mathbb{Z} \coloneqq  \{m \in \mathbb{Z}  \mid m = nk \text{ for some } k \in \mathbb{Z}\}}.
+\]
+\end{definition}
+
+For example, $5\mathbb{Z} = \{ \ldots,-10,-5,0,5,10,\ldots\}$ and $2\mathbb{Z}$ is the set of even integers. 
+
+%\begin{problem}
+%What is $1\mathbb{Z}$ equal to?	
+%\end{problem}
+
+\begin{problem} 
+Consider the sets $3 \mathbb{Z}$, $5 \mathbb{Z}$, $15 \mathbb{Z}$, and $20 \mathbb{Z}$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item List at least five elements in each of the above sets.
+\item Notice that $3 \mathbb{Z} \cap5 \mathbb{Z} = n\mathbb{Z}$ for some $n\in \mathbb{N}$. What is $n$? Describe $15\mathbb{Z}\cap 20 \mathbb{Z}$ in a similar way.
+\item Draw a Venn diagram illustrating how the sets $3\mathbb{Z}$, $5\mathbb{Z}$, and $15\mathbb{Z}$ intersect.  
+\item Draw a Venn diagram illustrating how the sets $5\mathbb{Z}$, $15\mathbb{Z}$, and $20\mathbb{Z}$ intersect.
+\end{enumerate}
+\end{problem}
+
+\begin{theorem}
+Let $n\in \mathbb{N}$. If $a,b \in n\mathbb{Z}$, then $-a$, $a+b$, and $ab$ are also in $n\mathbb{Z}$.
+\end{theorem}
+
+\begin{definition}\label{def:modulo}
+For each  $n\in \mathbb{N}$,  define the relation $\boxed{\equiv_n}$ on $\mathbb{Z}$ via $a\equiv_n b$ if and only if $a-b \in n\mathbb{Z}$. We read $a\equiv_n b$ as ``$a$ is congruent to $b$ modulo $n$.''
+\end{definition}
+
+Note that $a-b \in n\mathbb{Z}$ if and only if $n$ divides $a-b$, which implies that $a\equiv_n b$ if and only if $n$ divides $a-b$.
+
+\begin{example}
+We encountered $\equiv_5$ in Problem~\ref{prob:mod 5} and discovered that there were five distinct sets of relatives.  In particular, we have
+\begin{align*}
+\rel(0) & = \{\ldots, -10, -5, 0, 5, 10,\ldots\}\\
+\rel(1) & = \{\ldots, -9, -4, 1, 6, 11,\ldots\}\\
+\rel(2) & = \{\ldots, -8, -3, 2, 7, 12,\ldots\}\\
+\rel(3) & = \{\ldots, -7, -2, 3, 8, 13,\ldots\}\\
+\rel(4) & = \{\ldots, -6, -1, 4, 9, 14,\ldots\}.
+\end{align*}
+Notice that this collection forms a partition of $\mathbb{Z}$.  By Corollary~\ref{cor:partition yields equivalence relation}, the relation $\equiv_5$ must be an equivalence relation.
+\end{example}
+
+The previous example generalizes as expected. You can prove the following theorem by either proving that $\equiv_n$ is reflexive, symmetric, and transitive or by utilizing Corollary~\ref{cor:partition yields equivalence relation}.
+
+\begin{theorem}
+For $n\in \mathbb{N}$, the relation $\equiv_n$ is an equivalence relation on $\mathbb{Z}$.
+\end{theorem}
+
+We have have special notation and terminology for the equivalence classes that correspond to $\equiv_n$.
+
+\begin{definition}\label{def:modulo}
+For $n\in \mathbb{N}$, let $\boxed{[a]_n}$ denote the equivalence class of $a$ with respect to $\equiv_n$ (see Definitions~\ref{def:relatives} and \ref{def:equivalence class}). The equivalence class $[a]_n$ is called the \textbf{congruence} (or \textbf{residue}) \textbf{class of $a$ modulo $n$}. The collection of all equivalence classes determined by $\equiv_n$ is denoted $\boxed{\mathbb{Z}/n\mathbb{Z}}$, which is read ``$\mathbb{Z}$ modulo $n\mathbb{Z}$".
+\end{definition}
+
+\begin{example}\label{exam:twomodseven}
+Let's compute $[2]_7$.  Tracing back through the definitions, we see that
+\begin{align*}
+m \in [2]_7 & \iff m \equiv_7 2\\
+& \iff m-2\in 7\mathbb{Z}\\
+& \iff m-2 = 7k \text{ for some $k\in \mathbb{Z}$}\\
+& \iff m = 7k+2 \text{ for some $k\in \mathbb{Z}$}.
+\end{align*}
+Since the multiples of $7$ are $7\mathbb{Z} = \{\ldots,-14,-7,0,7,14,\ldots\}$, we can find $[2]_7$ by adding $2$ to each element of $7\mathbb{Z}$ to get $[2]_7 = \{\ldots,-12,-5,2,9,16,\ldots\}$.
+\end{example}
+
+\begin{problem}
+For each of the following congruence classes, find five elements in the set such that at least one is greater than $70$ and one is less than $70$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $[4]_7$ 
+\item $[-3]_7$
+\item $[7]_7$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Describe $[0]_3$, $[1]_3$, $[2]_3$, $[4]_3$, and $[-2]_3$ as lists of elements as in Example~\ref{exam:twomodseven}. How many distinct congruence classes are in $\mathbb{Z}/3\mathbb{Z}$? Theorem~\ref{thm:equiv yields partition} might be helpful.
+\end{problem}
+
+Consider using Theorem~\ref{thm:related if and only if same class} to prove the next theorem.
+
+\begin{theorem}\label{thm:cong classes equal}
+For $n\in \mathbb{N}$ and $a,b\in \mathbb{Z}$, $[a]_n = [b]_n$ if and only if $n$ divides $a-b$. 
+\end{theorem}
+
+\begin{corollary}\label{cor:divisible iff zero mod}
+For $n\in \mathbb{N}$ and $a\in \mathbb{Z}$, $[a]_n = [0]_n$ if and only if $n$ divides $a$.
+\end{corollary}
+
+The next result provides a useful characterization for when two congruence classes are equal. The Division Algorithm will be useful when proving this theorem.
+
+\begin{theorem}
+For $n\in \mathbb{N}$ and $a,b\in \mathbb{Z}$, $[a]_n = [b]_n$ if and only if $a$ and $b$ have the same remainder when divided by $n$. 
+\end{theorem}
+
+\begin{theorem}
+Let $n\in \mathbb{N}$ and let $a_1,a_2,b_1,b_2 \in \mathbb{Z}$. If $[a_1]_n = [a_2]_n$ and $[b_1]_n = [b_2]_n$, then 
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $[a_1+b_1]_n = [a_2+b_2]_n$, and
+\item $[a_1\cdot b_1]_n = [a_2\cdot b_2]_n$.\footnote{\emph{Hint:} For part~(a), make use of Theorem~\ref{thm:cong classes equal}. For part~(b), note that $a_1b_1-a_2b_2 = a_1b_1 -a_2b_1 + a_2b_1-a_2b_2$.}
+\end{enumerate}
+\end{theorem}
+
+The previous theorem allows us to define addition and multiplication in $\mathbb{Z}/n\mathbb{Z}$. 
+
+\begin{definition}\label{def:modular arithmetic}
+Let $n\in \mathbb{N}$. We define the sum and product of congruence classes in $\mathbb{Z}/n\mathbb{Z}$ via
+\[
+[a]_n + [b]_n\coloneqq [a+b]_n \quad \text{and} \quad [a]_n \cdot [b]_n\coloneqq [a\cdot b]_n.
+\]
+\end{definition}
+
+\begin{example}
+By Definition~\ref{def:modular arithmetic}, $[2]_7+[6]_7 = [2+6]_7 = [8]_7$. By Theorem~\ref{thm:cong classes equal}, $[8]_7 = [1]_7$, and so $[2]_7+[6]_7 = [1]_7$. Similarly, $[2]_7\cdot[6]_7 = [2\cdot6]_7 = [12]_7 = [5]_7$.
+\end{example}
+
+Addition and multiplication for $\mathbb{Z}/n\mathbb{Z}$ has many familiar---and some not so familiar---properties. For example, addition and multiplication of congruence classes are both associative and commutative. However, it is possible for $[a]_n\cdot[b]_n = [0]_n$ even when $[a]_n \neq [0]_n$ and $[b]_n \neq [0]_n$.
+
+\begin{theorem}\label{thm:modular add comm assoc}
+If $n\in \mathbb{N}$, then addition in $\mathbb{Z}/n\mathbb{Z}$ is commutative and associative. That is, for all $[a]_n, [b]_n, [c]_n \in \mathbb{Z}/n\mathbb{Z}$, we have
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $[a]_n + [b]_n = [b]_n + [a]_n$, and
+\item\label{modular add assoc} $([a]_n + [b]_n) + [c]_n = [a]_n + ([b]_n + [c]_n)$. 
+\end{enumerate}
+\end{theorem}
+
+\begin{theorem}\label{thm:modular mult comm assoc}
+If $n\in \mathbb{N}$, then multiplication in $\mathbb{Z}/n\mathbb{Z}$ is commutative and associative. That is, for all $[a]_n, [b]_n, [c]_n \in \mathbb{Z}/n\mathbb{Z}$, we have
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $[a]_n \cdot [b]_n = [b]_n \cdot [a]_n$, and
+\item\label{modular mult assoc} $([a]_n \cdot [b]_n) \cdot [c]_n = [a]_n \cdot ([b]_n \cdot [c]_n)$.
+\end{enumerate}
+\end{theorem}
+
+One consequence of Theorems~\ref{thm:modular add comm assoc}\ref{modular add assoc} and \ref{thm:modular mult comm assoc}\ref{modular mult assoc} is that parentheses are not needed when adding or multiplying congruence classes.  The next theorem follows from Definition~\ref{def:modular arithmetic} together with Theorems~\ref{thm:modular add comm assoc}\ref{modular add assoc} and \ref{thm:modular mult comm assoc}\ref{modular mult assoc} and induction on $k$.
+
+\begin{theorem}\label{thm:modular sums products}
+Let $n\in \mathbb{N}$.  For all $k\in \mathbb{N}$, if $[a_1]_n,[a_2]_n,\ldots, [a_k]_n \in \mathbb{Z}/n\mathbb{Z}$, then 
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $[a_1]_n+[a_2]_n+\cdots+ [a_k]_n = [a_1 + a_2 +\cdots+ a_k]_n$, and
+\item $[a_1]_n [a_2]_n \cdots  [a_k]_n = [a_1 a_2 \cdots a_k]_n$.
+\end{enumerate}
+\end{theorem}
+
+The next result is a special case of Theorem~\ref{thm:modular sums products}(b).
+
+\begin{corollary}\label{cor:modular power}
+Let $n\in \mathbb{N}$. If $a\in\mathbb{Z}$ and $k\in \mathbb{N}$, then $([a]_n)^k = [a^k]_n$
+\end{corollary}
+
+\begin{example}
+Let's compute $[8^{179}]_7$.  We see that
+\begin{align*}
+[8^{179}]_7 & = ([8]_7)^{179} & (\text{Corollary~\ref{cor:modular power}})\\
+& = ([1]_7)^{179} & (\text{Theorem~\ref{thm:cong classes equal}})\\
+& = [1^{179}]_7 & (\text{Corollary~\ref{cor:modular power}})\\
+& = [1]_7.
+\end{align*}
+\end{example}
+
+\begin{problem}
+For each of the following, find a number $a$ with $0\le a \le 6$ such that the given quantity is equal to $[a]_7$.\footnote{\emph{Hint:} For part (a), use the fact that $[6]_7 = [-1]_7$. For part~(b), use the fact that $[2^3]_7 = [1]_7$.}
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $[6^{179}]_7$
+\item $[2^{300}]_7$
+\item $[2^{301} +5]_7$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Find $a$ and $b$ such that $[a]_6\cdot[b]_6 = [0]_6$ but $[a]_6 \neq [0]_6$ and $[b]_6 \neq [0]_6$. %Do the same in $\mathbb{Z}/15\mathbb{Z}$: find $a$ and $b$ such that $[a]_{15}\cdot[b]_{15} = [0]_{15}$ but $[a]_{15} \neq [0]_{15}$ and $[b]_{15} \neq [0]_{15}$.
+\end{problem}
+
+\begin{theorem}
+If $n\in \mathbb{N}$ such that $n$ is not prime, then there exists $[a]_n, [b]_n \in \mathbb{Z}/n\mathbb{Z}$ such that $[a]_n\cdot[b]_n = [0]_n$ while $[a]_n \neq [0]_n$ and $[b]_n \neq [0]_n$.
+\end{theorem}
+
+\begin{problem}
+Notice that $2x = 1$ has no solution in $\mathbb{Z}$. Show that $[2]_7[x]_7 = [1]_7$ does have a solution with $x$ in $\mathbb{Z}$. What about $[14]_7[x]_7 = [1]_7$?
+\end{problem}
+
+Make use of Theorem~\ref{thm:modular sums products}, Corollary~\ref{cor:modular power}, and Theorem~\ref{thm:cong classes equal} to prove the following theorem.
+
+\begin{theorem}
+If $m\in \mathbb{N}$ such that
+\[
+m=a_k10^k + a_{k-1}10^{k-1} + \cdots + a_110 + a_0,
+\]
+where $a_k, a_{k-1}, \ldots, a_1, a_0\in \{0,1,\ldots, 9\}$ (i.e., $a_k, a_{k-1}, \ldots, a_1, a_0$ are the digits of $m$), then
+\[
+[m]_3 =  [a_k + a_{k-1} + \cdots + a_1 + a_0]_3.
+\]
+\end{theorem}
+
+You likely recognize the next result. Its proof follows quickly from Corollary~\ref{cor:divisible iff zero mod} together with the previous theorem.
+
+\begin{theorem}
+An integer is divisible by $3$ if and only if the sum of its digits is divisible by $3$.
+\end{theorem}
+
+For the final problem of this chapter, let's revisit Theorem~\ref{thm:3^{2n}-1 div by 8}, which we originally proved by induction.
+
+\begin{problem}
+Use Corollary~\ref{cor:divisible iff zero mod} to prove that for all integers $n \ge 0$, $3^{2n}-1$ is divisible by $8$. You will need to handle the case involving $n=0$ separately.
+\end{problem}
+
+\end{section}

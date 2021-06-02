@@ -1,0 +1,363 @@
+\begin{section}{Injective and Surjective Functions}
+
+We now turn our attention to some important properties that a function may or may not possess. Recall that if $f$ is a function, then every element in its domain is mapped to a unique element in the range.  However, there are no restrictions on whether more than one element of the domain is mapped to the same element in the range. If each element in the range has a unique element in the domain mapping to it, then we say that the function is injective. Moreover, the range of a function is not required to be all of the codomain.  If every element of the codomain has at least one element in the domain that maps to it, then we say that the function is surjective.  Let's make these definitions a bit more precise.
+
+\begin{definition}
+Let $f:X\to Y$ be a function.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item The function $f$ is said to be \textbf{injective} (or \textbf{one-to-one}) if for all $y\in \range(f)$, there is a unique $x\in X$ such that $y=f(x)$.
+\item The function $f$ is said to be \textbf{surjective} (or \textbf{onto}) if for all $y\in Y$, there exists $x\in X$ such that $y=f(x)$.
+\item If $f$ is both injective and surjective, we say that $f$ is \textbf{bijective}.
+\end{enumerate}
+\end{definition}
+
+\begin{problem}
+Compare and contrast the following statements.  Do they mean the same thing?
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item For all $x\in X$, there exists a unique $y\in Y$ such that $f(x)=y$.
+\item For all $y\in \range(f)$, there is a unique $x\in X$ such that $y=f(x)$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Assume that $X$ and $Y$ are finite sets. Provide an example of each of the following.  You may draw a function diagram, write down a list of ordered pairs, or a write a formula as long as the domain and codomain are clear. 
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item A function $f:X\to Y$ that is injective but not surjective.
+\item A function $f:X\to Y$ that is surjective but not injective.
+\item A function $f:X\to Y$ that is a bijection.
+\item A function $f:X\to Y$ that is neither injective nor surjective.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Provide an example of each of the following.  You may either draw a graph or write down a formula.  Make sure you have the correct domain.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item A function $f:\mathbb{R}\to \mathbb{R}$ that is injective but not surjective.
+\item A function $f:\mathbb{R}\to \mathbb{R}$ that is surjective but not injective.
+\item A function $f:\mathbb{R}\to \mathbb{R}$ that is a bijection.
+\item A function $f:\mathbb{R}\to \mathbb{R}$ that is neither injective nor surjective.
+\item A function $f:\mathbb{N}\times\mathbb{N}\to \mathbb{N}$ that is injective.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Suppose $X\subseteq \mathbb{R}$ and $f:X\to \mathbb{R}$ is a function. Fill in the blank with the appropriate word.
+\begin{quote}
+The function $f:X\to \mathbb{R}$ is \underline{\ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ } if and only if every horizontal line hits the graph of $f$ \emph{at most once}.
+\end{quote}
+This statement is often called the \textbf{horizontal line test}.  Explain why the horizontal line test is true.
+\end{problem}
+
+\begin{problem}
+Suppose $X\subseteq \mathbb{R}$ and $f:X\to \mathbb{R}$ is a function. Fill in the blank with the appropriate word.
+\begin{quote}
+The function $f:X\to \mathbb{R}$ is \underline{\ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ } if and only if every horizontal line hits the graph of $f$ \emph{at least once}.
+\end{quote}
+Explain why this statement is true.
+\end{problem}
+
+\begin{problem}
+Suppose $X\subseteq \mathbb{R}$ and $f:X\to \mathbb{R}$ is a function. Fill in the blank with the appropriate word.
+\begin{quote}
+The function $f:X\to \mathbb{R}$ is \underline{\ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ } if and only if every horizontal line hits the graph of $f$ \emph{exactly once}.
+\end{quote}
+Explain why this statement is true.
+\end{problem}
+
+How do we prove that a function $f$ is injective? We would need to show that every element in the range has a unique element from the domain that maps to it. First, notice that each element in the range can be written as $f(x)$ for at least one $x$ in the domain.  To argue that each such element in domain is unique, we can suppose $f(x_{1})=f(x_{2})$ for arbitrary $x_1$ and $x_2$ in the domain and then work to show that $x_{1}=x_{2}$.  It is important to point out that when we suppose $f(x_{1})=f(x_{2})$ for some $x_1$ and $x_2$, we are not assuming that $x_1$ and $x_2$ are different. In general, when we write ``Let $x_1,x_2\in X$\ldots", we are leaving open the possibility that $x_1$ and $x_2$ are actually the same element. One could approach proving that a function is injective by utilizing a proof by contradiction, but this is not usually necessary.
+
+\begin{skeleton}[Proof that a function is injective]
+Here is the general structure for proving that a function is injective.
+\begin{center}
+\framebox{
+\begin{minipage}{6in}
+\vspace{.1in}
+\begin{proof}
+Assume $f:X\to Y$ is a function defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $f$]}.  Let $x_1,x_2\in X$ and suppose $f(x_1)=f(x_2)$.
+\begin{center}
+$\ldots$ \ \emph{[Use the definition (or property) of $f$ to verify that $x_1=x_2$]} \ $\ldots$
+\end{center}
+\noindent Therefore, the function $f$ is injective.
+\end{proof}
+\end{minipage}
+}
+\end{center}
+\end{skeleton}
+
+How do we prove that a function $f$ is surjective? We would need to argue that every element in the codomain is also in the range.  Sometimes, the proof that a particular function is surjective is extremely short, so don't second guess yourself if you find yourself in this situation.  
+
+\begin{skeleton}[Proof that a function is surjective]
+Here is the general structure for proving that a function is surjective.
+\begin{center}
+\framebox{
+\begin{minipage}{6in}
+\vspace{.1in}
+\begin{proof}
+Assume $f:X\to Y$ is a function defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $f$]}.  Let $y\in Y$.
+\begin{center}
+$\ldots$ \ \emph{[Use the definition (or property) of $f$ to find some $x\in X$ such that $f(x)=y$]} \ $\ldots$
+\end{center}
+\noindent Therefore, the function $f$ is surjective.
+\end{proof}
+\end{minipage}
+}
+\end{center}
+\end{skeleton}
+
+\begin{problem}\label{prob:injective surjective functions}
+Determine whether each of the following functions is injective, surjective, both, or neither.  In each case, you should provide a proof or a counterexample as appropriate.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Define $f:\mathbb{R}\to \mathbb{R}$ via $f(x)=x^{2}$
+\item Define $g:\mathbb{R}\to [0,\infty)$ via $g(x)=x^{2}$
+\item Define $h:\mathbb{R}\to \mathbb{R}$ via $h(x)=x^{3}$
+\item Define $k:\mathbb{R}\to \mathbb{R}$ via $k(x)=x^{3}-x$
+\item\label{circles} Define $c: \mathbb{R}\times \mathbb{R}\to \mathbb{R}$ via $c(x,y)=x^{2}+y^{2}$
+\item Define $f:\mathbb{N}\to \mathbb{N}\times \mathbb{N}$ via $f(n)=(n,n)$
+\item Define $g:\mathbb{Z}\to \mathbb{Z}$ via
+\[
+g(n)=\begin{cases}
+\frac{n}{2}, & \text{if }n\text{ is even}\\
+\frac{n+1}{2}, & \text{if }n\text{ is odd}\\
+\end{cases}
+\]
+\item Define $\ell:\mathbb{Z}\to \mathbb{N}$ via
+\[
+\ell(n)=\begin{cases}
+2n+1, & \text{if }n\geq 0\\
+-2n, & \text{if }n<0\\
+\end{cases}
+\]
+\item The function $h$ defined in Problem~\ref{prob:well defined}\ref{mod 10 to mod 10}.
+\item The function $k$ defined in Problem~\ref{prob:well defined}\ref{mod 43 to mod 43}.
+\item The function $\ell$ defined in Problem~\ref{prob:well defined}\ref{mod 15 to mod 15}.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Suppose $X$ and $Y$ are nonempty sets with $m$ and $n$ elements, respectively, where $m\leq  n$. How many injections are there from $X$ to $Y$?
+\end{problem}
+
+\begin{problem}
+Compare and contrast the definition of ``function" with the definition of ``injective function". Consider the vertical line test and horizontal line test in your discussion.  Moreover, attempt to capture what it means for a relation to not be a function and for a function to not be an injection by drawing portions of a digraph.
+\end{problem}
+
+The next two theorems should not come as as surprise.
+
+\begin{theorem}
+The inclusion map $\iota:X\to Y$ for $X\subseteq Y$ is an injection.
+\end{theorem}
+
+\begin{theorem}
+The identity function $i_X:X\to X$ is a bijection.
+\end{theorem}
+
+\begin{problem}
+Let $A$ and $B$ be nonempty sets and let $S$ be a nonempty subset of $A\times B$.  Define $\pi_{1}:S\to A$ and $\pi_{2}:S\to B$ via $\pi_{1}(a,b)=a$ and $\pi_{2}(a,b)=b$.  We call $\pi_{1}$ and $\pi_{2}$ the \textbf{projections} of $S$ onto $A$ and $B$, respectively.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Provide examples to show that $\pi_{1}$ does not need to be injective nor surjective.
+\item Suppose that $S$ is also a function. Is $\pi_{1}$ injective? Is $\pi_{1}$ surjective?  How about $\pi_{2}$?
+\end{enumerate}
+\end{problem}
+
+The next theorem says that if we have an equivalence relation on a nonempty set, the mapping that assigns each element to its respective equivalence class is a surjective function.  
+
+\begin{theorem}\label{thm:canonical projection}
+If $\sim$ is an equivalence relation on a nonempty set $A$, then the function $f:A\to A/\mathord\sim$ defined via $f(x)=[x]$ is a surjection.
+\end{theorem}
+
+The function from the previous theorem is sometimes called the \textbf{canonical projection map} induced by $\sim$.
+
+\begin{problem}
+Under what circumstances would the function from the previous theorem also be injective?
+\end{problem}
+
+Let's explore whether we can weaken the hypotheses of Theorem~\ref{thm:canonical projection}. 
+
+\begin{problem}
+Let $R$ be a relation on a nonempty set $A$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item What conditions on $R$ must hold in order for $f:A\to \Rel(R)$ defined via $f(a)=\rel(a)$ to be a function?
+\item What additional conditions, if any, must hold on $R$ in order for $f$ to be a surjective function?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Let $A$ be a nonempty set.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Suppose $R$ is an equivalence relation on $A$. Under what conditions is $R$ a function from $A$ to $A$?
+\item Suppose $f:A\to A$ is a function. Under what conditions is $f$ an equivalence relation on $A$?
+\end{enumerate}
+\end{problem}
+
+Given any function, we can define an equivalence relation on its domain, where the equivalence classes correspond to the elements that map to the same element of the range.
+
+\begin{theorem}\label{thm:equiv relation from inverse images}
+Let $f:X\to Y$ be a function and define $\sim$ on $X$ via $a\sim b$ if and only if $f(a) = f(b)$. Then $\sim$ is an equivalence relation on $X$.
+\end{theorem}
+
+It follows immediately from Theorem~\ref{thm:equiv yields partition2} that the equivalence classes induced by the equivalence relation in Theorem~\ref{thm:equiv relation from inverse images} partition the domain of a function.
+
+\begin{problem}\label{prob:equiv classes from inverse images}
+For each of the following, identify the equivalence classes induced by the relation from Theorem~\ref{thm:equiv relation from inverse images} for the given function.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item The function $f$ defined in Example~\ref{ex:function}.
+\item The function $c$ defined in Problem~\ref{prob:injective surjective functions}\ref{circles}.
+\end{enumerate}
+\end{problem}
+
+If $f$ is a function, the equivalence relation in Theorem~\ref{thm:equiv relation from inverse images} allows us to construct a bijective function whose domain is the set of equivalence classes and whose codomain coincides with the range of $f$.  This is an important idea that manifests itself in many areas of mathematics.  One such instance is the First Isomorphism Theorem for Groups, which is a fundamental theorem in a branch of mathematics called group theory.  When proving the following theorem, the first thing you should do is verify that the description for $\overline{f}$ is well defined.
+
+\begin{theorem}\label{thm:iso theorem for sets}
+Let $f:X\to Y$ be a function and define $\sim$ on $X$ as in Theorem~\ref{thm:equiv relation from inverse images}. 
+%via $a\sim b$ if and only if $f(a) = f(b)$.
+Then the function $\overline{f}:X/\mathord\sim\to \range(f)$ defined via $\overline{f}([a]) = f(a)$ is a bijection.
+\end{theorem}
+
+Here is an analogy for helping understand the content of Theorem~\ref{thm:iso theorem for sets}.  Suppose we have a collection airplanes filled with passengers and a collection of potential destination cities such that at most one airplane may land at each city.  The function $f$ indicates which city each passenger lands at while the function $\overline{f}$ indicates which city each airplane lands at.  Moreover, the codomain for the function $\overline{f}$ consists only of the cities that an airplane lands at.
+
+\begin{example}
+Let $X=\{a,b,c,d,e,f\}$ and $Y=\{1,2,3,4,5\}$ and define $\varphi:X\to Y$ via
+\[
+\varphi=\{(a,1),(b,1),(c,2),(d,4),(e,4),(f,4)\}.
+\]
+The function diagram for $\varphi$ is given in Figure~\ref{fig:passengers and airplanes}\subref{fig:passengers}, where we have highlighted the elements of the domain that map to the same element in the range by enclosing them in additional boxes.  We see that $\range(\varphi)=\{1,2,4\}$. The function diagram for the induced map $\overline{\varphi}$ that is depicted in Figure~\ref{fig:passengers and airplanes}\subref{fig:airplanes} makes it clear that $\overline{\varphi}$ is a bijection.  Note that since $\varphi(a)=\varphi(b)$ and $\varphi(d)=\varphi(e)=\varphi(f)$, it must be the case that $[a]=[b]$ and $[d]=[e]=[f]$ according to Theorem~\ref{thm:related if and only if same class}.  Thus, the vertices labeled as $[a]$ and $[d]$ in Figure~\ref{fig:passengers and airplanes}\subref{fig:airplanes} could have also been labeled as $[b]$ and $[c]$ or $[d]$, respectively.  In terms of our passengers and airplanes analogy, $X=\{a,b,c,d,e,f\}$ is the set of passengers, $Y=\{1,2,3,4,5\}$ is the set of potential destination cities, $X/\mathord\sim=\{[a],[c],[d]\}$ is the set of airplanes, and $\range(\varphi)=\{1,2,4\}$ is the set of cities that airplanes land at.  The equivalence class $[a]$ is the airplane containing the passenger $a$, and since $a$ and $b$ are on the same plane, $[b]$ is also the plane containing the passenger $a$.
+\end{example}
+
+\tikzset{every loop/.style={min distance=8mm}}
+\tikzstyle{vert} = [circle, draw, fill=grey,inner sep=0pt, minimum size=5mm]
+\tikzstyle{b} = [draw,-stealth]
+
+\begin{figure}[h!]
+\centering
+\subcaptionbox{\label{fig:passengers}}[.48\linewidth]{
+\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2cm,semithick,scale=1.2]
+
+\node[vert] (A) at (0,6) {\scriptsize $a$};
+\node[vert] (B) at (0,5) {\scriptsize $b$};
+\node[vert] (C) at (0,4) {\scriptsize $c$};
+\node[vert] (D) at (0,3) {\scriptsize $d$};
+\node[vert] (E) at (0,2) {\scriptsize $e$};
+\node[vert] (F) at (0,1) {\scriptsize $f$};
+
+\node[vert] (1) at (2.5,5.5) {\scriptsize $1$};
+\node[vert] (2) at (2.5,4.5) {\scriptsize $2$};
+\node[vert] (3) at (2.5,3.5) {\scriptsize $3$};
+\node[vert] (4) at (2.5,2.5) {\scriptsize $4$};
+\node[vert] (5) at (2.5,1.5) {\scriptsize $5$};
+
+\path (A) edge node {} (1)
+(B) edge node {} (1)
+(C) edge node {} (2)
+(D) edge node {} (4)
+(E) edge node {} (4)
+(F) edge node {} (4);
+
+\node[draw,rounded corners,fit=(A) (B) (C) (D) (E) (F),minimum width=1.3cm,minimum height=7.25cm,gray] {};
+\node[draw,rounded corners,fit=(1) (2) (3) (4) (5),minimum width=1.3cm,gray] {};
+\node[draw,rounded corners,fit=(A) (B),minimum width=.9cm,gray] {};
+\node[draw,rounded corners,fit=(C),minimum width=.9cm,gray] {};
+\node[draw,rounded corners,fit=(D) (E) (F),minimum width=.9cm,gray] {};
+\node (X) at (0,6.75) {$X$};
+\node (Y) at (2.5,6.1) {$Y$};
+\path (X) edge [bend left] node {$\varphi$} (Y);
+\end{tikzpicture}
+}
+\subcaptionbox{\label{fig:airplanes}}[.48\linewidth]{
+\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2cm,semithick,scale=1.2]
+
+\node[vert] (A) at (0,3) {\scriptsize $[a]$};
+\node[vert] (B) at (0,2) {\scriptsize $[c]$};
+\node[vert] (C) at (0,1) {\scriptsize $[d]$};
+
+\node[vert] (1) at (2.5,3) {\scriptsize $1$};
+\node[vert] (2) at (2.5,2) {\scriptsize $2$};
+\node[vert] (3) at (2.5,1) {\scriptsize $4$};
+
+\node at (0,-.89) {};
+
+\path (A) edge node {} (1)
+(B) edge node {} (2)
+(C) edge node {} (3);
+
+\node[draw,rounded corners,fit=(A) (B) (C),minimum width=1.3cm,gray] {};
+\node[draw,rounded corners,fit=(1) (2) (3),minimum width=1.3cm,gray] {};
+\node (X) at (0,3.6) {$X/\mathord\sim$};
+\node (Y) at (2.5,3.6) {$\range(\varphi)$};
+\path (X) edge [bend left] node {$\overline{\varphi}$} (Y);
+\end{tikzpicture}
+}
+\caption{Example of a visual representation of Theorem~\ref{thm:iso theorem for sets}.}\label{fig:passengers and airplanes}
+\end{figure}
+
+\begin{problem}\label{prob:iso theorem for sets}
+Consider the equivalence classes you identified in parts (a) and (b) of Problem~\ref{prob:equiv classes from inverse images}.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Draw the function diagram for the function $\overline{f}$ as defined in Theorem~\ref{thm:iso theorem for sets}, where $f$ is the function defined in Example~\ref{ex:function}.
+\item\label{prob:iso theorem for sets b} Describe the function $\overline{c}$ as defined in Theorem~\ref{thm:iso theorem for sets}, where $c$ is the function defined in Problem~\ref{prob:injective surjective functions}\ref{circles}.
+\end{enumerate}
+\end{problem}
+
+While perhaps not surprising, Problem~\ref{prob:iso theorem for sets}\ref{prob:iso theorem for sets b} tells us that there is a one-to-one correspondence between circles centered at the origin and real numbers.
+
+\begin{problem}\label{prob:Z to Z mod 4}
+Let $Y=\{0,1,2,3\}$ and define the function $f:\mathbb{Z}\to Y$ such that $f(n)$ equals the unique remainder obtained after dividing $n$ by 4. For example, $f(11)=3$ since $11=4\cdot 2+3$ according to the Division Algorithm (Theorem~\ref{thm:DivisonAlgorthm}). This function is sometimes written as $f(n)=n \pmod{4}$, where it is understood that we restrict the output to $\{0,1,2,3\}$. It is clear that $f$ is surjective since 0, 1, 2, and 3 are mapped to 0, 1, 2, and 3, respectively.  Figure~\ref{fig:Z to Z mod 4} depicts a portion of the function diagram for $f$, where we have drawn the diagram from the top down instead of left to right.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Describe the equivalence classes induced by the relation given in Theorem~\ref{thm:equiv relation from inverse images}.
+\item What familiar set is $\mathbb{Z}/\mathord\sim$ equal to?
+\item Draw the function diagram for the function $\overline{f}$ as defined in Theorem~\ref{thm:iso theorem for sets}.
+\item The function diagram in Figure~\ref{fig:Z to Z mod 4} is a bit hard to interpret due to the ordering of the elements in the domain.  Can you find a better way to lay out the vertices in the domain that makes the function $f$ easier to interpret?
+%\item Find a formula for the function $\overline{f}$.
+\end{enumerate}
+\end{problem}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2cm,semithick,scale=1.2]
+
+\node[vert] (A) at (4,0) {\scriptsize $4$};
+\node[vert] (B) at (3,0) {\scriptsize $3$};
+\node[vert] (C) at (2,0) {\scriptsize $2$};
+\node[vert] (D) at (1,0) {\scriptsize $1$};
+\node[vert] (E) at (0,0) {\scriptsize $0$};
+\node[vert] (F) at (-1,0) {\scriptsize $-1$};
+\node[vert] (G) at (-2,0) {\scriptsize $-2$};
+\node[vert] (H) at (-3,0) {\scriptsize $-3$};
+\node (I) at (-3.5,0) {\scriptsize $\cdots$};
+\node (J) at (4.5,0) {\scriptsize $\cdots$};
+
+\node[vert] (0) at (-1,-2.5) {\scriptsize $0$};
+\node[vert] (1) at (0,-2.5) {\scriptsize $1$};
+\node[vert] (2) at (1,-2.5) {\scriptsize $2$};
+\node[vert] (3) at (2,-2.5) {\scriptsize $3$};
+
+\path (A) edge node {} (0)
+(B) edge node {} (1)
+(C) edge node {} (2)
+(D) edge node {} (3)
+(E) edge node {} (0)
+(F) edge node {} (1)
+(G) edge node {} (2)
+(H) edge node {} (3);
+
+\node[draw,rounded corners,fit=(A) (B) (C) (D) (E) (F) (F) (H) (I) (J),minimum height=1.3cm,gray] {};
+\node[draw,rounded corners,fit=(0) (1) (2) (3),minimum height=1.3cm,gray] {};
+\node (X) at (5.2,0) {$\mathbb{Z}$};
+\node (Y) at (2.6,-2.5) {$Y$};
+\path (X) edge [bend left] node {$f$} (Y);
+%\node (X) at (-4.2,0) {$\mathbb{Z}$};
+%\node (Y) at (-1.7,-2.5) {$Y$};
+%\path (X) edge [bend right] node[left] {$f$} (Y);
+\end{tikzpicture}
+\caption{Function diagram for the function described in Problem~\ref{prob:Z to Z mod 4}.}\label{fig:Z to Z mod 4}
+\end{figure}
+
+\begin{problem}
+Consider the function $h$ defined in Problem~\ref{prob:well defined}\ref{mod 10 to mod 10}.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Draw the function diagram for $h$.
+\item Identify the equivalence classes induced by the relation given in Theorem~\ref{thm:equiv relation from inverse images}.
+\item Draw the function diagram for the function $\overline{h}$ as defined in Theorem~\ref{thm:iso theorem for sets}.
+\end{enumerate}
+\end{problem}
+
+\end{section}

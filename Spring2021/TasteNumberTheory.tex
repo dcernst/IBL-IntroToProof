@@ -7,7 +7,7 @@ Here are a few small tips to get you started with the proofs that you will write
 \item You should indicate where your proof begins by writing ``\emph{Proof.}".
 \item Make it clear to yourself and the reader what your assumptions are at the very beginning of your proof. Typically, these statements will start off ``Assume\ldots" or ``Let\ldots". Sometimes there will be some implicit assumptions that we can omit, but at least in the beginning, you should get in the habit of stating your assumptions up front. 
 \item Carefully consider the order in which you write your proof. Loosely speaking, each sentence should follow from an earlier sentence in your proof or possibly a result you have already proved.
-\item If something follows from a definition or previous result, you should say so.  For example, you could write, ``By the definition of divides (Definition~\ref{def:divides}), it follows that\ldots" or ``By the theorem that states that if $n$ is an even integer, $n^2$ is also an even integer, we see that\ldots". While it is preferable to give the reader an indication of the content of the result you are citing, it is common to simply cite things by number. For example, you might write, ``By Definition~2.1, it follows that\ldots" or ``According to Theorem~2.2, we see that\ldots".  One thing worth pointing out is that if we are citing a definition, theorem, or problem by number, we should capitalize Definition, Theorem, or Problem, respectively (e.g., ``According to Theorem~2.2"). Otherwise, we do not capitalize these words (e.g., ``By the definition of divides").
+\item If something follows from a definition or previous result, you should say so.  One way to do this is to cite things by number.  For example, you might write, ``By Definition~2.1, it follows that\ldots" or ``According to Theorem~2.2, we see that\ldots".
 \item Similar to making it clear where your proof begins, you should indicate where it ends.  It is common to conclude a proof with the standard ``proof box" ($\square$ or $\blacksquare$).  This little square at end of a proof is sometimes called a \textbf{tombstone} or \textbf{Halmos symbol} after Hungarian-born American mathematician Paul Halmos (1916--2006).
 \end{itemize}
 
@@ -19,7 +19,7 @@ The collection of positive integers also have a special name.  The set of \textb
 \[
 \boxed{\mathbb{N}\coloneqq \{1,2,3,\ldots\}}.
 \]
-Some mathematicians (set theorists, in particular) include $0$ in $\mathbb{N}$, but this will not be our convention. If you look closely at the two sets we defined above, you will notice that we wrote $\boxed{\coloneqq }$ instead of $=$.  We use $\coloneqq $ to mean that the symbol or expression on the left is defined to be equal to the expression on the right.
+Some mathematicians (set theorists, in particular) include $0$ in $\mathbb{N}$, but this will not be our convention. If you look closely at the two sets we defined above, you'll notice that we wrote $\boxed{\coloneqq }$ instead of $=$.  We use $\coloneqq $ to mean that the symbol or expression on the left is defined to be equal to the expression on the right.
 
 Because you are so familiar with many of the properties of the integers, one of the issues that we will bump into is knowing which facts we can take for granted.  As a general rule of thumb, you should attempt to use the definitions provided without relying too much on your prior knowledge.  The order in which we develop things is important.
 
@@ -45,7 +45,7 @@ One crux in proving the next theorem involves figuring out how to describe an ar
 The sum of two consecutive integers is odd.
 \end{theorem}
 
-One skill we will want to develop is determining whether a given mathematical statement is true or false.  In order to verify that a mathematical statement is false, we should provide a specific example where the statement fails. Such an example is called a \textbf{counterexample}.  Notice that it is sufficient to provide a single example to verify that a general statement is not true.  On the other hand, if we want to prove that a general mathematical statement is true, it is usually not sufficient to provide just a single example, or even a hundred examples.  Such examples are just evidence that the statement is true.
+One skill we will want to develop is determining whether a given mathematical statement is true or false.  In order to verify that a mathematical statement is false, we should provide a specific example where the statement fails. Such an example is called a counterexample.  Notice that it is sufficient to provide a single example to verify that a general statement is not true.  On the other hand, if we want to prove that general mathematical statement is true, it is usually not sufficient to provide just a single example, or even a hundred examples.  Such examples are just evidence that the statement is true.
 
 \begin{problem}
 Determine whether each of the following statements is true or false.  If a statement is true, prove it. If a statement is false, provide a counterexample.
@@ -63,7 +63,7 @@ For the statements that were true in the previous problem, you may cite them lat
 %Did Theorem~\ref{thm:two consecutive ints} need to come before Problem~\ref{prob:sum of even and odd}?  Could we have used Problem~\ref{prob:sum of even and odd} to prove Theorem~\ref{thm:two consecutive ints}?  If so, outline how this alternate proof would go.  Perhaps your original proof utilized the approach I'm hinting at.  If this is true, can you think of a proof that does not rely directly on Problem~\ref{prob:sum of even and odd}?  Is one approach better than the other?
 %\end{problem}
 
-\begin{definition}\label{def:divides}
+\begin{definition}
 Given $n,m\in\mathbb{Z}$, we say that $n$ \textbf{divides} $m$, written $\boxed{n|m}$, if there exists $k\in\mathbb{Z}$ such that $m=nk$. If $n|m$, we may also say that $m$ \textbf{is divisible by} $n$.
 \end{definition}
 
@@ -82,10 +82,10 @@ In this section on number theory, we allow addition, subtraction, and multiplica
 The sum of any three consecutive integers is always divisible by three.
 \end{theorem}
 
-\begin{problem}\label{prob:divisibility examples}
+\begin{problem}
 Let $a, b,n, m\in\mathbb{Z}$. Determine whether each of the following statements is true or false.  If a statement is true, prove it. If a statement is false, provide a counterexample.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item\label{prob:first divisibility example} If $a|n$, then $a|mn$.
+\item If $a|n$, then $a|mn$.
 \item If 6 divides $n$, then 2 divides $n$ and 3 divides $n$.
 \item If $ab$ divides $n$, then $a$ divides $n$ and $b$ divides $n$.
 \end{enumerate}
@@ -107,16 +107,14 @@ If $a,n\in\mathbb{Z}$ such that $a$ divides $n$, then $a$ divides $-n$.
 If $a,n,m\in\mathbb{Z}$ such that $a$ divides $m$ and $a$ divides $n$, then $a$ divides $m+n$. 
 \end{theorem}
 
-Notice that we have been tinkering with statements of the form ``If\ldots, then\ldots". Statements of this form are called \textbf{conditional propositions}, which we revisit in the next section.  The phrase that occurs after ``If" but before ``then" is called the \textbf{hypothesis} while the phrase that occurs after ``then" is called the \textbf{conclusion}.  For example, in Problem~\ref{prob:divisibility examples}\ref{prob:first divisibility example}, ``$a|n$" is the hypothesis while ``$a|mn$" is the conclusion.  Note that conditional propositions can also be written in the form ``\ldots if \ldots", where the conclusion is written before ``if" and the hypothesis after. For example, we can rewrite Problem~\ref{prob:divisibility examples}\ref{prob:first divisibility example} as ``$a|mn$ if $a|n$".  While the order of the hypothesis and conclusion have been reversed in the sentence, their roles have not.
-
-Whenever we encounter a conditional statement in mathematics, we want to get in the habit of asking ourselves what happens when we swap the roles of the hypothesis and the conclusion.  The statement that results from reversing the roles of the hypothesis and conclusion in a conditional statement is called the \textbf{converse} of the original statement.  For example, the converse of Problem~\ref{prob:divisibility examples}\ref{prob:first divisibility example} is ``If $a|mn$, then $a|n$", which happens to be false. The converse of Theorem~\ref{thm:n even implies n^2 even} is ``If $n^2$ is an even integer, then $n$ is an even integer". While this statement is true it does \emph{not} have the same meaning as Theorem~\ref{thm:n even implies n^2 even}. 
+Notice that we have been tinkering with statements of the form ``If\ldots, then\ldots." Statements of this form are called \textbf{conditional propositions}, which we revisit in the next section.  The phrase that occurs after ``If" but before ``then" is called the \textbf{hypothesis} while the phrase that occurs after ``then" is called the \textbf{conclusion}.  Whenever we encounter a conditional statement in mathematics, we want to get in the habit of asking ourselves what happens when we swap the order of the hypothesis and the conclusion.  The statement that results from reversing the hypothesis and conclusion in a conditional statement is called the \textbf{converse} of the original statement.  %The next problem asks us to determine whether the converse of Corollary~\ref{cor:a divs n implies a divs n^2} is true.
 
 \begin{problem}
 Determine whether the converse of each of Corollary~\ref{cor:a divs n implies a divs n^2}, Theorem~\ref{thm:divides negative}, and Theorem~\ref{thm:divides sum} is true.  That is, for $a,n,m\in\mathbb{Z}$, determine whether each of the following statements is true or false. If a statement is true, prove it. If a statement is false, provide a counterexample.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item If $a$ divides $n^2$, then $a$ divides $n$. (Converse of Corollary~\ref{cor:a divs n implies a divs n^2})
-\item If $a$ divides $-n$, then $a$ divides $n$. (Converse of Theorem~\ref{thm:divides negative})
-\item If $a$ divides $m+n$, then $a$ divides $m$ and $a$ divides $n$. (Converse of Theorem~\ref{thm:divides sum})
+\item If $a$ divides $n^2$, then $a$ divides $n$.
+\item If $a$ divides $-n$, then $a$ divides $n$.
+\item If $a$ divides $m+n$, then $a$ divides $m$ and $a$ divides $n$.
 \end{enumerate}
 \end{problem}
 

@@ -1,0 +1,29 @@
+\begin{section}{The Infinitude of Primes}
+
+The highlight of this section is Theorem~\ref{thm:infprimes}, which states that there are infinitely many primes. The first known proof of this theorem is in Euclid's \emph{Elements} (c.\ 300 BCE). Euclid stated it as follows: 
+\begin{quote}
+\textbf{Proposition IX.20.} Prime numbers are more than any assigned multitude of prime numbers.
+\end{quote}
+There are a few interesting observations to make about Euclid's proposition and his proof. First, notice that the statement of the theorem does not contain the word ``infinity.'' The Greek's were skittish about the idea of infinity. Thus, he proved that there were more primes than any given finite number. Today we'd say that they are infinite. In fact, Euclid proved that there are more than \emph{three} primes and concluded that there were more than any finite number. While you would lose points for such a proof in this class, we can forgive Euclid for this less-than-rigorous proof;  in fact, it is easy to turn his proof into the general one that you will give below. Lastly, Euclid's proof was geometric. He was viewing his numbers as line segments with integral length. The modern concept of number was not developed yet.
+
+Prior to tackling a proof of Theorem~\ref{thm:infprimes}, we need to prove a couple lemmas.  The proof of the first lemma is provided for you. 
+
+\begin{lemma}\label{lem:divisorsof1}
+The only natural number that divides $1$ is $1$.  
+\end{lemma}
+
+\begin{proof}
+Let $m$ be a natural number that divides $1$. We know that $m\geq 1$ because 1 is the smallest positive integer. Since $m$ divides $1$, there exists $k\in \mathbb{N}$ such that $1=mk$. Since $k\geq 1$, we see that $mk\geq m$.  But $1=mk$, and so $1\geq m$.  Thus, we have $1\leq m \leq 1$, which implies that $m=1$, as desired.
+\end{proof}
+
+\begin{lemma}\label{lem:plus1}
+Let $p$ be a prime number and let $n\in \mathbb{Z}$. If $p$ divides $n$, then $p$ does not divide $n+1$.\footnote{\emph{Hint:} Use a proof by contradiction and utilize the previous lemma.}
+\end{lemma}
+
+We are now ready to prove the following important theorem.
+
+\begin{theorem}\label{thm:infprimes}
+There are infinitely many prime numbers.\footnote{\emph{Hint:} Use a proof by contradiction. That is, assume that there are finitely many primes, say $p_1, p_2,\ldots,p_k$.  Consider the product of all of them and then add 1.}
+\end{theorem}
+
+\end{section}
