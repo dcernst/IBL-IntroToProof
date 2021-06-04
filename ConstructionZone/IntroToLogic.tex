@@ -1,9 +1,9 @@
 \begin{section}{Introduction to Logic}\label{sec:Intro to Logic}
 
-After getting our feet wet in the previous section, let's take a step back and do a more careful examination of what it is we are actually doing.
+In the previous section, we jumped in head first and attempted to prove several theorems in the context of number theory without a formal understanding of what it was we were doing. Likely, many issues bubbled to the surface. What is a proof? What sorts of statements require proof? What should a proof entail?  How should a proof be structured? Let's take a step back and do a more careful examination of what it is we are actually doing. In the the next two sections, we will introduce the basics of \textbf{propositional logic}---also referred to as \textbf{propositional calculus} or sometimes \textbf{zeroth-order logic}.
 
 \begin{definition}
-A \textbf{proposition} (or \textbf{statement}) is a sentence that is either true or false but not both. The \textbf{truth value} (or \textbf{logical value}) of a proposition refers to its attribute of being true or false.
+A \textbf{proposition} is a sentence that is either true or false but never both. The \textbf{truth value} (or \textbf{logical value}) of a proposition refers to its attribute of being true or false.
 \end{definition}
 
 For example, the sentence ``All dogs have four legs''~is a false proposition.  However, the perfectly good sentence ``$x=1$'' is \emph{not} a proposition all by itself since we don't actually know what $x$ is.
@@ -17,11 +17,15 @@ For example, the sentence ``All dogs have four legs''~is a false proposition.  H
 \item For all real numbers $x$, $x^2=4$.
 \item $\sqrt{2}$ is an irrational number.
 \item $p$ is prime.
+\item Is it raining?
+\item It will rain tomorrow.
 \item Led Zeppelin is the best band of all time.
 \end{enumerate}
 \end{problem}
 
-Given two propositions, we can form more complicated propositions using logical connectives.
+The last two sentences in the previous problems may stir debate. It is not so important that we come to consensus as to whether either of these two sentences is actually a proposition or not. The good news is that in mathematics we do not encounter statements whose truth value is dependent on either the future or opinion.
+
+Given two propositions, we can form more complicated propositions using \textbf{logical connectives}.
 
 \begin{definition}\label{def:logical connectives}
 Let $A$ and $B$ be propositions.  
@@ -29,7 +33,7 @@ Let $A$ and $B$ be propositions.
 \item The proposition ``\textbf{not $A$}" is true if $A$ is false; expressed symbolically as $\boxed{\neg A}$ and called the \textbf{negation} of $A$.
 \item The proposition ``\textbf{$A$ and $B$}'' is true if both $A$ and $B$ are true; expressed symbolically as $\boxed{A \wedge B}$ and called the \textbf{conjunction} of $A$ and $B$.
 \item The proposition ``\textbf{$A$ or $B$}'' is true if at least one of $A$ or $B$ is true; expressed symbolically as $\boxed{A \vee B}$ and called the \textbf{disjunction} of $A$ and $B$.
-\item\label{def:conditional} The proposition ``\textbf{If $A$, then $B$}'' is true if both $A$ and $B$ are true, or $A$ is false; expressed symbolically as $\boxed{A \implies B}$ and called a \textbf{conditional proposition} (or \textbf{implication}). In this case, $A$ is called the \textbf{hypothesis} and $B$ is called the \textbf{conclusion}. Note that $A \implies B$ may also be read as ``$A$ implies $B$", ``$A$ only if $B$", or ``$B$ if $A$". 
+\item\label{def:conditional} The proposition ``\textbf{If $A$, then $B$}'' is true if both $A$ and $B$ are true, or $A$ is false; expressed symbolically as $\boxed{A \implies B}$ and called a \textbf{conditional proposition} (or \textbf{implication}). In this case, $A$ is called the \textbf{hypothesis} and $B$ is called the \textbf{conclusion}. Note that $A \implies B$ may also be read as ``$A$ implies $B$", ``$A$ only if $B$", ``$B$ if $A$", or ``$B$ whenever $A$". 
 \item\label{def:logically equivalent} The proposition ``\textbf{$A$ if and only if $B$}" is true if both $A$ and $B$ have the same truth value; expressed symbolically as $\boxed{A\iff B}$. If $A\iff B$ is true, we say that $A$ and $B$ are \textbf{logically equivalent}.
 \end{enumerate}
 \end{definition}
@@ -58,7 +62,7 @@ A \textbf{truth table} for a compound proposition is a table that illustrates al
 \end{definition}
 
 \begin{example}
-If $A$ and $B$ are propositions, then the truth table for the conjunction $A\wedge B$ is given by the following.
+If $A$ and $B$ are propositions, then the truth table for the compound proposition $A\wedge B$ is given by the following.
 \begin{center}
 \begin{tabular}{@{}ccc@{}}
 \toprule
@@ -94,7 +98,7 @@ A coach promises her players, ``If we win tonight, then I will buy you pizza tom
 Use Definition~\ref{def:logical connectives}\ref{def:conditional} to construct a truth table for $A \implies B$. Compare your truth table with Problem~\ref{prob:coach lie}. The combination you should pay particular attention to is when the hypothesis is false while the conclusion is true.
 \end{problem}
 
-In accordance with Definition~\ref{def:logical connectives}\ref{def:conditional}, a conditional proposition $A\implies B$ is only false when the hypothesis is true and the conclusion is false.  Perhaps you are bothered by the fact that $A\implies B$ is true when $A$ is false no matter what the truth value of $B$ is.  The thing to keep in mind is that the truth value of $A\implies B$ relies on a very specific definition and may not always agree with the colloquial use of ``If\ldots, then\ldots" statements that we encounter in everyday language. For example, if someone says, ``If you break the rules, then you will be punished", the speaker likely intends the statement to be interpreted as ``You will be punished if and only if you break the rules." In logic and mathematics, we aim to remove such ambiguity by explicitly saying exactly what we mean.
+In accordance with Definition~\ref{def:logical connectives}\ref{def:conditional}, a conditional proposition $A\implies B$ is only false when the hypothesis is true and the conclusion is false.  Perhaps you are bothered by the fact that $A\implies B$ is true when $A$ is false no matter what the truth value of $B$ is.  The thing to keep in mind is that the truth value of $A\implies B$ relies on a very specific definition and may not always agree with the colloquial use of ``If\ldots, then\ldots" statements that we encounter in everyday language. For example, if someone says, ``If you break the rules, then you will be punished", the speaker likely intends the statement to be interpreted as ``You will be punished if and only if you break the rules." In logic and mathematics, we aim to remove such ambiguity by explicitly saying exactly what we mean. For our purposes, we should view conditional propositions as contracts or obligations.  If the hypothesis is false and the conclusion is true, the contract is not violated. On the other hand, if the hypothesis is true and the conclusion is false, then the contract is broken.
 
 We can often prove facts concerning logical statements using truth tables.  Recall that two propositions $P$ and $Q$ (both of which might be complicated compound propositions) are logically equivalent if $P\iff Q$ is true (see Definition~\ref{def:logical connectives}\ref{def:logically equivalent}). This happens when $P$ and $Q$ have the same truth value. We can verify whether $P$ and $Q$ have the same truth value by constructing a truth table that includes columns for each of the components of $P$ and $Q$, listing all possible combinations of their truth values, together with columns for $P$ and $Q$ that lists their resulting truth values.  If the truth values in the columns for $P$ and $Q$ agree, then $P$ and $Q$ are logically equivalent, and otherwise they are not logically equivalent.  When constructing truth tables to verify whether $P$ and $Q$ are logically equivalent, you should add any necessary intermediate columns to aid in your ``calculations". Use truth tables when attempting to justify the next few problems.
 
@@ -102,7 +106,7 @@ We can often prove facts concerning logical statements using truth tables.  Reca
 If $A$ is a proposition, then $\neg(\neg A)$ is logically equivalent to $A$.
 \end{theorem}
 
-The next theorem, referred to as DeMorgan's Law, provides a method for negating a conjunction.
+The next theorem, referred to as \textbf{DeMorgan's Law}, provides a method for negating a compound proposition involving a conjunction.
 
 \begin{theorem}[DeMorgan's Law]\label{thm:demorgan}
 If $A$ and $B$ are propositions, then $\neg(A \wedge B)$ is logically equivalent to $\neg A \vee \neg B$.
@@ -115,7 +119,7 @@ Let $A$ and $B$ be propositions.  Conjecture a statement similar to Theorem~\ref
 We will make use of both versions DeMorgan's Law on on a regular basis. Sometimes conjunctions and disjunctions are ``buried" in a mathematical statement, which makes negating statements tricky business. Keep this in mind when approaching the next problem.
 
 \begin{problem}\label{prob:negation}
-Let $x$ be your favorite real number.  Negate each of the following statements.  Note that the statement in part (b) is cleverly disguised as a conjunction.
+Let $x$ be your favorite real number.  Negate each of the following statements.  Note that the statement in part~(b) involves a conjunction.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $x<-1$ or $x\geq 3$.
 \item $0\leq x< 1$.
@@ -219,7 +223,7 @@ $\ldots$ \ \emph{[Use definitions and known results to derive $\neg A$]} \ $\ldo
 \end{center}
 \end{skeleton}
 
-We have introduced the logical symbols $\wedge$, $\vee$, $\implies$, $\iff$, and $\neg$ since is provides a convenient way of discussing the formality of logic.  However, when writing mathematical proofs, you should avoid using these symbols.
+We have introduced the logical symbols $\neg$, $\wedge$, $\vee$, $\implies$, and $\iff$  since is provides a convenient way of discussing the formality of logic.  However, when writing mathematical proofs, you should avoid using these symbols.
 
 \begin{problem}
 Consider the following statement:

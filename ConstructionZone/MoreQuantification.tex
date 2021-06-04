@@ -3,26 +3,28 @@
 When writing mathematical proofs, we do not explicitly use the symbolic representation of a given statement in terms of quantifiers and logical connectives.  Nonetheless, having this notation at our disposal allows us to compartmentalize the abstract nature of mathematical propositions and provides us with a way to talk about the general structure involved in the construction of a proof.
 
 \begin{definition}
-Two propositions are \textbf{logically equivalent in a given universe of discourse} if and only if they have the same truth value in that universe.  Two propositions are \textbf{logically equivalent} if and only if they are logically equivalent in every universe of discourse.
+%Two propositions are \textbf{logically equivalent in a given universe of discourse} if and only if they have the same truth value in that universe.  
+%Two quantified propositions are \textbf{logically equivalent} if and only if they are logically equivalent in every universe of discourse.
+Two quantified propositions are \textbf{logically equivalent} if and only if they have the same truth value in every universe of discourse.
 \end{definition}
 
 \begin{problem}
-Consider the propositions $(\exists x\in U)(x^2-4=0)$ and $(\exists x\in U)(x^2-2=0)$, where $U$ is the universe of discourse.  
+Consider the propositions $(\exists x\in U)(x^2-4=0)$ and $(\exists x\in U)(x^2-2=0)$, where $U$ is some universe of discourse.  
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item Are these propositions logically equivalent if the universe of discourse is the set of real numbers?
+\item Do these propositions have the same truth value if the universe of discourse is the set of real numbers?
 \item Provide an example of a universe of discourse such that the propositions yield different truth values.  
 \item What can you conclude about the logical equivalence of these propositions?
 \end{enumerate}
 \end{problem}
 
-It is worth pointing out an important distinction.  Consider the propositions ``All cars are red" and ``All natural numbers are positive".  Both of these are instances of the \textbf{logical form} $(\forall x)P(x)$.  It turns out that the first proposition is false and the second is true; however, it does not make sense to attach a truth value to the logical form.  A logical form is a blueprint for particular propositions.  If we are careful, it makes sense to talk about whether two logical forms are logically equivalent.  For example, $(\forall x)(P(x)\implies Q(x))$ is logically equivalent to $(\forall x)(\neg Q(x)\implies \neg P(x))$.  For fixed $P(x)$ and $Q(x)$, these two forms will always have the same truth value independent of the universe of discourse.  If you change $P(x)$ and $Q(x)$, then the truth value may change, but the two forms will still agree.
+It is worth pointing out an important distinction.  Consider the propositions ``All cars are red" and ``All natural numbers are positive".  Both of these are instances of the \textbf{logical form} $(\forall x)P(x)$.  It turns out that the first proposition is false and the second is true; however, it does not make sense to attach a truth value to the logical form.  A logical form is a blueprint for particular propositions.  If we are careful, it makes sense to talk about whether two logical forms are logically equivalent.  For example, $(\forall x)(P(x)\implies Q(x))$ is logically equivalent to $(\forall x)(\neg Q(x)\implies \neg P(x))$ since a conditional proposition is logically equivalent to its contrapositive (see Theorem~\ref{thm:contrapos}).  For fixed $P(x)$ and $Q(x)$, these two forms will always have the same truth value independent of the universe of discourse.  If you change $P(x)$ and $Q(x)$, then the truth value may change, but the two forms will still agree.
 
-The next theorem tells us how to negate logical forms involving quantifiers.
+The next theorem tells us how to negate logical forms involving quantifiers. Your proof should involve several mini arguments. For example, in part~(a), you will need to proof that if $\neg (\forall x)P(x)$ is true, then $(\exists x)(\neg P(x))$ is also true.
 
 \begin{theorem}\label{thm:negation of quantifiers}
-Let $P(x)$ be a predicate.  Then
+Let $P(x)$ be a predicate in some universe of discourse.  Then
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $\neg (\forall x)P(x)$ is logically equivalent to $(\exists x)(\neg P(x))$
+\item $\neg (\forall x)P(x)$ is logically equivalent to $(\exists x)(\neg P(x))$;
 \item $\neg (\exists x)P(x)$ is logically equivalent to $(\forall x)(\neg P(x))$.
 \end{enumerate}
 \end{theorem}
@@ -191,7 +193,7 @@ Note that if $Q(x)$ is a predicate for which $(\forall x)Q(x)$ is false, then a 
 It is important to point out that sometimes we will have to combine various proof techniques in a single proof.  For example, if you wanted to prove a proposition of the form $(\forall x)(P(x) \implies Q(x)$) by contradiction, we would start by assuming that there exists $x$ in the universe of discourse such that $P(x)$ and $\neg Q(x)$.
 
 \begin{problem}
-For each of the following statements, determine its truth value.  If the statement is false, provide a counterexample.  Prove at least two of the true statements.
+For each of the following statements, determine its truth value.  If the statement is true, prove it. If the statement is false, provide a counterexample.  
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item For all $n\in\mathbb{N}$, $n^2\geq 5$.
 \item There exists $n \in \mathbb{N}$ such that $n^2-1=0$.
@@ -204,10 +206,10 @@ For each of the following statements, determine its truth value.  If the stateme
 \end{enumerate}
 \end{problem}
 
-To prove the next theorem, you might want to consider two different cases.
+Sometimes it is useful to split the universe of discourse into multiple collections to deal with separately.  When doing this, it is important to make sure that your cases are exhaustive (i.e., every possible element of the universe of discourse has been accounted for).  Ideally, your cases will also be disjoint (i.e., you have not considered the same element more than once).  For example, if our universe of discourse is the set of integers, we can separately consider even versus odd integers. Attacking a proof in this way, is often referred to as a \textbf{proof by cases}. If you decide to approach a proof using cases, be sure to inform the reader that you are doing so and organize your proof in a sensible way. Note that doing an analysis of cases should be avoided if possible. For example, while it is valid to separately consider the cases of whether $a$ is an even or odd integer in the proof of Theorem~\ref{thm:divides sum}, it is completely unnecessary.  To prove the next theorem, you might want to consider two cases.
 
 \begin{theorem}
-For all integers, $3n^2+n+14$ is even.
+For all $n\in \mathbb{Z}$, $3n^2+n+14$ is even.
 \end{theorem}
 
 \end{section}
