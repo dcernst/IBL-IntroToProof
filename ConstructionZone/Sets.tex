@@ -6,11 +6,11 @@ A \textbf{set} is a collection of objects called \textbf{elements}. If $A$ is a 
 
 If we think of a set as a box potentially containing some stuff, then the empty set is a box with nothing in it. One assumption we will make is that for any set $A$, $A\notin A$. The language associated to sets is specific.  We will often define sets using the following notation, called \textbf{set-builder notation}:
 \[
-\boxed{S=\{x \in A\mid x \mbox{ satisfies some condition}\}}
+\boxed{S=\{x \in A\mid P(x)\}},
 \]
-The first part ``$x \in A$" denotes what type of $x$ is being considered.  The statements to the right of the vertical bar (not to be confused with ``divides") are the conditions that $x$ must satisfy in order to be members of the set.  This notation is read as ``The set of all $x$ in $A$ such that $x$ satisfies some condition,'' where ``some condition" is something specific about the restrictions on $x$ relative to $A$.
+where $P(x)$ is some predicate statement involving $x$. The first part ``$x \in A$" denotes what type of $x$ is being considered.  The predicate to the right of the vertical bar (not to be confused with ``divides") determines the condition(s) that each $x$ must satisfy in order to be a member of the set.  This notation is read as ``The set of all $x$ in $A$ such that $P(x)$." As an example, the set $\{x\in \mathbb{N}\mid x \mbox{ is even and }x\geq 8\}$ describes the collection of even natural numbers that are greater than or equal to 8.
 
-There are a few sets that are commonly discussed in mathematics and have predefined symbols to denote them. We've already encountered the integers, natural numbers, and real numbers. Notice that our definition of the rational numbers uses set-builder notation.
+There are a few sets that are commonly discussed in mathematics and have predefined symbols to denote them. We have already encountered the integers, natural numbers, and real numbers. Notice that our definition of the rational numbers uses set-builder notation.
 \begin{itemize}
 \item \textbf{Natural Numbers:} $\boxed{\mathbb{N}\coloneqq \{1,2,3,\ldots\}}$. Some books will include zero in the set of natural numbers, but we do not.
 \item \textbf{Integers:} $\boxed{\mathbb{Z}\coloneqq \{0, \pm 1, \pm2, \pm 3, \ldots\}}$.
@@ -20,22 +20,50 @@ There are a few sets that are commonly discussed in mathematics and have predefi
 Since the set of natural numbers consists of the positive integers, the natural numbers are sometimes denoted by $\mathbb{Z}^+$.
 
 \begin{problem}
-Unpack each of the following sets and see if you can find a simple description of the elements that each set contains.
+Unpack the meaning of each of the following sets and provide a description of the elements that each set contains.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 %\item $M=\{x \in \mathbb{R} \mid  x \geq 2 \}$
 \item $A=\{x \in \mathbb{N} \mid x = 3k \mbox{ for some } k\in \mathbb{N} \}$
-\item $B=\{t \in \mathbb{R} \mid t^2 \leq 2 \}$
+\item $B=\{t \in \mathbb{R} \mid t \leq 2 \mbox{ or } t\geq 7 \}$
 \item $C=\{t \in \mathbb{Z} \mid t^2 \leq 2 \}$
-\item $D=\{m \in \mathbb{R} \mid m = 1 - \frac{1}{n} \mbox{, where } n \in \mathbb{N} \}$
+\item $D=\{s \in \mathbb{Z} \mid -3<s\leq 5 \}$
+\item $E=\{m \in \mathbb{R} \mid m = 1 - \frac{1}{n} \mbox{, where } n \in \mathbb{N} \}$
 \end{enumerate}
 \end{problem}
 
-\begin{problem}
+\begin{problem}\label{prob:set-builder examples}
 Write each of the following sentences using set-builder notation.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item The set of all real numbers less than $-\sqrt{2}$. 
-\item The set of all real numbers greater than $-12$ and less than or equal to 42.
-\item The set of all even natural numbers.
+\item\label{prob:set-builder examples a} The set of all real numbers less than $-\sqrt{2}$. 
+\item\label{prob:set-builder examples b} The set of all real numbers greater than $-12$ and less than or equal to 42.
+\item The set of all even integers.
+\end{enumerate}
+\end{problem}
+
+Parts (a) and (b) of Problem~\ref{prob:set-builder examples} are examples of intervals.
+
+\begin{definition}
+For $a,b\in\mathbb{R}$ with $a<b$, we define the following sets, referred to as \textbf{intervals}.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\boxed{(a,b):=\{x\in\mathbb{R}\mid a<x<b\}}$
+\item $\boxed{[a,b]:=\{x\in\mathbb{R}\mid a\leq x\leq b\}}$
+\item $\boxed{[a,b):=\{x\in\mathbb{R}\mid a\leq x< b\}}$
+\item $\boxed{(a,\infty):=\{x\in\mathbb{R}\mid a<x\}}$
+\item $\boxed{(-\infty,b):=\{x\in\mathbb{R}\mid x<b\}}$
+\item $\boxed{(-\infty,\infty):=\mathbb{R}}$
+\end{enumerate}
+We analogously define $(a,b]$, $[a,\infty)$, and $(-\infty,b]$. Intervals of the form $(a,b)$, $(-\infty,b)$, $(a,\infty)$, and $(-\infty,\infty)$ are called \textbf{open intervals} while $[a,b]$, $(-\infty,b]$, $[a,\infty)$, and $(-\infty,\infty)$ are referred to as \textbf{closed intervals}. A \textbf{finite-length interval} is any interval of the form $(a,b)$, $[a,b)$, $(a,b]$, and $[a,b]$. For finite length intervals, $a$ and $b$ are called the \textbf{endpoints} of the interval. An \textbf{open interval} is any interval of the form $(a,b)$, $(a,\infty)$, or $(-\infty,b)$. A \textbf{closed interval} is any interval of the form $[a,b]$, $[a,\infty)$, or $(-\infty,b]$.
+\end{definition}
+
+We will always assume that any time we write $(a,b), [a,b], (a,b]$, or $[a,b)$ that $a<b$. Notice that the interval $(-\infty,\infty)$ is both an open and closed interval.
+%while the intervals $[a,b)$ and $(a,b]$ are neither open nor closed intervals. 
+We will see where the terminology of ``open" and ``closed" comes from in Section~\ref{sec:Topology}. 
+
+\begin{problem}
+Give an example of each of the following.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item An interval that is neither an open nor closed interval.
+\item An infinite set that is not an interval.
 \end{enumerate}
 \end{problem}
 
@@ -70,16 +98,22 @@ Suppose that $A$, $B$, and $C$ are sets.  If $A\subseteq B$ and $B\subseteq C$, 
 \end{theorem}
 
 \begin{definition}
+Two sets $A$ and $B$ are \textbf{equal}, denoted $\boxed{A=B}$, if and only if $A \subseteq B$ and $B \subseteq A$.
+\end{definition}
+
+Note that if we want to prove $A=B$, then we have to do two separate mini-proofs: one for $A\subseteq B$ and one for $B\subseteq A$. It is common to label each mini-proof with ``$(\subseteq)$" and ``$(\supseteq)$", respectively.
+
+\begin{definition}
 If $A\subseteq B$, then $A$ is called a \textbf{proper subset} provided that $A\neq B$.  In this case, we may write $\boxed{A\subset B}$ or $\boxed{A\subsetneq B}$.\footnote{\emph{Warning:} Some books use $\subset$ to mean $\subseteq$.}
 \end{definition}
 
 \begin{definition}
 Let $A$ and $B$ be sets in some universe of discourse $U$.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item The \textbf{union} of the sets $A$ and $B$ is $\boxed{A \cup B =\{x\in U \mid x\in A \mbox{ or } x\in B \}}$.
-\item The \textbf{intersection} of the sets $A$ and $B$ is $\boxed{A \cap B =\{x\in U \mid x\in A \mbox{ and } x\in B \}}$.
-\item The \textbf{set difference} of the sets $A$ and $B$ is $\boxed{A \setminus B =\{x\in U \mid x\in A \mbox{ and } x\notin B \}}$.
-\item The \textbf{complement of $A$} (relative to $U$) is the set $\boxed{A^c=U \setminus A =\{x \in U \mid x \notin A\}}$.
+\item The \textbf{union} of the sets $A$ and $B$ is $\boxed{A \cup B \coloneqq \{x\in U \mid x\in A \mbox{ or } x\in B \}}$.
+\item The \textbf{intersection} of the sets $A$ and $B$ is $\boxed{A \cap B \coloneqq\{x\in U \mid x\in A \mbox{ and } x\in B \}}$.
+\item The \textbf{set difference} of the sets $A$ and $B$ is $\boxed{A \setminus B \coloneqq\{x\in U \mid x\in A \mbox{ and } x\notin B \}}$.
+\item The \textbf{complement of $A$} (relative to $U$) is the set $\boxed{A^c\coloneqq U \setminus A =\{x \in U \mid x \notin A\}}$.
 \end{enumerate}
 \end{definition}
 
@@ -127,60 +161,33 @@ Suppose that the universe of discourse is $U=\mathbb{R}$.  Let $A=[-3,-1)$, $B=(
 \end{problem}
 
 \begin{theorem}
-Let $A$ and $B$ be sets.  If $A \subseteq B$, then $B^c \subseteq A^c$.
+If $A$ and $B$ are sets such that $A \subseteq B$, then $B^c \subseteq A^c$.
 \end{theorem}
-
-DEFINITION BELOW IS OUT OF PLACE SINCE PROPER SUBSET DEPENDS ON EQUALITY BEING DEFINED.
-
-\begin{definition}
-Two sets $A$ and $B$ are \textbf{equal}, denoted $\boxed{A=B}$, if and only if $A \subseteq B$ and $B \subseteq A$.
-\end{definition}
-
-Given two sets $A$ and $B$, if we want to prove $A=B$, then we have to do two separate mini-proofs: one for $A\subseteq B$ and one for $B\subseteq A$. It is common to label each mini-proof with ``$(\subseteq)$" and ``$(\supseteq)$", respectively.
-
-INCLUDE SKELETON PROOF HERE...
 
 \begin{theorem}
-Let $A$ and $B$ be sets.  Then $A\setminus B = A \cap B^c$.
+If $A$ and $B$ are sets, then $A\setminus B = A \cap B^c$.
 \end{theorem}
 
-For each of the next two theorems, you can choose to prove either part (a) or part (b). Of course, you are welcome to prove both parts, but you do not have to.
+%For each of the next two theorems, you can choose to prove either part (a) or part (b). Of course, you are welcome to prove both parts, but you do not have to.
+
+In Chapter~\ref{chap:IntroToMath}, we encountered DeMorgan's Law (see Theorem~\ref{thm:demorgan} and Problem~\ref{prop:demorgan}), which provided a method for negating compound propositions involving conjunctions and disjunctions.  The next theorem provides a method for taking the complement of unions and intersections of sets.  This result is also known as DeMorgan's Law. Do you see why?
 
 \begin{theorem}[DeMorgan's Law]
-Let $A$ and $B$ be sets. Then
+If $A$ and $B$ are sets, then
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $(A \cup B)^c = A^c \cap B^c$, and
 \item $(A \cap B)^c = A^c \cup B^c$.
 \end{enumerate}
 \end{theorem}
 
+The next theorem indicates how intersections and unions interact with each other.
+
 \begin{theorem}[Distribution of Union and Intersection]
-Let $A$, $B$, and $C$ be sets. Then
+If $A$, $B$, and $C$ are sets, then
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $A \cup(B\cap C) = (A\cup B)\cap (A\cup C)$, and
 \item $A\cap (B\cup C)= (A\cap B)\cup (A\cap C)$.
 \end{enumerate}
 \end{theorem}
-
-The following definitions likely look familiar.
-
-\begin{definition}[Interval Notation]
-For $a,b\in\mathbb{R}$ with $a<b$, we define the following.
-\begin{multicols}{2}
-\begin{enumerate}[label=\textrm{(\alph*)}]
-\item $(a,b)=\{x\in\mathbb{R}\mid a<x<b\}$
-\item $(a,\infty)=\{x\in\mathbb{R}\mid a<x\}$
-\item $(-\infty,b)=\{x\in\mathbb{R}\mid x<b\}$
-\item $[a,b]=\{x\in\mathbb{R}\mid a\leq x\leq b\}$
-\end{enumerate}
-\end{multicols}
-\noindent We analogously define $[a,b)$, $(a,b]$, $[a,\infty)$, and $(-\infty,b]$.
-\end{definition}
-
-ADD SOME PROBLEMS INVOLVING INTERVALS...
-
-%\begin{problem}
-%Provide two examples of proper subsets of the interval $[0,1]$.
-%\end{problem}
 
 \end{section}

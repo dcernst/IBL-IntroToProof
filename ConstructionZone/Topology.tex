@@ -1,205 +1,265 @@
-\begin{section}{Topology of $\mathbb{R}$}
+\begin{section}{Standard Topology of the Real Line}\label{sec:Topology}
 
 %should this be included?
 %\begin{proposition} 
 %Given a number $\varepsilon >0$, there exists a natural number $N$ such that $\frac{1}{N}<\varepsilon$.
 %\end{proposition}
 
-For this entire section, our universe of discourse is the set of real numbers.  You may assume all the usual basic algebraic properties of the real numbers (addition, subtraction, multiplication, division, commutative property, distribution, etc.).
+NEED INTRO...SOMETHING ABOUT WHAT TOPOLOGY IS. Mention convergence and continuity.
 
-Recall that an \textbf{axiom} is a statement that we \emph{assume} to be true.  Here are some useful axioms of the real numbers.
+
+For this entire section, our universe of discourse is the set of real numbers.  You may assume all the usual basic algebraic properties of the real numbers (addition, subtraction, multiplication, division, commutative property, distribution, etc.). We will often refer to an element in a subset of real numbers as a \textbf{point}.
+
+Recall that an \textbf{axiom} is a statement that we \emph{assume} to be true.  In this section, we introduce a few of the standard axioms of the real numbers. It follows immediately from the first axiom below that there are infinitely many real numbers between any pair of distinct real numbers.
 
 \begin{axiom} 
-If $p$ and $q$ are two different real numbers in $\mathbb{R}$, then there is a number between them.
+If $a,b\in\mathbb{R}$ such that $a<b$, then there exists $x\in\mathbb{R}$ such that $a<x<b$.
 \end{axiom}
 
 \begin{problem}
-Given real numbers $p$ and $q$ with $p<q$, construct a real number $x$ such that $p<x<q$.  We know such a point must exist by the previous axiom, but this problem is asking you to produce an actual candidate.
+Given real numbers $a$ and $b$ with $a<b$, construct a real number $x$ such that $a<x<b$.  We know such a point must exist by the previous axiom, but this problem is asking you to produce an actual candidate.
 \end{problem}
 
-\begin{axiom}[Linear ordering] If $a$, $b$, and $c$ are real numbers, then:
+\begin{axiom}[Linear Ordering]
+If $a,b,c\in\mathbb{R}$, then:
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item If $a < b$ and $b<c$, then $a<c$;
-\item Exactly one of the following is true: (i) $a < b$, (ii) $a=b$, or (iii) $a>b$.
+\item (Reflexivity) $a\leq a$;
+\item (Antisymmetry) If $a\leq b$ and $b\leq a$, then $a=b$;
+\item (Transitivity) If $a \leq b$ and $b\leq c$, then $a\leq c$;
+\item (Trichotomy Law) If $a\neq b$, then either $a<b$ or $b<a$ but not both.
 \end{enumerate}
 \end{axiom}
+
+Parts~(a), (b), and (c) of the of the previous axiom indicate that $\leq$ is a \textbf{partial order} on $\mathbb{R}$. The inclusion of Part~(d) forces $\leq$ to be a \textbf{linear ordering} (or \textbf{total ordering}) on $\mathbb{R}$.  This collection of assumptions allows us to visualize the set of real numbers as a number line.
+
+The following axiom tells us that every real number is an element of a finite-length open interval.
 
 \begin{axiom}
-If $p$ is a real number, then there exists $q,r\in\mathbb{R}$ such that $q<p<r$.
+If $x\in\mathbb{R}$, then there exists $a,b\in\mathbb{R}$ such that $a<x<b$.
 \end{axiom}
 
-\begin{axiom}[Archimedean Property] If $x$ is a real number, then either (i) $x$ is an integer or (ii) there exists an integer $n$, such that $n<x<n+1$. 
+Our final axiom indicates that every real number is either an integer or lies between two consecutive integers.
+
+\begin{axiom}[Archimedean Property]
+For every $x\in\mathbb{R}$, there exists $n\in\mathbb{Z}$ such that $n \leq x < n + 1$.
 \end{axiom}
+
+Use the Archimedean Property to prove the following theorem.
+
+\begin{theorem}
+For any positive real number $a$, there exists $n\in \mathbb{N}$ such that $0<\frac{1}{n}<a$.
+\end{theorem}
 
 \begin{definition}
-Suppose $a,b\in\mathbb{R}$ such that $a<b$.  The intervals $(a,b), (-\infty,b), (a,\infty)$ are called \textbf{open intervals} while the interval $[a,b]$ is called a \textbf{closed interval}.  An interval like $[a,b)$ is neither open nor closed.
+A set $U$ is called an \textbf{open set} if and only if for every $x \in U$, there exists a finite-length open interval $(a,b)$ containing $x$ such that $(a,b)\subseteq U$.
 \end{definition}
 
-We will always assume that any time we write $(a,b), [a,b], (a,b]$, or $[a,b)$ that $a<b$. 
-
-\begin{problem}
-Give an example of each of the following.
+\begin{problem}\label{prob:open or not}
+Determine whether each of the following sets is open. Justify your assertions.
+\begin{multicols}{2}
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item An open interval.
-\item A closed interval.
-\item An interval that is neither open nor closed.
-\item An infinite set that is not an interval.
+\item $(1,2)$
+\item $(1,\infty)$
+\item $(1,2)\cup (\pi,5)$
+\item $[1,2]$
+\item $(-\infty,\sqrt{2}]$
+\item $\{4,17,42\}$
+\item $\{\frac{1}{n}\mid n\in \mathbb{N}\}$
+\item $\{\frac{1}{n}\mid n\in \mathbb{N}\}\cup \{0\}$
+\item $\mathbb{R}$
+\item $\mathbb{Q}$
+\item $\mathbb{Z}$
+\item $\emptyset$
 \end{enumerate}
+\end{multicols}
 \end{problem}
 
-\begin{definition}
-A set $U$ is called an \textbf{open set} if and only if for every $t \in U$, there exists an open interval containing $t$ such that the open interval is a subset of $U$.  We define the empty set to be open.\end{definition}
+%\begin{problem}
+%Determine whether the empty set is an open set.
+%\end{problem}
 
-\begin{problem} 
-Prove that the set $I=(1,2)$ is an open set.
-\end{problem}
-
-\begin{theorem}
-Every open interval is an open set. 
-\end{theorem}
+As expected, every open interval is an open set. Consider handling a few cases when approaching the proof of the next theorem.
 
 \begin{theorem}
-The set of real numbers forms an open set.
+If $I$ is an open interval, then $I$ is an open set. 
 \end{theorem}
+
+%\begin{corollary}
+%The set of real numbers is an open set.
+%\end{corollary}
+
+It is important to point out that open sets can be more complicated than a single open interval.
 
 \begin{problem}
 Provide an example of an open set that is not a single open interval.
 \end{problem}
 
-\begin{theorem}
-Every closed interval is not an open set.
-\end{theorem}
+%\begin{theorem}
+%Every finite-length closed interval is not an open set.
+%\end{theorem}
 
-\begin{theorem}
-If $x\in\mathbb{R}$, then the set $\{x\}$ is not open.
-\end{theorem}
+%\begin{theorem}
+%If $x\in\mathbb{R}$, then the set $\{x\}$ is not open.
+%\end{theorem}
 
-\begin{problem} 
-Determine whether $\{4,17,42\}$ is an open set. Briefly justify your assertion. 
-\end{problem}
+%\begin{problem} 
+%Determine whether $\{4,17,42\}$ is an open set. Briefly justify your assertion. 
+%\end{problem}
 
-\begin{theorem}\label{finite union of open sets}
-If $A$ and $B$ are open sets, then 
+\begin{theorem}\label{thm:finite union and intersection of open sets}
+If $U$ and $V$ are open sets, then 
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $A\cup B$ is an open set, and
-\item $A\cap B$ is an open set.
+\item $U\cup V$ is an open set, and
+\item $U\cap V$ is an open set.
 \end{enumerate}
 \end{theorem}
 
-\begin{theorem}\label{union of open sets}
+\begin{theorem}\label{thm:union of open sets}
 If $\{U_{\alpha}\}_{\alpha\in\Delta}$ is a collection of open sets, then $\bigcup_{\alpha\in\Delta} U_{\alpha}$ is an open set.
 \end{theorem}
 
-\begin{problem}\label{intersection of open sets}
+\begin{problem}\label{prob:intersection of open sets}
 Give an example of each of the following.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item A collection of open sets $\{B_{\alpha}\}_{\alpha\in\Delta}$ such that $\bigcap_{\alpha\in\Delta} B_{\alpha}$ is an open set.
+\item A collection of open sets $\{U_{\alpha}\}_{\alpha\in\Delta}$ such that $\bigcap_{\alpha\in\Delta} U_{\alpha}$ is an open set.
 \item A collection of open sets $\{U_{\alpha}\}_{\alpha\in\Delta}$ such that $\bigcap_{\alpha\in\Delta} U_{\alpha}$ is not an open set.
 \end{enumerate}
 \end{problem}
 
 \begin{remark}\label{rem:union vs intersection of open sets}
-Taken together, Theorems~\ref{finite union of open sets}--\ref{union of open sets} and Problem~\ref{intersection of open sets} tell us that the union of any collection of open sets is open, but that the intersection of open sets may or may not be open.  However, if we are taking the intersection of finitely many open sets, then the intersection will be open.
+Taken together, Theorem~\ref{thm:finite union and intersection of open sets}, Theorem~\ref{thm:union of open sets}, and Problem~\ref{prob:intersection of open sets} tell us that the union of any arbitrary collection of open sets is open, but that the intersection of an arbitrary collection of open sets may or may not be open.  
 \end{remark}
 
-\begin{problem}
-Determine whether each of the following sets is open or not open.
-\begin{multicols}{2}
-\begin{enumerate}[label=\textrm{(\alph*)}]
-\item $\displaystyle W=\bigcup_{n=2}^{\infty} \left(n - \frac{1}{2},n\right)$
-\item $\displaystyle X=\bigcap_{n=1}^{\infty} \left(-\frac{1}{n}, \frac{1}{n}\right)$
-\end{enumerate}
-\end{multicols}
-\end{problem}
-
 \begin{definition}
-A point $p$ is a \textbf{limit point of the set $S$} if and only if for every open interval $I$ containing $p$, there exists a point $q \in I$ such that $q \in S$ with $q\neq p$.
+Suppose $A\subseteq \mathbb{R}$. A point $p\in \mathbb{R}$ is an \textbf{accumulation point} of $A$ if and only if for every finite-length open interval $(a,b)$ containing $p$, there exists a point $q \in (a,b)\cap A$ such that $q\neq p$.
 \end{definition}
 
+Notice that if $p$ is an accumulation point of $A$, then $p$ may or may not be in $A$. Loosely speaking, $p$ is an accumulation point of a set $A$ if there are points in $A$ arbitrarily close to $p$. That is, if we zoom in on $p$, we should always see points in $A$ nearby.
+
 \begin{problem}
-Consider the open interval $S=(1,2)$. Prove each of the following.
+Consider the open interval $A=(1,2)$. Prove each of the following.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item The points $1$ and $2$ are limit points of $S$.
-\item If $p\in S$, then $p$ is a limit point of $S$.
-\item If $p<1$ or $p>2$, then $p$ is not a limit point of $S$.
+\item The points $1$ and $2$ are accumulation points of $A$.
+\item If $p\in S$, then $p$ is an accumulation point of $A$.
+\item If $p<1$ or $p>2$, then $p$ is not an accumulation point of $A$.
 \end{enumerate}
 \end{problem}
 
 \begin{theorem}
-A point $p$ is a limit point of $(a,b)$ if and only if $p\in [a,b]$.
+A point $p$ is an accumulation point of the interval $(a,b)$ if and only if $p\in [a,b]$.
 \end{theorem}
 
 \begin{problem}
-Prove that the point $p=0$ is a limit point of $S=\{\frac{1}{n}\mid n \in \mathbb{N}\}$.  Are there any other limit points? 
+Prove that the point $p=0$ is an accumulation point of $A=\{\frac{1}{n}\mid n \in \mathbb{N}\}$.  Are there any other accumulation points of $A$? 
 \end{problem}
 
-\begin{problem}
-Provide an example of a set $S$ such that 1 is a limit point of $S$, $1\neq S$, and $S$ contains no intervals.
-\end{problem}
+%\begin{problem}
+%Provide an example of a set $A$ such that 1 is an accumulation point of $A$, $1\notin A$, and $A$ contains no intervals.
+%\end{problem}
 
 \begin{problem}
-Provide an example of a set $T$ with exactly two limit points.
+Provide an example of a set $A$ with exactly two accumulation points.
 \end{problem}
 
 \begin{theorem}
-If $p\in\mathbb{R}$, then $p$ is a limit point of $\mathbb{Q}$.
+If $p\in\mathbb{R}$, then $p$ is an accumulation point of $\mathbb{Q}$.
 \end{theorem}
 
 \begin{definition}
-A set is called \textbf{closed} if and only if it contains all of its limit points.
+A set is called \textbf{closed} if and only if it contains all of its accumulation points.
 \end{definition}
+
+\begin{problem}\label{prob:closed or not}
+Determine whether each of the sets in Problem~\ref{prob:open or not} is closed. Justify your assertions.
+\end{problem}
+
+The upshot of Part~(i) of Problems~\ref{prob:open or not} and \ref{prob:closed or not} is that $\mathbb{R}$ and $\emptyset$ are both open and closed.  It turns out that these are the only two subsets of the real numbers with this property.  Note that the fact that $\mathbb{R}$ is open and closed justifies referring to the interval $(-\infty, \infty)$ as both an open and a closed interval.
 
 \begin{problem}
 Provide an example of each of the following.  You do not need to prove that your answers are correct.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item A closed set.
-\item A set that is not closed.
-\item A set that is open and closed.
+\item A set that is open but not closed.
+\item A set that is closed but not open.
+%\item A set that is both open and closed.
 \item A set that neither open nor closed.
 \end{enumerate}
-
 \end{problem}
 
-\begin{theorem}
-The set $[a,b]$ is closed.
-\end{theorem}
+The next result justifies referring to $[a,b]$, $(-\infty,b]$, $[a,\infty)$, and $(-\infty,\infty)$ as closed intervals.
 
 \begin{theorem}
-The set $U$ is open if and only if $U^C$ is closed.
+If $I$ is a closed interval, then $I$ is a closed set.
 \end{theorem}
+
+%\begin{problem}
+%Determine whether the empty set a closed set.
+%\end{problem}
 
 \begin{theorem}
 Every finite set is closed.
 \end{theorem}
 
-\begin{problem}
-Prove or provide a counterexample: If a set $S$ is not open, then it is closed.
+The next problem illustrates that the words ``open" and ``closed" can be a bit problematic as they are not opposites of each other in a mathematical sense.
+
+\begin{problem}\label{prob:open and closed not opposites}
+Prove or provide a counterexample: If a set $A$ is not open, then $A$ is closed.
 \end{problem}
 
-\begin{theorem}
-The set of real numbers is both open and closed.
-\end{theorem}
+Despite the shortcomings of the terminology illuminated by the previous problem, there is a nice relationship between open and closed sets in terms of complements.
 
 \begin{theorem}
-The set of rational numbers is neither open nor closed.
+A set $U$ is open if and only if $U^C$ is closed.
 \end{theorem}
 
-\begin{theorem}
-The empty set is both open and closed.
+%The next theorem justifies referring to $(-\infty,\infty)$ as both an open and closed interval.
+%
+%\begin{theorem}
+%The set of real numbers is both open and closed.
+%\end{theorem}
+
+%\begin{theorem}
+%The set of rational numbers is neither open nor closed.
+%\end{theorem}
+
+%\begin{theorem}
+%The empty set is both open and closed.
+%\end{theorem}
+
+\begin{theorem}\label{thm:finite union and intersection of closed sets}
+If $A$ and $B$ are closed sets, then 
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $A\cup B$ is a closed set, and
+\item $A\cap B$ is a closed set.
+\end{enumerate}
 \end{theorem}
 
-\begin{theorem}\label{intersection of closed sets}
+\begin{theorem}\label{thm:intersection of closed sets}
 If $\{A_{\alpha}\}_{\alpha\in\Delta}$ is a collection of closed sets, then $\bigcap_{\alpha\in \Delta} A_{\alpha}$ is a closed set.
 \end{theorem}
 
+%\begin{problem}\label{prob:union of closed sets}
+%Prove or provide a counterexample: If $A$ and $B$ are closed sets, then $A\cup B$ is also closed.
+%\end{problem}
+
+\begin{problem}\label{prob:union of closed sets}
+Provide an example of a collection of closed sets $\{A_{\alpha}\}_{\alpha\in\Delta}$ such that $\bigcup_{\alpha\in \Delta} A_{\alpha}$ is not a closed set.
+\end{problem}
+
 \begin{problem}
-Prove or provide a counterexample: If $A$ and $B$ are closed sets, then $A\cup B$ is also closed.
+In light of Theorem~\ref{thm:finite union and intersection of closed sets}, Theorem~\ref{thm:intersection of closed sets}, and Problem~\ref{prob:union of closed sets}, make an analogous statement to Remark~\ref{rem:union vs intersection of open sets}.
 \end{problem}
 
-\begin{problem}\label{union of closed sets}
-Provide an example of a collection of closed sets $\{A_{\alpha}\}_{\alpha\in\Delta}$ such that $\bigcup_{\alpha\in \Delta} A_{\alpha}$ is a \emph{not} closed set.
-\end{problem}
+In the next chapter, we will use mathematical induction to prove that the intersection of finitely many open sets is open and that the union of finitely many closed sets is closed.
 
-You should take the time to compare what happened in Theorem~\ref{intersection of closed sets} and Problem~\ref{union of closed sets} to what we stated in Remark~\ref{rem:union vs intersection of open sets}.
+\begin{problem}
+Determine whether each of the following sets is open, closed, or neither.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\displaystyle V=\bigcup_{n=2}^{\infty} \left(n - \frac{1}{2},n\right)$
+\item $\displaystyle W=\bigcap_{n=2}^{\infty} \left(n - \frac{1}{2},n\right)$
+\item $\displaystyle X=\bigcap_{n=1}^{\infty} \left(-\frac{1}{n}, \frac{1}{n}\right)$
+\item $\displaystyle Y=\bigcap_{n=1}^{\infty} \left(-n, n\right)$
+\item $Z=(0,1)\cap \mathbb{Q}$
+\end{enumerate}
+\end{problem}
 
 \end{section}

@@ -29,6 +29,7 @@
 - Replaced most occurrences of one-to-one and onto with injective and surjective.
 - Moved the content on injective and surjective to its own section.
 - Added several new figures to the chapters on relations and functions.
+- Changed ``limit point" to ``accumulation point".
 
 ## Reviewer 1
 
@@ -43,15 +44,16 @@
 - Section 3.1: The order of the bulleted sets could be revised so that they progress as nested. Then this can have powerful consequences in a student’s thinking of these sets for modern algebraic considerations.
     * Done.
 - Exercise 3.3. Clarity needed. What is a “simple description”?
-    * Todo.
+    * Slightly reworded.
 - Definition 3.33. Something more is needed. Maybe insert “We read this as...” before the boxed formulas? Also, in the bullets preceding the definition, revise to ...“the set of S-sub-alpha, taken over alpha in Delta.”
-    * Todo.
+    * I don't understand first comment. Second comment done.
 - Section 8.1: This is a spot where lots and lots and lots of examples would help. Expand the ideas to sets of non-numeric structures. Non-real sets. Such as the set of stars or the set of dog types recognized by AKC or the set of subsets of {Mom, Dad, Tracy}.
     * Done.
 
 ## Reviewer 3
 
 - Introduction p. 6 “Up to this point it is likely...” that seems like a sweeping generalization perhaps tone it down to it is possible or something more likely to be true.
+    * Todo.
 - “As the instructor I am here” This shows the author didn’t bother to edit the book before sending it in - obviously the author was the instructor in his own class, but will not be the instructor for those who use this as a textbook.
     * This will get addressed with overall re-voicing.
 - “Our focus in this class is learning to DO mathematics, not learning to sit patiently while others do it.” Again this is pedantic and more fitting for a blog than a published text. This type of tone claiming to be better at teaching math than everyone you’ve had before pervades the introduction and is pretentious.
@@ -74,21 +76,21 @@ be helpful.
 - p. 17 Theorem 2.49-2.51 these are good ideas.
     * Nothing to address.
 - p 19 “Skeleton Proof” : it would be nice to follow the skeletons of proofs or replace them at times in the book by some worked out examples.
-    * Hopefully this will be addressed by adding more examples throughout.
+    * At the moment, I'm going to resist doing this. Nearly all IBL books are absent of examples. This book already has more than most IBL books. Moreover, having taught out of (various versions) of the book, I've never felt the need to provide more examples.  This has also never been requested by others that have taught out of the book.
 - p. 19 “The sentence x > 0” : ideally change this to “The sentence x > 0.” since without the period it is not actually a sentence and it helps point out that proper grammar should be used in math.
     * Done.
 - p. 27 Exercises 3.3 -3.4 good.
     * Nothing to address.
 - p 27 “Every set always has two rather boring subsets.” The empty set does not.
-    * Fixed.
+    * Done.
 - p. 27 Def 3.10 A also must not be the emptyset.
     * No, I'm taking the point of view that the empty set is a proper subset of every non-empty set.
 - p. 29 Conjecture 3.23 This should be an exercise or question not really a conjecture.
-    * Agreed. Fixed.
+    * Done.
 - p. 30 Problem 3.28-3.30 Well done. Problem 3.32 is good, too.
     * Nothing to address.
 - P 35 It makes more sense to do Theorem 3.54 and Exercise 3.55 in the opposite order or the exercise is trivial.
-    * I'm not sure I understand this comment.  Perhaps the reviewer assumed that I'm only considering bounded open intervals.
+    * I'm not sure I understand this comment (the real line is an open interval by definition).  However, I retooled things in this section, so these problems no longer appear.
 - p. 35 Exercise 3.61 probably should swap part a and b so the easier one is first. 10
     * Done.
 - p. 36 Exercise 3.72 a-d is nice.
@@ -113,15 +115,15 @@ be helpful.
 - Some chapters have very good introductions motivating the topics, including Chapters 2 and 8, but others have minimal motivation before diving into the content, including Chapters 5 and 6. On a related note, I would like to see a little more “connective tissue” tying the chapters together. For example, why does Chapter 5 appear where it does? What is the purpose of Chapter 6?
     * Some of this will be addressed with adding motivation and context.
 - I think there needs to be some intuition in Definition 2.26(d) for why “If A, then B” is a true statement if A is false. I have found this to be one area where students often have quite a bit of initial confusion.
-    * Todo
+    * I added more exposition about this.  See the discussion following Problem 2.23.
 - I was a little confused about Definition 2.35 which seems to equate “if and only if” with “logically equivalent” even then though the if-and-only-if terminology has been used in in Definition 2.26.
-    * Todo. I agree that there is something to be done here. Perhaps move to Definition 2.26.
+    * Done.
 - In Section 2.4, I found the use of function notation to describe predicates a little confusing. What is the domain? What is the range? Given that Chapter 7 is devoted to functions, this struck me as a little odd.
     * Done. I eliminated reference to function notation and just defined the notation.
 - In Lemmas 5.4 and 5.10 and in Theorem 8.24, I found labeling the extensive footnotes as “Hints” to be slightly misleading. It seems like these activities would be better described as a fill-in-the-details exercise where the hints are included in the body of the text.
     * This suggestion clashes with another reviewer's comment who liked the footnotes.
 - As an extremely minor note, the page numbers missing from most pages. I suspect this is a simple typesetting fix.
-    * Fixed.
+    * Done.
 
 ## Reviewer 5
 
@@ -167,20 +169,20 @@ be helpful.
 - Section 2.1, paragraph 3, sentence 1: “Recall . . . ” – From when? Better just to state. Depending on the course, students may actually be seeing ∈ for the first time.
       * Fixed and elaborated on its use.
 - p. 14, footnote: “Definition 2.41” should be “Definition 2.39”.
-      * Fixed.
+      * Done.
 - Definition 3.5: “. . . every element of A is also an element of B.” My students often abuse this definition by trying to prove that A ⊆ B by showing x ∈ A and x ∈ B for all x ∈ A. Please just leave out the “also” in the definition. You and I know that it’s ok, but students get confused between “and” and “if . . . then,” and easily, so steer clear of anything that sounds like “and” (such as “also”) in the definition and discussion of a subset.
-     * Fixed.
+     * Done.
 - Theorem 3.19 and Theorem 3.20: After each the equality in each (a), insert “, and” to make the sentence grammatically correct.
      * Fixed and made similar changes in other locations.
 - Theorem 3.26/Problem 3.27: This is entirely personal preference, but perhaps an interesting suggestion to consider. How about make these two one problem – ask students to explore the relationship between P(S) ∪ P(T ) and P(S ∪ T ), determine the relationship, and prove that they are precisely correct? Exploration is part of the goal here, and this is a fun problem for exploring and building a better understanding of power sets.
-     * Todo.
+     * Done.
 - Paragraph following Problem 3.27: “We now turn out attention . . . ” should be “We now turn our attention . . . ”
-    * Already fixed.
+     * Done.
 - Definition 3.39/Exercise 3.40/Exercise 3.41: Again, personal preference. Students benefit from playing around with infinite indexing sets. How about encourage that in Exercises 3.40 and 3.41? Possibly in the context of R, such as “provide an example of ...” with multiple parts, including
     - a collection of three sets such that the collection is not pairwise disjoint, the union equals R, and the intersection of the collection equals ∅;
     - a collection of infinitely many sets such that the collection is not pairwise dis- joint, the union equals R, and the intersection of the collection equals ∅; and
     - a collection of infinitely many sets such that the collection is pairwise disjoint, the union equals R, and the intersection of the collection equals ∅.
-    * Todo.
+    * Done.
 - Some of the hints here were expansive. Understandably so – the work is not easy and some guidance is needed. Nonetheless, such expansive hints are overwhelming and make it seem like the problems are too hard. Either step these theorems, etc. out more or put the hints at the end of the chapter and not as footnotes to avoid overwhelming a reader.
     * This clashes with comments from another reviewer.  Feedback I've had in the past is that the footnotes are useful. But I'm open to do something else.
 - Example 6.24 breaks one of the rules for style; it is not considered good style to start a sentence with a symbol. This occurs three times, and it’s quite striking.
@@ -200,7 +202,7 @@ Appendix A
 - Paragraph 2: “I may refer . . . ” The instructor may not appreciate this comment.
     * I removed the corresponding sentence.
 - Item 7: The statement breaks rule 4, that it is bad style to start a sentence with a symbol.
-    * Fixed.
+    * Done.
 - Item 8: Include quantifiers and other logic symbols in the “avoid in formal write-ups” pile.(∀,∃,∨,∧,and ⇐⇒)
     * Done. I added a new item for this one.
 - Item 13: I love this! I call it “bad math.” I’d like to see the backwards example written correctly, as a demonstration.
@@ -212,10 +214,11 @@ Appendix A
 
 Appendix C
 - Paragraph 4, sentence 3: “Contrast the OED’s descriptive definition of continuous with the the definition of... ” – strike the second “the”
-    * Fixed.
+    * Done.
 
 
 ## Instructor Guide
 
 - Discuss issues that arise beginning of Chapter 2. For example: equivalent forms of even vs odd, even/odd integer vs even/odd number, divides vs divided by, etc.
 - Paradoxes could be skipped.
+- For theorems with multiple similar parts, perhaps ask students to only prove on part. Example: Generalized Distribution of Union and Intersection.

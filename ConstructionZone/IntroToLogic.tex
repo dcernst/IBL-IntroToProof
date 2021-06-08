@@ -23,7 +23,7 @@ For example, the sentence ``All dogs have four legs''~is a false proposition.  H
 \end{enumerate}
 \end{problem}
 
-The last two sentences in the previous problems may stir debate. It is not so important that we come to consensus as to whether either of these two sentences is actually a proposition or not. The good news is that in mathematics we do not encounter statements whose truth value is dependent on either the future or opinion.
+The last two sentences in the previous problem may stir debate. It is not so important that we come to consensus as to whether either of these two sentences is actually a proposition or not. The good news is that in mathematics we do not encounter statements whose truth value is dependent on either the future or opinion.
 
 Given two propositions, we can form more complicated propositions using \textbf{logical connectives}.
 
@@ -38,7 +38,7 @@ Let $A$ and $B$ be propositions.
 \end{enumerate}
 \end{definition}
 
-Each of the propositions in the previous definition is called a \textbf{compound proposition}, where $A$ and $B$ are referred to as the \textbf{components} of the compound proposition. We can form complicated compound propositions with several components by combining logical connectives.
+Each of the boxed propositions in the previous definition is called a \textbf{compound proposition}, where $A$ and $B$ are referred to as the \textbf{components} of the compound proposition. We can form complicated compound propositions with several components by combining logical connectives.
 
 %\begin{problem}
 %Describe the meaning of $\neg (A \wedge B)$ and $\neg (A \vee B)$.
@@ -98,7 +98,7 @@ A coach promises her players, ``If we win tonight, then I will buy you pizza tom
 Use Definition~\ref{def:logical connectives}\ref{def:conditional} to construct a truth table for $A \implies B$. Compare your truth table with Problem~\ref{prob:coach lie}. The combination you should pay particular attention to is when the hypothesis is false while the conclusion is true.
 \end{problem}
 
-In accordance with Definition~\ref{def:logical connectives}\ref{def:conditional}, a conditional proposition $A\implies B$ is only false when the hypothesis is true and the conclusion is false.  Perhaps you are bothered by the fact that $A\implies B$ is true when $A$ is false no matter what the truth value of $B$ is.  The thing to keep in mind is that the truth value of $A\implies B$ relies on a very specific definition and may not always agree with the colloquial use of ``If\ldots, then\ldots" statements that we encounter in everyday language. For example, if someone says, ``If you break the rules, then you will be punished", the speaker likely intends the statement to be interpreted as ``You will be punished if and only if you break the rules." In logic and mathematics, we aim to remove such ambiguity by explicitly saying exactly what we mean. For our purposes, we should view conditional propositions as contracts or obligations.  If the hypothesis is false and the conclusion is true, the contract is not violated. On the other hand, if the hypothesis is true and the conclusion is false, then the contract is broken.
+In accordance with Definition~\ref{def:logical connectives}\ref{def:conditional}, a conditional proposition $A\implies B$ is only false when the hypothesis is true and the conclusion is false.  Perhaps you are bothered by the fact that $A\implies B$ is true when $A$ is false no matter what the truth value of $B$ is.  The thing to keep in mind is that the truth value of $A\implies B$ relies on a very specific definition and may not always agree with the colloquial use of ``If\ldots, then\ldots" statements that we encounter in everyday language. For example, if someone says, ``If you break the rules, then you will be punished", the speaker likely intends the statement to be interpreted as ``You will be punished if and only if you break the rules." In logic and mathematics, we aim to remove such ambiguity by explicitly saying exactly what we mean. For our purposes, we should view a conditional proposition as a contract or obligation.  If the hypothesis is false and the conclusion is true, the contract is not violated. On the other hand, if the hypothesis is true and the conclusion is false, then the contract is broken.
 
 We can often prove facts concerning logical statements using truth tables.  Recall that two propositions $P$ and $Q$ (both of which might be complicated compound propositions) are logically equivalent if $P\iff Q$ is true (see Definition~\ref{def:logical connectives}\ref{def:logically equivalent}). This happens when $P$ and $Q$ have the same truth value. We can verify whether $P$ and $Q$ have the same truth value by constructing a truth table that includes columns for each of the components of $P$ and $Q$, listing all possible combinations of their truth values, together with columns for $P$ and $Q$ that lists their resulting truth values.  If the truth values in the columns for $P$ and $Q$ agree, then $P$ and $Q$ are logically equivalent, and otherwise they are not logically equivalent.  When constructing truth tables to verify whether $P$ and $Q$ are logically equivalent, you should add any necessary intermediate columns to aid in your ``calculations". Use truth tables when attempting to justify the next few problems.
 
@@ -112,14 +112,14 @@ The next theorem, referred to as \textbf{DeMorgan's Law}, provides a method for 
 If $A$ and $B$ are propositions, then $\neg(A \wedge B)$ is logically equivalent to $\neg A \vee \neg B$.
 \end{theorem}
 
-\begin{problem}
+\begin{problem}[DeMorgan's Law]\label{prob:demorgan}
 Let $A$ and $B$ be propositions.  Conjecture a statement similar to Theorem~\ref{thm:demorgan} for the proposition $\neg(A\vee B)$ and then prove it. This is also called DeMorgan's Law.
 \end{problem}
 
 We will make use of both versions DeMorgan's Law on on a regular basis. Sometimes conjunctions and disjunctions are ``buried" in a mathematical statement, which makes negating statements tricky business. Keep this in mind when approaching the next problem.
 
 \begin{problem}\label{prob:negation}
-Let $x$ be your favorite real number.  Negate each of the following statements.  Note that the statement in part~(b) involves a conjunction.
+Let $x$ be your favorite real number.  Negate each of the following statements.  Note that the statement in Part~(b) involves a conjunction.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $x<-1$ or $x\geq 3$.
 \item $0\leq x< 1$.

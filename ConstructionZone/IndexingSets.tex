@@ -24,22 +24,22 @@ Using indexing sets in mathematics is an extremely useful notational tool, but i
 
 Any set (finite or infinite) can be used as an indexing set. Often capital Greek letters are used to denote arbitrary indexing sets and small Greek letters to represent elements of these sets. If the indexing set is a subset of $\mathbb{R}$, then it is common to use Roman letters as individual indices. Of course, these are merely conventions, not rules.
 \begin{itemize}
-\item If $\Delta$ is a set and we have a collection of sets indexed by $\Delta$, then we may write $\{S_{\alpha}\}_{\alpha\in \Delta}$ to refer to this collection. We read this as ``the set of $S$-alphas over alpha in Delta.''
+\item If $\Delta$ is a set and we have a collection of sets indexed by $\Delta$, then we may write $\{S_{\alpha}\}_{\alpha\in \Delta}$ to refer to this collection. We read this as ``the set of $S$-sub-alphas over alpha in Delta.''
 \item If a collection of sets is indexed by $\mathbb{N}$, then we may write $\{U_n\}_{n\in\mathbb{N}}$ or $\{U_n\}_{n=1}^{\infty}$.
 \item Borrowing from this idea, a collection $\{A_1,\ldots,A_{26}\}$ may be written as $\{A_n\}_{n=1}^{26}$.
 \end{itemize}
 
 \begin{definition}
-Suppose we have a collection $\{A_{\alpha}\}_{\alpha\in\Delta}$.
+Let $\{A_{\alpha}\}_{\alpha\in\Delta}$ be a collection of sets.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item The \textbf{union of the entire collection} is defined via
 \[
-\boxed{\bigcup_{\alpha\in\Delta} A_{\alpha}=\{x\mid x\in A_{\alpha} \mbox{ for some }\alpha\in \Delta\}.}
+\boxed{\bigcup_{\alpha\in\Delta} A_{\alpha}\coloneqq \{x\mid x\in A_{\alpha} \mbox{ for some }\alpha\in \Delta\}}.
 \]
 
 \item The \textbf{intersection of the entire collection} is defined via
 \[
-\boxed{\bigcap_{\alpha\in\Delta} A_{\alpha}=\{x\mid x\in A_{\alpha} \mbox{ for all }\alpha\in \Delta\}.}
+\boxed{\bigcap_{\alpha\in\Delta} A_{\alpha}\coloneqq \{x\mid x\in A_{\alpha} \mbox{ for all }\alpha\in \Delta\}}.
 \]
 \end{enumerate}
 \end{definition}
@@ -118,14 +118,27 @@ A collection of sets $\{A_{\alpha}\}_{\alpha\in\Delta}$ is \textbf{pairwise disj
 \end{definition}
 
 \begin{problem}
-Draw a Venn diagram of a collection of 3 sets that are pairwise disjoint.
+Provide an example of a collection of sets $\{A_{\alpha}\}_{\alpha\in\Delta}$ that is not pairwise disjoint even though $\bigcap_{\alpha\in\Delta}A_{\alpha}=\emptyset$.
 \end{problem}
+
+%\begin{problem}
+%Draw a Venn diagram of a collection of 3 sets that are pairwise disjoint.
+%\end{problem}
 
 \begin{problem}
-Provide an example of a collection of three sets, say $\{A_1, A_2, A_3\}$, such that the collection is \emph{not} pairwise disjoint, but $\bigcap_{n=1}^3 A_n=\emptyset$.
+For each of the following, provide an example of a collection of sets with the stated property.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item A collection of three subsets of $\mathbb{R}$ such that the collection is not pairwise disjoint, the union equals $\mathbb{R}$, and the intersection of the collection is empty.
+\item A collection of infinitely many subsets of $\mathbb{R}$ such that the collection is not pairwise disjoint, the union equals $\mathbb{R}$, and the intersection of the collection is empty.
+\item A collection of infinitely many subsets of $\mathbb{R}$ such that the collection is pairwise disjoint, the union equals $\mathbb{R}$, and the intersection of the collection is empty.
+\end{enumerate}
 \end{problem}
 
-For each of the next two theorems, you can choose to prove either part (a) or part (b).
+%\begin{problem}
+%Provide an example of a collection of three sets, say $\{A_1, A_2, A_3\}$, such that the collection is \emph{not} pairwise disjoint, but $\bigcap_{n=1}^3 A_n=\emptyset$.
+%\end{problem}
+
+%For each of the next two theorems, you can choose to prove either part (a) or part (b).
 
 \begin{theorem}[Generalized Distribution of Union and Intersection]
 Let $\{A_{\alpha}\}_{\alpha\in\Delta}$ be a collection of sets and let $B$ be any set.  Then
