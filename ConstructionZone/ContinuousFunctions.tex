@@ -1,0 +1,130 @@
+\begin{section}{Continuous Functions}\label{sec:Continuity}
+
+INTRO...
+
+\begin{definition}\label{def:continuity}
+Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a function. We say that $f$ is \textbf{continuous at the point $x$} in its domain (or at the point $(x,f(x))$) if, for any open interval $S$ containing $f(x)$, there is an open interval $T$ containing $x$ such that if $t\in T$ is in the domain of $f$, then $f(t)\in S$. The function $f$ is \textbf{continuous} if it is continuous at every point in its domain.
+\end{definition}
+
+Let's show that this definition of continuity behaves the way we expect from calculus.
+
+\begin{problem}
+Prove that each of the following functions is continuous using Definition~\ref{def:continuity}.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $f:\mathbb{R}\to \mathbb{R}$ defined via $f(x)=x$.
+\item $g:\mathbb{R}\to \mathbb{R}$ defined via $g(x)=2x$.
+\item $h:\mathbb{R}\to \mathbb{R}$ defined via $h(x)=x+3$.
+\end{enumerate}
+\end{problem}
+
+The next result tells us that every linear function from $\mathbb{R}$ to $\mathbb{R}$ is continuous.
+
+\begin{theorem}
+Let $m,b\in\mathbb{R}$ and define $f:\mathbb{R}\to\mathbb{R}$ via $f(x)=mx+b$. Then $f$ is continuous.
+\end{theorem}
+
+\begin{problem}
+Define $f:\mathbb{R}\to\mathbb{R}$ via 
+\[
+f(x)=\begin{cases}
+1, & \text{if }x\in[0,1]\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+Find all points where $f$ is continuous and justify your answer.
+\end{problem}
+
+\begin{problem}
+Define $g:\{0\}\to \mathbb{R}$ via $g(0)=0$.  Prove that $g$ is continuous at $x=0$.
+\end{problem}
+
+\begin{problem}
+Define $f:\mathbb{R}\to\mathbb{R}$ via 
+\[
+f(x)=\begin{cases}
+1, & \text{if }x\in \mathbb{Q}\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+Find all points where $f$ is continuous and justify your answer.
+\end{problem}
+
+\begin{problem}
+Define $f:\mathbb{R}\to\mathbb{R}$ via $f(x)=x^2$. Prove that $f$ is continuous.
+\end{problem}
+
+\begin{problem}
+Find a continuous function $f$ and an open interval $U$ such that the preimage $f^{-1}(U)$ is not an open interval.
+\end{problem}
+
+\begin{theorem}\label{thm:inverse images open sets}
+Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a function. Then $f$ is continuous if and only if the preimage $f^{-1}(U)$ of every open set $U$ is an open set intersected with the domain of $f$.
+\end{theorem}
+
+The previous characterization of continuity is often referred to as the ``open set definition of continuity," although for us it is a theorem instead of a definition. This is the definition used in topology. There are two other commonly used definitions of continuity. The first is sometimes called the ``$\epsilon$-$\delta$ definition of continuity" and utilizes inequalities involving absolute values. This is the definition one typically encounters in calculus and real analysis. Another notion of continuity, called ``sequential continuity", makes use of convergent sequences.  All of these characterizations of continuity are equivalent on the real numbers (using the standard definition of open set). However, there are contexts in mathematics where the $\epsilon$-$\delta$ definition of continuity is undefined (because there is not a notion of distance in the space) and others where continuity and sequential continuity are not equivalent.
+
+For the next few problems, if you attempting to construct counterexamples, you may rely on your previous knowledge about various functions that you encountered in high school and calculus.
+
+\begin{problem}
+Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a continuous function. If $U$ is an open set contained in $A$, is the image $f(U)$ always open?  If so, prove it.  Otherwise, provide a counterexample.
+\end{problem}
+
+%\begin{problem}
+%Suppose $f:\mathbb{R}\to \mathbb{R}$ is a continuous function and consider the open interval $(a,b)$. Is the image $f((a,b))$ always an open interval?  If so, prove it.  Otherwise, provide a counterexample.
+%\end{problem}
+
+\begin{problem}
+Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a continuous function. If $C$ is a closed set, is the preimage $f^{-1}(C)$ always a closed set? If so, prove it.  Otherwise, provide a counterexample.
+\end{problem}
+
+\begin{problem}
+Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a continuous function. If $[a,b]$ is a closed interval contained in $A$, is the image $f([a,b])$ always a closed interval?  If so, prove it.  Otherwise, provide a counterexample.
+\end{problem}
+
+\begin{problem}
+Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a continuous function. If $C$ is a closed set contained in $A$, is the image $f(C)$ always closed?  If so, prove it.  Otherwise, provide a counterexample.
+\end{problem}
+
+\begin{problem}
+Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a continuous function. If $I$ is a finite-length interval (possibly open, closed, or neither) contained in $A$, is the image $f(I)$ always a finite-length interval?  If so, prove it.  Otherwise, provide a counterexample.
+\end{problem}
+
+%The next theorem likely captures your intuition about continuity from high school and calculus.
+
+%\begin{theorem}
+%If $f:\mathbb{R}\to \mathbb{R}$ is a continuous function and $C$ is a connected set, then the image $f(C)$ is connected.
+%\end{theorem}
+
+\begin{problem}\label{prob:continuous image of connected set}
+Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a continuous function. If $C$ is a connected set contained in $A$, is the image $f(C)$ always connected?  If so, prove it.  Otherwise, provide a counterexample.
+\end{problem}
+
+\begin{problem}
+Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a continuous function. If $C$ is a connected set, is the preimage $f^{-1}(C)$ always a connected set? If so, prove it.  Otherwise, provide a counterexample.
+\end{problem}
+
+The next result is a special case of the well-known \textbf{Intermediate Value Theorem}, which states that if $f$ is a continuous function whose domain contains the interval $[a,b]$, then $f$ attains every value between $f(a)$ and $f(b)$ at some point within the interval $[a,b]$. To prove the special case, utilize Theorem~\ref{thm:closed interval connected} and Problem~\ref{prob:continuous image of connected set} together with a proof by contradiction.
+
+\begin{theorem}
+Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a function. If $f$ is continuous on $[a,b]$ such that $f(a)<0<f(b)$ or $f(a)>0>f(b)$, then there exists $r\in [a,b]$ such that $f(r)=0$.
+\end{theorem}
+
+If we generalize the previous result, we obtain the Intermediate Value Theorem.
+
+\begin{theorem}[Intermediate Value Theorem]
+Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a function. If $f$ is continuous on $[a,b]$ such that $f(a)<c<f(b)$ or $f(a)>c>f(b)$ for some $c\in \mathbb{R}$, then there exists $r\in [a,b]$ such that $f(r)=c$.
+\end{theorem}
+
+%\begin{problem}
+%Is the hypothesis that the interval is closed needed in the Intermediate Value Theorem? Justify your answer.
+%\end{problem}
+
+\begin{problem}
+Is the converse of the Intermediate Value Theorem true? If so, prove it.  Otherwise, provide a counterexample.
+\end{problem}
+
+%\begin{problem}
+%Let $f:[0,1]\to \mathbb{R}$ be a function such that $f(0)=-1$, $f(1)=1$, and $f([0,1])=\{-1,1\}$.  Prove that there exists $x\in [0,1]$ such that $f$ is not continuous at $x$.
+%\end{problem}
+
+\end{section}

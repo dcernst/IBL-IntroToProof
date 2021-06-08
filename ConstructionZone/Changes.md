@@ -30,6 +30,8 @@
 - Moved the content on injective and surjective to its own section.
 - Added several new figures to the chapters on relations and functions.
 - Changed ``limit point" to ``accumulation point".
+- Added some content on connected sets to the section on topology.
+- Added a section on continuous functions that includes the Intermediate Value Theorem.
 
 ## Reviewer 1
 

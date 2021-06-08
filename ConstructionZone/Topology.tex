@@ -1,12 +1,8 @@
 \begin{section}{Standard Topology of the Real Line}\label{sec:Topology}
 
-%should this be included?
-%\begin{proposition} 
-%Given a number $\varepsilon >0$, there exists a natural number $N$ such that $\frac{1}{N}<\varepsilon$.
-%\end{proposition}
+In this section, we will introduce the notions of open, closed, and connected as they pertain to subsets of the real numbers.  These properties form the underpinnings of a branch of mathematics called \textbf{topology} (derived from the Greek words \emph{t\'opos}, meaning `place, location', and \emph{ology}, meaning `study of'). Topology, sometimes called ``rubber sheet geometry," is concerned with properties of spaces that are invariant under any continuous deformation (e.g., bending, twisting, and stretching like rubber while not allowing tearing apart or gluing together). The fundamental concepts in topology are continuity, compactness, and connectedness, which rely on ideas such as ``arbitrary close" and ``far apart". These ideas can be made precise using open sets.  
 
-NEED INTRO...SOMETHING ABOUT WHAT TOPOLOGY IS. Mention convergence and continuity.
-
+Once considered an abstract branch of pure mathematics, topology now has applications in biology, computer science, physics, and robotics. The goal of this section is to introduce you to the basics of the set-theoretic definitions used in topology and to provide you with an opportunity to tinker with open and closed subsets of the real numbers. In Section~\ref{sec:Continuity}, we will revisit these concepts and explore continuous functions.
 
 For this entire section, our universe of discourse is the set of real numbers.  You may assume all the usual basic algebraic properties of the real numbers (addition, subtraction, multiplication, division, commutative property, distribution, etc.). We will often refer to an element in a subset of real numbers as a \textbf{point}.
 
@@ -38,13 +34,13 @@ The following axiom tells us that every real number is an element of a finite-le
 If $x\in\mathbb{R}$, then there exists $a,b\in\mathbb{R}$ such that $a<x<b$.
 \end{axiom}
 
-Our final axiom indicates that every real number is either an integer or lies between two consecutive integers.
+The next axiom indicates that every real number is either an integer or lies between two consecutive integers.
 
 \begin{axiom}[Archimedean Property]
 For every $x\in\mathbb{R}$, there exists $n\in\mathbb{Z}$ such that $n \leq x < n + 1$.
 \end{axiom}
 
-Use the Archimedean Property to prove the following theorem.
+It turns out that we could derive the previous axiom from the \textbf{Completeness Axiom}, which we will introduce shortly. Use the Archimedean Property to prove the following theorem.
 
 \begin{theorem}
 For any positive real number $a$, there exists $n\in \mathbb{N}$ such that $0<\frac{1}{n}<a$.
@@ -53,6 +49,8 @@ For any positive real number $a$, there exists $n\in \mathbb{N}$ such that $0<\f
 \begin{definition}
 A set $U$ is called an \textbf{open set} if and only if for every $x \in U$, there exists a finite-length open interval $(a,b)$ containing $x$ such that $(a,b)\subseteq U$.
 \end{definition}
+
+It follows immediately from the definition that every open set is a union of finite-length open intervals.
 
 \begin{problem}\label{prob:open or not}
 Determine whether each of the following sets is open. Justify your assertions.
@@ -74,37 +72,17 @@ Determine whether each of the following sets is open. Justify your assertions.
 \end{multicols}
 \end{problem}
 
-%\begin{problem}
-%Determine whether the empty set is an open set.
-%\end{problem}
-
 As expected, every open interval is an open set. Consider handling a few cases when approaching the proof of the next theorem.
 
 \begin{theorem}
 If $I$ is an open interval, then $I$ is an open set. 
 \end{theorem}
 
-%\begin{corollary}
-%The set of real numbers is an open set.
-%\end{corollary}
-
 It is important to point out that open sets can be more complicated than a single open interval.
 
 \begin{problem}
 Provide an example of an open set that is not a single open interval.
 \end{problem}
-
-%\begin{theorem}
-%Every finite-length closed interval is not an open set.
-%\end{theorem}
-
-%\begin{theorem}
-%If $x\in\mathbb{R}$, then the set $\{x\}$ is not open.
-%\end{theorem}
-
-%\begin{problem} 
-%Determine whether $\{4,17,42\}$ is an open set. Briefly justify your assertion. 
-%\end{problem}
 
 \begin{theorem}\label{thm:finite union and intersection of open sets}
 If $U$ and $V$ are open sets, then 
@@ -140,7 +118,7 @@ Notice that if $p$ is an accumulation point of $A$, then $p$ may or may not be i
 Consider the open interval $A=(1,2)$. Prove each of the following.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item The points $1$ and $2$ are accumulation points of $A$.
-\item If $p\in S$, then $p$ is an accumulation point of $A$.
+\item If $p\in A$, then $p$ is an accumulation point of $A$.
 \item If $p<1$ or $p>2$, then $p$ is not an accumulation point of $A$.
 \end{enumerate}
 \end{problem}
@@ -152,10 +130,6 @@ A point $p$ is an accumulation point of the interval $(a,b)$ if and only if $p\i
 \begin{problem}
 Prove that the point $p=0$ is an accumulation point of $A=\{\frac{1}{n}\mid n \in \mathbb{N}\}$.  Are there any other accumulation points of $A$? 
 \end{problem}
-
-%\begin{problem}
-%Provide an example of a set $A$ such that 1 is an accumulation point of $A$, $1\notin A$, and $A$ contains no intervals.
-%\end{problem}
 
 \begin{problem}
 Provide an example of a set $A$ with exactly two accumulation points.
@@ -173,17 +147,18 @@ A set is called \textbf{closed} if and only if it contains all of its accumulati
 Determine whether each of the sets in Problem~\ref{prob:open or not} is closed. Justify your assertions.
 \end{problem}
 
-The upshot of Part~(i) of Problems~\ref{prob:open or not} and \ref{prob:closed or not} is that $\mathbb{R}$ and $\emptyset$ are both open and closed.  It turns out that these are the only two subsets of the real numbers with this property.  Note that the fact that $\mathbb{R}$ is open and closed justifies referring to the interval $(-\infty, \infty)$ as both an open and a closed interval.
+The upshot of Part~(i) of Problems~\ref{prob:open or not} and \ref{prob:closed or not} is that $\mathbb{R}$ and $\emptyset$ are both open and closed.  It turns out that these are the only two subsets of the real numbers with this property.  Note that the fact that $\mathbb{R}$ is open and closed justifies referring $(-\infty, \infty)$ as both an open and a closed interval.
 
-\begin{problem}
+\begin{problem}\label{prob:open vs closed}
 Provide an example of each of the following.  You do not need to prove that your answers are correct.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item A set that is open but not closed.
 \item A set that is closed but not open.
-%\item A set that is both open and closed.
-\item A set that neither open nor closed.
+\item\label{prob:open vs closed last} A set that neither open nor closed.
 \end{enumerate}
 \end{problem}
+
+One annoying feature of the terminology illustrated by Problem~\ref{prob:open vs closed} is that if a set is not open, it may or may not be closed.  Similarly, if a set is not closed, it may or may not be open.  That is, open and closed are not opposites of each other.
 
 The next result justifies referring to $[a,b]$, $(-\infty,b]$, $[a,\infty)$, and $(-\infty,\infty)$ as closed intervals.
 
@@ -191,39 +166,15 @@ The next result justifies referring to $[a,b]$, $(-\infty,b]$, $[a,\infty)$, and
 If $I$ is a closed interval, then $I$ is a closed set.
 \end{theorem}
 
-%\begin{problem}
-%Determine whether the empty set a closed set.
-%\end{problem}
-
 \begin{theorem}
 Every finite set is closed.
 \end{theorem}
 
-The next problem illustrates that the words ``open" and ``closed" can be a bit problematic as they are not opposites of each other in a mathematical sense.
-
-\begin{problem}\label{prob:open and closed not opposites}
-Prove or provide a counterexample: If a set $A$ is not open, then $A$ is closed.
-\end{problem}
-
-Despite the shortcomings of the terminology illuminated by the previous problem, there is a nice relationship between open and closed sets in terms of complements.
+Despite the fact that open and closed are not opposites of each other, there is a nice relationship between open and closed sets in terms of complements.
 
 \begin{theorem}
 A set $U$ is open if and only if $U^C$ is closed.
 \end{theorem}
-
-%The next theorem justifies referring to $(-\infty,\infty)$ as both an open and closed interval.
-%
-%\begin{theorem}
-%The set of real numbers is both open and closed.
-%\end{theorem}
-
-%\begin{theorem}
-%The set of rational numbers is neither open nor closed.
-%\end{theorem}
-
-%\begin{theorem}
-%The empty set is both open and closed.
-%\end{theorem}
 
 \begin{theorem}\label{thm:finite union and intersection of closed sets}
 If $A$ and $B$ are closed sets, then 
@@ -236,10 +187,6 @@ If $A$ and $B$ are closed sets, then
 \begin{theorem}\label{thm:intersection of closed sets}
 If $\{A_{\alpha}\}_{\alpha\in\Delta}$ is a collection of closed sets, then $\bigcap_{\alpha\in \Delta} A_{\alpha}$ is a closed set.
 \end{theorem}
-
-%\begin{problem}\label{prob:union of closed sets}
-%Prove or provide a counterexample: If $A$ and $B$ are closed sets, then $A\cup B$ is also closed.
-%\end{problem}
 
 \begin{problem}\label{prob:union of closed sets}
 Provide an example of a collection of closed sets $\{A_{\alpha}\}_{\alpha\in\Delta}$ such that $\bigcup_{\alpha\in \Delta} A_{\alpha}$ is not a closed set.
@@ -261,5 +208,76 @@ Determine whether each of the following sets is open, closed, or neither.
 \item $Z=(0,1)\cap \mathbb{Q}$
 \end{enumerate}
 \end{problem}
+
+\begin{problem}
+Prove or provide a counterexample: Every non-closed set has at least one accumulation point.
+\end{problem}
+
+\begin{definition}
+We say that a set $A\subseteq \mathbb{R}$ is \textbf{bounded above} if there is a point $b$ such that if $x\in M$ then $x\leq b$; such a point is an \textbf{upper bound} of $A$.
+\end{definition}
+
+\begin{problem}\label{prob:find upper bounds}
+Find all upper bounds for each of the following sets.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $(0,1)$
+\item $[0,1]$
+\item $(0,1)\cap \mathbb{Q}$
+\end{enumerate}
+\end{problem}
+
+\begin{definition}
+We say $s$ is a \textbf{supremum} (or \textbf{least upper bound}) of a set $A\subseteq \mathbb{R}$ if $s$ is an upper bound of $A$ and $s\leq b$ for any other upper bound $b$ of $A$. If the supremum of $A$ exists, it is denoted $\boxed{\sup(A)}$.
+\end{definition}
+
+\begin{problem}
+Find the supremum of each of the sets in Problem~\ref{prob:find upper bounds}.
+\end{problem}
+
+Implicit in the definition is that the supremum of a set is unique if it exists. Consider a proof by contradiction when tackling the proof of the next theorem.
+
+\begin{theorem}
+If $A\subseteq \mathbb{R}$ such that the supremum exists, then the supremum is unique.
+\end{theorem}
+
+The reason the supremum is so important is because of the following fundamental axiom.
+
+\begin{axiom}[Completeness Axiom]\label{axiom:completeness}
+If $A$ is a nonempty subset of $\mathbb{R}$ that is bounded above, then $A$ has a supremum.
+\end{axiom}
+
+Given the Completeness Axiom, we say that the real numbers satisfy the \textbf{least upper bound property}. At this point, it is not necessary that we complete the following problem, but you might find doing so to be an interesting challenge.
+
+\begin{problem}
+Prove that the Archimedean Property follows from the Completeness Axiom.
+\end{problem}
+
+\begin{definition}
+We say that a set $A$ is \textbf{disconnected} if there exists two disjoint open sets $U_1$ and $U_2$ such that $A\cap U_1$ and $A\cap U_2$ are nonempty but $A\subseteq U_1\cup U_2$ (equivalently, $A=(A\cap U_1)\cup(A\cap U_2)$). If a set is not disconnected, then we say that it is \textbf{connected}.
+\end{definition}
+
+\begin{problem}
+Determine whether each of the following sets is connected or disconnected.  Justify your assertions.
+\begin{multicols}{2}
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\mathbb{R}$
+\item $\mathbb{Q}$
+\item $\mathbb{Z}$
+\item $[0,1]\cup [2,3]$
+\item $\{\frac{1}{n}\mid n\in\mathbb{N}\}$
+\item $\{17\}$
+\item $\{17,42\}$
+\item $\emptyset$
+\end{enumerate}
+\end{multicols}
+\end{problem}
+
+The proof of the next theorem is harder than you might expect. Consider a proof by contradiction and try to make use of the Completeness Axiom.
+
+\begin{theorem}\label{thm:closed interval connected}
+Every closed interval $[a,b]$ is connected.
+\end{theorem}
+
+It turns out that every connected set in $\mathbb{R}$ is either a singleton or an interval.
 
 \end{section}
