@@ -29,9 +29,11 @@
 - Replaced most occurrences of one-to-one and onto with injective and surjective.
 - Moved the content on injective and surjective to its own section.
 - Added several new figures to the chapters on relations and functions.
+- Added a chapter that focuses on the real numbers. The first section focuses on the axioms while the second section is the topology section that used to be in Chapter 3.
 - Changed ``limit point" to ``accumulation point".
-- Added some content on connected sets to the section on topology.
-- Added a section on continuous functions that includes the Intermediate Value Theorem.
+- Added some content on supremum/infimum, compact, and connected to the section on topology.
+- Added a section on continuous functions that includes problems involving open, closed, compact, and connected sets. I also included the Intermediate Value Theorem.
+- Added a couple of new problems to the end of the section on the irrationality of $\sqrt{2}$.
 
 ## Reviewer 1
 

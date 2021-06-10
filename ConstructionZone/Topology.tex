@@ -6,46 +6,6 @@ Once considered an abstract branch of pure mathematics, topology now has applica
 
 For this entire section, our universe of discourse is the set of real numbers.  You may assume all the usual basic algebraic properties of the real numbers (addition, subtraction, multiplication, division, commutative property, distribution, etc.). We will often refer to an element in a subset of real numbers as a \textbf{point}.
 
-Recall that an \textbf{axiom} is a statement that we \emph{assume} to be true.  In this section, we introduce a few of the standard axioms of the real numbers. It follows immediately from the first axiom below that there are infinitely many real numbers between any pair of distinct real numbers.
-
-\begin{axiom} 
-If $a,b\in\mathbb{R}$ such that $a<b$, then there exists $x\in\mathbb{R}$ such that $a<x<b$.
-\end{axiom}
-
-\begin{problem}
-Given real numbers $a$ and $b$ with $a<b$, construct a real number $x$ such that $a<x<b$.  We know such a point must exist by the previous axiom, but this problem is asking you to produce an actual candidate.
-\end{problem}
-
-\begin{axiom}[Linear Ordering]
-If $a,b,c\in\mathbb{R}$, then:
-\begin{enumerate}[label=\textrm{(\alph*)}]
-\item (Reflexivity) $a\leq a$;
-\item (Antisymmetry) If $a\leq b$ and $b\leq a$, then $a=b$;
-\item (Transitivity) If $a \leq b$ and $b\leq c$, then $a\leq c$;
-\item (Trichotomy Law) If $a\neq b$, then either $a<b$ or $b<a$ but not both.
-\end{enumerate}
-\end{axiom}
-
-Parts~(a), (b), and (c) of the of the previous axiom indicate that $\leq$ is a \textbf{partial order} on $\mathbb{R}$. The inclusion of Part~(d) forces $\leq$ to be a \textbf{linear ordering} (or \textbf{total ordering}) on $\mathbb{R}$.  This collection of assumptions allows us to visualize the set of real numbers as a number line.
-
-The following axiom tells us that every real number is an element of a finite-length open interval.
-
-\begin{axiom}
-If $x\in\mathbb{R}$, then there exists $a,b\in\mathbb{R}$ such that $a<x<b$.
-\end{axiom}
-
-The next axiom indicates that every real number is either an integer or lies between two consecutive integers.
-
-\begin{axiom}[Archimedean Property]
-For every $x\in\mathbb{R}$, there exists $n\in\mathbb{Z}$ such that $n \leq x < n + 1$.
-\end{axiom}
-
-It turns out that we could derive the previous axiom from the \textbf{Completeness Axiom}, which we will introduce shortly. Use the Archimedean Property to prove the following theorem.
-
-\begin{theorem}
-For any positive real number $a$, there exists $n\in \mathbb{N}$ such that $0<\frac{1}{n}<a$.
-\end{theorem}
-
 \begin{definition}
 A set $U$ is called an \textbf{open set} if and only if for every $x \in U$, there exists a finite-length open interval $(a,b)$ containing $x$ such that $(a,b)\subseteq U$.
 \end{definition}
@@ -213,44 +173,76 @@ Determine whether each of the following sets is open, closed, or neither.
 Prove or provide a counterexample: Every non-closed set has at least one accumulation point.
 \end{problem}
 
+
 \begin{definition}
-We say that a set $A\subseteq \mathbb{R}$ is \textbf{bounded above} if there is a point $b$ such that if $x\in M$ then $x\leq b$; such a point is an \textbf{upper bound} of $A$.
+We say that a set $A\subseteq \mathbb{R}$ is \textbf{bounded above} if and only if there is a point $b$ such that if $x\in A$ then $x\leq b$; such a point is an \textbf{upper bound} of $A$.
 \end{definition}
 
+\begin{problem}
+The property of a set $M$ being \textbf{bounded below} and the notion of a \textbf{lower bound} are defined similarly; try defining them.
+\end{problem}
+
+\begin{definition}
+We say that a set $A\subseteq \mathbb{R}$ is \textbf{bounded} if $A$ bounded above and below.
+\end{definition}
+
+Notice that a set $A$ is \textbf{bounded} if and only if it is a subset of some closed interval.
+
 \begin{problem}\label{prob:find upper bounds}
-Find all upper bounds for each of the following sets.
+Find all upper bounds and all lower bounds for each of the following sets.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $(0,1)$
-\item $[0,1]$
-\item $(0,1)\cap \mathbb{Q}$
+\item $(0,1]$
+\item $(0,1]\cap \mathbb{Q}$
+\item $(0,\infty)$
+\item $\{42\}$
 \end{enumerate}
 \end{problem}
 
 \begin{definition}
-We say $s$ is a \textbf{supremum} (or \textbf{least upper bound}) of a set $A\subseteq \mathbb{R}$ if $s$ is an upper bound of $A$ and $s\leq b$ for any other upper bound $b$ of $A$. If the supremum of $A$ exists, it is denoted $\boxed{\sup(A)}$.
+We say $p$ is a \textbf{supremum} (or \textbf{least upper bound}) of a set $A\subseteq \mathbb{R}$ if $p$ is an upper bound of $A$ and $p\leq b$ for any other upper bound $b$ of $A$. If the supremum of $A$ exists, it is denoted $\boxed{\sup(A)}$. Analogously, we say $p$ is a \textbf{infimum} (or \textbf{greatest lower bound}) of $A\subseteq \mathbb{R}$ if $p$ is a lower bound of $A$ and $p\geq b$ for any other lower bound $b$ of $A$. If the infimum of $A$ exists, it is denoted $\boxed{\inf(A)}$.
 \end{definition}
 
 \begin{problem}
-Find the supremum of each of the sets in Problem~\ref{prob:find upper bounds}.
+Find the supremum and the infimum of each of the sets in Problem~\ref{prob:find upper bounds}.
 \end{problem}
 
-Implicit in the definition is that the supremum of a set is unique if it exists. Consider a proof by contradiction when tackling the proof of the next theorem.
+Implicit in the definition is that the supremum/infimum of a set is unique if it exists. 
 
 \begin{theorem}
-If $A\subseteq \mathbb{R}$ such that the supremum exists, then the supremum is unique.
+If $A\subseteq \mathbb{R}$ such that the supremum (respectively, infimum) exists, then the supremum (respectively, infimum) is unique.
 \end{theorem}
 
 The reason the supremum is so important is because of the following fundamental axiom.
 
 \begin{axiom}[Completeness Axiom]\label{axiom:completeness}
-If $A$ is a nonempty subset of $\mathbb{R}$ that is bounded above, then $A$ has a supremum.
+If $A$ is a nonempty subset of $\mathbb{R}$ that is bounded above, then $\sup(A)$ exists.
 \end{axiom}
 
-Given the Completeness Axiom, we say that the real numbers satisfy the \textbf{least upper bound property}. At this point, it is not necessary that we complete the following problem, but you might find doing so to be an interesting challenge.
+Given the Completeness Axiom, we say that the real numbers satisfy the \textbf{least upper bound property}. Certainly, the real numbers satisfy the analogous result involving the infimum.
+
+\begin{theorem}
+If $A$ is a nonempty subset of $\mathbb{R}$ that is bounded below, then $\inf(A)$ exists.
+\end{theorem}
+
+At this point, it is not necessary that we complete the following problem, but you might find doing so to be a fun challenge.
 
 \begin{problem}
 Prove that the Archimedean Property follows from the Completeness Axiom.
 \end{problem}
+
+\begin{definition}
+A set $K$ is called \textbf{compact} if $K$ is both closed and bounded.
+\end{definition}
+
+It is important to point out that there is a more general definition of compact in an arbitrary topological space.  However, using our notions of open and closed, it is a theorem that a subset of the real line is compact if and only if it is closed and bounded.
+
+\begin{problem}
+Provide several examples of sets that are compact and some that are not compact. Are finite sets compact?
+\end{problem}
+
+\begin{theorem}
+If $K$ is a nonempty compact set, then $\sup(K),\inf(K)\in K$.
+\end{theorem}
 
 \begin{definition}
 We say that a set $A$ is \textbf{disconnected} if there exists two disjoint open sets $U_1$ and $U_2$ such that $A\cap U_1$ and $A\cap U_2$ are nonempty but $A\subseteq U_1\cup U_2$ (equivalently, $A=(A\cap U_1)\cup(A\cap U_2)$). If a set is not disconnected, then we say that it is \textbf{connected}.

@@ -82,12 +82,24 @@ Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be 
 \end{problem}
 
 \begin{problem}
-Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a continuous function. If $C$ is a closed set contained in $A$, is the image $f(C)$ always closed?  If so, prove it.  Otherwise, provide a counterexample.
+Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a continuous function. If $C$ is a closed set contained in $A$, is the image $f(C)$ always a closed set?  If so, prove it.  Otherwise, provide a counterexample.
 \end{problem}
 
 \begin{problem}
-Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a continuous function. If $I$ is a finite-length interval (possibly open, closed, or neither) contained in $A$, is the image $f(I)$ always a finite-length interval?  If so, prove it.  Otherwise, provide a counterexample.
+Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a continuous function. If $B$ is bounded set contained in $A$, is the image $f(B)$ always a bounded set?  If so, prove it.  Otherwise, provide a counterexample.
 \end{problem}
+
+\begin{problem}
+Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a continuous function. If $B$ is a bounded set, is the preimage $f^{-1}(B)$ always a bounded set? If so, prove it.  Otherwise, provide a counterexample.
+\end{problem}
+
+\begin{problem}
+Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a continuous function. If $K$ is a compact set, is the preimage $f^{-1}(B)$ always a compact set? If so, prove it.  Otherwise, provide a counterexample.
+\end{problem}
+
+%\begin{problem}
+%Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a continuous function. If $I$ is a finite-length interval (possibly open, closed, or neither) contained in $A$, is the image $f(I)$ always a finite-length interval?  If so, prove it.  Otherwise, provide a counterexample.
+%\end{problem}
 
 %The next theorem likely captures your intuition about continuity from high school and calculus.
 
@@ -103,6 +115,8 @@ Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be 
 Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a continuous function. If $C$ is a connected set, is the preimage $f^{-1}(C)$ always a connected set? If so, prove it.  Otherwise, provide a counterexample.
 \end{problem}
 
+Perhaps you noticed the absence of one natural question in the previous sequence of problems. If $f$ is a continuous function and $K$ is a subset of the domain of $f$, is the image $f(K)$ a compact set?  It turns out that the answer is ``yes", but proving this fact is currently beyond our capabilities. This theorem is often proved in a real analysis course and is then used to prove the Extreme Value Theorem, which you may have encountered in your calculus course.
+
 The next result is a special case of the well-known \textbf{Intermediate Value Theorem}, which states that if $f$ is a continuous function whose domain contains the interval $[a,b]$, then $f$ attains every value between $f(a)$ and $f(b)$ at some point within the interval $[a,b]$. To prove the special case, utilize Theorem~\ref{thm:closed interval connected} and Problem~\ref{prob:continuous image of connected set} together with a proof by contradiction.
 
 \begin{theorem}
@@ -115,16 +129,8 @@ If we generalize the previous result, we obtain the Intermediate Value Theorem.
 Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a function. If $f$ is continuous on $[a,b]$ such that $f(a)<c<f(b)$ or $f(a)>c>f(b)$ for some $c\in \mathbb{R}$, then there exists $r\in [a,b]$ such that $f(r)=c$.
 \end{theorem}
 
-%\begin{problem}
-%Is the hypothesis that the interval is closed needed in the Intermediate Value Theorem? Justify your answer.
-%\end{problem}
-
 \begin{problem}
 Is the converse of the Intermediate Value Theorem true? If so, prove it.  Otherwise, provide a counterexample.
 \end{problem}
-
-%\begin{problem}
-%Let $f:[0,1]\to \mathbb{R}$ be a function such that $f(0)=-1$, $f(1)=1$, and $f([0,1])=\{-1,1\}$.  Prove that there exists $x\in [0,1]$ such that $f$ is not continuous at $x$.
-%\end{problem}
 
 \end{section}
