@@ -16,14 +16,22 @@ The only natural number that divides $1$ is $1$.
 Let $m$ be a natural number that divides $1$. We know that $m\geq 1$ because 1 is the smallest positive integer. Since $m$ divides $1$, there exists $k\in \mathbb{N}$ such that $1=mk$. Since $k\geq 1$, we see that $mk\geq m$.  But $1=mk$, and so $1\geq m$.  Thus, we have $1\leq m \leq 1$, which implies that $m=1$, as desired.
 \end{proof}
 
+For the next lemma, try utilizing a proof by contradiction together with Lemma~\ref{lem:divisorsof1}.
+
 \begin{lemma}\label{lem:plus1}
-Let $p$ be a prime number and let $n\in \mathbb{Z}$. If $p$ divides $n$, then $p$ does not divide $n+1$.\footnote{\emph{Hint:} Use a proof by contradiction and utilize the previous lemma.}
+Let $p$ be a prime number and let $n\in \mathbb{Z}$. If $p$ divides $n$, then $p$ does not divide $n+1$.
 \end{lemma}
 
-We are now ready to prove the following important theorem.
+We are now ready to prove the following important theorem. Use a proof by contradiction. In particular, assume that there are finitely many primes, say $p_1, p_2,\ldots,p_k$.  Consider the product of all of them and then add 1.
 
 \begin{theorem}\label{thm:infprimes}
-There are infinitely many prime numbers.\footnote{\emph{Hint:} Use a proof by contradiction. That is, assume that there are finitely many primes, say $p_1, p_2,\ldots,p_k$.  Consider the product of all of them and then add 1.}
+There are infinitely many prime numbers.
 \end{theorem}
+
+We conclude this chapter with a fun problem involving prime numbers.  This problem comes from Dave Richeson.  %https://divisbyzero.com/2016/02/25/good-activity-for-an-introduction-to-proofs-class/
+
+\begin{problem}
+Start with the first $n$ prime numbers, $p_1,\ldots, p_n$. Divide them into two sets. Let $A$ be the product of the primes in one set and let $B$ be the product of the primes in the other set. Assume the product is 1 if the set is empty. For example, if $n=5$, we could have $\{2,7\}$ and $\{3,5,11\}$, and so $A=14$ and $B=165$. In general, what can we conclude about $A+B$ and $A-B$? Form a conjecture and then prove it.
+\end{problem}
 
 \end{section}

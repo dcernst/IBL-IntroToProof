@@ -6,16 +6,16 @@ In the previous section, we explored finite sets.  Now, let's tinker with infini
 A set $A$ is \textbf{infinite} if and only if $A$ is not finite.
 \end{definition}
 
-Let's see if we can utilize this definition to prove that the set of natural numbers is infinite.
+Let's see if we can utilize this definition to prove that the set of natural numbers is infinite. For sake of a contradiction, assume otherwise.  Then there exists $n\in\mathbb{N}$ such that $\card([n])=\card(\mathbb{N})$, which implies that there exists a bijection $f:[n]\to \mathbb{N}$. What can you say about the number $m\coloneqq \max(f(1),f(2),\ldots,f(n))+1$?
 
 \begin{theorem}\label{thm:naturalNumbersInfinite}
-The set $\mathbb{N}$ of natural numbers is infinite.\footnote{\emph{Hint:} For sake of a contradiction, assume otherwise.  Then there exists $n\in\mathbb{N}$ such that $\card([n])=\card(\mathbb{N})$, which implies that there exists a bijection $f:[n]\to \mathbb{N}$. What can you say about the number $m\coloneqq \max(f(1),f(2),\ldots,f(n))+1$?}
+The set $\mathbb{N}$ of natural numbers is infinite.
 \end{theorem}
 
-The next theorem is analogous to Theorem~\ref{thm:finiteSetsSameCardinality}, but for infinite sets. As we shall see later, the converse of this theorem is not true in general.
+The next theorem is analogous to Theorem~\ref{thm:finiteSetsSameCardinality}, but for infinite sets. To prove this theorem, try a proof by contradiction. You should end up composing two bijections, say $f:A\to B$ and $g:B\to [n]$ for some $n\in\mathbb{N}$. As we shall see later, the converse of this theorem is not true in general. 
 
 \begin{theorem}\label{thm:infiniteSetsSameCardinality}
-If $A$ is infinite and $\card(A)=\card(B)$, then $B$ is infinite.\footnote{\emph{Hint:} Try a proof by contradiction. You should end up composing two bijections, say $f:A\to B$ and $g:B\to [n]$ for some $n\in\mathbb{N}$.}
+If $A$ is infinite and $\card(A)=\card(B)$, then $B$ is infinite.
 \end{theorem}
 
 \begin{problem}\label{prob:someInfiniteSets}
@@ -41,10 +41,10 @@ The Infinite Hotel has rooms numbered $1,2,3,4,\ldots$. Every room in the Infini
 \end{enumerate}
 \end{problem}
 
-The previous problem verifies that a proper subset of the natural numbers is in bijection with the natural numbers themselves. We also witnessed this in parts (a) and (b) of Problem~\ref{prob:someInfiniteSets}. Notice that Theorem~\ref{thm:cardinalityProperSubsetsFinite} forbids this type of behavior for finite sets. It turns out that this phenomenon is true for all infinite sets. The next theorem verifies that that the two viewpoints of infinite sets discussed above are valid.
+The previous problem verifies that there exists a proper subset of the natural numbers that is in bijection with the natural numbers themselves. We also witnessed this in Parts~(a) and (b) of Problem~\ref{prob:someInfiniteSets}. Notice that Theorem~\ref{thm:cardinalityProperSubsetsFinite} forbids this type of behavior for finite sets. It turns out that this phenomenon is true for all infinite sets. The next theorem verifies that that the two viewpoints of infinite sets discussed above are valid. To prove this theorem, we need to prove that the three statements are equivalent. One possible approach is to prove (i) if and only if (ii) and (ii) if and only if (iii). For (i) implies (ii), construct $f$ recursively. For (ii) implies (i), try a proof by contradiction. For (ii) implies (iii), let $B=A\setminus \{f(1),f(2),\ldots\}$ and show that $A$ can be put in bijection with $B\cup\{f(2),f(3),\ldots\}$. Lastly, for (iii) implies (ii), suppose $g:A\to C$ is a bijection for some proper subset $C$ of $A$. Let $a\in A\setminus C$. Define $f:\mathbb{N}\to A$ via $f(n)=g^n(a)$, where $g^n$ means compose $g$ with itself $n$ times.
 
 \begin{theorem}\label{thm:infiniteSetTFAE}
-The following statements are equivalent.\footnote{\emph{Hint:} Prove (i) if and only if (ii) and (ii) if and only if (iii). For (i) implies (ii), construct $f$ recursively. For (ii) implies (i), try a proof by contradiction. For (ii) implies (iii), let $B=A\setminus \{f(1),f(2),\ldots\}$ and show that $A$ can be put in bijection with $B\cup\{f(2),f(3),\ldots\}$. Lastly, for (iii) implies (ii), suppose $g:A\to C$ is a bijection for some proper subset $C$ of $A$. Let $a\in A\setminus C$. Define $f:\mathbb{N}\to A$ via $f(n)=g^n(a)$, where $g^n$ means compose $g$ with itself $n$ times.}
+The following statements are equivalent.
 \begin{enumerate}[label=\textrm{(\roman*)}]
 \item The set $A$ is infinite.
 \item There exists an injective function $f:\mathbb{N}\to A$.

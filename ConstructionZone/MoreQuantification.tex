@@ -160,7 +160,7 @@ Here is the general structure for a direct proof of the proposition $(\exists x)
 \begin{proof}
 \emph{[State any upfront assumptions.]} $\ldots$ 
 \begin{center}
-$\ldots$ \ \emph{[Use definitions and previous results to deduce that an $x$ exists for which $P(x)$ is true; or if you have an $x$ that works, just verify that it does.]} \ $\ldots$ 
+$\ldots$ \ \emph{[Use definitions, axioms, and previous results to deduce that an $x$ exists for which $P(x)$ is true; or if you have an $x$ that works, just verify that it does.]} \ $\ldots$ 
 \end{center}
 \noindent Therefore, there exists $x\in U$ such that $P(x)$.
 \end{proof}
@@ -210,6 +210,37 @@ Sometimes it is useful to split the universe of discourse into multiple collecti
 
 \begin{theorem}
 For all $n\in \mathbb{Z}$, $3n^2+n+14$ is even.
+\end{theorem}
+
+There are times when a theorem will make a claim about the \emph{uniqueness} of a particular mathematical object.  For example, in Section~\ref{sec:AxiomsRealNumbers}, you will be asked to prove that both the additive and multiplicative identities (i.e, 0 and 1) are unique (see Theorem~\ref{thm:unique additive identity} and \ref{thm:unique multiplicative identity}). As another example, the Fundamental Theorem of Arithmetic (see Theorem~\ref{thm:FTA}) states that every natural number greater than 1 can be expressed uniquely (up to the order in which they appear) as the product of one or more primes. The typical approach to proving uniqueness is to suppose that there are potentially two objects with the desired property and then show that these objects are actually equal. Whether you approach this as a proof by contradiction is a matter of taste. It is common to use $\boxed{\exists!}$ as a symbolic abbreviation for ``there exists a unique\ldots".
+
+\begin{skeleton}[Direct Proof of $(\exists! x)P(x)$]\label{skeleton:exists}
+Here is the general structure for a direct proof of the proposition $(\exists! x)P(x)$. Assume $U$ is the universe of discourse.
+
+\begin{center}
+\framebox{
+\begin{minipage}{6in}
+\vspace{.1in}
+\begin{proof}
+\emph{[State any upfront assumptions.]} $\ldots$ 
+\begin{center}
+$\ldots$ \ \emph{[Use definitions, axioms, and previous results to deduce that an $x$ exists for which $P(x)$ is true; or if you have an $x$ that works, just verify that it does.]} \ $\ldots$ 
+\end{center}
+\noindent Therefore, there exists $x\in U$ such that $P(x)$. Now, suppose $x_1,x_2\in U$ such that $P(x_1)$ and $P(x_2)$.
+\begin{center}
+$\ldots$ \ \emph{[Prove that $x_1=x_2$.]} \ $\ldots$ 
+\end{center}
+This implies that there exists a unique $x$ such that $P(x)$.
+\end{proof}
+\end{minipage}
+}
+\end{center}
+\end{skeleton}
+
+The next theorem provides an opportunity to practice proving uniquness.
+
+\begin{theorem}
+If $c,a,r\in\mathbb{R}$ such that $c\neq 0$ and $r\neq a/c$, then there exists a unique $x\in\mathbb{R}$ such that $(ax+1)/(cx)=r$.
 \end{theorem}
 
 \end{section}

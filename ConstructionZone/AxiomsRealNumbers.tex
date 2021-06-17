@@ -9,7 +9,7 @@ Our axioms for the real numbers fall into three categories:
 
 \begin{fieldaxioms}\label{axiom:field axioms}
 There exist functions $(a,b)\mapsto a+b$ and $(a,b)\mapsto ab$ from $\mathbb{R}^2$ to $\mathbb{R}$ satisfying:
-\begin{enumerate}%[label=\textrm{(\roman*)}]
+\begin{enumerate}
 \item[(F1)] (Associativity for Addition) For all $a, b, c\in \mathbb{R}$ we have $(a+b)+c = a+(b+c)$;
 \item[(F2)] (Commutativity for Addition) For all $a,b\in \mathbb{R}$, we have $a+b=b+a$;
 \item[(F3)] (Additive Identity) There exists $0\in\mathbb{R}$ such that for all $a\in\mathbb{R}$, $0+a=a$;
@@ -23,7 +23,7 @@ There exist functions $(a,b)\mapsto a+b$ and $(a,b)\mapsto ab$ from $\mathbb{R}^
 \end{enumerate}
 \end{fieldaxioms}
 
-In the language of abstract algebra, Axioms (F1)--(F4) and (F5)--(F8) make each of $\mathbb{R}$ and $\mathbb{R}\setminus\{0\}$ an abelian group under addition and multiplication, respectively. Axiom~(F9) provides a way for the operations of addition and multiplication to interact.  Collectively, Axioms~(F1)--(F9) make the real numbers a \textbf{field}.  It follows from the axioms that the elements $0$ and $1$ of $\mathbb{R}$ are the unique \textbf{additive} and \textbf{multiplicative identities} in $\mathbb{R}$. To prove the following theorem, suppose $0$ and $0'$ are both additive identities in $\mathbb{R}$ and then show that $0=0'$. This shows that there can only be one additive identity. Whether you approach this as a proof by contradiction is a matter of taste. 
+In the language of abstract algebra, Axioms (F1)--(F4) and (F5)--(F8) make each of $\mathbb{R}$ and $\mathbb{R}\setminus\{0\}$ an abelian group under addition and multiplication, respectively. Axiom~(F9) provides a way for the operations of addition and multiplication to interact.  Collectively, Axioms~(F1)--(F9) make the real numbers a \textbf{field}.  It follows from the axioms that the elements $0$ and $1$ of $\mathbb{R}$ are the unique \textbf{additive} and \textbf{multiplicative identities} in $\mathbb{R}$. To prove the following theorem, suppose $0$ and $0'$ are both additive identities in $\mathbb{R}$ and then show that $0=0'$. This shows that there can only be one additive identity. It might be helpful to review Skeleton Proof~\ref{skeleton:uniquness}. 
 
 \begin{theorem}\label{thm:unique additive identity}
 The additive identity of $\mathbb{R}$ is unique.
@@ -60,7 +60,7 @@ For every $a,b\in\mathbb{R}$ and $n\in\mathbb{Z}$, we define the following:
 \end{enumerate}
 \end{definition}
 
-Using the Field Axioms, we can prove each of the statements in the following theorem.  %However, we will take each for granted.
+Using the Field Axioms, we can prove each of the statements in the following theorem.
 
 \begin{theorem}\label{thm:consequences of axioms}
 For all $a,b,c\in\mathbb{R}$, we have the following:
@@ -178,13 +178,25 @@ The real numbers satisfy each of the following:
 \end{enumerate}	
 \end{additionalaxioms}
   
-Axiom~(O7) is sometimes referred to as the \textbf{Archimedean Property}. It turns out that we could derive this axiom from the \textbf{Completeness Axiom}, which we will introduce in the next sectiion.
+Axiom~(O7) is sometimes referred to as the \textbf{Archimedean Property}. It turns out that we could derive this axiom from the \textbf{Completeness Axiom}, which we will introduce in the next section.
 
 \begin{theorem}
 For any positive real number $a$, there exists $N\in \mathbb{N}$ such that $0<\frac{1}{N}<a$.
 \end{theorem}
 
 Notice that Axiom~(O5) says that every real number is contained in a finite open interval. In particular, Axiom~(O7) says that every non-integer is contained in an open interval with consecutive integer endpoints. Axiom~(O6) tells us that every open interval is nonempty. In fact, repeated applications of Axiom~(O6) implies that every open interval contains infinitely many points.
+
+Recall that the real numbers consist of rational and irrational numbers.  Two examples of an irrational number that you are likely familiar with are $\pi$ and  $\sqrt{2}$. In Section~\ref{sec:irrationality of root 2}, we will prove that $\sqrt{2}$, but for now let's take this fact for granted. It turns out that $\sqrt{2}\approx 1.41421356237\in (1,2)$. This provides an example of an irrational number occurring between a pair of distinct rational numbers. The following two theorems are a good challenge to generalize this.
+
+\begin{theorem}\label{thm:rationals dense}
+Between any two distinct real numbers there is a rational number.
+\end{theorem}
+
+\begin{theorem}\label{thm:irrationals dense}
+Between any two distinct real numbers there is an irrational number.
+\end{theorem}
+
+Repeated applications of the previous two theorems implies that every open interval contains infinitely many rational numbers and infinitely many irrational numbers. In light of these two theorems, we say that both the rationals and irrationals are \textbf{dense} in the real numbers. 
 
 There is a special function that we can now introduce. 
 
