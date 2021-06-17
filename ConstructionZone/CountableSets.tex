@@ -15,10 +15,10 @@ A set $A$ is called \textbf{countable} if and only if $A$ is finite or denumerab
 \begin{problem}
 Quickly justify that each of the following sets is countable. Feel free to appeal to previous problems.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $A\coloneqq \{a,b,c\}$
+\item $\{a,b,c\}$
 \item Set of odd natural numbers
 \item Set of even natural numbers
-\item $R\coloneqq \{\frac{1}{2^n}\mid n\in \mathbb{N}\}$
+\item $\{\frac{1}{2^n}\mid n\in \mathbb{N}\}$
 \item Set of perfect squares in $\mathbb{N}$
 \item $\mathbb{Z}$
 \item $\mathbb{N}\times \{a\}$
@@ -30,8 +30,10 @@ Quickly justify that each of the following sets is countable. Feel free to appea
 Let $A$ and $B$ be sets such that $A$ is countable. If $f:A\to B$ is a bijection, then $B$ is countable.
 \end{theorem}
 
+For the next proof, consider the cases when $A$ is finite versus infinite. The contrapositive of Corollary~\ref{cor:infiniteSetInfiniteSubset} should be useful for the case when $A$ is finite.
+
 \begin{theorem}\label{thm:subsetsCountableSets}
-Every subset of a countable set is countable.\footnote{\emph{Hint:} Let $A$ be a countable set.  Consider the cases when $A$ is finite versus infinite. The contrapositive of Corollary~\ref{cor:infiniteSetInfiniteSubset} should be useful for the case when $A$ is finite.}
+Every subset of a countable set is countable.
 \end{theorem}
 
 \begin{theorem}
@@ -44,8 +46,10 @@ If $f:\mathbb{N}\to A$ is a surjective function, then $A$ is countable.
 
 Loosely speaking, the next theorem tells us that we can arrange all of the rational numbers then count them ``first", ``second", ``third", etc. Given the fact that between any two distinct rational numbers on the number line, there are an infinite number of other rational numbers (justified by taking repeated midpoints), this may seem counterintuitive.  
 
+Here is one possible approach for proving the next theorem. Make a table with column headings $0, 1, -1, 2,-2,\ldots$ and row headings $1,2,3,4,5,\ldots$.  If a column has heading $m$ and a row has heading $n$, then the entry in the table corresponds to the fraction $m/n$.  Find a way to zig-zag through the table making sure to hit every entry in the table (not including column and row headings) exactly once.  This justifies that there is a bijection between $\mathbb{N}$ and the entries in the table.  Do you see why?  But now notice that every rational number appears an infinite number of times in the table. Resolve this by appealing to Theorem~\ref{thm:subsetsCountableSets}.
+
 \begin{theorem}
-The set of rational numbers $\mathbb{Q}$ is countable.\footnote{\emph{Hint:} Make a table with column headings $0, 1, -1, 2,-2,\ldots$ and row headings $1,2,3,4,5,\ldots$.  If a column has heading $m$ and a row has heading $n$, then the corresponding entry in the table is given by the fraction $m/n$.  Find a way to zig-zag through the table making sure to hit every entry in the table (not including column and row headings) exactly once.  This justifies that there is a bijection between $\mathbb{N}$ and the entries in the table.  Do you see why?  Now, we aren't done yet because every rational number appears an infinite number of times in the table. Appeal to Theorem~\ref{thm:subsetsCountableSets}.}
+The set of rational numbers $\mathbb{Q}$ is countable.
 \end{theorem}
 
 \begin{theorem}\label{thm:union of countable sets}
@@ -66,7 +70,6 @@ Then we we have the following:
 \end{enumerate}
 \end{lemma}
 
-%Notice that the collection $\{A_n\}_{n=1}^{\infty}$ in the hypothesis of the lemma above is a countable collection of sets.
 The next theorem states that the union of a countable collection of countable sets is countable. To prove this, consider two cases:
 To prove the next theorem, consider two cases:
 \begin{enumerate}

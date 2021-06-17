@@ -45,6 +45,8 @@
     * Done.
 - Exercise 2.68. The instructions are not clear. What does “Discuss the meaning of...” mean? Revise.
     * I hope that my fix is sufficient.
+- Power sets are interesting on a variety of levels. Section 3.2 constructs paradoxes by using power sets, but I think that key role they play could be explained more. Those paradoxes are incredibly simple to construct, and to understand, because they are linked to power sets. Power sets also played an important role in Cantor’s investigation of cardinality (Cantor’s Theorem), and it would not be a bad thing to give that commentary in Section 3.2 as a “preview of coming attractions,” and then talk about power sets again in Chapter 8. Interweaving sections and explaining how each definition fits into the chapter’s subfield under study would give, I feel, a much improved exposition.
+   * Added a brief comment at end of section.
 - Section 3.1: The order of the bulleted sets could be revised so that they progress as nested. Then this can have powerful consequences in a student’s thinking of these sets for modern algebraic considerations.
     * Done.
 - Exercise 3.3. Clarity needed. What is a “simple description”?
