@@ -4,7 +4,7 @@ In the previous section, we discussed proving statements of the form $(\forall n
 \begin{center}
 $(\forall n \in \mathbb{Z})(n \geq a \implies P(n))$
 \end{center}
-for any value $a \in \mathbb{Z}$. Theorem~\ref{thm:PMI} handles the special case when $a = 1$.  The ladder analogy from the previous section holds for this more general situation, too.
+for any value $a \in \mathbb{Z}$. Theorem~\ref{thm:PMI} handles the special case when $a = 1$.  The ladder analogy from the previous section holds for this more general situation, too. To prove the next theorem, mimic the proof of Theorem~\ref{thm:PMI}, but this time use the set $S=\{k\in \mathbb{N}\mid P(a+k-1) \text{ is true}\}$.
 
 \begin{theorem}[Principle of Mathematical Induction]\label{thm:PMI2}
 Let $P(a), P(a+1), P(a+2), \ldots$ be a sequence of statements, one for each integer greater than or equal to $a$. Assume that
@@ -12,7 +12,7 @@ Let $P(a), P(a+1), P(a+2), \ldots$ be a sequence of statements, one for each int
 \item $P(a)$ is true, and
 \item if $P(k)$ is true, then $P(k+1)$ is true.
 \end{enumerate}
-Then $P(n)$ is true for all integers $n \geq a$.\footnote{\emph{Hint:} Mimic the proof of Theorem~\ref{thm:PMI}, but this time use the set $S=\{k\in \mathbb{N}\mid P(a+k-1) \text{ is true}\}$.}
+Then $P(n)$ is true for all integers $n \geq a$.
 \end{theorem}
 
 Theorem~\ref{thm:PMI2} gives a process for proving statements of the form: ``For all integers $n\geq a$, $P(n)$.'' As before, hypothesis (i) is called the \textbf{base step}, and (ii) is called the \textbf{inductive step}.
@@ -95,18 +95,17 @@ For all integers $n \ge 2$, $2^n < (n+1)!$.
 For all integers $n \ge 2$, $2\cdot 9^n - 10 \cdot 3^n$ is divisible by $4$.
 \end{theorem}
 
-We now consider an induction problem of a different sort, where you have to begin with some experimentation.
-
-DOUBLE CHECK THIS PROBLEM.  MAYBE A CLOSED FORM IS MORE NATURAL.
+We now consider an induction problem of a different sort, where you have to begin with some experimentation. For Part~(c), consider using the results from Parts~(a) and~(b).
 
 \begin{problem}
-For any $n \in \mathbb{N}$, say that $n$ straight lines are ``safely drawn in the plane'' if no two of them are parallel and no three of them meet in a single point. Let $S(n)$ be the number of regions formed when $n$ straight lines are safely drawn in the plane.
+Suppose $n$ lines are drawn in the plane so that no two lines are parallel and no three lines intersect at any one point. Such a collection of lines is said to be in \textbf{general position}. Every collection of lines in general position divides the plane into disjoint regions, some of which are polygons with finite area (bounded regions) and some of which are not (unbounded regions).
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item Compute $S(1)$, $S(2)$, $S(3)$, and $S(4)$.
-\item Conjecture a recursive formula for $S(n)$. That is, find a formula for $S(n)$ that involves some of the previous terms $S(n-1), S(n-2)$, etc. If necessary, first compute a few more values of $S(n)$.
-\item Prove your conjecture.
+\item Let $R(n)$ be the number of regions the plane is divided into by $n$ lines in general position.  Conjecture a formula for $R(n)$ and prove that your conjecture is correct.
+\item Let $U(n)$ be the number of unbounded regions the plane is divided into by $n$ lines in general position.  Conjecture a formula for $U(n)$ and prove that your conjecture is correct.
+\item Let $B(n)$ be the number of unbounded regions the plane is divided into by $n$ lines in general position.  Conjecture a formula for $B(n)$ and prove that your conjecture is correct.
+\item Suppose we color each of the regions (bounded and unbounded) so that no two adjacent regions (i.e., share a common edge) have the same color.  What is the fewest colors we could use to accomplish this?  Prove your assertion.
 \end{enumerate}
-\end{problem}
+\end{problem} 
 
 %\begin{definition}
 %A \textbf{tromino} is an $L$-shaped region formed by three squares glued together, as follows.

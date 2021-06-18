@@ -159,7 +159,7 @@ be helpful.
 - The text has a small typos that don’t impact the overall meaning and value of the text, but will be tricky/tedious to hunt down and fix. In some cases, little words like “is” are missing or repeated (e.g., “the the”) or words are misspelled but correct in some other context/meaning (e.g., “our” became “out”).
       * Hopefully, I'll hunt these down.  All "the the" and "out" vs "our" instances have been fixed.
 - Some of the hints for Chapter 5 are extensive. If the problems can’t be stepped out further to avoid such hints, it would be good to hide the hints at the back of the chapter. The footnotes detract from the text, and intimidate the reader.
-      * This clashes with comments from another reviewer.  Feedback I've had in the past is that the footnotes are useful. But I'm open to do something else.
+      * This clashes with comments from another reviewer.  Feedback I've had in the past is that the footnotes are useful. I opted to remove most of the footnotes and added the content of the footnotes to the prose.
 - p. 6, paragraph 4: What if the instructor doesn’t structure their class the way the author does? This description is specific to the author’s classes.
       * This will get addressed when Intro gets retooled.
 - p. 10, Subsection 1.5: Again, the language is specific to the author’s classes. The “me” is the author, not the student’s instructor. I love the sentiment and the phrase, “earnest failure outweighs counterfeit success,” is everything a teacher wants to hear.
