@@ -13,7 +13,7 @@ A set $A$ is called \textbf{countable} if and only if $A$ is finite or denumerab
 \end{definition}
 
 \begin{problem}
-Quickly justify that each of the following sets is countable. Feel free to appeal to previous problems.
+Quickly justify that each of the following sets is countable. Feel free to appeal to previous problems. Which sets are denumerable?
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $\{a,b,c\}$
 \item Set of odd natural numbers
@@ -25,6 +25,12 @@ Quickly justify that each of the following sets is countable. Feel free to appea
 %\item The set $\mathbb{N}\times \mathbb{N}$.
 \end{enumerate}
 \end{problem}
+
+Utilize Theorem~\ref{thm:infiniteSetTFAE} when proving the next result.
+
+\begin{theorem}
+Every infinite set contains a denumerable subset.
+\end{theorem}
 
 \begin{theorem}
 Let $A$ and $B$ be sets such that $A$ is countable. If $f:A\to B$ is a bijection, then $B$ is countable.
@@ -71,7 +77,6 @@ Then we we have the following:
 \end{lemma}
 
 The next theorem states that the union of a countable collection of countable sets is countable. To prove this, consider two cases:
-To prove the next theorem, consider two cases:
 \begin{enumerate}
 \item The collection of sets is finite.  
 \item The collection of sets is infinite.
@@ -132,6 +137,8 @@ To handle the first case, use induction together with Theorem~\ref{thm:union of 
 \begin{theorem}\label{thm:countable union of countable sets}
 Let $\Delta$ be equal to either $\mathbb{N}$ or $[k]$ for some $k\in\mathbb{N}$. If $\{A_n\}_{n\in\Delta}$ is a countable collection of sets such that each $A_n$ is countable, then $\bigcup_{n\in \Delta}A_n$ is countable.
 \end{theorem}
+
+Do you use the Axiom of Choice when proving the previous theorem?  If so, where?
 
 \begin{theorem}
 If $A$ and $B$ are countable sets, then $A\times B$ is countable.

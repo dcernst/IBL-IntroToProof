@@ -23,7 +23,7 @@ There exist functions $(a,b)\mapsto a+b$ and $(a,b)\mapsto ab$ from $\mathbb{R}^
 \end{enumerate}
 \end{fieldaxioms}
 
-In the language of abstract algebra, Axioms (F1)--(F4) and (F5)--(F8) make each of $\mathbb{R}$ and $\mathbb{R}\setminus\{0\}$ an abelian group under addition and multiplication, respectively. Axiom~(F9) provides a way for the operations of addition and multiplication to interact.  Collectively, Axioms~(F1)--(F9) make the real numbers a \textbf{field}.  It follows from the axioms that the elements $0$ and $1$ of $\mathbb{R}$ are the unique \textbf{additive} and \textbf{multiplicative identities} in $\mathbb{R}$. To prove the following theorem, suppose $0$ and $0'$ are both additive identities in $\mathbb{R}$ and then show that $0=0'$. This shows that there can only be one additive identity. It might be helpful to review Skeleton Proof~\ref{skeleton:uniquness}. 
+In the language of abstract algebra, Axioms (F1)--(F4) and (F5)--(F8) make each of $\mathbb{R}$ and $\mathbb{R}\setminus\{0\}$ an abelian group under addition and multiplication, respectively. Axiom~(F9) provides a way for the operations of addition and multiplication to interact.  Collectively, Axioms~(F1)--(F9) make the real numbers a \textbf{field}.  It follows from the axioms that the elements $0$ and $1$ of $\mathbb{R}$ are the unique \textbf{additive} and \textbf{multiplicative identities} in $\mathbb{R}$. To prove the following theorem, suppose $0$ and $0'$ are both additive identities in $\mathbb{R}$ and then show that $0=0'$. This shows that there can only be one additive identity. It might be helpful to review Skeleton Proof~\ref{skeleton:uniqueness}. 
 
 \begin{theorem}\label{thm:unique additive identity}
 The additive identity of $\mathbb{R}$ is unique.
@@ -50,13 +50,13 @@ We now introduce some common notation that you are likely familiar with.  Take a
 \begin{definition}
 For every $a,b\in\mathbb{R}$ and $n\in\mathbb{Z}$, we define the following:
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $a-b\coloneqq a+(-b)$
-\item $\displaystyle\frac{a}{b}\coloneqq ab^{-1}$ (for $b\neq 0$)
-\item $\displaystyle a^n\coloneqq \begin{cases}
+\item $\boxed{a-b\coloneqq a+(-b)}$
+\item $\boxed{\displaystyle\frac{a}{b}\coloneqq ab^{-1}}$ (for $b\neq 0$)
+\item $\boxed{\displaystyle a^n\coloneqq \begin{cases}
 \overbrace{aa\cdots a}^n, &\text{if }n\in \mathbb{N}\\
 1, & \text{if }n=0\text{ and }a\neq 0\\
 \displaystyle\frac{1}{a^{-n}}, & \text{if }-n\in \mathbb{N}\text{ and }a\neq 0
-\end{cases}$
+\end{cases}}$
 \end{enumerate}
 \end{definition}
 
@@ -85,7 +85,7 @@ For all $a,b\in\mathbb{R}$, we have $(a+b)(a-b)=a^2-b^2$.
 We now introduce the Order Axioms of the real numbers.
 
 \begin{orderaxioms}\label{axiom:order axioms}
-For $a,b,c\in \mathbb{R}$, there is a relation $<$ on $\mathbb{R}$ satisfying:
+For $a,b,c\in \mathbb{R}$, there is a relation $\boxed{<}$ on $\mathbb{R}$ satisfying:
 \begin{enumerate}
 \item[(O1)] (Trichotomy Law) If $a\neq b$, then either $a<b$ or $b<a$ but not both;
 \item[(O2)] (Transitivity) If $a<b$ and $b<c$, then $a<c$;
@@ -101,9 +101,9 @@ Notice that the Order Axioms are phrased in terms of ``$<$". We would also like 
 \begin{definition}
 For $a,b\in\mathbb{R}$, we define:
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $a>b$ if $b<a$;
-\item $a\leq b$ if $a<b$ or $a=b$;
-\item $a\geq b$ if $b\leq a$.
+\item $\boxed{a>b}$ if $b<a$;
+\item $\boxed{a\leq b}$ if $a<b$ or $a=b$;
+\item $\boxed{a\geq b}$ if $b\leq a$.
 \end{enumerate}
 \end{definition}
 
@@ -203,10 +203,10 @@ There is a special function that we can now introduce.
 \begin{definition}
 Given $a\in\mathbb{R}$, we define the \textbf{absolute value of $a$}, denoted $|a|$, via
 \[
-|a|\coloneqq \begin{cases}
+\boxed{|a|\coloneqq \begin{cases}
 a, & \text{if }a\geq 0\\
 -a, & \text{if }a<0.
-\end{cases}
+\end{cases}}
 \]
 \end{definition}
 
@@ -225,11 +225,11 @@ For all $a\in\mathbb{R}$, $|a|^2=a^2$.
 \end{theorem}
 
 \begin{theorem}\label{thm:plus minus less than or equal to abs value}
-Prove that for all $a\in\mathbb{R}$, $\pm a\leq |a|$.
+For all $a\in\mathbb{R}$, $\pm a\leq |a|$.
 \end{theorem}
 
 \begin{theorem}\label{thm:abs value less than or equal to iff squeezed by plus minus}
-Prove that for all $a,r\in\mathbb{R}$, $|a|\leq r$ if and only if $-r\leq a\leq r$.
+For all $a,r\in\mathbb{R}$, $|a|\leq r$ if and only if $-r\leq a\leq r$.
 \end{theorem}
 
 In the previous theorem, it must be the case that $r$ is nonnegative.  The letter $r$ was used because it is the first letter of the word ``radius". If $r$ is positive, we can think of the interval $(-r,r)$ as the interior of a 1-dimensional circle with radius $r$ centered at 0.
@@ -241,13 +241,13 @@ For all $a,b\in\mathbb{R}$, $|ab|=|a||b|$.
 Consider using Theorems~\ref{thm:plus minus less than or equal to abs value} and \ref{thm:abs value less than or equal to iff squeezed by plus minus} when attacking the next problem.  This result can be extremely useful in some contexts. 
 
 \begin{theorem}[Triangle Inequality]
-Prove that for all $a,b\in\mathbb{R}$, $|a+b|\leq |a|+|b|$.
+For all $a,b\in\mathbb{R}$, $|a+b|\leq |a|+|b|$.
 \end{theorem}
 
 The next theorem is related to the Triangle Inequality.
 
 \begin{theorem}[Reverse Triangle Inequality]
-Prove that for all $a,b\in\mathbb{R}$, $|a-b|\geq \left||a|-|b| \right|$.
+For all $a,b\in\mathbb{R}$, $|a-b|\geq \left||a|-|b| \right|$.
 \end{theorem}
 
 \end{section}
