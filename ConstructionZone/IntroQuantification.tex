@@ -109,7 +109,11 @@ Express the formal definition of a limit (given above Definition~\ref{def:quanti
 If you look closely, many of the theorems that we have encountered up until this point were of the form $A(x)\implies B(x)$, where $A(x)$ and $B(x)$ are predicates.  For example, consider Theorem~\ref{thm:n even implies n^2 even}, which states, ``If $n$ is an even integer, then $n^2$ is an even integer." In this case, ``$n$ is an even integer" and ``$n^2$ is an even integer" are both predicates.  So, it would be reasonable to assume that the entire theorem statement is a predicate.  However, it is standard practice to interpret the sentence $A(x)\implies B(x)$ to mean $(\forall x)(A(x)\implies B(x))$ (where the universe of discourse for $x$ needs to be made clear). We can also retool such statements to ``hide" the implication. In particular, $(\forall x)(A(x)\implies B(x))$ has the same meaning as $(\forall x \in U')B(x)$, where $U'$ is the collection of items from the universe of discourse $U$ that makes $A(x)$ true. For example, we could rewrite the statement of Theorem~\ref{thm:n even implies n^2 even} as ``For every even integer $n$, $n^2$ is even."
 
 \begin{problem}
-Find at least two instances of theorem statements that appeared earlier in the book and are written in the form $A(x)\implies B(x)$. Rewrite each in an equivalent way that makes the universal quantifier explicit while possibly suppressing the implication.
+Reword Theorem~\ref{thm:sum of three consecutive integers} so that it explicitly reads as a universally quantified statement. Compare with Problem~\ref{prob:reword as conditional}.
+\end{problem}
+
+\begin{problem}
+Find at least two other instances of theorem statements that appeared earlier in the book and are written in the form $A(x)\implies B(x)$. Rewrite each in an equivalent way that makes the universal quantifier explicit while possibly suppressing the implication.
 \end{problem}
 
 \begin{problem}
