@@ -34,6 +34,7 @@
 - Added some content on supremum/infimum, compact, and connected to the section on topology.
 - Added a section on continuous functions that includes problems involving open, closed, compact, and connected sets. I also included the Intermediate Value Theorem.
 - Added a couple of new problems to the end of the section on the irrationality of $\sqrt{2}$.
+- Added ``counterexample" to the appendix on ``Fancy Mathematical Terms" (and changed the order of the items in the appendix).
 
 ## Reviewer 1
 

@@ -89,6 +89,23 @@ Negate each of the following propositions.  Disregard the truth value and the un
 \end{enumerate}
 \end{problem}
 
+\begin{problem}
+Consider the following proposition in some universe of discourse.
+\begin{enumerate}
+\item[] ``For all goofy wobblers $x$, there exists a dinglehopper $y$ such that if $x$ is a not a nugget, then $y$ is a doofus."
+\end{enumerate}
+Find the negation of this proposition so that it includes the phrase ``is not a doofus.''
+\end{problem}
+
+\begin{problem}
+Consider the following proposition in some universe of discourse.
+\begin{enumerate}
+\item[] ``If $x$ and $y$ are both snazzy, then $xy$ is not nifty."
+\end{enumerate}
+Find the contrapositive of this proposition so that it includes the phrase ``not snazzy".
+
+\end{problem}
+
 At this point, we should be able to use our understanding of quantification to construct counterexamples to complicated false propositions and proofs of complicated true propositions.  Here are some general proof structures for various logical forms.
 
 \begin{skeleton}[Direct Proof of $(\forall x)P(x)$]\label{skeleton:for all}
@@ -205,6 +222,18 @@ Determine whether each of the following statements is true or false. If the stat
 \item For all $a, b, c\in\mathbb{Z}$, if $a$ divides $bc$, then either $a$ divides $b$ or $a$ divides $c$.
 \item For all $a, b\in\mathbb{Z}$, if $ab$ is even, then either $a$ or $b$ is even.
 \end{enumerate}
+\end{problem}
+
+\begin{problem}
+Explain why the following ``proof'' is not a valid argument.
+\begin{enumerate}
+\item[] \textbf{Claim.}  For all $x,y\in \mathbb{Z}$, if $x$ and $y$ are even, then $x+y$ is even.
+
+\bigskip
+
+\emph{``Proof.''}  Suppose $x, y \in \mathbb{Z}$ such that $x$ and $y$ are even.  For sake of a contradiction, assume that $x+y$ is odd.  Then there exists $k \in \mathbb{Z}$ such that $x+y=2k+1$.  This implies that $(x+y)-2k=1$.  We see that the left side of the equation is even because it is the difference of even numbers.  However, the right side is odd.  Since an even number cannot equal an odd number, we have a contradiction.  Therefore, $x+y$ is even.  \hfill $\Box$
+\end{enumerate}
+
 \end{problem}
 
 Sometimes it is useful to split the universe of discourse into multiple collections to deal with separately.  When doing this, it is important to make sure that your cases are exhaustive (i.e., every possible element of the universe of discourse has been accounted for).  Ideally, your cases will also be disjoint (i.e., you have not considered the same element more than once).  For example, if our universe of discourse is the set of integers, we can separately consider even versus odd integers. Attacking a proof in this way, is often referred to as a \textbf{proof by cases}. If you decide to approach a proof using cases, be sure to inform the reader that you are doing so and organize your proof in a sensible way. Note that doing an analysis of cases should be avoided if possible. For example, while it is valid to separately consider the cases of whether $a$ is an even or odd integer in the proof of Theorem~\ref{thm:divides sum}, it is completely unnecessary.  To prove the next theorem, you might want to consider two cases.
