@@ -88,4 +88,22 @@ Let $f:X\to Y$ be a function and suppose $A, B\subseteq X$ and $C, D\subseteq Y$
 For each of the statements in the previous problem that were false, determine conditions, if any, on the corresponding sets that would make the statement true.
 \end{problem}
 
+We can generalize the results above to handle arbitrary collections of sets.
+
+\begin{theorem}\label{thm:unions and intersections of images}
+Let $f:X\to Y$ be a function and suppose $\{A_{\alpha}\}_{\alpha\in\Delta}$ is a collection of subsets of $X$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\displaystyle f\left(\bigcup_{\alpha\in\Delta} A_{\alpha}\right)=\bigcup_{\alpha\in\Delta} f\left(A_{\alpha}\right)$.
+\item $\displaystyle f\left(\bigcap_{\alpha\in\Delta} A_{\alpha}\right)\subseteq\bigcap_{\alpha\in\Delta} f\left(A_{\alpha}\right)$.
+\end{enumerate}
+\end{theorem}
+
+\begin{theorem}\label{thm:unions and intersections of preimages}
+Let $f:X\to Y$ be a function and suppose $\{C_{\alpha}\}_{\alpha\in\Delta}$ is a collection of subsets of $Y$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\displaystyle f^{-1}\left(\bigcup_{\alpha\in\Delta} C_{\alpha}\right)=\bigcup_{\alpha\in\Delta} f^{-1}\left(C_{\alpha}\right)$.
+\item $\displaystyle f^{-1}\left(\bigcap_{\alpha\in\Delta} C_{\alpha}\right)=\bigcap_{\alpha\in\Delta} f^{-1}\left(C_{\alpha}\right)$.
+\end{enumerate}
+\end{theorem}
+
 \end{section}
