@@ -30,7 +30,7 @@ R=\{(a,a),(a,b),(a,c),(b,b),(b,a),(b,c),(c,d),(c,e),(d,d),(d,a),(d,c),(e,a)\}.
 \end{example}
 
 \begin{example}\label{ex:Twitter}
-Consider the set of accounts $A$ on the social media platform Twitter.  On Twitter, each account has a set of accounts that they follow.  We can model this situation mathematically using a relation on $A$.  Define $T$ on $A$ via $xTy$ if and only if $x$ follows $y$ on Twitter. As a set
+Consider the set of accounts $A$ on the social media platform Twitter.  On Twitter, each account has a set of accounts that they follow.  We can model this situation mathematically using a relation on $A$.  Define $T$ on $A$ via $xTy$ if  $x$ follows $y$ on Twitter. As a set
 \[
 T=\{(x,y)\in A\times A\mid x\text{ follows }y\text{ on Twitter}\}.
 \]
@@ -45,14 +45,14 @@ You are already familiar with many relations.  For example, $=$, $\leq$, and $<$
 %\end{example}
 
 \begin{example}
-Define the relation $S$ from $\{-1,1\}$ to $\mathbb{Z}$ via $1Sx$ if and only if $x$ is even and $-1Sx$ if and only if $x$ is odd.  That is, $1$ is related to all even integers and $-1$ is related to all odd integers.
+Define the relation $S$ from $\{-1,1\}$ to $\mathbb{Z}$ via $1Sx$ if $x$ is even and $-1Sx$ if $x$ is odd.  That is, $1$ is related to all even integers and $-1$ is related to all odd integers.
 \end{example}
 
 \begin{example}
 Let $A$ be any set.  Since $\emptyset \subseteq A\times A$, the empty set forms a relation on $A$. This relation is called the \textbf{empty relation} on $A$.
 \end{example}
 
-Relations can be represented using digraphs. A \textbf{digraph} (short for \emph{directed graph}) is a discrete graph that consists of a set of vertices connected by edges, where the edges have a direction associated with them. If $R$ is a relation from $A$ to $B$, then the elements of $A$ and $B$ are the vertices of the digraph and there is a directed edge from $a\in A$ to $b\in B$ if and only if $(a,b)$ is in the relation $R$ (i.e., $aR b$). We can visually represent digraphs by using dots to represent the vertices and arrows to represent directed edges. We will not make a distinction between a digraph and its visual representation. Utilizing a digraph to represent a relation may be impractical if there is a large number of vertices or directed edges. 
+Relations can be represented using digraphs. A \textbf{digraph} (short for \emph{directed graph}) is a discrete graph that consists of a set of vertices connected by edges, where the edges have a direction associated with them. If $R$ is a relation from $A$ to $B$, then the elements of $A$ and $B$ are the vertices of the digraph and there is a directed edge from $a\in A$ to $b\in B$ if $(a,b)$ is in the relation $R$ (i.e., $aR b$). We can visually represent digraphs by using dots to represent the vertices and arrows to represent directed edges. We will not make a distinction between a digraph and its visual representation. Utilizing a digraph to represent a relation may be impractical if there is a large number of vertices or directed edges. 
 
 \begin{example}
 Consider the relation given in Example~\ref{ex:relation finite to finite}.  The corresponding digraph is depicted in Figure~\ref{fig:digraph finite to finite}. Notice that we have placed the vertices corresponding to elements of $A$ on the left and the elements of $B$ on the right.  This is standard practice, but what really matters is the edge connections not how the vertices are placed on the page.
@@ -95,7 +95,7 @@ Consider the relation given in Example~\ref{ex:relation finite to finite}.  The 
 \end{figure}
 
 \begin{problem}
-Let $A=\{1,2,3,4,5,6\}$ and $B=\{1,2,3,4\}$ and define $D$ from $A$ to $B$ via $(a,b)\in D$ if and only if $a-b$ is divisible by 2.  List the ordered pairs in $D$ and draw the corresponding digraph.
+Let $A=\{1,2,3,4,5,6\}$ and $B=\{1,2,3,4\}$ and define $D$ from $A$ to $B$ via $(a,b)\in D$ if $a-b$ is divisible by 2.  List the ordered pairs in $D$ and draw the corresponding digraph.
 \end{problem}
 
 If $R$ is a relation on $A$ (i.e., a relation from $A$ to $A$), then we can simplify the structure of the digraph by only utilizing one copy of $A$ for the vertices. In this case, we may have directed edges that point from a vertex to itself.  When drawing digraphs for a relation on a set, we will default to this simplified digraph (like the one depicted in Figure~\ref{fig:digraph on finite}\subref{fig:digraphB}).
@@ -168,7 +168,7 @@ Figure~\ref{fig:digraph on finite}\subref{fig:digraphA} represents the relation 
 \end{figure}
 
 \begin{problem}\label{prob:divides}
-Let $A=\{1,2,3,4,5,6\}$ and define $|$ on $A$ via $x|y$ if and only if $x$ divides $y$.  List the ordered pairs in $|$ and draw the corresponding digraph.
+Let $A=\{1,2,3,4,5,6\}$ and define $|$ on $A$ via $x|y$ if $x$ divides $y$.  List the ordered pairs in $|$ and draw the corresponding digraph.
 \end{problem}
 
 \begin{problem}\label{prob:another relation on finite}
@@ -250,11 +250,11 @@ Describe the collection of the sets of relatives with respect to the empty relat
 \end{problem}
 
 \begin{problem}\label{prob:facebook}
-Let $P$ denote the set of all people with accounts on Facebook and define the relation $F$ on $P$ via $xFy$ if and only if $x$ is friends with $y$. Describe $\rel(\text{Maria})$, where Maria is the name of a specific Facebook user.  What is $\Rel(F)$?
+Let $P$ denote the set of all people with accounts on Facebook and define the relation $F$ on $P$ via $xFy$ if $x$ is friends with $y$. Describe $\rel(\text{Maria})$, where Maria is the name of a specific Facebook user.  What is $\Rel(F)$?
 \end{problem}
 
 \begin{problem}\label{prob:mod 5}
-Define the relation $\equiv_5$ on $\mathbb{Z}$ via $a\equiv_5 b$ if and only if $a-b$ is divisible by 5. Find $\rel(1)$, $\rel(2)$, and $\rel(6)$.  How many distinct sets are in $\Rel(\equiv_5)$? List the distinct sets in $\Rel(\equiv_5)$.
+Define the relation $\equiv_5$ on $\mathbb{Z}$ via $a\equiv_5 b$ if $a-b$ is divisible by 5. Find $\rel(1)$, $\rel(2)$, and $\rel(6)$.  How many distinct sets are in $\Rel(\equiv_5)$? List the distinct sets in $\Rel(\equiv_5)$.
 \end{problem}
 
 \begin{problem}
@@ -324,7 +324,7 @@ Given a relation $R$ on a finite set $A$, describe what each of reflexive, symme
 \end{problem}
 
 %\begin{problem}
-%Let $P$ be the set of people at a party and define $N$ via $(x,y)\in N$ if and only if $x$ knows the name of $y$.  Describe what it would mean for $N$ to be reflexive, symmetric, and transitive.
+%Let $P$ be the set of people at a party and define $N$ via $(x,y)\in N$ if $x$ knows the name of $y$.  Describe what it would mean for $N$ to be reflexive, symmetric, and transitive.
 %\end{problem}
 
 Below, we provide skeleton proofs for proving that a relation is reflexive, symmetric, or transitive.  Notice that the skeleton proof for proving that a relation is reflexive is a special case of Skeleton Proof~\ref{skeleton:for all}. Similarly, the skeleton proofs involving symmetric and transitive are both special cases of Skeleton Proof~\ref{skeleton:for all direct proof}. It is important to point out that every relation on the empty set is vacuously reflexive, symmetric, and transitive.  In the skeleton proofs below, we are implicitly assuming that the set in question is nonempty.  In some circumstances, it may be necessary to mention the possibility of the empty set.
@@ -389,20 +389,20 @@ Determine whether each of the following relations is reflexive, symmetric, or tr
 \item Consider the relation $T$ described in Example~\ref{ex:Twitter}.
 \item Consider the relation $F$ described in Problem~\ref{prob:facebook}.
 \item Consider the relation $\equiv_5$ described in Problem~\ref{prob:mod 5}.
-\item Let $P$ be the set of all people and define $H$ via $xHy$ if and only if $x$ and $y$ have the same height.
-\item Let $P$ be the set of all people and define $T$ via $xTy$ if and only if $x$ is taller than $y$.
+\item Let $P$ be the set of all people and define $H$ via $xHy$ if $x$ and $y$ have the same height.
+\item Let $P$ be the set of all people and define $T$ via $xTy$ if $x$ is taller than $y$.
 \item Consider the relation ``divides" on $\mathbb{N}$.
-\item Let $L$ be the set of lines and define $||$ via $l_1||l_2$ if and only if $l_1$ is parallel to $l_2$.
-\item Let $C[0,1]$ be the set of continuous functions on $[0,1]$.  Define $f\sim g$ if and only if
+\item Let $L$ be the set of lines and define $||$ via $l_1||l_2$ if $l_1$ is parallel to $l_2$.
+\item Let $C[0,1]$ be the set of continuous functions on $[0,1]$.  Define $f\sim g$ if
 \[
 \int_0^1|f(x)|\ dx=\int_0^1|g(x)|\ dx.
 \]
-\item Define $R$ on $\mathbb{N}$ via $nR m$ if and only if $n+m$ is even.
-\item Define $D$ on $\mathbb{R}$ via $(x,y)\in D$ if and only if $x=2y$.
-\item Define $F$ on $\mathbb{Z}\times \left(\mathbb{Z}\setminus \{0\}\right)$ via $(a,b)F(c,d)$ if and only $ad=bc$. Do you recognize this relation? Think about fractions.
-\item Define $\sim$ on $\mathbb{R}^2$ via $(x_1,y_1)\sim (x_2,y_2)$ if and only if $x_1^2+y_1^2=x_2^2+y_2^2$.
-\item Define $S$ on $\mathbb{R}$ via $xS y$ if and only if $\lfloor x\rfloor =\lfloor y\rfloor$, where $\lfloor x\rfloor$ is the greatest integer less than or equal to $x$ (e.g., $\lfloor \pi\rfloor=3$, $\lfloor -1.5\rfloor=-2$, and $\lfloor 4\rfloor=4$).
-\item Define $C$ on $\mathbb{R}$ via $xCy$ if and only if $|x-y|<1$.
+\item Define $R$ on $\mathbb{N}$ via $nR m$ if $n+m$ is even.
+\item Define $D$ on $\mathbb{R}$ via $(x,y)\in D$ if $x=2y$.
+\item Define $F$ on $\mathbb{Z}\times \left(\mathbb{Z}\setminus \{0\}\right)$ via $(a,b)F(c,d)$ if $ad=bc$. Do you recognize this relation? Think about fractions.
+\item Define $\sim$ on $\mathbb{R}^2$ via $(x_1,y_1)\sim (x_2,y_2)$ if $x_1^2+y_1^2=x_2^2+y_2^2$.
+\item Define $S$ on $\mathbb{R}$ via $xS y$ if $\lfloor x\rfloor =\lfloor y\rfloor$, where $\lfloor x\rfloor$ is the greatest integer less than or equal to $x$ (e.g., $\lfloor \pi\rfloor=3$, $\lfloor -1.5\rfloor=-2$, and $\lfloor 4\rfloor=4$).
+\item Define $C$ on $\mathbb{R}$ via $xCy$ if $|x-y|<1$.
 %\item Consider the empty relation on the set $A$ from Problem~\ref{prob:relation on finite}(b).
 \end{enumerate}
 \end{problem}

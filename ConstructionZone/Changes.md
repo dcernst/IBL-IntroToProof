@@ -35,6 +35,7 @@
 - Added a section on continuous functions that includes problems involving open, closed, compact, and connected sets. Included one figure to illustrate definition of continuity. I also included the Intermediate Value Theorem.
 - Added a couple of new problems to the end of the section on the irrationality of $\sqrt{2}$.
 - Added ``counterexample" to the appendix on ``Fancy Mathematical Terms" (and changed the order of the items in the appendix).
+- Made all definitions consistent in wording.  Some were written as ``if and only if" while most were written as ``if".  Now, all definitions use the latter.
 
 ## Reviewer 1
 

@@ -34,11 +34,14 @@ Let $A$ and $B$ be propositions.
 \item The proposition ``\textbf{$A$ and $B$}'' is true if both $A$ and $B$ are true; expressed symbolically as $\boxed{A \wedge B}$ and called the \textbf{conjunction} of $A$ and $B$.
 \item The proposition ``\textbf{$A$ or $B$}'' is true if at least one of $A$ or $B$ is true; expressed symbolically as $\boxed{A \vee B}$ and called the \textbf{disjunction} of $A$ and $B$.
 \item\label{def:conditional} The proposition ``\textbf{If $A$, then $B$}'' is true if both $A$ and $B$ are true, or $A$ is false; expressed symbolically as $\boxed{A \implies B}$ and called a \textbf{conditional proposition} (or \textbf{implication}). In this case, $A$ is called the \textbf{hypothesis} and $B$ is called the \textbf{conclusion}. Note that $A \implies B$ may also be read as ``$A$ implies $B$", ``$A$ only if $B$", ``$B$ if $A$", or ``$B$ whenever $A$". 
-\item\label{def:logically equivalent} The proposition ``\textbf{$A$ if and only if $B$}" is true if both $A$ and $B$ have the same truth value; expressed symbolically as $\boxed{A\iff B}$. If $A\iff B$ is true, we say that $A$ and $B$ are \textbf{logically equivalent}.
+\item\label{def:logically equivalent} The proposition ``\textbf{$A$ if and only if $B$}" (alternatively, ``\textbf{$A$ is necessary and sufficient for $B$}") is true if both $A$ and $B$ have the same truth value; expressed symbolically as $\boxed{A\iff B}$ and called a \textbf{biconditional proposition}. If $A\iff B$ is true, we say that $A$ and $B$ are \textbf{logically equivalent}.
 \end{enumerate}
+Each of the boxed propositions is called a \textbf{compound proposition}, where $A$ and $B$ are referred to as the \textbf{components} of the compound proposition.
 \end{definition}
 
-Each of the boxed propositions in the previous definition is called a \textbf{compound proposition}, where $A$ and $B$ are referred to as the \textbf{components} of the compound proposition. We can form complicated compound propositions with several components by combining logical connectives.
+It is worth pointing out that definitions in mathematics are typically written in the form ``$B$ if $A$" (or ``$B$ provided that $A$" or ``$B$ whenever $A$"), where $B$ contains the term or phrase we are defining and $A$ provides the meaning of the concept we are defining. In the case of definitions, we should always interpret ``$B$ if $A$" as describing precisely the collection of ``objects" (e.g., numbers, sets, functions, etc.) that should be identified with the term or phrase we defining.  That is, if an object does not meet the condition specified in $A$, then it is never referred to by the term or phrase we are defining. Some authors will write definitions in the form ``$B$ if and only if $A$". However, a definition is not at all the same kind of statement as a usual biconditional since one of the two sides is undefined until the definition is made. A definition is really a statement that the newly defined term or phrase is synonymous with a previously defined concept.
+
+We can form complicated compound propositions with several components by combining logical connectives.
 
 %\begin{problem}
 %Describe the meaning of $\neg (A \wedge B)$ and $\neg (A \vee B)$.
@@ -228,7 +231,7 @@ We have introduced the logical symbols $\neg$, $\wedge$, $\vee$, $\implies$, and
 \begin{problem}
 Consider the following statement:
 \begin{quote}
-Assume $x\in\mathbb{Z}$. If $x^2$ is odd, then $x$ is odd.
+If $x\in\mathbb{Z}$ such that $x^2$ is odd, then $x$ is odd.
 \end{quote}
 The items below can be assembled to form a proof of this statement, but they are currently out of order.  Put them in the proper order.
 \begin{enumerate}
@@ -246,18 +249,24 @@ The items below can be assembled to form a proof of this statement, but they are
 \end{enumerate}
 \end{problem}
 
-Prove each of the next three theorems by proving the contrapositive of the given statement.
+Prove the next two theorems by proving the contrapositive of the given statement. Notice that Theorem~\ref{thm:n^2 even implies n even} is the converse of Theorem~\ref{thm:n even implies n^2 even}.
 
-\begin{theorem}
-Assume $x\in\mathbb{Z}$. If $x^2$ is even, then $x$ is even.
+\begin{theorem}\label{thm:n^2 even implies n even}
+If $n\in\mathbb{Z}$ such that $n^2$ is even, then $n$ is even.
 \end{theorem}
 
-\begin{theorem}
-Assume $x,y\in\mathbb{Z}$.  If $xy$ is odd, then both $x$ and $y$ are odd.
+%\begin{theorem}\label{thm:nm odd implies n or m odd} %needs cases
+%If $n,m\in\mathbb{Z}$ such that $nm$ is odd, then $n$ is odd and $m$ are odd.
+%\end{theorem}
+
+\begin{theorem}\label{thm:nm even implies n or m even}
+If $n,m\in\mathbb{Z}$ such that $nm$ is even, then $n$ is even or $m$ is even.
 \end{theorem}
 
-\begin{theorem}
-Assume $x,y\in\mathbb{Z}$.  If $xy$ is even, then $x$ or $y$ is even.
-\end{theorem}
+\begin{problem}
+Determine whether the converse of Theorem~\ref{thm:nm even implies n or m even} is true or false.  If the converse is true, prove it. If the converse is false, provide a counterexample.
+\end{problem}
+
+??? logical equivalence...skeleton discussion for biconditional
 
 \end{section}

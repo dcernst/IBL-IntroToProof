@@ -7,7 +7,7 @@ Once considered an abstract branch of pure mathematics, topology now has applica
 For this entire section, our universe of discourse is the set of real numbers.  You may assume all the usual basic algebraic properties of the real numbers (addition, subtraction, multiplication, division, commutative property, distribution, etc.). We will often refer to an element in a subset of real numbers as a \textbf{point}.
 
 \begin{definition}\label{def:open}
-A set $U$ is called an \textbf{open set} if and only if for every $x \in U$, there exists a finite-length open interval $(a,b)$ containing $x$ such that $(a,b)\subseteq U$.
+A set $U$ is called an \textbf{open set} if for every $x \in U$, there exists a finite-length open interval $(a,b)$ containing $x$ such that $(a,b)\subseteq U$.
 \end{definition}
 
 It follows immediately from the definition that every open set is a union of finite-length open intervals.
@@ -69,7 +69,7 @@ Taken together, Theorem~\ref{thm:finite union and intersection of open sets}, Th
 \end{remark}
 
 \begin{definition}
-Suppose $A\subseteq \mathbb{R}$. A point $p\in \mathbb{R}$ is an \textbf{accumulation point} of $A$ if and only if for every finite-length open interval $(a,b)$ containing $p$, there exists a point $q \in (a,b)\cap A$ such that $q\neq p$.
+Suppose $A\subseteq \mathbb{R}$. A point $p\in \mathbb{R}$ is an \textbf{accumulation point} of $A$ if for every finite-length open interval $(a,b)$ containing $p$, there exists a point $q \in (a,b)\cap A$ such that $q\neq p$.
 \end{definition}
 
 Notice that if $p$ is an accumulation point of $A$, then $p$ may or may not be in $A$. Loosely speaking, $p$ is an accumulation point of a set $A$ if there are points in $A$ arbitrarily close to $p$. That is, if we zoom in on $p$, we should always see points in $A$ nearby.
@@ -102,7 +102,7 @@ If $p\in\mathbb{R}$, then $p$ is an accumulation point of $\mathbb{Q}$.
 \end{theorem}
 
 \begin{definition}
-A set is called \textbf{closed} if and only if it contains all of its accumulation points.
+A set is called \textbf{closed} if it contains all of its accumulation points.
 \end{definition}
 
 \begin{problem}\label{prob:closed or not}
@@ -176,7 +176,7 @@ Prove or provide a counterexample: Every non-closed set has at least one accumul
 \end{problem}
 
 \begin{definition}
-We say that a set $A\subseteq \mathbb{R}$ is \textbf{bounded above} if and only if there is a point $b$ such that if $x\in A$ then $x\leq b$; such a point is an \textbf{upper bound} of $A$.
+We say that a set $A\subseteq \mathbb{R}$ is \textbf{bounded above} if there is a point $b$ such that if $x\in A$ then $x\leq b$; such a point is an \textbf{upper bound} of $A$.
 \end{definition}
 
 \begin{problem}
@@ -187,7 +187,7 @@ The property of a set $M$ being \textbf{bounded below} and the notion of a \text
 We say that a set $A\subseteq \mathbb{R}$ is \textbf{bounded} if $A$ bounded above and below.
 \end{definition}
 
-Notice that a set $A$ is \textbf{bounded} if and only if it is a subset of some finite-length closed interval.
+Notice that a set $A$ is \textbf{bounded} if it is a subset of some finite-length closed interval.
 
 \begin{problem}\label{prob:find upper bounds}
 Find all upper bounds and all lower bounds for each of the following sets.
