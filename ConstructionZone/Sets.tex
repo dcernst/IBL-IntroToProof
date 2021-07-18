@@ -98,10 +98,16 @@ Suppose that $A$, $B$, and $C$ are sets.  If $A\subseteq B$ and $B\subseteq C$, 
 \end{theorem}
 
 \begin{definition}
-Two sets $A$ and $B$ are \textbf{equal}, denoted $\boxed{A=B}$, if $A \subseteq B$ and $B \subseteq A$.
+Two sets $A$ and $B$ are \textbf{equal}, denoted $\boxed{A=B}$, if the sets contain the same elements.
 \end{definition}
 
-Note that if we want to prove $A=B$, then we have to do two separate mini-proofs: one for $A\subseteq B$ and one for $B\subseteq A$. It is common to label each mini-proof with ``$(\subseteq)$" and ``$(\supseteq)$", respectively.
+Since the next theorem is a biconditional proposition, you need to write two distinct subproofs, one for ``$A=B$ implies $A \subseteq B$ and $B \subseteq A$", and another for ``$A \subseteq B$ and $B \subseteq A$ implies $A=B$". Be sure to make it clear to the reader when you are proving each implication.
+
+\begin{theorem}
+Suppose that $A$ and $B$ are sets. Then $A=B$ if and only if $A \subseteq B$ and $B \subseteq A$.
+\end{theorem}
+
+Note that if we want to prove $A=B$, then we have to do two separate sub-proofs: one for $A\subseteq B$ and one for $B\subseteq A$. Be sure to make it clear to the reader where these sub-proofs begin and end. One approach is to label each sub-proof with ``$(\subseteq)$" and ``$(\supseteq)$" (including the parentheses), respectively.
 
 \begin{definition}
 If $A\subseteq B$, then $A$ is called a \textbf{proper subset} provided that $A\neq B$.  In this case, we may write $\boxed{A\subset B}$ or $\boxed{A\subsetneq B}$.
@@ -181,9 +187,9 @@ If $A$ and $B$ are sets, then $A\setminus B = A \cap B^c$.
 
 %For each of the next two theorems, you can choose to prove either part (a) or part (b). Of course, you are welcome to prove both parts, but you do not have to.
 
-In Chapter~\ref{chap:IntroToMath}, we encountered DeMorgan's Law (see Theorem~\ref{thm:demorgan} and Problem~\ref{prob:demorgan}), which provided a method for negating compound propositions involving conjunctions and disjunctions.  The next theorem provides a method for taking the complement of unions and intersections of sets.  This result is also known as DeMorgan's Law. Do you see why?
+In Chapter~\ref{chap:IntroToMath}, we encountered De Morgan's Law (see Theorem~\ref{thm:De Morgan} and Problem~\ref{prob:De Morgan}), which provided a method for negating compound propositions involving conjunctions and disjunctions.  The next theorem provides a method for taking the complement of unions and intersections of sets.  This result is also known as De Morgan's Law. Do you see why?
 
-\begin{theorem}[DeMorgan's Law]
+\begin{theorem}[De Morgan's Law]
 If $A$ and $B$ are sets, then
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $(A \cup B)^c = A^c \cap B^c$, and

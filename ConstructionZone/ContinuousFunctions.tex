@@ -7,7 +7,7 @@ A \textbf{real function} is any function $f:A\to \mathbb{R}$ such that $A$ is a 
 \end{definition}
 
 \begin{definition}\label{def:continuity}
-Suppose $f$ is a real function and $a\in \dom(f)$. We say that $f$ is \textbf{continuous at $a$} if for any open interval $I$ containing $f(a)$, there is an open interval $J$ containing $a$ such that if $x\in \dom(f)\cap J$, then $f(x)\in I$. The function $f$ is \textbf{continuous} if it is continuous at every point in its domain.
+Suppose $f$ is a real function such that $a\in \dom(f)$. We say that $f$ is \textbf{continuous at $a$} if for any open interval $I$ containing $f(a)$, there is an open interval $J$ containing $a$ such that if $x\in \dom(f)\cap J$, then $f(x)\in I$. If $f$ is continuous at every point in $B\subseteq\dom(f)$, then we say that $f$ is \textbf{continuous on $B$}. If $f$ is continuous on the entire domain, we simply say that $f$ is \textbf{continuous}.
 \end{definition}
 
 Loosely speaking, a real function $f$ is continuous at the point $a\in\dom(f)$ if we can get $f(x)$ arbitrarily close to $f(a)$ by considering all $x\in\dom(f)$ sufficiently close to $a$.  The interval $I$ is indicating how close to $f(a)$ we need to be while the interval $J$ is providing the ``window" around $a$ needed to guarantee that all points in the window (and in the domain) yield outputs in $I$. Figure~\ref{fig:continuity} illustrates our definition of continuity. Note that in the figure, the point $a$ is fixed while we need to consider all $x\in\dom(f)\cap J$.
@@ -57,9 +57,9 @@ Prove that each of the following real functions is continuous using Definition~\
 
 The next result tells us that every linear function from $\mathbb{R}$ to $\mathbb{R}$ is continuous.
 
-\begin{theorem}
-Let $m,b\in\mathbb{R}$ and define $f:\mathbb{R}\to\mathbb{R}$ via $f(x)=mx+b$. Then $f$ is continuous.
-\end{theorem}
+\begin{problem}
+Let $m,b\in\mathbb{R}$ and define $f:\mathbb{R}\to\mathbb{R}$ via $f(x)=mx+b$. Prove that $f$ is continuous.
+\end{problem}
 
 \begin{problem}
 Define $f:\mathbb{R}\to\mathbb{R}$ via 
@@ -69,11 +69,11 @@ f(x)=\begin{cases}
 0, & \text{otherwise}.
 \end{cases}
 \]
-Find all points where $f$ is continuous and justify your answer.
+Determine where $f$ is continuous and justify your assertion.
 \end{problem}
 
 \begin{problem}
-Define $g:\{0\}\to \mathbb{R}$ via $g(0)=0$.  Prove that $g$ is continuous at $x=0$.
+Define $g:\{0\}\to \mathbb{R}$ via $g(0)=0$.  Prove that $g$ is continuous at $0$.
 \end{problem}
 
 \begin{problem}
@@ -84,13 +84,13 @@ f(x)=\begin{cases}
 0, & \text{otherwise}.
 \end{cases}
 \]
-Find all points where $f$ is continuous and justify your answer.
+Determine where $f$ is continuous and justify your assertion.
 \end{problem}
 
 After completing the next problem, reflect on the statement ``a function is continuous if you can draw its graph without lifting your pencil."
 
 \begin{problem}
-Define $f:\mathbb{N}\to\mathbb{R}$ via $f(x)=1$. Determine whether $f$ is continuous. Justify your assertion.
+Define $f:\mathbb{N}\to\mathbb{R}$ via $f(x)=1$. Notice the domain! Determine where $f$ is continuous and justify your assertion.
 \end{problem}
 
 The next problem illustrates that the order in which the sets $I$ and $J$ are considered in the definition of continuity is crucial.
@@ -110,7 +110,7 @@ Suppose $f$ is a real function. Then $f$ is continuous if and only if the preima
 
 The previous characterization of continuity is often referred to as the ``open set definition of continuity," although for us it is a theorem instead of a definition. This is the definition used in topology. There are two other commonly used definitions of continuity. The first is sometimes called the ``$\epsilon$-$\delta$ definition of continuity" and utilizes inequalities involving absolute values. This is the definition one typically encounters in calculus and real analysis. Another notion of continuity, called ``sequential continuity", makes use of convergent sequences.  All of these characterizations of continuity are equivalent on the real numbers (using the standard definition of open set). However, there are contexts in mathematics where the $\epsilon$-$\delta$ definition of continuity is undefined (because there is not a notion of distance in the space) and others where continuity and sequential continuity are not equivalent.
 
-Since every open set is the union of finite-length open intervals (Definition~\ref{def:open}), the union of open sets is open (Theorem~\ref{thm:union of open sets}), and preimages respect unions (Theorem~\ref{thm:unions and intersections of preimages}), we can strengthen Theorem~\ref{thm:inverse images open sets} into an even more useful result.  
+Since every open set is the union of finite-length open intervals (Definition~\ref{def:open}), the union of open sets is open (Theorem~\ref{thm:union of open sets}), and preimages respect unions (Theorem~\ref{thm:unions and intersections of preimages}), we can strengthen Theorem~\ref{thm:inverse images open sets} into a slightly more useful result.  
 
 \begin{theorem}\label{thm:inverse images basic open sets}
 Suppose $f$ is a real function. Then $f$ is continuous if and only if the preimage $f^{-1}(I)$ of every finite-length open interval $I$ is an open set intersected with the domain of $f$.
@@ -125,7 +125,7 @@ Define $f:\mathbb{R}\to\mathbb{R}$ via $f(x)=x^2$. Prove that $f$ is continuous.
 When tackling the previous problem, you should have encountered the fact that the preimage of an open interval does not necessarily result in an open interval, even for continuous functions.
 
 \begin{problem}
-Define $f:\mathbb{R}\setminus\to\mathbb{R}$ via $f(x)=\frac{1}{x}$. Determine whether $f$ is continuous. Justify your assertion.
+Define $f:\mathbb{R}\setminus\to\mathbb{R}$ via $f(x)=\frac{1}{x}$. Determine where $f$ is continuous and justify your assertion.
 \end{problem}
 
 The previous problems once again calls into question the phrase ``a function is continuous if you can draw its graph without lifting your pencil."
@@ -186,7 +186,7 @@ Suppose $f$ is a continuous real function. If $C$ is a connected set contained i
 Suppose $f$ is a continuous real function. If $C$ is a connected set, is the preimage $f^{-1}(C)$ always a connected set? If so, prove it.  Otherwise, provide a counterexample.
 \end{problem}
 
-Perhaps you noticed the absence of one natural question in the previous sequence of problems. If $f$ is a continuous real function and $K$ is a subset of the domain of $f$, is the image $f(K)$ a compact set?  It turns out that the answer is ``yes", but proving this fact is currently beyond our capabilities. This theorem is often proved in a real analysis course and is then used to prove the Extreme Value Theorem, which you may have encountered in your calculus course.
+Perhaps you noticed the absence of one natural question in the previous sequence of problems. If $f$ is a continuous real function and $K$ is a subset of the domain of $f$, is the image $f(K)$ a compact set?  It turns out that the answer is ``yes", but proving this fact is beyond the scope of this book. This theorem is often proved in a real analysis course and is then used to prove the Extreme Value Theorem, which you may have encountered in your calculus course.
 
 The next result is a special case of the well-known \textbf{Intermediate Value Theorem}, which states that if $f$ is a continuous function whose domain contains the interval $[a,b]$, then $f$ attains every value between $f(a)$ and $f(b)$ at some point within the interval $[a,b]$. To prove the special case, utilize Theorem~\ref{thm:closed interval connected} and Problem~\ref{prob:continuous image of connected set} together with a proof by contradiction.
 

@@ -54,17 +54,17 @@ For $n\in \mathbb{N}$, the relation $\equiv_n$ is an equivalence relation on $\m
 
 We have have special notation and terminology for the equivalence classes that correspond to $\equiv_n$.
 
-\begin{definition}\label{def:modulo}
+\begin{definition}\label{def:congruence class}
 For $n\in \mathbb{N}$, let $\boxed{[a]_n}$ denote the equivalence class of $a$ with respect to $\equiv_n$ (see Definitions~\ref{def:relatives} and \ref{def:equivalence class}). The equivalence class $[a]_n$ is called the \textbf{congruence} (or \textbf{residue}) \textbf{class of $a$ modulo $n$}. The collection of all equivalence classes determined by $\equiv_n$ is denoted $\boxed{\mathbb{Z}/n\mathbb{Z}}$, which is read ``$\mathbb{Z}$ modulo $n\mathbb{Z}$".
 \end{definition}
 
 \begin{example}\label{exam:twomodseven}
 Let's compute $[2]_7$.  Tracing back through the definitions, we see that
 \begin{align*}
-m \in [2]_7 & \iff m \equiv_7 2\\
-& \iff m-2\in 7\mathbb{Z}\\
-& \iff m-2 = 7k \text{ for some $k\in \mathbb{Z}$}\\
-& \iff m = 7k+2 \text{ for some $k\in \mathbb{Z}$}.
+m \in [2]_7 & \logeq m \equiv_7 2\\
+& \logeq m-2\in 7\mathbb{Z}\\
+& \logeq m-2 = 7k \text{ for some $k\in \mathbb{Z}$}\\
+& \logeq m = 7k+2 \text{ for some $k\in \mathbb{Z}$}.
 \end{align*}
 Since the multiples of $7$ are $7\mathbb{Z} = \{\ldots,-14,-7,0,7,14,\ldots\}$, we can find $[2]_7$ by adding $2$ to each element of $7\mathbb{Z}$ to get $[2]_7 = \{\ldots,-12,-5,2,9,16,\ldots\}$.
 \end{example}
