@@ -51,7 +51,7 @@ $\ldots$ \ \emph{[Use definitions and known results to derive $\neg A$]} \ $\ldo
 \end{center}
 \end{skeleton}
 
-We have introduced the logical symbols $\neg$, $\wedge$, $\vee$, $\implies$, and $\logeq$  since is provides a convenient way of discussing the formality of logic.  However, when writing mathematical proofs, you should avoid using these symbols.
+We have introduced the logical symbols $\neg$, $\wedge$, $\vee$, $\implies$, and $\logeq$  since it provides a convenient way of discussing the formality of logic.  However, when writing mathematical proofs, you should avoid using these symbols.
 
 \begin{problem}
 Consider the following statement:
@@ -172,7 +172,7 @@ Assume that $x\in\mathbb{Z}$.  Consider the following proposition: If $x$ is odd
 \end{enumerate}
 \end{problem}
 
-Prove the following theorem via contradiction. Afterward, consider the difficulties one might encounter when trying to prove the result more directly. The given statement is not true if we replace $\mathbb{N}$ with $\mathbb{Z}$. Do you see why?
+Prove the following theorem via a proof by contradiction. Afterward, consider the difficulties one might encounter when trying to prove the result more directly. The given statement is not true if we replace $\mathbb{N}$ with $\mathbb{Z}$. Do you see why?
 
 \begin{theorem}
 Assume that $x,y\in\mathbb{N}$. If $x$ divides $y$, then $x\leq y$.
@@ -180,9 +180,11 @@ Assume that $x,y\in\mathbb{N}$. If $x$ divides $y$, then $x\leq y$.
 
 Oftentimes a conditional proposition can be proved via a direct proof and by using a proof by contradiction.  Most mathematicians view a direct proof to be more elegant than a proof by contradiction. When approaching the proof of a conditional proposition, you should strive for a direct proof.  In general, if you are attempting to prove $A\implies B$ using a proof by contradiction and you end up with $\neg B$ and $B$ (which yields a contradiction), then this is evidence that a proof by contradiction was unnecessary.  On the other hand, if you end up with $\neg Q$ and $Q$, where $Q$ is not the same as $B$, then a proof by contradiction is a reasonable approach.
 
-In light of Theorem~\ref{thm:logical form for iff}, if we want to prove a biconditional of the form $A\logeq B$, we need to prove both $A\implies B$ and $B\implies A$.  You should always make it clear to the reader when you are proving each implication. One approach is to label each sub-proof with ``$(\implies)$" and ``$(\Longleftarrow)$" (including the parentheses), respectively.  Occasionally, you will discover that the proof of one implication is exactly the reverse of the proof of the other implication.  If this happens to be the case, you may skip writing two sub-proofs and simply write a single proof that chains together each step using biconditionals.  Such proofs will almost always be shorter, but can be challenging to write in an eloquent way.  It is always a safe bet to write a separate sub-proof for each implication.
+In light of Theorem~\ref{thm:logical form for iff}, if we want to prove a biconditional of the form $A\logeq B$, we need to prove both $A\implies B$ and $B\implies A$.  You should always make it clear to the reader when you are proving each implication. One approach is to label each subproof with ``$(\implies)$" and ``$(\Longleftarrow)$" (including the parentheses), respectively.  Occasionally, you will discover that the proof of one implication is exactly the reverse of the proof of the other implication.  If this happens to be the case, you may skip writing two subproofs and simply write a single proof that chains together each step using biconditionals.  Such proofs will almost always be shorter, but can be challenging to write in an eloquent way.  It is always a safe bet to write a separate subproof for each implication.
 
 When proving each implication of a biconditional, you may choose to utilize a direct proof, a proof by contraposition, or a proof by contradiction.  For example, you could prove the first implication using a proof by contradiction and a direct proof for the second implication.
+
+The following theorem provides an opportunity to gain some experience with writing proofs of biconditional statements.
 
 \begin{theorem}
 Let $n\in\mathbb{Z}$. Then $n$ is even if and only if 4 divides $n^2$.

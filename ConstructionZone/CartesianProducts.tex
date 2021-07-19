@@ -1,10 +1,12 @@
 \begin{section}{Cartesian Products of Sets}\label{sec:Cartesian Products}
 
-ADD INTRO BLURB HERE...
+Given a collection of sets, we can form new sets by taking unions, intersections, complements, and set differences.  In this section, we introduce a type of ``product" of sets.  You have already encountered this concept when you learned to plot points in the plane.  You also crossed paths with this notion if you have taken a course in linear algebra.
 
 \begin{definition}
-For each $n\in \mathbb{N}$, we define an \textbf{$n$-tuple} to be an ordered list of $n$ elements of the form $(a_1, a_2,\ldots,a_n)$. We refer to $a_i$ as the $i$th \textbf{component} (or \textbf{coordinate}) of $(a_1, a_2,\ldots,a_n)$. Two $n$-tuples $(a_1, a_2,\ldots,a_n)$ and $(b_1, b_2,\ldots,b_n)$ are equal if $a_i=b_i$ for all $1\leq i\leq n$. A $2$-tuple $(a,b)$ is more commonly referred to as an \textbf{ordered pair} while a $3$-tuple $(a,b,c)$ is often called an \textbf{ordered triple}.
+For each $n\in \mathbb{N}$, we define an \textbf{$n$-tuple} to be an ordered list of $n$ elements of the form $\boxed{(a_1, a_2,\ldots,a_n)}$. We refer to $a_i$ as the $i$th \textbf{component} (or \textbf{coordinate}) of $(a_1, a_2,\ldots,a_n)$. Two $n$-tuples $(a_1, a_2,\ldots,a_n)$ and $(b_1, b_2,\ldots,b_n)$ are equal if $a_i=b_i$ for all $1\leq i\leq n$. A $2$-tuple $(a,b)$ is more commonly referred to as an \textbf{ordered pair} while a $3$-tuple $(a,b,c)$ is often called an \textbf{ordered triple}.
 \end{definition}
+
+Occasionally, other symbols are used to surround the components of an $n$-tuple, such as square brackets ``$[\ ]$" or angle brackets ``$\langle\ \rangle$". In some programming languages, curly braces ``$\{\ \}$" are used to specify arrays. However, we avoid this convention in mathematics since curly braces are the standard notation for sets. The term ``tuple" can also occur when discussing other mathematical objects, such as vectors.
 
 We can use the notion of $n$-tuples to construct new sets from existing sets.
 
@@ -23,6 +25,8 @@ where $A_i$ is referred to as the $i$th \textbf{factor} of the Cartesian product
 \]
 is often abbreviated as $A^n$.
 \end{definition}
+
+Cartesian products are named after French philosopher and mathematician \href{https://en.wikipedia.org/wiki/Rene_Descartes}{Ren\'e Descartes} (1596--1650).
 
 \begin{example}\label{ex:CartesianProduct}
 If $A=\{a,b,c\}$ and $B=\{\smiley,\frownie\}$, then 
@@ -48,6 +52,10 @@ Consider the sets $A$ and $B$ from Example~\ref{ex:CartesianProduct}.
 \item Find $B\times A$. 
 \item Find $B\times B$.
 \end{enumerate}
+\end{problem}
+
+\begin{problem}
+If $A$ and $B$ are sets, why do think that $A\times B$ is referred to as a type of ``product"? Think about the area model for multiplication of natural numbers.
 \end{problem}
 
 \begin{problem}

@@ -40,7 +40,11 @@
 - Added explicit discussion of ``proof by cases".
 - Added explicit discussion of proving uniqueness.
 - Added explicit discussion about proof biconditionals.
-- Renamed Section 2.3 and swapped some material between Sections2.2 and 2.3.
+- Renamed Section 2.3 and swapped some material between Sections 2.2 and 2.3.
+- Some updates/retooling of Appendix A: Elements of Style for Proofs.
+- Removed proof tips from Section 2.1 since these were essentially a restatement of the guidelines listed in Section 1.7.  I also ``beefed up" the guidelines in Section 1.7.
+- Changed ``DeMorgan" to ``De Morgan".
+- Added some short snippets of history and reference to mathematicians (including links) throughout text.
 
 ## Reviewer 1
 
@@ -173,7 +177,7 @@ be helpful.
 - p. 10, Subsection 1.5: Again, the language is specific to the author’s classes. The “me” is the author, not the student’s instructor. I love the sentiment and the phrase, “earnest failure outweighs counterfeit success,” is everything a teacher wants to hear.
       * This will get addressed when Intro gets retooled.
 - p. 11, paragraph 2: Referencing by number alone really shouldn’t be encouraged in general, since an instructor may or may not have additional results or alternate numbering. In fact, this instruction to the reader directly contradicts the Style Guide #2 in Appendix A. To be more general, encourage students to summarize the result in addition to referencing by number – as well as be reminded that different sources will have different numbering for the same results.
-      * Done.
+      * Added a comment about this to Section 1.7 and updated wording in Appendix A: Elements of Style for Proofs.
 - p. 11, last sentence: “Now, go have some fun and kick some butt!” – I appreciate the sentiment, but whose butt is getting kicked? How about something less colloquial and more lasting, like “Now, go have some fun and explore mathematics!”?
       * Done.
 - Section 2.1, paragraph 1, sentence 3: “Because you are so familiar with properties of integers, one of the issues that we will bump into is knowing which facts . . . ” – insert “is”
