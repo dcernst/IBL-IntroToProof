@@ -18,7 +18,9 @@
 - Rewrote most theorem statements in the form "If..., then..." as opposed to "Let... . Then ...".
 - Added more history on Russell's Paradox, made this a stand alone section, and moved the additional paradoxes to an appendix.
 - Converted all "Exercise" and "Question" types to "Problem".
-- Added formal statement of Axiom of Choice to end of section on indexing sets.
+- Added formal statement and some discussion of Axiom of Choice to end of section on indexing sets.
+- Sprinkled in some discussion of ZFC axioms to Sections 3.2, 5.1, and 9.5.
+- Add brief discussion of continuum hypothesis to Section 9.5.
 - Moved the definition of set of relatives up a section.
 - Moved discussion of Cartesian products of sets to its own section.
 - Lots of changes, additions, improvements to Chapters 6 and 7.  Too numerous to list.
@@ -43,7 +45,7 @@
 ## Reviewer 1
 
 - Section 1.7: My students are helped by an encouragement to rewrite, if necessary, a theorem statement in the form of “If p, then q.” Describe this idea. Consider recommending every theorem be rewritten in this way before starting a proof. In fact, a step-by-step process to deliver a proof might be helpful. Also, try something else that is still fanciful instead of “kick some butt!”
-    * Todo.
+    * I eliminated ``kick some butt!". I did not include an encouragement to rewrite, if necessary, a theorem statement in the form of ``If p, then q."  However, I did increase the number of proof skeletons and there is a paragraph in Section 2.3 (above Problem 2.68) that gets at this issue (however, it might the reverse of what the reviewer is asking for).
 - Just before Definition 2.1 add, “...or, equivalently “n ∈ Z.”
     * I don't understand this suggestion.
 - Section 2.3: Revise “...it never be both.”
@@ -122,7 +124,7 @@ be helpful.
 - One challenge I have had in evaluating IBL books is that it can be difficult to judge which exercises can be skipped without affecting later exercises or which ones are required for later topics.
     * Perhaps addressed with Instructor Guide.
 - Chapter 1 will need to be substantially revised since most of it is directed for specific course structure, including references to the portion of grade, etc.
-    * Will be addressed with re-voicing.
+    * References to my course and my students have been removed.
 - Some chapters have very good introductions motivating the topics, including Chapters 2 and 8, but others have minimal motivation before diving into the content, including Chapters 5 and 6. On a related note, I would like to see a little more “connective tissue” tying the chapters together. For example, why does Chapter 5 appear where it does? What is the purpose of Chapter 6?
     * Some of this will be addressed with adding motivation and context.
 - I think there needs to be some intuition in Definition 2.26(d) for why “If A, then B” is a true statement if A is false. I have found this to be one area where students often have quite a bit of initial confusion.
@@ -153,6 +155,7 @@ be helpful.
     - Include more quotes!
       * Todo
     - Include proofs by picture, as food for thought. Clearly state that these are not proofs, but might be good ideas to work off. For instance, I know there’s a proof by picture showing the development of the formula of the sum of the triangular numbers. That would be good in the induction section.
+       * Todo?
     - Play off the colloquial nature of some of the exercises and examples.
        * Todo.
 - There are a few “missed opportunities” where the author could encourage the reader to play and explore, building his/her own conclusion. Of course, having open-ended problems can lead to false conclusions; hiding answers to open-ended problems would be ok. Put them at the end of the chapter, perhaps.
