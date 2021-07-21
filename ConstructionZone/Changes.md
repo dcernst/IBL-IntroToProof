@@ -45,6 +45,8 @@
 - Removed proof tips from Section 2.1 since these were essentially a restatement of the guidelines listed in Section 1.7.  I also ``beefed up" the guidelines in Section 1.7.
 - Changed ``DeMorgan" to ``De Morgan".
 - Added some short snippets of history and reference to mathematicians (including links) throughout text.
+- Stated the more general version of the Division Algorthim and included its proof.
+- Added a brief discussion about whether 1 is prime or not and provided a suggested article to learn more.
 
 ## Reviewer 1
 
@@ -57,7 +59,7 @@
 - Exercise 2.68. The instructions are not clear. What does “Discuss the meaning of...” mean? Revise.
     * I hope that my fix is sufficient.
 - Power sets are interesting on a variety of levels. Section 3.2 constructs paradoxes by using power sets, but I think that key role they play could be explained more. Those paradoxes are incredibly simple to construct, and to understand, because they are linked to power sets. Power sets also played an important role in Cantor’s investigation of cardinality (Cantor’s Theorem), and it would not be a bad thing to give that commentary in Section 3.2 as a “preview of coming attractions,” and then talk about power sets again in Chapter 8. Interweaving sections and explaining how each definition fits into the chapter’s subfield under study would give, I feel, a much improved exposition.
-   * Added a brief comment at end of section.
+   * Added a comment at end of section.
 - Section 3.1: The order of the bulleted sets could be revised so that they progress as nested. Then this can have powerful consequences in a student’s thinking of these sets for modern algebraic considerations.
     * Done.
 - Exercise 3.3. Clarity needed. What is a “simple description”?
@@ -130,7 +132,7 @@ be helpful.
 - Chapter 1 will need to be substantially revised since most of it is directed for specific course structure, including references to the portion of grade, etc.
     * References to my course and my students have been removed.
 - Some chapters have very good introductions motivating the topics, including Chapters 2 and 8, but others have minimal motivation before diving into the content, including Chapters 5 and 6. On a related note, I would like to see a little more “connective tissue” tying the chapters together. For example, why does Chapter 5 appear where it does? What is the purpose of Chapter 6?
-    * Some of this will be addressed with adding motivation and context.
+    * Added lots of additional discussion/motivation throughout the text.  In particular, as suggested, I added more substantial introductions to Chapter 6: Three Famous Theorems (formerly Chapter 5) and Chapter 7: Relations (formerly Chapter 6).
 - I think there needs to be some intuition in Definition 2.26(d) for why “If A, then B” is a true statement if A is false. I have found this to be one area where students often have quite a bit of initial confusion.
     * I added more exposition about this.  See the discussion following Problem 2.23.
 - I was a little confused about Definition 2.35 which seems to equate “if and only if” with “logically equivalent” even then though the if-and-only-if terminology has been used in in Definition 2.26.
@@ -138,7 +140,7 @@ be helpful.
 - In Section 2.4, I found the use of function notation to describe predicates a little confusing. What is the domain? What is the range? Given that Chapter 7 is devoted to functions, this struck me as a little odd.
     * Done. I eliminated reference to function notation and just defined the notation.
 - In Lemmas 5.4 and 5.10 and in Theorem 8.24, I found labeling the extensive footnotes as “Hints” to be slightly misleading. It seems like these activities would be better described as a fill-in-the-details exercise where the hints are included in the body of the text.
-    * This suggestion clashes with another reviewer's comment who liked the footnotes.
+    * This suggestion clashes with another reviewer's comment who liked the footnotes. Nonetheless, all footnote hints have been moved into the prose (typically right before the problem).
 - As an extremely minor note, the page numbers missing from most pages. I suspect this is a simple typesetting fix.
     * Done.
 
