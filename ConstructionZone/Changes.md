@@ -47,6 +47,7 @@
 - Added some short snippets of history and reference to mathematicians (including links) throughout text.
 - Stated the more general version of the Division Algorthim and included its proof.
 - Added a brief discussion about whether 1 is prime or not and provided a suggested article to learn more.
+- There are now 48 quotes about mathematics, learning, struggle, etc.  There is one at the beginning of each chapter and one at the end of each section.
 
 ## Reviewer 1
 
@@ -159,7 +160,7 @@ be helpful.
 - I appreciated the diagrams, and I would like to see more. This is always tricky in a textbook. The quotes in the introductory chapter worked well to break up the blocks of text. Here are some ideas for insertions to continue that trend through the later chapters.
       * I added several new figures.
     - Include more quotes!
-      * Todo
+      * Done.
     - Include proofs by picture, as food for thought. Clearly state that these are not proofs, but might be good ideas to work off. For instance, I know there’s a proof by picture showing the development of the formula of the sum of the triangular numbers. That would be good in the induction section.
        * Todo?
     - Play off the colloquial nature of some of the exercises and examples.
