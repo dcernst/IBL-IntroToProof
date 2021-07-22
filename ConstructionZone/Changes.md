@@ -47,7 +47,7 @@
 - Added some short snippets of history and reference to mathematicians (including links) throughout text.
 - Stated the more general version of the Division Algorthim and included its proof.
 - Added a brief discussion about whether 1 is prime or not and provided a suggested article to learn more.
-- There are now 48 quotes about mathematics, learning, struggle, etc.  There is one at the beginning of each chapter and one at the end of each section.
+- There are now 48 quotes about mathematics, learning, struggle, etc.  There is one at the beginning of each chapter and one at the end of each section.  I made a conscious effort to include many quotes from women.
 
 ## Reviewer 1
 
