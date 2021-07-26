@@ -1,14 +1,3 @@
-# Todo
-- see items tagged "todo" below.
-- Preface
-- Introduction
-- Notes to Instructor
-- Chapter 3
-- Chapter 4
-- Chapter 5
-- Chapter 6
-- Chapter 7
-- Conclusion
 
 # Specific Changes
 
@@ -47,7 +36,8 @@
 - Added some short snippets of history and reference to mathematicians (including links) throughout text.
 - Stated the more general version of the Division Algorthim and included its proof.
 - Added a brief discussion about whether 1 is prime or not and provided a suggested article to learn more.
-- There are now 48 quotes about mathematics, learning, struggle, etc.  There is one at the beginning of each chapter and one at the end of each section.  I made a conscious effort to include many quotes from women.
+- There are now 47 quotes about mathematics, learning, struggle, etc.  There is one at the beginning of each chapter and one at the end of each section.  I made a conscious effort to include many quotes from women.
+- Lots of retooling of Introduction.
 
 ## Reviewer 1
 
