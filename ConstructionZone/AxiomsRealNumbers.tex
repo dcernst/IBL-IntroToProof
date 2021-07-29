@@ -4,11 +4,11 @@ Our axioms for the real numbers fall into three categories:
 \begin{enumerate}
 \item \textbf{Field Axioms:} These axioms provide the essential properties of arithmetic involving addition and subtraction.
 \item \textbf{Order Axioms:} These axioms provide the necessary properties of inequalities.
-\item \textbf{Completeness Axiom:} This axiom guarantees that the familiar number line representing the real numbers does not have any ``gaps". We will introduce this axiom in the next section.
+\item \textbf{Completeness Axiom:} This axiom ensures that the familiar number line that we use to model the real numbers does not have any gaps in it. %We will introduce this axiom in the next section.
 \end{enumerate}
 
 \begin{fieldaxioms}\label{axiom:field axioms}
-There exist functions $(a,b)\mapsto a+b$ and $(a,b)\mapsto ab$ from $\mathbb{R}^2$ to $\mathbb{R}$ satisfying:
+There exist operations $+$ (addition) and $\cdot$ (multiplication) on $\mathbb{R}$ satisfying:
 \begin{enumerate}
 \item[(F1)] (Associativity for Addition) For all $a, b, c\in \mathbb{R}$ we have $(a+b)+c = a+(b+c)$;
 \item[(F2)] (Commutativity for Addition) For all $a,b\in \mathbb{R}$, we have $a+b=b+a$;
@@ -35,7 +35,7 @@ To prove the next theorem, mimic the approach you used to prove Theorem~\ref{thm
 The multiplicative identity of $\mathbb{R}$ is unique.
 \end{theorem}
 
-For every $a\in\mathbb{R}$, the elements $-a$ and $a^{-1}$ (as long as $a\neq 0$) are also the unique \textbf{additive} and \textbf{multiplicative inverses}. 
+For every $a\in\mathbb{R}$, the elements $-a$ and $a^{-1}$ (as long as $a\neq 0$) are also the unique \textbf{additive} and \textbf{multiplicative inverses}, respectively. 
 
 \begin{theorem}
 Every real number has a unique additive inverse.
@@ -94,7 +94,7 @@ For $a,b,c\in \mathbb{R}$, there is a relation $\boxed{<}$ on $\mathbb{R}$ satis
 \end{enumerate}
 \end{orderaxioms}
 
-Given Axioms~(O1) and (O2) above, we say that the real numbers are \textbf{linearly ordered} (or \textbf{totally ordered}). We call numbers greater than zero \textbf{positive} and those greater than or equal to zero \textbf{nonnegative}. There are similar definitions for \textbf{negative} and \textbf{nonpositive}. 
+Given Axioms~(O1)--(O4), we say that the real numbers are a \textbf{linearly ordered field}. We call numbers greater than zero \textbf{positive} and those greater than or equal to zero \textbf{nonnegative}. There are similar definitions for \textbf{negative} and \textbf{nonpositive}. 
 
 Notice that the Order Axioms are phrased in terms of ``$<$". We would also like to be able to utilize ``$>$", ``$\leq$", and ``$\geq$".
 
@@ -136,7 +136,7 @@ For all $a,b\in\mathbb{R}$, we have the following:
 \end{theorem}
 
 \begin{theorem}
-For all positive real numbers $a$ and $b$, $a< b$ if an only if $a^2< b^2$.
+For all positive real numbers $a$ and $b$, $a< b$ if and only if $a^2< b^2$.
 \end{theorem}
 
 Consider using three cases when approaching the proof of the following theorem.
@@ -147,7 +147,7 @@ For all $a\in\mathbb{R}$, we have $a^2\geq 0$.
 
 It might come as a surprise that the following result requires proof.
 
-\begin{theorem}
+\begin{theorem}\label{thm:0<1}
 We have $0<1$.
 \end{theorem}
 
@@ -166,37 +166,6 @@ The last few results allow us to take for granted our usual understanding of whi
 \begin{theorem}
 For all $a,b,c\in \mathbb{R}$, if $a<b$ and $c<0$, then $bc<ac$. 
 \end{theorem}
-
-We could spend weeks building up from the axioms all of the necessary machinery for the real numbers. Instead we include a few additional axioms to save ourselves a little time.
-
-\begin{additionalaxioms}\label{axiom:additional axioms}
-The real numbers satisfy each of the following:
-\begin{enumerate}
-\item[(O5)] For every $x\in\mathbb{R}$, there exists $a,b\in\mathbb{R}$ such that $a<x<b$;
-\item[(O6)] For every $a,b\in\mathbb{R}$, if $a<b$, there exists $x\in\mathbb{R}$ such that $a<x<b$ (in particular, $\frac{a+b}{2}$ is between $a$ and $b$);
-\item[(O7)]\label{axiom:archimedean} For every $a\in\mathbb{R}$, there exists $n\in\mathbb{Z}$ such that $n \leq a < n + 1$.
-\end{enumerate}	
-\end{additionalaxioms}
-  
-Axiom~(O7) is sometimes referred to as the \textbf{Archimedean Property}. It turns out that we could derive this axiom from the \textbf{Completeness Axiom}, which we will introduce in the next section.
-
-\begin{theorem}
-For any positive real number $a$, there exists $N\in \mathbb{N}$ such that $0<\frac{1}{N}<a$.
-\end{theorem}
-
-Notice that Axiom~(O5) says that every real number is contained in a finite open interval. In particular, Axiom~(O7) says that every non-integer is contained in an open interval with consecutive integer endpoints. Axiom~(O6) tells us that every open interval is nonempty. In fact, repeated applications of Axiom~(O6) implies that every open interval contains infinitely many points.
-
-Recall that the real numbers consist of rational and irrational numbers.  Two examples of an irrational number that you are likely familiar with are $\pi$ and  $\sqrt{2}$. In Section~\ref{sec:irrationality of root 2}, we will prove that $\sqrt{2}$ is irrational, but for now we will take this fact for granted. It turns out that $\sqrt{2}\approx 1.41421356237\in (1,2)$. This provides an example of an irrational number occurring between a pair of distinct rational numbers. The following two theorems are a good challenge to generalize this.
-
-\begin{theorem}\label{thm:rationals dense}
-Between any two distinct real numbers there is a rational number.
-\end{theorem}
-
-\begin{theorem}\label{thm:irrationals dense}
-Between any two distinct real numbers there is an irrational number.
-\end{theorem}
-
-Repeated applications of the previous two theorems implies that every open interval contains infinitely many rational numbers and infinitely many irrational numbers. In light of these two theorems, we say that both the rationals and irrationals are \textbf{dense} in the real numbers. 
 
 There is a special function that we can now introduce. 
 
@@ -249,6 +218,214 @@ The next theorem is related to the Triangle Inequality.
 \begin{theorem}[Reverse Triangle Inequality]
 For all $a,b\in\mathbb{R}$, $|a-b|\geq \left||a|-|b| \right|$.
 \end{theorem}
+
+\begin{definition}
+Let $A\subseteq \mathbb{R}$ and $m\in A$. Then $m$ is called a \textbf{maximum} of $A$ if for all $a\in A$, we have $a\leq m$. Similarly, $m$ is called \textbf{minimum} of $A$ if for all $a\in A$, we have $m\leq a$.
+\end{definition}
+
+Not surprisingly, maximums and minimums are unique when they exist.
+
+\begin{theorem}
+If $A\subseteq \mathbb{R}$ such that the maximum (respectively, minimum) of $A$ exists, then the maximum (respectively, minimum) of $A$ is unique.
+\end{theorem}
+
+If the maximum of a set $A$ exists, then it is denoted by $\boxed{\max(A)}$. Similarly, if the minimum of a set $A$ exists, then it is denoted by $\boxed{\min(A)}$.
+
+\begin{problem}\label{prob:find max and min}
+Find the maximum and the minimum for each of the following sets when they exist.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $(0,1]$
+\item $(0,1]\cap \mathbb{Q}$
+\item $(0,\infty)$
+\item $\{42\}$
+\item $\{\frac{1}{n}\mid n\in\mathbb{N}\}$
+\item $\{\frac{1}{n}\mid n\in\mathbb{N}\}\cup\{0\}$
+\item $\mathbb{Z}$
+\item $\emptyset$
+\end{enumerate}
+\end{problem}
+
+Before we introduce the Completeness Axiom, we need some terminology.
+
+\begin{definition}
+Let $A\subseteq \mathbb{R}$. A point $b$ is called an \textbf{upper bound} of $A$ if for all $a\in A$, $a\leq b$. The set $A$ is said to be \textbf{bounded above} if it has an upper bound.
+\end{definition}
+
+\begin{problem}
+The notion of a \textbf{lower bound} and the property of a set being \textbf{bounded below} are defined similarly. Try defining them.
+\end{problem}
+
+\begin{problem}\label{prob:find upper bounds}
+Find all upper bounds and all lower bounds for each of the sets in Problem~\ref{prob:find max and min}.
+%\begin{enumerate}[label=\textrm{(\alph*)}]
+%\item $(0,1]$
+%\item $(0,1]\cap \mathbb{Q}$
+%\item $(0,\infty)$
+%\item $\{42\}$
+%\item $\{\frac{1}{n}\mid n\in\mathbb{N}\}$
+%\item $\{\frac{1}{n}\mid n\in\mathbb{N}\}\cup\{0\}$
+%\item $\mathbb{Z}$
+%\item $\emptyset$
+%\end{enumerate}
+\end{problem}
+
+\begin{definition}
+A set $A\subseteq \mathbb{R}$ is \textbf{bounded} if $A$ bounded above and below.
+\end{definition}
+
+Notice that a set $A\subseteq\mathbb{R}$ is bounded if and only if it is a subset of some bounded closed interval.
+
+\begin{definition}
+Let $A\subseteq \mathbb{R}$. A point $p$ is a \textbf{supremum} (or \textbf{least upper bound}) of $A$ if $p$ is an upper bound of $A$ and $p\leq b$ for every upper bound $b$ of $A$.  Analogously, a point $p$ is an \textbf{infimum} (or \textbf{greatest lower bound}) of $A$ if $p$ is a lower bound of $A$ and $p\geq b$ for every lower bound $b$ of $A$. 
+\end{definition}
+
+Our next result tells us that suprema and infima are unique when they exist.
+
+\begin{theorem}
+If $A\subseteq \mathbb{R}$ such that the supremum (respectively, infimum) of $A$ exists, then the supremum (respectively, infimum) of $A$ is unique.
+\end{theorem}
+
+In light of the previous theorem, if the supremum of $A$ exists, it is denoted by $\boxed{\sup(A)}$. Similarly, if the infimum of $A$ exists, it is denoted by $\boxed{\inf(A)}$. 
+
+\begin{problem}
+Find the supremum and the infimum of each of the sets in Problem~\ref{prob:find max and min} when they exist.
+\end{problem}
+
+%If $\sup(A)$ exists, it is the minimum of the set of upper bounds of $A$. That is, the set of upper bounds of $A$ is the interval $[\sup(A),\infty)$. We have a similar statement involving the infimum. 
+It is important to recognize that the supremum or infimum of a set may or may not be contained in the set. In particular, we have the following theorem concerning suprema and maximums. The analogous result holds for infima and minimums.
+
+\begin{theorem}
+Let $A\subseteq \mathbb{R}$. Then $A$ has a maximum if and only if $A$ has a supremum and $\sup(A)\in A$, in which case the $\max(A)=\sup(A)$.
+\end{theorem}
+
+Intuitively, a point is the supremum of a set $A$ if and only if no point smaller than the supremum can be an upper bound of $A$. The next result makes this more precise.
+
+\begin{theorem}\label{thm:scoot in characterization of sup}
+Let $A\subseteq \mathbb{R}$. An upper bound $b$ is the supremum of $A$ if and only if for every $\epsilon >0$, there exists $a\in A$ such that $b-\epsilon <a$.
+\end{theorem}
+
+\begin{problem}
+State and prove the analogous result to Theorem~\ref{thm:scoot in characterization of sup} involving infimum.
+\end{problem}
+
+The following axiom states that every nonempty subset of the real numbers that has an upper bound has a least upper bound.
+
+\begin{axiom}[Completeness Axiom]\label{axiom:completeness}
+If $A$ is a nonempty subset of $\mathbb{R}$ that is bounded above, then $\sup(A)$ exists.
+\end{axiom}
+
+Given the Completeness Axiom, we say that the real numbers satisfy the \textbf{least upper bound property}. Certainly, the real numbers satisfy the analogous result involving the infimum.
+
+\begin{theorem}
+If $A$ is a nonempty subset of $\mathbb{R}$ that is bounded below, then $\inf(A)$ exists.
+\end{theorem}
+
+Our next result, called the \textbf{Archimedean Property}, tells us that for every real number, we can always find a natural number that is larger. To prove this theorem, consider a proof by contradiction and utilize the Completeness Axiom and Theorem~\ref{thm:scoot in characterization of sup}.
+
+\begin{theorem}[Archimedean Property]
+For every $x\in\mathbb{R}$, there exists $n\in\mathbb{N}$ such that $x<n$.
+\end{theorem}
+
+%???Can we just state CA and prove the additional axioms?  In fact, do we really need O5 and O6? Also, do we need full version of Archimedean Property or can we just use $a<n$???
+%
+%Idea for O5: start with $0<1$ (and $-1<0$). Add $x$ everywhere using axioms and then apply transitivity?
+%
+%Idea for O6: Start with $a<b$, prove $a<(a+b)/2$ and $(a+b)/2<b$.
+%
+%We could spend weeks building up from the axioms all of the necessary machinery for the real numbers. Instead we include a few additional axioms to save ourselves a little time. 
+%
+%\begin{additionalaxioms}\label{axiom:additional axioms}
+%The real numbers satisfy each of the following:
+%\begin{enumerate}
+%\item[(O5)] For every $x\in\mathbb{R}$, there exists $a,b\in\mathbb{R}$ such that $a<x<b$;
+%\item[(O6)] For every $a,b\in\mathbb{R}$, if $a<b$, there exists $x\in\mathbb{R}$ such that $a<x<b$ (in particular, $\frac{a+b}{2}$ is between $a$ and $b$);
+%\item[(O7)]\label{axiom:archimedean} For every $a\in\mathbb{R}$, there exists $n\in\mathbb{Z}$ such that $n \leq a < n + 1$.
+%\end{enumerate}	
+%\end{additionalaxioms}
+%  
+%Axiom~(O7) is often referred to as the \textbf{Archimedean Property}. It turns out that we could derive this axiom from the \textbf{Completeness Axiom}, which we will introduce in the next section. Notice that Axiom~(O5) says that every real number is contained in a bounded open interval. In particular, Axiom~(O7) says that every non-integer is contained in an open interval with consecutive integer endpoints. Axiom~(O6) tells us that every open interval is nonempty. In fact, repeated applications of Axiom~(O6) implies that every open interval contains infinitely many points.
+
+More generally, we can ``squeeze" every real number between a pair of integers. The next result is sometimes referred to at the \textbf{Generalized Archimedean Property}.
+
+\begin{theorem}[Generalized Archimedean Property]
+For every $x\in\mathbb{R}$, there exists $k,n\in\mathbb{Z}$ such that $k<x<n$.
+\end{theorem}
+
+\begin{theorem}\label{thm:small reciprocal}
+For any positive real number $x$, there exists $N\in \mathbb{N}$ such that $0<\frac{1}{N}<x$.
+\end{theorem}
+
+The next theorem strengthens the Generalized Archimedean Property and says that every real number is either an integer or lies between a pair of consecutive integers. To prove this theorem, let $x\in\mathbb{R}$ and define $L=\{k\in\mathbb{Z}\mid k\leq x\}$. Use the Generalized Archimedean Property to conclude that $L$ is nonempty and then utilize Theorem~\ref{thm:reverse WOP}.
+
+\begin{theorem}\label{thm:squeeze with consecutive integers}
+For every $x\in\mathbb{R}$, there exists $n\in \mathbb{N}$ such that $n\leq x<n+1$.
+\end{theorem}
+
+To prove the next theorem, let $a<b$, utilize Theorem~\ref{thm:small reciprocal} on $b-a$ to obtain $N\in\mathbb{N}$ such that $\frac{1}{N}<b-a$, and then apply Theorem~\ref{thm:squeeze with consecutive integers} to $Na$ to conclude that there exists $n\in\mathbb{N}$ such that $n\leq Na<n+1$. Lastly, argue that $\frac{n+1}{N}$ is the rational number you seek.
+
+\begin{theorem}\label{thm:rationals dense}
+If $(a,b)$ is an open interval, then there exists a rational number $p$ such that $p\in(a,b)$.
+\end{theorem}
+
+Recall that the real numbers consist of rational and irrational numbers.  Two examples of an irrational number that you are likely familiar with are $\pi$ and  $\sqrt{2}$. In Section~\ref{sec:irrationality of root 2}, we will prove that $\sqrt{2}$ is irrational, but for now we will take this fact for granted. It turns out that $\sqrt{2}\approx 1.41421356237\in (1,2)$. This provides an example of an irrational number occurring between a pair of distinct rational numbers. The following theorem is a good challenge to generalize this.
+
+\begin{theorem}\label{thm:irrationals dense}
+If $(a,b)$ is an open interval, then there exists an irrational number $p$ such that $p\in(a,b)$.
+\end{theorem}
+
+Repeated applications of the previous two theorems implies that every open interval contains infinitely many rational numbers and infinitely many irrational numbers. In light of these two theorems, we say that both the rationals and irrationals are \textbf{dense} in the real numbers. 
+
+%There is a special function that we can now introduce. 
+%
+%\begin{definition}
+%Given $a\in\mathbb{R}$, we define the \textbf{absolute value of $a$}, denoted $|a|$, via
+%\[
+%\boxed{|a|\coloneqq \begin{cases}
+%a, & \text{if }a\geq 0\\
+%-a, & \text{if }a<0.
+%\end{cases}}
+%\]
+%\end{definition}
+%
+%\begin{theorem}
+%For all $a\in\mathbb{R}$, $|a|\geq 0$ with equality only if $a=0$.
+%\end{theorem}
+%
+%In the next theorem, writing $\pm a\leq b$ is an abbreviation for $a\leq b$ and $-a\leq b$.
+%
+%\begin{theorem}
+%For all $a,b\in\mathbb{R}$, if $\pm a\leq b$, then $|a|\leq b$. 
+%\end{theorem}
+%
+%\begin{theorem}
+%For all $a\in\mathbb{R}$, $|a|^2=a^2$.
+%\end{theorem}
+%
+%\begin{theorem}\label{thm:plus minus less than or equal to abs value}
+%For all $a\in\mathbb{R}$, $\pm a\leq |a|$.
+%\end{theorem}
+%
+%\begin{theorem}\label{thm:abs value less than or equal to iff squeezed by plus minus}
+%For all $a,r\in\mathbb{R}$, $|a|\leq r$ if and only if $-r\leq a\leq r$.
+%\end{theorem}
+%
+%In the previous theorem, it must be the case that $r$ is nonnegative.  The letter $r$ was used because it is the first letter of the word ``radius". If $r$ is positive, we can think of the interval $(-r,r)$ as the interior of a 1-dimensional circle with radius $r$ centered at 0.
+%
+%\begin{theorem}
+%For all $a,b\in\mathbb{R}$, $|ab|=|a||b|$.
+%\end{theorem}
+%
+%Consider using Theorems~\ref{thm:plus minus less than or equal to abs value} and \ref{thm:abs value less than or equal to iff squeezed by plus minus} when attacking the next problem.  This result can be extremely useful in some contexts. 
+%
+%\begin{theorem}[Triangle Inequality]
+%For all $a,b\in\mathbb{R}$, $|a+b|\leq |a|+|b|$.
+%\end{theorem}
+%
+%The next theorem is related to the Triangle Inequality.
+%
+%\begin{theorem}[Reverse Triangle Inequality]
+%For all $a,b\in\mathbb{R}$, $|a-b|\geq \left||a|-|b| \right|$.
+%\end{theorem}
 
 \epigraph{If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.}{John von Neumann, mathematician}
 \end{section}
