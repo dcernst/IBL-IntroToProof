@@ -12,10 +12,9 @@ Each of the proofs that you produced in Section~\ref{sec:baby number theory} had
 
 If you want to prove the implication $A\implies B$ via a direct proof, then the structure of the proof is as follows.
 
-\begin{center}
-\framebox{
-\begin{minipage}{6in}
-\vspace{.1in}
+\begin{mdframed}[style=skeleton]
+%\begin{minipage}{6in}
+%\vspace{.1in}
 \begin{proof}
 \emph{[State any upfront assumptions.]} Assume $A$.
 \begin{center}
@@ -23,9 +22,9 @@ $\ldots$ \ \emph{[Use definitions and known results to derive $B$]} \ $\ldots$\\
 \end{center}
 \noindent Therefore, $B$.
 \end{proof}
-\end{minipage}
-}
-\end{center}
+%\end{minipage}
+\end{mdframed}
+%\end{center}
 \end{skeleton}
 
 Take a few minutes to review the proofs that you wrote in Section~\ref{sec:baby number theory} and see if you can witness the structure of Skeleton Proof~\ref{skeleton:direct proof} in your proofs. 
@@ -35,10 +34,7 @@ The upshot of Theorem~\ref{thm:contrapos} is that if you want to prove a conditi
 \begin{skeleton}[Proof of $A\implies B$ by contraposition]\label{pf by contraposition}
 If you want to prove the implication $A\implies B$ by proving its contrapositive $\neg B\implies \neg A$ instead, then the structure of the proof is as follows.
 
-\begin{center}
-\framebox{
-\begin{minipage}{6in}
-\vspace{.1in}
+\begin{mdframed}[style=skeleton]
 \begin{proof}
 \emph{[State any upfront assumptions.]} We will utilize a proof by contraposition.  Assume $\neg B$.
 \begin{center}
@@ -46,9 +42,7 @@ $\ldots$ \ \emph{[Use definitions and known results to derive $\neg A$]} \ $\ldo
 \end{center}
 \noindent Therefore, $\neg A$. We have proved the contrapositive, and hence if $A$, then $B$.
 \end{proof}
-\end{minipage}
-}
-\end{center}
+\end{mdframed}
 \end{skeleton}
 
 We have introduced the logical symbols $\neg$, $\wedge$, $\vee$, $\implies$, and $\logeq$  since it provides a convenient way of discussing the formality of logic.  However, when writing mathematical proofs, you should avoid using these symbols.
@@ -127,10 +121,7 @@ Suppose that we want to prove some proposition $P$ (which might be something lik
 \begin{skeleton}[Proof of $P$ by contradiction]
 Here is what the general structure for a proof by contradiction looks like if we are trying to prove the proposition $P$.
 
-\begin{center}
-\framebox{
-\begin{minipage}{6in}
-\vspace{.1in}
+\begin{mdframed}[style=skeleton]
 \begin{proof}
 \emph{[State any upfront assumptions.]} For sake of a contradiction, assume $\neg P$.
 \begin{center}
@@ -138,9 +129,7 @@ $\ldots$ \ \emph{[Use definitions and known results to derive\\ some $Q$ and its
 \end{center}
 \noindent This is a contradiction. Therefore, $P$.
 \end{proof}
-\end{minipage}
-}
-\end{center}
+\end{mdframed}
 \end{skeleton}
 
 Proof by contradiction can be useful for proving statements of the form $A\implies B$, where $\neg B$ is easier to ``get your hands on,'' because $\neg(A \implies B)$ is logically equivalent to $A \wedge \neg B$ (see Corollary~\ref{cor:NegateImplication}).
@@ -148,10 +137,7 @@ Proof by contradiction can be useful for proving statements of the form $A\impli
 \begin{skeleton}[Proof of $A\implies B$ by contradiction]\label{pf by contradiction for implication}
 If you want to prove the implication $A\implies B$ via a proof by contradiction, then the structure of the proof is as follows.
 
-\begin{center}
-\framebox{
-\begin{minipage}{6in}
-\vspace{.1in}
+\begin{mdframed}[style=skeleton]
 \begin{proof}
 \emph{[State any upfront assumptions.]} For sake of a contradiction, assume $A$ and $\neg B$.
 \begin{center}
@@ -159,9 +145,7 @@ $\ldots$ \ \emph{[Use definitions and known results to derive\\ some $Q$ and its
 \end{center}
 \noindent This is a contradiction.  Therefore, if $A$, then $B$.
 \end{proof}
-\end{minipage}
-}
-\end{center}
+\end{mdframed}
 \end{skeleton}
 
 \begin{problem}

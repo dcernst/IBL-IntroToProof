@@ -3,7 +3,7 @@
 We begin this section with a method for combining two functions together that have compatible domains and codomains.
 
 \begin{definition}
-If $f:X\to Y$ and $g:Y\to Z$ are functions, we define $g\circ f:X\to Z$ via $\boxed{(g\circ f)(x)=g(f(x))}$. The function $g\circ f$ is called the \textbf{composition of $f$ and $g$}.
+If $f:X\to Y$ and $g:Y\to Z$ are functions, we define $g\circ f:X\to Z$ via $\tcboxmath{(g\circ f)(x)=g(f(x))}$. The function $g\circ f$ is called the \textbf{composition of $f$ and $g$}.
 \end{definition}
 
 It is important to notice that the function on the right is the one that ``goes first.''  Moreover, we cannot compose any two random functions since the codomain of the first function must agree with the domain of the second function.  In particular, $f\circ g$ may not be a sensible function even when $g\circ f$ exists. Figure~\ref{fig:function composition} provides a visual representation of function composition in terms of function diagrams.
@@ -63,7 +63,7 @@ Consider the inclusion map $\iota:X\to Y$ such that $X$ is a proper subset of $Y
 \[
 f\circ \iota(x)=f(\iota(x))=f(x)
 \]
-for all $x\in X$. Notice that $f\circ \iota$ is simply the function $f$ but with a smaller domain.  In this case, we say that $f\circ \iota$ is the \textbf{restriction of $f$ to $X$}, which is often denoted by $\boxed{f|_X}$.
+for all $x\in X$. Notice that $f\circ \iota$ is simply the function $f$ but with a smaller domain.  In this case, we say that $f\circ \iota$ is the \textbf{restriction of $f$ to $X$}, which is often denoted by $\tcboxmath{f|_X}$.
 \end{example}
 
 The next problem illustrates that $f\circ g$ and $g\circ f$ need not be equal even when both composite functions exist.
@@ -160,7 +160,7 @@ In the previous result, the functions $f$ and $g$ ``cancel" each other out. In t
 \begin{definition}\label{def:inverse of a function}
 Let $f:X\to Y$ be a function.  The relation $f^{-1}$ from $Y$ to $X$, called\textbf{$f$ inverse}, is defined via
 \[
-\boxed{f^{-1}=\{(f(x),x)\in Y\times X\mid x\in X\}}.
+\tcboxmath{f^{-1}=\{(f(x),x)\in Y\times X\mid x\in X\}}.
 \] 
 \end{definition}
 

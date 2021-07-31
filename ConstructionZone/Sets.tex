@@ -1,21 +1,21 @@
 \begin{section}{Sets}
 
 \begin{definition}
-A \textbf{set} is a collection of objects called \textbf{elements}. If $A$ is a set and $x$ is an element of $A$, we write $\boxed{x\in A}$. Otherwise, we write $\boxed{x\notin A}$. The set containing no elements is called the \textbf{empty set}, and is denoted by the symbol $\boxed{\emptyset}$. Any set that contains at least one element is referred to as a \textbf{nonempty set}.
+A \textbf{set} is a collection of objects called \textbf{elements}. If $A$ is a set and $x$ is an element of $A$, we write $\tcboxmath{x\in A}$. Otherwise, we write $\tcboxmath{x\notin A}$. The set containing no elements is called the \textbf{empty set}, and is denoted by the symbol $\tcboxmath{\emptyset}$. Any set that contains at least one element is referred to as a \textbf{nonempty set}.
 \end{definition}
 
 If we think of a set as a box potentially containing some stuff, then the empty set is a box with nothing in it. One assumption we will make is that for any set $A$, $A\notin A$. The language associated to sets is specific.  We will often define sets using the following notation, called \textbf{set-builder notation}:
 \[
-\boxed{S=\{x \in A\mid P(x)\}},
+\tcboxmath{S=\{x \in A\mid P(x)\}},
 \]
 where $P(x)$ is some predicate statement involving $x$. The first part ``$x \in A$" denotes what type of $x$ is being considered.  The predicate to the right of the vertical bar (not to be confused with ``divides") determines the condition(s) that each $x$ must satisfy in order to be a member of the set.  This notation is read as ``The set of all $x$ in $A$ such that $P(x)$." As an example, the set $\{x\in \mathbb{N}\mid x \mbox{ is even and }x\geq 8\}$ describes the collection of even natural numbers that are greater than or equal to 8.
 
 There are a few sets that are commonly discussed in mathematics and have predefined symbols to denote them. We have already encountered the integers, natural numbers, and real numbers. Notice that our definition of the rational numbers uses set-builder notation.
 \begin{itemize}
-\item \textbf{Natural Numbers:} $\boxed{\mathbb{N}\coloneqq \{1,2,3,\ldots\}}$. Some books will include zero in the set of natural numbers, but we do not.
-\item \textbf{Integers:} $\boxed{\mathbb{Z}\coloneqq \{0, \pm 1, \pm2, \pm 3, \ldots\}}$.
-\item \textbf{Rational Numbers:} $\boxed{\mathbb{Q}\coloneqq \{a/b \mid a, b \in \mathbb{Z} \text{ and } b \neq 0\}}$.
-\item \textbf{Real Numbers:} $\boxed{\mathbb{R}}$ denotes the set of real numbers. We are taking for granted that you have some familiarity with this set. 
+\item \textbf{Natural Numbers:} $\tcboxmath{\mathbb{N}\coloneqq \{1,2,3,\ldots\}}$. Some books will include zero in the set of natural numbers, but we do not.
+\item \textbf{Integers:} $\tcboxmath{\mathbb{Z}\coloneqq \{0, \pm 1, \pm2, \pm 3, \ldots\}}$.
+\item \textbf{Rational Numbers:} $\tcboxmath{\mathbb{Q}\coloneqq \{a/b \mid a, b \in \mathbb{Z} \text{ and } b \neq 0\}}$.
+\item \textbf{Real Numbers:} $\tcboxmath{\mathbb{R}}$ denotes the set of real numbers. We are taking for granted that you have some familiarity with this set. 
 \end{itemize}
 Since the set of natural numbers consists of the positive integers, the natural numbers are sometimes denoted by $\mathbb{Z}^+$.
 
@@ -45,14 +45,14 @@ Parts~(a) and (b) of Problem~\ref{prob:set-builder examples} are examples of int
 \begin{definition}
 For $a,b\in\mathbb{R}$ with $a<b$, we define the following sets, referred to as \textbf{intervals}.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $\boxed{(a,b)\coloneqq \{x\in\mathbb{R}\mid a<x<b\}}$
-\item $\boxed{[a,b]\coloneqq \{x\in\mathbb{R}\mid a\leq x\leq b\}}$
-\item $\boxed{[a,b)\coloneqq \{x\in\mathbb{R}\mid a\leq x< b\}}$
-\item $\boxed{(a,\infty)\coloneqq \{x\in\mathbb{R}\mid a<x\}}$
-\item $\boxed{(-\infty,b)\coloneqq \{x\in\mathbb{R}\mid x<b\}}$
-\item $\boxed{(-\infty,\infty)\coloneqq \mathbb{R}}$
+\item $\tcboxmath{(a,b)\coloneqq \{x\in\mathbb{R}\mid a<x<b\}}$
+\item $\tcboxmath{[a,b]\coloneqq \{x\in\mathbb{R}\mid a\leq x\leq b\}}$
+\item $\tcboxmath{[a,b)\coloneqq \{x\in\mathbb{R}\mid a\leq x< b\}}$
+\item $\tcboxmath{(a,\infty)\coloneqq \{x\in\mathbb{R}\mid a<x\}}$
+\item $\tcboxmath{(-\infty,b)\coloneqq \{x\in\mathbb{R}\mid x<b\}}$
+\item $\tcboxmath{(-\infty,\infty)\coloneqq \mathbb{R}}$
 \end{enumerate}
-We analogously define $\boxed{(a,b]}$, $\boxed{[a,\infty)}$, and $\boxed{(-\infty,b]}$. Intervals of the form $(a,b)$, $(-\infty,b)$, $(a,\infty)$, and $(-\infty,\infty)$ are called \textbf{open intervals} while $[a,b]$ is referred to as a \textbf{closed interval}. A \textbf{bounded interval} is any interval of the form $(a,b)$, $[a,b)$, $(a,b]$, and $[a,b]$. For bounded intervals, $a$ and $b$ are called the \textbf{endpoints} of the interval.
+We analogously define $\tcboxmath{(a,b]}$, $\tcboxmath{[a,\infty)}$, and $\tcboxmath{(-\infty,b]}$. Intervals of the form $(a,b)$, $(-\infty,b)$, $(a,\infty)$, and $(-\infty,\infty)$ are called \textbf{open intervals} while $[a,b]$ is referred to as a \textbf{closed interval}. A \textbf{bounded interval} is any interval of the form $(a,b)$, $[a,b)$, $(a,b]$, and $[a,b]$. For bounded intervals, $a$ and $b$ are called the \textbf{endpoints} of the interval.
 \end{definition}
 
 We will always assume that any time we write $(a,b), [a,b], (a,b]$, or $[a,b)$ that $a<b$. We will see where the terminology of ``open" and ``closed" comes from in Section~\ref{sec:Topology}. 
@@ -66,7 +66,7 @@ Give an example of each of the following.
 \end{problem}
 
 \begin{definition}
-If $A$ and $B$ are sets, then we say that $A$ is a \textbf{subset} of $B$, written $\boxed{A\subseteq B}$, provided that every element of $A$ is an element of $B$.
+If $A$ and $B$ are sets, then we say that $A$ is a \textbf{subset} of $B$, written $\tcboxmath{A\subseteq B}$, provided that every element of $A$ is an element of $B$.
 \end{definition}
 
 Observe that $A\subseteq B$ is equivalent to ``For all $x$ (in the universe of discourse), if $x\in A$, then $x\in B$."  Since we know how to deal with ``for all" statements and conditional propositions, we know how to go about proving $A\subseteq B$.
@@ -96,7 +96,7 @@ Suppose that $A$, $B$, and $C$ are sets.  If $A\subseteq B$ and $B\subseteq C$, 
 \end{theorem}
 
 \begin{definition}
-Two sets $A$ and $B$ are \textbf{equal}, denoted $\boxed{A=B}$, if the sets contain the same elements.
+Two sets $A$ and $B$ are \textbf{equal}, denoted $\tcboxmath{A=B}$, if the sets contain the same elements.
 \end{definition}
 
 Since the next theorem is a biconditional proposition, you need to write two distinct subproofs, one for ``$A=B$ implies $A \subseteq B$ and $B \subseteq A$", and another for ``$A \subseteq B$ and $B \subseteq A$ implies $A=B$". Be sure to make it clear to the reader when you are proving each implication.
@@ -108,7 +108,7 @@ Suppose that $A$ and $B$ are sets. Then $A=B$ if and only if $A \subseteq B$ and
 Note that if we want to prove $A=B$, then we have to do two separate subproofs: one for $A\subseteq B$ and one for $B\subseteq A$. Be sure to make it clear to the reader where these subproofs begin and end. One approach is to label each subproof with ``$(\subseteq)$" and ``$(\supseteq)$" (including the parentheses), respectively.
 
 \begin{definition}
-If $A\subseteq B$, then $A$ is called a \textbf{proper subset} provided that $A\neq B$.  In this case, we may write $\boxed{A\subset B}$ or $\boxed{A\subsetneq B}$.
+If $A\subseteq B$, then $A$ is called a \textbf{proper subset} provided that $A\neq B$.  In this case, we may write $\tcboxmath{A\subset B}$ or $\tcboxmath{A\subsetneq B}$.
 \end{definition}
 
 Note that some authors use $\subset$ to mean $\subseteq$, so some confusion could arise if you are not reading carefully.
@@ -116,10 +116,10 @@ Note that some authors use $\subset$ to mean $\subseteq$, so some confusion coul
 \begin{definition}
 Let $A$ and $B$ be sets in some universe of discourse $U$.
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item The \textbf{union} of the sets $A$ and $B$ is $\boxed{A \cup B \coloneqq \{x\in U \mid x\in A \mbox{ or } x\in B \}}$.
-\item The \textbf{intersection} of the sets $A$ and $B$ is $\boxed{A \cap B \coloneqq\{x\in U \mid x\in A \mbox{ and } x\in B \}}$.
-\item The \textbf{set difference} of the sets $A$ and $B$ is $\boxed{A \setminus B \coloneqq\{x\in U \mid x\in A \mbox{ and } x\notin B \}}$.
-\item The \textbf{complement of $A$} (relative to $U$) is the set $\boxed{A^c\coloneqq U \setminus A =\{x \in U \mid x \notin A\}}$.
+\item The \textbf{union} of the sets $A$ and $B$ is $\tcboxmath{A \cup B \coloneqq \{x\in U \mid x\in A \mbox{ or } x\in B \}}$.
+\item The \textbf{intersection} of the sets $A$ and $B$ is $\tcboxmath{A \cap B \coloneqq\{x\in U \mid x\in A \mbox{ and } x\in B \}}$.
+\item The \textbf{set difference} of the sets $A$ and $B$ is $\tcboxmath{A \setminus B \coloneqq\{x\in U \mid x\in A \mbox{ and } x\notin B \}}$.
+\item The \textbf{complement of $A$} (relative to $U$) is the set $\tcboxmath{A^c\coloneqq U \setminus A =\{x \in U \mid x \notin A\}}$.
 \end{enumerate}
 \end{definition}
 

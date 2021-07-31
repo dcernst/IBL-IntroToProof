@@ -1,6 +1,6 @@
 \begin{section}{Introduction to Quantification}
 
-In this section and the next, we introduce \textbf{first-order logic}---also referred to as \textbf{predicate logic}, \textbf{quantificational logic}, and \textbf{first-order predicate calculus}. The sentence ``$x>0$'' is not itself a proposition because its truth value depends on $x$.  In this case, we say that $x$ is a \textbf{free variable}. A sentence with at least one free variable is called a \textbf{predicate} (or \textbf{open sentence}). To turn a predicate into a proposition, we must either substitute values for each free variable or ``quantify'' the free variables. We will use notation such as $\boxed{P(x)}$ and $\boxed{Q(a,b)}$ to represent predicates with free variables $x$ and $a,b$, respectively. The letters ``$P$" and ``$Q$" that we used in the previous sentence are not special; we can use any letter or symbol we want. For example, each of the following represents a predicate with the indicated free variables.
+In this section and the next, we introduce \textbf{first-order logic}---also referred to as \textbf{predicate logic}, \textbf{quantificational logic}, and \textbf{first-order predicate calculus}. The sentence ``$x>0$'' is not itself a proposition because its truth value depends on $x$.  In this case, we say that $x$ is a \textbf{free variable}. A sentence with at least one free variable is called a \textbf{predicate} (or \textbf{open sentence}). To turn a predicate into a proposition, we must either substitute values for each free variable or ``quantify'' the free variables. We will use notation such as $\tcboxmath{P(x)}$ and $\tcboxmath{Q(a,b)}$ to represent predicates with free variables $x$ and $a,b$, respectively. The letters ``$P$" and ``$Q$" that we used in the previous sentence are not special; we can use any letter or symbol we want. For example, each of the following represents a predicate with the indicated free variables.
 \begin{itemize}
 \item $S(x)\coloneqq ``x^2-4=0"$
 \item $L(a,b)\coloneqq ``a<b"$
@@ -82,13 +82,13 @@ Also, the order of the quantification is important.  Reversing the order of the 
 
 Quantification and logical connectives (``and,'' ``or,'' ``If\ldots, then\ldots,'' and ``not'') enable complex mathematical statements. For example, if $f$ is a function while $c$ and $L$ are real numbers, then the formal definition of $\lim_{x\to c}f(x)=L$, which you may have encountered in calculus, is:
 \begin{quote}
-For all $\epsilon >0$, there exists $\delta >0$ such that for all $x$, if $0<|x-c|<\delta$, then $|f(x)-L|<\epsilon$.
+For all $\varepsilon >0$, there exists $\delta >0$ such that for all $x$, if $0<|x-c|<\delta$, then $|f(x)-L|<\varepsilon$.
 \end{quote}
 
 In order to study the abstract nature of complicated mathematical statements, it is useful to adopt some notation.
 
 \begin{definition}\label{def:quantifiers}
-The universal quantifier ``for all'' is denoted $\boxed{\forall}$, and the existential quantifier  ``there exists\ldots such that'' is denoted $\boxed{\exists}$.
+The universal quantifier ``for all'' is denoted $\tcboxmath{\forall}$, and the existential quantifier  ``there exists\ldots such that'' is denoted $\tcboxmath{\exists}$.
 \end{definition}
 
 Using our abbreviations for the logical connectives and quantifiers, we can symbolically represent mathematical propositions. For example, the (true) proposition ``There exists $x \in \mathbb{R}$ such that $x^2-1=0$'' becomes ``$(\exists x \in \mathbb{R})(x^2-1=0)$,'' while the (false) proposition ``For all $x\in \mathbb{N}$, there exists $y\in\mathbb{N}$ such that $y<x$'' becomes ``$(\forall x\in\mathbb{N})(\exists y\in\mathbb{N})(y<x)$.'' %``$(\forall x)(x\in\mathbb{N}\implies (\exists y)(y\in\mathbb{N}\implies y<x))$'' or 
@@ -117,14 +117,14 @@ Find at least two other instances of theorem statements that appeared earlier in
 \end{problem}
 
 \begin{problem}
-Consider the proposition ``If $\epsilon >0$, then there exists $N\in\mathbb{N}$ such that $1/N<\epsilon$."  Assume the universe of discourse is the set $\mathbb{R}$.
+Consider the proposition ``If $\varepsilon >0$, then there exists $N\in\mathbb{N}$ such that $1/N<\varepsilon$."  Assume the universe of discourse is the set $\mathbb{R}$.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item Express the statement in logical and mathematical symbols. Is the statement true?
 \item Reverse the order of the quantifiers to get a new statement. Does the meaning change?  If so, how?  Is the new statement true?
 \end{enumerate}
 \end{problem}
 
-The symbolic expression $(\forall x)(\forall y)$ can be abbreviated as $\boxed{\forall x,y}$ as long as $x$ and $y$ are elements of the same universe.
+The symbolic expression $(\forall x)(\forall y)$ can be abbreviated as $\tcboxmath{\forall x,y}$ as long as $x$ and $y$ are elements of the same universe.
 
 \begin{problem}
 Express the proposition ``For all $x,y\in\mathbb{R}$ with $x<y$, there exists $m\in\mathbb{R}$ such that $x<m<y$" using logical and mathematical symbols.

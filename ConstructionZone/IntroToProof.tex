@@ -15,6 +15,8 @@
 \usetikzlibrary{arrows,automata,positioning,fit,shapes}
 \usetikzlibrary{decorations.markings}
 \usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{matrix}
+\usepackage[framemethod=TikZ]{mdframed}
 \usepackage{rotating}
 \usepackage[notextcomp]{kpfonts} 
 \usepackage{graphicx}
@@ -29,6 +31,8 @@
 \usepackage[margin=1in]{geometry}
 \usepackage[hang,flushmargin]{footmisc}
 \usepackage{color}
+\usepackage{longfbox}
+\usepackage[most]{tcolorbox}
 \usepackage[breaklinks]{hyperref}
 \hypersetup{
 	colorlinks=true,
@@ -45,7 +49,8 @@
 %%% Colors %%%
 
 \definecolor{darkblue}{rgb}{0, 0, .6}
-\definecolor{grey}{rgb}{.7, .7, .7}
+\definecolor{grey}{rgb}{.6, .6, .6}
+\definecolor{lightgrey}{rgb}{.85, .85, .85}
 \definecolor{naugreen}{cmyk}{.43,0,.34,.38}
 \definecolor{naublue}{cmyk}{1,.72,0,.32}
 \definecolor{mediterranean}{cmyk}{.67,0,.08,.3}
@@ -109,9 +114,6 @@
 \newtheorem{completenessaxiom}[theorem]{Completeness Axiom}
 \newtheorem{additionalaxioms}[theorem]{Additional Order Axioms}
 
-\newsavebox{\savepar}
-\newenvironment{textbox}{\noindent\begin{lrbox}{\savepar}\begin{minipage}[c]{.98\textwidth}}{\end{minipage}\end{lrbox}\fcolorbox{black}{white}{\usebox{\savepar}}}
-
 \newcommand{\dom}{\operatorname{Dom}}
 \newcommand{\codom}{\operatorname{Codom}}
 \newcommand{\range}{\operatorname{Rng}}
@@ -124,6 +126,10 @@
 
 \setlength{\epigraphwidth}{0.5\textwidth}
 \renewcommand{\sourceflush}{flushleft}
+
+\mdfdefinestyle{skeleton}{roundcorner=5pt,leftmargin=5pt,rightmargin=5pt,backgroundcolor = black!5!white}%lightgrey}
+
+\tcbset{size=fbox}%,colframe=black,colback=white,arc=2pt}%boxsep=0pt,left=4pt,right=4pt,top=2.5pt,bottom=2.5pt}
 
 \begin{document}
 

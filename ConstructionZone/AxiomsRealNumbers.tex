@@ -64,9 +64,9 @@ We now introduce some common notation that you are likely familiar with.  Take a
 \begin{definition}\label{def:real number notation}
 For every $a,b\in\mathbb{R}$ and $n\in\mathbb{Z}$, we define the following:
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $\boxed{a-b\coloneqq a+(-b)}$
-\item $\boxed{\displaystyle\frac{a}{b}\coloneqq ab^{-1}}$ (for $b\neq 0$)
-\item $\boxed{\displaystyle a^n\coloneqq \begin{cases}
+\item $\tcboxmath{a-b\coloneqq a+(-b)}$
+\item $\tcboxmath{\displaystyle\frac{a}{b}\coloneqq ab^{-1}}$ (for $b\neq 0$)
+\item $\tcboxmath{\displaystyle a^n\coloneqq \begin{cases}
 \overbrace{aa\cdots a}^n, &\text{if }n\in \mathbb{N}\\
 1, & \text{if }n=0\text{ and }a\neq 0\\
 \displaystyle\frac{1}{a^{-n}}, & \text{if }-n\in \mathbb{N}\text{ and }a\neq 0
@@ -101,7 +101,7 @@ For all $a,b\in\mathbb{R}$, we have $(a+b)(a-b)=a^2-b^2$.
 We now introduce the Order Axioms of the real numbers.
 
 \begin{orderaxioms}\label{axiom:order axioms}
-For $a,b,c\in \mathbb{R}$, there is a relation $\boxed{<}$ on $\mathbb{R}$ satisfying:
+For $a,b,c\in \mathbb{R}$, there is a relation $\tcboxmath{<}$ on $\mathbb{R}$ satisfying:
 \begin{enumerate}
 \item[(O1)] (Trichotomy Law) If $a\neq b$, then either $a<b$ or $b<a$ but not both;
 \item[(O2)] (Transitivity) If $a<b$ and $b<c$, then $a<c$;
@@ -117,9 +117,9 @@ Notice that the Order Axioms are phrased in terms of ``$<$". We would also like 
 \begin{definition}
 For $a,b\in\mathbb{R}$, we define:
 \begin{enumerate}[label=\textrm{(\alph*)}]
-\item $\boxed{a>b}$ if $b<a$;
-\item $\boxed{a\leq b}$ if $a<b$ or $a=b$;
-\item $\boxed{a\geq b}$ if $b\leq a$.
+\item $\tcboxmath{a>b}$ if $b<a$;
+\item $\tcboxmath{a\leq b}$ if $a<b$ or $a=b$;
+\item $\tcboxmath{a\geq b}$ if $b\leq a$.
 \end{enumerate}
 \end{definition}
 
@@ -188,7 +188,7 @@ There is a special function that we can now introduce.
 \begin{definition}
 Given $a\in\mathbb{R}$, we define the \textbf{absolute value of $a$}, denoted $|a|$, via
 \[
-\boxed{|a|\coloneqq \begin{cases}
+\tcboxmath{|a|\coloneqq \begin{cases}
 a, & \text{if }a\geq 0\\
 -a, & \text{if }a<0.
 \end{cases}}
@@ -204,7 +204,7 @@ We can interpret $|a|$ as the distance between $a$ and 0 as depicted in Figure~\
 \begin{figure}[h!]
 \centering
 \subcaptionbox{$a>0$\label{fig:distanceA}}[.48\linewidth]{
-\begin{tikzpicture}[scale=1.5,angle/.style={fill=white},point/.style={},decoration={brace,amplitude=5}]
+\begin{tikzpicture}[scale=1.5,decoration={brace,amplitude=5},text height=1.5ex,text depth=.25ex]
 \draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
 \draw[shift={(0,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$0$};
 \draw[shift={(1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$a$};
@@ -212,11 +212,13 @@ We can interpret $|a|$ as the distance between $a$ and 0 as depicted in Figure~\
 \end{tikzpicture}
 }
 \subcaptionbox{$a<0$\label{fig:distanceB}}[.48\linewidth]{
-\begin{tikzpicture}[scale=1.5,angle/.style={fill=white},point/.style={},decoration={brace,amplitude=5}]
+\begin{tikzpicture}[scale=1.5,decoration={brace,amplitude=5},text height=1.5ex,text depth=.25ex]
 \draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
+
 \draw[shift={(0,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$0$};
 \draw[shift={(-1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$a$};
 \draw[decorate] (-1,.15)--node[above=2.5mm]{$|a|$}(0,.15);
+
 \end{tikzpicture}
 }
 \caption{Visual representation of $|a|$.}\label{fig:abs value as distance}
@@ -230,7 +232,7 @@ Given two points $a$ and $b$, $|a-b|$, and hence $|b-a|$ by the previous theorem
 
 \begin{figure}[h!]
 \centering
-\begin{tikzpicture}[scale=1.5,angle/.style={fill=white},point/.style={},decoration={brace,amplitude=5}]
+\begin{tikzpicture}[scale=1.5,decoration={brace,amplitude=5},text height=1.5ex,text depth=.25ex]
 \draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
 \draw[shift={(-1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$a$};
 \draw[shift={(1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$b$};
@@ -266,7 +268,7 @@ The letter $r$ was used in the previous theorem because it is the first letter o
 
 \begin{figure}[h!]
 \centering
-\begin{tikzpicture}[scale=1.5,angle/.style={fill=white},point/.style={},decoration={brace,amplitude=5}]
+\begin{tikzpicture}[scale=1.5,decoration={brace,amplitude=5},text height=1.5ex,text depth=.25ex]
 \draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
 \draw[shift={(0,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$0$};
 \draw[shift={(1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$r$};
@@ -287,7 +289,7 @@ Since $|a-b|$ represents the distance between $a$ and $b$, we can interpret $|a-
 
 \begin{figure}[h!]
 \centering
-\begin{tikzpicture}[scale=1.5,angle/.style={fill=white},point/.style={},decoration={brace,amplitude=5}]
+\begin{tikzpicture}[scale=1.5,decoration={brace,amplitude=5},text height=1.5ex,text depth=.25ex]
 \draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
 \draw[shift={(0,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$b$};
 \draw[shift={(1.25,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$b+r$};
@@ -311,7 +313,7 @@ Figure~\ref{fig:triangle inequality} depicts two of the cases for the Triangle I
 \begin{figure}[h!]
 \centering
 \subcaptionbox{$a\geq 0, b\geq 0$\label{fig:triangle A}}[.48\linewidth]{
-\begin{tikzpicture}[scale=1.5,angle/.style={fill=white},point/.style={},decoration={brace,amplitude=5}]
+\begin{tikzpicture}[scale=1.5,decoration={brace,amplitude=5},text height=1.5ex,text depth=.25ex]
 \draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
 \draw[shift={(-1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$0$};
 \draw[shift={(-.3,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$a$};
@@ -323,7 +325,7 @@ Figure~\ref{fig:triangle inequality} depicts two of the cases for the Triangle I
 \end{tikzpicture}
 }
 \subcaptionbox{$a<0,b\geq 0$\label{fig:triangle B}}[.48\linewidth]{
-\begin{tikzpicture}[scale=1.5,angle/.style={fill=white},point/.style={},decoration={brace,amplitude=5}]
+\begin{tikzpicture}[scale=1.5,decoration={brace,amplitude=5},text height=1.5ex,text depth=.25ex]
 \draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
 \draw[shift={(-1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$a$};
 \draw[shift={(-.5,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$0$};
@@ -346,7 +348,7 @@ Where did the Triangle Inequality get its name?  Why ``Triangle"?  For any trian
 \begin{figure}[h!]
 \centering
 
-\begin{tikzpicture}[scale=1.5]
+\begin{tikzpicture}[scale=1.5,text height=1.5ex,text depth=.25ex]
 \coordinate (A) at (0,0) {};
 \coordinate (B) at (3,0) {};
 \coordinate (C) at (2,2) {};
@@ -406,7 +408,7 @@ Our next result tells us that a supremum of a set and an infimum of a set are un
 If $A\subseteq \mathbb{R}$ such that the supremum (respectively, infimum) of $A$ exists, then the supremum (respectively, infimum) of $A$ is unique.
 \end{theorem}
 
-In light of the previous theorem, if the supremum of $A$ exists, it is denoted by $\boxed{\sup(A)}$. Similarly, if the infimum of $A$ exists, it is denoted by $\boxed{\inf(A)}$. 
+In light of the previous theorem, if the supremum of $A$ exists, it is denoted by $\tcboxmath{\sup(A)}$. Similarly, if the infimum of $A$ exists, it is denoted by $\tcboxmath{\inf(A)}$. 
 
 \begin{problem}
 Find the supremum and the infimum of each of the sets in Problem~\ref{prob:find upper bounds} when they exist.
@@ -421,7 +423,7 @@ Let $A\subseteq \mathbb{R}$. Then $A$ has a maximum if and only if $A$ has a sup
 Intuitively, a point is the supremum of a set $A$ if and only if no point smaller than the supremum can be an upper bound of $A$. The next result makes this more precise.
 
 \begin{theorem}\label{thm:scoot in characterization of sup}
-Let $A\subseteq \mathbb{R}$. An upper bound $b$ is the supremum of $A$ if and only if for every $\epsilon >0$, there exists $a\in A$ such that $b-\epsilon <a$.
+Let $A\subseteq \mathbb{R}$. An upper bound $b$ is the supremum of $A$ if and only if for every $\varepsilon >0$, there exists $a\in A$ such that $b-\varepsilon <a$.
 \end{theorem}
 
 \begin{problem}
@@ -502,7 +504,7 @@ Repeated applications of the previous two theorems implies that every open inter
 %\begin{definition}
 %Given $a\in\mathbb{R}$, we define the \textbf{absolute value of $a$}, denoted $|a|$, via
 %\[
-%\boxed{|a|\coloneqq \begin{cases}
+%\tcboxmath{|a|\coloneqq \begin{cases}
 %a, & \text{if }a\geq 0\\
 %-a, & \text{if }a<0.
 %\end{cases}}

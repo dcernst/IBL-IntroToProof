@@ -5,7 +5,7 @@ What does it mean for two sets to have the same ``size"?  If the sets are finite
 But what if the sets are infinite?  For example, consider the set of natural numbers $\mathbb{N}$ and the set of even natural numbers $2\mathbb{N}\coloneqq \{2n\mid n\in \mathbb{N}\}$. Clearly, $2\mathbb{N}$ is a proper subset of $\mathbb{N}$.  Moreover, both sets are infinite.  In this case, you might be thinking that $\mathbb{N}$ is ``larger than" $2\mathbb{N}$.  However, it turns out that there is a one-to-one correspondence between these two sets.  In particular, consider the function $f:\mathbb{N}\to 2\mathbb{N}$ defined via $f(n)=2n$.  It is easily verified that $f$ is both injective and surjective.  In this case, mathematics has determined that the right viewpoint is that $\mathbb{N}$ and $2\mathbb{N}$ do have the same ``size". However, it is clear that ``size" is a bit too imprecise when it comes to infinite sets. We need something more rigorous.
 
 \begin{definition}
-Let $A$ and $B$ be sets. We say that $A$ and $B$ have the same \textbf{cardinality} if there exists a bijection between $A$ and $B$. In this case, we write $\boxed{\card(A)=\card(B)}$.
+Let $A$ and $B$ be sets. We say that $A$ and $B$ have the same \textbf{cardinality} if there exists a bijection between $A$ and $B$. In this case, we write $\tcboxmath{\card(A)=\card(B)}$.
 \end{definition}
 
 Note that we have not defined $\card(A)$ by itself. Doing so would not be too difficult for finite sets, but making such a notation precise in general is tricky business.  When we write $\card(A)=\card(B)$ (and later $\card(A)\leq \card(B)$ and $\card(A)<\card(B)$), we are asserting the existence of a certain type of function from $A$ to $B$.
@@ -123,7 +123,7 @@ Let $A$, $B$, $C$, and $D$ be sets such that $\card(A)=\card(C)$ and $\card(B)=\
 Given two finite sets, it makes sense to say that one set is ``larger than" another provided one set contains more elements than the other. We would like to generalize this idea to handle both finite and infinite sets. 
 
 \begin{definition}
-Let $A$ and $B$ be sets. If there is a injective function from $A$ to $B$, then we say that the \textbf{cardinality of $A$ is less than or equal to the cardinality of $B$}. In this case, we write $\boxed{\card(A)\leq\card(B)}$.
+Let $A$ and $B$ be sets. If there is a injective function from $A$ to $B$, then we say that the \textbf{cardinality of $A$ is less than or equal to the cardinality of $B$}. In this case, we write $\tcboxmath{\card(A)\leq\card(B)}$.
 \end{definition}
 
 \begin{theorem}
@@ -142,7 +142,7 @@ Provide an example of sets $A$ and $B$ such that $\card(A)=\card(B)$ despite the
 \end{problem}
 
 \begin{definition}
-Let $A$ and $B$ be sets. We write $\boxed{\card(A)< \card(B)}$ if $\card(A)\leq \card(B)$ and $\card(A)\neq \card(B)$.
+Let $A$ and $B$ be sets. We write $\tcboxmath{\card(A)< \card(B)}$ if $\card(A)\leq \card(B)$ and $\card(A)\neq \card(B)$.
 \end{definition}
 
 As a reminder, the statements $\card(A)= \card(B)$ and $\card(A)\leq \card(B)$ are symbolic ways of asserting the existence of certain types of functions from $A$ to $B$. When we write $\card(A)<\card(B)$, we are saying something much stronger than ``There exists a function $f:A\to B$ that is injective but not surjective." The statement $\card(A)<\card(B)$ is asserting that \emph{every} injective function from $A$ to $B$ is not surjective. In general, it is difficult to prove statements like $\card(A)\neq \card(B)$ or $\card(A)<\card(B)$.

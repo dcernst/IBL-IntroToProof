@@ -20,10 +20,7 @@ Note that in situations where complete induction is appropriate, it might be the
 \begin{skeleton}[Proof of $(\forall n\in\mathbb{N})P(n)$ by Complete Induction]
 Here is the general structure for a proof by complete induction.
 
-\begin{center}
-\framebox{
-\begin{minipage}{6in}
-\vspace{.1in}
+\begin{mdframed}[style=skeleton]
 \begin{proof}
 We proceed by induction.
 \begin{enumerate}\setlength{\itemsep}{0in}
@@ -33,9 +30,7 @@ We proceed by induction.
 \end{enumerate}
 Thus, by complete induction, $P(n)$ is true for all integers $n \ge a$.
 \end{proof}
-\end{minipage}
-}
-\end{center}
+\end{mdframed}
 \end{skeleton}
 
 Recall that Theorem~\ref{thm:PMI2} generalized Theorem~\ref{thm:PMI} and allowed us to handle situations where the base case was something other than $P(1)$.  We can generalize complete induction in the same way, but we won't write this down as a formal theorem.
@@ -84,7 +79,7 @@ Not surprisingly, maximums and minimums are unique when they exist. It might be 
 If $A\subseteq \mathbb{R}$ such that the maximum (respectively, minimum) of $A$ exists, then the maximum (respectively, minimum) of $A$ is unique.
 \end{theorem}
 
-If the maximum of a set $A$ exists, then it is denoted by $\boxed{\max(A)}$. Similarly, if the minimum of a set $A$ exists, then it is denoted by $\boxed{\min(A)}$.
+If the maximum of a set $A$ exists, then it is denoted by $\tcboxmath{\max(A)}$. Similarly, if the minimum of a set $A$ exists, then it is denoted by $\tcboxmath{\min(A)}$.
 
 \begin{problem}\label{prob:find max and min}
 Find the maximum and the minimum for each of the following sets when they exist.

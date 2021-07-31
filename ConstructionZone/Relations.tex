@@ -3,7 +3,7 @@
 Recall from Section~\ref{sec:Cartesian Products} that the Cartesian product of two sets $A$ and $B$, written $A\times B$, is the set of all ordered pairs $(a,b)$, where $a\in A$ and $b\in B$. That is, $A\times B=\{(a,b)\mid a\in A, b\in B\}$.
 
 \begin{definition}
-Let $A$ and $B$ be sets. A \textbf{relation $R$ from $A$ to $B$} is a subset of $A \times B$. If $R$ is a relation from $A$ to $B$ and $(a,b)\in {R}$, then we say that \textbf{$a$ is related to $b$} and we may write $\boxed{aR b}$ in place of $(a,b)\in{R}$. If $R$ is a relation from $A$ to the same set $A$, then we say that $R$ is a \textbf{relation on $A$}.
+Let $A$ and $B$ be sets. A \textbf{relation $R$ from $A$ to $B$} is a subset of $A \times B$. If $R$ is a relation from $A$ to $B$ and $(a,b)\in {R}$, then we say that \textbf{$a$ is related to $b$} and we may write $\tcboxmath{aR b}$ in place of $(a,b)\in{R}$. If $R$ is a relation from $A$ to the same set $A$, then we say that $R$ is a \textbf{relation on $A$}.
 \end{definition}
 
 \begin{example}
@@ -83,8 +83,8 @@ Consider the relation given in Example~\ref{ex:relation finite to finite}.  The 
 (E) edge node {} (2)
 (E) edge node {} (4);
 
-\node[draw,fit=(A) (B) (C) (D) (E),minimum width=1.5cm,gray] {};
-\node[draw,fit=(1) (2) (3) (4),minimum width=1.5cm,gray] {};
+\node[draw,rounded corners,fit=(A) (B) (C) (D) (E),minimum width=1.5cm,gray] {};
+\node[draw,rounded corners,fit=(1) (2) (3) (4),minimum width=1.5cm,gray] {};
 \node at (0,5.7) {$A$};
 \node at (2.5,5.2) {$B$}; 
 \end{tikzpicture}
@@ -132,8 +132,8 @@ Figure~\ref{fig:digraph on finite}\subref{fig:digraphA} represents the relation 
 (D1) edge node {} (C2)
 (E1) edge node {} (A2);
 
-\node[draw,fit=(A1) (B1) (C1) (D1) (E1),minimum width=1.5cm,gray] {};
-\node[draw,fit=(A2) (B2) (C2) (D2) (E2),minimum width=1.5cm,gray] {};
+\node[draw,rounded corners,fit=(A1) (B1) (C1) (D1) (E1),minimum width=1.5cm,gray] {};
+\node[draw,rounded corners,fit=(A2) (B2) (C2) (D2) (E2),minimum width=1.5cm,gray] {};
 \node at (0,5.7) {$A$};
 \node at (2.5,5.7) {$A$};
 \end{tikzpicture}
@@ -195,9 +195,9 @@ When we write $x^2+y^2=1$, we are implicitly defining a relation.  In particular
 \draw [thick,-stealth] (-3.5,0) -- (3.5,0);
 \draw [thick,-stealth] (0,-3.5) -- (0,3.5);
 \fill (0:3) circle (0.07cm);
-\node at (0:3) [above right] {\scriptsize $ (1,0) $};
+\node at (0:3) [above right] {$ (1,0) $};
 \fill (60:3) circle (0.07cm);
-\node at (60:3.2)[right=0.01ex] {\scriptsize $ (x,y) $};
+\node at (60:3.2)[right=0.01ex] {$ (x,y) $};
 \end{tikzpicture}
 \caption{Graph of the relation determined by $x^2+y^2=1$.}\label{fig:unit circle}
 \end{figure}
@@ -221,15 +221,15 @@ For a relation on a set, it is natural to consider the collection of elements th
 \begin{definition}\label{def:relatives}
 Let $R$ be a relation on a set $A$. For each $a\in A$, we define the \textbf{set of relatives of $a$ with respect to $R$} via
 \[
-\boxed{\rel(a,R)\coloneqq \{b\in A\mid aR b\}}.
+\tcboxmath{\rel(a,R)\coloneqq \{b\in A\mid aR b\}}.
 \]
 We also define the \textbf{collection of the sets of relatives with respect to $R$} by
 \[
-\boxed{\Rel(R)\coloneqq \{\rel(a)\mid a\in A\}}.
+\tcboxmath{\Rel(R)\coloneqq \{\rel(a)\mid a\in A\}}.
 \]
 \end{definition}
 
-If $R$ is clear from the context, we will usually write $\boxed{\rel(a)}$ in place of $\rel(a,R)$.  In terms of digraphs, $\rel(a)$ is the collection of vertices that have a directed edge pointing towards them from the vertex labeled by $a$. In graph theory, this collection of vertices is called the \textbf{out neighborhood} of $a$ and each such vertex is called an \textbf{out neighbor}. Notice that $\Rel(R)$ is a set of sets.  In particular, an element in $\Rel(R)$ is a subset of $A$---equivalently, an element of $\mathcal{P}(A)$.
+If $R$ is clear from the context, we will usually write $\tcboxmath{\rel(a)}$ in place of $\rel(a,R)$.  In terms of digraphs, $\rel(a)$ is the collection of vertices that have a directed edge pointing towards them from the vertex labeled by $a$. In graph theory, this collection of vertices is called the \textbf{out neighborhood} of $a$ and each such vertex is called an \textbf{out neighbor}. Notice that $\Rel(R)$ is a set of sets.  In particular, an element in $\Rel(R)$ is a subset of $A$---equivalently, an element of $\mathcal{P}(A)$.
 
 \begin{example}
 Consider the relation given in Example~\ref{ex:relation on finite}.  By inspecting the ordered pairs in $R$ or by looking at the digraph in Figure~\ref{fig:digraph on finite}\subref{fig:digraphB}, we see that
@@ -329,10 +329,8 @@ Below, we provide skeleton proofs for proving that a relation is reflexive, symm
 
 \begin{skeleton}[Proof that a relation is reflexive]
 Here is the general structure for proving that a relation is reflexive. 
-\begin{center}
-\framebox{
-\begin{minipage}{6in}
-\vspace{.1in}
+
+\begin{mdframed}[style=skeleton]
 \begin{proof}
 Assume $R$ is a relation on $A$ defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $R$]}.  Let $a\in A$.
 \begin{center}
@@ -340,17 +338,13 @@ $\ldots$ \ \emph{[Use the definition (or property) of $R$ to verify that $aR a$]
 \end{center}
 \noindent Therefore, the relation $R$ is reflexive on $A$.
 \end{proof}
-\end{minipage}
-}
-\end{center}
+\end{mdframed}
 \end{skeleton}
 
 \begin{skeleton}[Proof that a relation is symmetric]
 Here is the general structure for proving that a relation is symmetric.
-\begin{center}
-\framebox{
-\begin{minipage}{6in}
-\vspace{.1in}
+
+\begin{mdframed}[style=skeleton]
 \begin{proof}
 Assume $R$ is a relation on $A$ defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $R$]}.  Let $a, b\in A$ and suppose $aR b$.
 \begin{center}
@@ -358,17 +352,13 @@ $\ldots$ \ \emph{[Use assumption that $aR b$ with definition (or property)\\ of 
 \end{center}
 \noindent Therefore, the relation $R$ is symmetric on $A$.
 \end{proof}
-\end{minipage}
-}
-\end{center}
+\end{mdframed}
 \end{skeleton}
 
 \begin{skeleton}[Proof that a relation is transitive]
 Here is the general structure for proving that a relation is transitiv.
-\begin{center}
-\framebox{
-\begin{minipage}{6in}
-\vspace{.1in}
+
+\begin{mdframed}[style=skeleton]
 \begin{proof}
 Assume $R$ is a relation on $A$ defined by (or satisfying)\ldots \emph{[Use the given definition (or describe the given property) of $R$]}.  Let $a, b, c\in A$ and suppose $aR b$ and $bR c$.
 \begin{center}
@@ -376,9 +366,7 @@ $\ldots$ \ \emph{[Use assumption that $aR b$ and $bR c$ with definition\\ (or pr
 \end{center}
 \noindent Therefore, the relation $R$ is transitive on $A$.
 \end{proof}
-\end{minipage}
-}
-\end{center}
+\end{mdframed}
 \end{skeleton}
 
 \begin{problem}\label{prob:lots of relations}

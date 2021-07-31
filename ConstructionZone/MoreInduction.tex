@@ -20,10 +20,7 @@ Theorem~\ref{thm:PMI2} gives a process for proving statements of the form: ``For
 \begin{skeleton}[Proof of $(\forall n \in \mathbb{Z})(n \geq a \implies P(n))$ by Induction]
 Here is the general structure for a proof by induction when the base case does not necessarily involve $a=1$.
 
-\begin{center}
-\framebox{
-\begin{minipage}{6in}
-\vspace{.1in}
+\begin{mdframed}[style=skeleton]
 \begin{proof}
 We proceed by induction.
 \begin{enumerate}\setlength{\itemsep}{0in}
@@ -33,9 +30,7 @@ We proceed by induction.
 \end{enumerate}
 Thus, by induction, $P(n)$ is true for all integers $n \ge a$.
 \end{proof}
-\end{minipage}
-}
-\end{center}
+\end{mdframed}
 \end{skeleton}
 
 We encountered the next theorem back in Section~\ref{sec:PowerSets} (see Conjecture~\ref{conjecture:PowerSets}), but we did not prove it. When proving this theorem using induction, you will need to argue that if you add one more element to a finite set, then you end up with twice as many subsets. For your base case, consider the empty set.
