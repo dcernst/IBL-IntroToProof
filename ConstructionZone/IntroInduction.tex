@@ -1,4 +1,4 @@
-\begin{section}{Introduction to Induction}
+\begin{section}{Introduction to Induction}\label{sec:intro to induction}
 
 Consider the claims:
 \begin{enumerate}[label=\textrm{(\alph*)}]
@@ -32,7 +32,7 @@ Then $S=\mathbb{N}$.
 
 We can think of the set $S$ as a ladder, where the first hypothesis as saying that we have a first rung of a ladder.  The second hypothesis says that if we are on any arbitrary rung of the ladder, then we can always get to the next rung.  Taken together, this says that we can get from the first rung to the second, from the second to the third, and in general, from any $k$th rung to the $(k+1)$st rung, so that our ladder is actually $\mathbb{N}$. Do you agree that the Axiom of Induction is a pretty reasonable assumption?
 
-At the end of Section~\ref{sec:RussellsParadox}, we briefly discussed ZFC, which is the standard choice for axiomatic set theory. It turns out that one can prove the Axiom of Induction as a theorem in ZFC.  However, that will not be the approach we take.  Instead, we are assuming the Axiom of Induction is true. Using this axiom, we can prove the following theorem, known as the Principle of Mathematical Induction (PMI). One approach to proving this theorem is to let $S=\{k\in \mathbb{N}\mid P(k) \text{ is true}\}$ and use the Axiom of Induction.  The set $S$ is sometimes called the \textbf{truth set}.  Your job is to show that the truth set is all of $\mathbb{N}$.
+At the end of Section~\ref{sec:RussellsParadox}, we briefly discussed ZFC, which is the standard choice for axiomatic set theory. It turns out that one can prove the Axiom of Induction as a theorem in ZFC.  However, that will not be the approach we take.  Instead, we are assuming the Axiom of Induction is true. Using this axiom, we can prove the following theorem, known as the \textbf{Principle of Mathematical Induction}. One approach to proving this theorem is to let $S=\{k\in \mathbb{N}\mid P(k) \text{ is true}\}$ and use the Axiom of Induction.  The set $S$ is sometimes called the \textbf{truth set}.  Your job is to show that the truth set is all of $\mathbb{N}$.
 
 \begin{theorem}[Principle of Mathematical Induction]\label{thm:PMI}
 Let $P(1), P(2), P(3), \ldots$ be a sequence of statements, one for each natural number. Assume
@@ -43,7 +43,7 @@ Let $P(1), P(2), P(3), \ldots$ be a sequence of statements, one for each natural
 Then $P(n)$ is true for all $n\in\mathbb{N}$.
 \end{theorem}
 
-The Principle of Mathematical Induction (PMI) provides us with a process for proving statements of the form: ``For all $n\in\mathbb{N}$, $P(n)$,'' where $P(n)$ is some predicate involving $n$.  Hypothesis (i) above is called the \textbf{base step} (or \textbf{base case}) while (ii) is called the \textbf{inductive step}.
+The Principle of Mathematical Induction provides us with a process for proving statements of the form: ``For all $n\in\mathbb{N}$, $P(n)$,'' where $P(n)$ is some predicate involving $n$.  Hypothesis (i) above is called the \textbf{base step} (or \textbf{base case}) while (ii) is called the \textbf{inductive step}.
 
 You should not confuse \emph{mathematical induction} with \emph{inductive reasoning} associated with the natural sciences. Inductive reasoning is a scientific method whereby one induces general principles from observations. On the other hand, mathematical induction is a deductive form of reasoning used to establish the validity of a proposition.
 
@@ -84,14 +84,6 @@ For all $n\in\mathbb{N}$, 6 divides $n^{3}-n$.
 
 \begin{theorem}
 Let $p_{1}, p_{2}, \ldots, p_{n}$ be $n$ distinct points arranged on a circle.  Then the number of line segments joining all pairs of points is $\frac{n^{2}-n}{2}$.
-\end{theorem}
-
-\begin{theorem}
-If $\{U_{i}\}_{i=1}^n$ is a finite collection of open sets for $n\in \mathbb{N}$, then $\bigcap_{i=1}^n U_{i}$ is an open set.
-\end{theorem}
-
-\begin{theorem}
-If $\{A_{i}\}_{i=1}^n$ is a finite collection of closed sets for $n\in \mathbb{N}$, then $\bigcup_{i=1}^n U_{i}$ is a closed set.
 \end{theorem}
 
 \begin{problem}\label{prob:L-shapes}

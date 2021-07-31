@@ -6,73 +6,106 @@ In this section, we will explore the concept of continuity, which you likely enc
 A \textbf{real function} is any function $f:A\to \mathbb{R}$ such that $A$ is a nonempty subset of $\mathbb{R}$. 
 \end{definition}
 
+There are several equivalent definitions of continuity for real functions.  The following characterization is typically referred to as the ``$\epsilon-\delta$ definition of continuity". Our definition mimics the definition of continuity used in metric spaces, which $\mathbb{R}$ equipped with absolute value happens to be an example of.  Recall that $|a-b|<r$ means that the distance between $a$ and $b$ is less than $r$ (see discussion below Corollary~\ref{cor:distance between two points less than or equal to}).
+
 \begin{definition}\label{def:continuity}
-Suppose $f$ is a real function such that $a\in \dom(f)$. We say that $f$ is \textbf{continuous at $a$} if for any open interval $I$ containing $f(a)$, there is an open interval $J$ containing $a$ such that if $x\in \dom(f)\cap J$, then $f(x)\in I$. If $f$ is continuous at every point in $B\subseteq\dom(f)$, then we say that $f$ is \textbf{continuous on $B$}. If $f$ is continuous on the entire domain, we simply say that $f$ is \textbf{continuous}.
+Suppose $f$ is a real function such that $a\in \dom(f)$. We say that $f$ is \textbf{continuous at $a$} if for every $\epsilon>0$, then there exists $\delta>0$ such that if $x\in\dom(f)$ and $|x-a|<\delta$, then $|f(x)-f(a)|<\epsilon$. If $f$ is continuous at every point in $B\subseteq\dom(f)$, then we say that $f$ is \textbf{continuous on $B$}. If $f$ is continuous on its entire domain, we simply say that $f$ is \textbf{continuous}.
 \end{definition}
 
-Loosely speaking, a real function $f$ is continuous at the point $a\in\dom(f)$ if we can get $f(x)$ arbitrarily close to $f(a)$ by considering all $x\in\dom(f)$ sufficiently close to $a$.  The interval $I$ is indicating how close to $f(a)$ we need to be while the interval $J$ is providing the ``window" around $a$ needed to guarantee that all points in the window (and in the domain) yield outputs in $I$. Figure~\ref{fig:continuity} illustrates our definition of continuity. Note that in the figure, the point $a$ is fixed while we need to consider all $x\in\dom(f)\cap J$.
+%\begin{definition}\label{def:continuity}
+%Suppose $f$ is a real function such that $a\in \dom(f)$. We say that $f$ is \textbf{continuous at $a$} if for any open interval $I$ containing $f(a)$, there is an open interval $J$ containing $a$ such that if $x\in \dom(f)\cap J$, then $f(x)\in I$. If $f$ is continuous at every point in $B\subseteq\dom(f)$, then we say that $f$ is \textbf{continuous on $B$}. If $f$ is continuous on the entire domain, we simply say that $f$ is \textbf{continuous}.
+%\end{definition}
 
-Perhaps you have encountered the phrase ``a function is continuous if you can draw its graph without lifting your pencil." While this description provides some intuition about what continuity of a function means, it is neither accurate nor precise enough to capture the meaning of continuity.
+Loosely speaking, a real function $f$ is continuous at the point $a\in\dom(f)$ if we can get $f(x)$ arbitrarily close to $f(a)$ by considering all $x\in\dom(f)$ sufficiently close to $a$.  The value $\epsilon$ is indicating how close to $f(a)$ we need to be while the value $\delta$ is providing the ``window" around $a$ needed to guarantee that all points in the window (and in the domain) yield outputs within $\epsilon$ of $f(a)$. Figure~\ref{fig:continuity} illustrates our definition of continuity. Note that in the figure, the point $a$ is fixed while we need to consider all $x\in\dom(f)$ such that $|x-a|<\delta$. The dashed box in the figure has dimensions $2\delta$ by $2\epsilon$ and is centered at the point $(a,f(a))$.  Intuitively, the function is continuous at $a$ since given $\epsilon>0$, we could find $\delta >0$ so that the graph of the function never exits the top or bottom of the dashed box.
+
+%Loosely speaking, a real function $f$ is continuous at the point $a\in\dom(f)$ if we can get $f(x)$ arbitrarily close to $f(a)$ by considering all $x\in\dom(f)$ sufficiently close to $a$.  The interval $I$ is indicating how close to $f(a)$ we need to be while the interval $J$ is providing the ``window" around $a$ needed to guarantee that all points in the window (and in the domain) yield outputs in $I$. Figure~\ref{fig:continuity} illustrates our definition of continuity. Note that in the figure, the point $a$ is fixed while we need to consider all $x\in\dom(f)\cap J$.
 
 \begin{figure}[h!]
 \centering
-\begin{tikzpicture}[scale=1.5,angle/.style={fill=white},point/.style={},decoration={brace,amplitude=7}]
-\draw [thick,-stealth] (-.5,0) -- (5,0);
-\draw [thick,-stealth] (0,-.5) -- (0,5);
-\draw[stealth-stealth,domain=-.5:4.4] plot(\x,{.2*\x*\x+1});
-\draw[shift={(2.5,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$a$};
-\draw[shift={(3.2,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$x$};
-\draw[shift={(0,.2*2.5*2.5+1)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {$f(a)$};
-\draw[shift={(0,.2*3.2*3.2+1)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {$f(x)$};
-\draw (4,4.3) node[anchor=north west] {$f$};
+\begin{tikzpicture}[scale=1.5,angle/.style={fill=white},point/.style={},decoration={brace,amplitude=5}]
+\draw [thick,-stealth] (-.5,0) -- (4,0);
+\draw [thick,-stealth] (0,-.5) -- (0,4);
+\draw[thick,stealth-stealth,domain=-.5:3.7] plot(\x,{.2*\x*\x+1});
+\draw[shift={(2.6457,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$a$};
+\draw[shift={(3.1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$x$};
+\draw[shift={(0,2.4)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {$f(a)$};
+\draw[shift={(0,.2*3.1*3.1+1)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {$f(x)$};
+\draw (3.5,3.5) node[anchor=north west] {$f$};
 \draw (2.02,0) node {$($};
-\draw (3.48,0) node {$)$};
-\draw (0,1.4) node {\rotatebox{90}{$($}};
-\draw (0,3.8) node {\rotatebox{90}{$)$}};
+\draw (3.2914,0) node {$)$};
+\draw (0,1.2) node {\rotatebox{90}{$($}};
+\draw (0,3.6) node {\rotatebox{90}{$)$}};
 
-\draw [thick,dashed] (2,.15) -- (2,.2*2*2+1);
-\draw [thick,dashed] (3.5,.15) -- (3.5,.2*3.5*3.5+1);
-\draw [thick,dashed] (0,.2*2*2+1) -- (2,.2*2*2+1);
-\draw [thick,dashed] (0,.2*3.5*3.5+1) -- (3.5,.2*3.5*3.5+1);
+\draw [thick,dashed] (2,1.2)--(3.2914,1.2)--(3.2914,3.6)--(2,3.6)--(2,1.2);
 
-\fill (2.5,.2*2.5*2.5+1) circle (0.03cm);
-\fill (3.2,.2*3.2*3.2+1) circle (0.03cm);
+\fill (2.6457,2.4) circle (0.04cm);
+\fill (3.1,.2*3.1*3.1+1) circle (0.04cm);
 
-\draw [decorate] (3.5,-.5)--node[below=3mm]{$J$} (2,-.5);
-\draw [decorate] (-.75,1.4)--node[left=3mm]{$I$} (-.75,3.8);
+\draw [decorate] (2.6457,-.5)--node[below=2.5mm]{$\delta$}(2,-.5);
+\draw [decorate] (3.2914,-.5)--node[below=2.5mm]{$\delta$}(2.6457,-.5);
+
+\draw [decorate] (-.9,2.4)--node[left=2.5mm]{$\epsilon$}(-.9,3.6);
+\draw [decorate] (-.9,1.2)--node[left=2.5mm]{$\epsilon$}(-.9,2.4);
+
 \end{tikzpicture}
 \caption{Visual representation of continuity of $f$ at $a$.}\label{fig:continuity}
 \end{figure}
+
+Perhaps you have encountered the phrase ``a function is continuous if you can draw its graph without lifting your pencil." While this description provides some intuition about what continuity of a function means, it is neither accurate nor precise enough to capture the meaning of continuity.
+
+When proving that a function is continuous at a point, the choice of $\delta$ depends on both the point in question and the value of $\epsilon$. An example should be helpful.
+
+\begin{example}
+Define $f:\mathbb{R}\to\mathbb{R}$ via $f(x)=3x+2$. Let's prove that $f$ is continuous (at every point in the domain). Let $a\in\mathbb{R}$ and let $\epsilon>0$. Choose $\delta=\epsilon/3$.  We will see in a moment why this is a good choice for $\delta$.  Suppose $x\in\mathbb{R}$ such that $|x-a|<\delta$. We see that
+\[
+|f(x)-f(a)|=|(3x+2)-(3a+2)|=|3x-3a| = 3\cdot |x-a|<3\cdot \delta = 3\cdot \epsilon/3 =\epsilon.
+\]
+We have shown that $f$ is continuous at $a$, and since $a$ was arbitrary, $f$ is continuous.
+\end{example}
 
 \begin{problem}
 Prove that each of the following real functions is continuous using Definition~\ref{def:continuity}.
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $f:\mathbb{R}\to \mathbb{R}$ defined via $f(x)=x$.
-\item $g:\mathbb{R}\to \mathbb{R}$ defined via $g(x)=7x$.
-\item $h:\mathbb{R}\to \mathbb{R}$ defined via $h(x)=x+42$.
+\item $g:\mathbb{R}\to \mathbb{R}$ defined via $g(x)=x+42$.
+\item $h:\mathbb{R}\to \mathbb{R}$ defined via $h(x)=5x$.
 \end{enumerate}
 \end{problem}
 
-The next result tells us that every linear function from $\mathbb{R}$ to $\mathbb{R}$ is continuous.
+The next result tells us that every linear real function is continuous. Do not forget to handle the case when $m=0$ in your proof. Note that the case when $m=0$ proves that every constant function is continuous.
+
+\begin{theorem}
+If $f:\mathbb{R}\to\mathbb{R}$ is defined via $f(x)=mx+b$ for $m,b\in\mathbb{R}$, then $f$ is continuous.
+\end{theorem}
+
+The second part of the next problem is much harder than you might expect.
 
 \begin{problem}
-Let $m,b\in\mathbb{R}$ and define $f:\mathbb{R}\to\mathbb{R}$ via $f(x)=mx+b$. Prove that $f$ is continuous.
+Define $f:\mathbb{R}\to\mathbb{R}$ via $f(x)=x^2$. 
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Prove that $f$ is continuous at 0.
+\item Prove that $f$ is continuous at 1.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Define $f:\mathbb{R}\to\mathbb{R}$ via $f(x)=\sqrt{x}$. Prove that $f$ is continuous at 0.
+\end{problem}
+
+\begin{problem}
+Suppose $f$ is a real function. Write a precise statement for what it means for $f$ to not be continuous at $a\in\dom(f)$.
 \end{problem}
 
 \begin{problem}
 Define $f:\mathbb{R}\to\mathbb{R}$ via 
 \[
 f(x)=\begin{cases}
-1, & \text{if }x\in[0,1]\\
-0, & \text{otherwise}.
+1, & \text{if }x=0\\
+x, & \text{otherwise}.
 \end{cases}
 \]
 Determine where $f$ is continuous and justify your assertion.
 \end{problem}
-
-%\begin{problem}
-%Define $g:\{0\}\to \mathbb{R}$ via $g(0)=0$.  Prove that $g$ is continuous at $0$.
-%\end{problem}
 
 \begin{problem}
 Define $f:\mathbb{R}\to\mathbb{R}$ via 
@@ -91,22 +124,11 @@ After completing the next problem, reflect on the statement ``a function is cont
 Define $f:\mathbb{N}\to\mathbb{R}$ via $f(x)=1$. Notice the domain! Determine where $f$ is continuous and justify your assertion.
 \end{problem}
 
-The next problem illustrates that the order in which the sets $I$ and $J$ are considered in the definition of continuity is crucial.
-
-\begin{problem}
-Find an example of a real function $f$ that satisfies each of the following:
-\begin{enumerate}[label=\textrm{(\roman*)}]
-\item $1\in\dom(f)$;
-\item For any open interval $J$ containing $1$, there is an open interval $I$ containing $f(1)$ such that if $x\in \dom(f)\cap J$, then $f(x)\in I$;
-\item $f$ is not continuous at $1$.
-\end{enumerate}
-\end{problem}
-
 \begin{theorem}\label{thm:inverse images open sets}
 Suppose $f$ is a real function. Then $f$ is continuous if and only if the preimage $f^{-1}(U)$ of every open set $U$ is an open set intersected with the domain of $f$.
 \end{theorem}
 
-The previous characterization of continuity is often referred to as the ``open set definition of continuity," although for us it is a theorem instead of a definition. This is the definition used in topology. There are two other commonly used definitions of continuity. The first is sometimes called the ``$\epsilon$-$\delta$ definition of continuity" and utilizes inequalities involving absolute values. This is the definition one typically encounters in calculus and real analysis. Another notion of continuity, called ``sequential continuity", makes use of convergent sequences.  All of these characterizations of continuity are equivalent on the real numbers (using the standard definition of open set). However, there are contexts in mathematics where the $\epsilon$-$\delta$ definition of continuity is undefined (because there is not a notion of distance in the space) and others where continuity and sequential continuity are not equivalent.
+The previous characterization of continuity is often referred to as the ``open set definition of continuity," although for us it is a theorem instead of a definition. This is the definition used in topology. Another notion of continuity, called ``sequential continuity", makes use of convergent sequences.  All of these characterizations of continuity are equivalent for the real numbers (using the standard definition of an open set). However, there are contexts in mathematics where the $\epsilon$-$\delta$ definition of continuity is undefined (because there is not a notion of distance in either the domain or codomain) and others where continuity and sequential continuity are not equivalent.
 
 Since every open set is the union of bounded open intervals (Definition~\ref{def:open}), the union of open sets is open (Theorem~\ref{thm:union of open sets}), and preimages respect unions (Theorem~\ref{thm:unions and intersections of preimages}), we can strengthen Theorem~\ref{thm:inverse images open sets} into a slightly more useful result.  
 
@@ -114,13 +136,11 @@ Since every open set is the union of bounded open intervals (Definition~\ref{def
 Suppose $f$ is a real function. Then $f$ is continuous if and only if the preimage $f^{-1}(I)$ of every bounded open interval $I$ is an open set intersected with the domain of $f$.
 \end{theorem}
 
-Attempt to use the previous theorem when approaching the next problem.  You will likely need to consider a few cases. 
+Now that we have two methods for verifying continuity (Definition~\ref{def:continuity} and Theorem~\ref{thm:inverse images open sets}/\ref{thm:inverse images basic open sets}), you can use either one when approaching the remaining problems in this section. Sometimes it does not matter which approach you take and other times one method might be better suited to the task.
 
 \begin{problem}
 Define $f:\mathbb{R}\to\mathbb{R}$ via $f(x)=x^2$. Prove that $f$ is continuous.
 \end{problem}
-
-When tackling the previous problem, you should have encountered the fact that the preimage of an open interval does not necessarily result in an open interval, even for continuous functions.
 
 \begin{problem}
 Define $f:\mathbb{R}\setminus\{0\}\to\mathbb{R}$ via $f(x)=\frac{1}{x}$. Determine where $f$ is continuous and justify your assertion.
@@ -137,10 +157,6 @@ For the next few problems, if you attempt to construct counterexamples, you may 
 \begin{problem}
 Suppose $f$ is a continuous real function. If $U$ is an open set contained in $\dom(f)$, is the image $f(U)$ always open?  If so, prove it.  Otherwise, provide a counterexample.
 \end{problem}
-
-%\begin{problem}
-%Suppose $f:\mathbb{R}\to \mathbb{R}$ is a continuous function and consider the open interval $(a,b)$. Is the image $f((a,b))$ always an open interval?  If so, prove it.  Otherwise, provide a counterexample.
-%\end{problem}
 
 \begin{problem}
 Suppose $f$ is a continuous real function. If $C$ is a closed set, is the preimage $f^{-1}(C)$ always a closed set? If so, prove it.  Otherwise, provide a counterexample.
@@ -165,16 +181,6 @@ Suppose $f$ is a continuous real function. If $B$ is a bounded set, is the preim
 \begin{problem}
 Suppose $f$ is a continuous real function. If $K$ is a compact set, is the preimage $f^{-1}(B)$ always a compact set? If so, prove it.  Otherwise, provide a counterexample.
 \end{problem}
-
-%\begin{problem}
-%Suppose $A$ is a nonempty subset of $\mathbb{R}$ and let $f:A\to \mathbb{R}$ be a continuous function. If $I$ is a bounded interval (possibly open, closed, or neither) contained in $A$, is the image $f(I)$ always a bounded interval?  If so, prove it.  Otherwise, provide a counterexample.
-%\end{problem}
-
-%The next theorem likely captures your intuition about continuity from high school and calculus.
-
-%\begin{theorem}
-%If $f:\mathbb{R}\to \mathbb{R}$ is a continuous function and $C$ is a connected set, then the image $f(C)$ is connected.
-%\end{theorem}
 
 \begin{problem}\label{prob:continuous image of connected set}
 Suppose $f$ is a continuous real function. If $C$ is a connected set contained in $\dom(f)$, is the image $f(C)$ always connected?  If so, prove it.  Otherwise, provide a counterexample.

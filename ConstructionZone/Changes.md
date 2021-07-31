@@ -19,7 +19,6 @@
 - Replaced most occurrences of one-to-one and onto with injective and surjective.
 - Moved the content on injective and surjective to its own section.
 - Added several new figures to the chapters on relations and functions.
-- Added a chapter that focuses on the real numbers. The first section focuses on the axioms while the second section is the topology section that used to be in Chapter 3.
 - Changed ``limit point" to ``accumulation point".
 - Added some content on supremum/infimum, compact, and connected to the section on topology.
 - Added a section on continuous functions that includes problems involving open, closed, compact, and connected sets. Included one figure to illustrate definition of continuity. I also included the Intermediate Value Theorem.
@@ -28,15 +27,18 @@
 - Made all definitions consistent in wording.  Some were written as ``if and only if" while most were written as ``if".  Now, all definitions use the latter.
 - Added explicit discussion of ``proof by cases".
 - Added explicit discussion of proving uniqueness.
-- Added explicit discussion about proof biconditionals.
+- Added explicit discussion about proof of biconditionals.
 - Renamed Section 2.3 and swapped some material between Sections 2.2 and 2.3.
 - Some updates/retooling of Appendix A: Elements of Style for Proofs.
 - Removed proof tips from Section 2.1 since these were essentially a restatement of the guidelines listed in Section 1.7.  I also ``beefed up" the guidelines in Section 1.7.
 - Changed ``DeMorgan" to ``De Morgan".
 - Added some short snippets of history and reference to mathematicians (including links) throughout text.
-- Stated the more general version of the Division Algorthim and included its proof.
+- Stated the more general version of the Division Algorithm and included its proof.
 - Added a brief discussion about whether 1 is prime or not and provided a suggested article to learn more.
 - There are now 47 quotes about mathematics, learning, struggle, etc.  There is one at the beginning of each chapter and one at the end of each section.  I made a conscious effort to include many quotes from women.
+- Added generalized Well-Ordering Principle to induction chapter.
+- Added a chapter that focuses on the real numbers. The first section (5.1) focuses on the axioms while the second section (5.2) is the topology section that used to be in Chapter 3.
+- Moved induction chapter to Chapter 4. This was necessary since the generalized Well-Ordering Principle is needed to prove a consequence of the Archimedean Property, which is needed to prove the density of the rationals (all of which happens in the new Section 5.1).
 - Lots of retooling of Introduction.
 
 ## Reviewer 1

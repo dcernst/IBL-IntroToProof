@@ -32,13 +32,13 @@ Determine whether each of the following sets is open. Justify your assertions.
 \end{multicols}
 \end{problem}
 
-As expected, every open interval is an open set. Consider handling a few cases when approaching the proof of the next theorem.
+As expected, every open interval (i.e., intervals of the form interval of the form $(a,b)$, $(-\infty,b)$, $(a,\infty)$, or $(-\infty,\infty)$) is an open set. 
 
 \begin{theorem}
-If $I$ is an open interval, then $I$ is an open set. 
+Every open interval is an open set. 
 \end{theorem}
 
-It is important to point out that open sets can be more complicated than a single open interval.
+However, it is important to point out that open sets can be more complicated than a single open interval.
 
 \begin{problem}
 Provide an example of an open set that is not a single open interval.
@@ -52,9 +52,21 @@ If $U$ and $V$ are open sets, then
 \end{enumerate}
 \end{theorem}
 
+According to the next two theorems, the union of arbitrarily many open sets is open while the intersection of a finite number of open sets is open.
+
 \begin{theorem}\label{thm:union of open sets}
 If $\{U_{\alpha}\}_{\alpha\in\Delta}$ is a collection of open sets, then $\bigcup_{\alpha\in\Delta} U_{\alpha}$ is an open set.
 \end{theorem}
+
+Consider using induction to prove the next theorem.
+
+\begin{theorem}\label{thm:finite intersection of open sets}
+If $\{U_{i}\}_{i=1}^n$ is a finite collection of open sets for $n\in \mathbb{N}$, then $\bigcap_{i=1}^n U_{i}$ is an open set.
+\end{theorem}
+
+\begin{problem}
+Explain why we cannot utilize induction to prove that the intersection of infinitely many open sets indexed by the natural numbers is open.
+\end{problem}
 
 \begin{problem}\label{prob:intersection of open sets}
 Give an example of each of the following.
@@ -64,9 +76,11 @@ Give an example of each of the following.
 \end{enumerate}
 \end{problem}
 
-\begin{remark}\label{rem:union vs intersection of open sets}
-Taken together, Theorem~\ref{thm:finite union and intersection of open sets}, Theorem~\ref{thm:union of open sets}, and Problem~\ref{prob:intersection of open sets} tell us that the union of any arbitrary collection of open sets is open, but that the intersection of an arbitrary collection of open sets may or may not be open.  
-\end{remark}
+According to the previous problem, the intersection of infinitely many open sets may or may not be open. So, we know that there is no theorem that states that the intersection of arbitrarily many open sets is open. We only know for certain that the intersection of finitely many open sets is open by Theorem~\ref{thm:finite intersection of open sets}.
+
+%\begin{remark}\label{rem:union vs intersection of open sets}
+%Taken together, Theorem~\ref{thm:finite union and intersection of open sets}, Theorem~\ref{thm:union of open sets}, and Problem~\ref{prob:intersection of open sets} tell us that the union of any arbitrary collection of open sets is open, but that the intersection of an arbitrary collection of open sets may or may not be open.  
+%\end{remark}
 
 \begin{definition}
 Suppose $A\subseteq \mathbb{R}$. A point $p\in \mathbb{R}$ is an \textbf{accumulation point} of $A$ if for every bounded open interval $(a,b)$ containing $p$, there exists a point $q \in (a,b)\cap A$ such that $q\neq p$.
@@ -109,7 +123,7 @@ A set $A\subseteq \mathbb{R}$ is called \textbf{closed} if $A$ contains all of i
 Determine whether each of the sets in Problem~\ref{prob:open or not} is closed. Justify your assertions.
 \end{problem}
 
-The upshot of Parts~(i) and (l) of Problems~\ref{prob:open or not} and \ref{prob:closed or not} is that $\mathbb{R}$ and $\emptyset$ are both open and closed.  It turns out that these are the only two subsets of the real numbers with this property. One issue with terminology that could potentially create confusion is that the open interval $(-\infty, \infty)$ is both an open and a closed set.
+The upshot of Parts~(i) and~(l) of Problems~\ref{prob:open or not} and \ref{prob:closed or not} is that $\mathbb{R}$ and $\emptyset$ are both open and closed.  It turns out that these are the only two subsets of the real numbers with this property. One issue with the terminology that could potentially create confusion is that the open interval $(-\infty, \infty)$ is both an open and a closed set.
 
 \begin{problem}\label{prob:open vs closed}
 Provide an example of each of the following.  You do not need to prove that your answers are correct.
@@ -120,12 +134,12 @@ Provide an example of each of the following.  You do not need to prove that your
 \end{enumerate}
 \end{problem}
 
-One annoying feature of the terminology illustrated by Problem~\ref{prob:open vs closed} is that if a set is not open, it may or may not be closed.  Similarly, if a set is not closed, it may or may not be open.  That is, open and closed are not opposites of each other.
+Another potentially annoying feature of the terminology illustrated by Problem~\ref{prob:open vs closed} is that if a set is not open, it may or may not be closed.  Similarly, if a set is not closed, it may or may not be open.  That is, open and closed are not opposites of each other.
 
-The next result justifies referring to $[a,b]$, $(-\infty,b]$, $[a,\infty)$, and $(-\infty,\infty)$ as closed intervals.
+The next result justifies referring to $[a,b]$ as a closed interval.
 
 \begin{theorem}
-If $I$ is a closed interval, then $I$ is a closed set.
+Every interval of the form $[a,b]$, $(-\infty,b]$, $[a,\infty)$, or $(-\infty,\infty)$ is a closed set.
 \end{theorem}
 
 \begin{theorem}
@@ -135,7 +149,7 @@ Every finite subset of $\mathbb{R}$ is closed.
 Despite the fact that open and closed are not opposites of each other, there is a nice relationship between open and closed sets in terms of complements.
 
 \begin{theorem}
-A set $U$ is open if and only if $U^C$ is closed.
+Let $U\subseteq \mathbb{R}$. Then $U$ is open if and only if $U^C$ is closed.
 \end{theorem}
 
 \begin{theorem}\label{thm:finite union and intersection of closed sets}
@@ -146,19 +160,19 @@ If $A$ and $B$ are closed sets, then
 \end{enumerate}
 \end{theorem}
 
+The next two theorems are analogous to Theorems~\ref{thm:union of open sets} and~\ref{thm:finite intersection of open sets}.
+
 \begin{theorem}\label{thm:intersection of closed sets}
 If $\{A_{\alpha}\}_{\alpha\in\Delta}$ is a collection of closed sets, then $\bigcap_{\alpha\in \Delta} A_{\alpha}$ is a closed set.
+\end{theorem}
+
+\begin{theorem}
+If $\{A_{i}\}_{i=1}^n$ is a finite collection of closed sets for $n\in \mathbb{N}$, then $\bigcup_{i=1}^n U_{i}$ is a closed set.
 \end{theorem}
 
 \begin{problem}\label{prob:union of closed sets}
 Provide an example of a collection of closed sets $\{A_{\alpha}\}_{\alpha\in\Delta}$ such that $\bigcup_{\alpha\in \Delta} A_{\alpha}$ is not a closed set.
 \end{problem}
-
-\begin{problem}
-In light of Theorem~\ref{thm:finite union and intersection of closed sets}, Theorem~\ref{thm:intersection of closed sets}, and Problem~\ref{prob:union of closed sets}, make an analogous statement to Remark~\ref{rem:union vs intersection of open sets}.
-\end{problem}
-
-In the next chapter, we will use mathematical induction to prove that the intersection of finitely many open sets is open and that the union of finitely many closed sets is closed.
 
 \begin{problem}
 Determine whether each of the following sets is open, closed, both, or neither.
@@ -175,73 +189,7 @@ Determine whether each of the following sets is open, closed, both, or neither.
 Prove or provide a counterexample: Every non-closed set has at least one accumulation point.
 \end{problem}
 
-%???Move this (up to but not including compact) to previous section and prove Archimedean Property from CA???
-%
-%\begin{definition}
-%Let $A\subseteq \mathbb{R}$. A point $b$ is called an \textbf{upper bound} of $A$ if for all $x\in A$, $x\leq b$. The set $A$ is said to be \textbf{bounded above} if it has an upper bound.
-%\end{definition}
-%
-%\begin{problem}
-%The notion of a \textbf{lower bound} and the property of a set being \textbf{bounded below} are defined similarly. Try defining them.
-%\end{problem}
-%
-%\begin{problem}\label{prob:find upper bounds}
-%Find all upper bounds and all lower bounds for each of the following sets.
-%\begin{enumerate}[label=\textrm{(\alph*)}]
-%\item $(0,1]$
-%\item $(0,1]\cap \mathbb{Q}$
-%\item $(0,\infty)$
-%\item $\{42\}$
-%\item $\mathbb{Z}$
-%\item $\emptyset$
-%\end{enumerate}
-%\end{problem}
-%
-%\begin{definition}
-%A set $A\subseteq \mathbb{R}$ is \textbf{bounded} if $A$ bounded above and below.
-%\end{definition}
-%
-%Notice that a set $A\subseteq\mathbb{R}$ is bounded if it is a subset of some bounded closed interval.
-%
-%\begin{definition}
-%A point $p$ is a \textbf{supremum} (or \textbf{least upper bound}) of $A\subseteq \mathbb{R}$ if $p$ is an upper bound of $A$ and $p\leq b$ for every upper bound $b$ of $A$.  Analogously, a point $p$ is an \textbf{infimum} (or \textbf{greatest lower bound}) of $A\subseteq \mathbb{R}$ if $p$ is a lower bound of $A$ and $p\geq b$ for every lower bound $b$ of $A$. 
-%\end{definition}
-%
-%Our next result tells us that if supremum and infimums are unique when they exist.
-%
-%\begin{theorem}
-%If $A\subseteq \mathbb{R}$ such that the supremum (respectively, infimum) exists, then the supremum (respectively, infimum) is unique.
-%\end{theorem}
-%
-%In light of the previous theorem, if the supremum of $A$ exists, it is denoted $\boxed{\sup(A)}$. Similarly, if the infimum of $A$ exists, it is denoted $\boxed{\inf(A)}$. 
-%
-%\begin{problem}
-%Find the supremum and the infimum of each of the sets in Problem~\ref{prob:find upper bounds}.
-%\end{problem}
-%
-%If $\sup(A)$ exists, it is the minimum of the set of upper bounds of $A$. That is, the set of upper bounds of $A$ is $[\sup(A),\infty)$. We have a similar statement involving the infimum. It is important to recognize that the supremum (respectively, infimum) of a set may or may not be contained in the set. In particular, we have the following theorem concerning supremums and infimums. The analogous result holds for minimum and infimum.
-%
-%\begin{theorem}
-%Let $A\subseteq \mathbb{R}$. Then $A$ has a maximum if and only if $A$ has a supremum and $\sup(A)\in A$, in which case the maximum of $A$ is $\sup(A)$.
-%\end{theorem}
-%
-%The following axiom states that every nonempty subset of the real numbers that has an upper bound has a least upper bound.
-%
-%\begin{axiom}[Completeness Axiom]\label{axiom:completeness}
-%If $A$ is a nonempty subset of $\mathbb{R}$ that is bounded above, then $\sup(A)$ exists.
-%\end{axiom}
-%
-%Given the Completeness Axiom, we say that the real numbers satisfy the \textbf{least upper bound property}. Certainly, the real numbers satisfy the analogous result involving the infimum.
-%
-%\begin{theorem}
-%If $A$ is a nonempty subset of $\mathbb{R}$ that is bounded below, then $\inf(A)$ exists.
-%\end{theorem}
-%
-%At this point, it is not necessary that we complete the following problem, but you might find doing so to be a fun challenge.
-%
-%\begin{problem}
-%Prove that the Archimedean Property (Axiom~(O7)) follows from the Completeness Axiom.
-%\end{problem}
+We now introduce three special classes of subsets of $\mathbb{R}$: compact, connected, and disconnected. 
 
 \begin{definition}
 A set $K\subseteq\mathbb{R}$ is called \textbf{compact} if $K$ is both closed and bounded.
@@ -253,13 +201,11 @@ It is important to point out that there is a more general definition of compact 
 Provide several examples of sets that are compact and some that are not compact. Are finite sets compact? In particular, is the empty set compact?
 \end{problem}
 
-The next theorem says that every nonempty compact set contains its greatest lower bound and its least upper bound. In other words, every nonempty compact set attains a minimum and a maximum value.
+The next theorem says that every nonempty compact set contains its greatest lower bound and its least upper bound. That is, every nonempty compact set attains a minimum and a maximum value.
 
 \begin{theorem}
 If $K$ is a nonempty compact subset of $\mathbb{R}$, then $\sup(K),\inf(K)\in K$.
 \end{theorem}
-
-We now introduce two additional classes of sets: connected and disconnected. 
 
 \begin{definition}
 A set $A\subseteq \mathbb{R}$ is \textbf{disconnected} if there exists two disjoint open sets $U_1$ and $U_2$ such that $A\cap U_1$ and $A\cap U_2$ are nonempty but $A\subseteq U_1\cup U_2$ (equivalently, $A=(A\cap U_1)\cup(A\cap U_2)$). If a set is not disconnected, then we say that it is \textbf{connected}.
@@ -307,9 +253,6 @@ It turns out that every connected set in $\mathbb{R}$ is either a singleton or a
 %\end{itemize}
 %On the other hand, while we have precise definitions of closed, bounded, compact, and disconnected, these types of sets can take on various---and sometimes surprising---forms.
 
-\begingroup
-\setlength{\epigraphwidth}{0.4\textwidth}
-\epigraph{With two published novels and a file full of ideas for others, the only thing I know about writing is this: it only happens when you sit down and do it. Studying good writing is important, reading good writing is important, talking to other writers is important, and the only way you can produce good writing is to write.}{Jamie Beth Cohen, novelist}
-\endgroup
+\epigraph{If you learn how to learn, it's the ultimate meta skill and I believe you can learn how to be healthy, you can learn how to be fit, you can learn how to be happy, you can learn how to have good relationships, you can learn how to be successful. These are all things that can be learned. So if you can learn that is a trump card, it's an ace, it's a joker, it's a wild card. You can trade it for any other skill.}{Naval Ravikant,  entrepreneur \& investor}
 
 \end{section}

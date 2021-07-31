@@ -72,17 +72,51 @@ Prove that for any $n \geq 4$, one can obtain $n$ dollars using only \$2 bills a
 Consider a grid of squares that is $2$ squares wide and $n$ squares long.  Using $n$ dominoes that are $1$ square by $2$ squares, there are many ways to perfectly cover this chessboard with no overlap.  How many?  Prove your answer.
 \end{problem}
 
-The final theorem of this chapter is known as the Well-Ordering Principle (WOP). As you shall see, this seemingly obvious theorem requires a bit of work to prove. It is worth noting that in some axiomatic systems, the WOP is sometimes taken as an axiom.  However, in our case, the result follows from complete induction. Towards a contradiction, suppose $S$ is a nonempty subset of $\mathbb{N}$ that does not have a least element.  Define the proposition $P(n)\coloneqq $``$n$ is not an element of $S$" and then use complete induction to prove the result.
+The penultimate theorem of this chapter is known as the \textbf{Well-Ordering Principle}. As you shall see, this seemingly obvious theorem requires a bit of work to prove. It is worth noting that in some axiomatic systems, the Well-Ordering Principle is sometimes taken as an axiom.  However, in our case, the result follows from complete induction. Before stating the Well-Ordering Principle, we need an additional definition.
+
+\begin{definition}
+Let $A\subseteq \mathbb{R}$ and $m\in A$. Then $m$ is called a \textbf{maximum} (or \textbf{greatest element}) of $A$ if for all $a\in A$, we have $a\leq m$. Similarly, $m$ is called \textbf{minimum} (or \textbf{least element}) of $A$ if for all $a\in A$, we have $m\leq a$.
+\end{definition}
+
+Not surprisingly, maximums and minimums are unique when they exist. It might be helpful to review Skeleton Proof~\ref{skeleton:uniqueness} prior to attacking the next result.
+
+\begin{theorem}
+If $A\subseteq \mathbb{R}$ such that the maximum (respectively, minimum) of $A$ exists, then the maximum (respectively, minimum) of $A$ is unique.
+\end{theorem}
+
+If the maximum of a set $A$ exists, then it is denoted by $\boxed{\max(A)}$. Similarly, if the minimum of a set $A$ exists, then it is denoted by $\boxed{\min(A)}$.
+
+\begin{problem}\label{prob:find max and min}
+Find the maximum and the minimum for each of the following sets when they exist.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\{5,11,17,42,103\}$ 
+\item $\mathbb{N}$
+\item $\mathbb{Z}$
+\item $(0,1]$
+\item $(0,1]\cap \mathbb{Q}$
+\item $(0,\infty)$
+\item $\{42\}$
+\item $\{\frac{1}{n}\mid n\in\mathbb{N}\}$
+\item $\{\frac{1}{n}\mid n\in\mathbb{N}\}\cup\{0\}$
+\item $\emptyset$
+\end{enumerate}
+\end{problem}
+
+To prove the Well-Ordering Principle, consider a proof by contradiction. Suppose $S$ is a nonempty subset of $\mathbb{N}$ that does not have a least element.  Define the proposition $P(n)\coloneqq $``$n$ is not an element of $S$" and then use complete induction to prove the result.
 
 \begin{theorem}[Well-Ordering Principle]\label{thm:WOP}
-Every nonempty subset of the natural numbers contains a least element.
+Every nonempty subset of the natural numbers has a least element.
 \end{theorem}
 
 It turns out that the Well-Ordering Principle (Theorem~\ref{thm:WOP}) and the Axiom of Induction (Axiom~\ref{axiom:induction}) are equivalent.  In other words, one can prove the Well-Ordering Principle from the Axiom of Induction, as we have done, but one can also prove the Axiom of Induction if the Well-Ordering Principle is assumed.
 
+The final theorem of this section can be thought of as a generalized version of the Well-Ordering Principle.
+
 \begin{theorem}\label{thm:reverse WOP}
-Every nonempty subset of the integers with an upper bound contains a maximum element.
+If $A$ is a nonempty subset of the integers and there exists $b\in A^c$ such that $b\geq a$ for all $a\in A$, then $A$ contains a greatest element.
 \end{theorem}
+
+In the previous theorem, $b$ is referred to as an upper bound for $A$. We will study upper bounds in Section~\ref{sec:AxiomsRealNumbers}.
 
 \epigraph{Nothing that's worth anything is ever easy.}{Mike Hall, ultra-distance cyclist}
 

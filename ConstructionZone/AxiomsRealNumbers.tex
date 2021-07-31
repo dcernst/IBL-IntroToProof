@@ -4,7 +4,7 @@ Our axioms for the real numbers fall into three categories:
 \begin{enumerate}
 \item \textbf{Field Axioms:} These axioms provide the essential properties of arithmetic involving addition and subtraction.
 \item \textbf{Order Axioms:} These axioms provide the necessary properties of inequalities.
-\item \textbf{Completeness Axiom:} This axiom ensures that the familiar number line that we use to model the real numbers does not have any gaps in it. %We will introduce this axiom in the next section.
+\item \textbf{Completeness Axiom:} This axiom ensures that the familiar number line that we use to model the real numbers does not have any holes in it.
 \end{enumerate}
 
 \begin{fieldaxioms}\label{axiom:field axioms}
@@ -23,7 +23,7 @@ There exist operations $+$ (addition) and $\cdot$ (multiplication) on $\mathbb{R
 \end{enumerate}
 \end{fieldaxioms}
 
-In the language of abstract algebra, Axioms (F1)--(F4) and (F5)--(F8) make each of $\mathbb{R}$ and $\mathbb{R}\setminus\{0\}$ an abelian group under addition and multiplication, respectively. Axiom~(F9) provides a way for the operations of addition and multiplication to interact.  Collectively, Axioms~(F1)--(F9) make the real numbers a \textbf{field}.  It follows from the axioms that the elements $0$ and $1$ of $\mathbb{R}$ are the unique \textbf{additive} and \textbf{multiplicative identities} in $\mathbb{R}$. To prove the following theorem, suppose $0$ and $0'$ are both additive identities in $\mathbb{R}$ and then show that $0=0'$. This shows that there can only be one additive identity. It might be helpful to review Skeleton Proof~\ref{skeleton:uniqueness}. 
+In the language of abstract algebra, Axioms~F1--F4 and~F5--F8 make each of $\mathbb{R}$ and $\mathbb{R}\setminus\{0\}$ an abelian group under addition and multiplication, respectively. Axiom~F9 provides a way for the operations of addition and multiplication to interact.  Collectively, Axioms~F1--F9 make the real numbers a \textbf{field}.  It follows from the axioms that the elements $0$ and $1$ of $\mathbb{R}$ are the unique \textbf{additive} and \textbf{multiplicative identities} in $\mathbb{R}$. To prove the following theorem, suppose $0$ and $0'$ are both additive identities in $\mathbb{R}$ and then show that $0=0'$. This shows that there can only be one additive identity. %It might be helpful to review Skeleton Proof~\ref{skeleton:uniqueness}. 
 
 \begin{theorem}\label{thm:unique additive identity}
 The additive identity of $\mathbb{R}$ is unique.
@@ -37,7 +37,7 @@ The multiplicative identity of $\mathbb{R}$ is unique.
 
 For every $a\in\mathbb{R}$, the elements $-a$ and $a^{-1}$ (as long as $a\neq 0$) are also the unique \textbf{additive} and \textbf{multiplicative inverses}, respectively. 
 
-\begin{theorem}
+\begin{theorem}\label{thm:unique additive inverse}
 Every real number has a unique additive inverse.
 \end{theorem}
 
@@ -45,9 +45,23 @@ Every real number has a unique additive inverse.
 Every nonzero real number has a unique multiplicative inverse.
 \end{theorem}
 
-We now introduce some common notation that you are likely familiar with.  Take a moment to think about why the following is a definition as opposed to an axiom or theorem.
+Since we are taking a formal axiomatic approach to the real numbers, we should make it clear how the natural numbers are embedded in $\mathbb{R}$.
 
 \begin{definition}
+We define the \textbf{natural numbers}, denoted by $\mathbb{N}$, to be the smallest subset of $\mathbb{R}$ satisfying:
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $1\in\mathbb{N}$, and
+\item for all $n\in\mathbb{N}$, we have $n+1\in\mathbb{N}$.
+\end{enumerate}
+\end{definition}
+
+Notice the similarity between the definition of the natural numbers presented above and the Axiom of Induction given in Section~\ref{sec:intro to induction}. Of course, we use the standard numeral system to represent the natural numbers, so that $\mathbb{N}= \{1,2,3,4,5,6,7,8,9,10\ldots\}$.
+
+Given the natural numbers, Axiom~F3/Theorem~\ref{thm:unique additive identity} and Axiom~F4/Theorem~\ref{thm:unique additive inverse} together with the operation of addition allow us to define the \textbf{integers}, denoted by $\mathbb{Z}$, in the obvious way.  That is, the integers consist of the natural numbers together with the additive identity and all of the additive inverses of the natural numbers.
+
+We now introduce some common notation that you are likely familiar with.  Take a moment to think about why the following is a definition as opposed to an axiom or theorem.
+
+\begin{definition}\label{def:real number notation}
 For every $a,b\in\mathbb{R}$ and $n\in\mathbb{Z}$, we define the following:
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $\boxed{a-b\coloneqq a+(-b)}$
@@ -59,6 +73,8 @@ For every $a,b\in\mathbb{R}$ and $n\in\mathbb{Z}$, we define the following:
 \end{cases}}$
 \end{enumerate}
 \end{definition}
+
+The set of \textbf{rational numbers}, denoted by $\mathbb{Q}$, is defined to be the collection of all real numbers having the form given in Part~(b) of Definition~\ref{def:real number notation}.  The \textbf{irrational numbers} are defined to be $\mathbb{R}\setminus\mathbb{Q}$.
 
 Using the Field Axioms, we can prove each of the statements in the following theorem.
 
@@ -94,7 +110,7 @@ For $a,b,c\in \mathbb{R}$, there is a relation $\boxed{<}$ on $\mathbb{R}$ satis
 \end{enumerate}
 \end{orderaxioms}
 
-Given Axioms~(O1)--(O4), we say that the real numbers are a \textbf{linearly ordered field}. We call numbers greater than zero \textbf{positive} and those greater than or equal to zero \textbf{nonnegative}. There are similar definitions for \textbf{negative} and \textbf{nonpositive}. 
+Given Axioms~O1--O4, we say that the real numbers are a \textbf{linearly ordered field}. We call numbers greater than zero \textbf{positive} and those greater than or equal to zero \textbf{nonnegative}. There are similar definitions for \textbf{negative} and \textbf{nonpositive}. 
 
 Notice that the Order Axioms are phrased in terms of ``$<$". We would also like to be able to utilize ``$>$", ``$\leq$", and ``$\geq$".
 
@@ -113,7 +129,7 @@ Using the Order Axioms, we can prove many familiar facts.
 For all $a,b\in\mathbb{R}$, if $a,b>0$, then $a+b>0$; and if $a,b<0$, then $a+b<0$.
 \end{theorem}
 
-The next result extends Axiom~(O3).
+The next result extends Axiom~O3.
 
 \begin{theorem}
 For all $a,b,c,d\in\mathbb{R}$, if $a<b$ and $c<d$, then $a+c<b+d$.
@@ -151,7 +167,7 @@ It might come as a surprise that the following result requires proof.
 We have $0<1$.
 \end{theorem}
 
-The previous theorem together with Theorem~\ref{thm:additive inverse of a positive is negative} implies that $-1<0$ as you expect. It also follows from Axiom~(O3) that for all $n\in\mathbb{Z}$, we have $n<n+1$. We assume that there are no integers between $n$ and $n+1$.
+The previous theorem together with Theorem~\ref{thm:additive inverse of a positive is negative} implies that $-1<0$ as you expect. It also follows from Axiom~O3 that for all $n\in\mathbb{Z}$, we have $n<n+1$. We assume that there are no integers between $n$ and $n+1$.
 
 \begin{theorem}
 For all $a\in\mathbb{R}$, if $a>0$, then $a^{-1}>0$, and if $a<0$, then $a^{-1}<0$.
@@ -183,6 +199,50 @@ a, & \text{if }a\geq 0\\
 For all $a\in\mathbb{R}$, $|a|\geq 0$ with equality only if $a=0$.
 \end{theorem}
 
+We can interpret $|a|$ as the distance between $a$ and 0 as depicted in Figure~\ref{fig:abs value as distance}. 
+
+\begin{figure}[h!]
+\centering
+\subcaptionbox{$a>0$\label{fig:distanceA}}[.48\linewidth]{
+\begin{tikzpicture}[scale=1.5,angle/.style={fill=white},point/.style={},decoration={brace,amplitude=5}]
+\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
+\draw[shift={(0,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$0$};
+\draw[shift={(1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$a$};
+\draw[decorate] (0,.15)--node[above=2.5mm]{$|a|$}(1,.15);
+\end{tikzpicture}
+}
+\subcaptionbox{$a<0$\label{fig:distanceB}}[.48\linewidth]{
+\begin{tikzpicture}[scale=1.5,angle/.style={fill=white},point/.style={},decoration={brace,amplitude=5}]
+\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
+\draw[shift={(0,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$0$};
+\draw[shift={(-1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$a$};
+\draw[decorate] (-1,.15)--node[above=2.5mm]{$|a|$}(0,.15);
+\end{tikzpicture}
+}
+\caption{Visual representation of $|a|$.}\label{fig:abs value as distance}
+\end{figure}
+
+\begin{theorem}
+For all $a,b\in\mathbb{R}$, we have $|a-b|=|b-a|$. 
+\end{theorem}
+
+Given two points $a$ and $b$, $|a-b|$, and hence $|b-a|$ by the previous theorem, is the distance between $a$ and $b$ as shown in Figure~\ref{fig:distance between a and b}.
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[scale=1.5,angle/.style={fill=white},point/.style={},decoration={brace,amplitude=5}]
+\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
+\draw[shift={(-1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$a$};
+\draw[shift={(1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$b$};
+\draw[decorate] (-1,.15)--node[above=1mm]{$|a-b|$}(1,.15);
+\end{tikzpicture}
+\caption{Visual representation of $|a-b|$.}\label{fig:distance between a and b}
+\end{figure}
+
+\begin{theorem}
+For all $a,b\in\mathbb{R}$, $|ab|=|a||b|$.
+\end{theorem}
+
 In the next theorem, writing $\pm a\leq b$ is an abbreviation for $a\leq b$ and $-a\leq b$.
 
 \begin{theorem}
@@ -198,54 +258,113 @@ For all $a\in\mathbb{R}$, $\pm a\leq |a|$.
 \end{theorem}
 
 \begin{theorem}\label{thm:abs value less than or equal to iff squeezed by plus minus}
-For all $a,r\in\mathbb{R}$, $|a|\leq r$ if and only if $-r\leq a\leq r$.
+For all $a,r\in\mathbb{R}$ with $r$ nonnegative, $|a|\leq r$ if and only if $-r\leq a\leq r$.
 \end{theorem}
 
-In the previous theorem, it must be the case that $r$ is nonnegative.  The letter $r$ was used because it is the first letter of the word ``radius". If $r$ is positive, we can think of the interval $(-r,r)$ as the interior of a 1-dimensional circle with radius $r$ centered at 0.
+%In the previous theorem, it must be the case that $r$ is nonnegative.  
+The letter $r$ was used in the previous theorem because it is the first letter of the word ``radius". If $r$ is positive, we can think of the interval $(-r,r)$ as the interior of a one-dimensional circle with radius $r$ centered at 0. Figure~\ref{fig:abs value less than or equal to iff squeezed by plus minus} provides a visual interpretation of Theorem~\ref{thm:abs value less than or equal to iff squeezed by plus minus}.
 
-\begin{theorem}
-For all $a,b\in\mathbb{R}$, $|ab|=|a||b|$.
-\end{theorem}
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[scale=1.5,angle/.style={fill=white},point/.style={},decoration={brace,amplitude=5}]
+\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
+\draw[shift={(0,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$0$};
+\draw[shift={(1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$r$};
+\draw[shift={(-1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$-r$};
+\draw[shift={(-.6,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$a$};
+\draw[decorate] (0,.15)--node[above=2.5mm]{$r$}(1,.15);
+\draw[decorate] (-1,.15)--node[above=2.5mm]{$r$}(0,.15);
+\draw[decorate] (0,-.4)--node[below=2.5mm]{$|a|$}(-.6,-.4);
+\end{tikzpicture}
+\caption{Visual representation of $|a|\leq r$.}\label{fig:abs value less than or equal to iff squeezed by plus minus}
+\end{figure}
 
-Consider using Theorems~\ref{thm:plus minus less than or equal to abs value} and \ref{thm:abs value less than or equal to iff squeezed by plus minus} when attacking the next problem.  This result can be extremely useful in some contexts. 
+\begin{corollary}\label{cor:distance between two points less than or equal to}
+For all $a,b,r\in\mathbb{R}$ with $r$ nonnegative, $|a-b|\leq r$ if and only if $b-r\leq a\leq b+r$.
+\end{corollary}
 
-\begin{theorem}[Triangle Inequality]
+Since $|a-b|$ represents the distance between $a$ and $b$, we can interpret $|a-b|\leq r$ as saying that the distance between $a$ and $b$ is less than or equal to $r$. In other words, $a$ is within $r$ units of $b$. See Figure~\ref{fig:visual of |a-b|<r}.
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[scale=1.5,angle/.style={fill=white},point/.style={},decoration={brace,amplitude=5}]
+\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
+\draw[shift={(0,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$b$};
+\draw[shift={(1.25,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$b+r$};
+\draw[shift={(-1.25,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$b-r$};
+\draw[shift={(-.7,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$a$};
+\draw[decorate] (0,.15)--node[above=2.5mm]{$r$}(1.25,.15);
+\draw[decorate] (-1.25,.15)--node[above=2.5mm]{$r$}(0,.15);
+\draw[decorate] (0,-.4)--node[below=2.5mm]{$|a-b|$}(-.7,-.4);
+\end{tikzpicture}
+\caption{Visual representation of $|a-b|\leq r$.}\label{fig:visual of |a-b|<r}
+\end{figure}
+
+Consider using Theorems~\ref{thm:plus minus less than or equal to abs value} and \ref{thm:abs value less than or equal to iff squeezed by plus minus} when attacking the next result, which is known as the \textbf{Triangle Inequality}.  This result can be extremely useful in some contexts. 
+
+\begin{theorem}[Triangle Inequality]\label{thm:triangle inequality}
 For all $a,b\in\mathbb{R}$, $|a+b|\leq |a|+|b|$.
 \end{theorem}
 
-The next theorem is related to the Triangle Inequality.
+Figure~\ref{fig:triangle inequality} depicts two of the cases for the Triangle Inequality.  
+
+\begin{figure}[h!]
+\centering
+\subcaptionbox{$a\geq 0, b\geq 0$\label{fig:triangle A}}[.48\linewidth]{
+\begin{tikzpicture}[scale=1.5,angle/.style={fill=white},point/.style={},decoration={brace,amplitude=5}]
+\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
+\draw[shift={(-1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$0$};
+\draw[shift={(-.3,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$a$};
+\draw[shift={(.3,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$b$};
+\draw[shift={(1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$a+b$};
+\draw[decorate] (-1,.15)--node[above=2.5mm]{$|a+b|$}(1,.15);
+\draw[decorate] (.3,-.4)--node[below=2.5mm]{$|b|$}(-1,-.4);
+\draw[decorate] (1,-.4)--node[below=2.5mm]{$|a|$}(.3,-.4);
+\end{tikzpicture}
+}
+\subcaptionbox{$a<0,b\geq 0$\label{fig:triangle B}}[.48\linewidth]{
+\begin{tikzpicture}[scale=1.5,angle/.style={fill=white},point/.style={},decoration={brace,amplitude=5}]
+\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
+\draw[shift={(-1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$a$};
+\draw[shift={(-.5,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$0$};
+\draw[shift={(.5,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$a+b$};
+\draw[shift={(1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$b$};
+\draw[decorate] (-.5,.15)--node[above=2.5mm]{$|a+b|$}(.5,.15);
+\draw[decorate] (-.5,-.4)--node[below=2.5mm]{$|a|$}(-1,-.4);
+\draw[decorate] (1,-.4)--node[below=2.5mm]{$|b|$}(-.5,-.4);
+\end{tikzpicture}
+}
+\caption{Visual representation of two of the cases for the Triangle Inequality.}\label{fig:triangle inequality}
+\end{figure}
+
+\begin{problem}
+Under what conditions do we have equality for the Triangle Inequality?
+\end{problem}
+
+Where did the Triangle Inequality get its name?  Why ``Triangle"?  For any triangle (including degenerate triangles), the sum of the lengths of any two sides must be greater than or equal to the length of the remaining side. That is, if $x$, $y$, and $z$ are the lengths of the sides of the triangle, then $z\leq x+y$, where we have equality only in the degenerate case of a triangle with no area. In linear algebra, the Triangle Inequality is a theorem about lengths of vectors. If $\mathbf{a}$ and $\mathbf{b}$ are vectors in $\mathbb{R}^n$, then the Triangle Inequality states that $\lVert \mathbf{a}+\mathbf{b}\rVert \leq \lVert\mathbf{a}\rVert +\lVert\mathbf{b}\rVert$. Note that $\lVert \mathbf{a}\rVert$ denotes the length of vector $\mathbf{a}$. See Figure~\ref{fig:triangle inequality 2d}. The version of the Triangle Inequality that we presented in Theorem~\ref{thm:triangle inequality} is precisely the one-dimensional version of the Triangle Inequality in terms of vectors.
+
+\begin{figure}[h!]
+\centering
+
+\begin{tikzpicture}[scale=1.5]
+\coordinate (A) at (0,0) {};
+\coordinate (B) at (3,0) {};
+\coordinate (C) at (2,2) {};
+
+\draw[thick, arrows={-latex}]  (A) -- (C) node[pos=0.45,above=2mm] {$\mathbf{a}$};
+\draw[thick,arrows={-latex}]  (C) -- (B) node[pos=0.45,right=2mm] {$\mathbf{b}$};
+\draw[thick, arrows={-latex},line cap=round]  (A) -- (B) node[midway,below=2mm] {$\mathbf{a}+\mathbf{b}$};
+\end{tikzpicture}
+\caption{Triangle Inequality in terms of vectors.}\label{fig:triangle inequality 2d}
+\end{figure}
+
+The next theorem is sometimes called the \textbf{Reverse Triangle Inequality}.
 
 \begin{theorem}[Reverse Triangle Inequality]
 For all $a,b\in\mathbb{R}$, $|a-b|\geq \left||a|-|b| \right|$.
 \end{theorem}
 
-\begin{definition}
-Let $A\subseteq \mathbb{R}$ and $m\in A$. Then $m$ is called a \textbf{maximum} of $A$ if for all $a\in A$, we have $a\leq m$. Similarly, $m$ is called \textbf{minimum} of $A$ if for all $a\in A$, we have $m\leq a$.
-\end{definition}
-
-Not surprisingly, maximums and minimums are unique when they exist.
-
-\begin{theorem}
-If $A\subseteq \mathbb{R}$ such that the maximum (respectively, minimum) of $A$ exists, then the maximum (respectively, minimum) of $A$ is unique.
-\end{theorem}
-
-If the maximum of a set $A$ exists, then it is denoted by $\boxed{\max(A)}$. Similarly, if the minimum of a set $A$ exists, then it is denoted by $\boxed{\min(A)}$.
-
-\begin{problem}\label{prob:find max and min}
-Find the maximum and the minimum for each of the following sets when they exist.
-\begin{enumerate}[label=\textrm{(\alph*)}]
-\item $(0,1]$
-\item $(0,1]\cap \mathbb{Q}$
-\item $(0,\infty)$
-\item $\{42\}$
-\item $\{\frac{1}{n}\mid n\in\mathbb{N}\}$
-\item $\{\frac{1}{n}\mid n\in\mathbb{N}\}\cup\{0\}$
-\item $\mathbb{Z}$
-\item $\emptyset$
-\end{enumerate}
-\end{problem}
-
-Before we introduce the Completeness Axiom, we need some terminology.
+Before we introduce the Completeness Axiom, we need some additional terminology.
 
 \begin{definition}
 Let $A\subseteq \mathbb{R}$. A point $b$ is called an \textbf{upper bound} of $A$ if for all $a\in A$, $a\leq b$. The set $A$ is said to be \textbf{bounded above} if it has an upper bound.
@@ -256,21 +375,23 @@ The notion of a \textbf{lower bound} and the property of a set being \textbf{bou
 \end{problem}
 
 \begin{problem}\label{prob:find upper bounds}
-Find all upper bounds and all lower bounds for each of the sets in Problem~\ref{prob:find max and min}.
-%\begin{enumerate}[label=\textrm{(\alph*)}]
-%\item $(0,1]$
-%\item $(0,1]\cap \mathbb{Q}$
-%\item $(0,\infty)$
-%\item $\{42\}$
-%\item $\{\frac{1}{n}\mid n\in\mathbb{N}\}$
-%\item $\{\frac{1}{n}\mid n\in\mathbb{N}\}\cup\{0\}$
-%\item $\mathbb{Z}$
-%\item $\emptyset$
-%\end{enumerate}
+Find all upper bounds and all lower bounds for each of the following sets when they exist.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\{5,11,17,42,103\}$ 
+\item $\mathbb{N}$
+\item $\mathbb{Z}$
+\item $(0,1]$
+\item $(0,1]\cap \mathbb{Q}$
+\item $(0,\infty)$
+\item $\{42\}$
+\item $\{\frac{1}{n}\mid n\in\mathbb{N}\}$
+\item $\{\frac{1}{n}\mid n\in\mathbb{N}\}\cup\{0\}$
+\item $\emptyset$
+\end{enumerate}
 \end{problem}
 
 \begin{definition}
-A set $A\subseteq \mathbb{R}$ is \textbf{bounded} if $A$ bounded above and below.
+A set $A\subseteq \mathbb{R}$ is \textbf{bounded} if $A$ is bounded above and below.
 \end{definition}
 
 Notice that a set $A\subseteq\mathbb{R}$ is bounded if and only if it is a subset of some bounded closed interval.
@@ -279,7 +400,7 @@ Notice that a set $A\subseteq\mathbb{R}$ is bounded if and only if it is a subse
 Let $A\subseteq \mathbb{R}$. A point $p$ is a \textbf{supremum} (or \textbf{least upper bound}) of $A$ if $p$ is an upper bound of $A$ and $p\leq b$ for every upper bound $b$ of $A$.  Analogously, a point $p$ is an \textbf{infimum} (or \textbf{greatest lower bound}) of $A$ if $p$ is a lower bound of $A$ and $p\geq b$ for every lower bound $b$ of $A$. 
 \end{definition}
 
-Our next result tells us that suprema and infima are unique when they exist.
+Our next result tells us that a supremum of a set and an infimum of a set are unique when they exist.
 
 \begin{theorem}
 If $A\subseteq \mathbb{R}$ such that the supremum (respectively, infimum) of $A$ exists, then the supremum (respectively, infimum) of $A$ is unique.
@@ -288,10 +409,9 @@ If $A\subseteq \mathbb{R}$ such that the supremum (respectively, infimum) of $A$
 In light of the previous theorem, if the supremum of $A$ exists, it is denoted by $\boxed{\sup(A)}$. Similarly, if the infimum of $A$ exists, it is denoted by $\boxed{\inf(A)}$. 
 
 \begin{problem}
-Find the supremum and the infimum of each of the sets in Problem~\ref{prob:find max and min} when they exist.
+Find the supremum and the infimum of each of the sets in Problem~\ref{prob:find upper bounds} when they exist.
 \end{problem}
 
-%If $\sup(A)$ exists, it is the minimum of the set of upper bounds of $A$. That is, the set of upper bounds of $A$ is the interval $[\sup(A),\infty)$. We have a similar statement involving the infimum. 
 It is important to recognize that the supremum or infimum of a set may or may not be contained in the set. In particular, we have the following theorem concerning suprema and maximums. The analogous result holds for infima and minimums.
 
 \begin{theorem}
@@ -314,13 +434,15 @@ The following axiom states that every nonempty subset of the real numbers that h
 If $A$ is a nonempty subset of $\mathbb{R}$ that is bounded above, then $\sup(A)$ exists.
 \end{axiom}
 
-Given the Completeness Axiom, we say that the real numbers satisfy the \textbf{least upper bound property}. Certainly, the real numbers satisfy the analogous result involving the infimum.
+Given the Completeness Axiom, we say that the real numbers satisfy the \textbf{least upper bound property}. It is worth mentioning that we do not need the Completeness Axiom to conclude that every nonempty subset of the integers that is bounded above has a supremum, as this follows from Theorem~\ref{thm:reverse WOP} (a generalized version of the Well-Ordering Principle). 
+
+Certainly, the real numbers also satisfy the analogous result involving infimum.
 
 \begin{theorem}
 If $A$ is a nonempty subset of $\mathbb{R}$ that is bounded below, then $\inf(A)$ exists.
 \end{theorem}
 
-Our next result, called the \textbf{Archimedean Property}, tells us that for every real number, we can always find a natural number that is larger. To prove this theorem, consider a proof by contradiction and utilize the Completeness Axiom and Theorem~\ref{thm:scoot in characterization of sup}.
+Our next result, called the \textbf{Archimedean Property}, tells us that for every real number, we can always find a natural number that is larger. To prove this theorem, consider a proof by contradiction and then utilize the Completeness Axiom and Theorem~\ref{thm:scoot in characterization of sup}.
 
 \begin{theorem}[Archimedean Property]
 For every $x\in\mathbb{R}$, there exists $n\in\mathbb{N}$ such that $x<n$.
@@ -343,7 +465,7 @@ For every $x\in\mathbb{R}$, there exists $n\in\mathbb{N}$ such that $x<n$.
 %\end{enumerate}	
 %\end{additionalaxioms}
 %  
-%Axiom~(O7) is often referred to as the \textbf{Archimedean Property}. It turns out that we could derive this axiom from the \textbf{Completeness Axiom}, which we will introduce in the next section. Notice that Axiom~(O5) says that every real number is contained in a bounded open interval. In particular, Axiom~(O7) says that every non-integer is contained in an open interval with consecutive integer endpoints. Axiom~(O6) tells us that every open interval is nonempty. In fact, repeated applications of Axiom~(O6) implies that every open interval contains infinitely many points.
+%Axiom~O7 is often referred to as the \textbf{Archimedean Property}. It turns out that we could derive this axiom from the \textbf{Completeness Axiom}, which we will introduce in the next section. Notice that Axiom~O5 says that every real number is contained in a bounded open interval. In particular, Axiom~O7 says that every non-integer is contained in an open interval with consecutive integer endpoints. Axiom~O6 tells us that every open interval is nonempty. In fact, repeated applications of Axiom~O6 implies that every open interval contains infinitely many points.
 
 More generally, we can ``squeeze" every real number between a pair of integers. The next result is sometimes referred to at the \textbf{Generalized Archimedean Property}.
 
