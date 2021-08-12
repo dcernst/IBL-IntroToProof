@@ -98,6 +98,20 @@ Furthermore, it is important to understand that solving genuine problems is diff
 
 \end{section}
 
+\begin{section}{Structure of the Textbook}
+
+As you read this book, you will be required to digest the material in a meaningful way.  It is your responsibility to read and understand new definitions and their related concepts.  In addition, you will be asked to complete problems aimed at solidifying your understanding of the material.  Most importantly, you will be asked to make conjectures, produce counterexamples, and prove theorems. All of these tasks will almost always be challenging.
+
+The items labeled as \textbf{Definition} and \textbf{Example} are meant to be read and digested.  However, the items labeled as \textbf{Problem}, \textbf{Theorem}, \textbf{Corollary}, and \textbf{Lemma} require action on your part.  Items labeled as \textbf{Problem} are sort of a mixed bag. Some Problems are computational in nature and aimed at improving your understanding of a particular concept while others ask you to provide a counterexample for a statement if it is false or to provide a proof if the statement is true. Items with the \textbf{Theorem}, \textbf{Corollary}, and \textbf{Lemma} designation are mathematical facts and the intention is for you to produce a valid proof of the given statement.  A lemma is a minor result whose sole purpose is to help in proving a theorem. The main difference between a theorem and a corollary is that corollaries are typically statements that follow quickly from a previous theorem.  In general, you should expect corollaries to have very short proofs.  However, that does not mean that you cannot produce a more lengthy yet valid proof of a corollary.
+
+Oftentimes, the problems and theorems are guiding you towards a substantial, more  general result. Other times, they are designed to get you to apply ideas in a new way. One thing to always keep in mind is that every task in this book can be done by you, the student. But it may not be on your first try, or even your second.
+
+Discussion of new topics is typically kept at a minimum and there are very few examples in this book. This is intentional.  One of the objectives of the items labeled as \textbf{Problem} is for you to produce the examples needed to internalize unfamiliar concepts.  The overarching goal of this book is to help you develop a deep and meaningful understanding of the processes of producing mathematics by putting you in direct contact with mathematical phenomena.
+
+\epigraph{Don't just read it; fight it! Ask your own questions, look for your own examples, discover your own proofs. Is the hypothesis necessary? Is the converse true? What happens in the classical special case? What about the degenerate cases? Where does the proof use the hypothesis?}{Paul Halmos, mathematician}
+
+\end{section}
+
 \begin{section}{Rights of the Learner}\label{sec:Rights of the Learner}
 As a reader of this textbook, you have the right to:
 \begin{enumerate}
@@ -111,22 +125,8 @@ As a reader of this textbook, you have the right to:
 
 \end{section}
 
-\begin{section}{Structure of the Textbook}
-
-As you read the textbook, you will be required to digest the material in a meaningful way.  It is your responsibility to read and understand new definitions and their related concepts.  In addition, you will be asked to complete problems aimed at solidifying your understanding of the material.  Most importantly, you will be asked to make conjectures, produce counterexamples, and prove theorems. All of these tasks will almost always be challenging.
-
-The items labeled as \textbf{Definition} and \textbf{Example} are meant to be read and digested.  However, the items labeled as \textbf{Problem}, \textbf{Theorem}, \textbf{Corollary}, and \textbf{Lemma} require action on your part.  Items labeled as \textbf{Problem} are sort of a mixed bag. Some Problems are computational in nature and aimed at improving your understanding of a particular concept while others ask you to provide a counterexample for a statement if it is false or to provide a proof if the statement is true. Items with the \textbf{Theorem}, \textbf{Corollary}, and \textbf{Lemma} designation are mathematical facts and the intention is for you to produce a valid proof of the given statement.  A lemma is a minor result whose sole purpose is to help in proving a theorem. The main difference between a theorem and a corollary is that corollaries are typically statements that follow quickly from a previous theorem.  In general, you should expect corollaries to have very short proofs.  However, that does not mean that you cannot produce a more lengthy yet valid proof of a corollary.
-
-Oftentimes, the problems and theorems are guiding you towards a substantial, more  general result. Other times, they are designed to get you to apply ideas in a new way. One thing to always keep in mind is that every task in this book can be done by you, the student. But it may not be on your first try, or even your second.
-
-Discussion of new topics is typically kept at a minimum and there are very few examples in this book. This is intentional.  One of the objectives of the items labeled as \textbf{Problem} is for you to produce the examples needed to internalize unfamiliar concepts.  The ultimate goal of this book is to help you develop a deep and meaningful understanding of the processes of producing mathematics by putting you in direct contact with mathematical phenomena.
-
-\epigraph{Don't just read it; fight it! Ask your own questions, look for your own examples, discover your own proofs. Is the hypothesis necessary? Is the converse true? What happens in the classical special case? What about the degenerate cases? Where does the proof use the hypothesis?}{Paul Halmos, mathematician}
-
-\end{section}
-
-\begin{section}{Some Minimal Guidance}\label{sec:minimal guidance}
-Especially in the opening sections, it will not be clear what facts from your prior experience in mathematics we are ``allowed" to use.  Unfortunately, addressing this issue is difficult and is something we will sort out along the way.  However, in general, here are some minimal guidelines to keep in mind.
+\begin{section}{Some Minimal Guidance}\label{sec:guidance}
+Especially in the opening sections, it will not be clear what facts from your prior experience in mathematics you are ``allowed" to use.  Unfortunately, addressing this issue is difficult and is something we will sort out along the way.  In addition, you are likely unfamiliar with how to structure a proof and with what constitutes a valid proof.  So that you do not feel completely abandoned, here are some guidelines to keep in mind as you get started with writing proofs.
 
 \begin{itemize}
 \item The statement you are proving should be on the same page as the beginning of your proof.   
@@ -134,7 +134,7 @@ Especially in the opening sections, it will not be clear what facts from your pr
 \item Make it clear to yourself and the reader what your assumptions are at the very beginning of your proof. Typically, these statements will start off ``Assume\ldots", ``Suppose\ldots", or ``Let\ldots".  Sometimes there will be some implicit assumptions that we can omit, but at least in the beginning, you should get in the habit of clearly stating your assumptions up front. 
 \item Carefully consider the order in which you write your proof. Loosely speaking, each sentence should follow from an earlier sentence in your proof or possibly a result you have already proved.
 \item Unlike the experience many of you had writing proofs in your high school geometry class, our proofs should be written in complete sentences.  You should break sections of a proof into paragraphs and use proper grammar.  There are some pedantic conventions for doing this that will be pointed out along the way.  Initially, this will be an issue that you may struggle with, but you will get the hang of it.
-\item There will be many situations where you will want to refer to an earlier definition, problem, theorem, corollary, or lemma.  In this case, you should reference the statement by number, but it is also helpful to the reader to summarize the statement you are citing.  For example, you might write something like, ``By Theorem~\ref{thm:two consecutive ints}, the sum of two consecutive integers is odd, and so\ldots" or ``By the definition of divides (Definition~\ref{def:divides}), it follows that\ldots". One thing worth pointing out is that if we are citing a definition, theorem, or problem by number, we should capitalize Definition, Theorem, or Problem, respectively (e.g., see examples above). Otherwise, we do not capitalize these words (e.g., ``By the definition of divides\ldots").
+\item There will be many situations where you will want to refer to an earlier definition, problem, theorem, corollary, or lemma.  In this case, you should reference the statement by number, but it is also helpful to the reader to summarize the statement you are citing.  For example, you might write something like, ``According to Theorem~\ref{thm:two consecutive ints}, the sum of two consecutive integers is odd, and so\ldots" or ``By the definition of divides (Definition~\ref{def:divides}), it follows that\ldots". One thing worth pointing out is that if we are citing a definition, theorem, or problem by number, we should capitalize ``Definition", ``Theorem", or ``Problem", respectively (e.g., ``According to Theorem~\ref{thm:two consecutive ints}\ldots"). Otherwise, we do not capitalize these words (e.g., ``By the definition of divides\ldots").
 \item There will be times when we will need to do some basic algebraic manipulations.  You should feel free to do this whenever the need arises.  But you should show sufficient work along the way.  You do not need to write down justifications for basic algebraic manipulations (e.g., adding 1 to both sides of an equation, adding and subtracting the same amount on the same side of an equation, adding like terms, factoring, basic simplification, etc.).  
 \item On the other hand, you do need to make explicit justification of the logical steps in a proof.  As stated above, you should cite a previous definition, theorem, etc. when necessary.
 \item Similar to making it clear where your proof begins, you should indicate where it ends.  It is common to conclude a proof with the standard ``proof box" ($\square$ or $\blacksquare$).  This little square at end of a proof is sometimes called a \textbf{tombstone} or \textbf{Halmos symbol} after Hungarian-born American mathematician \href{https://en.wikipedia.org/wiki/Paul_Halmos}{Paul Halmos} (1916--2006).
@@ -149,11 +149,40 @@ It is of utmost importance that you work to understand every proof.  Questions--
 
 If you would like additional guidance before you dig in, look over the guidelines in Appendix~\ref{appendix:elements_of_style}: Elements of Style for Proofs. It is suggested that you review this appendix occasionally as you progress through the book as some guidelines may not initially make sense or seem relevant. 
 
-Do your best, be prepared to put in a lot of time, and do all the work. When you work hard and you come to understand, you feel good about yourself.  In the meantime, you have to believe that your work will pay off in intellectual development.
-
-
-Now, go have fun and start exploring mathematics!
+Be prepared to put in a lot of time and do all the work. Your effort will pay off in intellectual development. Now, go have fun and start exploring mathematics!
 
 \epigraph{Our greatest glory is not in never falling, but in rising every time we fall.}{Confucius, philosopher}
 
 \end{section}
+
+- Guidebook analogy
+- Topographic map, indicating which mountains to summit, sometimes indicating which trailhead to start at or which trail to follow. 
+- False summits
+- Summit is obscured by clouds
+- multiple routes to top, some more challenging than others
+- Some summits we attain quickly and easily, others might require a multi day expedition 
+- descent?
+- Dangers along the way
+- Wait out the storm and continue on your way
+- sometimes you have to turn around and attempt to summit on a different day
+- Cable car vs finding your way to top under your own power
+- take in the view
+- Find analogue to Jungle Tiger
+- Continuing with our mountain climbing analogy...
+- Find a community 
+- Mathematics is a human endeavor 
+- Get a hiking buddy
+
+0. Expand your mathematical content knowledge.
+1. Experience the profound beauty of mathematics.
+2. Exercise creativity in producing and discovering mathematics.
+3. Enhance your problem solving skills.
+
+An education must prepare a student to ask and explore questions in contexts that do not yet exist. That is, we need individuals capable of tackling problems they have never encountered and to ask questions no one has yet thought of. Ability to solve problems that do not yet exist.
+
+If we really want students to be independent, inquisitive, and persistent, then we need to provide them with the means to acquire these skills.
+
+ ``Much more important than specific mathematical results are the habits of mind used by the people who create those results. ... Although it is necessary to infuse courses and curricula with modern content, what is even more important is to give students the tools they will need in order to use, understand, and even make mathematics that does not yet exist."
+Cuoco, Goldenberg, and Mark in Habit of Mind: An Organizing Principle for Mathematics Curriculum.
+
+My primary objective is to play a role in developing persistent problem solvers...learn how to learn...content secondary...educated citizen...
