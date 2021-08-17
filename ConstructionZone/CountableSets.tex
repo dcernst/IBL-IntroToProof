@@ -62,9 +62,9 @@ The set of rational numbers $\mathbb{Q}$ is countable.
 If $A$ and $B$ are countable sets, then $A\cup B$ is countable.
 \end{theorem}
 
-We would like to prove a stronger result than the previous theorem. To do so, we need a lemma. 
+We would like to prove a stronger result than the previous theorem. To do so, we need an intermediate result. 
 
-\begin{lemma}\label{lem:retool infinite collection}
+\begin{theorem}\label{thm:retool infinite collection}
 Let $\{A_n\}_{n=1}^{\infty}$ be a collection of sets. Define $B_1\coloneqq A_1$ and for each natural number $n>1$, define
 \[
 B_n\coloneqq A_n\setminus \bigcup_{i=1}^{n-1}A_i.
@@ -74,14 +74,14 @@ Then we we have the following:
 \item The collection $\{B_n\}_{n=1}^{\infty}$ is pairwise disjoint.
 \item $\displaystyle \bigcup_{n=1}^{\infty}A_n =\bigcup_{n=1}^{\infty}B_n$.
 \end{enumerate}
-\end{lemma}
+\end{theorem}
 
 The next theorem states that the union of a countable collection of countable sets is countable. To prove this, consider two cases:
 \begin{enumerate}
 \item The collection of sets is finite.  
 \item The collection of sets is infinite.
 \end{enumerate}
-To handle the first case, use induction together with Theorem~\ref{thm:union of countable sets}. The second case is substantially more challenging.  First, use Lemma~\ref{lem:retool infinite collection} to construct a collection $\{B_n\}$ of pairwise disjoint sets whose union is equal to the union of the original collection. Since each $B_n$ is a subset of one of the sets in the original collection and each of these sets is countable, each $B_n$ is also countable by Theorem~\ref{thm:subsetsCountableSets}. This implies that for each $n$, we can write $B_n=\{b_{n,1}, b_{n,2},b_{n,3},\ldots\}$, where the set may be finite or infinite. From here, we outline two different approaches for continuing.  One approach is to construct a bijection from $\mathbb{N}$ to $\bigcup_{n=1}^{\infty}B_n$ using Figure~\ref{fig:zig zag} as inspiration.  One thing you will need to address is what to do when a set in the collection $\{B_n\}$ is finite. For the second approach, define $f:\bigcup_{n=1}^{\infty}B_n\to \mathbb{N}$ via $f(b_{n,m})=2^n3^m$, verify that this function is injective, and then appeal to Theorem~\ref{thm:subsetsCountableSets}.  Try using both of these approaches when tackling the proof of the following theorem.
+To handle the first case, use induction together with Theorem~\ref{thm:union of countable sets}. The second case is substantially more challenging.  First, use Theorem~\ref{thm:retool infinite collection} to construct a collection $\{B_n\}$ of pairwise disjoint sets whose union is equal to the union of the original collection. Since each $B_n$ is a subset of one of the sets in the original collection and each of these sets is countable, each $B_n$ is also countable by Theorem~\ref{thm:subsetsCountableSets}. This implies that for each $n$, we can write $B_n=\{b_{n,1}, b_{n,2},b_{n,3},\ldots\}$, where the set may be finite or infinite. From here, we outline two different approaches for continuing.  One approach is to construct a bijection from $\mathbb{N}$ to $\bigcup_{n=1}^{\infty}B_n$ using Figure~\ref{fig:zig zag} as inspiration.  One thing you will need to address is what to do when a set in the collection $\{B_n\}$ is finite. For the second approach, define $f:\bigcup_{n=1}^{\infty}B_n\to \mathbb{N}$ via $f(b_{n,m})=2^n3^m$, verify that this function is injective, and then appeal to Theorem~\ref{thm:subsetsCountableSets}.  Try using both of these approaches when tackling the proof of the following theorem.
 
 \tikzstyle{vert} = [circle, draw, fill=black,inner sep=0pt, minimum size=.7mm]
 
