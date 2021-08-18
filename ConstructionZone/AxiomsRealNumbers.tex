@@ -450,25 +450,6 @@ Our next result, called the \textbf{Archimedean Property}, tells us that for eve
 For every $x\in\mathbb{R}$, there exists $n\in\mathbb{N}$ such that $x<n$.
 \end{theorem}
 
-%???Can we just state CA and prove the additional axioms?  In fact, do we really need O5 and O6? Also, do we need full version of Archimedean Property or can we just use $a<n$???
-%
-%Idea for O5: start with $0<1$ (and $-1<0$). Add $x$ everywhere using axioms and then apply transitivity?
-%
-%Idea for O6: Start with $a<b$, prove $a<(a+b)/2$ and $(a+b)/2<b$.
-%
-%We could spend weeks building up from the axioms all of the necessary machinery for the real numbers. Instead we include a few additional axioms to save ourselves a little time. 
-%
-%\begin{additionalaxioms}\label{axiom:additional axioms}
-%The real numbers satisfy each of the following:
-%\begin{enumerate}
-%\item[(O5)] For every $x\in\mathbb{R}$, there exists $a,b\in\mathbb{R}$ such that $a<x<b$;
-%\item[(O6)] For every $a,b\in\mathbb{R}$, if $a<b$, there exists $x\in\mathbb{R}$ such that $a<x<b$ (in particular, $\frac{a+b}{2}$ is between $a$ and $b$);
-%\item[(O7)]\label{axiom:archimedean} For every $a\in\mathbb{R}$, there exists $n\in\mathbb{Z}$ such that $n \leq a < n + 1$.
-%\end{enumerate}	
-%\end{additionalaxioms}
-%  
-%Axiom~O7 is often referred to as the \textbf{Archimedean Property}. It turns out that we could derive this axiom from the \textbf{Completeness Axiom}, which we will introduce in the next section. Notice that Axiom~O5 says that every real number is contained in a bounded open interval. In particular, Axiom~O7 says that every non-integer is contained in an open interval with consecutive integer endpoints. Axiom~O6 tells us that every open interval is nonempty. In fact, repeated applications of Axiom~O6 implies that every open interval contains infinitely many points.
-
 More generally, we can ``squeeze" every real number between a pair of integers. The next result is sometimes referred to at the \textbf{Generalized Archimedean Property}.
 
 \begin{theorem}[Generalized Archimedean Property]
@@ -498,58 +479,6 @@ If $(a,b)$ is an open interval, then there exists an irrational number $p$ such 
 \end{theorem}
 
 Repeated applications of the previous two theorems implies that every open interval contains infinitely many rational numbers and infinitely many irrational numbers. In light of these two theorems, we say that both the rationals and irrationals are \textbf{dense} in the real numbers. 
-
-%There is a special function that we can now introduce. 
-%
-%\begin{definition}
-%Given $a\in\mathbb{R}$, we define the \textbf{absolute value of $a$}, denoted $|a|$, via
-%\[
-%\tcboxmath{|a|\coloneqq \begin{cases}
-%a, & \text{if }a\geq 0\\
-%-a, & \text{if }a<0.
-%\end{cases}}
-%\]
-%\end{definition}
-%
-%\begin{theorem}
-%For all $a\in\mathbb{R}$, $|a|\geq 0$ with equality only if $a=0$.
-%\end{theorem}
-%
-%In the next theorem, writing $\pm a\leq b$ is an abbreviation for $a\leq b$ and $-a\leq b$.
-%
-%\begin{theorem}
-%For all $a,b\in\mathbb{R}$, if $\pm a\leq b$, then $|a|\leq b$. 
-%\end{theorem}
-%
-%\begin{theorem}
-%For all $a\in\mathbb{R}$, $|a|^2=a^2$.
-%\end{theorem}
-%
-%\begin{theorem}\label{thm:plus minus less than or equal to abs value}
-%For all $a\in\mathbb{R}$, $\pm a\leq |a|$.
-%\end{theorem}
-%
-%\begin{theorem}\label{thm:abs value less than or equal to iff squeezed by plus minus}
-%For all $a,r\in\mathbb{R}$, $|a|\leq r$ if and only if $-r\leq a\leq r$.
-%\end{theorem}
-%
-%In the previous theorem, it must be the case that $r$ is nonnegative.  The letter $r$ was used because it is the first letter of the word ``radius". If $r$ is positive, we can think of the interval $(-r,r)$ as the interior of a 1-dimensional circle with radius $r$ centered at 0.
-%
-%\begin{theorem}
-%For all $a,b\in\mathbb{R}$, $|ab|=|a||b|$.
-%\end{theorem}
-%
-%Consider using Theorems~\ref{thm:plus minus less than or equal to abs value} and \ref{thm:abs value less than or equal to iff squeezed by plus minus} when attacking the next problem.  This result can be extremely useful in some contexts. 
-%
-%\begin{theorem}[Triangle Inequality]
-%For all $a,b\in\mathbb{R}$, $|a+b|\leq |a|+|b|$.
-%\end{theorem}
-%
-%The next theorem is related to the Triangle Inequality.
-%
-%\begin{theorem}[Reverse Triangle Inequality]
-%For all $a,b\in\mathbb{R}$, $|a-b|\geq \left||a|-|b| \right|$.
-%\end{theorem}
 
 \epigraph{If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.}{John von Neumann, mathematician}
 \end{section}

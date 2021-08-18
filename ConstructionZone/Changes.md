@@ -40,6 +40,7 @@
 - Added a chapter that focuses on the real numbers. The first section (5.1) focuses on the axioms while the second section (5.2) is the topology section that used to be in Chapter 3.
 - Moved induction chapter to Chapter 4. This was necessary since the generalized Well-Ordering Principle is needed to prove a consequence of the Archimedean Property, which is needed to prove the density of the rationals (all of which happens in the new Section 5.1).
 - Lots of retooling of Introduction.
+- Rewrote Preface.
 
 ## Reviewer 1
 
