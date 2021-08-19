@@ -7,7 +7,9 @@ Our axioms for the real numbers fall into three categories:
 \item \textbf{Completeness Axiom:} This axiom ensures that the familiar number line that we use to model the real numbers does not have any holes in it.
 \end{enumerate}
 
-\begin{fieldaxioms}\label{axiom:field axioms}
+We begin with the Field Axioms.
+
+\begin{axioms}[Field Axioms]\label{axiom:field axioms}
 There exist operations $+$ (addition) and $\cdot$ (multiplication) on $\mathbb{R}$ satisfying:
 \begin{enumerate}
 \item[(F1)] (Associativity for Addition) For all $a, b, c\in \mathbb{R}$ we have $(a+b)+c = a+(b+c)$;
@@ -21,7 +23,7 @@ There exist operations $+$ (addition) and $\cdot$ (multiplication) on $\mathbb{R
 \item[(F8)] (Multiplicative Inverses) For all $a\in\mathbb{R}\setminus\{0\}$ there exists $a^{-1}\in\mathbb{R}$ such that $aa^{-1}=1$.
 \item[(F9)] (Distributive Property) For all $a,b,c\in \mathbb{R}$, $a(b+c)=ab+ac$;
 \end{enumerate}
-\end{fieldaxioms}
+\end{axioms}
 
 In the language of abstract algebra, Axioms~F1--F4 and~F5--F8 make each of $\mathbb{R}$ and $\mathbb{R}\setminus\{0\}$ an abelian group under addition and multiplication, respectively. Axiom~F9 provides a way for the operations of addition and multiplication to interact.  Collectively, Axioms~F1--F9 make the real numbers a \textbf{field}.  It follows from the axioms that the elements $0$ and $1$ of $\mathbb{R}$ are the unique \textbf{additive} and \textbf{multiplicative identities} in $\mathbb{R}$. To prove the following theorem, suppose $0$ and $0'$ are both additive identities in $\mathbb{R}$ and then show that $0=0'$. This shows that there can only be one additive identity. %It might be helpful to review Skeleton Proof~\ref{skeleton:uniqueness}. 
 
@@ -100,7 +102,7 @@ For all $a,b\in\mathbb{R}$, we have $(a+b)(a-b)=a^2-b^2$.
 
 We now introduce the Order Axioms of the real numbers.
 
-\begin{orderaxioms}\label{axiom:order axioms}
+\begin{axioms}[Order Axioms]\label{axiom:order axioms}
 For $a,b,c\in \mathbb{R}$, there is a relation $\tcboxmath{<}$ on $\mathbb{R}$ satisfying:
 \begin{enumerate}
 \item[(O1)] (Trichotomy Law) If $a\neq b$, then either $a<b$ or $b<a$ but not both;
@@ -108,7 +110,7 @@ For $a,b,c\in \mathbb{R}$, there is a relation $\tcboxmath{<}$ on $\mathbb{R}$ s
 \item[(O3)] If $a<b$, then $a+c<b+c$;
 \item[(O4)] If $a<b$ and $0<c$, then $ac<bc$;  
 \end{enumerate}
-\end{orderaxioms}
+\end{axioms}
 
 Given Axioms~O1--O4, we say that the real numbers are a \textbf{linearly ordered field}. We call numbers greater than zero \textbf{positive} and those greater than or equal to zero \textbf{nonnegative}. There are similar definitions for \textbf{negative} and \textbf{nonpositive}. 
 
