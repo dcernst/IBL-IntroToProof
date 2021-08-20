@@ -197,24 +197,8 @@ A set $K\subseteq\mathbb{R}$ is called \textbf{compact} if $K$ is both closed an
 
 It is important to point out that there is a more general definition of compact in an arbitrary topological space.  However, using our notions of open and closed, it is a theorem that a subset of the real line is compact if and only if it is closed and bounded.
 
-\begin{problem}
-Provide several examples of sets that are compact and some that are not compact. Are finite sets compact? In particular, is the empty set compact?
-\end{problem}
-
-The next theorem says that every nonempty compact set contains its greatest lower bound and its least upper bound. That is, every nonempty compact set attains a minimum and a maximum value.
-
-\begin{theorem}
-If $K$ is a nonempty compact subset of $\mathbb{R}$, then $\sup(K),\inf(K)\in K$.
-\end{theorem}
-
-\begin{definition}
-A set $A\subseteq \mathbb{R}$ is \textbf{disconnected} if there exists two disjoint open sets $U_1$ and $U_2$ such that $A\cap U_1$ and $A\cap U_2$ are nonempty but $A\subseteq U_1\cup U_2$ (equivalently, $A=(A\cap U_1)\cup(A\cap U_2)$). If a set is not disconnected, then we say that it is \textbf{connected}.
-\end{definition}
-
-In other words, a set is disconnected if it can be partitioned into two nonempty subsets such that each subset does not contain points of the other and does not contain any accumulation points of the other. Showing that a set is disconnected is generally easier than showing a set is connected. To prove that a set is disconnected, you simply need to exhibit two open sets with the necessary properties. However, to prove that a set is connected, you need to prove that no such pair of open sets exists.
-
-\begin{problem}
-Determine whether each of the following sets is connected or disconnected.  Briefly justify your assertions.
+\begin{problem}\label{prob:compact or not}
+Determine whether each of the following sets is compact.  Briefly justify your assertions.
 \begin{multicols}{2}
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $[0,1)\cup [2,3]$
@@ -231,6 +215,26 @@ Determine whether each of the following sets is connected or disconnected.  Brie
 \item $\emptyset$
 \end{enumerate}
 \end{multicols}
+\end{problem}
+
+\begin{problem}
+Is every finite set compact? Justify your assertion.
+\end{problem}
+
+The next theorem says that every nonempty compact set contains its greatest lower bound and its least upper bound. That is, every nonempty compact set attains a minimum and a maximum value.
+
+\begin{theorem}
+If $K$ is a nonempty compact subset of $\mathbb{R}$, then $\sup(K),\inf(K)\in K$.
+\end{theorem}
+
+\begin{definition}
+A set $A\subseteq \mathbb{R}$ is \textbf{disconnected} if there exists two disjoint open sets $U_1$ and $U_2$ such that $A\cap U_1$ and $A\cap U_2$ are nonempty but $A\subseteq U_1\cup U_2$ (equivalently, $A=(A\cap U_1)\cup(A\cap U_2)$). If a set is not disconnected, then we say that it is \textbf{connected}.
+\end{definition}
+
+In other words, a set is disconnected if it can be partitioned into two nonempty subsets such that each subset does not contain points of the other and does not contain any accumulation points of the other. Showing that a set is disconnected is generally easier than showing a set is connected. To prove that a set is disconnected, you simply need to exhibit two open sets with the necessary properties. However, to prove that a set is connected, you need to prove that no such pair of open sets exists.
+
+\begin{problem}
+Determine whether each of the sets in Problem~\ref{prob:compact or not} is is connected or disconnected.  Briefly justify your assertions.
 \end{problem}
 
 \begin{theorem}
