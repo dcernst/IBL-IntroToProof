@@ -124,19 +124,19 @@ After completing the next problem, reflect on the statement ``a function is cont
 Define $f:\mathbb{N}\to\mathbb{R}$ via $f(x)=1$. Notice the domain! Determine where $f$ is continuous and justify your assertion.
 \end{problem}
 
-\begin{theorem}\label{thm:inverse images open sets}
+\begin{theorem}\label{thm:preimages open sets}
 Suppose $f$ is a real function. Then $f$ is continuous if and only if the preimage $f^{-1}(U)$ of every open set $U$ is an open set intersected with the domain of $f$.
 \end{theorem}
 
 The previous characterization of continuity is often referred to as the ``open set definition of continuity," although for us it is a theorem instead of a definition. This is the definition used in topology. Another notion of continuity, called ``sequential continuity", makes use of convergent sequences.  All of these characterizations of continuity are equivalent for the real numbers (using the standard definition of an open set). However, there are contexts in mathematics where the epsilon-delta definition of continuity is undefined (because there is not a notion of distance in either the domain or codomain) and others where continuity and sequential continuity are not equivalent.
 
-Since every open set is the union of bounded open intervals (Definition~\ref{def:open}), the union of open sets is open (Theorem~\ref{thm:union of open sets}), and preimages respect unions (Theorem~\ref{thm:unions and intersections of preimages}), we can strengthen Theorem~\ref{thm:inverse images open sets} into a slightly more useful result.  
+Since every open set is the union of bounded open intervals (Definition~\ref{def:open}), the union of open sets is open (Theorem~\ref{thm:union of open sets}), and preimages respect unions (Theorem~\ref{thm:unions and intersections of preimages}), we can strengthen Theorem~\ref{thm:preimages open sets} into a slightly more useful result.  
 
-\begin{theorem}\label{thm:inverse images basic open sets}
+\begin{theorem}\label{thm:preimages basic open sets}
 Suppose $f$ is a real function. Then $f$ is continuous if and only if the preimage $f^{-1}(I)$ of every bounded open interval $I$ is an open set intersected with the domain of $f$.
 \end{theorem}
 
-Now that we have two methods for verifying continuity (Definition~\ref{def:continuity} and Theorem~\ref{thm:inverse images open sets}/\ref{thm:inverse images basic open sets}), you can use either one when approaching the remaining problems in this section. Sometimes it does not matter which approach you take and other times one method might be better suited to the task.
+Now that we have two methods for verifying continuity (Definition~\ref{def:continuity} and Theorem~\ref{thm:preimages open sets}/\ref{thm:preimages basic open sets}), you can use either one when approaching the remaining problems in this section. Sometimes it does not matter which approach you take and other times one method might be better suited to the task.
 
 \begin{problem}
 Define $f:\mathbb{R}\to\mathbb{R}$ via $f(x)=x^2$. Prove that $f$ is continuous.
