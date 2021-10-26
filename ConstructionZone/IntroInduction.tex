@@ -85,23 +85,54 @@ Let $p_{1}, p_{2}, \ldots, p_{n}$ be $n$ distinct points arranged on a circle.  
 Consider a grid of squares that is $2^n$ squares wide by $2^n$ squares long, where $n\in\mathbb{N}$. One of the squares has been cut out, but you do not know which one!  You have a bunch of L-shapes made up of $3$ squares.  Prove that you can perfectly cover this chessboard with the L-shapes (with no overlap) for any $n\in\mathbb{N}$. Figure~\ref{fig:L-shapes} depicts one possible covering for the case involving $n=2$.
 \end{problem}
 
+%color
+%\begin{figure}[ht]
+%\centering
+%\begin{tikzpicture} [scale=1.5]
+%\draw [fill=lightorange] (0,0) rectangle (2,1);
+%\draw [fill=lightorange] (0,1) rectangle (1,2);
+%
+%\draw [fill=lightskyblue] (3,0) rectangle (4,2);
+%\draw [fill=lightskyblue] (2,1) rectangle (3,2);
+%
+%\draw [fill=deeppink] (0,2) rectangle (1,4);
+%\draw [fill=deeppink] (1,3) rectangle (2,4);
+%
+%\draw [fill=softplum] (1,1) rectangle (2,3);
+%\draw [fill=softplum] (2,2) rectangle (3,3);
+%
+%\draw [fill=naugreen] (2,3) rectangle (4,4);
+%\draw [fill=naugreen] (3,2) rectangle (4,3);
+%
+%\draw[thick] (0,0) grid (4,4);
+%
+%\node (y) at (2.5,.5){};
+%\node (x) at (3.8,-.5){cut-out square};
+%\draw [->, thick] (x) to [out=180,in=270] (y);
+%
+%\end{tikzpicture}
+%\caption{One possible covering for the case involving $n=2$ for Problem~\ref{prob:L-shapes}.}
+%\label{fig:L-shapes}
+%\end{figure}
+
+%black and white
 \begin{figure}[ht]
 \centering
 \begin{tikzpicture} [scale=1.5]
-\draw [fill=lightorange] (0,0) rectangle (2,1);
-\draw [fill=lightorange] (0,1) rectangle (1,2);
+\draw [fill=grey5] (0,0) rectangle (2,1);
+\draw [fill=grey5] (0,1) rectangle (1,2);
 
-\draw [fill=lightskyblue] (3,0) rectangle (4,2);
-\draw [fill=lightskyblue] (2,1) rectangle (3,2);
+\draw [fill=grey3] (3,0) rectangle (4,2);
+\draw [fill=grey3] (2,1) rectangle (3,2);
 
-\draw [fill=deeppink] (0,2) rectangle (1,4);
-\draw [fill=deeppink] (1,3) rectangle (2,4);
+\draw [fill=grey3] (0,2) rectangle (1,4);
+\draw [fill=grey3] (1,3) rectangle (2,4);
 
-\draw [fill=softplum] (1,1) rectangle (2,3);
-\draw [fill=softplum] (2,2) rectangle (3,3);
+\draw [fill=grey2] (1,1) rectangle (2,3);
+\draw [fill=grey2] (2,2) rectangle (3,3);
 
-\draw [fill=naugreen] (2,3) rectangle (4,4);
-\draw [fill=naugreen] (3,2) rectangle (4,3);
+\draw [fill=grey5] (2,3) rectangle (4,4);
+\draw [fill=grey5] (3,2) rectangle (4,3);
 
 \draw[thick] (0,0) grid (4,4);
 
