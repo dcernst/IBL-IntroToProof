@@ -69,15 +69,13 @@ Give an example of each of the following.
 If $A$ and $B$ are sets, then we say that $A$ is a \textbf{subset} of $B$, written $\tcboxmath{A\subseteq B}$, provided that every element of $A$ is an element of $B$.
 \end{definition}
 
-Observe that $A\subseteq B$ is equivalent to ``For all $x$ (in the universe of discourse), if $x\in A$, then $x\in B$."  Since we know how to deal with ``for all" statements and conditional propositions, we know how to go about proving $A\subseteq B$.
-
 \begin{problem}
-Suppose $A$ and $B$ are sets.  Describe a skeleton proof for proving that $A\subseteq B$.
+List all of the subsets of $A=\{1,2,3\}$.  %Any conjectures about how many there might be for a set with $n$ elements?
 \end{problem}
 
-Every nonempty set always has two subsets.
+Every nonempty set always has two subsets.  Notice that if $A=\emptyset$, then Parts~(a) and (b) of the next theorem say the same thing.
 
-\begin{theorem}
+\begin{theorem}\label{thm:trivial subsets}
 Let $A$ be a set.  Then
 \begin{enumerate}[label=\textrm{(\alph*)}]
 \item $A\subseteq A$, and
@@ -85,10 +83,10 @@ Let $A$ be a set.  Then
 \end{enumerate}
 \end{theorem}
 
-Notice that if $A=\emptyset$, then Parts~(a) and (b) of the previous theorem say the same thing.
+Observe that ``$A\subseteq B$" is equivalent to ``For all $x$ (in the universe of discourse), if $x\in A$, then $x\in B$."  Since we know how to deal with ``for all" statements and conditional propositions, we know how to go about proving $A\subseteq B$. If $A$ happens to be the empty set, then the statement ``For all $x$ (in the universe of discourse), if $x\in A$, then $x\in B$" is vacuously true.  This is in agreement with Theorem~\ref{thm:trivial subsets}(b), which states that the empty set is always a subset of every set.  In light of this, it is common to omit discussion of the case when $A$ is the empty set when proving that $A$ is s a subset of $B$.
 
 \begin{problem}
-List all of the subsets of $A=\{1,2,3\}$.  %Any conjectures about how many there might be for a set with $n$ elements?
+Suppose $A$ and $B$ are sets.  Describe a skeleton proof for proving that $A\subseteq B$.
 \end{problem}
 
 \begin{theorem}[Transitivity of Subsets]

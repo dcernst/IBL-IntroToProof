@@ -58,6 +58,8 @@ For each of the following functions, draw the corresponding function diagram in 
 \end{enumerate}
 \end{problem}
 
+The previous problem illustrates that $f\circ g$ and $g\circ f$ need not be equal even when both composite functions exist.
+
 \begin{example}
 Consider the inclusion map $\iota:X\to Y$ such that $X$ is a proper subset of $Y$ and suppose $f:Y\to Z$ is a function. Then the composite function $f\circ \iota:X\to Z$ is given by
 \[
@@ -65,8 +67,6 @@ f\circ \iota(x)=f(\iota(x))=f(x)
 \]
 for all $x\in X$. Notice that $f\circ \iota$ is simply the function $f$ but with a smaller domain.  In this case, we say that $f\circ \iota$ is the \textbf{restriction of $f$ to $X$}, which is often denoted by $\tcboxmath{f|_X}$.
 \end{example}
-
-The next problem illustrates that $f\circ g$ and $g\circ f$ need not be equal even when both composite functions exist.
 
 \begin{problem}
 Define $f:\mathbb{R}\to \mathbb{R}$ and $g:\mathbb{R}\to \mathbb{R}$ via $f(x)=x^2$ and $g(x)=3x-5$, respectively. Determine formulas for the composite functions $f\circ g$ and $g\circ f$.
@@ -144,11 +144,23 @@ Let $f:X\to Y$ be a function. Then $f$ is surjective if and only if there exists
 The function $g$ in the previous theorem is often called a \textbf{right inverse} of $f$.
 
 \begin{problem}
-Provide an example of a function that has a left inverse but does not have a right inverse. Find the left inverse of your proposed function.
+Let $X=\{a,b\}$ and $Y=\{1,2\}$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Provide an example of a function that has a left inverse but does not have a right inverse. Find the left inverse of your proposed function.
+\item Provide an example of a function that has a right inverse but does not have a left inverse. Find the right inverse of your proposed function.
+\end{enumerate}
 \end{problem}
 
 \begin{problem}
-Provide an example of a function that has a right inverse but does not have a left inverse. Find the right inverse of your proposed function.
+Define $f:\mathbb{R}\to\mathbb{R}$ via $f(x)=x^2$. Explain why $f$ does not have a left inverse nor a right inverse.
+\end{problem}
+
+\begin{problem}
+Define $f:\mathbb{R}\to[0,\infty)$ via $f(x)=x^2$ and $g:[0,\infty)\to \mathbb{R}$ via $g(x)=\sqrt{x}$. 
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Explain why $f$ does not have a left inverse.
+\item Verify that $g$ is the right inverse of $f$ by computing $f\circ g(x)$.
+\end{enumerate}
 \end{problem}
 
 \begin{corollary}\label{cor:two-sided inverse}
@@ -187,7 +199,7 @@ Let $f:X\to Y$ be a function.  Then $f^{-1}:Y\to X$ is a function if and only if
 \end{theorem}
 
 \begin{problem}
-Suppose $X\subseteq \mathbb{R}$ and $f:X\to \mathbb{R}$ is a function. Fill in the blank with the appropriate phrase.
+Suppose $f:\mathbb{R}\to \mathbb{R}$ is a function. Fill in the blank with the appropriate phrase.
 \begin{quote}
 The relation $f^{-1}$ is a function if and only if every horizontal line hits the graph of $f$ \underline{\ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }.%exactly once
 \end{quote}
@@ -212,6 +224,14 @@ If $f:X\to Y$ and $g:Y\to X$ are functions such that $g\circ f=i_X$ and $f\circ 
 \end{theorem}
 
 The upshot of Theorems~\ref{thm:comp of inverses} and \ref{thm:unique inverse} is that if $f^{-1}$ is a function, then it is the only one satisfying the two-sided inverse property exhibited in Corollary~\ref{cor:two-sided inverse} and Theorem~\ref{thm:comp of inverses}. That is, inverse functions are unique when they exist. When the relation $f^{-1}$ is a function, we call it the \textbf{inverse function} of $f$.
+
+\begin{problem}
+Let $X\subseteq\mathbb{R}$ and suppose $f:X\to\mathbb{R}$ is a function.  Explain the difference between $f^{-1}(x)$ and $[f(x)]^{-1}$.  When does each exist?
+\end{problem}
+
+\begin{problem}
+Let $X,Y\subseteq\mathbb{R}$ and define $f:X\to Y$ via $f(x)=e^x$ and $g:Y\to X$ via $g(x)=\ln(x)$.  Identify the largest possible choices for $X$ and $Y$ so that $f$ and $g$ are inverses of each other.
+\end{problem}
 
 \begin{theorem}\label{thm:inverse of inverse}
 If $f:X\to Y$ is a bijection, then $(f^{-1})^{-1}=f$.
