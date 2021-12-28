@@ -1,0 +1,263 @@
+\begin{section}{More About Quantification}
+
+When writing mathematical proofs, we do not explicitly use the symbolic representation of a given statement in terms of quantifiers and logical connectives.  Nonetheless, having this notation at our disposal allows us to compartmentalize the abstract nature of mathematical propositions and provides us with a way to talk about the general structure involved in the construction of a proof.
+
+\begin{definition}
+Two quantified propositions are \textbf{logically equivalent} if they have the same truth value in every universe of discourse.
+\end{definition}
+
+\begin{problem}
+Consider the propositions $(\exists x\in U)(x^2-4=0)$ and $(\exists x\in U)(x^2-2=0)$, where $U$ is some universe of discourse.  
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Do these propositions have the same truth value if the universe of discourse is the set of real numbers?
+\item Provide an example of a universe of discourse such that the propositions yield different truth values.  
+\item What can you conclude about the logical equivalence of these propositions?
+\end{enumerate}
+\end{problem}
+
+It is worth pointing out an important distinction.  Consider the propositions ``All cars are red" and ``All natural numbers are positive".  Both of these are instances of the \textbf{logical form} $(\forall x)P(x)$.  It turns out that the first proposition is false and the second is true; however, it does not make sense to attach a truth value to the logical form.  A logical form is a blueprint for particular propositions.  If we are careful, it makes sense to talk about whether two logical forms are logically equivalent.  For example, $(\forall x)(P(x)\implies Q(x))$ is logically equivalent to $(\forall x)(\neg Q(x)\implies \neg P(x))$ since a conditional proposition is logically equivalent to its contrapositive (see Theorem~\ref{thm:contrapos}).  For fixed $P(x)$ and $Q(x)$, these two forms will always have the same truth value independent of the universe of discourse.  If you change $P(x)$ and $Q(x)$, then the truth value may change, but the two forms will still agree.
+
+The next theorem tells us how to negate logical forms involving quantifiers. Your proof should involve several mini arguments. For example, in Part~(a), you will need to proof that if $\neg (\forall x)P(x)$ is true, then $(\exists x)(\neg P(x))$ is also true.
+
+\begin{theorem}\label{thm:negation of quantifiers}
+Let $P(x)$ be a predicate in some universe of discourse.  Then
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\neg (\forall x)P(x)$ is logically equivalent to $(\exists x)(\neg P(x))$;
+\item $\neg (\exists x)P(x)$ is logically equivalent to $(\forall x)(\neg P(x))$.
+\end{enumerate}
+\end{theorem}
+
+\begin{problem}
+Negate each of the following sentences.  Disregard the truth value and the universe of discourse.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $(\forall x)(x>3)$
+\item $(\exists x)(x \mbox{ is prime}\wedge x \mbox{ is even})$
+\item All cars are red.
+\item Every Wookiee is named Chewbacca.
+\item Some hippies are Republican.
+\item Some birds are not angry.
+\item Not every video game will rot your brain.
+\item For all $x\in\mathbb{N}$, $x^2+x+41$ is prime.
+\item There exists $x\in\mathbb{Z}$ such that $1/x\notin\mathbb{Z}$.
+\item There is no function $f$ such that if $f$ is continuous, then $f$ is not differentiable.
+\end{enumerate}
+\end{problem}
+
+Using Theorem~\ref{thm:negation of quantifiers} and our previous results involving quantification, we can negate complex mathematical propositions by working from left to right. For example, if we negate the false proposition
+\[
+(\exists x\in\mathbb{R})(\forall y\in\mathbb{R})(x+y=0),
+\]
+we obtain the proposition
+\[
+\neg(\exists x\in\mathbb{R})(\forall y\in\mathbb{R})(x+y=0),
+\]
+which is logically equivalent to
+\[
+(\forall x\in\mathbb{R})(\exists y\in\mathbb{R})(x+y\neq 0)
+\]
+and must be true. For a more complicated example, consider the (false) proposition
+\[
+(\forall x)[x>0\implies (\exists y)(y<0 \wedge xy>0)].
+\]
+Then its negation
+\[
+\neg (\forall x)[x>0\implies (\exists y)(y<0 \wedge xy>0)]
+\]
+is logically equivalent to
+\[
+(\exists x)[x>0 \wedge \neg (\exists y)(y<0 \wedge xy>0)],
+\]
+which happens to be logically equivalent to
+\[
+(\exists x)[x>0 \wedge (\forall y)(y\geq 0 \vee xy\leq 0)].
+\]
+Can you identify the theorems that were used in the two examples above?
+
+\begin{problem}
+Negate each of the following propositions.  Disregard the truth value and the universe of discourse.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $(\forall n\in\mathbb{N})(\exists m\in\mathbb{N})(m<n)$
+\item For every $y\in \mathbb{R}$, there exists $x\in \mathbb{R}$ such that $y=x^2$.
+\item For all $y\in \mathbb{R}$, if $y$ is not negative, then there exists $x\in\mathbb{R}$ such that $y=x^2$.
+\item For every $x\in \mathbb{R}$, there exists $y\in \mathbb{R}$ such that $y=x^2$.
+\item There exists $x\in \mathbb{R}$ such that for all $y\in \mathbb{R}$, $y=x^2$.
+\item There exists $y\in \mathbb{R}$ such that for all $x\in \mathbb{R}$, $y=x^2$.
+\item $(\forall x,y,z\in\mathbb{Z})((xy \mbox{ is even}\wedge yz\mbox{ is even})\implies xz\mbox{ is even})$
+\item There exists a married person $x$ such that for all married people $y$, $x$ is married to $y$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Consider the following proposition in some universe of discourse.
+\begin{enumerate}
+\item[] ``For all goofy wobblers $x$, there exists a dinglehopper $y$ such that if $x$ is a not a nugget, then $y$ is a doofus."
+\end{enumerate}
+Find the negation of this proposition so that it includes the phrase ``is not a doofus.''
+\end{problem}
+
+\begin{problem}
+Consider the following proposition in some universe of discourse.
+\begin{enumerate}
+\item[] ``If $x$ and $y$ are both snazzy, then $xy$ is not nifty."
+\end{enumerate}
+Find the contrapositive of this proposition so that it includes the phrase ``not snazzy".
+
+\end{problem}
+
+At this point, we should be able to use our understanding of quantification to construct counterexamples to complicated false propositions and proofs of complicated true propositions.  Here are some general proof structures for various logical forms.
+
+\begin{skeleton}[Direct Proof of $(\forall x)P(x)$]\label{skeleton:for all}
+Here is the general structure for a direct proof of the proposition $(\forall x)P(x)$. Assume $U$ is the universe of discourse.
+
+\begin{mdframed}[style=skeleton]
+\begin{proof}
+\emph{[State any upfront assumptions.]} Let $x \in U$. 
+\begin{center}
+$\ldots$ \ \emph{[Use definitions and known results.]} \ $\ldots$\\
+\end{center}
+\noindent Therefore, $P(x)$ is true. Since $x$ was arbitrary, for all $x$, $P(x)$.
+\end{proof}
+\end{mdframed}
+\end{skeleton}
+
+Combining Skeleton Proof~\ref{skeleton:for all} with Skeleton Proof~\ref{skeleton:direct proof}, we obtain the following skeleton proof.
+
+\begin{skeleton}[Proof of $(\forall x)(A(x)\implies B(x))$]\label{skeleton:for all direct proof}
+Below is the general structure for a direct proof of the proposition $(\forall x)(A(x)\implies B(x)$. Assume $U$ is the universe of discourse.
+
+\begin{mdframed}[style=skeleton]
+\begin{proof}
+\emph{[State any upfront assumptions.]} Let $x \in U$.  Assume $A(x)$.
+\begin{center}
+$\ldots$ \ \emph{[Use definitions and known results to derive $B(x)$]} \ $\ldots$\\
+\end{center}
+\noindent Therefore, $B(x)$.
+\end{proof}
+\end{mdframed}
+\end{skeleton}
+
+\begin{skeleton}[Proof of $(\forall x)P(x)$ by Contradiction]
+Here is the general structure for a proof of the proposition $(\forall x)P(x)$ via contradiction. Assume $U$ is the universe of discourse.
+
+\begin{mdframed}[style=skeleton]
+\begin{proof}
+\emph{[State any upfront assumptions.]} For sake of a contradiction, assume that there exists $x\in U$ such that $\neg P(x)$. 
+\begin{center}
+$\ldots$ \ \emph{[Do something to derive a contradiction.]} \ $\ldots$\\
+\end{center}
+\noindent This is a contradiction. Therefore, for all $x$, $P(x)$ is true.
+\end{proof}
+\end{mdframed}
+\end{skeleton}
+
+\begin{skeleton}[Direct Proof of $(\exists x)P(x)$]\label{skeleton:exists}
+Here is the general structure for a direct proof of the proposition $(\exists x)P(x)$. Assume $U$ is the universe of discourse.
+
+\begin{mdframed}[style=skeleton]
+\begin{proof}
+\emph{[State any upfront assumptions.]} $\ldots$ 
+\begin{center}
+$\ldots$ \ \emph{[Use definitions, axioms, and previous results to deduce that an $x$ exists for which $P(x)$ is true; or if you have an $x$ that works, just verify that it does.]} \ $\ldots$ 
+\end{center}
+\noindent Therefore, there exists $x\in U$ such that $P(x)$.
+\end{proof}
+\end{mdframed}
+\end{skeleton}
+
+\begin{skeleton}[Proof of $(\exists x)P(x)$ by Contradiction]
+Below is the general structure for a proof of the proposition $(\exists x)P(x)$ via contradiction. Assume $U$ is the universe of discourse.
+
+\begin{mdframed}[style=skeleton]
+\begin{proof}
+\emph{[State any upfront assumptions.]} For sake of a contradiction, assume that for all $x\in U$, $\neg P(x)$.
+\begin{center}
+$\ldots$ \ \emph{[Do something to derive a contradiction.]} \ $\ldots$\\
+\end{center}
+\noindent This is a contradiction. Therefore, there exists $x\in U$ such that $P(x)$.
+\end{proof}
+\end{mdframed}
+\end{skeleton}
+
+Note that if $Q(x)$ is a predicate for which $(\forall x)Q(x)$ is false, then a counterexample to this proposition amounts to showing $(\exists x)(\neg Q(x))$, which can be proved by following the structure of Skeleton Proof~\ref{skeleton:exists}.
+
+It is important to point out that sometimes we will have to combine various proof techniques in a single proof.  For example, if you wanted to prove a proposition of the form $(\forall x)(P(x) \implies Q(x)$) by contradiction, we would start by assuming that there exists $x$ in the universe of discourse such that $P(x)$ and $\neg Q(x)$.
+
+\begin{problem}
+Determine whether each of the following statements is true or false. If the statement is true, prove it. If the statement is false, provide a counterexample.  
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item For all $n\in\mathbb{N}$, $n^2\geq 5$.
+\item There exists $n \in \mathbb{N}$ such that $n^2-1=0$.
+\item There exists $x \in \mathbb{N}$ such that for all $y \in \mathbb{N}$, $y \leq x$.
+\item For all $x\in\mathbb{Z}$, $x^3\geq x$.
+\item For all $n\in\mathbb{Z}$, there exists $m\in\mathbb{Z}$ such that $n+m=0$.
+\item There exists integers $a$ and $b$ such that $2a+7b=1$.
+\item There do not exist integers $m$ and $n$ such that $2m+4n=7$.
+\item For all $a, b, c\in\mathbb{Z}$, if $a$ divides $bc$, then either $a$ divides $b$ or $a$ divides $c$.
+\item For all $a, b\in\mathbb{Z}$, if $ab$ is even, then either $a$ or $b$ is even.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Explain why the following ``proof'' is not a valid argument.
+\begin{enumerate}
+\item[] \textbf{Claim.}  For all $x,y\in \mathbb{Z}$, if $x$ and $y$ are even, then $x+y$ is even.
+
+\bigskip
+
+\emph{``Proof.''}  Suppose $x, y \in \mathbb{Z}$ such that $x$ and $y$ are even.  For sake of a contradiction, assume that $x+y$ is odd.  Then there exists $k \in \mathbb{Z}$ such that $x+y=2k+1$.  This implies that $(x+y)-2k=1$.  We see that the left side of the equation is even because it is the difference of even numbers.  However, the right side is odd.  Since an even number cannot equal an odd number, we have a contradiction.  Therefore, $x+y$ is even.  \qed %\hfill $\Box$
+\end{enumerate}
+\end{problem}
+
+Sometimes it is useful to split the universe of discourse into multiple collections to deal with separately.  When doing this, it is important to make sure that your cases are exhaustive (i.e., every possible element of the universe of discourse has been accounted for).  Ideally, your cases will also be disjoint (i.e., you have not considered the same element more than once).  For example, if our universe of discourse is the set of integers, we can separately consider even versus odd integers. If our universe of discourse is the set of real numbers, we might want to consider rational versus irrational numbers, or possibly negative versus zero versus and positive. Attacking a proof in this way, is often referred to as a \textbf{proof by cases} (or \textbf{proof by exhaustion}). A proof by cases may also be useful when dealing with hypotheses involving ``or".  Note that the use of a proof by cases is justified by Theorem~\ref{thm:logical form for cases}.
+
+If you decide to approach a proof using cases, be sure to inform the reader that you are doing so and organize your proof in a sensible way. Note that doing an analysis of cases should be avoided if possible. For example, while it is valid to separately consider the cases of whether $a$ is an even integer versus odd integer in the proof of Theorem~\ref{thm:divides sum}, it is completely unnecessary.  To prove the next theorem, you might want to consider two cases.
+
+\begin{theorem}\label{thm:3n^2+n+14 is even}
+For all $n\in \mathbb{Z}$, $3n^2+n+14$ is even.
+\end{theorem}
+
+Prove the following theorem by proving the contrapositive using two cases.
+
+\begin{theorem}\label{thm:nm odd implies n or m odd} %needs cases
+For all $n,m\in\mathbb{Z}$, if $nm$ is odd, then $n$ is odd and $m$ is odd.
+\end{theorem}
+
+When proving the previous theorem, you likely experienced some d\`ej\'a vu. You should have assumed ``$n$ is even or $m$ is even" at some point in your proof. The first case is ``$n$ is even" while the second case is ``$m$ is even."  (Note that you do not need to handle the case when both $n$ and $m$ are even since the two individual cases already yield the desired result.) The proofs for both cases are identical except the roles of $n$ and $m$ are interchanged.  In instances such as this, mathematicians have a shortcut. Instead of writing two essentially identical proofs for each case, you can simply handle one of the cases and indicate that the remaining case follows from a nearly identical proof.  The quickest way to do this is to use the phrase, ``Without loss of generality, assume\ldots".  For example, here is a proof of Theorem~\ref{thm:nm odd implies n or m odd} that utilizes this approach.\\
+
+\noindent \emph{Proof of Theorem~\ref{thm:nm odd implies n or m odd}}. We will prove the contrapositive.  Let $n,m\in\mathbb{Z}$ and assume $n$ is even or $m$ is even. Without loss of generality, assume $n$ is even.  Then there exists $k\in\mathbb{Z}$ such that $n=2k$. We see that
+\[
+nm=(2k)m=2(km).
+\]
+Since both $k$ and $m$ are integers, $km$ is an integer. This shows that $nm$ is even. We have proved the contrapositive, and hence for all $n,m\in\mathbb{Z}$, if $nm$ is odd, then $n$ is odd and $m$ is odd. \qed
+
+Note that it would not be appropriate to utilize the ``without loss of generality" approach to combine the two cases in the proof of Theorem~\ref{thm:3n^2+n+14 is even} since the proof of the second case is not as simple as swapping the roles of symbols in the proof of the first case.
+
+There are times when a theorem will make a claim about the \emph{uniqueness} of a particular mathematical object.  For example, in Section~\ref{sec:AxiomsRealNumbers}, you will be asked to prove that both the additive and multiplicative identities (i.e, 0 and 1) are unique (see Theorems~\ref{thm:unique additive identity} and~\ref{thm:unique multiplicative identity}). As another example, the Fundamental Theorem of Arithmetic (see Theorem~\ref{thm:FTA}) states that every natural number greater than 1 can be expressed uniquely (up to the order in which they appear) as the product of one or more primes. The typical approach to proving uniqueness is to suppose that there are potentially two objects with the desired property and then show that these objects are actually equal. Whether you approach this as a proof by contradiction is a matter of taste. It is common to use $\tcboxmath{\exists!}$ as a symbolic abbreviation for ``there exists a unique\ldots such that".
+
+\begin{skeleton}[Direct Proof of $(\exists! x)P(x)$]\label{skeleton:uniqueness}
+Here is the general structure for a direct proof of the proposition $(\exists! x)P(x)$. Assume $U$ is the universe of discourse.
+
+\begin{mdframed}[style=skeleton]
+\begin{proof}
+\emph{[State any upfront assumptions.]} $\ldots$ 
+\begin{center}
+$\ldots$ \ \emph{[Use definitions, axioms, and previous results to deduce that an $x$ exists for which $P(x)$ is true; or if you have an $x$ that works, just verify that it does.]} \ $\ldots$ 
+\end{center}
+\noindent Therefore, there exists $x\in U$ such that $P(x)$. Now, suppose $x_1,x_2\in U$ such that $P(x_1)$ and $P(x_2)$.
+\begin{center}
+$\ldots$ \ \emph{[Prove that $x_1=x_2$.]} \ $\ldots$ 
+\end{center}
+This implies that there exists a unique $x$ such that $P(x)$.
+\end{proof}
+\end{mdframed}
+\end{skeleton}
+
+The next theorem provides an opportunity to practice proving uniqueness.
+
+\begin{theorem}
+If $c,a,r\in\mathbb{R}$ such that $c\neq 0$ and $r\neq a/c$, then there exists a unique $x\in\mathbb{R}$ such that $(ax+1)/(cx)=r$.
+\end{theorem}
+
+\epigraph{With two published novels and a file full of ideas for others, the only thing I know about writing is this: it only happens when you sit down and do it. Studying good writing is important, reading good writing is important, talking to other writers is important, but the only way you can produce good writing is to write.}{Jamie Beth Cohen, novelist}
+
+\end{section}

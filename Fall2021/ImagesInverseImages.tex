@@ -1,0 +1,121 @@
+\begin{section}{Images and Preimages of Functions}\label{sec:Images and Preimages}
+
+There are two important types of sets related to functions.
+
+\begin{definition}
+Let $f:X\to Y$ be a function.  \begin{enumerate}[label=\textrm{(\alph*)}]
+\item If $S\subseteq X$, the \textbf{image} of $S$ under $f$ is defined via
+\[
+\tcboxmath{f(S)\coloneqq \{f(x) \mid  x\in S\}}.
+\]
+\item  If $T\subseteq Y$, the \textbf{preimage} (or \textbf{inverse image}) of $T$ under $f$ is defined via
+\[
+\tcboxmath{f^{-1}(T)\coloneqq \{x\in X \mid  f(x)\in T\}}.
+\]
+\end{enumerate}
+\end{definition}
+
+The image of a subset $S$ of the domain is simply the subset of the codomain we obtain by mapping the elements of $S$. It is important to emphasize that the function $f$ maps \emph{elements} of $X$ to \emph{elements} of $Y$, but we can apply $f$ to a \emph{subset} of $X$ to yield a \emph{subset} of $Y$.  That is, if $S\subseteq X$, then $f(S)\subseteq Y$. Note that the image of the domain is the same as the range of the function.  That is, $f(X)=\range(f)$. 
+
+When it comes to preimages, there is a real opportunity for confusion.  In Section~\ref{sec:Compositions and Inverse Functions}, we introduced the inverse relation $f^{-1}$ of a function $f$ (see Defintion~\ref{def:inverse of a function}) and proved that this relation is a function exactly when $f$ is a bijection (see Theorem~\ref{thm:inverse function iff bijection}). If $f^{-1}:Y\to X$ is a function, then it is sensible to write $f^{-1}(y)$ for $y\in Y$.  Notice that we defined the preimage of a subset of the codomain regardless of whether $f^{-1}$ is a function or not. In particular, for $T\subseteq Y$, $f^{-1}(T)$ is the set of elements in the domain that map to elements in $T$. As a special case, $f^{-1}(\{y\})$ is the set of elements in the domain that map to $y\in Y$.  If $y\notin \range(f)$, then $f^{-1}(\{y\})=\emptyset$. Notice that if $y\in Y$, $f^{-1}(\{y\})$ is always a sensible thing to write while $f^{-1}(y)$ only makes sense if $f^{-1}$ is a function. Also, note that the preimage of the codomain is the domain.  That is, $f^{-1}(Y)=X$.
+
+\begin{problem}
+Define $f:\mathbb{Z}\to\mathbb{Z}$ via $f(x)=x^2$. List elements in each of the following sets.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $f(\{0,1,2\})$
+\item $f^{-1}(\{0,1,4\})$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Define $f:\mathbb{R}\to\mathbb{R}$ via $f(x)=3x^2-4$.
+Find each of the following sets.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $f(\{-1,1\})$
+\item $f([-2,4])$
+\item $f((-2,4))$
+\item $f^{-1}([-10,1])$
+\item $f^{-1}((-3,3))$
+\item $f(\emptyset)$
+\item $f(\mathbb{R})$
+\item $f^{-1}(\{-1\})$
+\item $f^{-1}(\emptyset)$
+\item $f^{-1}(\mathbb{R})$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Define $f:\mathbb{R}\to\mathbb{R}$ via $f(x)=x^2$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Find two nonempty subsets $A$ and $B$ of $\mathbb{R}$ such that $A\cap B=\emptyset$ but $f^{-1}(A)=f^{-1}(B)$.
+\item Find two nonempty subsets $A$ and $B$ of $\mathbb{R}$ such that $A\cap B=\emptyset$ but $f(A)=f(B)$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Suppose $f:X\to Y$ is an injection and $A$ and $B$ are disjoint subsets of $X$. Are $f(A)$ and $f(B)$ necessarily disjoint subsets of $Y$?  If so, prove it. Otherwise, provide a counterexample.
+\end{problem}
+
+\begin{problem}
+Find examples of functions $f$ and $g$ together with sets $S$ and $T$ such that $f(f^{-1}(T))\neq T$ and $g^{-1}(g(S))\neq S$.
+\end{problem}
+
+\begin{problem}
+Let $f:X\to Y$ be a function and suppose $A, B\subseteq X$ and $C, D\subseteq Y$. Determine whether each of the following statements is true or false. If a statement is true, prove it.  Otherwise, provide a counterexample.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item If $A\subseteq B$, then $f(A)\subseteq f(B)$.
+\item If $C\subseteq D$, then $f^{-1}(C)\subseteq f^{-1}(D)$.
+\item $f(A\cup B)\subseteq f(A)\cup f(B)$.
+\item $f(A\cup B)\supseteq f(A)\cup f(B)$.
+\item $f(A\cap B)\subseteq f(A)\cap f(B)$.
+\item $f(A\cap B)\supseteq f(A)\cap f(B)$.
+\item $f^{-1}(C\cup D)\subseteq f^{-1}(C)\cup f^{-1}(D)$.
+\item $f^{-1}(C\cup D)\supseteq f^{-1}(C)\cup f^{-1}(D)$.
+\item $f^{-1}(C\cap D)\subseteq f^{-1}(C)\cap f^{-1}(D)$.
+\item $f^{-1}(C\cap D)\supseteq f^{-1}(C)\cap f^{-1}(D)$.
+\item $A\subseteq f^{-1}(f(A))$.
+\item $A\supseteq f^{-1}(f(A))$.
+\item $f(f^{-1}(C))\subseteq C$.
+\item $f(f^{-1}(C))\supseteq C$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+For each of the statements in the previous problem that were false, determine conditions, if any, on the corresponding sets that would make the statement true.
+\end{problem}
+
+We can generalize the results above to handle arbitrary collections of sets.
+
+\begin{theorem}\label{thm:unions and intersections of images}
+Let $f:X\to Y$ be a function and suppose $\{A_{\alpha}\}_{\alpha\in\Delta}$ is a collection of subsets of $X$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\displaystyle f\left(\bigcup_{\alpha\in\Delta} A_{\alpha}\right)=\bigcup_{\alpha\in\Delta} f\left(A_{\alpha}\right)$.
+\item $\displaystyle f\left(\bigcap_{\alpha\in\Delta} A_{\alpha}\right)\subseteq\bigcap_{\alpha\in\Delta} f\left(A_{\alpha}\right)$.
+\end{enumerate}
+\end{theorem}
+
+\begin{theorem}\label{thm:unions and intersections of preimages}
+Let $f:X\to Y$ be a function and suppose $\{C_{\alpha}\}_{\alpha\in\Delta}$ is a collection of subsets of $Y$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\displaystyle f^{-1}\left(\bigcup_{\alpha\in\Delta} C_{\alpha}\right)=\bigcup_{\alpha\in\Delta} f^{-1}\left(C_{\alpha}\right)$.
+\item $\displaystyle f^{-1}\left(\bigcap_{\alpha\in\Delta} C_{\alpha}\right)=\bigcap_{\alpha\in\Delta} f^{-1}\left(C_{\alpha}\right)$.
+\end{enumerate}
+\end{theorem}
+
+\begin{problem}
+Consider the equivalence relation given in Theorem~\ref{thm:equiv relation from preimages}. Explain why each equivalence class $[a]$ is equal to $f^{-1}(\{f(a)\})$.
+\end{problem}
+
+\begin{problem}
+Suppose that $f: \mathbb{R}\to \mathbb{R}$ is a function satisfying $f(x+y)=f(x)+f(y)$ for all $x,y\in\mathbb{R}$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Prove that $f(0)=0$.
+\item Prove that $f(-x)=-f(x)$ for all $x\in\mathbb{R}$.
+\item Prove that $f$ is injective if and only if $f^{-1}(\{0\})=\{0\}$.
+\item Certainly every function given by $f(x)=mx$ for $m\in\mathbb{R}$ satisfies the initial hypothesis. Can you provide an example of a function that satisfies $f(x+y)=f(x)+f(y)$ that is not of the form $f(x)=mx$?
+\end{enumerate}
+\end{problem}
+
+\epigraph{The obstacle is the path.}{Zen saying, Author Unknown}
+
+\end{section}

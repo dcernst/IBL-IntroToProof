@@ -1,0 +1,264 @@
+\begin{section}{Introduction to Functions}
+
+Up until this point, you may have only encountered functions as an algebraic rule, e.g., $f(x)=x^{2}-1$, for transforming one real number into another.  However, we can study functions in a much broader context.  The basic building blocks of a function are a first set and a second set, say $X$ and $Y$, and a ``correspondence'' that assigns \emph{every} element of $X$ to \emph{exactly one} element of $Y$.  Let's take a look at the actual definition.
+
+\begin{definition}\label{def:function}
+Let $X$ and $Y$ be two nonempty sets.  A \textbf{function $f$ from $X$ to $Y$} is a relation from $X$ to $Y$ such that for every $x\in X$, there exists a unique $y\in Y$ such that $(x,y)\in f$. The set $X$ is called the \textbf{domain} of $f$ and is denoted by $\tcboxmath{\dom(f)}$.  The set $Y$ is called the \textbf{codomain} of $f$ and is denoted by $\tcboxmath{\codom(f)}$ while the subset of the codomain defined via
+\[
+\tcboxmath{\range(f)\coloneqq \{y\in Y\mid \mbox{there exists }x\mbox{ such that } (x,y)\in f\}}
+\]
+is called the \textbf{range} of $f$ or the \textbf{image of $X$} under $f$.
+\end{definition}
+
+There is a variety of notation and terminology associated to functions. We will write $\tcboxmath{f:X\to Y}$ to indicate that $f$ is a function from $X$ to $Y$. We will make use of statements such as ``Let $f:X\to Y$ be the function defined via\ldots" or ``Define $f:X\to Y$ via\ldots", where $f$ is understood to be a function in the second statement. Sometimes the word \textbf{mapping} (or \textbf{map}) is used in place of the word function.  If $(a,b)\in f$ for a function $f$, we often write $\tcboxmath{f(a)=b}$ and say that ``$f$ maps $a$ to $b$'' or ``$f$ of $a$ equals $b$". In this case, $a$ may be called an \textbf{input} of $f$ and is the \textbf{preimage} of $b$ under $f$ while $b$ is called an \textbf{output} of $f$ and is the \textbf{image} of $a$ under $f$. Note that the domain of a function is the set of inputs while the range is the set of outputs for the function.
+ 
+%Notice that we can interpret our definition of function in terms of existence and uniqueness.  That is, $f:X\to Y$ is a function provided:
+%\begin{enumerate}
+%\item (Existence) For each $x\in X$, there exists $y\in Y$ such that $y=f(x)$, and
+%\item (Uniqueness) If $f(x)=y_1$ and $f(x)=y_2$, then $y_{1}=y_{2}$.
+%\end{enumerate}
+%In other words, every element of the domain is utilized and is utilized exactly once. However, there are no restrictions on whether an element of the codomain ever appears in the second coordinate of an ordered pair in the relation.  Yet if an element of $Y$ is in the range of $f$, it may appear in more than one ordered pair in the relation.
+
+According to our definition, if $f:X\to Y$ is a function, then every element of the domain is utilized exactly once. However, there are no restrictions on whether an element of the codomain ever appears in the second coordinate of an ordered pair in the relation.  Yet if an element of $Y$ is in the range of $f$, it may appear in more than one ordered pair in the relation.
+
+It follows immediately from the definition of function that two functions are equal if and only if they have the same domain, same codomain, and the same set of ordered pairs in the relation. That is, functions $f$ and $g$ are equal if and only if $\dom(f)=\dom(g)$, $\codom(f)=\codom(g)$, and $f(x)=g(x)$ for all $x\in X$.
+
+Since functions are special types of relations, we can represent them using digraphs and graphs when practical. Digraphs for functions are often called \textbf{function} (or \textbf{mapping}) \textbf{diagrams}. When drawing function diagrams, it is standard practice to put the vertices for the domain on the left and the vertices for the codomain on the right, so that all directed edges point from left to right. We may also draw an additional arrow labeled by the name of the function from the domain to the codomain.
+
+\begin{example}\label{ex:function}
+Let $X=\{a,b,c,d\}$ to $Y=\{1,2,3,4\}$ and define the relation $f$ from $X$ to $Y$ via
+\[
+f=\{(a,2),(b,4),(c,4),(d,1)\}.
+\]
+Since each element $X$ appears exactly once as a first coordinate, $f$ is a function with domain $X$ and codomain $Y$ (i.e., $f:X\to Y$). In this case, we see that $\range(f)=\{1,2,4\}$.  Moreover, we can write things like $f(a)=2$ and $c\mapsto 4$, and say things like ``$f$ maps $b$ to 4" and ``the image of $d$ is 1."  The function diagram for $f$ is depicted in Figure~\ref{fig:function diagram}.
+\end{example}
+
+\tikzset{every loop/.style={min distance=8mm}}
+\tikzstyle{vert} = [circle, draw, fill=grey,inner sep=0pt, minimum size=5mm]
+\tikzstyle{b} = [draw,-stealth]
+
+\begin{figure}[h!]
+\begin{center}
+\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2cm,semithick,scale=1.2]
+
+\node[vert] (A) at (0,4) {\scriptsize $a$};
+\node[vert] (B) at (0,3) {\scriptsize $b$};
+\node[vert] (C) at (0,2) {\scriptsize $c$};
+\node[vert] (D) at (0,1) {\scriptsize $d$};
+
+\node[vert] (1) at (2.5,4) {\scriptsize $1$};
+\node[vert] (2) at (2.5,3) {\scriptsize $2$};
+\node[vert] (3) at (2.5,2) {\scriptsize $3$};
+\node[vert] (4) at (2.5,1) {\scriptsize $4$};
+
+\path (A) edge node {} (2)
+(B) edge node {} (4)
+(C) edge node {} (4)
+(D) edge node {} (1);
+
+\node[draw,rounded corners,fit=(A) (B) (C) (D),minimum width=1.3cm,gray] {};
+\node[draw,rounded corners,fit=(1) (2) (3) (4),minimum width=1.3cm,gray] {};
+\node (X) at (0,4.6) {$X$};
+\node (Y) at (2.5,4.6) {$Y$};
+\path (X) edge [bend left] node {$f$} (Y);
+\end{tikzpicture}
+\caption{Function diagram for a function from $X=\{a,b,c,d,\}$ to $Y=\{1,2,3,4\}$.}\label{fig:function diagram}
+\end{center}
+\end{figure}
+
+\begin{problem}
+Determine whether each of the relations defined in the following examples and problems is a function.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Example~\ref{ex:relation finite to finite} (see Figure~\ref{fig:digraph finite to finite})
+\item Example~\ref{ex:circle} (see Figure~\ref{fig:unit circle})
+\item Problem~\ref{prob:parabola}
+\item Problem~\ref{prob:facebook}
+\end{enumerate}
+\end{problem}
+
+\begin{problem}\label{prob:lots of potential functions}
+Let $X=\{\circ, \square,\triangle,\smiley\}$ and $Y=\{a,b,c,d,e\}$. For each of the following relations, draw the corresponding digraph and determine whether the relation represents a function from $X$ to $Y$, $Y$ to $X$, $X$ to $X$, or does not represent a function. If the relation is a function, determine the domain, codomain, and range.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $f=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,d)\}$
+\item $g=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,c)\}$
+\item $h=\{(\circ, a),(\square,b),(\triangle,c),(\circ,d)\}$
+\item $k=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,d),(\square,e)\}$
+\item $l=\{(\circ, e),(\square,e),(\triangle,e),(\smiley,e)\}$
+\item $m=\{(\circ, a),(\triangle,b),(\smiley,c)\}$
+\item \label{prob:identity} $i=\{(\circ,\circ),(\square, \square),(\triangle,\triangle),(\smiley,\smiley)\}$
+\item\label{prob:happy} Define the relation $\operatorname{happy}$ from $Y$ to $X$ via $(y,\smiley)\in\operatorname{happy}$ for all $y\in Y$.
+\item\label{prob:nugget} $\operatorname{nugget}=\{(\circ,\circ),(\square, \square),(\triangle,\triangle),(\smiley,\square)\}$
+\end{enumerate}
+\end{problem}
+
+The last two parts of the previous problem make it clear that functions may have names consisting of more than one letter.  The function names $\sin$, $\cos$, $\log$, and $\ln$ are instances of this that you have likely encountered in your previous experience in mathematics. One thing that you may have never noticed is the type of font that we use for function names. It is common to italicize generic function names like $f$ but not common function names like $\sin$.  However, we always italicize the variables used to represent the input and output for a function. For example, consider the font types used in the expressions $\sin(x)$ and $\ln(a)$.
+
+\begin{problem}
+What properties does the digraph for a relation from $X$ to $Y$ need to have in order for it to represent a function?
+\end{problem}
+
+\begin{problem}
+In high school you may have been told that a graph represents a function if it passes the \textbf{vertical line test}.  Carefully state what the vertical line test says and then explain why it works.
+\end{problem}
+
+Sometimes we can define a function using a formula. For example, we can write $f(x)=x^2-1$ to mean that each $x$ in the domain of $f$ maps to $x^2-1$ in the codomain. However, notice that providing only a formula is ambiguous!  A function is determined by its domain, codomain, and the correspondence between these two sets. If we only provide a description for the correspondence, it is not clear what the domain and codomain are.  Two functions that are defined by the same formula, but have different domains or codomains are \emph{not} equal.  
+
+\begin{example}
+The function $f:\mathbb{R}\to \mathbb{R}$ defined via $f(x)=x^{2}-1$ is not equal to the function $g:\mathbb{N}\to\mathbb{R}$ defined by $g(x)=x^{2}-1$ since the two functions do not have the same domain.
+\end{example}
+
+Sometimes we rely on context to interpret the domain and codomain.  For example, in a calculus class, when we describe a function in terms of a formula, we are implicitly assuming that the domain is the largest allowable subset of $\mathbb{R}$---sometimes called the \textbf{default domain}---that makes sense for the given formula while the codomain is $\mathbb{R}$. 
+
+\begin{example}
+If we write $f(x)=x^2-1$, $g(x)=\sqrt{x}$, and $h(x)=\frac{1}{x}$ without mentioning the domains, we would typically interpret these as the functions $f:\mathbb{R}\to \mathbb{R}$, $g:[0,\infty)\to \mathbb{R}$, and $h:\mathbb{R}\setminus \{0\}\to \mathbb{R}$ that are determined by their respective formulas.
+\end{example}
+
+\begin{problem}
+Provide an example of each of the following.  You may draw a function diagram, write down a list of ordered pairs, or write a formula as long as the domain and codomain are clear.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item A function $f$ from a set with 4 elements to a set with 3 elements such that $\range(f)=\codom(f)$.
+\item A function $g$ from a set with 4 elements to a set with 3 elements such that $\range(g)$ is strictly smaller than $\codom(g)$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Let $f:X\to Y$ be a function and suppose that $X$ and $Y$ are finite sets with $n$ and $m$ elements, respectively, such that $n<m$.  Is it possible for $\range(f)=\codom(f)$?  If so, provide an example.  If this is not possible, explain why.
+\end{problem}
+
+There are a few special functions that we should know the names of.
+
+\begin{definition}
+If $X$ and $Y$ are nonempty sets such that $X\subseteq Y$, then the function $\iota:X\to Y$ defined via $\iota(x)=x$ is called the \textbf{inclusion map from $X$ into $Y$}.
+\end{definition}
+
+Note that ``$\iota$" is the Greek letter ``iota".
+
+\begin{problem}
+Let $X=\{a,b,c\}$ and $Y=\{a,b,c,d\}$.  Draw the function diagram of the inclusion map from $X$ into $Y$.
+\end{problem}
+
+If the domain and codomain are equal, the inclusion map has a special name.
+
+\begin{definition}
+If $X$ is a nonempty set, then the function $i_X:X\to X$ defined via $i_X(x)=x$ is called the \textbf{identity map} (or \textbf{identity function}) \textbf{on $X$}.
+\end{definition}
+
+\begin{example}
+The relation defined in Problem~\ref{prob:lots of potential functions}\ref{prob:identity} is the identity map on $X=\{\circ, \square,\triangle,\smiley\}$.
+\end{example}
+
+\begin{problem}
+Draw a portion of the graph of the identity map on $\mathbb{R}$ as a subset of $\mathbb{R}^2$.
+\end{problem}
+
+\begin{problem}
+Let $A$ be a nonempty set.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Suppose $R$ is an equivalence relation on $A$. What conditions on $R$ must hold in order for $R$ to be a function from $A$ to $A$?
+\item Suppose $f:A\to A$ is a function. Under what conditions is $f$ an equivalence relation on $A$?
+\end{enumerate}
+\end{problem}
+
+\begin{definition}
+Any function $f:X\to Y$ defined via $f(x)=c$ for a fixed $c\in Y$ is called a \textbf{constant function}.
+\end{definition}
+
+\begin{example}
+The function defined in Problem~\ref{prob:lots of potential functions}\ref{prob:happy} is an example of a constant function.  Notice that we can succinctly describe this function using the formula $\operatorname{happy}(y)=\smiley$.
+\end{example}
+
+\begin{definition}
+A \textbf{piecewise-defined function} (or \textbf{piecewise function}) is a function defined by specifying its output on a partition of the domain.
+\end{definition}
+
+Note that ``piecewise" is a way of expressing the function, rather than a property of the function itself.
+
+\begin{example}
+We can express the function in Problem~\ref{prob:lots of potential functions}\ref{prob:nugget} as a piecewise function using the formula
+\[
+\operatorname{nugget}(x)=\begin{cases}
+x, & \mbox{if } x\mbox{ is a geometric shape},\\
+\square, & \mbox{otherwise}.
+\end{cases}
+\]
+\end{example}
+
+\begin{example}
+The function $f:\mathbb{R}\to \mathbb{R}$ defined via
+\[
+f(x)=\begin{cases}
+x^2-1, & \mbox{if } x\geq 0,\\
+17, & \mbox{if } -2\leq x< 0,\\
+-x, & \mbox{if } x<-2
+\end{cases}
+\]
+is an example of a piecewise-defined function.
+\end{example}
+
+\begin{problem}
+Define $f:\mathbb{R}\setminus\{0\}\to \mathbb{R}$ via $f(x)=\frac{|x|}{x}$. Express $f$ as a piecewise function.
+\end{problem}
+
+It is important to point out that not every function can be described using a formula! Despite your prior experience, functions that can be represented succinctly using a formula are rare.
+
+The next problem illustrates that some care must be taken when attempting to define a function.
+
+\begin{problem}\label{prob:not well defined}
+For each of the following, explain why the given description does not define a function.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Define $f:\{1,2,3\}\to \{1,2,3\}$ via $f(a)=a-1$.
+\item Define $g:\mathbb{N}\to \mathbb{Q}$ via $g(n)=\frac{n}{n-1}$.
+\item Let $A_1=\{1,2,3\}$ and $A_2=\{3,4,5\}$. Define $h:A_1\cup A_2\to \{1,2\}$ via
+\[
+h(x)=\begin{cases}
+1, & \mbox{if }x\in A_1\\
+2, & \mbox{if }x\in A_2.
+\end{cases}
+\]
+\item Define $s:\mathbb{Q}\to \mathbb{Z}$ via $s(a/b)=a+b$.
+\end{enumerate}
+\end{problem}
+
+In mathematics, we say that an expression is \textbf{well defined} (or \textbf{unambiguous}) if its definition yields a unique interpretation.  Otherwise, we say that the expression is not well defined (or is \textbf{ambiguous}).  For example, if $a,b,c\in\mathbb{R}$, then the expression $abc$ is well defined since it does not matter if we interpret this as $(ab)c$ or $a(bc)$ since the real numbers are associative under multiplication.  This issue was lurking behind the scenes in the statement of Theorem~\ref{thm:modular sums products}.  In particular, the expressions
+\[
+[a_1]_n+[a_2]_n+\cdots+ [a_k]_n
+\]
+and
+\[
+[a_1]_n [a_2]_n \cdots  [a_k]_n
+\]
+are well defined in $\mathbb{Z}/n\mathbb{Z}$ in light of Theorems~\ref{thm:modular add comm assoc}\ref{modular add assoc} and \ref{thm:modular mult comm assoc}\ref{modular mult assoc}.
+
+When we attempt to define a function, it may not be clear without doing some work that our definition really does yield a function. If there is some potential ambiguity in the definition of a function that ends up not causing any issues, we say that the function is well defined. However, this phrase is a bit of misnomer since all functions are well defined. The issue of whether a description for a proposed function is well defined often arises when defining things in terms of representatives of equivalence classes, or more generally in terms of how an element of the domain is written.  For example, the descriptions given in Parts~(c) and~(d) of Problem~\ref{prob:not well defined} are not well defined.  To show that a potentially ambiguous description for a function $f:X\to Y$ is well defined prove that if $a$ and $b$ are two representations for the same element in $X$, then $f(a)=f(b)$.
+
+\begin{problem}\label{prob:well defined}
+For each of the following, determine whether the description determines a well-defined function.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Define $f:\mathbb{Z}/5\mathbb{Z}\to \mathbb{N}$ via
+\[
+f([a]_5)=\begin{cases}
+0, & \mbox{if } a\mbox{ is even}\\
+1, & \mbox{if } a\mbox{ is odd}.
+\end{cases}
+\]
+\item Define $g:\mathbb{Z}/6\mathbb{Z}\to \mathbb{N}$ via
+\[
+g([a]_6)=\begin{cases}
+0, & \mbox{if } a\mbox{ is even}\\
+1, & \mbox{if } a\mbox{ is odd}.
+\end{cases}
+\]
+\item\label{mod 8 to mod 10} Define $m:\mathbb{Z}/8\mathbb{Z}\to \mathbb{Z}/10\mathbb{Z}$ via $m([x]_{8})=[6x]_{10}$.
+\item\label{mod 10 to mod 10} Define $h:\mathbb{Z}/10\mathbb{Z}\to \mathbb{Z}/10\mathbb{Z}$ via $h([x]_{10})=[6x]_{10}$.
+\item\label{mod 43 to mod 43} Define $k:\mathbb{Z}/43\mathbb{Z}\to \mathbb{Z}/43\mathbb{Z}$ via $k([x]_{43})=[11x-5]_{43}$.
+\item\label{mod 15 to mod 15} Define $\ell:\mathbb{Z}/15\mathbb{Z}\to \mathbb{Z}/15\mathbb{Z}$ via $\ell([x]_{15})=[5x-11]_{15}$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Let $k,n\in\mathbb{N}$ and $m\in\mathbb{Z}$. Under what conditions will $f_m: \mathbb{Z}/n\mathbb{Z}\to \mathbb{Z}/k\mathbb{Z}$ given by $f_m([x]_n) = [mx]_k$ be a well-defined function?  Prove your claim.
+\end{problem}
+
+\epigraph{Don't let anyone rob you of your imagination, your creativity, or your curiosity. It's your place in the world; it's your life. Go on and do all you can with it, and make it the life you want to live.}{Mae Jemison, NASA astronaut}
+
+\end{section}

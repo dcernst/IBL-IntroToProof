@@ -1,0 +1,34 @@
+\chapter{Paradoxes}
+\label{appendix:paradoxes}
+
+A \textbf{paradox} is a statement that can be shown, using a given set of axioms and definitions, to be both true and false. Recall that an axiom is a statement that is assumed to be true without proof. These are the basic building blocks from which all theorems are proved. Paradoxes are often used to show the inconsistencies in a flawed axiomatic theory.  The term paradox is also used informally to describe a surprising or counterintuitive result that follows from a given set of rules. In Section~\ref{sec:RussellsParadox}, we encountered two paradoxes:
+\begin{itemize}
+\item The Barber of Seville (Problem~\ref{prob:barber})
+\item Russell's Paradox (Problem~\ref{prob:russell})
+\end{itemize}
+Below are several additional paradoxes that are worth exploring.
+
+%The following paradoxes are from Dave Richeson.
+\begin{enumerate}
+\item \textbf{Librarian's Paradox.} A librarian is given the unenviable task of creating two new books for the library. Book A contains the names of all books in the library that reference themselves and Book B contains the names of all books in the library that do not reference themselves. But the librarian just created two new books for the library, so their titles must be in either Book A or Book B. Clearly Book A can be listed in Book B, but where should the librarian list Book B?
+
+\item \textbf{Liar's Paradox.} Consider the statement: this sentence is false. Is it true or false?
+
+\item \textbf{Berry Paradox.} Consider the claim: every natural number can be unambiguously described in fourteen words or less. It seems clear that this statement is false, but if that is so, then there is some smallest natural number which cannot be unambiguously described in fourteen words or less. Let's call it $n$. But now $n$ is ``the smallest natural number that cannot be unambiguously described in fourteen words or less.'' This is a complete and unambiguous description of $n$ in fourteen words, contradicting the fact that $n$ was supposed not to have such a description. Therefore, all natural numbers can be unambiguously described in fourteen words or less!
+
+\item \textbf{The Naming Numbers Paradox.} Consider the claim: every natural number can be unambiguously described using no more than 50 characters (where a character is a--z, 0--9, and a ``space''). For example, we can describe 9 as ``9'' or ``nine'' or ``the square of the second prime number.'' There are only 37 characters, so we can describe at most $37^{50}$ numbers, which is very large, but not infinite. So the statement is false. However, here is a ``proof'' that it is true. Let $S$ be the set of natural numbers that can be unambiguously described using no more than 50 characters. For the sake of contradiction, suppose it is not all of $\mathbb{N}$. Then there is a smallest number $t\in\mathbb{N}\setminus S$. We can describe $t$ as: the smallest natural number not in $S$.  Thus $t$ can be described using no more than 50 characters. So $t\in S$, a contradiction.
+
+\item \textbf{Euathlus and Protagoras.} Euathlus wanted to become a lawyer but could not pay Protagoras. Protagoras agreed to teach him under the condition that if Euathlus won his first case, he would pay Protagoras, otherwise not. Euathlus finished his course of study and did nothing. Protagoras sued for his fee. He argued:\\
+
+\noindent If Euathlus loses this case, then he must pay (by the judgment of the court).\\
+If Euathlus wins this case, then he must pay (by the terms of the contract).\\
+He must either win or lose this case.\\
+Therefore Euathlus must pay me.\\
+
+\noindent But Euathlus had learned well the art of rhetoric. He responded:\\
+
+\noindent If I win this case, I do not have to pay (by the judgment of the court).\\
+If I lose this case, I do not have to pay (by the contract).\\
+I must either win or lose the case.\\
+Therefore, I do not have to pay Protagoras.
+\end{enumerate}

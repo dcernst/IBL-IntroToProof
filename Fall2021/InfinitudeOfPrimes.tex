@@ -1,0 +1,39 @@
+\begin{section}{The Infinitude of Primes}\label{sec:infinitude of primes}
+
+The highlight of this section is Theorem~\ref{thm:infprimes}, which states that there are infinitely many primes. The first known proof of this theorem is in Euclid's \emph{Elements} (c.~300 BCE). Euclid stated it as follows: 
+\begin{quote}
+\textbf{Proposition IX.20.} Prime numbers are more than any assigned multitude of prime numbers.
+\end{quote}
+There are a few interesting observations to make about Euclid's proposition and his proof. First, notice that the statement of the theorem does not contain the word ``infinity.'' The Greek's were skittish about the idea of infinity. Thus, he proved that there were more primes than any given finite number. Today we would say that there are infinitely many. In fact, Euclid proved that there are more than \emph{three} primes and concluded that there were more than any finite number. While such a proof is not considered valid in the modern era, we can forgive Euclid for this less-than-rigorous proof;  in fact, it is easy to turn his proof into the general one that you will give below. Lastly, Euclid's proof was geometric. He was viewing his numbers as line segments with integral length. The modern concept of number was not developed yet.
+
+Prior to tackling a proof of Theorem~\ref{thm:infprimes}, we need to prove a couple of preliminary results.  The proof of the first result is provided for you. 
+
+\begin{theorem}\label{thm:divisorsof1}
+The only natural number that divides $1$ is $1$.  
+\end{theorem}
+
+\begin{proof}
+Let $m$ be a natural number that divides $1$. We know that $m\geq 1$ because 1 is the smallest positive integer. Since $m$ divides $1$, there exists $k\in \mathbb{N}$ such that $1=mk$. Since $k\geq 1$, we see that $mk\geq m$.  But $1=mk$, and so $1\geq m$.  Thus, we have $1\leq m \leq 1$, which implies that $m=1$, as desired.
+\end{proof}
+
+For the next theorem, try utilizing a proof by contradiction together with Theorem~\ref{thm:divisorsof1}.
+
+\begin{theorem}\label{thm:plus1}
+Let $p$ be a prime number and let $n\in \mathbb{Z}$. If $p$ divides $n$, then $p$ does not divide $n+1$.
+\end{theorem}
+
+We are now ready to prove the following important theorem. Use a proof by contradiction. In particular, assume that there are finitely many primes, say $p_1, p_2,\ldots,p_k$.  Consider the product of all of them and then add 1.
+
+\begin{theorem}\label{thm:infprimes}
+There are infinitely many prime numbers.
+\end{theorem}
+
+We conclude this chapter with a fun problem involving prime numbers.  This problem comes from David Richeson (Dickinson College).  %https://divisbyzero.com/2016/02/25/good-activity-for-an-introduction-to-proofs-class/
+
+\begin{problem}
+Start with the first $n$ prime numbers, $p_1,\ldots, p_n$. Divide them into two sets. Let $a$ be the product of the primes in one set and let $b$ be the product of the primes in the other set. Assume the product is 1 if the set is empty. For example, if $n=5$, we could have $\{2,7\}$ and $\{3,5,11\}$, and so $a=14$ and $b=165$. In general, what can we conclude about $a+b$ and $a-b$? Form a conjecture and then prove it.
+\end{problem}
+
+\epigraph{It does not matter how slowly you go as long as you do not stop.}{Confucius, philosopher}
+
+\end{section}

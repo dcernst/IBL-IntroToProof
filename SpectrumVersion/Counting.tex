@@ -1,0 +1,135 @@
+\begin{chapter}{Counting}
+
+\begin{section}{Introduction to Counting}
+We are going to start our transition into higher mathematics with a long look at counting. You might think, given your experience, that counting is pretty straightforward. It is, but only sometimes. As you work on the following problems, please pay special attention to the assumptions you are making. Write them down in your explanation, and provide a complete and cogent justification for your answers. We'll talk a lot about what ``cogent" and ``complete" mean for us over the course of the semester. If you have questions, please write them down so we can discuss them as a group.
+
+\vspace{1 cm}
+
+Consider the  In Class Counting Worksheet that we worked on in class. 
+
+\begin{question}
+What happens to the solution for problem 3 when we stipulate that the Ts must be next to each other but can be anywhere in the arrangement?
+\end{question}
+
+\begin{question}
+Explain in paragraph form the difference between the solutions for 6a and 6b. How would you explain this difference to someone who was not a ``math person"?
+\end{question}
+
+\begin{question}
+What kind of justification is necessary for number 8? How can you convince yourself and your team that you have the correct answer?
+\end{question}
+
+The following questions refer to the Counting Listing Activity handout from class. Make sure you've completed those problems fully before you continue to the questions below.
+
+\begin{question}
+Explain in words what is meant by ``a list of outcomes." Looking at number 1 for context, how is the list of outcomes different from (and at the same time related to) the answer to the question?
+\end{question}
+
+\begin{question}
+Can you come up with at least two ways to organize your thought process to find a list of outcomes? What visuals make sense, if any, to you?
+\end{question}
+
+The following questions refer to the worksheet called In Class Counting Worksheet 2. Make sure you've completed those problems fully before you continue to the questions below.
+
+\begin{question}
+Questions 3b, 6b, 8b, and 10b ask you to draw generalizations from your work on previous problems and examples. For each of these generalizations, write a justification for an audience of non-math majors to convince them that your generalizations are correct.
+\end{question}
+\begin{exercise}
+Suppose you have an opaque bag containing red, white, blue, and green balls (one of each). Without looking the bag, you select a ball, record the color, and replace it in the bag. You repeat this process 4 times. How many sequences of colors are possible?
+\end{exercise}
+\begin{exercise}
+Referring back to the previous question, suppose you do the same thing, but you don?t replace the ball in the bag after you select it. Now how many sequences of colors are possible?
+\end{exercise}
+
+\begin{exercise}
+Last time (for now) with the balls in the bag. Suppose now that there are 3 identical balls of each color in the bag. You draw a ball, record its color, and do not replace it in the bag before drawing again. You repeat this process 4 times. Write out some possible sequences of colors, and write a strategy for finding out the number of sequences of colors. Explain the ways in which this strategy is the same as the one for the previous problem, and the ways in which it is different.
+\end{exercise}
+
+\begin{exercise}
+The Earth's population in 2013 was estimated at 7.125 billion. Are there enough 10-digit phone numbers so that each person on the globe could have their own cell phone?
+\end{exercise}
+\begin{exercise}
+In order to place an international call, you need to first dial 1, then a country code of up to six digits, then a 10-digit* number. So to dial the Isle of Man, you press 1-44-1624, then the ten-digit number. To dial Malta, you press 1-356, then the ten-digit number. Are there enough numbers with country codes so that each person on the globe could have their own cell phone?\\
+*This part is not technically true, but we need to assume this to do the problem.
+\end{exercise}
+
+\section{Permutations and Combinations}
+\begin{definition}
+An arrangement of $n$ objects is called a {\bf permutation} of the objects. An arrangement of $r$ objects out of a collection of $n$ distinct objects (where $n \geq r$) is called an {\bf $r$-permutation of $n$ objects}. We use the notation $P(n,r)$ or $_nP_r$ to denote the number of $r$-permutations of $n$ objects. We read these as ``$n$ permute $r$" or ``$n$ arrange $r$."
+\end{definition}
+\begin{definition}
+A collection of $r$ objects taken from $n$ distinct objects without regard to the order of the $r$ objects is an {\bf $r$-combination of the $n$ objects  }. We use the notation $C(n,r)$ or $_nC_r$ or $\binom{n}{r}$ to denote the number of $r$-combinations of $n$ objects. We read these as ``$n$ choose $r$."
+\end{definition}
+\begin{exercise}
+How many 5-card poker hands can be dealt from a standard deck of cards?
+\end{exercise}
+\begin{exercise}
+How many poker hands are there with exactly one TWO and exactly one QUEEN?
+\end{exercise}
+\begin{exercise}
+How many poker hands are there that are a FULL HOUSE (one pair, one triple)?
+\end{exercise}
+\begin{exercise}
+How many poker hands are there with exactly ONE PAIR? (Consider why we might need the word `exactly' in that question? How does the answer change if we remove it?)
+\end{exercise}
+\begin{exercise}
+How many poker hands are there with exactly two spades?
+\end{exercise}
+\begin{exercise}
+How many poker hands are there with at least two spades?
+\end{exercise}
+\begin{exercise}
+How many poker hands are there that are a straight flush (5 consecutive ranks, all in the same suit, ace high)? 
+\end{exercise}
+\begin{problem}
+Explain in words why $C(n,1)=C(n, n-1)$. Generalize to describe without formulas why $C(n,r) = C(n, n-r)$.
+\end{problem}
+The following problems concern the In Class Counting Worksheet 3. Make sure you've completed those problems fully before you continue to the questions below. We will talk in class about three contexts, stars and bars, Diophantine equations, and some block walking. These are three ways to look at problems on counting with repetition. As you work the following problems, see if you can rewrite them in your head in one of the other contexts.
+\begin{exercise}
+You live in a city with a grid of streets (like in Downtown Portland). Your house is at the corner of 7th St. and B Ave. The nearest coffee shop is at the corner of 14th St. and G Ave. Assuming that you only walk where you're supposed to walk (\emph{i.e.} not through someone's yard, but only along city streets) and that you only count ``smart" routes that don't backtrack, how many routes are there from your house to the coffee shop?
+\end{exercise}
+\begin{exercise}
+Now suppose, using the context above, that you need to stop at a friend's house on the corner of 9th St. and E Ave. before you continue on to the coffee shop. How many routes are there?
+\end{exercise}
+\begin{exercise}
+You have 12 identical pencils to distribute to 5 math majors. In how many ways can this distribution be completed? As always, write down what assumptions you are making.
+\end{exercise}
+\begin{exercise}
+Suppose, in the previous question, that you have to ensure that each math major gets a pencil. Now how many ways can you distribute the pencils?
+\end{exercise}
+\begin{exercise}
+How many solutions are there to the following Diophantine equation?
+\[
+x_1+x_2+x_3+x_4 = 32,  \, x_1, x_2, x_3, x_4 \geq 0
+\]
+\end{exercise}
+\begin{exercise}
+How many solutions are there to the following Diophantine equation?
+\[
+x_1+x_2+x_3+x_4 = 32,  \, x_1, x_2, x_3, x_4 > 0
+\]
+\end{exercise}
+\begin{exercise}
+How many solutions are there to the following Diophantine equation?
+\[
+x_1+x_2+x_3+x_4 = 32,  \, x_1 \geq 3, x_2 \geq 2,  x_3 \geq 5, x_4 \geq 0
+\]
+\end{exercise}
+\begin{exercise}
+How many solutions are there to the following Diophantine equation?
+\[
+x_1+x_2+x_3+x_4 = 32,  \, x_1 >3, x_2 \geq 2, 0 \leq x_3<5, x_4 \geq 0
+\]
+\end{exercise}
+
+\section{The Pigeonhole Principle}
+The following questions are a follow-up to the worksheet on the Pigeonhole Principle. At its most basic, the Pigeonhole Principle tells us that if there are more pigeons that pigeonholes in which they can roost, then one of the pigeonholes must have at least one pigeon in it. The Pigeonhole Principle worksheet guides you to think about this (seemingly obvious) principle in more mathematical terms. The key to these problems is define what we mean by ``pigeons" and what we mean by ``pigeonholes" in the context of the problem, then count carefully.
+\begin{exercise}
+Show that in any set of 11 integers between 1 and 20 there is at least one pair whose difference is 10.
+\end{exercise}
+\begin{exercise}
+There is a power outage. You reach into your sock drawer and it?s a mess. All you know is that it's dark, and you need a pair of socks that match each other. You know there are 14 different pairs of purple socks in the drawer. How many socks do you need to remove in order to ensure that you have pulled out a pair of matching socks?
+\end{exercise}
+\begin{problem}
+State the Pigeonhole Principle using mathematical language.
+\end{problem}
