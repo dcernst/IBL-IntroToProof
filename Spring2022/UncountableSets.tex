@@ -1,0 +1,105 @@
+\begin{section}{Uncountable Sets}
+
+Recall from Definition~\ref{def:countable} that a set $A$ is uncountable if $A$ is not countable.  Since all finite sets are countable, the only way a set could be uncountable is if it is infinite.  It follows that a set $A$ is uncountable if and only if there is never a bijection between $\mathbb{N}$ and $A$.  It is not clear that uncountable sets even exist!  It turns out that uncountable sets do exist and in this section, we will discover a few of them.
+
+Our first task is to prove that the interval $(0,1)$ is uncountable.  By Problem~\ref{prob:moreInfiniteSets}(h), we know that $(0,1)$ is an infinite set, so it is at least plausible that $(0,1)$ is uncountable.  The following problem outlines the proof of Theorem~\ref{thm:(0,1)uncountable}.  Our approach is often referred to as \textbf{Cantor's Diagonalization Argument}, named after German mathematician \href{https://en.wikipedia.org/wiki/Georg_Cantor}{Georg Cantor} (1845--1918).
+
+Before we get started, recall that every number in $(0,1)$ can be written in decimal form. However, there may be more than one way to write a given number in decimal form.  For example, $0.2$ equals $0.1\overline{99}$.  A number $0.a_1a_2a_3\ldots$ in $(0,1)$ is said to be in \textbf{standard decimal form} if there is no $k$ such that for all $i>k$, $a_i=9$. That is, a number is in standard decimal form if and only if its decimal expansion does not end with a repeating sequence of 9's. For example, $0.2$ is in standard decimal form while $0.1\overline{99}$ is not, even though both represent the same number. It turns out that every real number can be expressed uniquely in standard decimal form. We will take this fact for granted.
+
+\begin{problem}
+For sake of a contradiction, assume the interval $(0,1)$ is countable.  Then there exists a bijection $f:\mathbb{N}\to (0,1)$. For each $n\in\mathbb{N}$, its image under $f$ is some number in $(0,1)$.  Write $f(n)=0.a_{1n}a_{2n}a_{3n}\ldots$, where $a_{1n}$ is the first digit in the standard decimal form for the image of $n$, $a_{2n}$ is the second digit, and so on. If $f(n)$ terminates after $k$ digits, then our convention will be to continue the decimal expansion with 0's. Now, define $b=0.b_1b_2b_3\ldots$, where
+\[
+b_i=\begin{cases}
+2, & \text{if }a_{ii}\neq 2\\
+3, & \text{if }a_{ii}=2.
+\end{cases}
+\]
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Prove that the decimal expansion that defines $b$ above is in standard decimal form.
+\item Prove that for all $n\in\mathbb{N}$, $f(n)\neq b$.
+\item Explain why $f$ cannot be surjective and why this is a contradiction.
+\end{enumerate}
+You just proved that the interval $(0,1)$ cannot be countable!
+\end{problem}
+
+The previous problem proves following theorem.
+
+\begin{theorem}\label{thm:(0,1)uncountable}
+The open interval $(0,1)$ is uncountable.
+\end{theorem}
+
+Loosely speaking, what Theorem~\ref{thm:(0,1)uncountable} says is that the open interval $(0,1)$ is ``bigger" in terms of the number of elements it contains than the natural numbers and even the rational numbers.  This shows that there are infinite sets of different sizes! We now know there is at least one uncountable set, namely the interval $(0,1)$.  The next three results are useful for finding other uncountable sets. For the first theorem, try a proof by contradiction and take a look at Theorem~\ref{thm:subsetsCountableSets}.
+
+\begin{theorem}\label{thm:containsUncountableSubset}
+If $A$ and $B$ are sets such that $A\subseteq B$ and $A$ is uncountable, then $B$ is uncountable. 
+\end{theorem}
+
+\begin{corollary}
+If $A$ and $B$ are sets such that $A$ is uncountable and $B$ is countable, then $A\setminus B$ is uncountable.
+\end{corollary}
+
+\begin{theorem}
+If $f:A\to B$ is an injective function and $A$ is uncountable, then $B$ is uncountable.
+\end{theorem}
+
+Since the interval $(0,1)$ is uncountable and $(0,1)\subseteq \mathbb{R}$, it follows immediately from Theorem~\ref{thm:containsUncountableSubset} that $\mathbb{R}$ is also uncountable.  The next theorem tells that $(0,1)$ and $\mathbb{R}$ actually have the same cardinality! To prove this, consider the function $f:(0,1)\to \mathbb{R}$ defined via $f(x)=\tan(\pi x-\frac{\pi}{2})$.
+
+\begin{theorem}\label{thm:R uncountable}
+The set of real numbers is uncountable.  In particular, $\card((0,1))=\card(\mathbb{R})$.
+\end{theorem}
+
+The \textbf{continuum hypothesis}---originally proposed by Cantor in 1878---states that there is no set whose cardinality is strictly between that of the natural numbers and the real numbers. Cantor unsuccessfully attempted to prove the continuum hypothesis for several years. It follows from the work of \href{https://en.wikipedia.org/wiki/Paul_Cohen}{Paul Cohen} (1934--2007) and \href{https://en.wikipedia.org/wiki/Kurt_Godel}{Kurt G\"odel} (1906--1978) that the continuum hypothesis and its negation are independent of the Zermelo-Fraenkel axioms of set theory (briefly discussed at the end of Section~\ref{sec:RussellsParadox}). That is, either the continuum hypothesis or its negation can be added as an axiom to ZFC set theory, with the resulting theory being consistent if and only if ZFC is consistent (i.e., no contradictions are produced). Nowadays, most set theorists believe that the continuum hypothesis \emph{should} be false.
+
+\begin{theorem}
+If $a,b\in\mathbb{R}$ with $a<b$, then $(a,b)$, $[a,b]$, $(a,b]$, and $[a,b)$ are all uncountable.
+\end{theorem}
+
+%\begin{problem}%this appears earlier
+%Suppose $a,b,c,d\in\mathbb{R}$ such that $a<b$ and $c<d$. Construct an explicit bijection from the interval $(a,b)$ to the interval $(c,d)$. This verifies that $\card((a,b))=\card((c,d))$.
+%\end{problem}
+
+\begin{theorem}
+The set of irrational numbers is uncountable.
+\end{theorem}
+
+\begin{theorem}
+The set $\mathbb{C}$ of complex numbers is uncountable.
+\end{theorem}
+
+\begin{problem}
+Determine whether each of the following statements is true or false. If a statement is true, prove it.  Otherwise, provide a counterexample.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item If $A$ and $B$ are sets such that $A$ is uncountable, then $A\cup B$ is uncountable.
+\item If $A$ and $B$ are sets such that $A$ is uncountable, then $A\cap B$ is uncountable.
+\item If $A$ and $B$ are sets such that $A$ is uncountable, then $A\times B$ is uncountable.
+\item If $A$ and $B$ are sets such that $A$ is uncountable, then $A\setminus B$ is uncountable.
+\end{enumerate}
+\end{problem}
+
+An approach similar to Cantor's Diagonalization Argument will be helpful when approaching the next problem. 
+
+\begin{problem}\label{prob:sequence01} 
+Let $S$ be the set of infinite sequences of 0's and 1's. Determine whether $S$ is countable or uncountable and prove that your answer is correct. 
+\end{problem}
+
+\begin{theorem}
+If $S$ is the set from Problem~\ref{prob:sequence01}, then $\card(\mathcal{P}(\mathbb{N}))=\card(S)$.
+\end{theorem}
+
+\begin{corollary}\label{cor:power set of N uncountable}
+The power set of the natural numbers is uncountable.
+\end{corollary}
+
+Notice that $\mathbb{N}$ is countable while $\mathcal{P}(\mathbb{N})$ is uncountable.  That is, the power set of the natural numbers has cardinality strictly larger than the natural numbers. We generalize this phenomenon in the next theorem.
+
+According to Theorem~\ref{thm:R uncountable} and Corollary~\ref{cor:power set of N uncountable}, $\mathbb{R}$ and $\mathcal{P}(\mathbb{N})$ are both uncountable. In fact, $\card(\mathcal{P}(\mathbb{N}))=\card(\mathbb{R})$, which we state without proof.  However, it turns out that the two uncountable sets may or may not have the same cardinality.  Perhaps surprisingly, there are sets that are even ``bigger" than the set of real numbers. The next theorem is named after Georg Cantor, who first stated and proved it at the end of the 19th century. The theorem states that given any set, we can always increase the cardinality by considering its power set. That is, if $A$ is a set, $\mathcal{P}(A)$ has strictly greater cardinality than $A$ itself. For finite sets, Cantor's theorem follows from Theorems~\ref{thm:size of power set for finite sets} and \ref{thm:n<2^n} (both of which we proved via induction). Perhaps much more surprising is that Cantor discovered an elegant argument that is applicable to any set, whether finite or infinite. To prove Cantor's Theorem, first exhibit an injective function from $A$ to $\mathcal{P}(A)$. This proves that $\card(A)\leq \card(\mathcal{P}(A))$. To show that $\card(A)< \card(\mathcal{P}(A))$, try a proof by contradiction. That is, assume there exists a bijective function $f:A\to\mathcal{P}(A))$. Derive a contradiction by considering the set $B=\{x\in A\mid x\notin f(x)\}$.
+
+\begin{theorem}[Cantor's Theorem]\label{thm:Cantors Theorem}
+If $A$ is a set, then $\card(A)<\card(\mathcal{P}(A))$.
+\end{theorem}
+
+Recall that cardinality provides a way for talking about ``how big" a set is. The fact that the natural numbers and the real numbers have different cardinality (one countable, the other uncountable), tells us that there are at least two different ``sizes of infinity".  By iteratively taking the power set of an infinite set and applying Cantor's Theorem we obtain an endless hierarchy of cardinalities, each strictly larger than the one before it. Colloquially, this implies that there are ``infinitely many sizes of infinity" and there is ``no largest infinity".
+
+\epigraph{If you want to sharpen a sword, you have to remove a little metal.}{Author Unknown}
+
+\end{section}

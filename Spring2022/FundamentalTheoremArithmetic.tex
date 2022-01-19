@@ -1,0 +1,130 @@
+\begin{section}{The Fundamental Theorem of Arithmetic}\label{sec:FTA}
+
+The goal of this section is to prove The Fundamental Theorem of Arithmetic.  The Fundamental Theorem of Arithmetic (sometimes called the Unique Factorization Theorem) states that every natural number greater than 1 is either prime or is the product of prime numbers, where this product is unique up to the order of the factors. For example, the natural number 12 has prime factorization $2^2\cdot 3$, where the order in which we write the prime factors (i.e., 2, 2, and 3) is irrelevant. That is, $2^2\cdot 3$, $2\cdot 3\cdot2$, and $3\cdot 2^2$ are all the same prime factorization of 12. The requirement that the factors be prime is necessary since factorizations containing composite numbers may not be unique. For example, $12=2\cdot 6$ and $12=3\cdot 4$, but these factorizations into composite numbers are distinct. We have just thrown around a few fancy terms; we should make sure we understand their precise meaning.
+
+\begin{definition}
+Let $n\in\mathbb{Z}$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item If $a\in \mathbb{Z}$ such that $a$ divides $n$, then we say that $a$ is a \textbf{factor} of $n$.
+\item If $n\in \mathbb{N}$ such that $n$ has exactly two distinct positive factors (namely, 1 and $n$ itself), then $n$ is called \textbf{prime}.
+\item If $n>1$ such that $n$ is not prime, then $n$ is called \textbf{composite}.
+\end{enumerate}
+\end{definition}
+
+\begin{problem}
+According to our definition, is 1 a prime number or composite number?  Explain your answer. You may have heard prime numbers defined as something like, ``a prime number is a natural number that is only divisible by 1 and itself."  Does this definition agree with the one above?
+\end{problem}
+
+The upshot is that according to our definition, 1 is neither prime nor composite.  However, throughout history, this has not always been the case.  There were times when and mathematicians for whom the number one was considered prime.  Whether 1 is prime or not is a matter of definition, and hence a matter of choice.  There are compelling reasons---that we will not elaborate on here---why 1 is intentionally excluded from being prime.  However, if you would like to learn more, check out the excellent article \href{https://cs.uwaterloo.ca/journals/JIS/VOL15/Caldwell1/cald5.pdf}{``What is the Smallest Prime?"} by Chris Caldwell and Yeng Xiong.
+
+\begin{problem}
+List the first 10 prime numbers.
+\end{problem}
+
+\begin{problem}
+Prove or provide a counterexample:  For all $n\in\mathbb{N}$, if $4^n-1$ is prime, then $n$ is odd.
+\end{problem}
+
+\begin{problem}
+Prove or provide a counterexample:  For all $n\in\mathbb{N}$, $n^2-n+11$ is prime.
+\end{problem}
+
+The next result makes up half of the Fundamental Theorem of Arithmetic. We provide a substantial hint for its proof. Let $S$ be the set of natural numbers for which the theorem fails.  For sake of a contradiction, assume $S\neq \emptyset$.  By the Well-Ordering Principle (Theorem~\ref{thm:WOP}), $S$ contains a least element, say $n$. Then $n$ cannot be prime since this would satisfy the theorem.  So, it must be the case that $n$ has a divisor other than 1 and itself.  This implies that there exists natural numbers $a$ and $b$ greater than 1 such that $n=ab$.  Since $n$ was our smallest counterexample, what can you conclude about both $a$ and $b$?  Use this information to derive a counterexample for $n$.
+
+\begin{theorem}\label{thm:prodprimes}
+If $n$ is a natural number greater than 1, then $n$ can be expressed as a product of primes.  That is, we can write
+\[
+n=p_1 p_2 \cdots p_k,
+\]
+where each of $p_1, p_2, \ldots, p_k$ is a prime number (not necessarily distinct).
+\end{theorem}
+
+Theorem~\ref{thm:prodprimes} states that we can write every natural number greater than 1 as a product of primes, but it does not say that the primes and the number of times each prime appears are unique.  To prove uniqueness, we will need \textbf{Euclid's Lemma} (Theorem~\ref{thm:Euclid}). To prove Euclid's Lemma, we will utilize a special case of \textbf{B\'ezout's Lemma} (Theorem~\ref{thm:Bezout}), the proof of which relies on the following result, known as the Division Algorithm. We include the proof of the Division Algorithm below, which makes use of the Well-Ordering Principle (Theorem~\ref{thm:WOP}). %It is worth pointing out that we are stating the Division Algorithm for natural numbers. However, the theorem holds more generally for integers, but we must replace $0\leq r<n$ with $0\leq r<|n|$.
+
+\begin{theorem}[Division Algorithm]\label{thm:DivisonAlgorthm}
+If $n,d\in\mathbb{Z}$ such that $d>0$, then there exists unique $q,r\in\mathbb{Z}$ such that $n=dq+r$ with $0\leq r<d$.
+\end{theorem}
+
+\begin{proof}
+Let $n,d\in\mathbb{Z}$ such that $d>0$ such that $n>0$. We have two tasks. First, we need to show that $q$ and $r$ exist, and then we need to show that both are unique.
+
+If $d=1$, it is clear that we can take $q=n$ and $r=0$, so that $n=1\cdot n+0=dq+r$, as desired.  Now, assume that $d>1$ and define
+\[
+S\coloneqq \{n-dk\mid k\in\mathbb{Z}\text{ and } n-dk\geq 0\}.
+\]
+If we can show that $S\neq\emptyset$, then we can apply the Well-Ordering Principle (Theorem~\ref{thm:WOP}) to conclude that $S$ has a least element of S. This least element will be the remainder $r$ we are looking for. There are two cases.
+
+First, suppose $n\geq 0$. If we take $k=0$, then we get $n-dk=n-d\cdot 0=n\geq 0$, which shows that $n\in S$.
+
+Now, suppose $n<0$. In this case, we can take $k=n$, so that $n-dk=n-dn=n(1-d)$. Since $n<0$ and $d>1$, $n(1-d)>0$.  This shows that $n-dn\in S$.
+
+We have shown that $S\neq\emptyset$, and so $S$ contains a least element $r=n-dq$ for some $q\in\mathbb{Z}$. Then $n=dq+r$ with $r\geq 0$. For sake of a contradiction, assume $r\geq d$. This implies that there exists $r'\in \mathbb{Z}$ such that $r=d+r'$ and $0\leq r'<r$. But then we see that
+\[
+n=dq+r=dq+d+r'=d(q+1)+r'.
+\]
+This implies that $r' = n-d(q+1)$.  Since $0\leq r'<r$, we have produced an element of $S$ that is smaller than $r$. This contradicts the fact that $r$ is the least element of $S$, and so $r<d$.
+
+It remains to show that $q$ and $r$ are unique.  Suppose $q_1,q_2, r_1,r_2\in\mathbb{Z}$ such that $n=dq_1+r_1$ and $n=dq_2+r_2$ and $0\leq r_1,r_2<d$.  Without loss of generality, suppose $r_2\geq r_1$, so that $0\leq r_2-r_1<d$. Since $dq_1+r_1=dq_2+r_2$, we see that $r_2-r_1=d(q_1-q_2)$. But then $d$ divides $r_2-r_1$. If $r_2-r_1>0$, then by Theorem~\ref{thm:natural divisor less than or equal to natural dividend}, it must be the case that $r_2-r_1\geq d$.  However, we know $0\leq r_2-r_1<d$, and so we must have $r_2-r_1=0$. Therefore, $r_1=r_2$, which in turn implies $q_1=q_2$.  We have shown that $q$ and $r$ are unique.
+\end{proof}
+
+In the Division Algorithm, we call $n$ the \textbf{dividend}, $d$ the \textbf{divisor}, $q$ the \textbf{quotient}, and $r$ the \textbf{remainder}.  It is worth pointing out that the Division Algorithm holds more generally where the divisor $d$ is not required to be positive. In this case, we must replace $0\leq r<n$ with $0\leq r<|n|$. 
+
+Contrary to its name, our statement of the Division Algorithm is not actually an algorithm, but this is the theorem's traditional name. However, there is an algorithm buried in this theorem. If $n$ is nonnegative, repeatedly subtract $d$ from $n$ until we obtain an integer value that lies between 0 (inclusive) and $d$ (exclusive). The resulting value is the remainder $r$ while the number of times that $d$ is subtracted is the quotient $q$. On the other hand, if $n$ is negative, repeatedly add $d$ to $n$ until we obtain an integer value that lies between 0 (inclusive) and $d$ (exclusive). Again, the resulting value is $r$. However, in this case, we take $-q$ to be the number of times that $d$ is added, so that $q$ (a negative value) is the quotient.
+
+\begin{problem}
+Suppose $n=27$ and $d=5$. Find the quotient and remainder that are guaranteed to exist by the Division Algorithm.  That is, find the unique $q,r\in\mathbb{Z}$ such that $0\leq r<n$ and $n=dq+r$.
+\end{problem}
+
+It is a little trickier to determine $q$ and $r$ when $n$ is negative.
+
+\begin{problem}
+Suppose $n=-26$ and $d=3$. Find the quotient and remainder that are guaranteed to exist by the Division Algorithm.  That is, find the unique $q,r\in\mathbb{Z}$ such that $0\leq r<n$ and $n=dq+r$.
+\end{problem}
+
+It is useful to have some additional terminology.
+
+\begin{definition}
+Let $m,n\in\mathbb{Z}$ such that at least one of $m$ or $n$ is nonzero.  The \textbf{greatest common divisor} (gcd) of $m$ and $n$, denoted $\tcboxmath{\gcd(m,n)}$, is the largest positive integer that divides both $m$ and $n$. If $\gcd(m,n)=1$, we say that $m$ and $n$ are \textbf{relatively prime}.
+\end{definition}
+
+\begin{problem}
+Find $\gcd(54,72)$.
+\end{problem}
+
+\begin{problem}
+Provide an example of two natural numbers that are relatively prime.
+\end{problem}
+
+The next result is a special case of a theorem known as B\'ezout's Lemma (or B\'ezout's Identity). Ultimately, we will need this theorem to prove Euclid's Lemma (Theorem~\ref{thm:Euclid}), which we then use to prove uniqueness for the Fundamental Theorem of Arithmetic (Theorem~\ref{thm:FTA}). To prove our special case of B\'ezout's Lemma, consider the set $S\coloneqq \{ps+at> 0\mid s,t\in \mathbb{Z}\}$. First, observe that $p\in S$ (choose $s=1$ and $t=0$). It follows that $S$ is nonempty. By the Well-Ordering Principle (Theorem~\ref{thm:WOP}), $S$ contains a least element, say $d$. This implies that there exists $s_1,t_1\in \mathbb{Z}$ such that $d=ps_1+at_1$. Our goal is to show that $d=1$. Now, choose $m\in S$. Then there exists $s_2,t_2\in \mathbb{Z}$ such that $m=ps_2+at_2$. By the definition of $d$, we know $d\leq m$. By the Division Algorithm, there exists unique $q,r\in \mathbb{N}\cup\{0\}$ such that $m=qd+r$ with $0\leq r < d$. Now, solve for $r$ and then replace $m$ and $d$ with $ps_1+at_1$ and $ps_2+at_2$, respectively.  You should end up with an expression for $r$ involving $p, a, s_1, s_2, t_1$, and $t_2$.  Next, rearrange this expression to obtain $r$ as a linear combination of $p$ and $a$ (i.e., a sum of a multiple of $p$ and a multiple of $a$). What does the minimality of $d$ imply about $r$?  You should be able to conclude that $m$ is a multiple of $d$.  That is, every element of $S$ is a multiple of $d$.  However, recall that $p\in S$, $p$ is prime, and $p$ and $a$ are relatively prime.  What can you conclude about $d$?
+
+\begin{theorem}[Special Case of B\'ezout's Lemma]\label{thm:Bezout}
+If $p,a\in\mathbb{Z}$ such that $p$ is prime and $p$ and $a$ are relatively prime, then there exists $s,t\in\mathbb{Z}$ such that $ps+at=1$.
+\end{theorem}
+
+\begin{problem}
+Consider the natural numbers 2 and 7, which happen to be relatively prime.  Find integers $s$ and $t$ guaranteed to exist according to Theorem~\ref{thm:Bezout}.  That is, find $s,t\in\mathbb{Z}$ such that $2s+7t=1$.
+\end{problem}
+
+The following theorem is known as Euclid's Lemma. Note that if $p$ divides $a$, the conclusion is certainly true.  So, assume otherwise.  That is, assume that $p$ does not divide $a$, so that $p$ and $a$ are relatively prime.  Apply Theorem~\ref{thm:Bezout} to $p$ and $a$ and then multiply the resulting equation by $b$. Try to conclude that $p$ divides $b$.
+
+\begin{theorem}[Euclid's Lemma]\label{thm:Euclid}
+Assume that $p$ is prime.  If $p$ divides $ab$, where $a,b\in\mathbb{N}$, then either $p$ divides $a$ or $p$ divides $b$.
+\end{theorem}
+
+In Euclid's Lemma, it is crucial that $p$ is prime as illustrated by the next problem.
+
+\begin{problem}
+Provide an example of integers $a, b, d$ such that $d$ divides $ab$ yet $d$ does not divide $a$ and $d$ does not divide $b$.
+\end{problem}
+
+Alright, we are finally ready to tackle the proof of the Fundamental Theorem of Arithmetic. Let $n$ be a natural number greater than 1. By Theorem~\ref{thm:prodprimes}, we know that $n$ can be expressed as a product of primes.  All that remains is to prove that this product is unique (up to the order in which they appear). For sake of a contradiction, suppose $p_1 p_2 \cdots p_k$ and $q_1 q_2 \cdots q_l$ are both prime factorizations of $n$.  Your goal is to prove that $k=l$ and that each $p_i$ is equal to some $q_j$. Make repeated use of Euclid's Lemma.
+
+\begin{theorem}[Fundamental Theorem of Arithmetic]\label{thm:FTA}
+Every natural number greater than 1 can be expressed uniquely (up to the order in which they appear) as the product of one or more primes.
+\end{theorem}
+
+The Fundamental Theorem of Arithmetic is one of the many reasons why 1 is not considered a prime number. If 1 were prime, prime factorizations would not be unique.
+
+\epigraph{Any creative endeavor is built on the ash heap of failure.}{Michael Starbird, mathematician}
+
+\end{section}

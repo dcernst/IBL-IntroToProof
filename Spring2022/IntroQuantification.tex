@@ -1,0 +1,157 @@
+\begin{section}{Introduction to Quantification}
+
+In this section and the next, we introduce \textbf{first-order logic}---also referred to as \textbf{predicate logic}, \textbf{quantificational logic}, and \textbf{first-order predicate calculus}. The sentence ``$x>0$'' is not itself a proposition because its truth value depends on $x$.  In this case, we say that $x$ is a \textbf{free variable}. A sentence with at least one free variable is called a \textbf{predicate} (or \textbf{open sentence}). To turn a predicate into a proposition, we must either substitute values for each free variable or ``quantify'' the free variables. We will use notation such as $\tcboxmath{P(x)}$ and $\tcboxmath{Q(a,b)}$ to represent predicates with free variables $x$ and $a,b$, respectively. The letters ``$P$" and ``$Q$" that we used in the previous sentence are not special; we can use any letter or symbol we want. For example, each of the following represents a predicate with the indicated free variables.
+\begin{itemize}
+\item $S(x)\coloneqq ``x^2-4=0"$
+\item $L(a,b)\coloneqq ``a<b"$
+\item $F(x,y)\coloneqq ``x \mbox{ is friends with } y"$
+\end{itemize}
+Note that we used quotation marks above to remove some ambiguity.  What would $S(x)=x^2-4=0$ mean?  It looks like $S(x)$ equals 0, but actually we want $S(x)$ to represent the whole sentence ``$x^2-4=0$". Also, notice that the order in which we utilize the free variables might matter.  For example, compare $L(a,b)$ with $L(b,a)$.
+
+One way we can make propositions out of predicates is by assigning specific values to the free variables.  That is, if $P(x)$ is a predicate and $x_0$ is specific value for $x$, then $P(x_0)$ is now a proposition that is either true or false.
+
+\begin{problem}
+Consider $S(x)$ and $L(a,b)$ as defined above. Determine the truth values of $S(0)$, $S(-2)$, $L(2,1)$, and $L(-3,-2)$. Is $L(2,b)$ a proposition or a predicate?
+\end{problem}
+
+Besides substituting specific values for free variables in a predicate, we can also make a claim about which values of the free variables apply to the predicate.
+
+\begin{problem}\label{ex:quantified predicates}
+Both of the following sentences are propositions. Decide whether each is true or false. What would it take to justify your answers?
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item For all $x\in\mathbb{R}$, $x^2-4=0$.
+\item There exists $x\in\mathbb{R}$ such that $x^2-4=0$.
+\end{enumerate}
+\end{problem}
+
+\begin{definition}
+``For all" is the \textbf{universal quantifier} and ``there exists\ldots such that" is the \textbf{existential quantifier}.
+\end{definition}
+
+In mathematics, the phrases ``for all", ``for any", ``for every", and ``for each" can be used interchangeably (even though they might convey slightly different meanings in colloquial language). We can replace ``there exists\ldots such that" with phrases  like ``for some" (possibly with some tweaking of the wording of the sentence). It is important to note that the existential quantifier is making a claim about ``at least one", \emph{not} ``exactly one." 
+
+Variables that are quantified with a universal or existential quantifier are said to be \textbf{bound}.  To be a proposition, \emph{all} variables of a predicate must be bound. %That is, in a proposition all variables are quantified. 
+
+We must take care to specify the collection of acceptable values for the free variables. Consider the sentence ``For all $x$, $x>0$.'' Is this sentence true or false? The answer depends on what set the universal quantifier applies to. Certainly, the sentence is false if we apply it for all $x\in\mathbb{Z}$. However, the sentence is true for all $x\in\mathbb{N}$. Context may resolve ambiguities, but otherwise, we must write clearly: ``For all $x\in\mathbb{Z}$, $x>0$'' or ``For all $x\in\mathbb{N}$, $x>0$.'' The collection of intended values for a variable is called the \textbf{universe of discourse}. %(or simply \textbf{universe}).
+
+\begin{problem}
+Suppose our universe of discourse is the set of integers.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Provide an example of a predicate $P(x)$ such that ``For all $x$, $P(x)$" is true.
+\item Provide an example of a predicate $Q(x)$ such that ``For all $x$, $Q(x)$" is false while ``There exists $x$ such that $Q(x)$" is true.
+\end{enumerate}
+\end{problem}
+
+If a predicate has more than one free variable, then we can build propositions by quantifying each variable.  However, \emph{the order of the quantifiers is extremely important!}
+
+\begin{problem}\label{prob:ways to quantify}
+Let $P(x,y)$ be a predicate with free variables $x$ and $y$ in a universe of discourse $U$. One way to quantify the variables is ``For all $x \in U$, there exists $y \in U$ such that $P(x,y)$.'' How else can the variables be quantified?
+\end{problem}
+
+The next problem illustrates that at least some of the possibilities you discovered in the previous problem are \emph{not} equivalent to each other.
+
+\begin{problem}
+Suppose the universe of discourse is the set of people and consider the predicate $M(x,y)\coloneqq ``x\mbox{ is married to }y"$.  We can interpret the formal statement ``For all $x$, there exists $y$ such that $M(x,y)$" as meaning ``Everybody is married to somebody."  Interpret the meaning of each of the following statements in a similar way.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item For all $x$, there exists $y$ such that $M(x,y)$.
+\item There exists $y$ such that for all $x$, $M(x,y)$.
+\item For all $x$, for all $y$, $M(x,y)$.
+\item There exists $x$ such that there exists $y$ such that $M(x,y)$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Suppose the universe of discourse is the set of real numbers and consider the predicate $F(x,y)\coloneqq ``x=y^2"$. Interpret the meaning of each of the following statements.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item There exists $x$ such that there exists $y$ such that $F(x,y)$.
+\item There exists $y$ such that there exists $x$ such that $F(x,y)$.
+\item For all $y$, for all $x$, $F(x,y)$.
+\end{enumerate}
+\end{problem}
+
+%\begin{problem}
+%Suppose that the universe of discourse is the set of real numbers.  Consider the predicate $G(x,y)\coloneqq ``x>y"$.  Find all possible \emph{distinct} ways to quantify the variables to create propositions and then determine the truth value of each (you do not need to prove your answers).
+%\end{problem}
+
+There are a couple of key points to keep in mind about quantification. To be a proposition, all variables must be quantified.  This can happen in at least two ways:
+\begin{itemize}
+\item The variables are explicitly bound by quantifiers in the same sentence.
+\item The variables are implicitly bound by preceding sentences or by context. Statements of the form ``Let $x=\ldots$" and ``Assume $x\in\ldots$" bind the variable $x$ and remove ambiguity.
+\end{itemize}
+Also, the order of the quantification is important.  Reversing the order of the quantifiers can substantially change the meaning of a proposition.
+
+Quantification and logical connectives (``and,'' ``or,'' ``If\ldots, then\ldots,'' and ``not'') enable complex mathematical statements. For example, if $f$ is a function while $c$ and $L$ are real numbers, then the formal definition of $\lim_{x\to c}f(x)=L$, which you may have encountered in calculus, is:
+\begin{quote}
+For all $\varepsilon >0$, there exists $\delta >0$ such that for all $x$, if $0<|x-c|<\delta$, then $|f(x)-L|<\varepsilon$.
+\end{quote}
+
+In order to study the abstract nature of complicated mathematical statements, it is useful to adopt some notation.
+
+\begin{definition}\label{def:quantifiers}
+The universal quantifier ``for all'' is denoted $\tcboxmath{\forall}$, and the existential quantifier  ``there exists\ldots such that'' is denoted $\tcboxmath{\exists}$.
+\end{definition}
+
+Using our abbreviations for the logical connectives and quantifiers, we can symbolically represent mathematical propositions. For example, the (true) proposition ``There exists $x \in \mathbb{R}$ such that $x^2-1=0$'' becomes ``$(\exists x \in \mathbb{R})(x^2-1=0)$,'' while the (false) proposition ``For all $x\in \mathbb{N}$, there exists $y\in\mathbb{N}$ such that $y<x$'' becomes ``$(\forall x\in\mathbb{N})(\exists y\in\mathbb{N})(y<x)$.'' %``$(\forall x)(x\in\mathbb{N}\implies (\exists y)(y\in\mathbb{N}\implies y<x))$'' or 
+
+\begin{problem}
+Convert the following propositions into statements using only logical and mathematical symbols.  Assume that the universe of discourse is the set of real numbers.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item There exists $x$ such that $x^2+1$ is greater than zero.
+\item There exists a natural number $n$ such that $n^2=36$. 
+\item For every $x$, $x^2$ is greater than or equal to zero.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Express the formal definition of a limit (given above Definition~\ref{def:quantifiers}) in logical and mathematical symbols.
+\end{problem}
+
+If you look closely, many of the theorems that we have encountered up until this point were of the form $A(x)\implies B(x)$, where $A(x)$ and $B(x)$ are predicates.  For example, consider Theorem~\ref{thm:n even implies n^2 even}, which states, ``If $n$ is an even integer, then $n^2$ is an even integer." In this case, ``$n$ is an even integer" and ``$n^2$ is an even integer" are both predicates.  So, it would be reasonable to assume that the entire theorem statement is a predicate.  However, it is standard practice to interpret the sentence $A(x)\implies B(x)$ to mean $(\forall x)(A(x)\implies B(x))$ (where the universe of discourse for $x$ needs to be made clear). We can also retool such statements to ``hide" the implication. In particular, $(\forall x)(A(x)\implies B(x))$ has the same meaning as $(\forall x \in U')B(x)$, where $U'$ is the collection of items from the universe of discourse $U$ that makes $A(x)$ true. For example, we could rewrite the statement of Theorem~\ref{thm:n even implies n^2 even} as ``For every even integer $n$, $n^2$ is even."
+
+\begin{problem}
+Reword Theorem~\ref{thm:sum of three consecutive integers} so that it explicitly reads as a universally quantified statement. Compare with Problem~\ref{prob:reword as conditional}.
+\end{problem}
+
+\begin{problem}
+Find at least two other instances of theorem statements that appeared earlier in the book and are written in the form $A(x)\implies B(x)$. Rewrite each in an equivalent way that makes the universal quantifier explicit while possibly suppressing the implication.
+\end{problem}
+
+\begin{problem}
+Consider the proposition ``If $\varepsilon >0$, then there exists $N\in\mathbb{N}$ such that $1/N<\varepsilon$."  Assume the universe of discourse is the set $\mathbb{R}$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Express the statement in logical and mathematical symbols. Is the statement true?
+\item Reverse the order of the quantifiers to get a new statement. Does the meaning change?  If so, how?  Is the new statement true?
+\end{enumerate}
+\end{problem}
+
+The symbolic expression $(\forall x)(\forall y)$ can be abbreviated as $\tcboxmath{\forall x,y}$ as long as $x$ and $y$ are elements of the same universe.
+
+\begin{problem}
+Express the proposition ``For all $x,y\in\mathbb{R}$ with $x<y$, there exists $m\in\mathbb{R}$ such that $x<m<y$" using logical and mathematical symbols.
+\end{problem}
+
+\begin{problem}
+Rewrite each of the following propositions in words and determine whether the proposition is true or false.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $(\forall n \in \mathbb{N})(n^2 \geq 5)$
+\item $(\exists n \in \mathbb{N})(n^2-1=0)$
+\item $(\exists N \in \mathbb{N})(\forall  n > N)(\frac{1}{n} < 0.01)$
+\item $(\forall m, n \in \mathbb{Z})((2|m \wedge 2|n) \implies 2|(m+n))$
+\item $(\forall x \in \mathbb{N})(\exists y \in \mathbb{N})(x-2y=0)$
+\item $(\exists x \in \mathbb{N})(\forall y \in \mathbb{N})(y \leq x)$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Consider the proposition $(\forall x)(\exists y)(xy=1)$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Provide an example of a universe of discourse where this proposition is true.
+\item Provide an example of a universe of discourse where this proposition is false.
+\end{enumerate}
+\end{problem}
+
+To whet your appetite for the next section, consider how you might prove a true proposition of the form ``For all $x$\ldots.'' If a proposition is false, then its negation is true. How would you go about negating a statement involving quantifiers? 
+
+\epigraph{Like what you do, and then you will do your best.}{Katherine Johnson, mathematician}
+
+\end{section}

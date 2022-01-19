@@ -1,0 +1,223 @@
+\documentclass[12pt,oneside]{book}
+
+\usepackage[scale=2]{ccicons}
+\usepackage{caption}
+\usepackage[labelfont={}]{subcaption}
+\captionsetup{subrefformat=parens}
+\usepackage{booktabs}
+\usepackage{epigraph}
+\usepackage{enumitem}
+\usepackage{newclude}
+\usepackage{multicol}
+\usepackage{tabu}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata,positioning,fit,shapes}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{matrix}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{rotating}
+\usepackage[notextcomp]{kpfonts} 
+\usepackage{graphicx}
+\usepackage{eurosym}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{wasysym}
+\usepackage{amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage[hang,flushmargin]{footmisc}
+\usepackage{color}
+\usepackage{longfbox}
+\usepackage[most]{tcolorbox}
+\usepackage[breaklinks]{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=darkblue,
+	anchorcolor=darkblue,
+	citecolor=darkblue,
+	pagecolor=darkblue,
+	urlcolor=darkblue,
+	pdftitle={},
+	pdfauthor={},
+    bookmarksnumbered
+}
+
+%%% Colors %%%
+
+\definecolor{darkblue}{rgb}{0, 0, .6}
+\definecolor{grey}{rgb}{.6, .6, .6}
+\definecolor{lightgrey}{rgb}{.85, .85, .85}
+\definecolor{naugreen}{cmyk}{.43,0,.34,.38}
+\definecolor{naublue}{cmyk}{1,.72,0,.32}
+\definecolor{mediterranean}{cmyk}{.67,0,.08,.3}
+\definecolor{rose}{cmyk}{0,1.00,.20,0}
+\definecolor{darkorchid}{cmyk}{.6,.9,0,.05}
+\definecolor{butterfly}{cmyk}{.95,.59,0,.10}
+\definecolor{springgreen}{cmyk}{1.00,0,.70,.02}
+\definecolor{darkred}{cmyk}{0,1,1,.5}
+\definecolor{nectarine}{cmyk}{0,0.70,1.00,0}
+\definecolor{icyblue}{cmyk}{.84,.25,0,.06}
+\definecolor{orange}{RGB}{255,102,0}
+\definecolor{ggreen}{RGB}{0,153,0}
+\definecolor{darkblue}{RGB}{0,0,255}
+\definecolor{purple}{RGB}{153,51,255}
+\definecolor{turq}{RGB}{72,209,204}
+\definecolor{lightskyblue}{cmyk}{.4,.11,0,.2}
+\definecolor{softplum}{cmyk}{.02,.45,0,.68}%.37
+\definecolor{lightorange}{cmyk}{0,.45,.59,.02}
+\definecolor{brickorange}{cmyk}{0,.59,.59,.20}
+\definecolor{deeppink}{cmyk}{0,.6,.3,.3}
+\definecolor{orchid}{cmyk}{0,.49,.02,.05}
+
+\definecolor{grey1}{RGB}{247,247,247}
+\definecolor{grey2}{RGB}{204,204,204}
+\definecolor{grey3}{RGB}{150,150,150}
+\definecolor{grey4}{RGB}{99,99,99}
+\definecolor{grey5}{RGB}{37,37,37}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\leftmark}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{journal}[theorem]{Journal}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{skeleton}[theorem]{Skeleton Proof}
+\newtheorem{activity}[theorem]{Activity}
+\newtheorem{intuitivedef}[theorem]{Intuitive Definition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{fieldaxioms}[theorem]{Field Axioms}
+\newtheorem{axioms}[theorem]{Axioms}
+\newtheorem{orderaxioms}[theorem]{Order Axioms}
+\newtheorem{completenessaxiom}[theorem]{Completeness Axiom}
+\newtheorem{additionalaxioms}[theorem]{Additional Order Axioms}
+
+\newcommand{\dom}{\operatorname{Dom}}
+\newcommand{\codom}{\operatorname{Codom}}
+\newcommand{\range}{\operatorname{Rng}}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\card}{\operatorname{card}}
+\newcommand{\rel}{\operatorname{rel}}
+\newcommand{\Rel}{\operatorname{Rel}}
+\newcommand{\logeq}{\Longleftrightarrow}
+\renewcommand{\implies}{\Longrightarrow}
+
+\setlength{\epigraphwidth}{0.5\textwidth}
+\renewcommand{\sourceflush}{flushleft}
+
+\mdfdefinestyle{skeleton}{roundcorner=5pt,leftmargin=5pt,rightmargin=5pt,backgroundcolor = black!5!white}%lightgrey}
+
+\tcbset{size=fbox}%,colframe=black,colback=white,arc=2pt}%boxsep=0pt,left=4pt,right=4pt,top=2.5pt,bottom=2.5pt}
+
+\begin{document}
+
+\title{An Introduction to Proof via \\Inquiry-Based Learning}
+\author{Dana C.~Ernst, PhD\\
+Northern Arizona University}
+\date{Version Fall 2021}
+
+\maketitle
+\thispagestyle{empty}
+
+\noindent\copyright{ \the\year\ Dana C.~Ernst.  Some Rights Reserved.\\
+
+\bigskip
+
+\noindent This work is licensed under the Creative Commons Attribution-Share Alike 4.0 International License.  You may copy, distribute, display, and perform this copyrighted work, but only if you give credit to Dana C.~Ernst, and all derivative works based upon it must be published under the Creative Commons Attribution-Share Alike 4.0 International License. Please attribute this work to Dana C.~Ernst, Mathematics Faculty at Northern Arizona University, \url{dana.ernst@nau.edu}, as well as the individuals listed below. To view a copy of this license, visit
+\begin{center}
+\url{https://creativecommons.org/licenses/by-sa/4.0/}
+\end{center}
+or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.}
+
+\medskip
+
+\begin{center}
+\ccbysa
+\end{center}
+
+\bigskip
+
+\tableofcontents
+%\thispagestyle{empty}
+
+\include{Preface}
+\include{Acknowledgements}
+\include{Introduction}
+\include*{IntroToMath}
+\include*{TasteNumberTheory}
+\include*{IntroToLogic}
+\include*{NegatingAndContradiction}
+\include*{IntroQuantification}
+\include*{MoreQuantification}
+\include*{SetTheory}
+\include*{Sets}
+\include*{RussellsParadox}
+\include*{PowerSets}
+\include*{IndexingSets}
+\include*{CartesianProducts}
+\include*{Induction}
+\include*{IntroInduction}
+\include*{MoreInduction}
+\include*{CompleteInduction}
+\include*{WellOrderingPrinciple}
+\include*{RealNumbers}
+\include*{AxiomsRealNumbers}
+\include*{Topology}
+\include*{ThreeFamousTheorems}
+\include*{FundamentalTheoremArithmetic}
+\include*{IrrationalityRoot2}
+\include*{InfinitudeOfPrimes}
+\include*{RelationsPartitions}
+\include*{Relations}
+\include*{EquivalenceRelations}
+\include*{Partitions}
+\include*{ModularArithmetic}
+%\include*{Posets}
+\include*{Functions}
+\include*{IntroFunctions}
+\include*{InjectiveSurjectiveFunctions} 
+\include*{CompositionsInverses}
+\include*{ImagesInverseImages}
+\include*{ContinuousFunctions}
+\include*{Cardinality}
+\include*{IntroCardinality}
+\include*{FiniteSets}
+\include*{InfiniteSets}
+\include*{CountableSets}
+\include*{UncountableSets}
+%Appendices
+\include{ElementsOfStyle}
+\include{FancyMathematicalTerms}
+\include{Paradoxes}
+\include{Definitions}
+
+\end{document}
