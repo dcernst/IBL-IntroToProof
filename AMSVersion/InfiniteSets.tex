@@ -1,0 +1,86 @@
+\begin{section}{Infinite Sets}
+
+In the previous section, we explored finite sets.  Now, let's tinker with infinite sets.
+
+\begin{definition}\label{def:infiniteSet}
+A set $A$ is \textbf{infinite} if $A$ is not finite.
+\end{definition}
+
+Let's see if we can utilize this definition to prove that the set of natural numbers is infinite. For sake of a contradiction, assume otherwise.  Then there exists $n\in\mathbb{N}$ such that $\card([n])=\card(\mathbb{N})$, which implies that there exists a bijection $f:[n]\to \mathbb{N}$. What can you say about the number $m\coloneqq \max(f(1),f(2),\ldots,f(n))+1$?
+
+\begin{theorem}\label{thm:naturalNumbersInfinite}
+The set $\mathbb{N}$ of natural numbers is infinite.
+\end{theorem}
+
+The next theorem is analogous to Theorem~\ref{thm:finiteSetsSameCardinality}, but for infinite sets. To prove this theorem, try a proof by contradiction. You should end up composing two bijections, say $f:A\to B$ and $g:B\to [n]$ for some $n\in\mathbb{N}$. As we shall see later, the converse of this theorem is not true in general. 
+
+\begin{theorem}\label{thm:infiniteSetsSameCardinality}
+If $A$ is infinite and $\card(A)=\card(B)$, then $B$ is infinite.
+\end{theorem}
+
+\begin{problem}\label{prob:someInfiniteSets}
+Quickly verify that the following sets are infinite by appealing to Theorem~\ref{thm:naturalNumbersInfinite}, Theorem~\ref{thm:infiniteSetsSameCardinality}, or Problem~\ref{prob:cardinalityPractice}.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item The set of odd natural numbers
+\item The set of even natural numbers
+\item $\mathbb{Z}$
+\item $R=\{\frac{1}{2^n}\mid n\in \mathbb{N}\}$
+\item $\mathbb{N}\times \{a\}$
+\end{enumerate}
+\end{problem}
+
+Notice that Definition~\ref{def:infiniteSet} tells us what infinite sets are not, but it doesn't really tell us what they are. In light of Theorem~\ref{thm:naturalNumbersInfinite}, one way of thinking about infinite sets is as follows.  Suppose $A$ is some nonempty set. Let's select a random element from $A$ and set it aside. We will call this element the ``first" element.  Then we select one of the remaining elements and set is aside, as well.  This is the ``second" element.  Imagine we continue this way, choosing a ``third" element, and ``fourth" element, etc.  If the set is infinite, we should never run out of elements to select. Otherwise, we would create a bijection with $[n]$ for some $n\in\mathbb{N}$.
+
+The next problem, sometimes referred to as the Hilbert Hotel, named after the German mathematician \href{https://en.wikipedia.org/wiki/David_Hilbert}{David Hilbert} (1862--1942), illustrates another way of thinking about infinite sets.
+
+\begin{problem}
+The Infinite Hotel has rooms numbered $1,2,3,4,\ldots$. Every room in the Infinite Hotel is currently occupied.  
+\begin{enumerate}[label=\textrm{(\roman*)}]
+\item Is it possible to make room for one more guest (assuming they want a room all to themselves)? 
+\item An infinite number of new guests, say $g_1, g_2,g_3,\ldots$, show up in the lobby and each demands a room.  Is it possible to make room for all the new guests even if the hotel is already full?
+\end{enumerate}
+\end{problem}
+
+The previous problem verifies that there exists a proper subset of the natural numbers that is in bijection with the natural numbers themselves. We also witnessed this in Parts~(a) and (b) of Problem~\ref{prob:someInfiniteSets}. Notice that Theorem~\ref{thm:cardinalityProperSubsetsFinite} forbids this type of behavior for finite sets. It turns out that this phenomenon is true for all infinite sets. The next theorem verifies that that the two viewpoints of infinite sets discussed above are valid. To prove this theorem, we need to prove that the three statements are equivalent. One possible approach is to prove (i) if and only if (ii) and (ii) if and only if (iii). For (i) implies (ii), construct $f$ recursively. For (ii) implies (i), try a proof by contradiction. For (ii) implies (iii), let $B=A\setminus \{f(1),f(2),\ldots\}$ and show that $A$ can be put in bijection with $B\cup\{f(2),f(3),\ldots\}$. Lastly, for (iii) implies (ii), suppose $g:A\to C$ is a bijection for some proper subset $C$ of $A$. Let $a\in A\setminus C$. Define $f:\mathbb{N}\to A$ via $f(n)=g^n(a)$, where $g^n$ means compose $g$ with itself $n$ times.
+
+\begin{theorem}\label{thm:infiniteSetTFAE}
+The following statements are equivalent.
+\begin{enumerate}[label=\textrm{(\roman*)}]
+\item The set $A$ is infinite.
+\item There exists an injective function $f:\mathbb{N}\to A$.
+\item The set $A$ can be put in bijection with a proper subset of $A$ (i.e., there exists a proper subset $B$ of $A$ such that $\card(B)=\card(A)$).
+\end{enumerate}
+\end{theorem}
+
+It is worth mentioning that for the previous theorem, (iii) implies (i) follows immediately from the contrapositive of Theorem~\ref{thm:cardinalityProperSubsetsFinite}. When proving (i) implies (ii) in the previous theorem, did you apply the Axiom of Choice?  If so, where? 
+
+\begin{corollary}\label{cor:infiniteSetInfiniteSubset}
+A set is infinite if and only if it has an infinite subset.
+\end{corollary}
+
+\begin{corollary}\label{cor:card(N) less than or equal to infinite set}
+If $A$ is an infinite set, then $\card(\mathbb{N})\leq \card(A)$.
+\end{corollary}
+
+\begin{problem}
+Find a new proof of Theorem~\ref{thm:naturalNumbersInfinite} that uses (iii) implies (i) from Theorem~\ref{thm:infiniteSetTFAE}.
+\end{problem}
+
+\begin{problem}\label{prob:moreInfiniteSets}
+Quickly verify that the following sets are infinite by appealing to either Theorem~\ref{thm:infiniteSetTFAE} (use (ii) implies (i)) or Corollary~\ref{cor:infiniteSetInfiniteSubset}.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Set of odd natural numbers
+\item Set of even natural numbers
+\item $\mathbb{Z}$
+\item $\mathbb{N}\times \mathbb{N}$
+\item $\mathbb{Q}$
+\item $\mathbb{R}$
+\item Set of perfect squares in $\mathbb{N}$
+\item $(0,1)$
+\item $\mathbb{C}\coloneqq \{a+bi\mid a,b\in\mathbb{R}\}$
+\end{enumerate}
+\end{problem}
+
+\epigraph{An ounce of practice is worth more than tons of preaching.}{Mahatma Gandhi, political activist}
+
+\end{section}

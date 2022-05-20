@@ -1,0 +1,250 @@
+\begin{section}{Compositions and Inverse Functions}\label{sec:Compositions and Inverse Functions}
+
+We begin this section with a method for combining two functions together that have compatible domains and codomains.
+
+\begin{definition}
+If $f:X\to Y$ and $g:Y\to Z$ are functions, we define $g\circ f:X\to Z$ via $\tcboxmath{(g\circ f)(x)=g(f(x))}$. The function $g\circ f$ is called the \textbf{composition of $f$ and $g$}.
+\end{definition}
+
+It is important to notice that the function on the right is the one that ``goes first.''  Moreover, we cannot compose any two random functions since the codomain of the first function must agree with the domain of the second function.  In particular, $f\circ g$ may not be a sensible function even when $g\circ f$ exists. Figure~\ref{fig:function composition} provides a visual representation of function composition in terms of function diagrams.
+
+\tikzset{every loop/.style={min distance=8mm}}
+\tikzstyle{vert} = [circle, draw, fill=black,inner sep=0pt, minimum size=.5mm]
+\tikzstyle{b} = [draw,-stealth]
+
+\begin{figure}[h!]
+\begin{center}
+\begin{tikzpicture}[scale=.75,->,>=stealth,shorten >=1pt,auto,node distance=2cm,semithick]
+
+\node at (0,2.5) [below] {\scriptsize $x$};
+\node[vert] (A) at (0,2.5) {};
+
+\node at (3,2.5) [below] {\scriptsize $f(x)$};
+\node[vert] (B) at (3,2.5) {};
+
+\node at (6,2.5) [below] {\scriptsize $g(f(x))$};
+\node[vert] (C) at (6,2.5) {};
+
+\path (A) edge (B);
+\path (B) edge (C);
+
+\node[draw,rounded corners,fit=(A),minimum width=1.3cm,minimum height=2.75cm,gray] {};
+\node[draw,rounded corners,fit=(B),minimum width=1.3cm,minimum height=2.75cm,gray] {};
+\node[draw,rounded corners,fit=(C),minimum width=1.3cm,minimum height=2.75cm,gray] {};
+\node (X) at (0,4.7) {$X$};
+\node (Y) at (3,4.7) {$Y$};
+\node (Z) at (6,4.7) {$Z$};
+\path (X) edge [bend left] node {$f$} (Y);
+\path (Y) edge [bend left] node {$g$} (Z);
+\path (0,.5) edge [bend right] node[below] {$g\circ f$} (6,.5);
+\end{tikzpicture}
+\caption{Visual representation of function composition.}\label{fig:function composition}
+\end{center}
+\end{figure}
+
+\begin{problem}
+Let $X=\{1,2,3,4\}$ and define $f:X\to X$ and $g:X\to X$ via
+\[
+f=\{(1,1),(2,3),(3,3),(4,4)\}
+\]
+and
+\[
+g=\{(1,1),(2,2),(3,1),(4,1)\}.
+\]
+For each of the following functions, draw the corresponding function diagram in the spirit of Figure~\ref{fig:function composition} and identify the range.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $g\circ f$
+\item $f\circ g$
+\end{enumerate}
+\end{problem}
+
+The previous problem illustrates that $f\circ g$ and $g\circ f$ need not be equal even when both composite functions exist.
+
+\begin{example}
+Consider the inclusion map $\iota:X\to Y$ such that $X$ is a proper subset of $Y$ and suppose $f:Y\to Z$ is a function. Then the composite function $f\circ \iota:X\to Z$ is given by
+\[
+f\circ \iota(x)=f(\iota(x))=f(x)
+\]
+for all $x\in X$. Notice that $f\circ \iota$ is simply the function $f$ but with a smaller domain.  In this case, we say that $f\circ \iota$ is the \textbf{restriction of $f$ to $X$}, which is often denoted by $\tcboxmath{f|_X}$.
+\end{example}
+
+\begin{problem}
+Define $f:\mathbb{R}\to \mathbb{R}$ and $g:\mathbb{R}\to \mathbb{R}$ via $f(x)=x^2$ and $g(x)=3x-5$, respectively. Determine formulas for the composite functions $f\circ g$ and $g\circ f$.
+\end{problem}
+
+\begin{problem}
+Define $f:\mathbb{R}\to \mathbb{R}$ and $g:\mathbb{R}\to \mathbb{R}$ via
+\[
+f(x)=\begin{cases}
+5x+7, & \text{if }x< 0\\
+2x+1, & \text{if }x\geq 0
+\end{cases}
+\]
+and $g(x)=7x-11$, respectively. Find a formula for the composite function $g\circ f$.
+\end{problem}
+
+\begin{problem}
+Define $f:\mathbb{Z}/15\mathbb{Z}\to \mathbb{Z}/23\mathbb{Z}$ and $g:\mathbb{Z}/23\mathbb{Z}\to \mathbb{Z}/32\mathbb{Z}$ via $f([x]_{15})=[3x+5]_{23}$ and $g([x]_{23})=[2x+1]_{32}$, respectively. Find a formula for the composite function $g\circ f$.
+\end{problem}
+
+The following result provides some insight into where the identity map got its name.  
+
+\begin{theorem}
+If $f:X\to Y$ is a function, then $f\circ i_X = f = i_Y\circ f$, where $i_X$ and $i_Y$ are the identity maps on $X$ and $Y$, respectively.
+\end{theorem}
+
+The next theorem tells us that function composition is associative.
+
+\begin{theorem}
+If $f:X\to Y$, $g:Y\to Z$, and $h:Z\to W$ are functions, then $(h\circ g)\circ f = h\circ (g\circ f)$.
+\end{theorem}
+
+\begin{problem}
+In each case, give examples of finite sets $X$, $Y$, and $Z$, and functions $f:X\to Y$ and $g:Y\to Z$ that satisfy the given conditions.  Drawing a function diagram is sufficient.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $f$ is surjective, but $g\circ f$ is not surjective.
+\item $g$ is surjective, but $g\circ f$ is not surjective.
+\item $f$ is injective, but $g\circ f$ is not injective.
+\item $g$ is injective, but $g\circ f$ is not injective.
+\end{enumerate}
+\end{problem}
+
+\begin{theorem}
+If $f:X\to Y$ and $g:Y\to Z$ are both surjective functions, then $g\circ f$ is also surjective.
+\end{theorem}
+
+\begin{theorem}
+If $f:X\to Y$ and $g:Y\to Z$ are both injective functions, then $g\circ f$ is also injective.
+\end{theorem}
+
+\begin{corollary}
+If $f:X\to Y$ and $g:Y\to Z$ are both bijections, then $g\circ f$ is also a bijection.
+\end{corollary}
+
+\begin{problem}
+Assume that $f:X\to Y$ and $g:Y\to Z$ are both functions.  Determine whether each of the following statements is true or false. If a statement is true, prove it.  Otherwise, provide a counterexample.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item If $g\circ f$ is injective, then $f$ is injective.
+\item If $g\circ f$ is injective, then $g$ is injective.
+\item If $g\circ f$ is surjective, then $f$ is surjective.
+\item If $g\circ f$ is surjective, then $g$ is surjective.
+\end{enumerate}
+\end{problem}
+
+\begin{theorem}
+Let $f:X\to Y$ be a function. Then $f$ is injective if and only if there exists a function $g:Y\to X$ such that $g\circ f=i_X$, where $i_X$ is the identity map on $X$.
+\end{theorem}
+
+The function $g$ in the previous theorem is often called a \textbf{left inverse} of $f$.
+
+\begin{theorem}
+Let $f:X\to Y$ be a function. Then $f$ is surjective if and only if there exists a function $g:Y\to X$ such that $f\circ g=i_Y$, where $i_Y$ is the identity map on $Y$.
+\end{theorem}
+
+The function $g$ in the previous theorem is often called a \textbf{right inverse} of $f$.
+
+\begin{problem}
+Let $X=\{a,b\}$ and $Y=\{1,2\}$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Provide an example of a function that has a left inverse but does not have a right inverse. Find the left inverse of your proposed function.
+\item Provide an example of a function that has a right inverse but does not have a left inverse. Find the right inverse of your proposed function.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Define $f:\mathbb{R}\to\mathbb{R}$ via $f(x)=x^2$. Explain why $f$ does not have a left inverse nor a right inverse.
+\end{problem}
+
+\begin{problem}
+Define $f:\mathbb{R}\to[0,\infty)$ via $f(x)=x^2$ and $g:[0,\infty)\to \mathbb{R}$ via $g(x)=\sqrt{x}$. 
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Explain why $f$ does not have a left inverse.
+\item Verify that $g$ is the right inverse of $f$ by computing $f\circ g(x)$.
+\end{enumerate}
+\end{problem}
+
+\begin{corollary}\label{cor:two-sided inverse}
+If $f:X\to Y$ and $g:Y\to X$ are functions satisfying $g\circ f=i_X$ and  $f\circ g=i_Y$, then $f$ is a bijection.
+\end{corollary}
+
+In the previous result, the functions $f$ and $g$ ``cancel" each other out. In this case, we say that $g$ is a \textbf{two-sided inverse} of $f$.
+
+\begin{definition}\label{def:inverse of a function}
+Let $f:X\to Y$ be a function.  The relation $f^{-1}$ from $Y$ to $X$, called \textbf{$f$ inverse}, is defined via
+\[
+\tcboxmath{f^{-1}=\{(f(x),x)\in Y\times X\mid x\in X\}}.
+\] 
+\end{definition}
+
+Notice that we called $f^{-1}$ a relation and not a function.  In some circumstances $f^{-1}$ will be a function and sometimes it will not be. Given a function $f$, the inverse relation is simply the set of ordered pairs that results from reversing the ordered pairs in $f$.  It is worth pointing out that we have only defined inverse relations for functions.  However, one can easily adapt our definition to handle arbitrary relations.
+
+\begin{problem}
+Consider the function $f$ given in Example~\ref{ex:function} (see Figure~\ref{fig:function diagram}). List the ordered pairs in the relation $f^{-1}$ and draw the corresponding digraph. Is $f^{-1}$ a function?
+\end{problem}
+
+%\begin{problem}
+%Provide an example of a function $f:X\to Y$ such that $f^{-1}$ is \emph{not} a function.  Drawing a function diagram is sufficient.
+%\end{problem}
+
+\begin{problem}
+Provide an example of a function $f:X\to Y$ such that $f^{-1}$ is a function. Drawing a function diagram is sufficient.
+\end{problem}
+
+\begin{problem}
+Suppose $X\subseteq \mathbb{R}$ and $f:X\to \mathbb{R}$ is a function. What is the relationship between the graph of the function $f$ and the graph of the inverse relation $f^{-1}$?
+\end{problem}
+
+\begin{theorem}\label{thm:inverse function iff bijection}
+Let $f:X\to Y$ be a function.  Then $f^{-1}:Y\to X$ is a function if and only if $f$ is a bijection.
+\end{theorem}
+
+\begin{problem}
+Suppose $f:\mathbb{R}\to \mathbb{R}$ is a function. Fill in the blank with the appropriate phrase.
+\begin{quote}
+The relation $f^{-1}$ is a function if and only if every horizontal line hits the graph of $f$ \underline{\ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }.%exactly once
+\end{quote}
+Explain why this statement is true.
+\end{problem}
+
+\begin{theorem}\label{thm:comp of inverses}
+If $f:X\to Y$ is a bijection, then
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $f^{-1}\circ f=i_X$, and
+\item $f\circ f^{-1}=i_Y$.
+\end{enumerate}
+\end{theorem}
+
+\begin{theorem}\label{thm:f inverse bijection}
+If $f:X\to Y$ is a bijection, then $f^{-1}:Y\to X$ is also a bijection.
+\end{theorem}
+
+\begin{theorem}\label{thm:unique inverse}
+If $f:X\to Y$ and $g:Y\to X$ are functions such that $g\circ f=i_X$ and $f\circ g=i_Y$, then $f^{-1}$ is a function and $g=f^{-1}$.
+%Let $f:X\to Y$ and $g:Y\to X$ be functions such that $f$ is a bijection.  If $g\circ f=i_X$ and $f\circ g=i_Y$, then $g=f^{-1}$.
+\end{theorem}
+
+The upshot of Theorems~\ref{thm:comp of inverses} and \ref{thm:unique inverse} is that if $f^{-1}$ is a function, then it is the only one satisfying the two-sided inverse property exhibited in Corollary~\ref{cor:two-sided inverse} and Theorem~\ref{thm:comp of inverses}. That is, inverse functions are unique when they exist. When the relation $f^{-1}$ is a function, we call it the \textbf{inverse function} of $f$.
+
+\begin{problem}
+Let $X\subseteq\mathbb{R}$ and suppose $f:X\to\mathbb{R}$ is a function.  Explain the difference between $f^{-1}(x)$ and $[f(x)]^{-1}$.  When does each exist?
+\end{problem}
+
+\begin{problem}
+Let $X,Y\subseteq\mathbb{R}$ and define $f:X\to Y$ via $f(x)=e^x$ and $g:Y\to X$ via $g(x)=\ln(x)$.  Identify the largest possible choices for $X$ and $Y$ so that $f$ and $g$ are inverses of each other.
+\end{problem}
+
+\begin{theorem}\label{thm:inverse of inverse}
+If $f:X\to Y$ is a bijection, then $(f^{-1})^{-1}=f$.
+\end{theorem}
+
+In the previous theorem, we restricted our attention to bijections so that $f^{-1}$ would be a function, thus making $(f^{-1})^{-1}$ a sensible inverse relation in light of Definition~\ref{def:inverse of a function}.  If we had defined inverses for arbitrary relations, then we would not have needed to require the function in Theorem~\ref{thm:inverse of inverse} to be a bijection. In fact, we do not even need to require the relation to be a function.  That is, if $R$ is a relation from $X$ to $Y$, then $(R^{-1})^{-1}=R$, as expected. Similarly, the next result generalizes to arbitrary relations.
+
+\begin{theorem}
+If $f:X\to Y$ and $g:Y\to Z$ are both bijections, then $(g\circ f)^{-1}=f^{-1}\circ g^{-1}$.
+\end{theorem}
+
+The previous theorem is sometimes referred to as the ``socks and shoes theorem".  Do you see how it got this name?
+
+\epigraph{The most difficult thing is the decision to act. The rest is merely tenacity.}{Amelia Earhart, aviation pioneer}
+
+\end{section}
