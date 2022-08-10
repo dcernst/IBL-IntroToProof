@@ -1,0 +1,164 @@
+\begin{section}{Partitions}
+
+Theorems~\ref{thm:related if and only if same class} and \ref{thm:equiv yields partition} imply that if $\sim$ is an equivalence relation on a set $A$, then $\sim$ breaks $A$ up into pairwise disjoint ``chunks", where each chunk is some $[a]$ for $a\in A$.  As you have probably already noticed, equivalence relations are intimately related to the following concept.
+
+\begin{definition}\label{def:partition}
+A collection $\Omega$ of subsets of a set $A$ is said to be a \textbf{partition} of $A$ if the elements of $\Omega$ satisfy:
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Each $X\in \Omega$ is nonempty,
+\item For all $X,Y\in\Omega$, $X\cap Y=\emptyset$ when $X\neq Y$, and
+\item $\displaystyle \bigcup_{X\in\Omega}X=A$.
+\end{enumerate}
+That is, the elements of $\Omega$ are pairwise disjoint nonempty sets and their union is all of $A$. Each $X\in \Omega$ is called a \textbf{block} of the partition.
+\end{definition}
+
+\begin{example}\label{ex:last name revisited}
+Consider the equivalence relation $\sim$ on the set $P$ described in Example~\ref{ex:last name}.  Recall that the equivalence classes correspond to collections of individuals with the same last name. Since each equivalence class is nonempty and each resident of the town belongs to exactly one equivalence class, the collection of equivalence classes forms a partition of $P$.  That is, $P/\mathord\sim$ is a partition of $P$, where the blocks of the partition correspond to sets of residents with the same last name.
+\end{example}
+
+\begin{example}
+Each of the following is an example of a partition of the set given in parentheses.  %Perhaps you can find exceptions in the first two examples, but please take them at face value.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Democrat, Republican, Independent, Green Party, Libertarian, etc. (set of registered voters)
+\item Freshman, sophomore, junior, senior (set of high school students)
+\item Evens, odds (set of integers)
+\item Rationals, irrationals (set of real numbers)
+\end{enumerate}
+\end{example}
+
+%\begin{example}\label{ex:toys}
+%My kids have three types of toys in their room: Legos, wooden blocks, and Transformers.  This determines a partition of my kids' toys consisting of three blocks, where each block corresponds to the type of toy.
+%\end{example}
+
+\begin{example}\label{ex:a partition}
+Let $A=\{a,b,c,d,e,f\}$ and $\Omega=\{\{a\}, \{b,c,d\}, \{e,f\}\}$. Since the elements of $\Omega$ are pairwise disjoint nonempty subsets of $A$ such that their union is all of $A$, $\Omega$ is a partition of $A$ consisting of three blocks.
+\end{example}
+
+\begin{problem}
+Consider the set $A$ from Example~\ref{ex:a partition}.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Find a partition of $A$ consisting of four blocks.
+\item Find a collection of subsets of $A$ that does \emph{not} form a partition. See how many ways you can prevent your collection from being a partition.
+\end{enumerate}
+\end{problem}
+
+%\begin{problem}
+%Let $P$ be the set of prime numbers, $N$ the set of odd natural numbers that are not prime, and $E$ the set of even natural numbers.  Determine whether $\{P, N, E\}$ is a partition of $\mathbb{N}$.
+%\end{problem}
+
+%\begin{problem}
+%Find a partition of $\mathbb{R}$ that consists of three blocks, where one of the blocks is finite and the remaining two blocks are infinite.
+%\end{problem}
+
+\begin{problem}
+For each of the following, find a partition of $\mathbb{Z}$ with the given properties.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item A partition of $\mathbb{Z}$ that consists of finitely many blocks, where each of the blocks is infinite.
+\item A partition of $\mathbb{Z}$ that consists of infinitely many blocks, where each of the blocks is finite.
+\item A partition of $\mathbb{Z}$ that consists of infinitely many blocks, where each of the blocks is infinite.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+For each relation in Problem~\ref{prob:lots of relations}, determine whether the corresponding collection of the sets of relatives forms a partition of the given set.
+\end{problem}
+
+\begin{problem}
+Can we partition the empty set?  If so, describe a partition.  If not, explain why.
+\end{problem}
+
+The next theorem spells out half of the close connection between partitions and equivalence relations. Theorem~\ref{thm:partition yields equivalence relation} yields the other half.
+
+\begin{theorem}\label{thm:equiv yields partition2}
+If $\sim$ is an equivalence relation on a nonempty set $A$, then $A/\mathord\sim$ forms a partition of~$A$.
+\end{theorem}
+
+\begin{problem}
+In the previous theorem, why did we require $A$ to be nonempty?
+\end{problem}
+
+\begin{problem}
+Consider the equivalence relation
+\[
+\sim\ =\{(1,1),(1,2),(2,1), (2,2),(3,3),(4,4),(4,5),(5,4),(5,5),(6,6),(5,6),(6,5),(4,6),(6,4)\}
+\]
+on the set $A=\{1,2,3,4,5,6\}$.  Find the partition determined by $\Rel(\sim)$.
+\end{problem}
+
+It turns out that we can reverse the situation, as well.  That is, given a partition, we can form an equivalence relation such that the equivalence classes correspond to the blocks of the partition.  Before proving this, we need a definition.
+
+\begin{definition}
+Let $A$ be a set and $\Omega$ any collection of subsets of $A$ (not necessarily a partition).  Define the relation $\tcboxmath{R_{\Omega}}$ on $A$ via $aR_{\Omega}b$ if there exists $X\in \Omega$ that contains both $a$ and $b$. This relation is called the \textbf{relation on $A$ associated to $\Omega$}.
+\end{definition}
+
+In other words, two elements are related exactly when they are in the same subset. %For example, if you consider the partition of my kids' toys described in Example~\ref{ex:toys}, then two toys are related if they are of the same type.
+
+\begin{problem}
+Let $A=\{a,b,c,d,e,f\}$ and let $\Omega=\{\{a,c\},\{b,c\},\{d,f\}\}$.  List the ordered pairs in $R_{\Omega}$ and draw the corresponding digraph.
+\end{problem}
+
+\begin{problem}
+Let $A$ and $\Omega$ be as in Example~\ref{ex:a partition}. List the ordered pairs in $R_{\Omega}$ and draw the corresponding digraph.
+\end{problem}
+
+\begin{problem}
+Consider Problem~\ref{prob:find sim from Rel}. Find the relation on $A$ associated to $\Rel(\sim)$ and compare with what you obtained for $R$ in Problem~\ref{prob:find sim from Rel}.
+\end{problem}
+
+\begin{problem}
+Give an example of a set $A$ and a collection $\Omega$ from $\mathcal{P}(A)$ such that the relation $R_{\Omega}$ is not reflexive.
+\end{problem}
+
+\begin{problem}
+Let $A=\{1,2,3,4,5,6\}$ and $\Omega=\{\{1,3,4\},\{2,4\},\{3,4\},\{6\}\}$. 
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Is $\Omega$ a partition of $A$?
+\item Find $R_{\Omega}$ by listing ordered pairs or drawing a digraph.
+\item Is $R_{\Omega}$ an equivalence relation?
+\item Find $\Rel(R_\Omega)$ (i.e., the collection of subsets of $A$ determined by $R_{\Omega}$). How are $\Omega$ and $\Rel(R_\Omega)$ related?
+\end{enumerate}
+\end{problem}
+
+\begin{theorem}\label{thm:union yields reflexive}
+If $\Omega$ is a collection of subsets of a nonempty set $A$ (not necessarily a partition) such that
+\[
+\bigcup_{X\in\Omega}X=A,
+\]
+then $R_{\Omega}$ is reflexive.
+\end{theorem}
+
+\begin{problem}
+Is it necessary to require $A$ to be nonempty in Theorem~\ref{thm:union yields reflexive}?
+\end{problem}
+
+\begin{theorem}\label{thm:always symmetric}
+If $\Omega$ is a collection of subsets of a set $A$ (not necessarily a partition), then $R_{\Omega}$ is symmetric.
+\end{theorem}
+
+\begin{theorem}\label{thm:pairwise disjoint yields transitive}
+If $\Omega$ is a collection of subsets of a set $A$ (not necessarily a partition) such that the elements of $\Omega$ are pairwise disjoint, then $R_{\Omega}$ is transitive.
+\end{theorem}
+
+\begin{problem}
+Why didn't we require $A$ to be nonempty in Theorems~\ref{thm:always symmetric} and \ref{thm:pairwise disjoint yields transitive}?
+\end{problem}
+
+Recall that Theorem~\ref{thm:equiv yields partition2} says that the equivalence classes for a relation on a nonempty set $A$ determines a partition of $A$.  The following theorem tells us that every partition of a set yields an equivalence relation where the equivalence classes correspond to the blocks of the partition. This result is a consequence of Theorems~\ref{thm:union yields reflexive}, \ref{thm:always symmetric}, and \ref{thm:pairwise disjoint yields transitive}.
+
+\begin{theorem}\label{thm:partition yields equivalence relation}
+If $\Omega$ is a partition of a set $A$, then $R_{\Omega}$ is an equivalence relation.
+\end{theorem}
+
+Together, Theorems~\ref{thm:equiv yields partition2} and \ref{thm:partition yields equivalence relation} tell us that equivalence relations and partitions are two different ways of viewing the same thing.
+
+\begin{corollary}\label{cor:partition yields equivalence relation}
+If $R$ is a relation on a nonempty set $A$ such that the collection of the set of relatives with respect to $R$ is a partition of $A$, then $R$ is an equivalence relation.
+\end{corollary}
+
+\begin{problem}
+Let $A=\{\circ, \triangle, \blacktriangle, \square, \blacksquare, \bigstar, \smiley, \frownie\}$.  Make up a partition $\Omega$ on $A$ and then draw the digraph corresponding to $R_{\Omega}$. 
+\end{problem}
+
+\epigraph{In the broad light of day mathematicians check their equations and their proofs, leaving no stone unturned in their search for rigour. But, at night, under the full moon, they dream, they float among the stars and wonder at the miracle of the heavens. They are inspired. Without dreams there is no art, no mathematics, no life.}{Michael Atiyah, mathematician}
+
+\end{section}
