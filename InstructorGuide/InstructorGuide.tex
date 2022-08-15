@@ -1,6 +1,7 @@
 \documentclass[11pt]{article}%{amsart}
 
 \usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
 \usepackage{url}
 \usepackage[breaklinks]{hyperref}
 \usepackage{color}
@@ -26,9 +27,9 @@
 
 \newcommand{\blankline}{\pagebreak[2]\vspace{.5\baselineskip}}
 
-%%%%%%%%%%%%%%%%%%%
-
+%----------------%
 \begin{document}
+%----------------%
 
 \title{An Introduction to Proof via Inquiry-Based Learning\\
 Instructor Guide}
@@ -40,6 +41,8 @@ Instructor Guide}
 \begin{mdframed}[style=skeleton]
 This Instructor Guide is a work in progress!  If you have questions about something not addressed in this guide, you can either submit an issue on \href{https://github.com/dcernst/IBL-IntroToProof/issues}{GitHub} or send me an email at \url{dana.ernst@nau.edu}.  I want instructors that utilize \emph{An Introduction to Proof via Inquiry-Based Learning} to be as successful as possible, so please reach out with questions or concerns.
 \end{mdframed}
+
+%----------------%
 
 \section*{Overview}
 
@@ -86,21 +89,7 @@ There are many useful resources available that instructors can utilize for desig
 \end{itemize}
 My Fall 2021 course utilized a version of the book that is nearly identical to the current version, but I happened to cover far less material than usual.  I covered more ground in Spring 2020, but the version of the book I used that semester may look a bit different than the current version.  I would consider the amount of material I covered in Spring 2020 to be fairly typical.  The differences in the amount of material that I covered had nothing to do with the version of the book!  Feel free to reach out with questions about how to set up your course or how to best make use of the book.
 
-\section*{Structure of the Textbook}
-
-As students read the book, they should be digesting the material in a meaningful way.  In addition to reading and understanding new definitions and their related concepts, students will be asked to complete problems aimed at solidifying their understanding of the material.  In particular, the reader is asked to make conjectures, produce counterexamples, and prove theorems. All of these tasks will almost always be challenging.
-
-\blankline
-
-The items labeled as \textbf{Definition} and \textbf{Example} are meant to be read and digested.  However, the items labeled as \textbf{Problem}, \textbf{Theorem}, and \textbf{Corollary} require action on the reader's part.  Items labeled as \textbf{Problem} are sort of a mixed bag. Some Problems are computational in nature and aimed at improving understanding of a particular concept while others ask the reader to provide a counterexample for a statement if it is false or to provide a proof if the statement is true. Items with the \textbf{Theorem} and \textbf{Corollary} designation are mathematical facts and the intention is for the reader to produce a valid proof of the given statement. All of this is spelled out in the Introduction of the book, but I suggest taking the time to communicate this to your students.
-
-\blankline
-
-Oftentimes, the problems and theorems are guiding the reader towards a substantial, more  general result. Other times, they are designed to get the reader to apply ideas in a new way. Please take the time to tell your students that every task in the book is doable but sometimes very challenging.  They may not be successful on their first, or even second or third try.  This is okay!  Remind them of this often. 
-
-\blankline
-
-Discussion of new topics is typically kept at a minimum and there are very few examples in the book. This is intentional.  One of the objectives of the items labeled as \textbf{Problem} is for the reader to produce the examples needed to internalize unfamiliar concepts.  The overarching goal of the book is to help the reader develop a deep and meaningful understanding of the processes of producing mathematics by putting them in direct contact with mathematical phenomena.
+%----------------%
 
 \section*{Evidence in Favor of Active Learning}
 
@@ -137,23 +126,103 @@ In addition, the Manifesto of the \href{https://www.maa.org/programs-and-communi
 \emph{``We must gather the courage to advocate beyond our own classroom for student-centered instructional strategies that promote equitable access to mathematics for all students. We stand at a crossroads, and we must choose the path of transformation in order to fulfill our professional responsibility to our students."}
 \end{quote}
 
+%----------------%
+
+\section*{Structure of the Textbook}
+
+As students read the book, they should be digesting the material in a meaningful way.  In addition to reading and understanding new definitions and their related concepts, students will be asked to complete problems aimed at solidifying their understanding of the material.  In particular, the reader is asked to make conjectures, produce counterexamples, and prove theorems. All of these tasks will almost always be challenging.
+
+\blankline
+
+The items labeled as \textbf{Definition} and \textbf{Example} are meant to be read and digested.  However, the items labeled as \textbf{Problem}, \textbf{Theorem}, and \textbf{Corollary} require action on the reader's part.  Items labeled as \textbf{Problem} are sort of a mixed bag. Some Problems are computational in nature and aimed at improving understanding of a particular concept while others ask the reader to provide a counterexample for a statement if it is false or to provide a proof if the statement is true. Items with the \textbf{Theorem} and \textbf{Corollary} designation are mathematical facts and the intention is for the reader to produce a valid proof of the given statement. All of this is spelled out in the Introduction of the book, but I suggest taking the time to communicate this to your students.
+
+\blankline
+
+Oftentimes, the problems and theorems are guiding the reader towards a substantial, more  general result. Other times, they are designed to get the reader to apply ideas in a new way. Please take the time to tell your students that every task in the book is doable but sometimes very challenging.  They may not be successful on their first, or even second or third try.  This is okay!  Remind them of this often. 
+
+\blankline
+
+Discussion of new topics is typically kept at a minimum and there are very few examples in the book. This is intentional.  One of the objectives of the items labeled as \textbf{Problem} is for the reader to produce the examples needed to internalize unfamiliar concepts.  The overarching goal of the book is to help the reader develop a deep and meaningful understanding of the processes of producing mathematics by putting them in direct contact with mathematical phenomena.
+
+%----------------%
+
+\section*{General Comments}
+
+blah
+
+%----------------%
+
 \section*{Chapter 1: Introduction}
 
 I ask my students to read this short chapter and then take the time in class to highlight the content in Section~1.4: Structure of the Textbook.  Despite this, I always have at least one student that asks me what they are supposed to do the first time I assign a theorem.  At a minimum, I would ask students to read Sections~1.2--1.4.
 
+%----------------%
+
 \section*{Chapter 2: Mathematics and Logic}
+
+%----------------%
+
+Most instructors will likely choose to cover Chapter 2 as part of their course.  While this chapter sets the stage for what is to come later in the book, I caution instructors from getting too bogged down here.  I recommend covering this chapter as swiftly as your students can manage, so that you have time later for more challenging topics.  In my opinion, you can crank through this chapter without causing any damage. If necessary, you can always return to the foundation in this chapter as needed. 
+
+\blankline
+
+Section 2.1: A Taste of Number Theory is a bit unusual as it asks students to jump right into proving theorems without any initial guidance.  This is intentional, and in my experience is a very effective way to start the course.  First, it gives you a sense of where your students are at in terms of their general understanding, or lack thereof, mathematical proofs.  I think you will be surprised at what students are capable of without being explicitly told how to write a proof.  Second, and more importantly, this section develops an intellectual need for more rigor and more structure.  Take the time to communicate to your students what the purpose of this section is.  Emphasize to them that they should just jump in and try their hand at writing proofs without too much concern for whether they are ``doing it the right way." Lots of interesting issues will bubble to the surface and you will have to pick and choose which topics you want to carefully address now versus later in the semester.  Theorem~2.2 is the first theorem in the book and you should remind students that the intended task for theorems is to prove them.
+
+\blankline
+
+The definitions for even and odd integers are given in Definition~2.1, but many students will attempt to use their favorite characterizations  that they are familiar with.  For example, they might say that an integer is even if it is divisible by 2.  While this is certainly true, they won't encounter the definition of ``divides" until Definition~2.5. It's a good idea to point out that this characterization of even follows immediately from Definitions~2.1 and 2.5. Students are also often surprised that negative integers can be odd or even.  
+
+\blankline
+
+You will have to decide how firm of a stance you want to take on phrases like ``even integer" versus ``even number."  While the former is certainly the correct choice of language, my view is that the adjectives ``even" and ``odd" only refer to integers, so there shouldn't be much confusion when one says, ``even number."  You should decide in advance how you want to approach this issue.  At the very least, be sure to have a conversation about this with your students.  
+
+\blankline
+
+To save some time, notice that I wrote, ``For the remainder of this section, you may assume that every integer is either even or odd but never both" in the paragraph below Definition~2.1.  This is something you should point out to students and be sure to tell them that officially this is something one would need to prove. We will be more careful in later chapters.
+
+\blankline
+
+Problem~2.6 and the paragraph that follows address the difference between ``$n$ divides $m$" versus ``$m$ divided by $n$."  The former is a sentence while the latter is a noun (i.e., the number one obtains after dividing $m$ by $n$).  You should be prepared for this confusion to rear its head multiple times during your course.
+
+\blankline
+
+While Section~2.1 asks students jump in head first without a formal understanding of what it was we were doing, Section~2.2 hits the reset button and takes a more careful approach while introducing the basics of propositional logic.  One detail you could get lots in the weeds on is whether a given English-language sentence is a proposition or not.  My suggestion is to not lose focus here.  There are lots of subtle issues that I have chosen not to formally address in the book.  As one example, consider the following: ``Assume that $x$ is an even integer. Then $x^3$ is an even integer." Is the second sentence a proposition?  I would say technically ``no"; it is actually a predicate taken on its own. However, collectively the two sentences form a proposition (which happens to be true).
+
+\blankline
+
+One thing worth pointing out is that there is an implicit universal quantifier in front of all statements of the form ``if $A(x)$, then $B(x)$", where $A(x)$ and $B(x)$ are predicates and $x$ is some variable. I attempt to address this issue just after Problem~2.67. This is standard convention in mathematics and is definitely worth pointing out to your students. The statement ``For all $x$, if $A(x)$, then $B(x)$" is a proposition. This statement may sometimes be written in two sentences, where the first sentence bounds the variable. For example, ``Let $n$ be a natural number. If $A(n)$, then $B(n)$." Another way to write the same statement would be ``If $n$ is a natural number such that $A(n)$, then $B(n)$." This is how most of the theorems in Sections 2.1 and 2.3 are written. More commonly, if the universe of discourse is understood (or can be inferred), one might simply write ``If $A(n)$, then $B(n)$."  Officially, ``If $A(n)$, then $B(n)$" is a predicate, but if we take this as short hand for ``For all $n$, if $A(n)$, then $B(n)$", we have a proposition.  
+
+\blankline
+
+My suggestion is minimize the importance of the symbolic logic (e.g., strings utilizing symbols such as $\forall$, $\exists$, $\wedge$, $\vee$, $\implies$, etc.) presented in Sections~2.2--2.5.  I think is important for students to be exposed to symbolic logic, but I essentially abandon it after Section~2.5.  Discourage your students from using the formal symbolism in their mathematical proofs.
+
+\blankline
+
+One detail that the books sweeps under the rug is that we discuss the truth value of conditional propositions in Definition~2.18 and then take for granted that we can apply the same structure to conditional statements involving predicates. For better or worse, this seems to be the standard approach is introduction to proof books.  My personal take is that I don't want to get bogged down in these sorts of pedantic details, but if you feel otherwise, you should address the issue carefully for your students.
 
 \section*{Chapter 3: Set Theory}
 
+%----------------%
+
 \section*{Chapter 4: Induction}
+
+%----------------%
 
 \section*{Chapter 5: The Real Numbers}
 
+%----------------%
+
 \section*{Chapter 6: Three Famous Theorems}
+
+%----------------%
 
 \section*{Chapter 7: Relations and Partitions}
 
+%----------------%
+
 \section*{Chapter 8: Functions}
+
+%----------------%
 
 \section*{Chapter 9: Cardinality}
 
