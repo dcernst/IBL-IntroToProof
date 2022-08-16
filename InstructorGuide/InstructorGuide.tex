@@ -2,6 +2,8 @@
 
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{url}
 \usepackage[breaklinks]{hyperref}
 \usepackage{color}
@@ -154,7 +156,7 @@ blah
 
 \section*{Chapter 1: Introduction}
 
-I ask my students to read this short chapter and then take the time in class to highlight the content in Section~1.4: Structure of the Textbook.  Despite this, I always have at least one student that asks me what they are supposed to do the first time I assign a theorem.  At a minimum, I would ask students to read Sections~1.2--1.4.
+I ask my students to read this short chapter and then take the time in class to highlight the content in \textbf{Section~1.4}.  Despite this, I always have at least one student that asks me what they are supposed to do the first time I assign a theorem.  At a minimum, I would ask students to read \textbf{Sections~1.2--1.4}.
 
 %----------------%
 
@@ -162,15 +164,15 @@ I ask my students to read this short chapter and then take the time in class to 
 
 %----------------%
 
-Most instructors will likely choose to cover Chapter 2 as part of their course.  While this chapter sets the stage for what is to come later in the book, I caution instructors from getting too bogged down here.  I recommend covering this chapter as swiftly as your students can manage, so that you have time later for more challenging topics.  In my opinion, you can crank through this chapter without causing any damage. If necessary, you can always return to the foundation in this chapter as needed. 
+Most instructors will likely choose to cover Chapter 2 as part of their course.  While this chapter sets the stage for what is to come later in the book, I caution instructors from getting too bogged down here.  I recommend covering this chapter as swiftly as your students can manage, so that you have time later for more challenging topics.  In my opinion, you can crank through this chapter without causing any damage. If necessary, you can always return to the foundation in this chapter as needed. None of the mathematical theorems (in contrast to the logical theorems, e.g., \textbf{Theorem~2.26}) are needed in future chapters.  The sole purpose of the mathematical theorems in Chapter 2 is to provide an onramp to proving theorems in a familiar context.
 
 \blankline
 
-Section 2.1: A Taste of Number Theory is a bit unusual as it asks students to jump right into proving theorems without any initial guidance.  This is intentional, and in my experience is a very effective way to start the course.  First, it gives you a sense of where your students are at in terms of their general understanding, or lack thereof, mathematical proofs.  I think you will be surprised at what students are capable of without being explicitly told how to write a proof.  Second, and more importantly, this section develops an intellectual need for more rigor and more structure.  Take the time to communicate to your students what the purpose of this section is.  Emphasize to them that they should just jump in and try their hand at writing proofs without too much concern for whether they are ``doing it the right way." Lots of interesting issues will bubble to the surface and you will have to pick and choose which topics you want to carefully address now versus later in the semester.  Theorem~2.2 is the first theorem in the book and you should remind students that the intended task for theorems is to prove them.
+\textbf{Section 2.1} is a bit unusual as it asks students to jump right into proving theorems without any initial guidance.  This is intentional, and in my experience is a very effective way to start the course.  First, it gives you a sense of where your students are at in terms of their general understanding, or lack thereof, mathematical proofs.  I think you will be surprised at what students are capable of without being explicitly told how to write a proof.  Second, and more importantly, this section develops an intellectual need for more rigor and more structure.  Take the time to communicate to your students what the purpose of this section is.  Emphasize to them that they should just jump in and try their hand at writing proofs without too much concern for whether they are ``doing it the right way." Lots of interesting issues will bubble to the surface and you will have to pick and choose which topics you want to carefully address now versus later in the semester.  \textbf{Theorem~2.2} is the first theorem in the book and you should remind students that the intended task for theorems is to prove them.
 
 \blankline
 
-The definitions for even and odd integers are given in Definition~2.1, but many students will attempt to use their favorite characterizations  that they are familiar with.  For example, they might say that an integer is even if it is divisible by 2.  While this is certainly true, they won't encounter the definition of ``divides" until Definition~2.5. It's a good idea to point out that this characterization of even follows immediately from Definitions~2.1 and 2.5. Students are also often surprised that negative integers can be odd or even.  
+The definitions for even and odd integers are given in \textbf{Definition~2.1}, but many students will attempt to use their favorite characterizations  that they are familiar with.  For example, they might say that an integer is even if it is divisible by 2.  While this is certainly true, they won't encounter the definition of ``divides" until \textbf{Definition~2.5}. It's a good idea to point out that this characterization of even follows immediately from \textbf{Definitions~2.1} and \textbf{2.5}. Students are also often surprised that negative integers can be odd or even.  
 
 \blankline
 
@@ -178,33 +180,142 @@ You will have to decide how firm of a stance you want to take on phrases like ``
 
 \blankline
 
-To save some time, notice that I wrote, ``For the remainder of this section, you may assume that every integer is either even or odd but never both" in the paragraph below Definition~2.1.  This is something you should point out to students and be sure to tell them that officially this is something one would need to prove. We will be more careful in later chapters.
+To save some time, notice that I wrote, ``For the remainder of this section, you may assume that every integer is either even or odd but never both" in the paragraph below \textbf{Definition~2.1}.  This is something you should point out to students and be sure to tell them that officially this is something one would need to prove. We will be more careful in later chapters.
 
 \blankline
 
-Problem~2.6 and the paragraph that follows address the difference between ``$n$ divides $m$" versus ``$m$ divided by $n$."  The former is a sentence while the latter is a noun (i.e., the number one obtains after dividing $m$ by $n$).  You should be prepared for this confusion to rear its head multiple times during your course.
+\textbf{Problem~2.6} and the paragraph that follows address the difference between ``$n$ divides $m$" versus ``$m$ divided by $n$."  The former is a sentence while the latter is a noun (i.e., the number one obtains after dividing $m$ by $n$).  You should be prepared for this confusion to rear its head multiple times during your course.
 
 \blankline
 
-While Section~2.1 asks students jump in head first without a formal understanding of what it was we were doing, Section~2.2 hits the reset button and takes a more careful approach while introducing the basics of propositional logic.  One detail you could get lots in the weeds on is whether a given English-language sentence is a proposition or not.  My suggestion is to not lose focus here.  There are lots of subtle issues that I have chosen not to formally address in the book.  As one example, consider the following: ``Assume that $x$ is an even integer. Then $x^3$ is an even integer." Is the second sentence a proposition?  I would say technically ``no"; it is actually a predicate taken on its own. However, collectively the two sentences form a proposition (which happens to be true).
+\textbf{Corollary~2.9} is the first encounter with a corollary in the book. It's a good idea to remind students what a corollary is (even though there is a reminder in the text right above \textbf{Corollary~2.9}).  One can prove \textbf{Corollary~2.9} by appealing to \textbf{Theorem~2.8} or directly.  I always find a way to make sure both approaches get presented (by either students or by me) and then we take a moment to discuss the fact that we can appeal to previous results or return to the definition and prove things from scratch.
 
 \blankline
 
-One thing worth pointing out is that there is an implicit universal quantifier in front of all statements of the form ``if $A(x)$, then $B(x)$", where $A(x)$ and $B(x)$ are predicates and $x$ is some variable. I attempt to address this issue just after Problem~2.67. This is standard convention in mathematics and is definitely worth pointing out to your students. The statement ``For all $x$, if $A(x)$, then $B(x)$" is a proposition. This statement may sometimes be written in two sentences, where the first sentence bounds the variable. For example, ``Let $n$ be a natural number. If $A(n)$, then $B(n)$." Another way to write the same statement would be ``If $n$ is a natural number such that $A(n)$, then $B(n)$." This is how most of the theorems in Sections 2.1 and 2.3 are written. More commonly, if the universe of discourse is understood (or can be inferred), one might simply write ``If $A(n)$, then $B(n)$."  Officially, ``If $A(n)$, then $B(n)$" is a predicate, but if we take this as short hand for ``For all $n$, if $A(n)$, then $B(n)$", we have a proposition.  
+The same two approaches could be employed in the proof of \textbf{Theorem~2.10}.  In fact, perhaps I should have called Theorem~2.10 a corollary.
 
 \blankline
 
-My suggestion is minimize the importance of the symbolic logic (e.g., strings utilizing symbols such as $\forall$, $\exists$, $\wedge$, $\vee$, $\implies$, etc.) presented in Sections~2.2--2.5.  I think is important for students to be exposed to symbolic logic, but I essentially abandon it after Section~2.5.  Discourage your students from using the formal symbolism in their mathematical proofs.
+\textbf{Definition~2.18(d)} introduces the definition of the truth value of a conditional statement.  It's important to emphasize to students that this is a definition.  Students are often disturbed by the fact that $A \implies B$ is true when $A$ is false no matter what the truth value of $B$ is.  The purpose of \textbf{Problem~2.23} is to help students reconcile any cognitive dissonance that students might have with this definition.
 
 \blankline
 
-One detail that the books sweeps under the rug is that we discuss the truth value of conditional propositions in Definition~2.18 and then take for granted that we can apply the same structure to conditional statements involving predicates. For better or worse, this seems to be the standard approach is introduction to proof books.  My personal take is that I don't want to get bogged down in these sorts of pedantic details, but if you feel otherwise, you should address the issue carefully for your students.
+While \textbf{Section~2.1} asks students to jump in head first without a formal understanding of what it was we were doing, \textbf{Section~2.2} hits the reset button and takes a more careful approach while introducing the basics of propositional logic.  One detail you could get lots in the weeds on is whether a given English-language sentence is a proposition or not.  My suggestion is to not lose focus here.  There are lots of subtle issues that I have chosen not to formally address in the book. 
+
+\blankline
+
+My suggestion is minimize the importance of the symbolic logic (e.g., strings utilizing symbols such as $\forall$, $\exists$, $\wedge$, $\vee$, $\implies$, etc.) presented in \textbf{Sections~2.2--2.5}.  I think is important for students to be exposed to symbolic logic, but I essentially abandon it after \textbf{Section~2.5}.  Discourage your students from using the formal symbolism in their mathematical proofs.
+
+\blankline
+
+The intended proof technique for most of the theorems in \textbf{Section~2.2} is create a truth table.  You'll likely need to provide some guidance to your students about how many intermediate columns they should include in their truth tables.  \textbf{Corollary~2.41} can be proved by either creating a truth table or by appealing to \textbf{Theorem~2.40}, \textbf{Problem~2.27}, and \textbf{Theorem~2.25} and then relying on the transitivity of logical equivalence. Note that I do not explicitly state transitivity of logical equivalence anywhere in the textbook.
+
+\blankline
+
+While you could skip \textbf{Theorem~2.56} and \textbf{Theorem~2.57}, these theorems provide a first opportunity to practice writing a proof by contradiction and a biconditional proof, respectively.
+
+\blankline
+
+One thing worth pointing out is that there is an implicit universal quantifier in front of all statements of the form ``if $A(x)$, then $B(x)$", where $A(x)$ and $B(x)$ are predicates and $x$ is some variable. I attempt to address this issue just after \textbf{Problem~2.67}. This is standard convention in mathematics and is definitely worth pointing out to your students. The statement ``For all $x$, if $A(x)$, then $B(x)$" is a proposition. This statement may sometimes be written in two sentences, where the first sentence bounds the variable. For example, ``Let $n$ be a natural number. If $A(n)$, then $B(n)$." Another way to write the same statement would be ``If $n$ is a natural number such that $A(n)$, then $B(n)$." This is how most of the theorems in Sections 2.1 and 2.3 are written. More commonly, if the universe of discourse is understood (or can be inferred), one might simply write ``If $A(n)$, then $B(n)$."  Officially, ``If $A(n)$, then $B(n)$" is a predicate, but if we take this as short hand for ``For all $n$, if $A(n)$, then $B(n)$", we have a proposition.  
+
+\blankline
+
+It's not crucial that you cover \textbf{Problems~2.70-2.73}, but I do find it helpful for students to practice the conversion from plain English to symbolic logic and vice versa.  The idea in \textbf{Problem~2.73} is probably a good one to discuss.
+
+\blankline
+
+Students struggle with proving \textbf{Theorem~2.76}, which handles the negation of quantifiers.  This is a good example where you must think very deeply, but there isn't much to write down.  This is a good example of a theorem where I would probably ask students to prove one of the two parts (leaving it to them to choose which part).
+
+\blankline
+
+\textbf{Problem~2.86} is time consuming.  One way you could speed things up is to tell them which parts are true versus false.  You could also skip some of the parts.  While \textbf{Theorems~2.89} and \textbf{2.90} are not crucial for later, they could be skipped, but I recommend doing at least one of them.  \textbf{Theorem~2.91} is also not crucial for future chapters, but provides an opportunity for proving uniqueness.  It's a long while before this issue crops up again (the next instance is \textbf{Theorem~4.36}), so you could defer the discussion about uniqueness until it is absolutely necessary. 
+
+\blankline
+
+One detail that gets swept under the rug in \textbf{Sections~2.4} and \textbf{2.5} is that we discuss the truth value of conditional propositions in \textbf{Definition~2.18} and then take for granted that we can apply the same structure to conditional statements involving predicates. For better or worse, this seems to be the standard approach is introduction to proof books.  My personal take is that I don't want to get bogged down in these sorts of pedantic details, but if you feel otherwise, you should address the issue carefully for your students.
+
 
 \section*{Chapter 3: Set Theory}
 
+Unless you know your students are familiar with the content in Chapter~3, I think covering this chapter is essential.  In my experience, once students get the hang of ``element chasing", this chapter goes smoothly.  You could skip \textbf{Section~3.2} about paradoxes or simply assign it as outside reading.  However, in my experience, students tend to be captivated by paradoxes.  Moreover, at least at my institution, there isn't another place in the curriculum that a student would be exposed to the idea of a paradox in mathematics.  If you have intentions of ever discussing the Axiom of Choice (\textbf{Axiom~3.43}), you should consider discussing \textbf{Section~3.2}.
+
+\blankline
+
+Taking the time to carefully outline a skeleton proof for proving $A\subseteq B$ in \textbf{Problem~3.9} will help tremendously as you progress through Chapter~3. 
+
+\blankline
+
+\textbf{Theorem~3.20} provides an excellent opportunity to showcase two different proof techniques.  One method is to prove the two set containments by ``element chasing".  The second method involves a chain of equality of sets.  I recommend showcasing both approaches.  For example, here is a one sentence proof of \textbf{Theorem~3.20}.
+
+\blankline
+
+\emph{Proof of Theorem~3.20.} Let $A$ and $B$ be sets in some universe of discourse $U$. We see that
+\begin{align*}
+A\setminus B & = \{x\in U\mid x\in A \text{ and } x\notin B\}\\
+& = \{x\in U\mid x\in A \text{ and } x\in B^c\}\\
+& = \{x\in U\mid x\in A \cap B^c\}\\
+& = A\cap B^c. 
+\end{align*}
+\vspace{-2em}
+ 
+\qed
+
+\blankline
+
+For \textbf{Theorems~3.21} and \textbf{3.22}, I typically ask students to prove one of Parts~(a) or~(b).
+
+\blankline
+
+\textbf{Problem~3.23} is not necessary for later, but I find it to be a good exercise for students.
+
+\blankline
+
+\textbf{Problem~3.31} is time consuming, but extremely worthwhile.  One shortcut you could take is telling the students which parts are true versus false.
+
+\blankline
+
+In my experience, \textbf{Section~3.3} is probably the most challenging section in Chapter~3.  For this reason, I wouldn't skip any of the easy exercises (e.g., \textbf{Problems~3.33--3.3.37}).  
+
+\blankline
+
+For \textbf{Theorems~3.41} and \textbf{3.42}, I typically ask students to prove one of Parts~(a) or~(b).  For both theorems, I encourage students to prove both set containments as opposed to attempting to chain together equality of sets.
+
+\blankline
+
+If you have planes to cover \textbf{Chapters~7} or \textbf{8}, you will need to cover at least parts of \textbf{Section~3.5}.  One can safely skip \textbf{Theorem~3.56--Problem~3.62}, but I enjoy covering this material if time allows. \textbf{Problem~3.61} is time consuming and provides a nice challenge for students.  \textbf{Problem~3.62} is also a fun challenge, but certainly isn't necessary.
 %----------------%
 
 \section*{Chapter 4: Induction}
+
+Most instructors will likely cover Chapter~4.  If your students already have some familiarity with induction, you can probably find places to cut corners.  However, in my experience, I find it best to assume students know nothing about induction and give it a careful treatment.  
+
+\blankline
+
+After students tackle \textbf{Theorem~4.2} (Principle of Mathematical Induction), I spend time discussing \textbf{Skeleton Proof~4.3} and then often present the first few induction proofs in order to set the standard for what the proofs should look like. One potentially misleading aspect of \textbf{Skeleton Proof~4.3}, is that students might think that are supposed to actually write ``$P(k)$" and ``$P(k+1)$" in their proofs.  I discourage this.  Instead, I instruct students to write down whatever the actual predicate is for $P(k)$.  For example, for the inductive step of the proof of \textbf{Theorem~4.4}, I would want students to write, ``Let $k\in\mathbb{N}$ and assume $\sum_{i=1}^k i=\frac{k(k+1)}{2}$ is true." In fact, I think we can safely omit the phrase ``is true" and simply write, ``Let $k\in\mathbb{N}$ and assume $\sum_{i=1}^k i=\frac{k(k+1)}{2}$."  If I present a few induction proofs, we can iron out these details quickly.
+
+\blankline
+
+\textbf{Theorem~4.7} and \textbf{Problem~4.8} provide an opportunity for students to wrestle with induction proofs that are simply manipulation of strings of symbols.  I highly recommend not skipping these two. \textbf{Problem~4.8} provided inspiration for the cover of the print version of the book.
+
+\blankline
+
+While I make sure we witness a precise proof of \textbf{Theorem~4.2}, sometimes I might wave my hands a bit and skimp on a rigorous proof of \textbf{Theorem~4.9}, which states that we do not need to start induction at $k=1$.  The proof of \textbf{Theorem~4.9} is simply a clever adjustment to the proof of \textbf{Theorem~4.2}.  
+
+\blankline
+
+I view \textbf{Theorem~4.11} as essential, but you definitely do not need to assign all of \textbf{Theorem~4.12--4.23} as none of these are needed for later.  I typically ask students to proof any two of \textbf{Theorem~4.12--4.23}.  \textbf{Problem~4.24} is not essential but provides an excellent opportunity for students to tinker and practice the skills they have developed.
+
+\blankline
+
+The proof of \textbf{Theorem~4.25} (Principle of Complete Mathematical Induction) often causes some confusion for students.  This provides a good opportunity to discuss the notion of ``weaker" versus ``stronger" hypotheses.  We know that The Principle of Mathematical Induction is true and this theorem has weaker hypotheses than its complete analogue, and hence the Principle of Complete Mathematical Induction must also be true.  Emphasize to students that despite the name, complete induction is not any stronger or more powerful than ordinary induction.  One can prove that the two notions are equivalent, but I've chosen not to formally ask students to prove this fact.
+
+\blankline
+
+I suggest you pick and choose a few of \textbf{Theorem~4.27--Problem~4.34} to have students to work on.  Note that \textbf{Problem~4.34} involves the Fibonacci numbers, which are introduced in \textbf{Problem~4.29}.
+
+\blankline
+
+The goal of \textbf{Section~4.5} is to prove \textbf{Theorem~4.38} (Well-Ordering Principle) and two generalizations that appear in \textbf{Theorems~4.39} and \textbf{4.40}. My intended proof of the Well-Ordering Principle is to utilize \textbf{Theorem~4.25} (Principle of Complete Mathematical Induction).  This is a nice application of induction.  If you plan to cover \textbf{Sections~5.1} or \textbf{6.1}, you will need the Well-Ordering Principle.  Specifically, the Well-Ordering Principle is needed in the proofs of \textbf{Theorems~6.6}, \textbf{6.7}, and \textbf{6.13}, and its generalization \textbf{Theorem~4.40} is needed in the proof of \textbf{Theorem~5.46}. Note that I have included the proof of \textbf{Theorem~6.7} (Division Algorithm) in Chapter~6. 
 
 %----------------%
 
