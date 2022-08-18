@@ -10,7 +10,7 @@ for any value $a \in \mathbb{Z}$. Theorem~\ref{thm:PMI} handles the special case
 Let $P(a), P(a+1), P(a+2), \ldots$ be a sequence of statements, one for each integer greater than or equal to $a$. Assume that
 \begin{enumerate}[label=\textrm{(\roman*)}]
 \item $P(a)$ is true, and
-\item if $P(k)$ is true, then $P(k+1)$ is true.
+\item for all $k\geq a$, if $P(k)$ is true, then $P(k+1)$ is true.
 \end{enumerate}
 Then $P(n)$ is true for all integers $n \geq a$.
 \end{theorem}
@@ -26,7 +26,7 @@ We proceed by induction.
 \begin{enumerate}\setlength{\itemsep}{0in}
 \item[(i)] Base step: \emph{[Verify that $P(a)$ is true. This often, but not always, amounts to plugging $n=a$ into two sides of some claimed equation and \underline{verifying} that both sides are actually equal.]}
 
-\item[(ii)] Inductive step:  \emph{[Your goal is to prove ``For all $k\in\mathbb{Z}$, if $P(k)$ is true, then $P(k+1)$ is true.'']} Let $k \ge a$ be an integer and assume that $P(k)$ is true. \emph{[Do something to derive that $P(k+1)$ is true.]} Therefore, $P(k+1)$ is true.
+\item[(ii)] Inductive step:  \emph{[Your goal is to prove ``For all $k\geq a$, if $P(k)$ is true, then $P(k+1)$ is true.'']} Let $k \geq a$ be an integer and assume that $P(k)$ is true. \emph{[Do something to derive that $P(k+1)$ is true.]} Therefore, $P(k+1)$ is true.
 \end{enumerate}
 Thus, by induction, $P(n)$ is true for all integers $n \ge a$.
 \end{proof}

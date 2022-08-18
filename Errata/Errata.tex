@@ -2,6 +2,9 @@
 
 \usepackage[margin=1in]{geometry}
 \usepackage{url}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
 \usepackage[breaklinks]{hyperref}
 \usepackage{color}
 \hypersetup{
@@ -40,7 +43,11 @@ All errors listed below have been corrected in the version of the book that has 
 If you think you have found any errors not already listed here, please submit an issue on \href{https://github.com/dcernst/IBL-IntroToProof/issues}{GitHub} or send me an email at \url{dana.ernst@nau.edu}.
 
 \begin{itemize}
-\item Page 63, line 1: Missing the word ``the" between ``into" and ``structure".
+\item Page 54, Theorem~4.2: It would be nice if Item~(ii) began ``for all $k\geq 1$".  This is an instance of an implicit universal quantifier for a conditional statement.  In this case, the implicit universe of discourse in the set of natural numbers.  However, including ``for all $k\geq 1$," leads to a nice parallelism with Theorem~4.9. [Ben Ford]
+\item Page 56, Theorem~4.9: Item~(ii) should start with ``for all $k\geq a$,". [Ben Ford]
+\item Page 57, Skeleton Proof~4.10: In Item~(ii), it should say ``For all $k\geq a$, if $P(k)$ is true, then $P(k+1)$ is true." as opposed to ``For all $k\in\mathbb{Z}\ldots$" [Ben Ford]
+\item Page 60, Problem~4.33: In Item~(i), the final string is missing a leading one.  It should be ``$011101 \to 111101$". [Ben Ford]
+\item Page 63, line 1: Missing the word ``the" between ``into" and ``structure". [Dana C.~Ernst]
 \item Page 158, line 1: Missing the word ``look" between ``If" and ``you". [Roy St.~Laurent]
 \end{itemize}
 
