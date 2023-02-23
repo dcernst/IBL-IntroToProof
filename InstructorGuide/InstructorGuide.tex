@@ -29,6 +29,9 @@
 
 \newcommand{\blankline}{\pagebreak[2]\vspace{.5\baselineskip}}
 
+\DeclareMathOperator{\rel}{rel}
+\DeclareMathOperator{\Rel}{Rel}
+
 %----------------%
 \begin{document}
 %----------------%
@@ -232,7 +235,7 @@ Students struggle with proving \textbf{Theorem~2.76}, which handles the negation
 
 \blankline
 
-One detail that gets swept under the rug in \textbf{Sections~2.4} and \textbf{2.5} is that we discuss the truth value of conditional propositions in \textbf{Definition~2.18} and then take for granted that we can apply the same structure to conditional statements involving predicates. For better or worse, this seems to be the standard approach is introduction to proof books.  My personal take is that I don't want to get bogged down in these sorts of pedantic details, but if you feel otherwise, you should address the issue carefully for your students.
+One detail that gets swept under the rug in \textbf{Sections~2.4} and \textbf{2.5} is that we discuss the truth value of conditional propositions in \textbf{Definition~2.18} and then take for granted that we can apply the same structure to conditional statements involving predicates. For better or worse, this seems to be the standard approach in introduction to proof books.  My personal take is that I don't want to get bogged down in these sorts of pedantic details, but if you feel otherwise, you should address the issue carefully with your students.
 
 
 \section*{Chapter 3: Set Theory}
@@ -365,15 +368,40 @@ Note that I've included the proof of \textbf{Theorem~6.23}. It's worth pointing 
 
 \section*{Chapter 7: Relations and Partitions}
 
-All the work we have done up to this point has laid the foundation for what will come in the remainder of the book. In my view, Sections~7.1--7.3 mark a transition in the conceptual level of the material presented in this book.  
+All the work we have done up to this point has laid the foundation for what will come in the remainder of the book. In my view, \textbf{Sections~7.1--7.3} mark a transition in the conceptual level of the material presented in this book.  
 
 \blankline
 
-\textbf{Section~7.1} introduces relations together with all the accompanying notation and terminology. This section contains more examples than any other in the book.  In addition, there are lots of problems aimed at developing a deeper intuitive understanding of relations.  You could skip some of the easier problems, but be warned that some of them are referenced later (e.g., \textbf{Problems~7.22} and \textbf{7.34}).  It's up to you how much you want to focus on using digraphs/graphs as visual representations of relations, but I find this to be a useful tool for students.
+\textbf{Section~7.1} introduces relations together with all the accompanying notation and terminology. This section contains more examples than any other in the book.  In addition, there are lots of problems aimed at developing a deeper intuitive understanding of relations.  You could skip some of the easier problems, but be warned that some of them are referenced later (e.g., \textbf{Problems~7.22} and \textbf{7.34}).  It is worth explicitly pointing out the differences in notation for $\rel(a)$ (lowercase ``r'') versus $\Rel(R)$ (uppercase ``R''), as well as the differences in the ``input" for each.
 
 \blankline
 
-The notions of reflexive, symmetric, and transitive are introduced in \textbf{Section~7.1}, but we formally introduce equivalence relations in \textbf{Section~7.2}. The main result of this section is \textbf{Theorem~7.43}, which leads to the definition of equivalence class.  You could skip \textbf{Problems~7.49} and \textbf{7.50}, but I find them to be a good test of student understanding.  I have put these two problems on exams (sometimes simply as true/false questions) without ever having covered them explicitly.
+It's up to you how much you want to focus on using digraphs/graphs as visual representations of relations, but I find this to be a useful tool for students. In particular, I think the discussions that come out of \textbf{Problem~7.30} are extremely valuable and provide insight into whether a student has an intuitive understanding of reflexive, symmetric, and transitive.  Moreover, this particular problem also provides insight into whether a student still has potential misconceptions concerning conditional statements.  For example, students will often say that if a relation is symmetric, then every pair of vertices in the digraph for the relation must have both potential arrows joining the vertices. A similar issue arises for transitivity. Be sure to address any potential misconceptions that could arise here. You can address these same issues when discussing \textbf{Skeleton Proofs~7.31--7.33}.
+
+\blankline
+
+You will need to plan in advance how much time you want to commit to \textbf{Problem~7.34}, which asks students to determine whether each of a long list of relations is reflexive, symmetric, or transitive, and then to either provide a specific counterexample or a proof.  If you cover every detail of every problem, it will be very time consuming.  I typically facilitate a full-class discussion where we march through each relation and quickly summarize why it is or is not reflexive, symmetric, or transitive.  Instead of writing down formal proofs, we simply discuss the essence of what needs to be proved.  When assigning this problem, I explicitly tell my students to just write quick sketches of proofs and the gist of counterexamples.  However, you may prefer for your students to write full-blown formal proofs/counterexamples. 
+
+\blankline
+
+
+The notions of reflexive, symmetric, and transitive are introduced in \textbf{Section~7.1}, but we formally introduce equivalence relations in \textbf{Section~7.2}. The main result of this section is \textbf{Theorem~7.43}, which leads to the definition of equivalence class.  
+
+\blankline
+
+\textbf{Theorems~7.42} and \textbf{7.43} provide excellent opportunities for students to review the skills and proof techniques they developed up to this point.  Proofs of both of these theorems are places where I think it is worth spending time addressing all of the finer details.  In both instances, be sure to take the time to reflect on where the properties of reflexive, symmetric, and transitive are being used.
+
+\blankline
+
+You could skip \textbf{Problems~7.49} and \textbf{7.50}, but I find them to be a good test of student understanding.  I have put these two problems on exams (sometimes simply as true/false questions) without ever having covered them explicitly.
+
+\blankline
+
+\textbf{Section~7.3} introduces partitions.  The key results in this section are \textbf{Theorems~7.59} and \textbf{7.73}, which explicitly describe the relationship between equivalence relations and partitions.  I often remind students that in light of \textbf{Definition~7.51}, their proof of \textbf{Theorem~7.59} needs to address three items. Following the proof of \textbf{Theorem~7.59}, I suggest taking a moment to reflect back on \textbf{Problem~7.47}. Hopefully students will recognize that most of the heavy lifting for the proof of \textbf{Theorem~7.73} was already done when they proved \textbf{Theorems~7.68}, \textbf{7.70}, and \textbf{7.71}.
+
+\blankline
+
+I typically omit \textbf{Section~7.4}, which takes a deep dive on modular arithmetic.  However, some instructors will make this section a priority.  Be warned that if you decide to cover this section, it will take a significant amount of time.  If you want to cover some but not all of this section, consider stopping at \textbf{Theorem~7.88} as the rest of the section is often covered in an abstract algebra (or possibly number theory) course.
 
 %----------------%
 
