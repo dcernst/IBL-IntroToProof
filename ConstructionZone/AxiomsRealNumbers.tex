@@ -25,19 +25,21 @@ There exist operations $+$ (addition) and $\cdot$ (multiplication) on $\mathbb{R
 \end{enumerate}
 \end{axioms}
 
-In the language of abstract algebra, Axioms~F1--F4 and~F5--F8 make each of $\mathbb{R}$ and $\mathbb{R}\setminus\{0\}$ an abelian group under addition and multiplication, respectively. Axiom~F9 provides a way for the operations of addition and multiplication to interact.  Collectively, Axioms~F1--F9 make the real numbers a \textbf{field}.  It follows from the axioms that the elements $0$ and $1$ of $\mathbb{R}$ are the unique \textbf{additive} and \textbf{multiplicative identities} in $\mathbb{R}$. To prove the following theorem, suppose $0$ and $0'$ are both additive identities in $\mathbb{R}$ and then show that $0=0'$. This shows that there can only be one additive identity. %It might be helpful to review Skeleton Proof~\ref{skeleton:uniqueness}. 
+In the language of abstract algebra, Axioms~F1--F4 and~F5--F8 make each of $\mathbb{R}$ and $\mathbb{R}\setminus\{0\}$ an abelian group under addition and multiplication, respectively. Axiom~F9 provides a way for the operations of addition and multiplication to interact.  Collectively, Axioms~F1--F9 make the real numbers a \textbf{field}.  Axioms~F3 and F7 state the existence of additive and multiplicative identities, but these axioms do not assume that the elements are the unique elements with the specified properties. However, we can prove that this is the case. That is, $0$ and $1$ of $\mathbb{R}$ are the unique \textbf{additive} and \textbf{multiplicative identities} in $\mathbb{R}$. To prove the following theorem, suppose $0$ and $0'$ are both additive identities in $\mathbb{R}$ and then show that $0=0'$. This shows that there can only be one additive identity. It is important to point out that we are not proving that the number $0$ introduced in Axiom~F3 is unique, but rather there is a unique number with the property specified in Axiom~F3. %It might be helpful to review Skeleton Proof~\ref{skeleton:uniqueness}. 
 
 \begin{theorem}\label{thm:unique additive identity}
-The additive identity of $\mathbb{R}$ is unique.
+%The additive identity of $\mathbb{R}$ is unique.
+There exists a unique additive identity of $\mathbb{R}$.
 \end{theorem}
 
 To prove the next theorem, mimic the approach you used to prove Theorem~\ref{thm:unique additive identity}.
 
 \begin{theorem}\label{thm:unique multiplicative identity}
-The multiplicative identity of $\mathbb{R}$ is unique.
+%The multiplicative identity of $\mathbb{R}$ is unique.
+There exists a unique multiplicative identity of $\mathbb{R}$.
 \end{theorem}
 
-For every $a\in\mathbb{R}$, the elements $-a$ and $a^{-1}$ (as long as $a\neq 0$) are also the unique \textbf{additive} and \textbf{multiplicative inverses}, respectively. 
+Similar to Axioms~F3 and F7, Axioms~F4 and F8 state the existence of additive and multiplicative inverses, but these axioms do not assume that these elements are the unique elements with the specified properties. However, we can prove that for every $a\in\mathbb{R}$, the elements $-a$ and $a^{-1}$ (as long as $a\neq 0$) are the unique \textbf{additive} and \textbf{multiplicative inverses}, respectively. 
 
 \begin{theorem}\label{thm:unique additive inverse}
 Every real number has a unique additive inverse.
@@ -46,6 +48,8 @@ Every real number has a unique additive inverse.
 \begin{theorem}
 Every nonzero real number has a unique multiplicative inverse.
 \end{theorem}
+
+In light of the last two theorems, we now know that sticking a minus sign in front of $a\in\mathbb{R}$ or raising $a\in\mathbb{R}\setminus\{0\}$ to $-1$ each correspond to an operation that yields a unique element with the corresponding inverse property.
 
 Since we are taking a formal axiomatic approach to the real numbers, we should make it clear how the natural numbers are embedded in $\mathbb{R}$.
 
