@@ -1,0 +1,413 @@
+<section xml:id="sec_FTA">
+  <title>The Fundamental Theorem of Arithmetic</title>
+  <p>
+    The goal of this section is to prove The Fundamental Theorem of Arithmetic.
+    The Fundamental Theorem of Arithmetic
+    (sometimes called the Unique Factorization Theorem)
+    states that every natural number greater than 1 is either prime or is the product of prime numbers,
+    where this product is unique up to the order of the factors.
+    For example,
+    the natural number 12 has prime factorization <m>2^2\cdot 3</m>,
+    where the order in which we write the prime factors (i.e., 2, 2, and 3) is irrelevant.
+    That is, <m>2^2\cdot 3</m>, <m>2\cdot 3\cdot2</m>,
+    and <m>3\cdot 2^2</m> are all the same prime factorization of 12.
+    The requirement that the factors be prime is necessary since factorizations containing composite numbers may not be unique.
+    For example, <m>12=2\cdot 6</m> and <m>12=3\cdot 4</m>,
+    but these factorizations into composite numbers are distinct.
+    We have just thrown around a few fancy terms;
+    we should make sure we understand their precise meaning.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        Let <m>n\in\mathbb{Z}</m>.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              If <m>a\in \mathbb{Z}</m> such that <m>a</m> divides <m>n</m>,
+              then we say that <m>a</m> is a <em>factor</em> of <m>n</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>n\in \mathbb{N}</m> such that <m>n</m> has exactly two distinct positive factors (namely, 1 and <m>n</m> itself),
+              then <m>n</m> is called <em>prime</em>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>n>1</m> such that <m>n</m> is not prime,
+              then <m>n</m> is called <em>composite</em>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </definition>
+  <problem>
+    <statement>
+      <p>
+        According to our definition, is 1 a prime number or composite number?
+        Explain your answer.
+        You may have heard prime numbers defined as something like, ``a prime number is a natural number that is only divisible by 1 and itself." Does this definition agree with the one above?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    The upshot is that according to our definition, 1 is neither prime nor composite.
+    However, throughout history, this has not always been the case.
+    There were times when and mathematicians for whom the number one was considered prime.
+    Whether 1 is prime or not is a matter of definition,
+    and hence a matter of choice.
+    There are compelling reasons<mdash/>that we will not elaborate on here<mdash/>why 1 is intentionally excluded from being prime.
+    However, if you would like to learn more,
+    check out the excellent article
+    <url href="https://cs.uwaterloo.ca/journals/JIS/VOL15/Caldwell1/cald5.pdf">
+    <q>What is the Smallest Prime?</q></url>
+    by Chris Caldwell and Yeng Xiong.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        List the first 10 prime numbers.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Prove or provide a counterexample: For all <m>n\in\mathbb{N}</m>,
+        if <m>4^n-1</m> is prime, then <m>n</m> is odd.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Prove or provide a counterexample: For all
+        <m>n\in\mathbb{N}</m>, <m>n^2-n+11</m> is prime.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    The next result makes up half of the Fundamental Theorem of Arithmetic.
+    We provide a substantial hint for its proof.
+    Let <m>S</m> be the set of natural numbers for which the theorem fails.
+    For sake of a contradiction, assume <m>S\neq \emptyset</m>.
+    By the Well-Ordering Principle
+    (<xref ref="thm_WOP">Theorem</xref>),
+    <m>S</m> contains a least element, say <m>n</m>.
+    Then <m>n</m> cannot be prime since this would satisfy the theorem.
+    So, it must be the case that <m>n</m> has a divisor other than 1 and itself.
+    This implies that there exists natural numbers <m>a</m> and <m>b</m> greater than 1 such that <m>n=ab</m>.
+    Since <m>n</m> was our smallest counterexample,
+    what can you conclude about both <m>a</m> and <m>b</m>?
+    Use this information to derive a contradiction for <m>n</m>.
+  </p>
+  <theorem xml:id="thm_prodprimes">
+    <statement>
+      <p>
+        If <m>n</m> is a natural number greater than 1, then <m>n</m> can be expressed as a product of primes.
+        That is, we can write
+        <me>
+          n=p_1 p_2 \cdots p_k
+        </me>,
+        where each of <m>p_1, p_2, \ldots, p_k</m> is a prime number
+        (not necessarily distinct).
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    <xref ref="thm_prodprimes">Theorem</xref>
+    states that we can write every natural number greater than 1 as a product of primes,
+    but it does not say that the primes and the number of times each prime appears are unique.
+    To prove uniqueness, we will need <em>Euclid's Lemma</em>
+    (<xref ref="thm_Euclid">Theorem</xref>).
+    To prove Euclid's Lemma,
+    we will utilize a special case of
+    <em>B&#xe9;zout's Lemma</em>
+    (<xref ref="thm_Bezout">Theorem</xref>),
+    the proof of which relies on the following result,
+    known as the Division Algorithm.
+    We include the proof of the Division Algorithm below,
+    which makes use of the Well-Ordering Principle
+    (<xref ref="thm_WOP">Theorem</xref>).
+  </p>
+  <theorem xml:id="thm_DivisonAlgorthm">
+    <title>Division Algorithm</title>
+    <statement>
+      <p>
+        If <m>n,d\in\mathbb{Z}</m> such that <m>d>0</m>,
+        then there exists unique <m>q,r\in\mathbb{Z}</m> such that <m>n=dq+r</m> with <m>0\leq r\lt d</m>.
+      </p>
+    </statement>
+  </theorem>
+  <proof>
+    <p>
+      Let <m>n,d\in\mathbb{Z}</m> such that <m>d>0</m> such that <m>n>0</m>.
+      We have two tasks.
+      First, we need to show that <m>q</m> and <m>r</m> exist,
+      and then we need to show that both are unique.
+    </p>
+    <p>
+      If <m>d=1</m>,
+      it is clear that we can take <m>q=n</m> and <m>r=0</m>,
+      so that <m>n=1\cdot n+0=dq+r</m>, as desired.
+      Now, assume that <m>d>1</m> and define
+      <me>
+        S\coloneqq \{n-dk\mid k\in\mathbb{Z}\text{ and }  n-dk\geq 0\}
+      </me>.
+    </p>
+    <p>
+      If we can show that <m>S\neq\emptyset</m>,
+      then we can apply the Well-Ordering Principle
+      (<xref ref="thm_WOP">Theorem</xref>)
+      to conclude that <m>S</m> has a least element of S. This least element will be the remainder <m>r</m> we are looking for.
+      There are two cases.
+    </p>
+    <p>
+      First, suppose <m>n\geq 0</m>.
+      If we take <m>k=0</m>, then we get <m>n-dk=n-d\cdot 0=n\geq 0</m>,
+      which shows that <m>n\in S</m>.
+    </p>
+    <p>
+      Now, suppose <m>n\lt 0</m>.
+      In this case, we can take <m>k=n</m>,
+      so that <m>n-dk=n-dn=n(1-d)</m>.
+      Since <m>n\lt 0</m> and <m>d>1</m>, <m>n(1-d)>0</m>.
+      This shows that <m>n-dn\in S</m>.
+    </p>
+    <p>
+      We have shown that <m>S\neq\emptyset</m>,
+      and so <m>S</m> contains a least element <m>r=n-dq</m> for some <m>q\in\mathbb{Z}</m>.
+      Then <m>n=dq+r</m> with <m>r\geq 0</m>.
+      For sake of a contradiction, assume <m>r\geq d</m>.
+      This implies that there exists
+      <m>r'\in \mathbb{Z}</m> such that <m>r=d+r'</m> and <m>0\leq r'\lt r</m>.
+      But then we see that
+      <me>
+        n=dq+r=dq+d+r'=d(q+1)+r'
+      </me>.
+    </p>
+    <p>
+      This implies that <m>r' = n-d(q+1)</m>.
+      Since <m>0\leq r'\lt r</m>,
+      we have produced an element of <m>S</m> that is smaller than <m>r</m>.
+      This contradicts the fact that <m>r</m> is the least element of <m>S</m>,
+      and so <m>r\lt d</m>.
+    </p>
+    <p>
+      It remains to show that <m>q</m> and <m>r</m> are unique.
+      Suppose <m>q_1,q_2, r_1,r_2\in\mathbb{Z}</m> such that <m>n=dq_1+r_1</m> and
+      <m>n=dq_2+r_2</m> and <m>0\leq r_1,r_2\lt d</m>.
+      Without loss of generality,
+      suppose <m>r_2\geq r_1</m>, so that <m>0\leq r_2-r_1\lt d</m>.
+      Since <m>dq_1+r_1=dq_2+r_2</m>,
+      we see that <m>r_2-r_1=d(q_1-q_2)</m>.
+      But then <m>d</m> divides <m>r_2-r_1</m>.
+      If <m>r_2-r_1>0</m>,
+      then by <xref ref="thm_natural_divisor_less_than_or_equal_to_natural_dividend">Theorem</xref>,
+      it must be the case that <m>r_2-r_1\geq d</m>.
+      However, we know <m>0\leq r_2-r_1\lt d</m>,
+      and so we must have <m>r_2-r_1=0</m>.
+      Therefore, <m>r_1=r_2</m>, which in turn implies <m>q_1=q_2</m>.
+      We have shown that <m>q</m> and <m>r</m> are unique.
+    </p>
+  </proof>
+  <p>
+    In the Division Algorithm,
+    we call <m>n</m> the <em>dividend</em>,
+    <m>d</m> the <em>divisor</em>,
+    <m>q</m> the <em>quotient</em>,
+    and <m>r</m> the <em>remainder</em>.
+    It is worth pointing out that the Division Algorithm holds more generally where the divisor <m>d</m> is not required to be positive.
+    In this case, we must replace
+    <m>0\leq r\lt n</m> with <m>0\leq r\lt |n|</m>.
+  </p>
+  <p>
+    Contrary to its name,
+    our statement of the Division Algorithm is not actually an algorithm,
+    but this is the theorem's traditional name.
+    However, there is an algorithm buried in this theorem.
+    If <m>n</m> is nonnegative,
+    repeatedly subtract <m>d</m> from <m>n</m> until we obtain an integer value that lies between 0 (inclusive) and <m>d</m>
+    (exclusive).
+    The resulting value is the remainder <m>r</m> while the number of times that <m>d</m> is subtracted is the quotient <m>q</m>.
+    On the other hand, if <m>n</m> is negative,
+    repeatedly add <m>d</m> to <m>n</m> until we obtain an integer value that lies between 0 (inclusive) and <m>d</m>
+    (exclusive).
+    Again, the resulting value is <m>r</m>.
+    However, in this case,
+    we take <m>-q</m> to be the number of times that <m>d</m> is added,
+    so that <m>q</m> (a negative value) is the quotient.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Suppose <m>n=27</m> and <m>d=5</m>.
+        Find the quotient and remainder that are guaranteed to exist by the Division Algorithm.
+        That is, find the unique <m>q,r\in\mathbb{Z}</m> such that <m>0\leq r\lt n</m> and <m>n=dq+r</m>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    It is a little trickier to determine <m>q</m> and <m>r</m> when <m>n</m> is negative.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Suppose <m>n=-26</m> and <m>d=3</m>.
+        Find the quotient and remainder that are guaranteed to exist by the Division Algorithm.
+        That is, find the unique <m>q,r\in\mathbb{Z}</m> such that <m>0\leq r\lt n</m> and <m>n=dq+r</m>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    It is useful to have some additional terminology.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        Let <m>m,n\in\mathbb{Z}</m> such that at least one of <m>m</m> or <m>n</m> is nonzero.
+        The greatest common divisor (gcd) of <m>m</m> and <m>n</m>,
+        denoted <m>\tcboxmath{\gcd(m,n)}</m>,
+        is the largest positive integer that divides both <m>m</m> and <m>n</m>.
+        If <m>\gcd(m,n)=1</m>,
+        we say that <m>m</m> and <m>n</m> are relatively prime.
+      </p>
+    </statement>
+  </definition>
+  <problem>
+    <statement>
+      <p>
+        Find <m>\gcd(54,72)</m>.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Provide an example of two natural numbers that are relatively prime.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    The next result is a special case of a theorem known as B&#xe9;zout's Lemma
+    (or B&#xe9;zout's Identity).
+    Ultimately, we will need this theorem to prove Euclid's Lemma
+    (<xref ref="thm_Euclid">Theorem</xref>),
+    which we then use to prove uniqueness for the Fundamental Theorem of Arithmetic
+    (<xref ref="thm_FTA">Theorem</xref>).
+    To prove our special case of B&#xe9;zout's Lemma,
+    consider the set <m>S\coloneqq \{ps+at> 0\mid s,t\in \mathbb{Z}\}</m>.
+    First, observe that <m>p\in S</m>
+    (choose <m>s=1</m> and <m>t=0</m>).
+    It follows that <m>S</m> is nonempty.
+    By the Well-Ordering Principle
+    (<xref ref="thm_WOP">Theorem</xref>),
+    <m>S</m> contains a least element, say <m>d</m>.
+    This implies that there exists
+    <m>s_1,t_1\in \mathbb{Z}</m> such that <m>d=ps_1+at_1</m>.
+    Our goal is to show that <m>d=1</m>.
+    Now, choose <m>m\in S</m>.
+    Then there exists <m>s_2,t_2\in \mathbb{Z}</m> such that <m>m=ps_2+at_2</m>.
+    By the definition of <m>d</m>, we know <m>d\leq m</m>.
+    By the Division Algorithm,
+    there exists unique <m>q,r\in \mathbb{N}\cup\{0\}</m> such that <m>m=qd+r</m> with <m>0\leq r \lt d</m>.
+    Now, solve for <m>r</m> and then replace <m>m</m> and <m>d</m> with
+    <m>ps_1+at_1</m> and <m>ps_2+at_2</m>, respectively.
+    You should end up with an expression for <m>r</m> involving <m>p,
+    a, s_1, s_2, t_1</m>, and <m>t_2</m>.
+    Next, rearrange this expression to obtain <m>r</m> as a linear combination of <m>p</m> and <m>a</m> (i.e., a sum of a multiple of <m>p</m> and a multiple of <m>a</m>).
+    What does the minimality of <m>d</m> imply about <m>r</m>?
+    You should be able to conclude that <m>m</m> is a multiple of <m>d</m>.
+    That is, every element of <m>S</m> is a multiple of <m>d</m>.
+    However, recall that <m>p\in S</m>,
+    <m>p</m> is prime, and <m>p</m> and <m>a</m> are relatively prime.
+    What can you conclude about <m>d</m>?
+  </p>
+  <theorem xml:id="thm_Bezout">
+    <title>Special Case of B&#xe9;zout's Lemma</title>
+    <statement>
+      <p>
+        If <m>p,a\in\mathbb{Z}</m> such that <m>p</m> is prime and <m>p</m> and <m>a</m> are relatively prime,
+        then there exists <m>s,t\in\mathbb{Z}</m> such that <m>ps+at=1</m>.
+      </p>
+    </statement>
+  </theorem>
+  <problem>
+    <statement>
+      <p>
+        Consider the natural numbers 2 and 7, which happen to be relatively prime.
+        Find integers <m>s</m> and <m>t</m> guaranteed to exist according to <xref ref="thm_Bezout">Theorem</xref>.
+        That is, find <m>s,t\in\mathbb{Z}</m> such that <m>2s+7t=1</m>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    The following theorem is known as Euclid's Lemma.
+    Note that if <m>p</m> divides <m>a</m>,
+    the conclusion is certainly true.
+    So, assume otherwise.
+    That is, assume that <m>p</m> does not divide <m>a</m>,
+    so that <m>p</m> and <m>a</m> are relatively prime.
+    Apply <xref ref="thm_Bezout">Theorem</xref>
+    to <m>p</m> and <m>a</m> and then multiply the resulting equation by <m>b</m>.
+    Try to conclude that <m>p</m> divides <m>b</m>.
+  </p>
+  <theorem xml:id="thm_Euclid">
+    <title>Euclid's Lemma</title>
+    <statement>
+      <p>
+        Assume that <m>p</m> is prime.
+        If <m>p</m> divides <m>ab</m>,
+        where <m>a,b\in\mathbb{N}</m>,
+        then either <m>p</m> divides <m>a</m> or <m>p</m> divides <m>b</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    In Euclid's Lemma,
+    it is crucial that <m>p</m> is prime as illustrated by the next problem.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Provide an example of integers
+        <m>a,
+        b, d</m> such that <m>d</m> divides <m>ab</m> yet <m>d</m> does not divide <m>a</m> and <m>d</m> does not divide <m>b</m>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Alright, we are finally ready to tackle the proof of the Fundamental Theorem of Arithmetic.
+    Let <m>n</m> be a natural number greater than 1.
+    By <xref ref="thm_prodprimes">Theorem</xref>,
+    we know that <m>n</m> can be expressed as a product of primes.
+    All that remains is to prove that this product is unique
+    (up to the order in which they appear).
+    For sake of a contradiction,
+    suppose <m>p_1 p_2 \cdots p_k</m> and
+    <m>q_1 q_2 \cdots q_l</m> are both prime factorizations of <m>n</m>.
+    Your goal is to prove that <m>k=l</m> and that each <m>p_i</m> is equal to some <m>q_j</m>.
+    Make repeated use of Euclid's Lemma.
+  </p>
+  <theorem xml:id="thm_FTA">
+    <title>Fundamental Theorem of Arithmetic</title>
+    <statement>
+      <p>
+        Every natural number greater than 1 can be expressed uniquely
+        (up to the order in which they appear)
+        as the product of one or more primes.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    The Fundamental Theorem of Arithmetic is one of the many reasons why 1 is not considered a prime number.
+    If 1 were prime, prime factorizations would not be unique.
+  </p>
+  <p>
+    \epigraph{Any creative endeavor is built on the ash heap of failure.}{Michael Starbird,
+    mathematician}
+  </p>
+</section>

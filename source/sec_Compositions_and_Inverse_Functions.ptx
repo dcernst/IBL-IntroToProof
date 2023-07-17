@@ -1,0 +1,517 @@
+<section xml:id="sec_Compositions_and_Inverse_Functions">
+  <title>Compositions and Inverse Functions</title>
+  <p>
+    We begin this section with a method for combining two functions together that have compatible domains and codomains.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        If <m>f:X\to Y</m> and <m>g:Y\to Z</m> are functions,
+        we define <m>g\circ f:X\to Z</m> via <m>\tcboxmath{(g\circ f)(x)=g(f(x))}</m>.
+        The function <m>g\circ f</m> is called the composition of <m>f</m> and <m>g</m>.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    It is important to notice that the function on the right is the one that
+    <q>goes first.</q>
+    Moreover, we cannot compose any two random functions since the codomain of the first function must agree with the domain of the second function.
+    In particular,
+    <m>f\circ g</m> may not be a sensible function even when <m>g\circ f</m> exists.
+    <xref ref="fig_function_composition">Figure</xref>
+    provides a visual representation of function composition in terms of function diagrams.
+  </p>
+  <p>
+    \tikzset{every loop/.style={min distance=8mm}} \tikzstyle{vert} = [circle, draw,
+    fill=black,inner sep=0pt, minimum size=.5mm] \tikzstyle{b} = [draw,-stealth]
+  </p>
+  <figure xml:id="fig_function_composition">
+    <caption>Visual representation of function composition.</caption>
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node at (0,2.5) [below] {\scriptsize \(x\)};
+\node[vert] (A) at (0,2.5) {};
+\node at (3,2.5) [below] {\scriptsize \(f(x)\)};
+\node[vert] (B) at (3,2.5) {};
+\node at (6,2.5) [below] {\scriptsize \(g(f(x))\)};
+\node[vert] (C) at (6,2.5) {};
+\path (A) edge (B);
+\path (B) edge (C);
+\node[draw,rounded corners,fit=(A),minimum width=1.3cm,minimum height=2.75cm,gray] {};
+\node[draw,rounded corners,fit=(B),minimum width=1.3cm,minimum height=2.75cm,gray] {};
+\node[draw,rounded corners,fit=(C),minimum width=1.3cm,minimum height=2.75cm,gray] {};
+\node (X) at (0,4.7) {\(X\)};
+\node (Y) at (3,4.7) {\(Y\)};
+\node (Z) at (6,4.7) {\(Z\)};
+\path (X) edge [bend left] node {\(f\)} (Y);
+\path (Y) edge [bend left] node {\(g\)} (Z);
+\path (0,.5) edge [bend right] node[below] {\(g\circ f\)} (6,.5);\end{tikzpicture}]]>
+</latex-image>
+    </image>
+  </figure>
+  <problem>
+    <statement>
+      <p>
+        Let <m>X=\{1,2,3,4\}</m> and define
+        <m>f:X\to X</m> and <m>g:X\to X</m> via
+        <me>
+          f=\{(1,1),(2,3),(3,3),(4,4)\}
+        </me>
+        and
+        <me>
+          g=\{(1,1),(2,2),(3,1),(4,1)\}
+        </me>.
+      </p>
+      <p>
+        For each of the following functions,
+        draw the corresponding function diagram in the spirit of <xref ref="fig_function_composition">Figure</xref> and identify the range.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>g\circ f</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f\circ g</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    The previous problem illustrates that <m>f\circ g</m> and
+    <m>g\circ f</m> need not be equal even when both composite functions exist.
+  </p>
+  <example>
+    <statement>
+      <p>
+        Consider the inclusion map
+        <m>\iota:X\to Y</m> such that <m>X</m> is a proper subset of <m>Y</m> and suppose <m>f:Y\to Z</m> is a function.
+        Then the composite function <m>f\circ \iota:X\to Z</m> is given by
+        <me>
+          f\circ \iota(x)=f(\iota(x))=f(x)
+        </me>
+        for all <m>x\in X</m>.
+        Notice that <m>f\circ \iota</m> is simply the function <m>f</m> but with a smaller domain.
+        In this case, we say that <m>f\circ \iota</m> is the
+        <em>restriction of <m>f</m> to <m>X</m></em>,
+        which is often denoted by <m>\tcboxmath{f|_X}</m>.
+      </p>
+    </statement>
+  </example>
+  <problem>
+    <statement>
+      <p>
+        Define <m>f:\mathbb{R}\to \mathbb{R}</m> and <m>g:\mathbb{R}\to \mathbb{R}</m> via
+        <m>f(x)=x^2</m> and <m>g(x)=3x-5</m>, respectively.
+        Determine formulas for the composite functions <m>f\circ g</m> and <m>g\circ f</m>.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Define <m>f:\mathbb{R}\to \mathbb{R}</m> and <m>g:\mathbb{R}\to \mathbb{R}</m> via
+        <me>
+          f(x)=\begin{cases}5x+7, \amp  \text{ if } x\lt  0\\ 2x+1, \amp  \text{ if } x\geq 0 \end{cases}
+        </me>
+        and <m>g(x)=7x-11</m>, respectively.
+        Find a formula for the composite function <m>g\circ f</m>.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Define <m>f:\mathbb{Z}/15\mathbb{Z}\to \mathbb{Z}/23\mathbb{Z}</m> and <m>g:\mathbb{Z}/23\mathbb{Z}\to \mathbb{Z}/32\mathbb{Z}</m> via
+        <m>f([x]_{15})=[3x+5]_{23}</m> and <m>g([x]_{23})=[2x+1]_{32}</m>,
+        respectively.
+        Find a formula for the composite function <m>g\circ f</m>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    The following result provides some insight into where the identity map got its name.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        If <m>f:X\to Y</m> is a function,
+        then <m>f\circ i_X = f = i_Y\circ f</m>,
+        where <m>i_X</m> and <m>i_Y</m> are the identity maps on <m>X</m> and <m>Y</m>,
+        respectively.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    The next theorem tells us that function composition is associative.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        If <m>f:X\to Y</m>, <m>g:Y\to Z</m>,
+        and <m>h:Z\to W</m> are functions,
+        then <m>(h\circ g)\circ f = h\circ (g\circ f)</m>.
+      </p>
+    </statement>
+  </theorem>
+  <problem>
+    <statement>
+      <p>
+        In each case,
+        give examples of finite sets <m>X</m>, <m>Y</m>, and <m>Z</m>,
+        and functions <m>f:X\to Y</m> and
+        <m>g:Y\to Z</m> that satisfy the given conditions.
+        Drawing a function diagram is sufficient.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>f</m> is surjective, but <m>g\circ f</m> is not surjective.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>g</m> is surjective, but <m>g\circ f</m> is not surjective.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f</m> is injective, but <m>g\circ f</m> is not injective.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>g</m> is injective, but <m>g\circ f</m> is not injective.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <theorem>
+    <statement>
+      <p>
+        If <m>f:X\to Y</m> and <m>g:Y\to Z</m> are both surjective functions,
+        then <m>g\circ f</m> is also surjective.
+      </p>
+    </statement>
+  </theorem>
+  <theorem>
+    <statement>
+      <p>
+        If <m>f:X\to Y</m> and <m>g:Y\to Z</m> are both injective functions,
+        then <m>g\circ f</m> is also injective.
+      </p>
+    </statement>
+  </theorem>
+  <corollary>
+    <statement>
+      <p>
+        If <m>f:X\to Y</m> and <m>g:Y\to Z</m> are both bijections,
+        then <m>g\circ f</m> is also a bijection.
+      </p>
+    </statement>
+  </corollary>
+  <problem>
+    <statement>
+      <p>
+        Assume that <m>f:X\to Y</m> and <m>g:Y\to Z</m> are both functions.
+        Determine whether each of the following statements is true or false.
+        If a statement is true, prove it.
+        Otherwise, provide a counterexample.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              If <m>g\circ f</m> is injective,
+              then <m>f</m> is injective.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>g\circ f</m> is injective,
+              then <m>g</m> is injective.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>g\circ f</m> is surjective,
+              then <m>f</m> is surjective.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>g\circ f</m> is surjective,
+              then <m>g</m> is surjective.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <theorem>
+    <statement>
+      <p>
+        Let <m>f:X\to Y</m> be a function.
+        Then <m>f</m> is injective if and only if there exists a function
+        <m>g:Y\to X</m> such that <m>g\circ f=i_X</m>,
+        where <m>i_X</m> is the identity map on <m>X</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    The function <m>g</m> in the previous theorem is often called a
+    <em>left inverse</em> of <m>f</m>.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        Let <m>f:X\to Y</m> be a function.
+        Then <m>f</m> is surjective if and only if there exists a function
+        <m>g:Y\to X</m> such that <m>f\circ g=i_Y</m>,
+        where <m>i_Y</m> is the identity map on <m>Y</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    The function <m>g</m> in the previous theorem is often called a
+    <em>right inverse</em> of <m>f</m>.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Complete each of the following.
+        Consider using finite sets and drawing a function diagram to define your functions.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              Provide an example of a function that has a left inverse but does not have a right inverse.
+              Find the left inverse of your proposed function.
+            </p>
+          </li>
+          <li>
+            <p>
+              Provide an example of a function that has a right inverse but does not have a left inverse.
+              Find the right inverse of your proposed function.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Define <m>f:\mathbb{R}\to\mathbb{R}</m> via <m>f(x)=x^2</m>.
+        Explain why <m>f</m> does not have a left inverse nor a right inverse.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Define <m>f:\mathbb{R}\to[0,\infty)</m> via <m>f(x)=x^2</m> and
+        <m>g:[0,\infty)\to \mathbb{R}</m> via <m>g(x)=\sqrt{x}</m>.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              Explain why <m>f</m> does not have a left inverse.
+            </p>
+          </li>
+          <li>
+            <p>
+              Verify that <m>g</m> is the right inverse of <m>f</m> by computing <m>f\circ g(x)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <corollary xml:id="cor_two-sided_inverse">
+    <statement>
+      <p>
+        If <m>f:X\to Y</m> and <m>g:Y\to X</m> are functions satisfying
+        <m>g\circ f=i_X</m> and <m>f\circ g=i_Y</m>,
+        then <m>f</m> is a bijection.
+      </p>
+    </statement>
+  </corollary>
+  <p>
+    In the previous result, the functions <m>f</m> and <m>g</m>
+    <q>cancel</q>
+    each other out.
+    In this case, we say that <m>g</m> is a
+    <em>two-sided inverse</em> of <m>f</m>.
+  </p>
+  <definition xml:id="def_inverse_of_a_function">
+    <statement>
+      <p>
+        Let <m>f:X\to Y</m> be a function.
+        The relation <m>f^{-1}</m> from <m>Y</m> to <m>X</m>,
+        called <m>f</m> inverse, is defined via
+        <me>
+          \tcboxmath{f^{-1}=\{(f(x),x)\in Y\times X\mid x\in X\}}
+        </me>.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    Notice that we called <m>f^{-1}</m> a relation and not a function.
+    In some circumstances <m>f^{-1}</m> will be a function and sometimes it will not be.
+    Given a function <m>f</m>,
+    the inverse relation is simply the set of ordered pairs that results from reversing the ordered pairs in <m>f</m>.
+    It is worth pointing out that we have only defined inverse relations for functions.
+    However, one can easily adapt our definition to handle arbitrary relations.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Consider the function <m>f</m> given in <xref ref="ex_function">Example</xref>
+        (see <xref ref="fig_function_diagram">Figure</xref>).
+        List the ordered pairs in the relation <m>f^{-1}</m> and draw the corresponding digraph.
+        Is <m>f^{-1}</m> a function?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Provide an example of a function
+        <m>f:X\to Y</m> such that <m>f^{-1}</m> is a function.
+        Drawing a function diagram is sufficient.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Suppose <m>X\subseteq \mathbb{R}</m> and <m>f:X\to \mathbb{R}</m> is a function.
+        What is the relationship between the graph of the function <m>f</m> and the graph of the inverse relation <m>f^{-1}</m>?
+      </p>
+    </statement>
+  </problem>
+  <theorem xml:id="thm_inverse_function_iff_bijection">
+    <statement>
+      <p>
+        Let <m>f:X\to Y</m> be a function.
+        Then <m>f^{-1}:Y\to X</m> is a function if and only if <m>f</m> is a bijection.
+      </p>
+    </statement>
+  </theorem>
+  <problem>
+    <statement>
+      <p>
+        Suppose <m>f:\mathbb{R}\to \mathbb{R}</m> is a function.
+        Fill in the blank with the appropriate phrase.
+      </p>
+      <blockquote>
+        The relation <m>f^{-1}</m> is a function if and only if every horizontal line hits the graph of <m>f</m> <em><nbsp/> <nbsp/> <nbsp/> <nbsp/>   <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/></em>.
+      </blockquote>
+      <p>
+        Explain why this statement is true.
+      </p>
+    </statement>
+  </problem>
+  <theorem xml:id="thm_comp_of_inverses">
+    <statement>
+      <p>
+        If <m>f:X\to Y</m> is a bijection, then
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>f^{-1}\circ f=i_X</m>, and
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f\circ f^{-1}=i_Y</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+  <theorem xml:id="thm_f_inverse_bijection">
+    <statement>
+      <p>
+        If <m>f:X\to Y</m> is a bijection,
+        then <m>f^{-1}:Y\to X</m> is also a bijection.
+      </p>
+    </statement>
+  </theorem>
+  <theorem xml:id="thm_unique_inverse">
+    <statement>
+      <p>
+        If <m>f:X\to Y</m> and <m>g:Y\to X</m> are functions such that
+        <m>g\circ f=i_X</m> and <m>f\circ g=i_Y</m>,
+        then <m>f^{-1}</m> is a function and <m>g=f^{-1}</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    The upshot of <xref ref="thm_comp_of_inverses">Theorems</xref>
+    and <xref ref="thm_unique_inverse"></xref>
+    is that if <m>f^{-1}</m> is a function,
+    then it is the only one satisfying the two-sided inverse property exhibited in <xref ref="cor_two-sided_inverse">Corollary</xref>
+    and <xref ref="thm_comp_of_inverses">Theorem</xref>.
+    That is, inverse functions are unique when they exist.
+    When the relation <m>f^{-1}</m> is a function,
+    we call it the <em>inverse function</em> of <m>f</m>.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Let <m>X\subseteq\mathbb{R}</m> and suppose <m>f:X\to\mathbb{R}</m> is a function.
+        Explain the difference between
+        <m>f^{-1}(x)</m> and <m>[f(x)]^{-1}</m>.
+        When does each exist?
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Let <m>X,Y\subseteq\mathbb{R}</m> and define
+        <m>f:X\to Y</m> via <m>f(x)=e^x</m> and
+        <m>g:Y\to X</m> via <m>g(x)=\ln(x)</m>.
+        Identify the largest possible choices for <m>X</m> and <m>Y</m> so that <m>f</m> and <m>g</m> are inverses of each other.
+      </p>
+    </statement>
+  </problem>
+  <theorem xml:id="thm_inverse_of_inverse">
+    <statement>
+      <p>
+        If <m>f:X\to Y</m> is a bijection,
+        then <m>(f^{-1})^{-1}=f</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    In the previous theorem,
+    we restricted our attention to bijections so that <m>f^{-1}</m> would be a function,
+    thus making <m>(f^{-1})^{-1}</m> a sensible inverse relation in light of <xref ref="def_inverse_of_a_function">Definition</xref>.
+    If we had defined inverses for arbitrary relations,
+    then we would not have needed to require the function in <xref ref="thm_inverse_of_inverse">Theorem</xref> to be a bijection.
+    In fact, we do not even need to require the relation to be a function.
+    That is, if <m>R</m> is a relation from <m>X</m> to <m>Y</m>,
+    then <m>(R^{-1})^{-1}=R</m>, as expected.
+    Similarly, the next result generalizes to arbitrary relations.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        If <m>f:X\to Y</m> and <m>g:Y\to Z</m> are both bijections,
+        then <m>(g\circ f)^{-1}=f^{-1}\circ g^{-1}</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    The previous theorem is sometimes referred to as the
+    <q>socks and shoes theorem</q>. Do you see how it got this name?
+  </p>
+  <p>
+    \epigraph{The most difficult thing is the decision to act.
+    The rest is merely tenacity.}{Amelia Earhart, aviation pioneer}
+  </p>
+</section>

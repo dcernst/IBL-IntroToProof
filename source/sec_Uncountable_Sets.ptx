@@ -1,0 +1,305 @@
+<section xml:id="sec_Uncountable_Sets">
+  <title>Uncountable Sets</title>
+  <p>
+    Recall from <xref ref="def_countable">Definition</xref>
+    that a set <m>A</m> is uncountable if <m>A</m> is not countable.
+    Since all finite sets are countable,
+    the only way a set could be uncountable is if it is infinite.
+    It follows that a set <m>A</m> is uncountable if and only if there is never a bijection between <m>\mathbb{N}</m> and <m>A</m>.
+    It is not clear that uncountable sets even exist!
+    It turns out that uncountable sets do exist and in this section,
+    we will discover a few of them.
+  </p>
+  <p>
+    Our first task is to prove that the interval <m>(0,1)</m> is uncountable.
+    By <xref ref="prob_moreInfiniteSets">Problem</xref>(h),
+    we know that <m>(0,1)</m> is an infinite set,
+    so it is at least plausible that <m>(0,1)</m> is uncountable.
+    The following problem outlines the proof of <xref ref="thm__0_1_uncountable">Theorem</xref>.
+    Our approach is often referred to as
+    <em>Cantor's Diagonalization Argument</em>,
+    named after German mathematician
+    <url href="https://en.wikipedia.org/wiki/Georg_Cantor">Georg Cantor</url>
+    (1845<ndash/>1918).
+  </p>
+  <p>
+    Before we get started,
+    recall that every number in <m>(0,1)</m> can be written in decimal form.
+    However, there may be more than one way to write a given number in decimal form.
+    For example, <m>0.2</m> equals <m>0.1\overline{99}</m>.
+    A number <m>0.a_1a_2a_3\ldots</m> in <m>(0,1)</m> is said to be in
+    <em>standard decimal form</em>
+    if there is no <m>k</m> such that for all <m>i>k</m>, <m>a_i=9</m>.
+    That is, a number is in standard decimal form if and only if its decimal expansion does not end with a repeating sequence of 9's.
+    For example,
+    <m>0.2</m> is in standard decimal form while <m>0.1\overline{99}</m> is not,
+    even though both represent the same number.
+    It turns out that every real number can be expressed uniquely in standard decimal form.
+    We will take this fact for granted.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        For sake of a contradiction, assume the interval <m>(0,1)</m> is countable.
+        Then there exists a bijection <m>f:\mathbb{N}\to (0,1)</m>.
+        For each <m>n\in\mathbb{N}</m>,
+        its image under <m>f</m> is some number in <m>(0,1)</m>.
+        Write <m>f(n)=0.a_{1n}a_{2n}a_{3n}\ldots</m>,
+        where <m>a_{1n}</m> is the first digit in the standard decimal form for the image of <m>n</m>,
+        <m>a_{2n}</m> is the second digit, and so on.
+        If <m>f(n)</m> terminates after <m>k</m> digits,
+        then our convention will be to continue the decimal expansion with 0's.
+        Now, define <m>b=0.b_1b_2b_3\ldots</m>, where
+        <me>
+          b_i=\begin{cases}2, \amp  \text{ if } a_{ii}\neq 2\\ 3, \amp  \text{ if } a_{ii}=2. \end{cases}
+        </me>
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              Prove that the decimal expansion that defines <m>b</m> above is in standard decimal form.
+            </p>
+          </li>
+          <li>
+            <p>
+              Prove that for all <m>n\in\mathbb{N}</m>, <m>f(n)\neq b</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Explain why <m>f</m> cannot be surjective and why this is a contradiction.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        You just proved that the interval <m>(0,1)</m> cannot be countable!
+      </p>
+    </statement>
+  </problem>
+  <p>
+    The previous problem proves following theorem.
+  </p>
+  <theorem xml:id="thm__0_1_uncountable">
+    <statement>
+      <p>
+        The open interval <m>(0,1)</m> is uncountable.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    Loosely speaking,
+    what <xref ref="thm__0_1_uncountable">Theorem</xref>
+    says is that the open interval <m>(0,1)</m> is
+    <q>bigger</q>
+    in terms of the number of elements it contains than the natural numbers and even the rational numbers.
+    This shows that there are infinite sets of different sizes!
+    We now know there is at least one uncountable set,
+    namely the interval <m>(0,1)</m>.
+    The next three results are useful for finding other uncountable sets.
+    For the first theorem,
+    try a proof by contradiction and take a look at <xref ref="thm_subsetsCountableSets">Theorem</xref>.
+  </p>
+  <theorem xml:id="thm_containsUncountableSubset">
+    <statement>
+      <p>
+        If <m>A</m> and <m>B</m> are sets such that
+        <m>A\subseteq B</m> and <m>A</m> is uncountable,
+        then <m>B</m> is uncountable.
+      </p>
+    </statement>
+  </theorem>
+  <corollary>
+    <statement>
+      <p>
+        If <m>A</m> and <m>B</m> are sets such that <m>A</m> is uncountable and <m>B</m> is countable,
+        then <m>A\setminus B</m> is uncountable.
+      </p>
+    </statement>
+  </corollary>
+  <theorem>
+    <statement>
+      <p>
+        If <m>f:A\to B</m> is an injective function and <m>A</m> is uncountable,
+        then <m>B</m> is uncountable.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    Since the interval <m>(0,1)</m> is uncountable and <m>(0,1)\subseteq \mathbb{R}</m>,
+    it follows immediately from <xref ref="thm_containsUncountableSubset">Theorem</xref>
+    that <m>\mathbb{R}</m> is also uncountable.
+    The next theorem tells that <m>(0,1)</m> and
+    <m>\mathbb{R}</m> actually have the same cardinality!
+    To prove this, consider the function
+    <m>f:(0,1)\to \mathbb{R}</m> defined via <m>f(x)=\tan\left(\pi x-\frac{\pi}{2}\right)</m>.
+  </p>
+  <theorem xml:id="thm_R_uncountable">
+    <statement>
+      <p>
+        The set of real numbers is uncountable.
+        In particular, <m>\card((0,1))=\card(\mathbb{R})</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    The <em>continuum hypothesis</em><mdash/>originally proposed by Cantor in 1878<mdash/>states that there is no set whose cardinality is strictly between that of the natural numbers and the real numbers.
+    Cantor unsuccessfully attempted to prove the continuum hypothesis for several years.
+    It follows from the work of
+    <url href="https://en.wikipedia.org/wiki/Paul_Cohen">Paul Cohen</url>
+    (1934<ndash/>2007) and
+    <url href="https://en.wikipedia.org/wiki/Kurt_Godel">Kurt G&#xf6;del</url>
+    (1906<ndash/>1978) that the continuum hypothesis and its negation are independent of the Zermelo-Fraenkel axioms of set theory
+    (briefly discussed at the end of <xref ref="sec_RussellsParadox">Section</xref>).
+    That is, either the continuum hypothesis or its negation can be added as an axiom to ZFC set theory,
+    with the resulting theory being consistent if and only if ZFC is consistent (i.e., no contradictions are produced).
+    Nowadays, most set theorists believe that the continuum hypothesis
+    <em>should</em> be false.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        If <m>a,b\in\mathbb{R}</m> with <m>a\lt b</m>,
+        then <m>(a,b)</m>, <m>[a,b]</m>,
+        <m>(a,b]</m>, and <m>[a,b)</m> are all uncountable.
+      </p>
+    </statement>
+  </theorem>
+  <theorem>
+    <statement>
+      <p>
+        The set of irrational numbers is uncountable.
+      </p>
+    </statement>
+  </theorem>
+  <theorem>
+    <statement>
+      <p>
+        The set <m>\mathbb{C}</m> of complex numbers is uncountable.
+      </p>
+    </statement>
+  </theorem>
+  <problem>
+    <statement>
+      <p>
+        Determine whether each of the following statements is true or false.
+        If a statement is true, prove it.
+        Otherwise, provide a counterexample.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              If <m>A</m> and <m>B</m> are sets such that <m>A</m> is uncountable,
+              then <m>A\cup B</m> is uncountable.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>A</m> and <m>B</m> are sets such that <m>A</m> is uncountable,
+              then <m>A\cap B</m> is uncountable.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>A</m> and <m>B</m> are sets such that <m>A</m> is uncountable,
+              then <m>A\times B</m> is uncountable.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>A</m> and <m>B</m> are sets such that <m>A</m> is uncountable,
+              then <m>A\setminus B</m> is uncountable.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    An approach similar to Cantor's Diagonalization Argument will be helpful when approaching the next problem.
+  </p>
+  <problem xml:id="prob_sequence01">
+    <statement>
+      <p>
+        Let <m>S</m> be the set of infinite sequences of 0's and 1's.
+        Determine whether <m>S</m> is countable or uncountable and prove that your answer is correct.
+      </p>
+    </statement>
+  </problem>
+  <theorem>
+    <statement>
+      <p>
+        If <m>S</m> is the set from <xref ref="prob_sequence01">Problem</xref>,
+        then <m>\card(\mathcal{P}(\mathbb{N}))=\card(S)</m>.
+      </p>
+    </statement>
+  </theorem>
+  <corollary xml:id="cor_power_set_of_N_uncountable">
+    <statement>
+      <p>
+        The power set of the natural numbers is uncountable.
+      </p>
+    </statement>
+  </corollary>
+  <p>
+    Notice that <m>\mathbb{N}</m> is countable while <m>\mathcal{P}(\mathbb{N})</m> is uncountable.
+    That is, the power set of the natural numbers has cardinality strictly larger than the natural numbers.
+    We generalize this phenomenon in the next theorem.
+  </p>
+  <p>
+    According to <xref ref="thm_R_uncountable">Theorem</xref>
+    and <xref ref="cor_power_set_of_N_uncountable">Corollary</xref>,
+    <m>\mathbb{R}</m> and <m>\mathcal{P}(\mathbb{N})</m> are both uncountable.
+    In fact, <m>\card(\mathcal{P}(\mathbb{N}))=\card(\mathbb{R})</m>,
+    which we state without proof.
+    However, it turns out that the two uncountable sets may or may not have the same cardinality.
+    Perhaps surprisingly, there are sets that are even
+    <q>bigger</q>
+    than the set of real numbers.
+    The next theorem is named after Georg Cantor,
+    who first stated and proved it at the end of the 19th century.
+    The theorem states that given any set,
+    we can always increase the cardinality by considering its power set.
+    That is, if <m>A</m> is a set,
+    <m>\mathcal{P}(A)</m> has strictly greater cardinality than <m>A</m> itself.
+    For finite sets, Cantor's theorem follows from <xref ref="thm_size_of_power_set_for_finite_sets">Theorems</xref>
+    and <xref ref="thm_n_2_n"></xref>
+    (both of which we proved via induction).
+    Perhaps much more surprising is that Cantor discovered an elegant argument that is applicable to any set,
+    whether finite or infinite.
+    To prove Cantor's Theorem,
+    first exhibit an injective function from <m>A</m> to <m>\mathcal{P}(A)</m>.
+    This proves that <m>\card(A)\leq \card(\mathcal{P}(A))</m>.
+    To show that <m>\card(A)\lt \card(\mathcal{P}(A))</m>,
+    try a proof by contradiction.
+    That is, assume there exists a bijective function <m>f:A\to\mathcal{P}(A))</m>.
+    Derive a contradiction by considering the set <m>B=\{x\in A\mid x\notin f(x)\}</m>.
+  </p>
+  <theorem xml:id="thm_Cantors_Theorem">
+    <title>Cantor's Theorem</title>
+    <statement>
+      <p>
+        If <m>A</m> is a set, then <m>\card(A)\lt \card(\mathcal{P}(A))</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    Recall that cardinality provides a way for talking about
+    <q>how big</q>
+    a set is.
+    The fact that the natural numbers and the real numbers have different cardinality
+    (one countable, the other uncountable),
+    tells us that there are at least two different
+    <q>sizes of infinity</q>. By iteratively taking the power set of an infinite set and applying Cantor's Theorem we obtain an endless hierarchy of cardinalities,
+    each strictly larger than the one before it.
+    Colloquially, this implies that there are
+    <q>infinitely many sizes of infinity</q>
+    and there is
+    <q>no largest infinity</q>.
+  </p>
+  <p>
+    \epigraph{If you want to sharpen a sword,
+    you have to remove a little metal.}{Author Unknown}
+  </p>
+  <p>
+    \appendix
+  </p>
+</section>

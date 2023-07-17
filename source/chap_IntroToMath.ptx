@@ -1,0 +1,23 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chap_IntroToMath">
+  <title>Mathematics and Logic</title>
+  <introduction>
+    <p>
+      \epigraph{Pure mathematics is the poetry of logical ideas.}{Albert Einstein,
+      theoretical physicist}
+    </p>
+    <p>
+      Before you get started,
+      make sure you have read <xref ref="chap_intro">Chapter</xref>,
+      which sets the tone for the work we will begin doing here.
+      In addition,
+      you might find it useful to read <xref ref="appendix_elements_of_style">Appendix</xref>: Elements of Style for Proofs.
+      As stated at the end of <xref ref="sec_guidance">Section</xref>,
+      you are encouraged to review this appendix occasionally as you progress through the book as some guidelines may not initially make sense or seem relevant.
+    </p>
+  </introduction>
+  <xi:include  href="sec_baby_number_theory.ptx"/>
+  <xi:include  href="sec_Intro_to_Logic.ptx"/>
+  <xi:include  href="sec_Techniques_for_Proving_Conditional_Propositions.ptx"/>
+  <xi:include  href="sec_Introduction_to_Quantification.ptx"/>
+  <xi:include  href="sec_More_About_Quantification.ptx"/>
+</chapter>

@@ -1,0 +1,665 @@
+<section xml:id="sec_Sets">
+  <title>Sets</title>
+  <definition>
+    <statement>
+      <p>
+        A set is a collection of objects called elements.
+        If <m>A</m> is a set and <m>x</m> is an element of <m>A</m>,
+        we write <m>\tcboxmath{x\in A}</m>.
+        Otherwise, we write <m>\tcboxmath{x\notin A}</m>.
+        The set containing no elements is called the empty set,
+        and is denoted by the symbol <m>\tcboxmath{\emptyset}</m>.
+        Any set that contains at least one element is referred to as a nonempty set.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    If we think of a set as a box potentially containing some stuff,
+    then the empty set is a box with nothing in it.
+    One assumption we will make is that for any set <m>A</m>,
+    <m>A\notin A</m>.
+    The language associated to sets is specific.
+    We will often define sets using the following notation,
+    called <em>set-builder notation</em>:
+    <me>
+      \tcboxmath{S=\{x \in A\mid P(x)\}}
+    </me>,
+    where <m>P(x)</m> is some predicate statement involving <m>x</m>.
+    The first part
+    <q><m>x \in A</m></q>
+    denotes what type of <m>x</m> is being considered.
+    The predicate to the right of the vertical bar
+    (not to be confused with
+    <q>divides</q>
+    )
+    determines the condition(s) that each <m>x</m> must satisfy in order to be a member of the set.
+    This notation is read as
+    <q>The set of all <m>x</m> in <m>A</m> such that <m>P(x)</m>.</q>
+    As an example,
+    the set <m>\{x\in \mathbb{N}\mid x \mbox{ is even and } x\geq 8\}</m> describes the collection of even natural numbers that are greater than or equal to 8.
+  </p>
+  <p>
+    There are a few sets that are commonly discussed in mathematics and have predefined symbols to denote them.
+    We have already encountered the integers,
+    natural numbers, and real numbers.
+    Notice that our definition of the rational numbers uses set-builder notation.
+    <ul>
+      <li>
+        <p>
+          <em>Natural Numbers:</em> <m>\tcboxmath{\mathbb{N}\coloneqq \{1,2,3,\ldots\}}</m>.
+          Some books will include zero in the set of natural numbers,
+          but we do not.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Integers:</em> <m>\tcboxmath{\mathbb{Z}\coloneqq \{0, \pm 1, \pm2, \pm 3, \ldots\}}</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Rational Numbers:</em> <m>\tcboxmath{\mathbb{Q}\coloneqq \{a/b \mid a, b \in \mathbb{Z} \text{ and } b \neq 0\}}</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Real Numbers:</em> <m>\tcboxmath{\mathbb{R}}</m> denotes the set of real numbers.
+          We are taking for granted that you have some familiarity with this set.
+        </p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    Since the set of natural numbers consists of the positive integers,
+    the natural numbers are sometimes denoted by <m>\tcboxmath{\mathbb{Z}^+}</m>.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Unpack the meaning of each of the following sets and provide a description of the elements that each set contains.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>A=\{x \in \mathbb{N} \mid x = 3k \mbox{ for some } k\in \mathbb{N} \}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>B=\{t \in \mathbb{R} \mid t \leq 2 \mbox{ or } t\geq 7 \}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>C=\{t \in \mathbb{Z} \mid t^2 \leq 2 \}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>D=\{s \in \mathbb{Z} \mid -3\lt s\leq 5 \}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>E=\{m \in \mathbb{R} \mid m = 1 - \frac{1}{n} \mbox{, where } n \in \mathbb{N} \}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem xml:id="prob_set-builder_examples">
+    <statement>
+      <p>
+        Write each of the following sentences using set-builder notation.
+        <ol marker="labeltextrmalph">
+          <li xml:id="prob_set-builder_examples_a">
+            <p>
+              The set of all real numbers less than <m>-\sqrt{2}</m>.
+            </p>
+          </li>
+          <li xml:id="prob_set-builder_examples_b">
+            <p>
+              The set of all real numbers greater than <m>-12</m> and less than or equal to 42.
+            </p>
+          </li>
+          <li>
+            <p>
+              The set of all even integers.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Parts<nbsp/>(a) and (b) of <xref ref="prob_set-builder_examples">Problem</xref> are examples of intervals.
+  </p>
+  <definition xml:id="def_intervals">
+    <statement>
+      <p>
+        For <m>a,b\in\mathbb{R}</m> with <m>a\lt b</m>,
+        we define the following sets, referred to as intervals.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>\tcboxmath{(a,b)\coloneqq \{x\in\mathbb{R}\mid a\lt x\lt b\}}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\tcboxmath{[a,b]\coloneqq \{x\in\mathbb{R}\mid a\leq x\leq b\}}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\tcboxmath{[a,b)\coloneqq \{x\in\mathbb{R}\mid a\leq x\lt b\}}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\tcboxmath{(a,\infty)\coloneqq \{x\in\mathbb{R}\mid a\lt x\}}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\tcboxmath{(-\infty,b)\coloneqq \{x\in\mathbb{R}\mid x\lt b\}}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\tcboxmath{(-\infty,\infty)\coloneqq \mathbb{R}}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        We analogously define <m>\tcboxmath{(a,b]}</m>,
+        <m>\tcboxmath{[a,\infty)}</m>,
+        and <m>\tcboxmath{(-\infty,b]}</m>.
+        Intervals of the form <m>(a,b)</m>,
+        <m>(-\infty,b)</m>, <m>(a,\infty)</m>,
+        and <m>(-\infty,\infty)</m> are called open intervals while <m>[a,b]</m> is referred to as a closed interval.
+        A bounded interval is any interval of the form <m>(a,b)</m>,
+        <m>[a,b)</m>,
+        <m>(a,b]</m>, and <m>[a,b]</m>.
+        For bounded intervals,
+        <m>a</m> and <m>b</m> are called the endpoints of the interval.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    We will always assume that any time we write <m>(a,b), [a,b], (a,b]</m>,
+    or <m>[a,b)</m> that <m>a\lt b</m>.
+    We will see where the terminology of
+    <q>open</q>
+    and
+    <q>closed</q>
+    comes from in <xref ref="sec_Topology">Section</xref>.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Give an example of each of the following.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              An interval that is neither an open nor closed interval.
+            </p>
+          </li>
+          <li>
+            <p>
+              An infinite set that is not an interval.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <definition>
+    <statement>
+      <p>
+        If <m>A</m> and <m>B</m> are sets,
+        then we say that <m>A</m> is a subset of <m>B</m>,
+        written <m>\tcboxmath{A\subseteq B}</m>,
+        provided that every element of <m>A</m> is an element of <m>B</m>.
+      </p>
+    </statement>
+  </definition>
+  <problem>
+    <statement>
+      <p>
+        List all of the subsets of <m>A=\{1,2,3\}</m>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Every nonempty set always has two subsets.
+    Notice that if <m>A=\emptyset</m>,
+    then Parts<nbsp/>(a) and (b) of the next theorem say the same thing.
+  </p>
+  <theorem xml:id="thm_trivial_subsets">
+    <statement>
+      <p>
+        Let <m>A</m> be a set.
+        Then
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>A\subseteq A</m>, and
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\emptyset \subseteq A</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    Observe that
+    <q><m>A\subseteq B</m></q>
+    is equivalent to ``For all <m>x</m>
+    (in the universe of discourse),
+    if <m>x\in A</m>,
+    then <m>x\in B</m>." Since we know how to deal with
+    <q>for all</q>
+    statements and conditional propositions,
+    we know how to go about proving <m>A\subseteq B</m>.
+    If <m>A</m> happens to be the empty set,
+    then the statement ``For all <m>x</m>
+    (in the universe of discourse),
+    if <m>x\in A</m>, then <m>x\in B</m>" is vacuously true.
+    This is in agreement with <xref ref="thm_trivial_subsets">Theorem</xref>(b),
+    which states that the empty set is always a subset of every set.
+    In light of this,
+    it is common to omit discussion of the case when <m>A</m> is the empty set when proving that <m>A</m> is s a subset of <m>B</m>.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Suppose <m>A</m> and <m>B</m> are sets.
+        Describe a skeleton proof for proving that <m>A\subseteq B</m>.
+      </p>
+    </statement>
+  </problem>
+  <theorem>
+    <title>Transitivity of Subsets</title>
+    <statement>
+      <p>
+        Suppose that <m>A</m>, <m>B</m>, and <m>C</m> are sets.
+        If <m>A\subseteq B</m> and
+        <m>B\subseteq C</m>, then <m>A\subseteq C</m>.
+      </p>
+    </statement>
+  </theorem>
+  <definition>
+    <statement>
+      <p>
+        Two sets <m>A</m> and <m>B</m> are equal,
+        denoted <m>\tcboxmath{A=B}</m>,
+        if the sets contain the same elements.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    Since the next theorem is a biconditional proposition,
+    you need to write two distinct subproofs, one for
+    <q><m>A=B</m> implies <m>A \subseteq B</m> and <m>B \subseteq A</m></q>, and another for
+    <q><m>A \subseteq B</m> and
+    <m>B \subseteq A</m> implies <m>A=B</m></q>. Be sure to make it clear to the reader when you are proving each implication.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        Suppose that <m>A</m> and <m>B</m> are sets.
+        Then <m>A=B</m> if and only if
+        <m>A \subseteq B</m> and <m>B \subseteq A</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    Note that if we want to prove <m>A=B</m>,
+    then we have to do two separate subproofs:
+    one for <m>A\subseteq B</m> and one for <m>B\subseteq A</m>.
+    Be sure to make it clear to the reader where these subproofs begin and end.
+    One approach is to label each subproof with
+    <q><m>(\subseteq)</m></q>
+    and
+    <q><m>(\supseteq)</m></q>
+    (including the parentheses), respectively.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        If <m>A\subseteq B</m>,
+        then <m>A</m> is called a proper subset provided that <m>A\neq B</m>.
+        In this case, we may write
+        <m>\tcboxmath{A\subset B}</m> or <m>\tcboxmath{A\subsetneq B}</m>.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    Note that some authors use <m>\subset</m> to mean <m>\subseteq</m>,
+    so some confusion could arise if you are not reading carefully.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        Let <m>A</m> and <m>B</m> be sets in some universe of discourse <m>U</m>.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              The <em>union</em> of the sets <m>A</m> and <m>B</m> is <m>\tcboxmath{A \cup B \coloneqq \{x\in U \mid x\in A \mbox{ or } x\in B \}}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              The <em>intersection</em> of the sets <m>A</m> and <m>B</m> is <m>\tcboxmath{A \cap B \coloneqq\{x\in U \mid x\in A \mbox{ and } x\in B \}}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              The <em>set difference</em> of the sets <m>A</m> and <m>B</m> is <m>\tcboxmath{A \setminus B \coloneqq\{x\in U \mid x\in A \mbox{ and } x\notin B \}}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              The <em>complement of <m>A</m></em>
+              (relative to <m>U</m>)
+              is the set <m>\tcboxmath{A^c\coloneqq U \setminus A =\{x \in U \mid x \notin A\}}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </definition>
+  <definition>
+    <statement>
+      <p>
+        If two sets <m>A</m> and <m>B</m> have the property that <m>A \cap B = \emptyset</m>,
+        then we say that <m>A</m> and <m>B</m> are disjoint sets.
+      </p>
+    </statement>
+  </definition>
+  <problem>
+    <statement>
+      <p>
+        Suppose that the universe of discourse is <m>U=\{1,2,3,4,5,6,7,8,9,10\}</m>.
+        Let <m>A=\{1, 2, 3, 4, 5\}</m>,
+        <m>B=\{1, 3, 5\}</m>, and <m>C=\{2, 4, 6, 8\}</m>.
+        Find each of the following.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>A \cap C</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>B \cap C</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A \cup B</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A\setminus B</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>B \setminus A</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>C \setminus B</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>B^c</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A^c</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>(A\cup B)^c</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A^c\cap B^c</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Suppose that the universe of discourse is <m>U=\mathbb{R}</m>.
+        Let <m>A=[-3,-1)</m>, <m>B=(-2.5,2)</m>, and <m>C=(-2,0]</m>.
+        Find each of the following.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>A^c</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A \cap C</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A \cap B</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A \cup B</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>(A\cap B)^c</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>(A\cup B)^c</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A \setminus B</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A\setminus (B \cup C)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>B \setminus A</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Suppose that the universe of discourse is <m>U=\{x,y, z, \{y\}, \{x,z\}\}</m>.
+        Let <m>S=\{x,y,z\}</m> and <m>T=\{x,\{y\}\}</m>.
+        Find each of the following.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>S \cap T</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>(S\cup T)^{c}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>T\setminus S</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <theorem>
+    <statement>
+      <p>
+        If <m>A</m> and <m>B</m> are sets such that <m>A \subseteq B</m>,
+        then <m>B^c \subseteq A^c</m>.
+      </p>
+    </statement>
+  </theorem>
+  <theorem>
+    <statement>
+      <p>
+        If <m>A</m> and <m>B</m> are sets,
+        then <m>A\setminus B = A \cap B^c</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    In <xref ref="chap_IntroToMath">Chapter</xref>,
+    we encountered De Morgan's Law
+    (see <xref ref="thm_De_Morgan">Theorem</xref>
+    and <xref ref="prob_De_Morgan">Problem</xref>),
+    which provided a method for negating compound propositions involving conjunctions and disjunctions.
+    The next theorem provides a method for taking the complement of unions and intersections of sets.
+    This result is also known as De Morgan's Law.
+    Do you see why?
+  </p>
+  <theorem>
+    <title>De Morgan's Law</title>
+    <statement>
+      <p>
+        If <m>A</m> and <m>B</m> are sets, then
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>(A \cup B)^c = A^c \cap B^c</m>, and
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>(A \cap B)^c = A^c \cup B^c</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    The next theorem indicates how intersections and unions interact with each other.
+  </p>
+  <theorem>
+    <title>Distribution of Union and Intersection</title>
+    <statement>
+      <p>
+        If <m>A</m>, <m>B</m>, and <m>C</m> are sets, then
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>A \cup(B\cap C) = (A\cup B)\cap (A\cup C)</m>, and
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A\cap (B\cup C)= (A\cap B)\cup (A\cap C)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+  <problem>
+    <statement>
+      <p>
+        For each of the statements (a)<ndash/>(d) on the left,
+        find an equivalent symbolic proposition chosen from the list (i)<ndash/>(v) on the right.
+        Note that not every statement on the right will get used.
+      </p>
+      <tabular>
+        <row>
+          <cell><ol marker="labeltextrmalph">
+              <li>
+                <p>
+                  <m>A \nsubseteq B</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>A \cap B= \emptyset</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>(A \cup B)^{c} \neq \emptyset</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>(A \cap B)^{c} = \emptyset</m>.
+                </p>
+              </li>
+            </ol></cell>
+          <cell><ol marker="labeltextrmroman">
+              <li>
+                <p>
+                  <m>(\forall x)(x \in A \wedge x \in B)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>(\forall x)(x \in A \implies x \notin B)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>(\exists x)(x \notin A \wedge x \notin B)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>(\exists x)(x \in A \vee x \in B)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>(\exists x)(x \in A \wedge x\notin B)</m>
+                </p>
+              </li>
+            </ol></cell>
+        </row>
+      </tabular>
+    </statement>
+  </problem>
+  <p>
+    \epigraph{In mathematics the art of proposing a question must be held of higher value than solving it.}{Georg Cantor,
+    mathematician}
+  </p>
+</section>

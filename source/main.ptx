@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <docinfo>
+<macros>
+\newcommand{\dom}{\operatorname{Dom}}
+\newcommand{\codom}{\operatorname{Codom}}
+\newcommand{\range}{\operatorname{Rng}}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\card}{\operatorname{card}}
+\newcommand{\rel}{\operatorname{rel}}
+\newcommand{\Rel}{\operatorname{Rel}}
+\newcommand{\logeq}{\Longleftrightarrow}
+\renewcommand{\implies}{\Longrightarrow}
+\renewcommand{\sourceflush}{flushleft}
+</macros>
+<latex-image-preamble>
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usepackage{tkz-euclide}
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usetikzlibrary{through,intersections,decorations,shadows,fadings}
+\usepackage{pgfplots}
+</latex-image-preamble>
+  </docinfo>
+  <book>
+    <title>An Introduction to Proof via \\Inquiry-Based Learning</title>
+    <frontmatter>
+      <titlepage>
+        <author>
+          <personname>Dana C.~Ernst, PhD</personname>
+        </author>
+      </titlepage>
+    </frontmatter>
+    <xi:include href="./chap_preface.ptx"/>
+    <xi:include href="./chap_acknowledgements.ptx"/>
+    <xi:include href="./chap_intro.ptx"/>
+    <xi:include href="./chap_IntroToMath.ptx"/>
+    <xi:include href="./chap_SetTheory.ptx"/>
+    <xi:include href="./chap_Induction.ptx"/>
+    <xi:include href="./chap_RealNumbers.ptx"/>
+    <xi:include href="./chap_ThreeFamousTheorems.ptx"/>
+    <xi:include href="./chap_Relations_and_Partitions.ptx"/>
+    <xi:include href="./chap_Functions.ptx"/>
+    <xi:include href="./chap_Cardinality.ptx"/>
+    <xi:include href="./appendix_elements_of_style.ptx"/>
+    <xi:include href="./appendix_fancy_math_terms.ptx"/>
+    <xi:include href="./appendix_paradoxes.ptx"/>
+    <xi:include href="./appendix_definitions.ptx"/>
+    <backmatter>
+      <xi:include href="./bibliography.ptx"/>
+    </backmatter>
+  </book>
+</pretext>

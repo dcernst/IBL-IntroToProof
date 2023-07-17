@@ -1,0 +1,625 @@
+<section xml:id="sec_More_About_Quantification">
+  <title>More About Quantification</title>
+  <p>
+    When writing mathematical proofs,
+    we do not explicitly use the symbolic representation of a given statement in terms of quantifiers and logical connectives.
+    Nonetheless,
+    having this notation at our disposal allows us to compartmentalize the abstract nature of mathematical propositions and provides us with a way to talk about the general structure involved in the construction of a proof.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        Two quantified propositions are logically equivalent if they have the same truth value in every universe of discourse.
+      </p>
+    </statement>
+  </definition>
+  <problem>
+    <statement>
+      <p>
+        Consider the propositions <m>(\exists x\in U)(x^2-4=0)</m> and <m>(\exists x\in U)(x^2-2=0)</m>,
+        where <m>U</m> is some universe of discourse.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              Do these propositions have the same truth value if the universe of discourse is the set of real numbers?
+            </p>
+          </li>
+          <li>
+            <p>
+              Provide an example of a universe of discourse such that the propositions yield different truth values.
+            </p>
+          </li>
+          <li>
+            <p>
+              What can you conclude about the logical equivalence of these propositions?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    It is worth pointing out an important distinction.
+    Consider the propositions
+    <q>All cars are red</q>
+    and
+    <q>All natural numbers are positive</q>. Both of these are instances of the
+    <em>logical form</em> <m>(\forall x)P(x)</m>.
+    It turns out that the first proposition is false and the second is true;
+    however, it does not make sense to attach a truth value to the logical form.
+    A logical form is a blueprint for particular propositions.
+    If we are careful,
+    it makes sense to talk about whether two logical forms are logically equivalent.
+    For example,
+    <m>(\forall x)(P(x)\implies Q(x))</m> is logically equivalent to
+    <m>(\forall x)(\neg Q(x)\implies \neg P(x))</m> since a conditional proposition is logically equivalent to its contrapositive
+    (see <xref ref="thm_contrapos">Theorem</xref>).
+    For fixed <m>P(x)</m> and <m>Q(x)</m>,
+    these two forms will always have the same truth value independent of the universe of discourse.
+    If you change <m>P(x)</m> and <m>Q(x)</m>,
+    then the truth value may change,
+    but the two forms will still agree.
+  </p>
+  <p>
+    The next theorem tells us how to negate logical forms involving quantifiers.
+    Your proof should involve several mini arguments.
+    For example, in Part<nbsp/>(a),
+    you will need to proof that if <m>\neg (\forall x)P(x)</m> is true,
+    then <m>(\exists x)(\neg P(x))</m> is also true.
+  </p>
+  <theorem xml:id="thm_negation_of_quantifiers">
+    <statement>
+      <p>
+        Let <m>P(x)</m> be a predicate in some universe of discourse.
+        Then
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>\neg (\forall x)P(x)</m> is logically equivalent to <m>(\exists x)(\neg P(x))</m>;
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\neg (\exists x)P(x)</m> is logically equivalent to <m>(\forall x)(\neg P(x))</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+  <problem>
+    <statement>
+      <p>
+        Negate each of the following sentences.
+        Disregard the truth value and the universe of discourse.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>(\forall x)(x>3)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>(\exists x)(x \mbox{ is prime} \wedge x \mbox{ is even} )</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              All cars are red.
+            </p>
+          </li>
+          <li>
+            <p>
+              Every Wookiee is named Chewbacca.
+            </p>
+          </li>
+          <li>
+            <p>
+              Some hippies are Republican.
+            </p>
+          </li>
+          <li>
+            <p>
+              Some birds are not angry.
+            </p>
+          </li>
+          <li>
+            <p>
+              Not every video game will rot your brain.
+            </p>
+          </li>
+          <li>
+            <p>
+              For all <m>x\in\mathbb{N}</m>, <m>x^2+x+41</m> is prime.
+            </p>
+          </li>
+          <li>
+            <p>
+              There exists <m>x\in\mathbb{Z}</m> such that <m>1/x\notin\mathbb{Z}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              There is no function <m>f</m> such that if <m>f</m> is continuous,
+              then <m>f</m> is not differentiable.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Using <xref ref="thm_negation_of_quantifiers">Theorem</xref>
+    and our previous results involving quantification,
+    we can negate complex mathematical propositions by working from left to right.
+    For example, if we negate the false proposition
+    <me>
+      (\exists x\in\mathbb{R})(\forall y\in\mathbb{R})(x+y=0)
+    </me>,
+    we obtain the proposition
+    <me>
+      \neg(\exists x\in\mathbb{R})(\forall y\in\mathbb{R})(x+y=0)
+    </me>,
+    which is logically equivalent to
+    <me>
+      (\forall x\in\mathbb{R})(\exists y\in\mathbb{R})(x+y\neq 0)
+    </me>
+    and must be true.
+    For a more complicated example,
+    consider the (false) proposition
+    <me>
+      (\forall x)[x>0\implies (\exists y)(y\lt 0 \wedge xy>0)]
+    </me>.
+  </p>
+  <p>
+    Then its negation
+    <me>
+      \neg (\forall x)[x>0\implies (\exists y)(y\lt 0 \wedge xy>0)]
+    </me>
+    is logically equivalent to
+    <me>
+      (\exists x)[x>0 \wedge \neg (\exists y)(y\lt 0 \wedge xy>0)]
+    </me>,
+    which happens to be logically equivalent to
+    <me>
+      (\exists x)[x>0 \wedge (\forall y)(y\geq 0 \vee xy\leq 0)]
+    </me>.
+  </p>
+  <p>
+    Can you identify the theorems that were used in the two examples above?
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Negate each of the following propositions.
+        Disregard the truth value and the universe of discourse.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>(\forall n\in\mathbb{N})(\exists m\in\mathbb{N})(m\lt n)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              For every <m>y\in \mathbb{R}</m>,
+              there exists <m>x\in \mathbb{R}</m> such that <m>y=x^2</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For all <m>y\in \mathbb{R}</m>,
+              if <m>y</m> is not negative,
+              then there exists <m>x\in\mathbb{R}</m> such that <m>y=x^2</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For every <m>x\in \mathbb{R}</m>,
+              there exists <m>y\in \mathbb{R}</m> such that <m>y=x^2</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              There exists <m>x\in \mathbb{R}</m> such that for all <m>y\in \mathbb{R}</m>,
+              <m>y=x^2</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              There exists <m>y\in \mathbb{R}</m> such that for all <m>x\in \mathbb{R}</m>,
+              <m>y=x^2</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>(\forall x,y,z\in\mathbb{Z})((xy \mbox{ is even} \wedge yz\mbox{ is even} )\implies xz\mbox{ is even} )</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              There exists a married person <m>x</m> such that for all married people <m>y</m>,
+              <m>x</m> is married to <m>y</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Consider the following proposition in some universe of discourse.
+        <ol>
+          <li class="custom-list-style-type" label="">
+            <p>
+              ``For all goofy wobblers <m>x</m>,
+              there exists a dinglehopper <m>y</m> such that if <m>x</m> is a not a nugget,
+              then <m>y</m> is a doofus."
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        Find the negation of this proposition so that it includes the phrase
+        <q>is not a doofus.</q>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Consider the following proposition in some universe of discourse.
+        <ol>
+          <li class="custom-list-style-type" label="">
+            <p>
+              ``If <m>x</m> and <m>y</m> are both snazzy,
+              then <m>xy</m> is not nifty."
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        Find the contrapositive of this proposition so that it includes the phrase
+        <q>not snazzy</q>.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    At this point,
+    we should be able to use our understanding of quantification to construct counterexamples to complicated false propositions and proofs of complicated true propositions.
+    Here are some general proof structures for various logical forms.
+  </p>
+  <paragraphs xml:id="skeleton_for_all">
+    <title>Skeleton Proof</title>
+    <p>
+      [Direct Proof of <m>(\forall x)P(x)</m>] Here is the general structure for a direct proof of the proposition <m>(\forall x)P(x)</m>.
+      Assume <m>U</m> is the universe of discourse.
+    </p>
+    <proof>
+      <p>
+        <em>[State any upfront assumptions.]</em> Let <m>x \in U</m>.
+        <m>\ldots</m> <em>[Use definitions and known results.]</em>
+        <m>\ldots</m> Therefore, <m>P(x)</m> is true.
+        Since <m>x</m> was arbitrary,
+        for all <m>x</m>, <m>P(x)</m>.
+      </p>
+    </proof>
+  </paragraphs>
+  <p>
+    Combining Skeleton <xref ref="skeleton_for_all">Proof</xref>
+    with Skeleton <xref ref="skeleton_direct_proof">Proof</xref>,
+    we obtain the following skeleton proof.
+  </p>
+  <paragraphs xml:id="skeleton_for_all_direct_proof">
+    <title>Skeleton Proof</title>
+    <p>
+      [Proof of <m>(\forall x)(A(x)\implies B(x))</m>] Below is the general structure for a direct proof of the proposition <m>(\forall x)(A(x)\implies B(x)</m>.
+      Assume <m>U</m> is the universe of discourse.
+    </p>
+    <proof>
+      <p>
+        <em>[State any upfront assumptions.]</em> Let <m>x \in U</m>.
+        Assume <m>A(x)</m>.
+        <m>\ldots</m> <em>[Use definitions and known results to derive <m>B(x)</m>]</em>
+        <m>\ldots</m> Therefore, <m>B(x)</m>.
+      </p>
+    </proof>
+  </paragraphs>
+  <paragraphs>
+    <title>Skeleton Proof</title>
+    <p>
+      [Proof of <m>(\forall x)P(x)</m> by Contradiction] Here is the general structure for a proof of the proposition <m>(\forall x)P(x)</m> via contradiction.
+      Assume <m>U</m> is the universe of discourse.
+    </p>
+    <proof>
+      <p>
+        <em>[State any upfront assumptions.]</em>
+        For sake of a contradiction,
+        assume that there exists <m>x\in U</m> such that <m>\neg P(x)</m>.
+        <m>\ldots</m> <em>[Do something to derive a contradiction.]</em>
+        <m>\ldots</m> This is a contradiction.
+        Therefore, for all <m>x</m>, <m>P(x)</m> is true.
+      </p>
+    </proof>
+  </paragraphs>
+  <paragraphs xml:id="skeleton_exists">
+    <title>Skeleton Proof</title>
+    <p>
+      [Direct Proof of <m>(\exists x)P(x)</m>] Here is the general structure for a direct proof of the proposition <m>(\exists x)P(x)</m>.
+      Assume <m>U</m> is the universe of discourse.
+    </p>
+    <proof>
+      <p>
+        <em>[State any upfront assumptions.]</em>
+        <m>\ldots</m> <m>\ldots</m> <em>[Use definitions, axioms,
+        and previous results to deduce that an <m>x</m> exists for which <m>P(x)</m> is true;
+        or if you have an <m>x</m> that works,
+        just verify that it does.]</em> <m>\ldots</m> Therefore,
+        there exists <m>x\in U</m> such that <m>P(x)</m>.
+      </p>
+    </proof>
+  </paragraphs>
+  <paragraphs>
+    <title>Skeleton Proof</title>
+    <p>
+      [Proof of <m>(\exists x)P(x)</m> by Contradiction] Below is the general structure for a proof of the proposition <m>(\exists x)P(x)</m> via contradiction.
+      Assume <m>U</m> is the universe of discourse.
+    </p>
+    <proof>
+      <p>
+        <em>[State any upfront assumptions.]</em>
+        For sake of a contradiction,
+        assume that for all <m>x\in U</m>, <m>\neg P(x)</m>.
+        <m>\ldots</m> <em>[Do something to derive a contradiction.]</em>
+        <m>\ldots</m> This is a contradiction.
+        Therefore, there exists <m>x\in U</m> such that <m>P(x)</m>.
+      </p>
+    </proof>
+  </paragraphs>
+  <p>
+    Note that if <m>Q(x)</m> is a predicate for which <m>(\forall x)Q(x)</m> is false,
+    then a counterexample to this proposition amounts to showing <m>(\exists x)(\neg Q(x))</m>,
+    which can be proved by following the structure of Skeleton <xref ref="skeleton_exists">Proof</xref>.
+  </p>
+  <p>
+    It is important to point out that sometimes we will have to combine various proof techniques in a single proof.
+    For example,
+    if you wanted to prove a proposition of the form <m>(\forall x)(P(x) \implies Q(x)</m>) by contradiction,
+    we would start by assuming that there exists <m>x</m> in the universe of discourse such that <m>P(x)</m> and <m>\neg Q(x)</m>.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Determine whether each of the following statements is true or false.
+        If the statement is true, prove it.
+        If the statement is false, provide a counterexample.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              For all <m>n\in\mathbb{N}</m>, <m>n^2\geq 5</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              There exists <m>n \in \mathbb{N}</m> such that <m>n^2-1=0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              There exists <m>x \in \mathbb{N}</m> such that for all <m>y \in \mathbb{N}</m>,
+              <m>y \leq x</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For all <m>x\in\mathbb{Z}</m>, <m>x^3\geq x</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For all <m>n\in\mathbb{Z}</m>,
+              there exists <m>m\in\mathbb{Z}</m> such that <m>n+m=0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              There exists integers <m>a</m> and <m>b</m> such that <m>2a+7b=1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              There do not exist integers <m>m</m> and <m>n</m> such that <m>2m+4n=7</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For all <m>a, b, c\in\mathbb{Z}</m>,
+              if <m>a</m> divides <m>bc</m>,
+              then either <m>a</m> divides <m>b</m> or <m>a</m> divides <m>c</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For all <m>a, b\in\mathbb{Z}</m>,
+              if <m>ab</m> is even, then either <m>a</m> or <m>b</m> is even.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Explain why the following
+        <q>proof</q>
+        is not a valid argument.
+        <ol>
+          <li class="custom-list-style-type" label="">
+            <p>
+              <em>Claim.</em> For all <m>x,y\in \mathbb{Z}</m>,
+              if <m>x</m> and <m>y</m> are even, then <m>x+y</m> is even.
+              <em>
+              <q>Proof.</q>
+              </em> Suppose <m>x,
+              y \in \mathbb{Z}</m> such that <m>x</m> and <m>y</m> are even.
+              For sake of a contradiction, assume that <m>x+y</m> is odd.
+              Then there exists <m>k \in \mathbb{Z}</m> such that <m>x+y=2k+1</m>.
+              This implies that <m>(x+y)-2k=1</m>.
+              We see that the left side of the equation is even because it is the difference of even numbers.
+              However, the right side is odd.
+              Since an even number cannot equal an odd number, we have a contradiction.
+              Therefore, <m>x+y</m> is even.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Sometimes it is useful to split the universe of discourse into multiple collections to deal with separately.
+    When doing this,
+    it is important to make sure that your cases are exhaustive (i.e., every possible element of the universe of discourse has been accounted for).
+    Ideally, your cases will also be disjoint (i.e., you have not considered the same element more than once).
+    For example,
+    if our universe of discourse is the set of integers,
+    we can separately consider even versus odd integers.
+    If our universe of discourse is the set of real numbers,
+    we might want to consider rational versus irrational numbers,
+    or possibly negative versus zero versus and positive.
+    Attacking a proof in this way,
+    is often referred to as a <em>proof by cases</em>
+    (or <em>proof by exhaustion</em>).
+    A proof by cases may also be useful when dealing with hypotheses involving
+    <q>or</q>. Note that the use of a proof by cases is justified by <xref ref="thm_logical_form_for_cases">Theorem</xref>.
+  </p>
+  <p>
+    If you decide to approach a proof using cases,
+    be sure to inform the reader that you are doing so and organize your proof in a sensible way.
+    Note that doing an analysis of cases should be avoided if possible.
+    For example,
+    while it is valid to separately consider the cases of whether <m>a</m> is an even integer versus odd integer in the proof of <xref ref="thm_divides_sum">Theorem</xref>,
+    it is completely unnecessary.
+    To prove the next theorem, you might want to consider two cases.
+  </p>
+  <theorem xml:id="thm_3n_2_n_14_is_even">
+    <statement>
+      <p>
+        For all <m>n\in \mathbb{Z}</m>, <m>3n^2+n+14</m> is even.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    Prove the following theorem by proving the contrapositive using two cases.
+  </p>
+  <theorem xml:id="thm_nm_odd_implies_n_or_m_odd">
+    <statement>
+      <p>
+        For all <m>n,m\in\mathbb{Z}</m>,
+        if <m>nm</m> is odd, then <m>n</m> is odd and <m>m</m> is odd.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    When proving the previous theorem,
+    you likely experienced some d&#xe8;j&#xe1; vu.
+    You should have assumed
+    <q><m>n</m> is even or <m>m</m> is even</q>
+    at some point in your proof.
+    The first case is
+    <q><m>n</m> is even</q>
+    while the second case is
+    <q><m>m</m> is even.</q>
+    (Note that you do not need to handle the case when both <m>n</m> and <m>m</m> are even since the two individual cases already yield the desired result.) The proofs for both cases are identical except the roles of <m>n</m> and <m>m</m> are interchanged.
+    In instances such as this, mathematicians have a shortcut.
+    Instead of writing two essentially identical proofs for each case,
+    you can simply handle one of the cases and indicate that the remaining case follows from a nearly identical proof.
+    The quickest way to do this is to use the phrase,
+    <q>Without loss of generality, assume<ellipsis/></q>. For example,
+    here is a proof of <xref ref="thm_nm_odd_implies_n_or_m_odd">Theorem</xref> that utilizes this approach.
+  </p>
+  <p>
+    <em>Proof of <xref ref="thm_nm_odd_implies_n_or_m_odd">Theorem</xref></em>.
+    We will prove the contrapositive.
+    Let <m>n,m\in\mathbb{Z}</m> and assume <m>n</m> is even or <m>m</m> is even.
+    Without loss of generality, assume <m>n</m> is even.
+    Then there exists <m>k\in\mathbb{Z}</m> such that <m>n=2k</m>.
+    We see that
+    <me>
+      nm=(2k)m=2(km)
+    </me>.
+  </p>
+  <p>
+    Since both <m>k</m> and <m>m</m> are integers, <m>km</m> is an integer.
+    This shows that <m>nm</m> is even.
+    We have proved the contrapositive,
+    and hence for all <m>n,m\in\mathbb{Z}</m>,
+    if <m>nm</m> is odd, then <m>n</m> is odd and <m>m</m> is odd.
+  </p>
+  <p>
+    Note that it would not be appropriate to utilize the
+    <q>without loss of generality</q>
+    approach to combine the two cases in the proof of <xref ref="thm_3n_2_n_14_is_even">Theorem</xref>
+    since the proof of the second case is not as simple as swapping the roles of symbols in the proof of the first case.
+  </p>
+  <p>
+    There are times when a theorem will make a claim about the <em>uniqueness</em>
+    of a particular mathematical object.
+    For example,
+    in <xref ref="sec_AxiomsRealNumbers">Section</xref>,
+    you will be asked to prove that both the additive and multiplicative identities (i.e, 0 and 1) are unique
+    (see <xref ref="thm_unique_additive_identity">Theorems</xref>
+    and <xref ref="thm_unique_multiplicative_identity"></xref>).
+    As another example, the Fundamental Theorem of Arithmetic
+    (see <xref ref="thm_FTA">Theorem</xref>)
+    states that every natural number greater than 1 can be expressed uniquely
+    (up to the order in which they appear)
+    as the product of one or more primes.
+    The typical approach to proving uniqueness is to suppose that there are potentially two objects with the desired property and then show that these objects are actually equal.
+    Whether you approach this as a proof by contradiction is a matter of taste.
+    It is common to use <m>\tcboxmath{\exists!}</m> as a symbolic abbreviation for
+    <q>there exists a unique<ellipsis/> such that</q>.
+  </p>
+  <paragraphs xml:id="skeleton_uniqueness">
+    <title>Skeleton Proof</title>
+    <p>
+      [Direct Proof of <m>(\exists! x)P(x)</m>] Here is the general structure for a direct proof of the proposition <m>(\exists! x)P(x)</m>.
+      Assume <m>U</m> is the universe of discourse.
+    </p>
+    <proof>
+      <p>
+        <em>[State any upfront assumptions.]</em>
+        <m>\ldots</m> <m>\ldots</m> <em>[Use definitions, axioms,
+        and previous results to deduce that an <m>x</m> exists for which <m>P(x)</m> is true;
+        or if you have an <m>x</m> that works,
+        just verify that it does.]</em> <m>\ldots</m> Therefore,
+        there exists <m>x\in U</m> such that <m>P(x)</m>.
+        Now, suppose <m>x_1,x_2\in U</m> such that <m>P(x_1)</m> and <m>P(x_2)</m>.
+        <m>\ldots</m> <em>[Prove that <m>x_1=x_2</m>.]</em>
+        <m>\ldots</m> This implies that there exists a unique <m>x</m> such that <m>P(x)</m>.
+      </p>
+    </proof>
+  </paragraphs>
+  <p>
+    The next theorem provides an opportunity to practice proving uniqueness.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        If <m>c,a,r\in\mathbb{R}</m> such that <m>c\neq 0</m> and <m>r\neq a/c</m>,
+        then there exists a unique
+        <m>x\in\mathbb{R}</m> such that <m>(ax+1)/(cx)=r</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    \epigraph{With two published novels and a file full of ideas for others,
+    the only thing I know about writing is this:
+    it only happens when you sit down and do it.
+    Studying good writing is important,
+    reading good writing is important,
+    talking to other writers is important,
+    but the only way you can produce good writing is to write.}{Jamie Beth Cohen,
+    novelist}
+  </p>
+</section>

@@ -1,0 +1,390 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="appendix_elements_of_style">
+  <title>Elements of Style for Proofs</title>
+  <p>
+    Mathematics is about discovering proofs and writing them clearly and compellingly.
+    The following guidelines apply whenever you write a proof.
+    Keep these guidelines handy so that you may refer to them as you write your proofs.
+    <ol>
+      <li>
+        <p>
+          <em>The burden of communication lies on you,
+          not on your reader.</em> It is your job to explain your thoughts;
+          it is not your reader's job to guess them from a few hints.
+          You are trying to convince a skeptical reader who does not believe you,
+          so you need to argue with airtight logic in crystal clear language;
+          otherwise the reader will continue to doubt.
+          If you did not write something on the paper,
+          then (a) you did not communicate it,(b) the reader did not learn it,
+          and (c) the grader has to assume you did not know it in the first place.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Tell the reader what you are proving or citing.</em>
+          The reader does not necessarily know or remember what
+          <q>Theorem 2.13</q>
+          is.
+          Even a professor grading a stack of papers might lose track from time to time.
+          Therefore, the statement you are proving should be on the same page as the beginning of your proof.
+          In most proofs you will want to refer to an earlier definition,
+          problem, theorem, or corollary.
+          In this case, you should reference the statement by number,
+          but it is also helpful to the reader to summarize the statement you are citing.
+          For example,
+          you might write something like, ``By Theorem<nbsp/>2.3, the sum of two consecutive integers is odd,
+          and so<ellipsis/>."
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Use English words.</em> Although there will usually be equations or mathematical statements in your proofs,
+          use English sentences to connect them and display their logical relationships.
+          If you look at proofs in textbooks and research papers,
+          you will see that they consist mostly of English words.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Use complete sentences.</em>
+          If you wrote a history essay in sentence fragments,
+          the reader would not understand what you meant;
+          likewise in mathematics you must use complete sentences,
+          with verbs, to convey your logical train of thought.
+          Some complete sentences can be written purely in mathematical symbols,
+          such as equations (e.g., <m>a^3=b^{-1}</m>),
+          inequalities (e.g., <m>x\lt 5</m>), and other relations
+          (like <m>5\big|10</m> or <m>7\in\mathbb{Z}</m>).
+          These statements usually express a relationship between two mathematical
+          <em>objects</em>, like numbers or sets.
+          However, it is considered bad style to begin a sentence with symbols.
+          A common phrase to use to avoid starting a sentence with mathematical symbols is
+          <q>We see that...</q>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Show the logical connections among your sentences.</em> Use phrases like
+          <q>Therefore</q>,
+          <q>Thus</q>,
+          <q>Hence</q>,
+          <q>Then</q>,
+          <q>since</q>,
+          <q>because</q>,
+          <q>if<ellipsis/>, then<ellipsis/></q>, or
+          <q>if and only if</q>
+          to connect your sentences.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Know the difference between statements and objects.</em>
+          A mathematical object is a <em>thing</em>, a noun, such as a set,
+          an element, a number, an ordered pair, a vector space, etc.
+          Objects either exist or do not exist.
+          Statements, on the other hand,
+          are mathematical <em>sentences</em>:
+          they are either true or false.
+          When you see or write a cluster of math symbols,
+          be sure you know whether it is an object (e.g.,
+          <q><m>x^2+3</m></q>
+          ) or a statement (e.g.,
+          <q><m>x^2+3\lt 7</m></q>).
+          One way to tell is that every mathematical statement includes a verb,
+          such as <m>=</m>, <m>\leq</m>, <m>\in</m>,
+          <q>divides</q>, etc.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>The symbol
+          <q><m>=</m></q>
+          means
+          <q>equals</q>.</em> Do not write <m>A=B</m> unless you mean that <m>A</m> actually equals <m>B</m>.
+          This guideline seems obvious,
+          but there is a great temptation to be sloppy.
+          In calculus,
+          for example, some people might write <m>f(x)=x^{2}=2x</m>
+          (which is false),
+          when they really mean that
+          <q>if <m>f(x)=x^{2}</m>, then <m>f'(x)=2x</m>.</q>
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Do not interchange <m>{=}</m> and <m>{\implies}</m>.</em>
+          The equals sign connects two <em>objects</em>, as in
+          <q><m>x^2=b</m></q>; the symbol
+          <q><m>\implies</m></q>
+          is an abbreviation for
+          <q>implies</q>
+          and connects two <em>statements</em>, as in
+          <q><m>a+b=a \implies b=0</m>.</q>
+          You should avoid using <m>\implies</m> in formal write-ups of proofs.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Avoid logical symbols in your proofs.</em>
+          Similar to <m>\implies</m>,
+          you should avoid using the logical symbols <m>\forall, \exists, \vee, \wedge</m>,
+          and <m>\logeq</m> in your formal write-ups.
+          These symbols are useful for abbreviating in your scratch work.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Say exactly what you mean.</em>
+          Just as <m>=</m> is sometimes abused,
+          so too people sometimes write <m>A\in B</m> when they mean <m>A\subseteq B</m>,
+          or write <m>a_{ij}\in A</m> when they mean that <m>a_{ij}</m> is an entry in matrix <m>A</m>.
+          Mathematics is a very precise language,
+          and there is a way to say exactly what you mean; find it and use it.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Do not utilize anything unproven.</em>
+          Every statement in your proof should be something you
+          <em>know</em> to be true.
+          The reader expects your proof to be a series of statements,
+          each proven by the statements that came before it.
+          If you ever need to write something you do not yet know is true,
+          you <em>must</em> preface it with words like
+          <q>assume,</q>
+          <q>suppose,</q>
+          or
+          <q>if</q>
+          if you are temporarily assuming it, or with words like
+          <q>we need to show that</q>
+          or
+          <q>we claim that</q>
+          if it is your goal.
+          Otherwise, the reader will think they have missed part of your proof.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Write strings of equalities
+          (or inequalities)
+          in the proper order.</em> When your reader sees something like
+          <me>
+            A=B\leq C=D
+          </me>,
+          they expect to understand easily why <m>A=B</m>,
+          why <m>B\leq C</m>, and why <m>C=D</m>,
+          and they expect the point of the entire line to be the more complicated fact that <m>A\leq D</m>.
+          For example,
+          if you were computing the distance <m>d</m> of the point <m>(12,5)</m> from the origin,
+          you could write
+          <me>
+            d = \sqrt{12^2+5^2} = 13
+          </me>.
+          In this string of equalities,
+          the first equals sign is true by the Pythagorean theorem,
+          the second is just arithmetic,
+          and the conclusion is that the first item equals the last item:
+          <m>d=13</m>.
+          A common error is to write strings of equations in the wrong order.
+          For example, if you were to write
+          <q><m>\sqrt{12^2+5^2}=13=d</m></q>, your reader would understand the first equals sign,
+          would be baffled as to how we know <m>d=13</m>,
+          and would be utterly perplexed as to why you wanted or needed to go through <m>13</m> to prove that <m>\sqrt{12^2+5^2}=d</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Avoid circularity.</em> Be sure that no step in your proof makes use of the conclusion!
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Do not write the proof backwards.</em>
+          Beginning students often attempt to write
+          <q>proofs</q>
+          like the following,
+          which attempts to prove that <m>\tan^2(x)  = \sec^2(x) - 1</m>:
+          <md>
+            <mrow>\tan^2(x) \amp  = \sec^2(x) - 1</mrow>
+            <mrow>\left(\frac{\sin(x)}{\cos(x)}\right)^2 \amp  = \frac{1}{\cos^2(x)} - 1</mrow>
+            <mrow>\frac{\sin^2(x)}{\cos^2(x)} \amp  =  \frac{1-\cos^2(x)}{\cos^2(x)}</mrow>
+            <mrow>\sin^2(x) \amp  = 1-\cos^2(x)</mrow>
+            <mrow>\sin^2(x) + \cos^2(x) \amp  = 1</mrow>
+            <mrow>1 \amp  = 1</mrow>
+          </md>
+          Notice what has happened here:
+          the student <em>started</em> with the conclusion,
+          and deduced the true statement
+          <q><m>1=1</m>.</q>
+          In other words, they have proved
+          <q>If <m>\tan^2(x) = \sec^2(x) - 1</m>, then <m>1=1</m>,</q>
+          which is true but highly uninteresting.
+          Now this is not a bad way of <em>finding</em> a proof.
+          Working backwards from your goal often is a good strategy
+          <em>on your scratch paper</em>,
+          but when it is time to <em>write</em> your proof,
+          you have to start with the hypotheses and work to the conclusion.
+          Here is an example of a suitable proof for the desired result,
+          where each expression follows from the one immediately proceeding it:
+          <md>
+            <mrow>\sec^2(x) - 1 \amp  = \frac{1}{\cos^2(x)} - 1</mrow>
+            <mrow>\amp  = \frac{1-\cos^2(x)}{\cos^2(x)}</mrow>
+            <mrow>\amp  = \frac{\sin^2(x)}{\cos^2(x)}</mrow>
+            <mrow>\amp  = \left(\frac{\sin(x)}{\cos(x)}\right)^2</mrow>
+            <mrow>\amp  = \left(\tan(x)\right)^2</mrow>
+            <mrow>\amp  = \tan^2(x)</mrow>
+          </md>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Be concise.</em> Many beginning proof writers err by writing their proofs too short,
+          so that the reader cannot understand their logic.
+          It is nevertheless quite possible to be too wordy,
+          and if you find yourself writing a full-page essay,
+          it is possible that you do not really have a proof, but just some intuition.
+          When you find a way to turn that intuition into a formal proof,
+          it will be much shorter.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Introduce every symbol you use.</em> If you use the letter
+          <q><m>k</m>,</q>
+          the reader should know exactly what <m>k</m> is.
+          Good phrases for introducing symbols include
+          <q>Let <m>n\in \mathbb{N}</m>,</q>
+          <q>Let <m>k</m> be the least integer such that<ellipsis/>,</q>
+          <q>For every real number <m>a</m><ellipsis/>,</q>
+          and
+          <q>Suppose <m>A\subseteq\mathbb{R}\ldots</m></q>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Use appropriate quantifiers (once).</em>
+          When you introduce a variable <m>x\in S</m>,
+          it must be clear to your reader whether you mean
+          <q>for all <m>x\in S</m></q>
+          or just
+          <q>for some <m>x\in S</m>.</q>
+          If you just say something like
+          <q><m>y=x^2</m> where <m>x\in S</m>,</q>
+          the word
+          <q>where</q>
+          does not indicate whether you mean
+          <q>for all</q>
+          or
+          <q>some</q>. Phrases indicating the quantifier
+          <q>for all</q>
+          include
+          <q>Let <m>x\in S</m></q>;
+          <q>for all <m>x\in S</m></q>;
+          <q>for every <m>x\in S</m></q>;
+          <q>for each <m>x\in S</m></q>; etc.
+          Phrases indicating the quantifier
+          <q>some</q>
+          or
+          <q>there exists</q>
+          include
+          <q>for some <m>x\in S</m></q>;
+          <q>there exists an <m>x\in S</m></q>;
+          <q>for a suitable choice of <m>x\in S</m></q>; etc.
+          Once you have said
+          <q>Let <m>x\in S</m>,</q>
+          the letter <m>x</m> has its meaning defined.
+          You do not need to say
+          <q>for all <m>x\in S</m></q>
+          again, and you definitely should <em>not</em> say
+          <q>let <m>x\in S</m></q>
+          again.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Use a symbol to mean only one thing.</em>
+          Once you use the letter <m>x</m> once,
+          its meaning is fixed for the duration of your proof.
+          You cannot use <m>x</m> to mean anything else.
+          There is an exception to this guideline.
+          Sometimes a proof will include multiple subproofs that are distinct from each other.
+          In this case,
+          you can reuse a variable or symbol as long as it is clear to the reader that you have concluded with the previous subproof and have moved onto a new subproof.
+        </p>
+      </li>
+      <li xml:id="pfbyexample">
+        <p>
+          <em>Do not
+          <q>prove by example.</q>
+          </em> Most problems ask you to prove that something is true
+          <q>for all</q>
+          <mdash/>You <em>cannot</em> prove this by giving a single example,
+          or even a hundred.
+          Your proof will need to be a logical argument that holds for
+          <em>every example there possibly could be</em>.
+          On the other hand,
+          if the claim that you are trying to prove involves the existence of a mathematical object with a particular property,
+          then providing a specific example is sufficient.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Write
+          <q>Let <m>x=\dots</m>,</q>
+          not
+          <q>Let <m>\dots=x</m>.</q>
+          </em> When you have an existing expression, say <m>a^{2}</m>,
+          and you want to give it a new,
+          simpler name like <m>b</m>, you should write
+          <q>Let <m>b=a^{2}</m>,</q>
+          which means,
+          <q>Let the new symbol <m>b</m> mean <m>a^{2}</m>.</q>
+          This convention makes it clear to the reader that <m>b</m> is the brand-new symbol and <m>a^{2}</m> is the old expression he/she already understands.
+          If you were to write it backwards, saying
+          <q>Let <m>a^{2}=b</m>,</q>
+          then your startled reader would ask,
+          <q>What if <m>a^{2}\neq b</m>?</q>
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Make your counterexamples concrete and specific.</em>
+          Proofs need to be entirely general,
+          but counterexamples should be concrete.
+          When you provide an example or counterexample,
+          make it as specific as possible.
+          For a set, for example, you must specify its elements,
+          and for a function you must specify the corresponding relation
+          (possibly an algebraic rule)
+          and its domain and codomain.
+          Do not say things like
+          <q><m>f</m> could be one-to-one but not onto</q>; instead, provide an actual function <m>f</m> that is one-to-one but not onto.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Do not include examples in proofs.</em>
+          Including an example very rarely adds anything to your proof.
+          If your logic is sound, then it does not need an example to back it up.
+          If your logic is bad, a dozen examples will not help it
+          (see <xref ref="pfbyexample">Guideline</xref>).
+          There are only two valid reasons to include an example in a proof:
+          if it is a <em>counterexample</em> disproving something,
+          or if you are performing complicated manipulations in a general setting and the example is just to help the reader understand what you are saying.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Use scratch paper.</em> Finding your proof will be a long,
+          potentially messy process, full of false starts and dead ends.
+          Do all that on scratch paper until you find a real proof,
+          and only then break out your clean paper to write your final proof carefully.
+          Only sentences that actually contribute to your proof should be part of the proof.
+          Do not just perform a
+          <q>brain dump,</q>
+          throwing everything you know onto the paper before showing the logical steps that prove the conclusion.
+          <em>That is what scratch paper is for.</em>
+        </p>
+      </li>
+    </ol>
+  </p>
+</chapter>

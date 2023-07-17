@@ -1,0 +1,107 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chap_acknowledgements">
+  <title>Acknowledgements</title>
+  <p>
+    The first draft of this book was written in 2009.
+    At that time,
+    several of the sections were adaptations of course materials written by Matthew Jones (CSU Dominguez Hills) and Stan Yoshinobu (University of Toronto).
+    The current version of the book is the result of many iterations that involved the addition of new material,
+    retooling of existing sections,
+    and feedback from instructors that have used the book.
+    The current version of the book is a far cry from what it looked like in 2009.
+  </p>
+  <p>
+    This book has been an open-source project since day one.
+    Instructors and students can download the PDF for free and modify the source as they see fit.
+    Several instructors and students have provided extremely useful feedback,
+    which has improved the book at each iteration.
+    Moreover, due to the open-source nature of the book, I have been able to incorporate content written by others.
+    Below is a partial list of people
+    (alphabetical by last name)
+    that have contributed content, advice, or feedback.
+    <ul>
+      <li>
+        <p>
+          <url href="https://math.depaul.edu/cdrupies/">Chris Drupieski</url>,
+          <url href="http://math.depaul.edu/tpeter21/">T.<nbsp/>Kyle Petersen</url>,
+          and
+          <url href="http://math.depaul.edu/bridget/">Bridget Tenner</url>
+          (DePaul University).
+          Modifications that these three made to the book inspired me to streamline some of the exposition,
+          especially in the early chapters.
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="http://www.paulellis.org">Paul Ellis</url>
+          (Manhattanville College).
+          Paul has provided lots of useful feedback and several suggestions for improvements.
+          Paul suggested problems for <xref ref="chap_Induction">Chapter</xref>
+          and provided an initial draft of <xref ref="sec_Images_and_Preimages">Section</xref>: Images and Preimages of Functions.
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="http://jasongrout.org">Jason Grout</url>
+          (Bloomberg, L.P.).
+          I am extremely grateful to Jason for feedback on early versions of this manuscript,
+          as well as for helping me with a variety of technical aspects of writing an open-source textbook.
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="https://www.linkedin.com/in/andershendrickson/">Anders Hendrickson</url>
+          (Milliman).
+          Anders is the original author of the content in <xref ref="appendix_elements_of_style">Appendix</xref>: Elements of Style for Proofs.
+          The current version in <xref ref="appendix_elements_of_style">Appendix</xref>
+          is a result of modifications made by myself with some suggestions from David Richeson.
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="http://www.hsc.edu/rebecca-jayne">Rebecca Jayne</url>
+          (Hampden<ndash/>Sydney College).
+          The current version of <xref ref="sec_CompleteInduction">Section</xref>: Complete Induction is a derivative of content originally contributed by Rebecca.
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="https://www.linkedin.com/in/matt-jones-a704aab/">Matthew Jones</url>
+          (CSU Dominguez Hills) and
+          <url href="https://www.math.toronto.edu/cms/people/faculty/yoshinobu-stan/">Stan Yoshinobu</url>
+          (University of Toronto).
+          A few of the sections were originally adaptations of notes written by Matt and Stan.
+          Early versions of this textbook relied heavily on their work.
+          Moreover, Matt and Stan were two of the key players that contributed to shaping my approach to teaching.
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="https://divisbyzero.com">David Richeson</url>
+          (Dickinson College).
+          David is responsible for much of the content in <xref ref="appendix_fancy_math_terms">Appendix</xref>: Fancy Mathematical Terms,
+          <xref ref="appendix_paradoxes">Appendix</xref>: Paradoxes,
+          and <xref ref="appendix_definitions">Appendix</xref>: Definitions in Mathematics.
+          In addition,
+          the current version of <xref ref="chap_ThreeFamousTheorems">Chapter</xref>: Three Famous Theorems is heavily based on content contributed by David.
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="http://www2.kenyon.edu/Depts/Math/schumacherc/public_html/">Carol Schumacher</url>
+          (Kenyon College).
+          When I was transitioning to an IBL approach to teaching, Carol was one of my mentors and played a significant role in my development as a teacher.
+          Moreover, this work is undoubtedly influenced my Carol's excellent book
+          <em>Chapter Zero: Fundamental Notions of Advanced Mathematics</em>,
+          which I used when teaching my very first IBL course.
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="http://webpages.csus.edu/wiscons/">Josh Wiscons</url>
+          (CSU Sacramento).
+          The current version of <xref ref="sec_ModularArithmetic">Section</xref>: Modular Arithmetic is a derivative of content contributed by Josh.
+        </p>
+      </li>
+    </ul>
+  </p>
+</chapter>
