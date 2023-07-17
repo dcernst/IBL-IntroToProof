@@ -1,0 +1,255 @@
+<section xml:id="sec_Equivalence_Relations">
+  <title>Equivalence Relations</title>
+  <p>
+    As we have seen in the previous section, the notions of reflexive,
+    symmetric, and transitive are independent of each other.
+    That is, a relation may have some combination of these properties,
+    possibly none of them and possibly all of them.
+    However, we have a special name for when a relation satisfies all three properties.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        Let <m>\sim</m> be a relation on a set <m>A</m>.
+        Then <m>\sim</m> is called an equivalence relation on <m>A</m> if <m>\sim</m> is reflexive,
+        symmetric, and transitive.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    The symbol
+    <q><m>\sim</m></q>
+    is usually pronounced as
+    <q>twiddle</q>
+    or
+    <q>tilde</q>
+    and the phrase
+    <q><m>a\sim b</m></q>
+    could be read as
+    <q><m>a</m> is related to <m>b</m></q>
+    or
+    <q><m>a</m> twiddles <m>b</m></q>.
+  </p>
+  <problem xml:id="prob_digraph">
+    <statement>
+      <p>
+        Let <m>A=\{1,2,3,4,5,6\}</m> and define
+        <me>
+          R=\{(1,1),(1,6),(2,2),(2,3),(2,4),(3,3),(3,2),(3,4),(4,4),(4,2),(4,3),(5,5),(6,6),(6,1)\}
+        </me>.
+      </p>
+      <p>
+        Using <m>R</m>, complete each of the following.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              Draw the digraph for <m>R</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Determine whether <m>R</m> is an equivalence relation on <m>A</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Find <m>\Rel(R)</m> by determining <m>\rel(x)</m> for each <m>x\in A</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem xml:id="prob_made_up">
+    <statement>
+      <p>
+        Let <m>A=\{a,b,c,d,e\}</m>.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              Make up an equivalence relation <m>\sim</m> on <m>A</m> by drawing a digraph such that <m>a</m> is not related to <m>b</m> and <m>c</m> is not related to <m>b</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Using your digraph,
+              find <m>\Rel(\sim)</m> by determining <m>\rel(x)</m> for each <m>x\in A</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Given a finite set <m>A</m> and an equivalence relation <m>\sim</m> on <m>A</m>,
+        describe what the corresponding digraph would have to look like.
+      </p>
+    </statement>
+  </problem>
+  <problem xml:id="prob_equiv_from_lots_of_relations">
+    <statement>
+      <p>
+        Determine which relations given in <xref ref="prob_lots_of_relations">Problem</xref> are equivalence relations.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Let <m>\mathcal{T}</m> be the set of all triangles and define <m>\sim</m> on <m>\mathcal{T}</m> via
+        <m>T_1\sim T_2</m> if <m>T_1</m> is similar to <m>T_2</m>.
+        Determine whether <m>\sim</m> is an equivalence relation on <m>\mathcal{T}</m>.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        If possible,
+        construct an equivalence relation on the empty set.
+        If this is not possible, explain why.
+      </p>
+    </statement>
+  </problem>
+  <theorem xml:id="thm_related_if_and_only_if_same_class">
+    <statement>
+      <p>
+        Suppose <m>\sim</m> is an equivalence relation on a set <m>A</m> and let <m>a,b\in A</m>.
+        Then <m>\rel(a)=\rel(b)</m> if and only if <m>a\sim b</m>.
+      </p>
+    </statement>
+  </theorem>
+  <theorem xml:id="thm_equiv_yields_partition">
+    <statement>
+      <p>
+        Suppose <m>\sim</m> is an equivalence relation on a set <m>A</m>.
+        Then
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>\displaystyle \bigcup_{a\in A}\ \rel(a)=A</m>, and
+            </p>
+          </li>
+          <li xml:id="thm_equiv_yields_partition_b">
+            <p>
+              For all <m>a,b\in A</m>,
+              either <m>\rel(a)=\rel(b)</m> or <m>\rel(a)\cap \rel(b)=\emptyset</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    In light of <xref ref="thm_equiv_yields_partition">Theorem</xref>,
+    we have the following definition.
+  </p>
+  <definition xml:id="def_equivalence_class">
+    <statement>
+      <p>
+        If <m>\sim</m> is an equivalence relation on a set <m>A</m>,
+        then for each <m>a\in A</m>,
+        we refer to <m>\rel(a)</m> as the equivalence class of <m>a</m>.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    When <m>\sim</m> is an equivalence relation on a set <m>A</m>,
+    it is common to write each equivalence class <m>\rel(a)</m> as <m>\tcboxmath{[a]}</m>
+    (or sometimes <m>\overline{a}</m>).
+    The element <m>a</m> inside the square brackets is called the
+    <em>representative of the equivalence class</em> <m>[a]</m>.
+    <xref ref="thm_related_if_and_only_if_same_class">Theorem</xref>
+    implies that an equivalence class can be represented by any element of the equivalence class.
+    For example, in <xref ref="prob_digraph">Problem</xref>,
+    we have <m>[1]=[6]</m> since 1 and 6 are in the same equivalence class.
+    The collection of equivalence classes
+    <m>\Rel(\sim)</m> is often denoted by <m>\tcboxmath{A/\mathord\sim}</m>,
+    which is read as
+    <q><m>A</m> modulo <m>\sim</m></q>
+    or
+    <q><m>A</m> mod <m>\sim</m></q>. The collection <m>A/\mathord\sim</m> is sometimes referred to as the
+    <em>quotient of <m>A</m> by <m>\sim</m></em>.
+  </p>
+  <example xml:id="ex_last_name">
+    <statement>
+      <p>
+        Let <m>P</m> denote the residents of a particular town and define <m>\sim</m> on <m>P</m> via <m>a\sim b</m> if <m>a</m> and <m>b</m> have the same last name.
+        It is easily seen that this relation is reflexive,
+        symmetric, and transitive,
+        and hence <m>\sim</m> is an equivalence relation on <m>P</m>.
+        The equivalence classes correspond to collections of individuals with the same last name.
+        For example, Maria Garcia, Anthony Garcia,
+        and Ariana Garcia all belong to the same equivalence class.
+        Any Garcia can be used as a representative for the corresponding equivalence class,
+        so we can denote it as <m>[\text{ Maria Garcia } ]</m>,
+        for example.
+        The collection <m>P/\mathord\sim</m> consists of the various sets of people with the same last name.
+        In particular, <m>[\text{ Maria Garcia } ]\in P/\mathord\sim</m>.
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        The five distinct sets of relatives that you identified in <xref ref="prob_mod_5">Problem</xref>
+        are the equivalence classes for
+        <m>\equiv_5</m> on <m>\mathbb{Z}</m>.
+        These equivalence classes are often called the
+        <em>congruence classes modulo 5</em>.
+      </p>
+    </statement>
+  </example>
+  <p>
+    The upshot of <xref ref="thm_equiv_yields_partition">Theorem</xref>
+    is that given an equivalence relation,
+    every element lives in exactly one equivalence class.
+    In the next section, we will see that we can run this in reverse.
+    That is, if we separate out the elements of a set so that every element is an element of exactly one subset,
+    then this determines an equivalence relation.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        If <m>\sim</m> is an equivalence relation on a nonempty finite set <m>A</m>,
+        describe <m>A/\mathord\sim</m> in terms of the digraph corresponding to <m>\sim</m>.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        For each of the equivalence relations you identified in <xref ref="prob_equiv_from_lots_of_relations">Problem</xref>,
+        succinctly describe the corresponding equivalence classes.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Suppose <m>R</m> and <m>S</m> are both equivalence relations on a set <m>A</m>.
+        Is <m>R\cap S</m> an equivalence relation on <m>A</m>?
+        If so, prove it.
+        Otherwise, provide a counterexample.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Suppose <m>R</m> and <m>S</m> are both equivalence relations on a set <m>A</m>.
+        Is <m>R\cup S</m> an equivalence relation on <m>A</m>?
+        If so, prove it.
+        Otherwise, provide a counterexample.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    \epigraph{Mathematics has beauty and romance.
+    It's not a boring place to be, the mathematical world.
+    It's an extraordinary place;
+    it's worth spending time there.}{Marcus du Sautoy, mathematician}
+  </p>
+</section>

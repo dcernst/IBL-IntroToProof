@@ -1,0 +1,22 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chap_SetTheory">
+  <title>Set Theory</title>
+  <introduction>
+    <p>
+      \epigraph{Pass on what you have learned.
+      Strength, mastery.
+      But weakness, folly, failure also.
+      Yes, failure most of all.
+      The greatest teacher, failure is.}{Yoda, Jedi master}
+    </p>
+    <p>
+      At its essence, all of mathematics is built on set theory.
+      In this chapter,
+      we will introduce some of the basics of sets and their properties.
+    </p>
+  </introduction>
+  <xi:include  href="sec_Sets.ptx"/>
+  <xi:include  href="sec_RussellsParadox.ptx"/>
+  <xi:include  href="sec_PowerSets.ptx"/>
+  <xi:include  href="sec_Indexing_Sets.ptx"/>
+  <xi:include  href="sec_Cartesian_Products.ptx"/>
+</chapter>

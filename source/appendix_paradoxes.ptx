@@ -1,0 +1,112 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="appendix_paradoxes">
+  <title>Paradoxes</title>
+  <p>
+    A <em>paradox</em> is a statement that can be shown,
+    using a given set of axioms and definitions,
+    to be both true and false.
+    Recall that an axiom is a statement that is assumed to be true without proof.
+    These are the basic building blocks from which all theorems are proved.
+    Paradoxes are often used to show the inconsistencies in a flawed axiomatic theory.
+    The term paradox is also used informally to describe a surprising or counterintuitive result that follows from a given set of rules.
+    In <xref ref="sec_RussellsParadox">Section</xref>,
+    we encountered two paradoxes:
+    <ul>
+      <li>
+        <p>
+          The Barber of Seville (<xref ref="prob_barber">Problem</xref>)
+        </p>
+      </li>
+      <li>
+        <p>
+          Russell's Paradox (<xref ref="prob_russell">Problem</xref>)
+        </p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    Below are several additional paradoxes that are worth exploring.
+    <ol>
+      <li>
+        <p>
+          <em>Librarian's Paradox.</em> A librarian is given the unenviable task of creating two new books for the library.
+          Book A contains the names of all books in the library that reference themselves and Book B contains the names of all books in the library that do not reference themselves.
+          But the librarian just created two new books for the library,
+          so their titles must be in either Book A or Book B. Clearly Book A can be listed in Book B, but where should the librarian list Book B?
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Liar's Paradox.</em> Consider the statement:
+          this sentence is false.
+          Is it true or false?
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Berry Paradox.</em> Consider the claim:
+          every natural number can be unambiguously described in fourteen words or less.
+          It seems clear that this statement is false, but if that is so,
+          then there is some smallest natural number which cannot be unambiguously described in fourteen words or less.
+          Let's call it <m>n</m>.
+          But now <m>n</m> is
+          <q>the smallest natural number that cannot be unambiguously described in fourteen words or less.</q>
+          This is a complete and unambiguous description of <m>n</m> in fourteen words,
+          contradicting the fact that <m>n</m> was supposed not to have such a description.
+          Therefore, all natural numbers can be unambiguously described in fourteen words or less!
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>The Naming Numbers Paradox.</em> Consider the claim:
+          every natural number can be unambiguously described using no more than 50 characters
+          (where a character is a<ndash/>z, 0<ndash/>9, and a
+          <q>space</q>).
+          For example, we can describe 9 as
+          <q>9</q>
+          or
+          <q>nine</q>
+          or
+          <q>the square of the second prime number.</q>
+          There are only 37 characters,
+          so we can describe at most <m>37^{50}</m> numbers,
+          which is very large, but not infinite.
+          So the statement is false.
+          However, here is a
+          <q>proof</q>
+          that it is true.
+          Let <m>S</m> be the set of natural numbers that can be unambiguously described using no more than 50 characters.
+          For the sake of contradiction,
+          suppose it is not all of <m>\mathbb{N}</m>.
+          Then there is a smallest number <m>t\in\mathbb{N}\setminus S</m>.
+          We can describe <m>t</m> as:
+          the smallest natural number not in <m>S</m>.
+          Thus <m>t</m> can be described using no more than 50 characters.
+          So <m>t\in S</m>, a contradiction.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Euathlus and Protagoras.</em>
+          Euathlus wanted to become a lawyer but could not pay Protagoras.
+          Protagoras agreed to teach him under the condition that if Euathlus won his first case,
+          he would pay Protagoras, otherwise not.
+          Euathlus finished his course of study and did nothing.
+          Protagoras sued for his fee.
+          He argued: If Euathlus loses this case, then he must pay
+          (by the judgment of the court).
+          If Euathlus wins this case, then he must pay
+          (by the terms of the contract).
+          He must either win or lose this case.
+          Therefore Euathlus must pay me.
+          But Euathlus had learned well the art of rhetoric.
+          He responded: If I win this case, I do not have to pay
+          (by the judgment of the court).
+          If I lose this case, I do not have to pay
+          (by the contract).
+          I must either win or lose the case.
+          Therefore, I do not have to pay Protagoras.
+        </p>
+      </li>
+    </ol>
+  </p>
+</chapter>

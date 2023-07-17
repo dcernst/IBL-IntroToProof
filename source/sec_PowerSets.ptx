@@ -1,0 +1,158 @@
+<section xml:id="sec_PowerSets">
+  <title>Power Sets</title>
+  <p>
+    We have already seen that using union, intersection,
+    set difference, and complement we can create new sets
+    (in the same universe)
+    from existing sets.
+    In this section, we will describe another way to generate new sets;
+    however, the new sets will not
+    <q>live</q>
+    in the same universe this time.
+    The following set is always a set of subsets.
+    That is, its elements are themselves sets.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        If <m>S</m> is a set,
+        then the power set of <m>S</m> is the set of subsets of <m>S</m>.
+        The power set of <m>S</m> is denoted <m>\tcboxmath{\mathcal{P}(S)}</m>.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    You can see that a power set of <m>S</m> is not composed of
+    <em>elements</em> of <m>S</m>,
+    but rather it is composed of <em>subsets</em> of <m>S</m>,
+    and none of these subsets are elements of <m>S</m>.
+  </p>
+  <p>
+    For example, if <m>S=\{a,b\}</m>,
+    then <m>\mathcal{P}(S)=\{\emptyset, \{a\}, \{b\}, S\}</m>.
+    It follows immediately from the definition that
+    <m>A\subseteq S</m> if and only if <m>A\in\mathcal{P}(S)</m>.
+  </p>
+  <problem xml:id="prob_PowerSets">
+    <statement>
+      <p>
+        For each of the following sets, find the power set.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>A=\{\circ, \triangle, \square\}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>B=\{a,\{a\}\}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>C=\emptyset</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>D=\{\emptyset\}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem xml:id="conjecture_PowerSets">
+    <statement>
+      <p>
+        How many subsets do you think that a set with <m>n</m> elements has?
+        What if <m>n=0</m>?
+        You do not need to prove your conjecture at this time.
+        We will prove this later using mathematical induction.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    It is important to realize that the concepts of
+    <em>element</em> and <em>subset</em>
+    need to be carefully delineated.
+    For example, consider the set <m>A=\{x,y\}</m>.
+    The object <m>x</m> is an element of <m>A</m>,
+    but the object <m>\{x\}</m> is both a subset of <m>A</m> and an element of <m>\mathcal{P}(A)</m>.
+    This can get confusing rather quickly.
+    Consider the set <m>B</m> from <xref ref="prob_PowerSets">Problem</xref>.
+    The set <m>\{a\}</m> happens to be an element of <m>B</m>,
+    a subset of <m>B</m>, and an element of <m>\mathcal{P}(B)</m>.
+    The upshot is that it is important to pay close attention to whether
+    <q><m>\subseteq</m></q>
+    or
+    <q><m>\in</m></q>
+    is the proper symbol to use.
+  </p>
+  <p>
+    Since the next theorem is a biconditional proposition,
+    you need to write two distinct subproofs,
+    one for ``<m>S\subseteq T</m> implies
+    <m>\mathcal{P}(S)\subseteq \mathcal{P}(T)</m>", and another for ``<m>\mathcal{P}(S)\subseteq \mathcal{P}(T)</m> implies <m>S\subseteq T</m>".
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        Let <m>S</m> and <m>T</m> be sets.
+        Then <m>S\subseteq T</m> if and only if <m>\mathcal{P}(S)\subseteq \mathcal{P}(T)</m>.
+      </p>
+    </statement>
+  </theorem>
+  <problem>
+    <statement>
+      <p>
+        Let <m>S</m> and <m>T</m> be sets.
+        Determine whether each of the following statements is true or false.
+        If the statement is true, prove it.
+        If the statement is false, provide a counterexample.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>\mathcal{P}(S\cap T) \subseteq \mathcal{P}(S)\cap\mathcal{P}(T)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\mathcal{P}(S)\cap\mathcal{P}(T)\subseteq \mathcal{P}(S\cap T)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\mathcal{P}(S\cup T)\subseteq \mathcal{P}(S)\cup\mathcal{P}(T)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\mathcal{P}(S)\cup\mathcal{P}(T)\subseteq \mathcal{P}(S\cup T)</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    While power sets provide a useful way of generating new sets,
+    they also play a key role in
+    <url href="https://en.wikipedia.org/wiki/Georg_Cantor">Georg Cantor</url>
+    's (1845<ndash/>1918) investigation into the
+    <q>size</q>
+    of sets.
+    <em>Cantor's Theorem</em>
+    (see <xref ref="thm_Cantors_Theorem">Theorem</xref>)
+    states that the power set of a set<mdash/>even if the set is infinite<mdash/>is always
+    <q>larger</q>
+    than the original set.
+    One consequence of this is that there are different sizes of infinity and no largest infinity.
+    Mathematics is awesome.
+  </p>
+  <p>
+    \epigraph{The master has failed more times than the beginner has even tried.}{Stephen McCranie,
+    author &amp;
+    illustrator}
+  </p>
+</section>

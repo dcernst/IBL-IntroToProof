@@ -1,0 +1,419 @@
+<section xml:id="sec_Intro_to_Cardinality">
+  <title>Introduction to Cardinality</title>
+  <p>
+    What does it mean for two sets to have the same
+    <q>size</q>? If the sets are finite, this is easy:
+    just count how many elements are in each set.
+    Another approach would be to pair up the elements in each set and see if there are any left over.
+    In other words,
+    check to see if there is a one-to-one correspondence (i.e., bijection) between the two sets.
+  </p>
+  <p>
+    But what if the sets are infinite?
+    For example, consider the set of natural numbers
+    <m>\mathbb{N}</m> and the set of even natural numbers <m>2\mathbb{N}\coloneqq \{2n\mid n\in \mathbb{N}\}</m>.
+    Clearly, <m>2\mathbb{N}</m> is a proper subset of <m>\mathbb{N}</m>.
+    Moreover, both sets are infinite.
+    In this case, you might be thinking that <m>\mathbb{N}</m> is
+    <q>larger than</q>
+    <m>2\mathbb{N}</m>.
+    However, it turns out that there is a one-to-one correspondence between these two sets.
+    In particular, consider the function
+    <m>f:\mathbb{N}\to 2\mathbb{N}</m> defined via <m>f(n)=2n</m>.
+    It is easily verified that <m>f</m> is both injective and surjective.
+    In this case,
+    mathematics has determined that the right viewpoint is that
+    <m>\mathbb{N}</m> and <m>2\mathbb{N}</m> do have the same
+    <q>size</q>. However, it is clear that
+    <q>size</q>
+    is a bit too imprecise when it comes to infinite sets.
+    We need something more rigorous.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        Let <m>A</m> and <m>B</m> be sets.
+        We say that <m>A</m> and <m>B</m> have the same cardinality if there exists a bijection between <m>A</m> and <m>B</m>.
+        In this case, we write <m>\tcboxmath{\card(A)=\card(B)}</m>.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    Note that we have not defined <m>\card(A)</m> by itself.
+    Doing so would not be too difficult for finite sets,
+    but making such a notation precise in general is tricky business.
+    When we write <m>\card(A)=\card(B)</m> (and later
+    <m>\card(A)\leq \card(B)</m> and <m>\card(A)\lt \card(B)</m>),
+    we are asserting the existence of a certain type of function from <m>A</m> to <m>B</m>.
+  </p>
+  <p>
+    If <m>f</m> is a bijection from <m>A</m> to <m>B</m>,
+    then by <xref ref="thm_f_inverse_bijection">Theorem</xref>,
+    <m>f^{-1}</m> is a bijection from <m>B</m> to <m>A</m>.
+    Either one of these functions can be utilized to prove that <m>\card(A)=\card(B)</m>.
+    This idea is worth keeping in mind as you tackle problems in this chapter.
+    In particular,
+    you might have an easier time creating a bijection between two sets in one direction over the other.
+    This is often a limitation of the human mind as to opposed to some fundamental mathematical difficulty.
+  </p>
+  <example>
+    <statement>
+      <p>
+        Let <m>A=\{1,2,3,4,5\}</m> and <m>B=\{\text{ apple } ,\text{ banana } ,\text{ cherry } ,\text{ dragon fruit } ,\text{ elderberry } \}</m>.
+        The function <m>f:A\to B</m> given by
+        <me>
+          f=\{(1,\text{ apple } ),(2,\text{ banana } ),(3,\text{ cherry } ),(4,\text{ dragon fruit } ),(5,\text{ elderberry } )\}
+        </me>
+        is a bijection from <m>A</m> to <m>B</m>,
+        and hence <m>\card(A)=\card(B)</m>.
+        Note that this is not the only bijection from <m>A</m> to <m>B</m>.
+        In fact, there are <m>5!=120</m> bijections from <m>A</m> to <m>B</m>,
+        one of which is the function <m>f</m> we defined above.
+        The inverse of each bijection from <m>A</m> to <m>B</m> is a bijection from <m>B</m> to <m>A</m>.
+        We could also use any of of these bijections to verify that <m>\card(A)=\card(B)</m>.
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        Define <m>f:\mathbb{Z}\to 6\mathbb{Z}</m> via <m>f(n)=6n</m>.
+        It is easily verified that <m>f</m> is both injective and surjective,
+        and hence <m>\card(\mathbb{Z})=\card(6\mathbb{Z})</m>.
+        We could also utilize the inverse function <m>f^{-1}:6\mathbb{Z}\to \mathbb{Z}</m> given by
+        <m>f^{-1}(n)=\frac{1}{6}n</m> to show that <m>\mathbb{Z}</m> and
+        <m>6\mathbb{Z}</m> have the same cardinality.
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        Let <m>\mathbb{R}^+</m> denote the set of positive real numbers and define <m>f:\mathbb{R}\to \mathbb{R}^+</m> via <m>f(x)=e^x</m>.
+        As you are likely familiar with,
+        this exponential function is a bijection,
+        and so <m>\card(\mathbb{R})=\card(\mathbb{R}^+)</m>.
+        Similar to the previous example,
+        we could also use the inverse function <m>f^{-1}:\mathbb{R}^+\to \mathbb{R}</m> given by
+        <m>f^{-1}(x)=\ln(x)</m> to show that these two sets have the same cardinality.
+      </p>
+    </statement>
+  </example>
+  <p>
+    The previous two examples illustrate an important distinction between finite sets and infinite sets,
+    namely infinite sets can be in bijection with proper subsets of themselves!
+    <xref ref="thm_cardinalityProperSubsetsFinite">Theorems</xref>
+    and <xref ref="thm_infiniteSetTFAE"></xref> will make this idea explicit.
+  </p>
+  <example>
+    <statement>
+      <p>
+        Let <m>m,n\in\mathbb{N}\cup\{0\}</m>.
+        A North-East lattice path from <m>(0,0)</m> to <m>(m,n)</m> is path in the plane from <m>(0,0)</m> to <m>(m,n)</m> consisting only steps either one unit North or one unit East.
+        Note that every lattice path from <m>(0,0)</m> to <m>(m,n)</m> consists of a total of <m>m+n</m> steps.
+        <xref ref="fig_lattice_path">Figure</xref>
+        shows a North-East lattice path from <m>(0,0)</m> to <m>(4,3)</m>.
+        Let <m>\mathcal{L}_{m,n}</m> denote the set of North-East paths from <m>(0,0)</m> to <m>(m,n)</m>.
+        For example,
+        the North-East lattice path given in <xref ref="fig_lattice_path">Figure</xref>
+        is an element of <m>\mathcal{L}_{4,3}</m>.
+        A binary string of length <m>k</m> is an ordered list of consisting of <m>k</m> entries where each entry is either 0 or 1.
+        For example,
+        <m>0101100</m> and <m>0101001</m> are two different binary strings of length 7.
+        Let <m>\mathcal{S}_k</m> denote the set of binary strings of length <m>k</m>.
+        For example,
+        <m>\mathcal{S}_3=\{000, 100,010,001,110,101,011,111\}</m>.
+        We claim that there is a bijection between
+        <m>\mathcal{L}_{m,n}</m> and <m>\mathcal{S}_{m+n}</m>.
+        One such bijection is given by mapping a lattice path to the string that results by assigning each East step to 0 and each North step to 1 as we travel the path from <m>(0,0)</m> to <m>(m,n)</m>.
+        Using this construction,
+        the lattice path in <xref ref="fig_lattice_path">Figure</xref>
+        would get mapped to the binary string <m>0101100</m>.
+        Since no two lattice paths will map to the same string,
+        our mapping is injective.
+        Given a string in <m>\mathcal{S}_{m+n}</m>,
+        it is easy to find the lattice path in <m>\mathcal{L}_{m,n}</m> that maps to it,
+        and so our function is also surjective.
+        Thus, our mapping is a bijection between
+        <m>\mathcal{L}_{m,n}</m> and <m>\mathcal{S}_{m+n}</m>.
+        We have shown that <m>\card(\mathcal{L}_{m,n})=\card(\mathcal{S}_{m+n})</m>.
+      </p>
+    </statement>
+  </example>
+  <p>
+    \tikzstyle{vert} = [circle, draw,
+    fill=black,inner sep=0pt, minimum size=.7mm]
+  </p>
+  <figure xml:id="fig_lattice_path">
+    <caption>A North-East lattice path from <m>(0,0)</m> to <m>(4,3)</m>.</caption>
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node[vert,label=below:{\((0,0)\)}] at (0,0) (1) {};
+\node[vert] at (1,0) (2) {};
+\node[vert] at (1,1) (3) {};
+\node[vert] at (2,1) (4) {};
+\node[vert] at (2,2) (5) {};
+\node[vert] at (2,3) (6) {};
+\node[vert] at (3,3) (7) {};
+\node[vert,label=above:{\((4,3)\)}] at (4,3) (8) {};
+\path (1) edge (2);
+\path (2) edge (3);
+\path (3) edge (4);
+\path (4) edge (5);
+\path (5) edge (6);
+\path (6) edge (7);
+\path (7) edge (8);\end{tikzpicture}]]>
+</latex-image>
+    </image>
+  </figure>
+  <p>
+    When approaching Part<nbsp/>(d) of the next problem,
+    try creating a linear function <m>f:(a,b)\to (c,d)</m>.
+    Drawing a picture should help.
+  </p>
+  <problem xml:id="prob_cardinalityPractice">
+    <statement>
+      <p>
+        Prove each of the following.
+        In each case,
+        you should create a bijection between the two sets.
+        Briefly justify that your functions are in fact bijections.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>\card(\{a,b,c\})=\card(\{x,y,z\})</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\card(\mathbb{N})=\card(\{2n+1\mid n\in \mathbb{N}\})</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\card(\mathbb{N})=\card(\mathbb{Z})</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\card((a,b))=\card((c,d))</m> (where <m>(a,b)</m> and <m>(c,d)</m> are intervals)
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\card(\mathbb{N})=\card\left(\left\{\frac{1}{2^n}\mid n\in \mathbb{N}\right\}\right)</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        If <m>A</m> is a set, do <m>A</m> and
+        <m>A\times \{x\}</m> have the same cardinality?
+        Justify your answer.
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Let <m>\mathcal{D}_n</m> denote the collection of North-East lattice paths from <m>(0,0)</m> to <m>(n,n)</m> that never drop below the line <m>y=x</m>.
+        These types of lattice paths are often called Dyck paths after the German mathematician Walther Franz Anton von Dyck (1856<ndash/>1934).
+        A sequence of parentheses is balanced if it can be parsed syntactically.
+        In other words,
+        there should be the same number of open parentheses
+        <q>(</q>
+        and closed parentheses
+        <q>)</q>, and when reading from left to right there should never be more closed parentheses than open.
+        For example,
+        <m>()()()</m> and <m>()(())</m> are balanced parenthesizations consisting of three pairs of parentheses while <m>())(()</m> and <m>()(()(</m> are not balanced.
+        Let <m>\mathcal{B}_n</m> denote the collection of balanced parenthesizations consisting of <m>n</m> pairs of parentheses.
+        For example,
+        <m>\mathcal{B}_3=\{()()(), ()(()), (()()), (())(), ((()))\}</m>.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              Find all Dyck paths in <m>\mathcal{D}_3</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Prove that <m>\card(\mathcal{D}_n)=\card(\mathcal{B}_n)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    For Part<nbsp/>(b) of the next problem,
+    start by defining <m>\varphi:\mathcal{F}\to \mathcal{P}(\mathbb{N})</m> so that <m>\varphi(f)</m> yields a subset of
+    <m>\mathbb{N}</m> determined by when <m>f</m> outputs a 1.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Let <m>\mathcal{F}</m> denote the set of functions from <m>\mathbb{N}</m> to <m>\{0,1\}</m>.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              Describe at least three functions in <m>\mathcal{F}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Prove that <m>\mathcal{F}</m> and
+              <m>\mathcal{P}(\mathbb{N})</m> have the same cardinality.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Our first theorem concerning cardinality will likely not come as a surprise.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        Let <m>A</m>, <m>B</m>, and <m>C</m> be sets.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>\card(A)=\card(A)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>\card(A)=\card(B)</m>, then <m>\card(B)=\card(A)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>\card(A)=\card(B)</m> and <m>\card(B)=\card(C)</m>,
+              then <m>\card(A)=\card(C)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    In light of the previous theorem,
+    the next result should not be surprising.
+  </p>
+  <corollary>
+    <statement>
+      <p>
+        If <m>X</m> is a set, then
+        <q>has the same cardinality as</q>
+        is an equivalence relation on <m>\mathcal{P}(X)</m>.
+      </p>
+    </statement>
+  </corollary>
+  <theorem>
+    <statement>
+      <p>
+        Let <m>A</m>, <m>B</m>, <m>C</m>,
+        and <m>D</m> be sets such that
+        <m>\card(A)=\card(C)</m> and <m>\card(B)=\card(D)</m>.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              If <m>A</m> and <m>B</m> are disjoint and <m>C</m> and <m>D</m> are disjoint,
+              then <m>\card(A\cup B)=\card(C\cup D)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\card(A\times B)=\card(C\times D)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    Given two finite sets, it makes sense to say that one set is
+    <q>larger than</q>
+    another provided one set contains more elements than the other.
+    We would like to generalize this idea to handle both finite and infinite sets.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        Let <m>A</m> and <m>B</m> be sets.
+        If there is an injective function from <m>A</m> to <m>B</m>,
+        then we say that the cardinality of <m>A</m> is less than or equal to the cardinality of <m>B</m>.
+        In this case, we write <m>\tcboxmath{\card(A)\leq\card(B)}</m>.
+      </p>
+    </statement>
+  </definition>
+  <theorem>
+    <statement>
+      <p>
+        Let <m>A</m>, <m>B</m>, and <m>C</m> be sets.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              If <m>A\subseteq B</m>, then <m>\card(A)\leq \card(B)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>\card(A)\leq \card(B)</m> and <m>\card(B)\leq \card(C)</m>,
+              then <m>\card(A)\leq \card(C)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>C\subseteq A</m> while <m>\card(B)=\card(C)</m>,
+              then <m>\card(B)\leq \card(A)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    It might be tempting to think that the existence of injective function from a set <m>A</m> to a set <m>B</m> that is <em>not</em>
+    surjective would verify that
+    <m>\card(A)\leq \card(B)</m> and <m>\card(A)\neq \card(B)</m>.
+    While this is true for finite sets,
+    it is not true for infinite sets as the next problem asks you to verify.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Provide an example of sets <m>A</m> and <m>B</m> such that
+        <m>\card(A)=\card(B)</m> despite the fact that there exists an injective function from <m>A</m> to <m>B</m> that is not surjective.
+      </p>
+    </statement>
+  </problem>
+  <definition>
+    <statement>
+      <p>
+        Let <m>A</m> and <m>B</m> be sets.
+        We write <m>\tcboxmath{\card(A)\lt \card(B)}</m> if
+        <m>\card(A)\leq \card(B)</m> and <m>\card(A)\neq \card(B)</m>.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    As a reminder, the statements <m>\card(A)= \card(B)</m> and
+    <m>\card(A)\leq \card(B)</m> are symbolic ways of asserting the existence of certain types of functions from <m>A</m> to <m>B</m>.
+    When we write <m>\card(A)\lt \card(B)</m>,
+    we are saying something much stronger than ``There exists a function
+    <m>f:A\to B</m> that is injective but not surjective." The statement
+    <m>\card(A)\lt \card(B)</m> is asserting that <em>every</em>
+    injective function from <m>A</m> to <m>B</m> is not surjective.
+    In general, it is difficult to prove statements like
+    <m>\card(A)\neq \card(B)</m> or <m>\card(A)\lt \card(B)</m>.
+  </p>
+  <p>
+    \epigraph{You will become clever through your mistakes.}{German Proverb}
+  </p>
+</section>

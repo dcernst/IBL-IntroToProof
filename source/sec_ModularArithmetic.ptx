@@ -1,0 +1,499 @@
+<section xml:id="sec_ModularArithmetic">
+  <title>Modular Arithmetic</title>
+  <p>
+    In this section,
+    we look at a particular family of equivalence relations on the integers and explore the way in which arithmetic interacts with them.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        For each <m>n\in \mathbb{N}</m>,
+        define <m>n\mathbb{Z}</m> to be the set of all integers that are divisible by <m>n</m>.
+        In set-builder notation, we have
+        <me>
+          \tcboxmath{n\mathbb{Z} \coloneqq  \{m \in \mathbb{Z}  \mid m = nk \text{ for some }  k \in \mathbb{Z}\}}
+        </me>.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    For example,
+    <m>5\mathbb{Z} = \{ \ldots,-10,-5,0,5,10,\ldots\}</m> and
+    <m>2\mathbb{Z}</m> is the set of even integers.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Consider the sets <m>3 \mathbb{Z}</m>,
+        <m>5 \mathbb{Z}</m>, <m>15 \mathbb{Z}</m>, and <m>20 \mathbb{Z}</m>.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              List at least five elements in each of the above sets.
+            </p>
+          </li>
+          <li>
+            <p>
+              Notice that <m>3 \mathbb{Z} \cap5 \mathbb{Z} = n\mathbb{Z}</m> for some <m>n\in \mathbb{N}</m>.
+              What is <m>n</m>?
+              Describe <m>15\mathbb{Z}\cap 20 \mathbb{Z}</m> in a similar way.
+            </p>
+          </li>
+          <li>
+            <p>
+              Draw a Venn diagram illustrating how the sets <m>3\mathbb{Z}</m>,
+              <m>5\mathbb{Z}</m>, and <m>15\mathbb{Z}</m> intersect.
+            </p>
+          </li>
+          <li>
+            <p>
+              Draw a Venn diagram illustrating how the sets <m>5\mathbb{Z}</m>,
+              <m>15\mathbb{Z}</m>, and <m>20\mathbb{Z}</m> intersect.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <theorem>
+    <statement>
+      <p>
+        Let <m>n\in \mathbb{N}</m>.
+        If <m>a,b \in n\mathbb{Z}</m>, then <m>-a</m>,
+        <m>a+b</m>, and <m>ab</m> are also in <m>n\mathbb{Z}</m>.
+      </p>
+    </statement>
+  </theorem>
+  <definition xml:id="def_modulo">
+    <statement>
+      <p>
+        For each <m>n\in \mathbb{N}</m>,
+        define the relation <m>\tcboxmath{\equiv_n}</m> on <m>\mathbb{Z}</m> via
+        <m>a\equiv_n b</m> if <m>a-b \in n\mathbb{Z}</m>.
+        We read <m>a\equiv_n b</m> as
+        <q><m>a</m> is congruent to <m>b</m> modulo <m>n</m>.</q>
+      </p>
+    </statement>
+  </definition>
+  <p>
+    Note that <m>a-b \in n\mathbb{Z}</m> if and only if <m>n</m> divides <m>a-b</m>,
+    which implies that <m>a\equiv_n b</m> if and only if <m>n</m> divides <m>a-b</m>.
+  </p>
+  <example>
+    <statement>
+      <p>
+        We encountered <m>\equiv_5</m> in <xref ref="prob_mod_5">Problem</xref>
+        and discovered that there were five distinct sets of relatives.
+        In particular, we have
+        <md>
+          <mrow>\rel(0) \amp  = \{\ldots, -10, -5, 0, 5, 10,\ldots\}</mrow>
+          <mrow>\rel(1) \amp  = \{\ldots, -9, -4, 1, 6, 11,\ldots\}</mrow>
+          <mrow>\rel(2) \amp  = \{\ldots, -8, -3, 2, 7, 12,\ldots\}</mrow>
+          <mrow>\rel(3) \amp  = \{\ldots, -7, -2, 3, 8, 13,\ldots\}</mrow>
+          <mrow>\rel(4) \amp  = \{\ldots, -6, -1, 4, 9, 14,\ldots\}</mrow>
+        </md>.
+      </p>
+      <p>
+        Notice that this collection forms a partition of <m>\mathbb{Z}</m>.
+        By <xref ref="thm_partition_yields_equivalence_relation">Theorem</xref>,
+        the relation <m>\equiv_5</m> must be an equivalence relation.
+      </p>
+    </statement>
+  </example>
+  <p>
+    The previous example generalizes as expected.
+    You can prove the following theorem by either proving that
+    <m>\equiv_n</m> is reflexive, symmetric,
+    and transitive or by utilizing <xref ref="thm_partition_yields_equivalence_relation">Theorem</xref>.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        For <m>n\in \mathbb{N}</m>,
+        the relation <m>\equiv_n</m> is an equivalence relation on <m>\mathbb{Z}</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    We have have special notation and terminology for the equivalence classes that correspond to <m>\equiv_n</m>.
+  </p>
+  <definition xml:id="def_congruence_class">
+    <statement>
+      <p>
+        For <m>n\in \mathbb{N}</m>,
+        let <m>\tcboxmath{[a]_n}</m> denote the equivalence class of <m>a</m> with respect to <m>\equiv_n</m>
+        (see <xref ref="def_relatives">Definitions</xref>
+        and <xref ref="def_equivalence_class"></xref>).
+        The equivalence class <m>[a]_n</m> is called the congruence
+        (or residue)
+        class of <m>a</m> modulo <m>n</m>.
+        The collection of all equivalence classes determined by
+        <m>\equiv_n</m> is denoted <m>\tcboxmath{\mathbb{Z}/n\mathbb{Z}}</m>,
+        which is read
+        <q><m>\mathbb{Z}</m> modulo <m>n\mathbb{Z}</m></q>.
+      </p>
+    </statement>
+  </definition>
+  <example xml:id="exam_twomodseven">
+    <statement>
+      <p>
+        Let's compute <m>[2]_7</m>.
+        Tracing back through the definitions, we see that
+        <md>
+          <mrow>m \in [2]_7 \amp  \logeq m \equiv_7 2</mrow>
+          <mrow>\amp  \logeq m-2\in 7\mathbb{Z}</mrow>
+          <mrow>\amp  \logeq m-2 = 7k \text{ for some \(k\in \mathbb{Z}\)}</mrow>
+          <mrow>\amp  \logeq m = 7k+2 \text{ for some \(k\in \mathbb{Z}\)} </mrow>
+        </md>.
+      </p>
+      <p>
+        Since the multiples of <m>7</m> are <m>7\mathbb{Z} = \{\ldots,-14,-7,0,7,14,\ldots\}</m>,
+        we can find <m>[2]_7</m> by adding <m>2</m> to each element of
+        <m>7\mathbb{Z}</m> to get <m>[2]_7 = \{\ldots,-12,-5,2,9,16,\ldots\}</m>.
+      </p>
+    </statement>
+  </example>
+  <problem>
+    <statement>
+      <p>
+        For each of the following congruence classes,
+        find five elements in the set such that at least one is greater than <m>70</m> and one is less than <m>70</m>.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>[4]_7</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>[-3]_7</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>[7]_7</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Describe <m>[0]_3</m>, <m>[1]_3</m>,
+        <m>[2]_3</m>, <m>[4]_3</m>,
+        and <m>[-2]_3</m> as lists of elements as in <xref ref="exam_twomodseven">Example</xref>.
+        How many distinct congruence classes are in <m>\mathbb{Z}/3\mathbb{Z}</m>?
+        <xref ref="thm_equiv_yields_partition">Theorem</xref> might be helpful.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Consider using <xref ref="thm_related_if_and_only_if_same_class">Theorem</xref> to prove the next theorem.
+  </p>
+  <theorem xml:id="thm_cong_classes_equal">
+    <statement>
+      <p>
+        For <m>n\in \mathbb{N}</m> and <m>a,b\in \mathbb{Z}</m>,
+        <m>[a]_n = [b]_n</m> if and only if <m>n</m> divides <m>a-b</m>.
+      </p>
+    </statement>
+  </theorem>
+  <corollary xml:id="cor_divisible_iff_zero_mod">
+    <statement>
+      <p>
+        For <m>n\in \mathbb{N}</m> and <m>a\in \mathbb{Z}</m>,
+        <m>[a]_n = [0]_n</m> if and only if <m>n</m> divides <m>a</m>.
+      </p>
+    </statement>
+  </corollary>
+  <p>
+    The next result provides a useful characterization for when two congruence classes are equal.
+    The Division Algorithm will be useful when proving this theorem.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        For <m>n\in \mathbb{N}</m> and <m>a,b\in \mathbb{Z}</m>,
+        <m>[a]_n = [b]_n</m> if and only if <m>a</m> and <m>b</m> have the same remainder when divided by <m>n</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    When proving Part<nbsp/>(a) of the next theorem,
+    make use of <xref ref="thm_cong_classes_equal">Theorem</xref>.
+    For Part<nbsp/>(b),
+    note that <m>a_1b_1-a_2b_2 = a_1b_1 -a_2b_1 + a_2b_1-a_2b_2</m>.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        Let <m>n\in \mathbb{N}</m> and let <m>a_1,a_2,b_1,b_2 \in \mathbb{Z}</m>.
+        If <m>[a_1]_n = [a_2]_n</m> and <m>[b_1]_n = [b_2]_n</m>, then
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>[a_1+b_1]_n = [a_2+b_2]_n</m>, and
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>[a_1\cdot b_1]_n = [a_2\cdot b_2]_n</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    The previous theorem allows us to define addition and multiplication in <m>\mathbb{Z}/n\mathbb{Z}</m>.
+  </p>
+  <definition xml:id="def_modular_arithmetic">
+    <statement>
+      <p>
+        Let <m>n\in \mathbb{N}</m>.
+        We define the sum and product of congruence classes in <m>\mathbb{Z}/n\mathbb{Z}</m> via
+        <me>
+          [a]_n + [b]_n\coloneqq [a+b]_n  \text{ and }   [a]_n \cdot [b]_n\coloneqq [a\cdot b]_n
+        </me>.
+      </p>
+    </statement>
+  </definition>
+  <example>
+    <statement>
+      <p>
+        By <xref ref="def_modular_arithmetic">Definition</xref>,
+        <m>[2]_7+[6]_7 = [2+6]_7 = [8]_7</m>.
+        By <xref ref="thm_cong_classes_equal">Theorem</xref>,
+        <m>[8]_7 = [1]_7</m>, and so <m>[2]_7+[6]_7 = [1]_7</m>.
+        Similarly, <m>[2]_7\cdot[6]_7 = [2\cdot6]_7 = [12]_7 = [5]_7</m>.
+      </p>
+    </statement>
+  </example>
+  <p>
+    Addition and multiplication for
+    <m>\mathbb{Z}/n\mathbb{Z}</m> has many familiar<mdash/>and some not so familiar<mdash/>properties.
+    For example,
+    addition and multiplication of congruence classes are both associative and commutative.
+    However, it is possible for <m>[a]_n\cdot[b]_n = [0]_n</m> even when
+    <m>[a]_n \neq [0]_n</m> and <m>[b]_n \neq [0]_n</m>.
+  </p>
+  <theorem xml:id="thm_modular_add_comm_assoc">
+    <statement>
+      <p>
+        If <m>n\in \mathbb{N}</m>,
+        then addition in <m>\mathbb{Z}/n\mathbb{Z}</m> is commutative and associative.
+        That is, for all <m>[a]_n, [b]_n, [c]_n \in \mathbb{Z}/n\mathbb{Z}</m>, we have
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>[a]_n + [b]_n = [b]_n + [a]_n</m>, and
+            </p>
+          </li>
+          <li xml:id="modular_add_assoc">
+            <p>
+              <m>([a]_n + [b]_n) + [c]_n = [a]_n + ([b]_n + [c]_n)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+  <theorem xml:id="thm_modular_mult_comm_assoc">
+    <statement>
+      <p>
+        If <m>n\in \mathbb{N}</m>,
+        then multiplication in <m>\mathbb{Z}/n\mathbb{Z}</m> is commutative and associative.
+        That is, for all <m>[a]_n, [b]_n, [c]_n \in \mathbb{Z}/n\mathbb{Z}</m>, we have
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>[a]_n \cdot [b]_n = [b]_n \cdot [a]_n</m>, and
+            </p>
+          </li>
+          <li xml:id="modular_mult_assoc">
+            <p>
+              <m>([a]_n \cdot [b]_n) \cdot [c]_n = [a]_n \cdot ([b]_n \cdot [c]_n)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    One consequence of <xref ref="thm_modular_add_comm_assoc">Theorems</xref> <xref ref="modular_add_assoc"></xref>
+    and <xref ref="thm_modular_mult_comm_assoc"></xref>
+    <xref ref="modular_mult_assoc"></xref>
+    is that parentheses are not needed when adding or multiplying congruence classes.
+    The next theorem follows from <xref ref="def_modular_arithmetic">Definition</xref> together with <xref ref="thm_modular_add_comm_assoc">Theorems</xref> <xref ref="modular_add_assoc"></xref>
+    and <xref ref="thm_modular_mult_comm_assoc"></xref>
+    <xref ref="modular_mult_assoc"></xref> and induction on <m>k</m>.
+  </p>
+  <theorem xml:id="thm_modular_sums_products">
+    <statement>
+      <p>
+        Let <m>n\in \mathbb{N}</m>.
+        For all <m>k\in \mathbb{N}</m>,
+        if <m>[a_1]_n,[a_2]_n,\ldots, [a_k]_n \in \mathbb{Z}/n\mathbb{Z}</m>, then
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>[a_1]_n+[a_2]_n+\cdots+ [a_k]_n = [a_1 + a_2 +\cdots+ a_k]_n</m>, and
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>[a_1]_n [a_2]_n \cdots [a_k]_n = [a_1 a_2 \cdots a_k]_n</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    The next result is a special case of <xref ref="thm_modular_sums_products">Theorem</xref>(b).
+  </p>
+  <corollary xml:id="cor_modular_power">
+    <statement>
+      <p>
+        Let <m>n\in \mathbb{N}</m>.
+        If <m>a\in\mathbb{Z}</m> and <m>k\in \mathbb{N}</m>,
+        then <m>([a]_n)^k = [a^k]_n</m>.
+      </p>
+    </statement>
+  </corollary>
+  <example>
+    <statement>
+      <p>
+        Let's compute <m>[8^{179}]_7</m>.
+        We see that
+        <md>
+          <mrow>_7 \amp  = ([8]_7)^{179} \amp  (\text{ <xref ref="cor_modular_power">Corollary</xref> } )</mrow>
+          <mrow>\amp  = ([1]_7)^{179} \amp  (\text{ <xref ref="thm_cong_classes_equal">Theorem</xref> } )</mrow>
+          <mrow>\amp  = [1^{179}]_7 \amp  (\text{ <xref ref="cor_modular_power">Corollary</xref> } )</mrow>
+          <mrow>\amp  = [1]_7</mrow>
+        </md>.
+      </p>
+    </statement>
+  </example>
+  <p>
+    For Part<nbsp/>(a) in the next problem,
+    use the fact that <m>[6]_7 = [-1]_7</m>.
+    For Part<nbsp/>(b), use the fact that <m>[2^3]_7 = [1]_7</m>.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        For each of the following,
+        find a number <m>a</m> with
+        <m>0\le a \le 6</m> such that the given quantity is equal to <m>[a]_7</m>.
+        <ol marker="labeltextrmalph">
+          <li>
+            <p>
+              <m>[6^{179}]_7</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>[2^{300}]_7</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>[2^{301} +5]_7</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+  <problem>
+    <statement>
+      <p>
+        Find <m>a</m> and <m>b</m> such that <m>[a]_6\cdot[b]_6 = [0]_6</m> but
+        <m>[a]_6 \neq [0]_6</m> and <m>[b]_6 \neq [0]_6</m>.
+      </p>
+    </statement>
+  </problem>
+  <theorem>
+    <statement>
+      <p>
+        If <m>n\in \mathbb{N}</m> such that <m>n</m> is not prime,
+        then there exists <m>[a]_n, [b]_n \in \mathbb{Z}/n\mathbb{Z}</m> such that <m>[a]_n\cdot[b]_n = [0]_n</m> while
+        <m>[a]_n \neq [0]_n</m> and <m>[b]_n \neq [0]_n</m>.
+      </p>
+    </statement>
+  </theorem>
+  <problem>
+    <statement>
+      <p>
+        Notice that <m>2x = 1</m> has no solution in <m>\mathbb{Z}</m>.
+        Show that <m>[2]_7[x]_7 = [1]_7</m> does have a solution with <m>x</m> in <m>\mathbb{Z}</m>.
+        What about <m>[14]_7[x]_7 = [1]_7</m>?
+      </p>
+    </statement>
+  </problem>
+  <p>
+    Make use of <xref ref="thm_modular_sums_products">Theorem</xref>,
+    <xref ref="cor_modular_power">Corollary</xref>,
+    and <xref ref="thm_cong_classes_equal">Theorem</xref>
+    to prove the following theorem.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        If <m>m\in \mathbb{N}</m> such that
+        <me>
+          m=a_k10^k + a_{k-1}10^{k-1} + \cdots + a_110 + a_0
+        </me>,
+        where <m>a_k, a_{k-1}, \ldots,
+        a_1, a_0\in \{0,1,\ldots, 9\}</m> (i.e.,
+        <m>a_k, a_{k-1}, \ldots,
+        a_1, a_0</m> are the digits of <m>m</m>), then
+        <me>
+          [m]_3 =  [a_k + a_{k-1} + \cdots + a_1 + a_0]_3
+        </me>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    You likely recognize the next result.
+    Its proof follows quickly from <xref ref="cor_divisible_iff_zero_mod">Corollary</xref>
+    together with the previous theorem.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        An integer is divisible by <m>3</m> if and only if the sum of its digits is divisible by <m>3</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    Let's revisit <xref ref="thm_3__2n">Theorem</xref>-1 div by 8}, which we originally proved by induction.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Use <xref ref="cor_divisible_iff_zero_mod">Corollary</xref>
+        to prove that for all integers <m>n \ge 0</m>,
+        <m>3^{2n}-1</m> is divisible by <m>8</m>.
+        You will need to handle the case involving <m>n=0</m> separately.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    We close this chapter with a fun problem.
+  </p>
+  <problem>
+    <statement>
+      <p>
+        Prove or provide a counterexample: No integer <m>n</m> exists such that <m>4n+3</m> is a perfect square.
+      </p>
+    </statement>
+  </problem>
+  <p>
+    \epigraph{Without change something sleeps inside us, and seldom awakens.
+    The sleeper must awaken.}{<em>Dune</em> by Frank Herbert}
+  </p>
+</section>
