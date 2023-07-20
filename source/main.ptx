@@ -11,7 +11,7 @@
 \newcommand{\Rel}{\operatorname{Rel}}
 \newcommand{\logeq}{\Longleftrightarrow}
 \renewcommand{\implies}{\Longrightarrow}
-\renewcommand{\sourceflush}{flushleft}
+<!-- \renewcommand{\sourceflush}{flushleft} -->
 </macros>
 <latex-image-preamble>
 \usepackage{tikz}
@@ -24,6 +24,41 @@
 \usetikzlibrary{shapes}
 \usetikzlibrary{through,intersections,decorations,shadows,fadings}
 \usepackage{pgfplots}
+
+\definecolor{darkblue}{rgb}{0, 0, .6}
+\definecolor{grey}{rgb}{.6, .6, .6}
+\definecolor{lightgrey}{rgb}{.85, .85, .85}
+\definecolor{naugreen}{cmyk}{.43,0,.34,.38}
+\definecolor{naublue}{cmyk}{1,.72,0,.32}
+\definecolor{mediterranean}{cmyk}{.67,0,.08,.3}
+\definecolor{rose}{cmyk}{0,1.00,.20,0}
+\definecolor{darkorchid}{cmyk}{.6,.9,0,.05}
+\definecolor{butterfly}{cmyk}{.95,.59,0,.10}
+\definecolor{springgreen}{cmyk}{1.00,0,.70,.02}
+\definecolor{darkred}{cmyk}{0,1,1,.5}
+\definecolor{nectarine}{cmyk}{0,0.70,1.00,0}
+\definecolor{icyblue}{cmyk}{.84,.25,0,.06}
+\definecolor{orange}{RGB}{255,102,0}
+\definecolor{ggreen}{RGB}{0,153,0}
+\definecolor{darkblue}{RGB}{0,0,255}
+\definecolor{purple}{RGB}{153,51,255}
+\definecolor{turq}{RGB}{72,209,204}
+\definecolor{lightskyblue}{cmyk}{.4,.11,0,.2}
+\definecolor{softplum}{cmyk}{.02,.45,0,.68}%.37
+\definecolor{lightorange}{cmyk}{0,.45,.59,.02}
+\definecolor{brickorange}{cmyk}{0,.59,.59,.20}
+\definecolor{deeppink}{cmyk}{0,.6,.3,.3}
+\definecolor{orchid}{cmyk}{0,.49,.02,.05}
+
+\definecolor{grey1}{RGB}{247,247,247}
+\definecolor{grey2}{RGB}{204,204,204}
+\definecolor{grey3}{RGB}{150,150,150}
+\definecolor{grey4}{RGB}{99,99,99}
+\definecolor{grey5}{RGB}{37,37,37}
+
+\tikzset{every loop/.style={min distance=8mm}}
+\tikzstyle{vert} = [circle, draw, fill=black,inner sep=0pt, minimum size=.5mm]
+\tikzstyle{b} = [draw,-stealth]
 </latex-image-preamble>
   </docinfo>
   <book>

@@ -96,10 +96,10 @@
       </p>
     </statement>
   </example>
-  <p>
+  <!-- <p>
     \tikzset{every loop/.style={min distance=8mm}} \tikzstyle{vert} = [circle, draw,
     fill=grey,inner sep=0pt, minimum size=5mm] \tikzstyle{b} = [draw,-stealth]
-  </p>
+  </p> -->
   <figure xml:id="fig_function_diagram">
     <caption>Function diagram for a function from <m>X=\{a,b,c,d,\}</m> to <m>Y=\{1,2,3,4\}</m>.</caption>
     <image>

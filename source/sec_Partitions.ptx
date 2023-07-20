@@ -330,7 +330,7 @@
     <xref ref="thm_always_symmetric"></xref>,
     and <xref ref="thm_pairwise_disjoint_yields_transitive"></xref>.
   </p>
-  <theorem xml:id="thm_partition_yields_equivalence_relation">
+  <theorem xml:id="thm_partition_yields_equivalence_relation1">
     <statement>
       <p>
         If <m>\Omega</m> is a partition of a set <m>A</m>,
@@ -340,7 +340,7 @@
   </theorem>
   <p>
     Together, <xref ref="thm_equiv_yields_partition2">Theorems</xref>
-    and <xref ref="thm_partition_yields_equivalence_relation"></xref>
+    and <xref ref="thm_partition_yields_equivalence_relation1"></xref>
     tell us that equivalence relations and partitions are two different ways of viewing the same thing.
     When proving the following result,
     ask yourself whether the statement is true if we remove the condition

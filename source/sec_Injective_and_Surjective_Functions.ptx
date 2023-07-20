@@ -517,10 +517,10 @@
       </p>
     </statement>
   </example>
-  <p>
+  <!-- <p>
     \tikzset{every loop/.style={min distance=8mm}} \tikzstyle{vert} = [circle, draw,
     fill=grey,inner sep=0pt, minimum size=5mm] \tikzstyle{b} = [draw,-stealth]
-  </p>
+  </p> -->
   <figure xml:id="fig_passengers">
     <caption>Example of a visual representation of <xref ref="thm_iso_theorem_for_sets">Theorem</xref>.</caption>
     \subcaptionbox{ }[.48\linewidth]{
