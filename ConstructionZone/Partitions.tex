@@ -67,7 +67,7 @@ For each relation in Problem~\ref{prob:lots of relations}, determine whether the
 Can we partition the empty set?  If so, describe a partition.  If not, explain why.
 \end{problem}
 
-The next theorem spells out half of the close connection between partitions and equivalence relations. Theorem~\ref{thm:partition yields equivalence relation} yields the other half.
+The next theorem spells out half of the close connection between partitions and equivalence relations. Theorem~\ref{thm:partition yields equivalence relation1} yields the other half.
 
 \begin{theorem}\label{thm:equiv yields partition2}
 If $\sim$ is an equivalence relation on a set $A$, then $A/\mathord\sim$ forms a partition of~$A$.
@@ -145,13 +145,15 @@ Let $A=\{a,b,c\}$. If possible, find an example of collection $\Omega$ of nonemp
 
 Recall that Theorem~\ref{thm:equiv yields partition2} says that the equivalence classes for a relation on a nonempty set $A$ determines a partition of $A$.  The following theorem tells us that every partition of a set yields an equivalence relation where the equivalence classes correspond to the blocks of the partition. This result is a consequence of Theorems~\ref{thm:union yields reflexive}, \ref{thm:always symmetric}, and \ref{thm:pairwise disjoint yields transitive}.
 
-\begin{theorem}\label{thm:partition yields equivalence relation}
+\begin{theorem}\label{thm:partition yields equivalence relation1}
 If $\Omega$ is a partition of a set $A$, then $R_{\Omega}$ is an equivalence relation.
 \end{theorem}
 
-Together, Theorems~\ref{thm:equiv yields partition2} and \ref{thm:partition yields equivalence relation} tell us that equivalence relations and partitions are two different ways of viewing the same thing. When proving the following result, ask yourself whether the statement is true if we remove the condition ``$a\in\rel(a)$ for all $a\in A$."
+Together, Theorems~\ref{thm:equiv yields partition2} and \ref{thm:partition yields equivalence relation1} tell us that equivalence relations and partitions are two different ways of viewing the same thing. 
 
-\begin{theorem}\label{thm:partition yields equivalence relation}
+When proving the following result, ask yourself whether the statement is true if we remove the condition ``$a\in\rel(a)$ for all $a\in A$."
+
+\begin{theorem}\label{thm:partition yields equivalence relation2}
 If $R$ is a relation on a set $A$ such that the collection of the set of relatives with respect to $R$ is a partition of $A$ and $a\in\rel(a)$ for all $a\in A$, then $R$ is an equivalence relation.
 \end{theorem}
 

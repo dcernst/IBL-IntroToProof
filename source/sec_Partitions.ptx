@@ -157,7 +157,7 @@
   </problem>
   <p>
     The next theorem spells out half of the close connection between partitions and equivalence relations.
-    <xref ref="thm_partition_yields_equivalence_relation">Theorem</xref> yields the other half.
+    <xref ref="thm_partition_yields_equivalence_relation1">Theorem</xref> yields the other half.
   </p>
   <theorem xml:id="thm_equiv_yields_partition2">
     <statement>
@@ -346,7 +346,7 @@
     ask yourself whether the statement is true if we remove the condition
     <q><m>a\in\rel(a)</m> for all <m>a\in A</m>.</q>
   </p>
-  <theorem xml:id="thm_partition_yields_equivalence_relation">
+  <theorem xml:id="thm_partition_yields_equivalence_relation2">
     <statement>
       <p>
         If <m>R</m> is a relation on a set <m>A</m> such that the collection of the set of relatives with respect to <m>R</m> is a partition of <m>A</m> and

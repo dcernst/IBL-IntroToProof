@@ -95,7 +95,7 @@
       </p>
       <p>
         Notice that this collection forms a partition of <m>\mathbb{Z}</m>.
-        By <xref ref="thm_partition_yields_equivalence_relation">Theorem</xref>,
+        By <xref ref="thm_partition_yields_equivalence_relation2">Theorem</xref>,
         the relation <m>\equiv_5</m> must be an equivalence relation.
       </p>
     </statement>
@@ -104,7 +104,7 @@
     The previous example generalizes as expected.
     You can prove the following theorem by either proving that
     <m>\equiv_n</m> is reflexive, symmetric,
-    and transitive or by utilizing <xref ref="thm_partition_yields_equivalence_relation">Theorem</xref>.
+    and transitive or by utilizing <xref ref="thm_partition_yields_equivalence_relation2">Theorem</xref>.
   </p>
   <theorem>
     <statement>
