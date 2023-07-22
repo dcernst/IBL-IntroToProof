@@ -1,4 +1,4 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="appendix_fancy_math_terms">
+<appendix xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="appendix_fancy_math_terms">
   <title>Fancy Mathematical Terms</title>
   <p>
     Here are some important mathematical terms that you will encounter throughout mathematics.
@@ -81,4 +81,4 @@
       </li>
     </ol>
   </p>
-</chapter>
+</appendix>

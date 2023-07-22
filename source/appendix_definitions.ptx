@@ -1,4 +1,4 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="appendix_definitions">
+<appendix xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="appendix_definitions">
   <title>Definitions in Mathematics</title>
   <p>
     It is difficult to overstate the importance of definitions in mathematics.
@@ -118,4 +118,4 @@
     This is a case in which a clear, precise,
     mathematical definition is required.
   </p>
-</chapter>
+</appendix>

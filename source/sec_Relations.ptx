@@ -104,14 +104,14 @@
         Let <m>A</m> be any set.
         Since <m>\emptyset \subseteq A\times A</m>,
         the empty set forms a relation on <m>A</m>.
-        This relation is called the <em>empty relation</em> on <m>A</m>.
+        This relation is called the <term>empty relation</term> on <m>A</m>.
       </p>
     </statement>
   </example>
   <p>
     Relations can be represented using digraphs.
-    A <em>digraph</em>
-    (short for <em>directed graph</em>)
+    A <term>digraph</term>
+    (short for <term>directed graph</term>)
     is a discrete graph that consists of a set of vertices connected by edges,
     where the edges have a direction associated with them.
     If <m>R</m> is a relation from <m>A</m> to <m>B</m>,
@@ -131,15 +131,13 @@
       </p>
     </statement>
   </example>
-  <!-- <p>
-    \tikzset{every loop/.style={min distance=8mm}} \tikzstyle{vert} = [circle, draw,
-    fill=grey,inner sep=0pt, minimum size=5mm] \tikzstyle{b} = [draw,-stealth]
-  </p> -->
-  <figure xml:id="fig_digraph_finite_to_finite">
-    <caption>Digraph for a relation from <m>A=\{a,b,c,d,e\}</m> to <m>B=\{1,2,3,4\}</m>.</caption>
-    <image>
+
+<figure xml:id="fig_digraph_finite_to_finite">
+<caption>Digraph for a relation from <m>A=\{a,b,c,d,e\}</m> to <m>B=\{1,2,3,4\}</m>.</caption>
+<image width="50%" xml:id="digraph_finite_to_finite">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\node[vert] (A) at (0,5) {\scriptsize \(a\)};
+\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2cm,semithick,scale=1.2]
+\node[vert] (A) at (0,5) {\scriptsize \(a\)};
 \node[vert] (B) at (0,4) {\scriptsize \(b\)};
 \node[vert] (C) at (0,3) {\scriptsize \(c\)};
 \node[vert] (D) at (0,2) {\scriptsize \(d\)};
@@ -148,6 +146,8 @@
 \node[vert] (2) at (2.5,3.5) {\scriptsize \(2\)};
 \node[vert] (3) at (2.5,2.5) {\scriptsize \(3\)};
 \node[vert] (4) at (2.5,1.5) {\scriptsize \(4\)};
+\node[draw,rounded corners,fit=(A) (B) (C) (D) (E),minimum width=1.5cm,gray] {};
+\node[draw,rounded corners,fit=(1) (2) (3) (4),minimum width=1.5cm,gray] {};
 \path (A) edge node {} (1)
 (A) edge node {} (2)
 (A) edge node {} (4)
@@ -155,14 +155,14 @@
 (D) edge node {} (2)
 (E) edge node {} (2)
 (E) edge node {} (4);
-\node[draw,rounded corners,fit=(A) (B) (C) (D) (E),minimum width=1.5cm,gray] {};
-\node[draw,rounded corners,fit=(1) (2) (3) (4),minimum width=1.5cm,gray] {};
 \node at (0,5.7) {\(A\)};
-\node at (2.5,5.2) {\(B\)};\end{tikzpicture}]]>
+\node at (2.5,5.2) {\(B\)};
+\end{tikzpicture}
 </latex-image>
-    </image>
-  </figure>
-  <problem>
+</image>
+</figure>
+
+<problem>
     <statement>
       <p>
         Let <m>A=\{1,2,3,4,5,6\}</m> and
@@ -179,22 +179,25 @@
     we may have directed edges that point from a vertex to itself.
     When drawing digraphs for a relation on a set,
     we will default to this simplified digraph
-    (like the one depicted in <xref ref="fig_digraph_on_finite">Figure</xref>\subref{fig:digraphB}).
+    (like the one depicted in <xref ref="fig_digraphB">Figure</xref>).
   </p>
   <example xml:id="ex_digraph">
     <statement>
       <p>
-        <xref ref="fig_digraph_on_finite">Figure</xref>\subref{fig:digraphA} represents the relation of <xref ref="ex_relation_on_finite">Example</xref>
-        as a digraph from <m>A</m> to <m>A</m> while the digraph in <xref ref="fig_digraph_on_finite">Figure</xref>\subref{fig:digraphB} provides a streamlined representation of the same relation that uses the elements in <m>A</m> only once instead of twice.
+        <xref ref="fig_digraphA">Figure</xref> represents the relation of <xref ref="ex_relation_on_finite">Example</xref>
+        as a digraph from <m>A</m> to <m>A</m> while the digraph in <xref ref="fig_digraphB">Figure</xref> provides a streamlined representation of the same relation that uses the elements in <m>A</m> only once instead of twice.
       </p>
     </statement>
   </example>
-  <figure xml:id="fig_digraphA">
-    <caption>Two variations of digraphs for a relation on <m>A=\{a,b,c,d,e\}</m>.</caption>
-    \subcaptionbox{ }[.48\linewidth]{
-    <image>
+
+<figure xml:id="fig_digraph_on_finite">
+<caption>Two variations of digraphs for a relation on <m>A=\{a,b,c,d,e\}</m>.</caption>
+<sidebyside widths="50% 43%" valigns="bottom bottom">
+<figure xml:id="fig_digraphA">
+<image xml:id="digraphA">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\node[vert] (A1) at (0,5) {\scriptsize \(a\)};
+\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2cm,semithick,scale=1.2]
+\node[vert] (A1) at (0,5) {\scriptsize \(a\)};
 \node[vert] (B1) at (0,4) {\scriptsize \(b\)};
 \node[vert] (C1) at (0,3) {\scriptsize \(c\)};
 \node[vert] (D1) at (0,2) {\scriptsize \(d\)};
@@ -204,6 +207,8 @@
 \node[vert] (C2) at (2.5,3) {\scriptsize \(c\)};
 \node[vert] (D2) at (2.5,2) {\scriptsize \(d\)};
 \node[vert] (E2) at (2.5,1) {\scriptsize \(e\)};
+\node[draw,rounded corners,fit=(A1) (B1) (C1) (D1) (E1),minimum width=1.5cm,gray] {};
+\node[draw,rounded corners,fit=(A2) (B2) (C2) (D2) (E2),minimum width=1.5cm,gray] {};
 \path (A1) edge node {} (A2)
 (A1) edge node {} (C2)
 (A1) edge node {} (B2)
@@ -216,17 +221,17 @@
 (D1) edge node {} (A2)
 (D1) edge node {} (C2)
 (E1) edge node {} (A2);
-\node[draw,rounded corners,fit=(A1) (B1) (C1) (D1) (E1),minimum width=1.5cm,gray] {};
-\node[draw,rounded corners,fit=(A2) (B2) (C2) (D2) (E2),minimum width=1.5cm,gray] {};
 \node at (0,5.7) {\(A\)};
-\node at (2.5,5.7) {\(A\)};\end{tikzpicture}]]>
+\node at (2.5,5.7) {\(A\)};
+\end{tikzpicture}
 </latex-image>
-    </image>
-    }
-    \subcaptionbox{ }[.48\linewidth]{
-    <image>
+</image>
+</figure>
+<figure xml:id="fig_digraphB">
+<image xml:id="digraphB">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\node[vert] (A)                    {\scriptsize \(a\)};
+\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2cm,semithick,scale=.5]
+\node[vert] (A)                    {\scriptsize \(a\)};
 \node[vert] (B) [above right of=A] {\scriptsize \(b\)};
 \node[vert] (D) [below right of=A] {\scriptsize \(d\)};
 \node[vert] (C) [below right of=B] {\scriptsize \(c\)};
@@ -243,11 +248,14 @@ edge [bend left]  node {} (E)
 (D) edge [out=-45, in=-135,loop] node {} (D)
 edge [bend left]  node {} (A)
 (E) edge [bend left]  node {} (A)
-(C) edge [out=45, in=-45,loop,white] node {} (C);\end{tikzpicture}]]>
+(C) edge [out=45, in=-45,loop,white] node {} (C);
+\end{tikzpicture}
 </latex-image>
-    </image>
-    }
-  </figure>
+</image>
+</figure>
+</sidebyside>
+</figure>
+
   <problem xml:id="prob_divides">
     <statement>
       <p>
@@ -285,7 +293,7 @@ edge [bend left]  node {} (A)
     we can plot all points <m>(a,b)</m> that satisfy <m>aR b</m> in two dimensions,
     where we interpret the set <m>A</m> to be the horizontal axis and <m>B</m> to be the vertical axis.
     We will refer to this visual representation of a relation as the
-    <em>graph</em> of the relation.
+    <term>graph</term> of the relation.
   </p>
   <example xml:id="ex_circle">
     <statement>
@@ -300,20 +308,24 @@ edge [bend left]  node {} (A)
       </p>
     </statement>
   </example>
-  <figure xml:id="fig_unit_circle">
-    <caption>Graph of the relation determined by <m>x^2+y^2=1</m>.</caption>
-    <image>
+  
+<figure xml:id="fig_unit_circle">
+<caption>Graph of the relation determined by <m>x^2+y^2=1</m>.</caption>
+<image width="50%" xml:id="unit_circle">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\draw [thick,] (0,0) circle (3cm);
+\begin{tikzpicture}
+\draw [thick,] (0,0) circle (3cm);
 \draw [thick,-stealth] (-3.5,0) -- (3.5,0);
 \draw [thick,-stealth] (0,-3.5) -- (0,3.5);
 \fill (0:3) circle (0.07cm);
 \node at (0:3) [above right] {\( (1,0) \)};
 \fill (60:3) circle (0.07cm);
-\node at (60:3.2)[right=0.01ex] {\( (x,y) \)};\end{tikzpicture}]]>
+\node at (60:3.2)[right=0.01ex] {\( (x,y) \)};
+\end{tikzpicture}
 </latex-image>
-    </image>
-  </figure>
+</image>
+</figure>
+
   <problem xml:id="prob_parabola">
     <statement>
       <p>
@@ -382,8 +394,8 @@ edge [bend left]  node {} (A)
     In terms of digraphs,
     <m>\rel(a)</m> is the collection of vertices that have a directed edge pointing towards them from the vertex labeled by <m>a</m>.
     In graph theory, this collection of vertices is called the
-    <em>out neighborhood</em>
-    of <m>a</m> and each such vertex is called an <em>out neighbor</em>.
+    <term>out neighborhood</term>
+    of <m>a</m> and each such vertex is called an <term>out neighbor</term>.
     Notice that <m>\Rel(R)</m> is a set of sets.
     In particular,
     an element in <m>\Rel(R)</m> is a subset of <m>A</m><mdash/>equivalently,
@@ -393,7 +405,7 @@ edge [bend left]  node {} (A)
     <statement>
       <p>
         Consider the relation given in <xref ref="ex_relation_on_finite">Example</xref>.
-        By inspecting the ordered pairs in <m>R</m> or by looking at the digraph in <xref ref="fig_digraph_on_finite">Figure</xref>\subref{fig:digraphB}, we see that
+        By inspecting the ordered pairs in <m>R</m> or by looking at the digraph in <xref ref="fig_digraphB">Figure</xref>, we see that
         <me>
           \rel(a) = \{a,b,c\},\ \rel(b) = \{a,b,c\},\ \rel(c) = \{d,e\},\ \rel(d) = \{a,c,d\},\ \rel(e) = \{a\}
         </me>,
@@ -466,20 +478,20 @@ edge [bend left]  node {} (A)
         <ol marker="labeltextrmalph">
           <li>
             <p>
-              The relation <m>R</m> is <em>reflexive</em>
+              The relation <m>R</m> is <term>reflexive</term>
               if for all <m>a\in A</m>, <m>aR a</m>.
             </p>
           </li>
           <li>
             <p>
-              The relation <m>R</m> is <em>symmetric</em>
+              The relation <m>R</m> is <term>symmetric</term>
               if for all <m>a,b\in A</m>,
               if <m>aR b</m>, then <m>bR a</m>.
             </p>
           </li>
           <li>
             <p>
-              The relation <m>R</m> is <em>transitive</em>
+              The relation <m>R</m> is <term>transitive</term>
               if for all <m>a,b,c\in A</m>,
               if <m>aR b</m> and <m>bR c</m>, then <m>aR c</m>.
             </p>

@@ -1,4 +1,4 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="appendix_elements_of_style">
+<appendix xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="appendix_elements_of_style">
   <title>Elements of Style for Proofs</title>
   <p>
     Mathematics is about discovering proofs and writing them clearly and compellingly.
@@ -387,4 +387,4 @@
       </li>
     </ol>
   </p>
-</chapter>
+</appendix>

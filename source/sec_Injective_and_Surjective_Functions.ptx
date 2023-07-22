@@ -517,16 +517,14 @@
       </p>
     </statement>
   </example>
-  <!-- <p>
-    \tikzset{every loop/.style={min distance=8mm}} \tikzstyle{vert} = [circle, draw,
-    fill=grey,inner sep=0pt, minimum size=5mm] \tikzstyle{b} = [draw,-stealth]
-  </p> -->
-  <figure xml:id="fig_passengers">
-    <caption>Example of a visual representation of <xref ref="thm_iso_theorem_for_sets">Theorem</xref>.</caption>
-    \subcaptionbox{ }[.48\linewidth]{
-    <image>
+ 
+<figure xml:id="fig_passengers">
+<caption>Example of a visual representation of <xref ref="thm_iso_theorem_for_sets">Theorem</xref>.</caption>
+  \subcaptionbox{ }[.48\linewidth]{
+<image>
 <latex-image>
-<![CDATA[\begin{tikzpicture}\node[vert] (A) at (0,6) {\scriptsize \(a\)};
+\begin{tikzpicture}
+\node[vert] (A) at (0,6) {\scriptsize \(a\)};
 \node[vert] (B) at (0,5) {\scriptsize \(b\)};
 \node[vert] (C) at (0,4) {\scriptsize \(c\)};
 \node[vert] (D) at (0,3) {\scriptsize \(d\)};
@@ -550,14 +548,16 @@
 \node[draw,rounded corners,fit=(D) (E) (F),minimum width=.9cm,gray] {};
 \node (X) at (0,6.75) {\(X\)};
 \node (Y) at (2.5,6.1) {\(Y\)};
-\path (X) edge [bend left] node {\(\varphi\)} (Y);\end{tikzpicture}]]>
+\path (X) edge [bend left] node {\(\varphi\)} (Y);
+\end{tikzpicture}
 </latex-image>
-    </image>
+</image>
     }
     \subcaptionbox{ }[.48\linewidth]{
-    <image>
+<image>
 <latex-image>
-<![CDATA[\begin{tikzpicture}\node[vert] (A) at (0,3) {\scriptsize \([a]\)};
+begin{tikzpicture}
+\node[vert] (A) at (0,3) {\scriptsize \([a]\)};
 \node[vert] (B) at (0,2) {\scriptsize \([c]\)};
 \node[vert] (C) at (0,1) {\scriptsize \([d]\)};
 \node[vert] (1) at (2.5,3) {\scriptsize \(1\)};
@@ -571,11 +571,13 @@
 \node[draw,rounded corners,fit=(1) (2) (3),minimum width=1.3cm,gray] {};
 \node (X) at (0,3.6) {\(X/\mathord\sim\)};
 \node (Y) at (2.5,3.6) {\(\range(\varphi)\)};
-\path (X) edge [bend left] node {\(\overline{\varphi}\)} (Y);\end{tikzpicture}]]>
+\path (X) edge [bend left] node {\(\overline{\varphi}\)} (Y);
+\end{tikzpicture}
 </latex-image>
-    </image>
+</image>
     }
-  </figure>
+</figure>
+
   <problem xml:id="prob_iso_theorem_for_sets">
     <statement>
       <p>

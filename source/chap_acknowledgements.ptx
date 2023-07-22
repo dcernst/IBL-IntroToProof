@@ -1,4 +1,4 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chap_acknowledgements">
+<acknowledgement xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chap_acknowledgements">
   <title>Acknowledgements</title>
   <p>
     The first draft of this book was written in 2009.
@@ -33,7 +33,7 @@
       <li>
         <p>
           <url href="http://www.paulellis.org">Paul Ellis</url>
-          (Manhattanville College).
+          (Rutgers University).
           Paul has provided lots of useful feedback and several suggestions for improvements.
           Paul suggested problems for <xref ref="chap_Induction">Chapter</xref>
           and provided an initial draft of <xref ref="sec_Images_and_Preimages">Section</xref>: Images and Preimages of Functions.
@@ -104,4 +104,4 @@
       </li>
     </ul>
   </p>
-</chapter>
+</acknowledgement>

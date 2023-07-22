@@ -5,17 +5,17 @@
     <ol>
       <li>
         <p>
-          <em>Field Axioms:</em> These axioms provide the essential properties of arithmetic involving addition and subtraction.
+          <b>Field Axioms:</b> These axioms provide the essential properties of arithmetic involving addition and subtraction.
         </p>
       </li>
       <li>
         <p>
-          <em>Order Axioms:</em> These axioms provide the necessary properties of inequalities.
+          <b>Order Axioms:</b> These axioms provide the necessary properties of inequalities.
         </p>
       </li>
       <li>
         <p>
-          <em>Completeness Axiom:</em> This axiom ensures that the familiar number line that we use to model the real numbers does not have any holes in it.
+          <b>Completeness Axiom:</b> This axiom ensures that the familiar number line that we use to model the real numbers does not have any holes in it.
         </p>
       </li>
     </ol>
@@ -103,13 +103,13 @@
     <m>\mathbb{R}\setminus\{0\}</m> an abelian group under addition and multiplication,
     respectively.
     Axiom<nbsp/>F9 provides a way for the operations of addition and multiplication to interact.
-    Collectively, Axioms<nbsp/>F1<ndash/>F9 make the real numbers a <em>field</em>.
+    Collectively, Axioms<nbsp/>F1<ndash/>F9 make the real numbers a <term>field</term>.
     Axioms<nbsp/>F3 and F7 state the existence of additive and multiplicative identities,
     but these axioms do not assume that the elements are the unique elements with the specified properties.
     However, we can prove that this is the case.
     That is, <m>0</m> and <m>1</m> of
-    <m>\mathbb{R}</m> are the unique <em>additive</em>
-    and <em>multiplicative identities</em> in <m>\mathbb{R}</m>.
+    <m>\mathbb{R}</m> are the unique <term>additive</term>
+    and <term>multiplicative identities</term> in <m>\mathbb{R}</m>.
     To prove the following theorem,
     suppose <m>0</m> and <m>0'</m> are both additive identities in
     <m>\mathbb{R}</m> and then show that <m>0=0'</m>.
@@ -141,8 +141,8 @@
     However, we can prove that for every <m>a\in\mathbb{R}</m>,
     the elements <m>-a</m> and <m>a^{-1}</m>
     (as long as <m>a\neq 0</m>)
-    are the unique <em>additive</em>
-    and <em>multiplicative inverses</em>, respectively.
+    are the unique <term>additive</term>
+    and <term>multiplicative inverses</term>, respectively.
   </p>
   <theorem xml:id="thm_unique_additive_inverse">
     <statement>
@@ -170,7 +170,7 @@
   <definition>
     <statement>
       <p>
-        We define the natural numbers,
+        We define the <term>natural numbers</term>,
         denoted by <m>\mathbb{N}</m>,
         to be the smallest subset of <m>\mathbb{R}</m> satisfying:
         <ol marker="labeltextrmalph">
@@ -197,7 +197,7 @@
   <p>
     Given the natural numbers, Axiom<nbsp/>F3/<xref ref="thm_unique_additive_identity">Theorem</xref>
     and Axiom<nbsp/>F4/<xref ref="thm_unique_additive_inverse">Theorem</xref>
-    together with the operation of addition allow us to define the <em>integers</em>,
+    together with the operation of addition allow us to define the <term>integers</term>,
     denoted by <m>\mathbb{Z}</m>, in the obvious way.
     That is, the integers consist of the natural numbers together with the additive identity and all of the additive inverses of the natural numbers.
   </p>
@@ -231,10 +231,10 @@
     </statement>
   </definition>
   <p>
-    The set of <em>rational numbers</em>,
+    The set of <term>rational numbers</term>,
     denoted by <m>\mathbb{Q}</m>,
     is defined to be the collection of all real numbers having the form given in Part<nbsp/>(b) of <xref ref="def_real_number_notation">Definition</xref>.
-    The <em>irrational numbers</em>
+    The <term>irrational numbers</term>
     are defined to be <m>\mathbb{R}\setminus\mathbb{Q}</m>.
   </p>
   <p>
@@ -340,11 +340,11 @@
   </paragraphs>
   <p>
     Given Axioms<nbsp/>O1<ndash/>O4, we say that the real numbers are a
-    <em>linearly ordered field</em>.
-    We call numbers greater than zero <em>positive</em>
-    and those greater than or equal to zero <em>nonnegative</em>.
+    <term>linearly ordered field</term>.
+    We call numbers greater than zero <term>positive</term>
+    and those greater than or equal to zero <term>nonnegative</term>.
     There are similar definitions for
-    <em>negative</em> and <em>nonpositive</em>.
+    <term>negative</term> and <term>nonpositive</term>.
   </p>
   <p>
     Notice that the Order Axioms are phrased in terms of
@@ -515,7 +515,7 @@
     <statement>
       <p>
         Given <m>a\in\mathbb{R}</m>,
-        we define the absolute value of <m>a</m>, denoted <m>|a|</m>, via
+        we define the <term>absolute value</term> of <m>a</m>, denoted <m>|a|</m>, via
         <me>
           \tcboxmath{|a|\coloneqq \begin{cases}a, \amp  \text{ if } a\geq 0\\ -a, \amp  \text{ if } a\lt 0. \end{cases} }
         </me>
@@ -676,7 +676,7 @@
     Consider using <xref ref="thm_plus_minus_less_than_or_equal_to_abs_value">Theorems</xref>
     and <xref ref="thm_abs_value_less_than_or_equal_to_iff_squeezed_by_plus_minus"></xref>
     when attacking the next result,
-    which is known as the <em>Triangle Inequality</em>.
+    which is known as the <term>Triangle Inequality</term>.
     This result can be extremely useful in some contexts.
   </p>
   <theorem xml:id="thm_triangle_inequality">
@@ -748,22 +748,26 @@
     The version of the Triangle Inequality that we presented in <xref ref="thm_triangle_inequality">Theorem</xref>
     is precisely the one-dimensional version of the Triangle Inequality in terms of vectors.
   </p>
-  <figure xml:id="fig_triangle_inequality_2d">
-    <caption>Triangle Inequality in terms of vectors.</caption>
-    <image>
+  
+<figure xml:id="fig_triangle_inequality_2d">
+<caption>Triangle Inequality in terms of vectors.</caption>
+<image width="50%" xml:id="triangle_inequality_2d">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\coordinate (A) at (0,0) {};
+\begin{tikzpicture}[scale=1.5,text height=1.5ex,text depth=.25ex]
+\coordinate (A) at (0,0) {};
 \coordinate (B) at (3,0) {};
 \coordinate (C) at (2,2) {};
 \draw[thick, arrows={-latex}]  (A) -- (C) node[pos=0.45,above=2mm] {\(\mathbf{a}\)};
 \draw[thick,arrows={-latex}]  (C) -- (B) node[pos=0.45,right=2mm] {\(\mathbf{b}\)};
-\draw[thick, arrows={-latex},line cap=round]  (A) -- (B) node[midway,below=2mm] {\(\mathbf{a}+\mathbf{b}\)};\end{tikzpicture}]]>
+\draw[thick, arrows={-latex},line cap=round]  (A) -- (B) node[midway,below=2mm] {\(\mathbf{a}+\mathbf{b}\)};
+\end{tikzpicture}
 </latex-image>
-    </image>
-  </figure>
+</image>
+</figure>
+
   <p>
     The next theorem is sometimes called the
-    <em>Reverse Triangle Inequality</em>.
+    <term>Reverse Triangle Inequality</term>.
   </p>
   <theorem>
     <title>Reverse Triangle Inequality</title>
@@ -782,18 +786,18 @@
     <statement>
       <p>
         Let <m>A\subseteq \mathbb{R}</m>.
-        A point <m>b</m> is called an upper bound of <m>A</m> if for all <m>a\in A</m>,
+        A point <m>b</m> is called an <term>upper bound</term> of <m>A</m> if for all <m>a\in A</m>,
         <m>a\leq b</m>.
-        The set <m>A</m> is said to be bounded above if it has an upper bound.
+        The set <m>A</m> is said to be <term>bounded above</term> if it has an upper bound.
       </p>
     </statement>
   </definition>
   <problem>
     <statement>
       <p>
-        The notion of a <em>lower bound</em>
+        The notion of a <term>lower bound</term>
         and the property of a set being
-        <em>bounded below</em> are defined similarly.
+        <term>bounded below</term> are defined similarly.
         Try defining them.
       </p>
     </statement>
@@ -860,7 +864,7 @@
   <definition>
     <statement>
       <p>
-        A set <m>A\subseteq \mathbb{R}</m> is bounded if <m>A</m> is bounded above and below.
+        A set <m>A\subseteq \mathbb{R}</m> is <term>bounded</term> if <m>A</m> is bounded above and below.
       </p>
     </statement>
   </definition>
@@ -871,11 +875,11 @@
     <statement>
       <p>
         Let <m>A\subseteq \mathbb{R}</m>.
-        A point <m>p</m> is a supremum
-        (or least upper bound)
+        A point <m>p</m> is a <term>supremum</term>
+        (or <term>least upper bound</term>)
         of <m>A</m> if <m>p</m> is an upper bound of <m>A</m> and <m>p\leq b</m> for every upper bound <m>b</m> of <m>A</m>.
-        Analogously, a point <m>p</m> is an infimum
-        (or greatest lower bound)
+        Analogously, a point <m>p</m> is an <term>infimum</term>
+        (or <term>greatest lower bound</term>)
         of <m>A</m> if <m>p</m> is a lower bound of <m>A</m> and <m>p\geq b</m> for every lower bound <m>b</m> of <m>A</m>.
       </p>
     </statement>
@@ -959,7 +963,7 @@
   <p>
     Given the Completeness Axiom,
     we say that the real numbers satisfy the
-    <em>least upper bound property</em>.
+    <term>least upper bound property</term>.
     It is worth mentioning that we do not need the Completeness Axiom to conclude that every nonempty subset of the integers that is bounded above has a supremum,
     as this follows from <xref ref="thm_reverse_WOP">Theorem</xref>
     (a generalized version of the Well-Ordering Principle).
@@ -977,7 +981,7 @@
     </statement>
   </theorem>
   <p>
-    Our next result, called the <em>Archimedean Property</em>,
+    Our next result, called the <term>Archimedean Property</term>,
     tells us that for every real number,
     we can always find a natural number that is larger.
     To prove this theorem,
@@ -997,7 +1001,7 @@
     <q>squeeze</q>
     every real number between a pair of integers.
     The next result is sometimes referred to at the
-    <em>Generalized Archimedean Property</em>.
+    <term>Generalized Archimedean Property</term>.
   </p>
   <theorem>
     <title>Generalized Archimedean Property</title>
@@ -1069,7 +1073,7 @@
     Repeated applications of the previous two theorems implies that every open interval contains infinitely many rational numbers and infinitely many irrational numbers.
     In light of these two theorems,
     we say that both the rationals and irrationals are
-    <em>dense</em> in the real numbers.
+    <term>dense</term> in the real numbers.
   </p>
   <p>
     \epigraph{If people do not believe that mathematics is simple,

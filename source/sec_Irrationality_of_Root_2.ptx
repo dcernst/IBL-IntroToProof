@@ -46,19 +46,25 @@
     the ratio is <m>\sqrt{2}</m>
     (see <xref ref="fig_square">Figure</xref>).
   </p>
-  <figure xml:id="fig_square">
-    <caption>The side and diagonal of a square are incommensurable.</caption>
-    <image>
+  
+<figure xml:id="fig_square">
+<caption>The side and diagonal of a square are incommensurable.</caption>
+<image width="35%" xml:id="square">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\draw [thick] (0,0) -- (1,0) -- (1,1) -- (0,1) -- (0,0);
-\draw [thick] (0,0) -- (1,1);
-\node at (0,.5) [left] {\(a\)};
-\node at (.5,0) [below] {\(a\)};
-\node at (.35,.6) {\(a\sqrt{2}\)};\end{tikzpicture}]]>
+<!-- <![CDATA[ -->
+\begin{tikzpicture}[scale=3]
+\draw[thick] (0,0) rectangle (1,1);
+\draw[thick] (0,0) -- (1,1);
+\node [left] at (0,.5)  {$a$};
+\node [below] at (.5,0) {$a$};
+\node at (.67,.4) {$a\sqrt{2}$};
+\end{tikzpicture}
+<!-- ]]> -->
 </latex-image>
-    </image>
-  </figure>
-  <p>
+</image>
+</figure>
+  
+<p>
     In <xref ref="sec_AxiomsRealNumbers">Section</xref>,
     we took for granted that <m>\sqrt{2}</m> was irrational.
     We now prove this fact.

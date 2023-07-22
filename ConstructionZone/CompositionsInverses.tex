@@ -9,7 +9,7 @@ If $f:X\to Y$ and $g:Y\to Z$ are functions, we define $g\circ f:X\to Z$ via $\tc
 It is important to notice that the function on the right is the one that ``goes first.''  Moreover, we cannot compose any two random functions since the codomain of the first function must agree with the domain of the second function.  In particular, $f\circ g$ may not be a sensible function even when $g\circ f$ exists. Figure~\ref{fig:function composition} provides a visual representation of function composition in terms of function diagrams.
 
 \tikzset{every loop/.style={min distance=8mm}}
-\tikzstyle{vert} = [circle, draw, fill=black,inner sep=0pt, minimum size=.5mm]
+\tikzstyle{smallvert} = [circle, draw, fill=black,inner sep=0pt, minimum size=.5mm]
 \tikzstyle{b} = [draw,-stealth]
 
 \begin{figure}[h!]
@@ -17,13 +17,13 @@ It is important to notice that the function on the right is the one that ``goes 
 \begin{tikzpicture}[scale=.75,->,>=stealth,shorten >=1pt,auto,node distance=2cm,semithick]
 
 \node at (0,2.5) [below] {\scriptsize $x$};
-\node[vert] (A) at (0,2.5) {};
+\node[smallvert] (A) at (0,2.5) {};
 
 \node at (3,2.5) [below] {\scriptsize $f(x)$};
-\node[vert] (B) at (3,2.5) {};
+\node[smallvert] (B) at (3,2.5) {};
 
 \node at (6,2.5) [below] {\scriptsize $g(f(x))$};
-\node[vert] (C) at (6,2.5) {};
+\node[smallvert] (C) at (6,2.5) {};
 
 \path (A) edge (B);
 \path (B) edge (C);

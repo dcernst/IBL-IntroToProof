@@ -1,4 +1,4 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="appendix_paradoxes">
+<appendix xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="appendix_paradoxes">
   <title>Paradoxes</title>
   <p>
     A <em>paradox</em> is a statement that can be shown,
@@ -109,4 +109,4 @@
       </li>
     </ol>
   </p>
-</chapter>
+</appendix>

@@ -21,20 +21,19 @@
     <xref ref="fig_function_composition">Figure</xref>
     provides a visual representation of function composition in terms of function diagrams.
   </p>
-  <p>
-    \tikzset{every loop/.style={min distance=8mm}} \tikzstyle{vert} = [circle, draw,
-    fill=black,inner sep=0pt, minimum size=.5mm] \tikzstyle{b} = [draw,-stealth]
-  </p>
-  <figure xml:id="fig_function_composition">
-    <caption>Visual representation of function composition.</caption>
-    <image>
+
+
+<figure xml:id="fig_function_composition">
+<caption>Visual representation of function composition.</caption>
+<image>
 <latex-image>
-<![CDATA[\begin{tikzpicture}\node at (0,2.5) [below] {\scriptsize \(x\)};
-\node[vert] (A) at (0,2.5) {};
+\begin{tikzpicture}
+\node at (0,2.5) [below] {\scriptsize \(x\)};
+\node[smallvert] (A) at (0,2.5) {};
 \node at (3,2.5) [below] {\scriptsize \(f(x)\)};
-\node[vert] (B) at (3,2.5) {};
+\node[smallvert] (B) at (3,2.5) {};
 \node at (6,2.5) [below] {\scriptsize \(g(f(x))\)};
-\node[vert] (C) at (6,2.5) {};
+\node[smallvert] (C) at (6,2.5) {};
 \path (A) edge (B);
 \path (B) edge (C);
 \node[draw,rounded corners,fit=(A),minimum width=1.3cm,minimum height=2.75cm,gray] {};
@@ -45,11 +44,13 @@
 \node (Z) at (6,4.7) {\(Z\)};
 \path (X) edge [bend left] node {\(f\)} (Y);
 \path (Y) edge [bend left] node {\(g\)} (Z);
-\path (0,.5) edge [bend right] node[below] {\(g\circ f\)} (6,.5);\end{tikzpicture}]]>
+\path (0,.5) edge [bend right] node[below] {\(g\circ f\)} (6,.5);
+\end{tikzpicture}
 </latex-image>
-    </image>
-  </figure>
-  <problem>
+</image>
+</figure>
+  
+<problem>
     <statement>
       <p>
         Let <m>X=\{1,2,3,4\}</m> and define

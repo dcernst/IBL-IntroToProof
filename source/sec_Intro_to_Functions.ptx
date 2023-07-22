@@ -96,15 +96,13 @@
       </p>
     </statement>
   </example>
-  <!-- <p>
-    \tikzset{every loop/.style={min distance=8mm}} \tikzstyle{vert} = [circle, draw,
-    fill=grey,inner sep=0pt, minimum size=5mm] \tikzstyle{b} = [draw,-stealth]
-  </p> -->
-  <figure xml:id="fig_function_diagram">
-    <caption>Function diagram for a function from <m>X=\{a,b,c,d,\}</m> to <m>Y=\{1,2,3,4\}</m>.</caption>
-    <image>
+
+<figure xml:id="fig_function_diagram">
+<caption>Function diagram for a function from <m>X=\{a,b,c,d,\}</m> to <m>Y=\{1,2,3,4\}</m>.</caption>
+<image>
 <latex-image>
-<![CDATA[\begin{tikzpicture}\node[vert] (A) at (0,4) {\scriptsize \(a\)};
+\begin{tikzpicture}
+\node[vert] (A) at (0,4) {\scriptsize \(a\)};
 \node[vert] (B) at (0,3) {\scriptsize \(b\)};
 \node[vert] (C) at (0,2) {\scriptsize \(c\)};
 \node[vert] (D) at (0,1) {\scriptsize \(d\)};
@@ -120,10 +118,11 @@
 \node[draw,rounded corners,fit=(1) (2) (3) (4),minimum width=1.3cm,gray] {};
 \node (X) at (0,4.6) {\(X\)};
 \node (Y) at (2.5,4.6) {\(Y\)};
-\path (X) edge [bend left] node {\(f\)} (Y);\end{tikzpicture}]]>
+\path (X) edge [bend left] node {\(f\)} (Y);\end{tikzpicture}
 </latex-image>
-    </image>
-  </figure>
+</image>
+</figure>
+
   <problem>
     <statement>
       <p>
