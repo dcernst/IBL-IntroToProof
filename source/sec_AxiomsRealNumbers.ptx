@@ -23,7 +23,36 @@
   <p>
     We begin with the Field Axioms.
   </p>
-  <paragraphs xml:id="axiom_field_axioms">
+
+<axiom xml:id="axiom_field_axioms">
+<creator>Field Axioms</creator>
+<statement>
+<p>There exist operations <m>+</m> (addition) and <m>\cdot</m> (multiplication) on <m>\mathbb{R}</m> satisfying:
+<ul>
+<li data-icon="F1"><p>(F1) (Associativity for Addition) For all <m>a,b, c\in \mathbb{R}</m> we have <m>(a+b)+c = a+(b+c)</m>;
+</p></li>
+<li><p>(F2) (Commutativity for Addition) For all <m>a,b\in \mathbb{R}</m>, we have <m>a+b=b+a</m>;
+</p></li>
+<li><p>(F3) (Additive Identity) There exists <m>0\in\mathbb{R}</m> such that for all <m>a\in\mathbb{R}</m>, <m>0+a=a</m>;
+</p></li>
+<li><p>(F4) (Additive Inverses) For all <m>a\in\mathbb{R}</m> there exists <m>-a\in\mathbb{R}</m> such that <m>a+(-a)=0</m>;
+</p></li>
+<li><p>(F5) (Associativity for Multiplication) For all <m>a,b, c\in \mathbb{R}</m> we have <m>(ab)c = a(bc)</m>;
+</p></li>
+<li><p>(F6) (Commutativity for Multiplication) For all <m>a,b\in \mathbb{R}</m>, we have <m>ab=ba</m>;
+</p></li>
+<li><p>(F7) (Multiplicative Identity) There exists <m>1\in\mathbb{R}</m> such that <m>1\neq 0</m> and for all <m>a\in\mathbb{R}</m>, <m>1a=a</m>;
+</p></li>
+<li><p>(F8) (Multiplicative Inverses) For all <m>a\in\mathbb{R}\setminus\{0\}</m> there exists <m>a^{-1}\in\mathbb{R}</m> such that <m>aa^{-1}=1</m>.
+</p></li>
+<li><p>(F9) (Distributive Property) For all <m>a,b,c\in \mathbb{R}</m>, <m>a(b+c)=ab+ac</m>;
+</p></li>
+</ul>
+</p>
+</statement>
+</axiom>
+
+  <!-- <paragraphs xml:id="axiom_field_axioms">
     <title>Axioms</title>
     <p>
       [Field Axioms] There exist operations <m>+</m> (addition) and <m>\cdot</m> (multiplication) on <m>\mathbb{R}</m> satisfying:
@@ -97,7 +126,8 @@
         </li>
       </ol>
     </p>
-  </paragraphs>
+  </paragraphs> -->
+  
   <p>
     In the language of abstract algebra, Axioms<nbsp/>F1<ndash/>F4 and<nbsp/>F5<ndash/>F8 make each of <m>\mathbb{R}</m> and
     <m>\mathbb{R}\setminus\{0\}</m> an abelian group under addition and multiplication,

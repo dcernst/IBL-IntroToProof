@@ -19,15 +19,15 @@
     <p>
       In the first section,
       we develop all of the concepts necessary to state and then prove the
-      <em>Fundamental Theorem of Arithmetic</em>
+      <term>Fundamental Theorem of Arithmetic</term>
       (<xref ref="thm_FTA">Theorem</xref>),
       which you may not recognize by name.
       The Fundamental Theorem of Arithmetic states that every natural number greater than 1 is the product of a unique combination of prime numbers.
       To prove the Fundamental Theorem of Arithmetic,
       we will need to make use of the
-      <em>Division Algorithm</em>
+      <term>Division Algorithm</term>
       (<xref ref="thm_DivisonAlgorthm">Theorem</xref>),
-      which in turn utilizes the Well-Ordering Principle
+      which in turn utilizes the <term>Well-Ordering Principle</term>
       (<xref ref="thm_WOP">Theorem</xref>).
       In the second section, we prove that <m>\sqrt{2}</m> is irrational,
       which settles a claim made in <xref ref="sec_AxiomsRealNumbers">Section</xref>.
