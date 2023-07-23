@@ -51,9 +51,9 @@
     <!-- numbering of the respective elements. Can't be more than the -->
     <!-- @level on divisions above.                                   -->
     <blocks level="1" />
-    <projects level="2" />
-    <equations level="2" />
-    <footnotes level="2" />
+    <projects level="1" />
+    <equations level="1" />
+    <footnotes level="1" />
   </numbering>
 
   <!-- LaTeX specific options: set @print="yes" to get pdf set up   -->

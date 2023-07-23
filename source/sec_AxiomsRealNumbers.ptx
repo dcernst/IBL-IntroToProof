@@ -28,7 +28,7 @@
 <creator>Field Axioms</creator>
 <statement>
 <p>There exist operations <m>+</m> (addition) and <m>\cdot</m> (multiplication) on <m>\mathbb{R}</m> satisfying:
-<ul>
+<ol id="fieldaxiomlist">
 <li><p>(F1) (Associativity for Addition) For all <m>a,b, c\in \mathbb{R}</m> we have <m>(a+b)+c = a+(b+c)</m>;
 </p></li>
 <li><p>(F2) (Commutativity for Addition) For all <m>a,b\in \mathbb{R}</m>, we have <m>a+b=b+a</m>;
@@ -47,7 +47,7 @@
 </p></li>
 <li><p>(F9) (Distributive Property) For all <m>a,b,c\in \mathbb{R}</m>, <m>a(b+c)=ab+ac</m>;
 </p></li>
-</ul>
+</ol>
 </p>
 </statement>
 </axiom>
