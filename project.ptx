@@ -13,7 +13,7 @@
       <publication>publication/publication.ptx</publication>
       <output-dir>output/web</output-dir>
       <!-- attempt to add custom css -->
-      <!-- <stringparam key="html.css.extra" value="external/custom-styles.css"/> -->
+      <stringparam key="html.css.extra" value="external/custom-styles.css"/>
     </target>
     <target name="print" pdf-method="xelatex">
       <format>pdf</format>
