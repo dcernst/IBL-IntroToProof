@@ -4,8 +4,8 @@
     There is another formulation of induction,
     where the inductive step begins with a set of assumptions rather than one single assumption.
     This method is sometimes called
-    <em>complete induction</em>
-    or <em>strong induction</em>.
+    <term>complete induction</term>
+    or <term>strong induction</term>.
   </p>
   <theorem>
     <title>Principle of Complete Mathematical Induction</title>
@@ -178,7 +178,7 @@
       <p>
         A binary string of length <m>n</m> is an ordered list of <m>n</m> digits such that each digit is either 0 or 1.
         For example <m>011101</m> and <m>011011</m> are distinct binary strings of length 6.
-        Here are the rules for <em>Binary Solitaire</em>: At any stage,
+        Here are the rules for <term>Binary Solitaire</term>: At any stage,
         you are allowed to:
         <ol marker="labeltextrmroman">
           <li>

@@ -15,9 +15,9 @@
     </me>
   </p>
   <p>
-    In this case the sets are <em>indexed</em>
+    In this case the sets are <term>indexed</term>
     by the set <m>\mathbb{N}</m>.
-    The subscripts are taken from the <em>index set</em>.
+    The subscripts are taken from the <term>index set</term>.
     If we wanted to talk about an arbitrary set from this indexed collection,
     we could use the notation <m>I_n</m>.
   </p>
@@ -79,7 +79,7 @@
         <ol marker="labeltextrmalph">
           <li>
             <p>
-              The <em>union of the entire collection</em> is defined via
+              The <term>union of the entire collection</term> is defined via
               <me>
                 \tcboxmath{\bigcup_{\alpha\in\Delta} A_{\alpha}\coloneqq \{x\mid x\in A_{\alpha} \mbox{ for some } \alpha\in \Delta\}}
               </me>.
@@ -87,7 +87,7 @@
           </li>
           <li>
             <p>
-              The <em>intersection of the entire collection</em> is defined via
+              The <term>intersection of the entire collection</term> is defined via
               <me>
                 \tcboxmath{\bigcap_{\alpha\in\Delta} A_{\alpha}\coloneqq \{x\mid x\in A_{\alpha} \mbox{ for all } \alpha\in \Delta\}}
               </me>.
@@ -231,7 +231,7 @@
   <definition>
     <statement>
       <p>
-        A collection of sets <m>\{A_{\alpha}\}_{\alpha\in\Delta}</m> is pairwise disjoint if
+        A collection of sets <m>\{A_{\alpha}\}_{\alpha\in\Delta}</m> is <term>pairwise disjoint</term> if
         <m>A_{\alpha} \cap A_{\beta}=\emptyset</m> for <m>\alpha\neq \beta</m>.
       </p>
     </statement>
@@ -327,7 +327,7 @@
     we can now state this axiom precisely.
   </p>
   <axiom>
-    <title>Axiom of Choice</title>
+    <creator>Axiom of Choice</creator>
     <statement>
       <p>
         For every indexed collection <m>\{A_{\alpha}\}_{\alpha\in\Delta}</m> of nonempty sets,

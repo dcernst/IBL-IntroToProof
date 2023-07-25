@@ -14,13 +14,13 @@
     <statement>
       <p>
         For each <m>n\in \mathbb{N}</m>,
-        we define an <m>n</m>-tuple to be an ordered list of <m>n</m> elements of the form <m>\tcboxmath{(a_1, a_2,\ldots,a_n)}</m>.
-        We refer to <m>a_i</m> as the <m>i</m>th component
-        (or coordinate)
+        we define an <term><m>n</m>-tuple</term> to be an ordered list of <m>n</m> elements of the form <m>\tcboxmath{(a_1, a_2,\ldots,a_n)}</m>.
+        We refer to <m>a_i</m> as the <m>i</m>th <term>component</term>
+        (or<term>coordinate</term>)
         of <m>(a_1, a_2,\ldots,a_n)</m>.
         Two <m>n</m>-tuples <m>(a_1, a_2,\ldots,a_n)</m> and
         <m>(b_1, b_2,\ldots,b_n)</m> are equal if <m>a_i=b_i</m> for all <m>1\leq i\leq n</m>.
-        A <m>2</m>-tuple <m>(a,b)</m> is more commonly referred to as an ordered pair while a <m>3</m>-tuple <m>(a,b,c)</m> is often called an ordered triple.
+        A <m>2</m>-tuple <m>(a,b)</m> is more commonly referred to as an <term>ordered pair</term> while a <m>3</m>-tuple <m>(a,b,c)</m> is often called an <term>ordered triple</term>.
       </p>
     </statement>
   </definition>
@@ -45,8 +45,8 @@
   <definition>
     <statement>
       <p>
-        If <m>A</m> and <m>B</m> are sets, the Cartesian product
-        (or direct product)
+        If <m>A</m> and <m>B</m> are sets, the <term>Cartesian product</term>
+        (or <term>direct product</term>)
         of <m>A</m> and <m>B</m>, denoted <m>A\times B</m>
         (read as
         <q><m>A</m> times <m>B</m></q>
@@ -62,9 +62,9 @@
         We similarly define the Cartesian product of <m>n</m> sets,
         say <m>A_1, \ldots, A_n</m>, by
         <me>
-          \tcboxmath{\prod_{i=1}^{n} A_i\coloneqq A_1\times \cdots \times A_n\coloneqq \{(a_1,\ldots,a_n)\mid  a_j\in A_j \mbox{ for all } 1\leq j\leq n\}}\
+          \tcboxmath{\prod_{i=1}^{n} A_i\coloneqq A_1\times \cdots \times A_n\coloneqq \{(a_1,\ldots,a_n)\mid  a_j\in A_j \text{ for all } 1\leq j\leq n\}}
         </me>,
-        where <m>A_i</m> is referred to as the <m>i</m>th factor of the Cartesian product.
+        where <m>A_i</m> is referred to as the <m>i</m>th <term>factor</term> of the Cartesian product.
         As a special case, the set
         <me>
           \underbrace{A\times \cdots \times A}_{n\text{ factors } }
@@ -82,9 +82,9 @@
   <example xml:id="ex_CartesianProduct">
     <statement>
       <p>
-        If <m>A=\{a,b,c\}</m> and <m>B=\{\smiley,\frownie\}</m>, then
+        If <m>A=\{a,b,c\}</m> and <m>B=\{\alpha,\beta\}</m>, then
         <me>
-          A\times B=\{(a,\smiley), (a,\frownie),(b,\smiley),(b,\frownie), (c,\smiley),(c,\frownie)\}
+          A\times B=\{(a,\alpha), (a,\beta),(b,\alpha),(b,\beta), (c,\alpha),(c,\beta)\}
         </me>.
       </p>
     </statement>

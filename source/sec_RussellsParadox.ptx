@@ -7,7 +7,7 @@
     Or, in other words, is there a set of all sets?
     To help wrap our heads around this issue,
     consider the following riddle,
-    known as the <em>Barber of Seville Paradox</em>.
+    known as the <term>Barber of Seville Paradox</term>.
   </p>
   <blockquote>
     In Seville, there is a barber who shaves all those men, and only those men, who do not shave themselves.  Who shaves the barber?
@@ -22,7 +22,7 @@
   </problem>
   <p>
     <xref ref="prob_barber">Problem</xref>
-    is an example of a <em>paradox</em>.
+    is an example of a <term>paradox</term>.
     A paradox is a statement that can be shown,
     using a given set of axioms and definitions,
     to be both true and false.
@@ -56,7 +56,7 @@
   </problem>
   <p>
     The above paradox is one way of phrasing a paradox referred to as
-    <em>Russell's Paradox</em>,
+    <term>Russell's Paradox</term>,
     named after British mathematician and philosopher
     <url href="https://en.wikipedia.org/wiki/Bertrand_Russell">Bertrand Russell</url>
     (1872<ndash/>1970).

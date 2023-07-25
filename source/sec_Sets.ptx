@@ -3,13 +3,13 @@
   <definition>
     <statement>
       <p>
-        A set is a collection of objects called elements.
+        A <term>set</term> is a collection of objects called <term>elements</term>.
         If <m>A</m> is a set and <m>x</m> is an element of <m>A</m>,
         we write <m>\tcboxmath{x\in A}</m>.
         Otherwise, we write <m>\tcboxmath{x\notin A}</m>.
-        The set containing no elements is called the empty set,
+        The set containing no elements is called the <term>empty set</term>,
         and is denoted by the symbol <m>\tcboxmath{\emptyset}</m>.
-        Any set that contains at least one element is referred to as a nonempty set.
+        Any set that contains at least one element is referred to as a <term>nonempty set</term>.
       </p>
     </statement>
   </definition>
@@ -20,7 +20,7 @@
     <m>A\notin A</m>.
     The language associated to sets is specific.
     We will often define sets using the following notation,
-    called <em>set-builder notation</em>:
+    called <term>set-builder notation</term>:
     <me>
       \tcboxmath{S=\{x \in A\mid P(x)\}}
     </me>,
@@ -46,24 +46,24 @@
     <ul>
       <li>
         <p>
-          <em>Natural Numbers:</em> <m>\tcboxmath{\mathbb{N}\coloneqq \{1,2,3,\ldots\}}</m>.
+          <term>Natural Numbers:</term> <m>\tcboxmath{\mathbb{N}\coloneqq \{1,2,3,\ldots\}}</m>.
           Some books will include zero in the set of natural numbers,
           but we do not.
         </p>
       </li>
       <li>
         <p>
-          <em>Integers:</em> <m>\tcboxmath{\mathbb{Z}\coloneqq \{0, \pm 1, \pm2, \pm 3, \ldots\}}</m>.
+          <term>Integers:</term> <m>\tcboxmath{\mathbb{Z}\coloneqq \{0, \pm 1, \pm2, \pm 3, \ldots\}}</m>.
         </p>
       </li>
       <li>
         <p>
-          <em>Rational Numbers:</em> <m>\tcboxmath{\mathbb{Q}\coloneqq \{a/b \mid a, b \in \mathbb{Z} \text{ and } b \neq 0\}}</m>.
+          <term>Rational Numbers:</term> <m>\tcboxmath{\mathbb{Q}\coloneqq \{a/b \mid a, b \in \mathbb{Z} \text{ and } b \neq 0\}}</m>.
         </p>
       </li>
       <li>
         <p>
-          <em>Real Numbers:</em> <m>\tcboxmath{\mathbb{R}}</m> denotes the set of real numbers.
+          <term>Real Numbers:</term> <m>\tcboxmath{\mathbb{R}}</m> denotes the set of real numbers.
           We are taking for granted that you have some familiarity with this set.
         </p>
       </li>
@@ -138,7 +138,7 @@
     <statement>
       <p>
         For <m>a,b\in\mathbb{R}</m> with <m>a\lt b</m>,
-        we define the following sets, referred to as intervals.
+        we define the following sets, referred to as <term>intervals</term>.
         <ol marker="labeltextrmalph">
           <li>
             <p>
@@ -178,12 +178,12 @@
         and <m>\tcboxmath{(-\infty,b]}</m>.
         Intervals of the form <m>(a,b)</m>,
         <m>(-\infty,b)</m>, <m>(a,\infty)</m>,
-        and <m>(-\infty,\infty)</m> are called open intervals while <m>[a,b]</m> is referred to as a closed interval.
-        A bounded interval is any interval of the form <m>(a,b)</m>,
+        and <m>(-\infty,\infty)</m> are called <term>open intervals</term> while <m>[a,b]</m> is referred to as a <term>closed interval</term>.
+        A <term>bounded interval</term> is any interval of the form <m>(a,b)</m>,
         <m>[a,b)</m>,
         <m>(a,b]</m>, and <m>[a,b]</m>.
         For bounded intervals,
-        <m>a</m> and <m>b</m> are called the endpoints of the interval.
+        <m>a</m> and <m>b</m> are called the <term>endpoints</term> of the interval.
       </p>
     </statement>
   </definition>
@@ -219,7 +219,7 @@
     <statement>
       <p>
         If <m>A</m> and <m>B</m> are sets,
-        then we say that <m>A</m> is a subset of <m>B</m>,
+        then we say that <m>A</m> is a <term>subset</term> of <m>B</m>,
         written <m>\tcboxmath{A\subseteq B}</m>,
         provided that every element of <m>A</m> is an element of <m>B</m>.
       </p>
@@ -260,17 +260,17 @@
   <p>
     Observe that
     <q><m>A\subseteq B</m></q>
-    is equivalent to ``For all <m>x</m>
+    is equivalent to <q>For all <m>x</m>
     (in the universe of discourse),
     if <m>x\in A</m>,
-    then <m>x\in B</m>." Since we know how to deal with
+    then <m>x\in B</m>.</q> Since we know how to deal with
     <q>for all</q>
     statements and conditional propositions,
     we know how to go about proving <m>A\subseteq B</m>.
     If <m>A</m> happens to be the empty set,
-    then the statement ``For all <m>x</m>
+    then the statement <q>For all <m>x</m>
     (in the universe of discourse),
-    if <m>x\in A</m>, then <m>x\in B</m>" is vacuously true.
+    if <m>x\in A</m>, then <m>x\in B</m></q> is vacuously true.
     This is in agreement with <xref ref="thm_trivial_subsets">Theorem</xref>(b),
     which states that the empty set is always a subset of every set.
     In light of this,
@@ -297,7 +297,7 @@
   <definition>
     <statement>
       <p>
-        Two sets <m>A</m> and <m>B</m> are equal,
+        Two sets <m>A</m> and <m>B</m> are <term>equal</term>,
         denoted <m>\tcboxmath{A=B}</m>,
         if the sets contain the same elements.
       </p>
@@ -334,7 +334,7 @@
     <statement>
       <p>
         If <m>A\subseteq B</m>,
-        then <m>A</m> is called a proper subset provided that <m>A\neq B</m>.
+        then <m>A</m> is called a <term>proper subset</term> provided that <m>A\neq B</m>.
         In this case, we may write
         <m>\tcboxmath{A\subset B}</m> or <m>\tcboxmath{A\subsetneq B}</m>.
       </p>
@@ -351,22 +351,22 @@
         <ol marker="labeltextrmalph">
           <li>
             <p>
-              The <em>union</em> of the sets <m>A</m> and <m>B</m> is <m>\tcboxmath{A \cup B \coloneqq \{x\in U \mid x\in A \mbox{ or } x\in B \}}</m>.
+              The <term>union</term> of the sets <m>A</m> and <m>B</m> is <m>\tcboxmath{A \cup B \coloneqq \{x\in U \mid x\in A \mbox{ or } x\in B \}}</m>.
             </p>
           </li>
           <li>
             <p>
-              The <em>intersection</em> of the sets <m>A</m> and <m>B</m> is <m>\tcboxmath{A \cap B \coloneqq\{x\in U \mid x\in A \mbox{ and } x\in B \}}</m>.
+              The <term>intersection</term> of the sets <m>A</m> and <m>B</m> is <m>\tcboxmath{A \cap B \coloneqq\{x\in U \mid x\in A \mbox{ and } x\in B \}}</m>.
             </p>
           </li>
           <li>
             <p>
-              The <em>set difference</em> of the sets <m>A</m> and <m>B</m> is <m>\tcboxmath{A \setminus B \coloneqq\{x\in U \mid x\in A \mbox{ and } x\notin B \}}</m>.
+              The <term>set difference</term> of the sets <m>A</m> and <m>B</m> is <m>\tcboxmath{A \setminus B \coloneqq\{x\in U \mid x\in A \mbox{ and } x\notin B \}}</m>.
             </p>
           </li>
           <li>
             <p>
-              The <em>complement of <m>A</m></em>
+              The <term>complement of <m>A</m></term>
               (relative to <m>U</m>)
               is the set <m>\tcboxmath{A^c\coloneqq U \setminus A =\{x \in U \mid x \notin A\}}</m>.
             </p>
@@ -379,7 +379,7 @@
     <statement>
       <p>
         If two sets <m>A</m> and <m>B</m> have the property that <m>A \cap B = \emptyset</m>,
-        then we say that <m>A</m> and <m>B</m> are disjoint sets.
+        then we say that <m>A</m> and <m>B</m> are <term>disjoint sets</term>.
       </p>
     </statement>
   </definition>

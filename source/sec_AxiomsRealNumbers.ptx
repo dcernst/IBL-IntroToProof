@@ -348,28 +348,37 @@ we define the <term>absolute value</term> of <m>a</m>, denoted <m>|a|</m>, via
 
 <p>We can interpret <m>|a|</m> as the distance between <m>a</m> and 0 as depicted in <xref ref="fig_abs_value_as_distance">Figure</xref>.</p>
 
-<figure xml:id="fig_distanceA">
+<figure xml:id="fig_abs_value_as_distance">
 <caption>Visual representation of <m>|a|</m>.</caption>
-\subcaptionbox{<m>a>0</m> }[.48\linewidth]{
-<image>
+<sidebyside widths="50% 50%" valigns="bottom bottom">
+<figure xml:id="fig_distanceA">
+<caption><m>a>0</m></caption>
+<image xml:id="distanceA">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
+\begin{tikzpicture}[scale=1.5,decoration={brace,amplitude=5},text height=1.5ex,text depth=.25ex]
+\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
 \draw[shift={(0,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(0\)};
 \draw[shift={(1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(a\)};
-\draw[decorate] (0,.15)--node[above=2.5mm]{\(|a|\)}(1,.15);\end{tikzpicture}]]>
+\draw[decorate] (0,.15)--node[above=2.5mm]{\(|a|\)}(1,.15);
+\end{tikzpicture}
 </latex-image>
 </image>
-}
-\subcaptionbox{<m>a\lt 0</m> }[.48\linewidth]{
-<image>
+</figure>
+
+<figure xml:id="fig_distanceB">
+<caption><m>a\lt 0</m></caption>
+<image xml:id="distanceB">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
+\begin{tikzpicture}[scale=1.5,decoration={brace,amplitude=5},text height=1.5ex,text depth=.25ex]
+\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
 \draw[shift={(0,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(0\)};
 \draw[shift={(-1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(a\)};
-\draw[decorate] (-1,.15)--node[above=2.5mm]{\(|a|\)}(0,.15);\end{tikzpicture}]]>
+\draw[decorate] (-1,.15)--node[above=2.5mm]{\(|a|\)}(0,.15);
+\end{tikzpicture}
 </latex-image>
 </image>
-}
+</figure>
+</sidebyside>
 </figure>
 
 <theorem>
@@ -501,36 +510,47 @@ This result can be extremely useful in some contexts.</p>
 <p><xref ref="fig_triangle_inequality">Figure</xref>
 depicts two of the cases for the Triangle Inequality.</p>
 
-<figure xml:id="fig_triangle_A">
+<figure xml:id="fig_triangle_inequality">
 <caption>Visual representation of two of the cases for the Triangle Inequality.</caption>
-\subcaptionbox{<m>a\geq 0, b\geq 0</m> }[.48\linewidth]{
-<image>
+<sidebyside widths="50% 50%" valigns="bottom bottom">
+
+<figure xml:id="fig_triangle_A">
+<caption><m>a\geq 0, b\geq 0</m></caption>
+<image xml:id="triangle_A">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
+\begin{tikzpicture}[scale=1.5,decoration={brace,amplitude=5},text height=1.5ex,text depth=.25ex]
+\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
 \draw[shift={(-1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(0\)};
 \draw[shift={(-.3,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(a\)};
 \draw[shift={(.3,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(b\)};
 \draw[shift={(1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(a+b\)};
 \draw[decorate] (-1,.15)--node[above=2.5mm]{\(|a+b|\)}(1,.15);
 \draw[decorate] (.3,-.4)--node[below=2.5mm]{\(|b|\)}(-1,-.4);
-\draw[decorate] (1,-.4)--node[below=2.5mm]{\(|a|\)}(.3,-.4);\end{tikzpicture}]]>
+\draw[decorate] (1,-.4)--node[below=2.5mm]{\(|a|\)}(.3,-.4);
+\end{tikzpicture}
 </latex-image>
 </image>
-}
-\subcaptionbox{<m>a\lt 0,b\geq 0</m> }[.48\linewidth]{
-<image>
+</figure>
+
+<figure xml:id="fig_triangle_B">
+<caption><m>a\lt 0,b\geq 0</m></caption>
+<image xml:id="triangle_B">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
+\begin{tikzpicture}[scale=1.5,decoration={brace,amplitude=5},text height=1.5ex,text depth=.25ex]
+\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
 \draw[shift={(-1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(a\)};
 \draw[shift={(-.5,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(0\)};
 \draw[shift={(.5,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(a+b\)};
 \draw[shift={(1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(b\)};
 \draw[decorate] (-.5,.15)--node[above=2.5mm]{\(|a+b|\)}(.5,.15);
 \draw[decorate] (-.5,-.4)--node[below=2.5mm]{\(|a|\)}(-1,-.4);
-\draw[decorate] (1,-.4)--node[below=2.5mm]{\(|b|\)}(-.5,-.4);\end{tikzpicture}]]>
+\draw[decorate] (1,-.4)--node[below=2.5mm]{\(|b|\)}(-.5,-.4);
+\end{tikzpicture}
 </latex-image>
 </image>
-}
+</figure>
+
+</sidebyside>
 </figure>
 
 <problem>

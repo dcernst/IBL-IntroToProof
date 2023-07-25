@@ -252,9 +252,9 @@
         <ol>
           <li class="custom-list-style-type" label="">
             <p>
-              ``For all goofy wobblers <m>x</m>,
+              <q>For all goofy wobblers <m>x</m>,
               there exists a dinglehopper <m>y</m> such that if <m>x</m> is a not a nugget,
-              then <m>y</m> is a doofus."
+              then <m>y</m> is a doofus.</q>
             </p>
           </li>
         </ol>
@@ -272,8 +272,8 @@
         <ol>
           <li class="custom-list-style-type" label="">
             <p>
-              ``If <m>x</m> and <m>y</m> are both snazzy,
-              then <m>xy</m> is not nifty."
+              <q>If <m>x</m> and <m>y</m> are both snazzy,
+              then <m>xy</m> is not nifty.</q>
             </p>
           </li>
         </ol>
@@ -538,8 +538,11 @@
     <q>Without loss of generality, assume<ellipsis/></q>. For example,
     here is a proof of <xref ref="thm_nm_odd_implies_n_or_m_odd">Theorem</xref> that utilizes this approach.
   </p>
+
+  <proof>
+    <title>Proof of <xref ref="thm_nm_odd_implies_n_or_m_odd">Theorem</xref></title>
   <p>
-    <em>Proof of <xref ref="thm_nm_odd_implies_n_or_m_odd">Theorem</xref></em>.
+    <!-- <alert>Proof of <xref ref="thm_nm_odd_implies_n_or_m_odd">Theorem</xref></alert>. -->
     We will prove the contrapositive.
     Let <m>n,m\in\mathbb{Z}</m> and assume <m>n</m> is even or <m>m</m> is even.
     Without loss of generality, assume <m>n</m> is even.
@@ -556,6 +559,8 @@
     and hence for all <m>n,m\in\mathbb{Z}</m>,
     if <m>nm</m> is odd, then <m>n</m> is odd and <m>m</m> is odd.
   </p>
+</proof>
+
   <p>
     Note that it would not be appropriate to utilize the
     <q>without loss of generality</q>

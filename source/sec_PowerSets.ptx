@@ -16,7 +16,7 @@
     <statement>
       <p>
         If <m>S</m> is a set,
-        then the power set of <m>S</m> is the set of subsets of <m>S</m>.
+        then the <term>power set</term> of <m>S</m> is the set of subsets of <m>S</m>.
         The power set of <m>S</m> is denoted <m>\tcboxmath{\mathcal{P}(S)}</m>.
       </p>
     </statement>
@@ -92,8 +92,8 @@
   <p>
     Since the next theorem is a biconditional proposition,
     you need to write two distinct subproofs,
-    one for ``<m>S\subseteq T</m> implies
-    <m>\mathcal{P}(S)\subseteq \mathcal{P}(T)</m>", and another for ``<m>\mathcal{P}(S)\subseteq \mathcal{P}(T)</m> implies <m>S\subseteq T</m>".
+    one for <q><m>S\subseteq T</m> implies
+    <m>\mathcal{P}(S)\subseteq \mathcal{P}(T)</m></q>, and another for <q><m>\mathcal{P}(S)\subseteq \mathcal{P}(T)</m> implies <m>S\subseteq T</m></q>.
   </p>
   <theorem>
     <statement>
@@ -142,7 +142,7 @@
     's (1845<ndash/>1918) investigation into the
     <q>size</q>
     of sets.
-    <em>Cantor's Theorem</em>
+    <term>Cantor's Theorem</term>
     (see <xref ref="thm_Cantors_Theorem">Theorem</xref>)
     states that the power set of a set<mdash/>even if the set is infinite<mdash/>is always
     <q>larger</q>

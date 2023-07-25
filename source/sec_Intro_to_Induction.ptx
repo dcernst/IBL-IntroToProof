@@ -1,245 +1,248 @@
 <section xml:id="sec_Intro_to_Induction">
   <title>Introduction to Induction</title>
   <p>
-    Consider the claims:
-    <ol marker="labeltextrmalph">
-      <li>
-        <p>
-          For all <m>n\in\mathbb{N}</m>,
-          <m>\displaystyle 1+2+3+\cdots +n=\frac{n(n+1)}{2}</m>.
-        </p>
-      </li>
-      <li>
-        <p>
-          For all <m>n\in\mathbb{N}</m>,
-          <m>n^{2}+n+41</m> is prime.
-        </p>
-      </li>
-    </ol>
+Consider the claims:
+<ol marker="labeltextrmalph">
+  <li>
+<p>
+  For all <m>n\in\mathbb{N}</m>,
+  <m>\displaystyle 1+2+3+\cdots +n=\frac{n(n+1)}{2}</m>.
+</p>
+  </li>
+  <li>
+<p>
+  For all <m>n\in\mathbb{N}</m>,
+  <m>n^{2}+n+41</m> is prime.
+</p>
+  </li>
+</ol>
   </p>
   <p>
-    Let's take a look at potential proofs.
+Let's take a look at potential proofs.
   </p>
   <p>
-    <em>
-    <q>Proof</q>
-    of (a).</em> If <m>n=1</m>, then <m>1=\frac{1(1+1)}{2}</m>.
-    If <m>n=2</m>, then <m>1+2=3=\frac{2(2+1)}{2}</m>.
-    If <m>n=3</m>, then <m>1+2+3=6=\frac{3(3+1)}{2}</m>, and so on.
+<alert>
+<q>Proof</q>
+of (a).</alert> If <m>n=1</m>, then <m>1=\frac{1(1+1)}{2}</m>.
+If <m>n=2</m>, then <m>1+2=3=\frac{2(2+1)}{2}</m>.
+If <m>n=3</m>, then <m>1+2+3=6=\frac{3(3+1)}{2}</m>, and so on.
   </p>
   <p>
-    <em>
-    <q>Proof</q>
-    of (b).</em> If <m>n=1</m>, then <m>n^{2}+n+41=43</m>,
-    which is prime.
-    If <m>n=2</m>, then <m>n^{2}+n+41=47</m>, which is prime.
-    If <m>n=3</m>, then <m>n^{2}+n+41=53</m>,
-    which is prime, and so on.
+<alert>
+<q>Proof</q>
+of (b).</alert> If <m>n=1</m>, then <m>n^{2}+n+41=43</m>,
+which is prime.
+If <m>n=2</m>, then <m>n^{2}+n+41=47</m>, which is prime.
+If <m>n=3</m>, then <m>n^{2}+n+41=53</m>,
+which is prime, and so on.
   </p>
   <p>
-    Are these actual proofs?
-    No!
-    In fact, the second claim is not even true.
-    If <m>n=41</m>, then <m>n^{2}+n+41=41^{2}+41+41=41(41+1+1)</m>,
-    which is not prime since it has 41 as a factor.
-    It turns out that the first claim is true,
-    but what we wrote cannot be a proof since the same type of reasoning when applied to the second claim seems to prove something that isn not actually true.
-    We need a rigorous way of capturing
-    <q>and so on</q>
-    and a way to verify whether it really is
-    <q>and so on.</q>
+Are these actual proofs?
+No!
+In fact, the second claim is not even true.
+If <m>n=41</m>, then <m>n^{2}+n+41=41^{2}+41+41=41(41+1+1)</m>,
+which is not prime since it has 41 as a factor.
+It turns out that the first claim is true,
+but what we wrote cannot be a proof since the same type of reasoning when applied to the second claim seems to prove something that isn not actually true.
+We need a rigorous way of capturing
+<q>and so on</q>
+and a way to verify whether it really is
+<q>and so on.</q>
   </p>
   <p>
-    Recall that an axiom is a basic mathematical assumption.
-    The following axiom is one of the Peano Axioms,
-    which is a collection of axioms for the natural numbers introduced in the 19th century by Italian mathematician
-    <url href="https://en.wikipedia.org/wiki/Giuseppe_Peano">Giuseppe Peano</url>
-    (1858<ndash/>1932).
+Recall that an axiom is a basic mathematical assumption.
+The following axiom is one of the Peano Axioms,
+which is a collection of axioms for the natural numbers introduced in the 19th century by Italian mathematician
+<url href="https://en.wikipedia.org/wiki/Giuseppe_Peano">Giuseppe Peano</url>
+(1858<ndash/>1932).
   </p>
+
   <axiom xml:id="axiom_induction">
-    <title>Axiom of Induction</title>
-    <statement>
-      <p>
-        Let <m>S\subseteq \mathbb{N}</m> such that both
-        <ol marker="labeltextrmroman">
-          <li>
-            <p>
-              <m>1\in S</m>, and
-            </p>
-          </li>
-          <li>
-            <p>
-              if <m>k\in S</m>, then <m>k+1\in S</m>.
-            </p>
-          </li>
-        </ol>
-      </p>
-      <p>
-        Then <m>S=\mathbb{N}</m>.
-      </p>
-    </statement>
+<creator>Axiom of Induction</creator>
+<statement>
+  <p>
+Let <m>S\subseteq \mathbb{N}</m> such that both
+<ol marker="labeltextrmroman">
+  <li>
+<p>
+  <m>1\in S</m>, and
+</p>
+  </li>
+  <li>
+<p>
+  if <m>k\in S</m>, then <m>k+1\in S</m>.
+</p>
+  </li>
+</ol>
+  </p>
+  <p>
+Then <m>S=\mathbb{N}</m>.
+  </p>
+</statement>
   </axiom>
   <p>
-    We can think of the set <m>S</m> as a ladder,
-    where the first hypothesis as saying that we have a first rung of a ladder.
-    The second hypothesis says that if we are on any arbitrary rung of the ladder,
-    then we can always get to the next rung.
-    Taken together,
-    this says that we can get from the first rung to the second,
-    from the second to the third, and in general,
-    from any <m>k</m>th rung to the <m>(k+1)</m>st rung,
-    so that our ladder is actually <m>\mathbb{N}</m>.
-    Do you agree that the Axiom of Induction is a pretty reasonable assumption?
+We can think of the set <m>S</m> as a ladder,
+where the first hypothesis as saying that we have a first rung of a ladder.
+The second hypothesis says that if we are on any arbitrary rung of the ladder,
+then we can always get to the next rung.
+Taken together,
+this says that we can get from the first rung to the second,
+from the second to the third, and in general,
+from any <m>k</m>th rung to the <m>(k+1)</m>st rung,
+so that our ladder is actually <m>\mathbb{N}</m>.
+Do you agree that the Axiom of Induction is a pretty reasonable assumption?
   </p>
   <p>
-    At the end of <xref ref="sec_RussellsParadox">Section</xref>,
-    we briefly discussed ZFC, which is the standard choice for axiomatic set theory.
-    It turns out that one can prove the Axiom of Induction as a theorem in ZFC. However,
-    that will not be the approach we take.
-    Instead, we are assuming the Axiom of Induction is true.
-    Using this axiom, we can prove the following theorem,
-    known as the <em>Principle of Mathematical Induction</em>.
-    One approach to proving this theorem is to let
-    <m>S=\{k\in \mathbb{N}\mid P(k) \text{ is true } \}</m> and use the Axiom of Induction.
-    The set <m>S</m> is sometimes called the <em>truth set</em>.
-    Your job is to show that the truth set is all of <m>\mathbb{N}</m>.
+At the end of <xref ref="sec_RussellsParadox">Section</xref>,
+we briefly discussed ZFC, which is the standard choice for axiomatic set theory.
+It turns out that one can prove the Axiom of Induction as a theorem in ZFC. However,
+that will not be the approach we take.
+Instead, we are assuming the Axiom of Induction is true.
+Using this axiom, we can prove the following theorem,
+known as the <term>Principle of Mathematical Induction</term>.
+One approach to proving this theorem is to let
+<m>S=\{k\in \mathbb{N}\mid P(k) \text{ is true } \}</m> and use the Axiom of Induction.
+The set <m>S</m> is sometimes called the <term>truth set</term>.
+Your job is to show that the truth set is all of <m>\mathbb{N}</m>.
   </p>
   <theorem xml:id="thm_PMI">
-    <title>Principle of Mathematical Induction</title>
-    <statement>
-      <p>
-        Let <m>P(1), P(2), P(3), \ldots</m> be a sequence of statements,
-        one for each natural number.
-        Assume
-        <ol marker="labeltextrmroman">
-          <li>
-            <p>
-              <m>P(1)</m> is true, and
-            </p>
-          </li>
-          <li>
-            <p>
-              for all <m>k\geq 1</m>, if <m>P(k)</m> is true,
-              then <m>P(k+1)</m> is true.
-            </p>
-          </li>
-        </ol>
-      </p>
-      <p>
-        Then <m>P(n)</m> is true for all <m>n\in\mathbb{N}</m>.
-      </p>
-    </statement>
-  </theorem>
+<title>Principle of Mathematical Induction</title>
+<statement>
   <p>
-    The Principle of Mathematical Induction provides us with a process for proving statements of the form:
-    <q>For all <m>n\in\mathbb{N}</m>, <m>P(n)</m>,</q>
-    where <m>P(n)</m> is some predicate involving <m>n</m>.
-    Hypothesis (i) above is called the <em>base step</em>
-    (or <em>base case</em>)
-    while (ii) is called the <em>inductive step</em>.
+Let <m>P(1), P(2), P(3), \ldots</m> be a sequence of statements,
+one for each natural number.
+Assume
+<ol marker="labeltextrmroman">
+  <li>
+<p>
+  <m>P(1)</m> is true, and
+</p>
+  </li>
+  <li>
+<p>
+  for all <m>k\geq 1</m>, if <m>P(k)</m> is true,
+  then <m>P(k+1)</m> is true.
+</p>
+  </li>
+</ol>
   </p>
   <p>
-    You should not confuse <em>mathematical induction</em>
-    with <em>inductive reasoning</em>
-    associated with the natural sciences.
-    Inductive reasoning is a scientific method whereby one induces general principles from observations.
-    On the other hand,
-    mathematical induction is a deductive form of reasoning used to establish the validity of a proposition.
+Then <m>P(n)</m> is true for all <m>n\in\mathbb{N}</m>.
+  </p>
+</statement>
+  </theorem>
+  <p>
+The Principle of Mathematical Induction provides us with a process for proving statements of the form:
+<q>For all <m>n\in\mathbb{N}</m>, <m>P(n)</m>,</q>
+where <m>P(n)</m> is some predicate involving <m>n</m>.
+Hypothesis (i) above is called the <term>base step</term>
+(or <term>base case</term>)
+while (ii) is called the <term>inductive step</term>.
+  </p>
+  <p>
+You should not confuse <em>mathematical induction</em>
+with <em>inductive reasoning</em>
+associated with the natural sciences.
+Inductive reasoning is a scientific method whereby one induces general principles from observations.
+On the other hand,
+mathematical induction is a deductive form of reasoning used to establish the validity of a proposition.
   </p>
   <paragraphs>
-    <title>Skeleton Proof</title>
-    <p>
-      [Proof of <m>(\forall n\in\mathbb{N})P(n)</m> by Induction] Here is the general structure for a proof by induction.
-    </p>
-    <proof>
-      <p>
-        We proceed by induction.
-        <ol>
-          <li>
-            <title>(i)</title>
-            <p>
-              Base step: <em>[Verify that <m>P(1)</m> is true.
-              This often, but not always,
-              amounts to plugging <m>n=1</m> into two sides of some claimed equation and <em>verifying</em>
-              that both sides are actually equal.]</em>
-            </p>
-          </li>
-          <li>
-            <title>(ii)</title>
-            <p>
-              Inductive step: <em>[Your goal is to prove
-              <q>For all <m>k\in\mathbb{N}</m>,
-              if <m>P(k)</m> is true, then <m>P(k+1)</m> is true.</q>
-              ]</em> Let <m>k\in\mathbb{N}</m> and assume that <m>P(k)</m> is true.
-              <em>[Do something to derive that <m>P(k+1)</m> is true.]</em>
-              Therefore, <m>P(k+1)</m> is true.
-            </p>
-          </li>
-        </ol>
-      </p>
-      <p>
-        Thus, by induction, <m>P(n)</m> is true for all <m>n\in\mathbb{N}</m>.
-      </p>
-    </proof>
+<title>Skeleton Proof</title>
+<p>
+  [Proof of <m>(\forall n\in\mathbb{N})P(n)</m> by Induction] Here is the general structure for a proof by induction.
+</p>
+<proof>
+  <p>
+We proceed by induction.
+<ol>
+  <li>
+<title>(i)</title>
+<p>
+  Base step: <em>[Verify that <m>P(1)</m> is true.
+  This often, but not always,
+  amounts to plugging <m>n=1</m> into two sides of some claimed equation and <em>verifying</em>
+  that both sides are actually equal.]</em>
+</p>
+  </li>
+  <li>
+<title>(ii)</title>
+<p>
+  Inductive step: <em>[Your goal is to prove
+  <q>For all <m>k\in\mathbb{N}</m>,
+  if <m>P(k)</m> is true, then <m>P(k+1)</m> is true.</q>
+  ]</em> Let <m>k\in\mathbb{N}</m> and assume that <m>P(k)</m> is true.
+  <em>[Do something to derive that <m>P(k+1)</m> is true.]</em>
+  Therefore, <m>P(k+1)</m> is true.
+</p>
+  </li>
+</ol>
+  </p>
+  <p>
+Thus, by induction, <m>P(n)</m> is true for all <m>n\in\mathbb{N}</m>.
+  </p>
+</proof>
   </paragraphs>
   <p>
-    Prove the next few theorems using induction.
-    The first result may look familiar from calculus.
-    Recall that <m>\displaystyle \sum_{i=1}^{n}i=1+2+3+\cdots +n</m>,
-    by definition.
+Prove the next few theorems using induction.
+The first result may look familiar from calculus.
+Recall that <m>\displaystyle \sum_{i=1}^{n}i=1+2+3+\cdots +n</m>,
+by definition.
   </p>
   <theorem>
-    <statement>
-      <p>
-        For all <m>n\in\mathbb{N}</m>,
-        <m>\displaystyle \sum_{i=1}^{n}i=\frac{n(n+1)}{2}</m>.
-      </p>
-    </statement>
+<statement>
+  <p>
+For all <m>n\in\mathbb{N}</m>,
+<m>\displaystyle \sum_{i=1}^{n}i=\frac{n(n+1)}{2}</m>.
+  </p>
+</statement>
   </theorem>
   <theorem>
-    <statement>
-      <p>
-        For all <m>n\in\mathbb{N}</m>, 3 divides <m>4^{n}-1</m>.
-      </p>
-    </statement>
+<statement>
+  <p>
+For all <m>n\in\mathbb{N}</m>, 3 divides <m>4^{n}-1</m>.
+  </p>
+</statement>
   </theorem>
   <theorem>
-    <statement>
-      <p>
-        For all <m>n\in\mathbb{N}</m>, 6 divides <m>n^{3}-n</m>.
-      </p>
-    </statement>
+<statement>
+  <p>
+For all <m>n\in\mathbb{N}</m>, 6 divides <m>n^{3}-n</m>.
+  </p>
+</statement>
   </theorem>
   <theorem>
-    <statement>
-      <p>
-        Let <m>p_{1}, p_{2}, \ldots,
-        p_{n}</m> be <m>n</m> distinct points arranged on a circle.
-        Then the number of line segments joining all pairs of points is <m>\frac{n^{2}-n}{2}</m>.
-      </p>
-    </statement>
+<statement>
+  <p>
+Let <m>p_{1}, p_{2}, \ldots,
+p_{n}</m> be <m>n</m> distinct points arranged on a circle.
+Then the number of line segments joining all pairs of points is <m>\frac{n^{2}-n}{2}</m>.
+  </p>
+</statement>
   </theorem>
   <problem xml:id="prob_L-shapes">
-    <statement>
-      <p>
-        Consider a grid of squares that is <m>2^n</m> squares wide by <m>2^n</m> squares long,
-        where <m>n\in\mathbb{N}</m>.
-        One of the squares has been cut out,
-        but you do not know which one!
-        You have a bunch of L-shapes made up of <m>3</m> squares.
-        Prove that you can perfectly cover this chessboard with the L-shapes
-        (with no overlap)
-        for any <m>n\in\mathbb{N}</m>.
-        <xref ref="fig_L-shapes">Figure</xref>
-        depicts one possible covering for the case involving <m>n=2</m>.
-      </p>
-    </statement>
+<statement>
+  <p>
+Consider a grid of squares that is <m>2^n</m> squares wide by <m>2^n</m> squares long,
+where <m>n\in\mathbb{N}</m>.
+One of the squares has been cut out,
+but you do not know which one!
+You have a bunch of L-shapes made up of <m>3</m> squares.
+Prove that you can perfectly cover this chessboard with the L-shapes
+(with no overlap)
+for any <m>n\in\mathbb{N}</m>.
+<xref ref="fig_L-shapes">Figure</xref>
+depicts one possible covering for the case involving <m>n=2</m>.
+  </p>
+</statement>
   </problem>
-  <figure xml:id="fig_L-shapes">
-    <caption>One possible covering for the case involving <m>n=2</m> for <xref ref="prob_L-shapes">Problem</xref>.</caption>
-    <image>
+  
+<figure xml:id="fig_L-shapes">
+<caption>One possible covering for the case involving <m>n=2</m> for <xref ref="prob_L-shapes">Problem</xref>.</caption>
+<image width="50%" xml:id="L-shapes">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\draw [fill=grey5] (0,0) rectangle (2,1);
+\begin{tikzpicture}[scale=1.5]
+\draw [fill=grey5] (0,0) rectangle (2,1);
 \draw [fill=grey5] (0,1) rectangle (1,2);
 \draw [fill=grey3] (3,0) rectangle (4,2);
 \draw [fill=grey3] (2,1) rectangle (3,2);
@@ -252,15 +255,18 @@
 \draw[thick] (0,0) grid (4,4);
 \node (y) at (2.5,.5){};
 \node (x) at (3.8,-.5){cut-out square};
-\draw [->, thick] (x) to [out=180,in=270] (y);\end{tikzpicture}]]>
+\draw [->, thick] (x) to [out=180,in=270] (y);
+\end{tikzpicture}
 </latex-image>
-    </image>
-  </figure>
-  <p>
-    \epigraph{Do not stop thinking of life as an adventure.
-    You have no security unless you can live bravely,
-    excitingly, imaginatively;
-    unless you can choose a challenge instead of competence.}{Eleanor Roosevelt,
-    political figure &amp; activist}
-  </p>
+</image>
+</figure>
+
+<p>
+\epigraph{Do not stop thinking of life as an adventure.
+You have no security unless you can live bravely,
+excitingly, imaginatively;
+unless you can choose a challenge instead of competence.}{Eleanor Roosevelt,
+political figure &amp; activist}
+</p>
+
 </section>

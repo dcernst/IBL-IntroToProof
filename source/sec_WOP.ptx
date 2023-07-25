@@ -2,7 +2,7 @@
   <title>The Well-Ordering Principle</title>
   <p>
     The penultimate theorem of this chapter is known as the
-    <em>Well-Ordering Principle</em>.
+    <term>Well-Ordering Principle</term>.
     As you shall see,
     this seemingly obvious theorem requires a bit of work to prove.
     It is worth noting that in some axiomatic systems,
@@ -15,11 +15,11 @@
     <statement>
       <p>
         Let <m>A\subseteq \mathbb{R}</m> and <m>m\in A</m>.
-        Then <m>m</m> is called a maximum
-        (or greatest element)
+        Then <m>m</m> is called a <term>maximum</term>
+        (or <term>greatest element</term>)
         of <m>A</m> if for all <m>a\in A</m>, we have <m>a\leq m</m>.
-        Similarly, <m>m</m> is called minimum
-        (or least element)
+        Similarly, <m>m</m> is called <term>minimum</term>
+        (or <term>least element</term>)
         of <m>A</m> if for all <m>a\in A</m>, we have <m>m\leq a</m>.
       </p>
     </statement>
@@ -139,7 +139,7 @@
     <statement>
       <p>
         If <m>A</m> is a nonempty subset of the integers and there exists <m>l\in \mathbb{Z}</m> such that
-        <m>\l\leq a</m> for all <m>a\in A</m>,
+        <m>l\leq a</m> for all <m>a\in A</m>,
         then <m>A</m> contains a least element.
       </p>
     </statement>
@@ -155,9 +155,9 @@
   </theorem>
   <p>
     The element <m>l</m> in <xref ref="thm_generalized_WOP">Theorem</xref>
-    is referred to as a <em>lower bound</em>
+    is referred to as a <term>lower bound</term>
     for <m>A</m> while the element <m>u</m> in <xref ref="thm_reverse_WOP">Theorem</xref> is called an
-    <em>upper bound</em> for <m>A</m>.
+    <term>upper bound</term> for <m>A</m>.
     We will study lower and upper bounds in more detail in <xref ref="sec_AxiomsRealNumbers">Section</xref>.
   </p>
   <p>
