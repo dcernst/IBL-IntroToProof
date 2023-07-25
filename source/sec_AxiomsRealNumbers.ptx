@@ -1,29 +1,20 @@
 <section xml:id="sec_AxiomsRealNumbers">
   <title>Axioms of the Real Numbers</title>
 
-  <p>
-    Our axioms for the real numbers fall into three categories:
-    <ol>
-      <li>
-        <p>
-          <b>Field Axioms:</b> These axioms provide the essential properties of arithmetic involving addition and subtraction.
-        </p>
-      </li>
-      <li>
-        <p>
-          <b>Order Axioms:</b> These axioms provide the necessary properties of inequalities.
-        </p>
-      </li>
-      <li>
-        <p>
-          <b>Completeness Axiom:</b> This axiom ensures that the familiar number line that we use to model the real numbers does not have any holes in it.
-        </p>
-      </li>
-    </ol>
-  </p>
-  <p>
-    We begin with the Field Axioms.
-  </p>
+<p>
+Our axioms for the real numbers fall into three categories:
+<ol>
+<li><p><alert>Field Axioms:</alert> These axioms provide the essential properties of arithmetic involving addition and subtraction.
+</p></li>
+<li>
+<p><alert>Order Axioms:</alert> These axioms provide the necessary properties of inequalities.
+</p></li>
+<li><p><alert>Completeness Axiom:</alert> This axiom ensures that the familiar number line that we use to model the real numbers does not have any holes in it.
+</p></li>
+</ol>
+</p>
+
+<p>We begin with the Field Axioms.</p>
 
 <axiom xml:id="axiom_field_axioms">
 <creator>Field Axioms</creator>
@@ -52,680 +43,468 @@
 </p>
 </statement>
 </axiom>
-
-  <!-- <paragraphs xml:id="axiom_field_axioms">
-    <title>Axioms</title>
-    <p>
-      [Field Axioms] There exist operations <m>+</m> (addition) and <m>\cdot</m> (multiplication) on <m>\mathbb{R}</m> satisfying:
-      <ol>
-        <li>
-          <title>(F1)</title>
-          <p>
-            (Associativity for Addition) For all
-            <m>a,
-            b, c\in \mathbb{R}</m> we have <m>(a+b)+c = a+(b+c)</m>;
-          </p>
-        </li>
-        <li>
-          <title>(F2)</title>
-          <p>
-            (Commutativity for Addition) For all
-            <m>a,b\in \mathbb{R}</m>, we have <m>a+b=b+a</m>;
-          </p>
-        </li>
-        <li>
-          <title>(F3)</title>
-          <p>
-            (Additive Identity) There exists
-            <m>0\in\mathbb{R}</m> such that for all <m>a\in\mathbb{R}</m>,
-            <m>0+a=a</m>;
-          </p>
-        </li>
-        <li>
-          <title>(F4)</title>
-          <p>
-            (Additive Inverses) For all <m>a\in\mathbb{R}</m> there exists
-            <m>-a\in\mathbb{R}</m> such that <m>a+(-a)=0</m>;
-          </p>
-        </li>
-        <li>
-          <title>(F5)</title>
-          <p>
-            (Associativity for Multiplication) For all
-            <m>a,
-            b, c\in \mathbb{R}</m> we have <m>(ab)c = a(bc)</m>;
-          </p>
-        </li>
-        <li>
-          <title>(F6)</title>
-          <p>
-            (Commutativity for Multiplication) For all
-            <m>a,b\in \mathbb{R}</m>, we have <m>ab=ba</m>;
-          </p>
-        </li>
-        <li>
-          <title>(F7)</title>
-          <p>
-            (Multiplicative Identity) There exists
-            <m>1\in\mathbb{R}</m> such that <m>1\neq 0</m> and for all <m>a\in\mathbb{R}</m>,
-            <m>1a=a</m>;
-          </p>
-        </li>
-        <li>
-          <title>(F8)</title>
-          <p>
-            (Multiplicative Inverses) For all <m>a\in\mathbb{R}\setminus\{0\}</m> there exists
-            <m>a^{-1}\in\mathbb{R}</m> such that <m>aa^{-1}=1</m>.
-          </p>
-        </li>
-        <li>
-          <title>(F9)</title>
-          <p>
-            (Distributive Property) For all
-            <m>a,b,c\in \mathbb{R}</m>, <m>a(b+c)=ab+ac</m>;
-          </p>
-        </li>
-      </ol>
-    </p>
-  </paragraphs> -->
   
-  <p>
-    In the language of abstract algebra, Axioms<nbsp/>F1<ndash/>F4 and<nbsp/>F5<ndash/>F8 make each of <m>\mathbb{R}</m> and
-    <m>\mathbb{R}\setminus\{0\}</m> an abelian group under addition and multiplication,
-    respectively.
-    Axiom<nbsp/>F9 provides a way for the operations of addition and multiplication to interact.
-    Collectively, Axioms<nbsp/>F1<ndash/>F9 make the real numbers a <term>field</term>.
-    Axioms<nbsp/>F3 and F7 state the existence of additive and multiplicative identities,
-    but these axioms do not assume that the elements are the unique elements with the specified properties.
-    However, we can prove that this is the case.
-    That is, <m>0</m> and <m>1</m> of
-    <m>\mathbb{R}</m> are the unique <term>additive</term>
-    and <term>multiplicative identities</term> in <m>\mathbb{R}</m>.
-    To prove the following theorem,
-    suppose <m>0</m> and <m>0'</m> are both additive identities in
-    <m>\mathbb{R}</m> and then show that <m>0=0'</m>.
-    This shows that there can only be one additive identity.
-    It is important to point out that we are not proving that the number <m>0</m> introduced in Axiom<nbsp/>F3 is unique,
-    but rather there is a unique number with the property specified in Axiom<nbsp/>F3.
-  </p>
-  <theorem xml:id="thm_unique_additive_identity">
-    <statement>
-      <p>
-        There exists a unique additive identity of <m>\mathbb{R}</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    To prove the next theorem,
-    mimic the approach you used to prove <xref ref="thm_unique_additive_identity">Theorem</xref>.
-  </p>
-  <theorem xml:id="thm_unique_multiplicative_identity">
-    <statement>
-      <p>
-        There exists a unique multiplicative identity of <m>\mathbb{R}</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    Similar to Axioms<nbsp/>F3 and F7, Axioms<nbsp/>F4 and F8 state the existence of additive and multiplicative inverses,
-    but these axioms do not assume that these elements are the unique elements with the specified properties.
-    However, we can prove that for every <m>a\in\mathbb{R}</m>,
-    the elements <m>-a</m> and <m>a^{-1}</m>
-    (as long as <m>a\neq 0</m>)
-    are the unique <term>additive</term>
-    and <term>multiplicative inverses</term>, respectively.
-  </p>
-  <theorem xml:id="thm_unique_additive_inverse">
-    <statement>
-      <p>
-        Every real number has a unique additive inverse.
-      </p>
-    </statement>
-  </theorem>
-  <theorem>
-    <statement>
-      <p>
-        Every nonzero real number has a unique multiplicative inverse.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    In light of the last two theorems,
-    we now know that sticking a minus sign in front of <m>a\in\mathbb{R}</m> or raising
-    <m>a\in\mathbb{R}\setminus\{0\}</m> to <m>-1</m> each correspond to an operation that yields a unique element with the corresponding inverse property.
-  </p>
-  <p>
-    Since we are taking a formal axiomatic approach to the real numbers,
-    we should make it clear how the natural numbers are embedded in <m>\mathbb{R}</m>.
-  </p>
-  <definition>
-    <statement>
-      <p>
-        We define the <term>natural numbers</term>,
-        denoted by <m>\mathbb{N}</m>,
-        to be the smallest subset of <m>\mathbb{R}</m> satisfying:
-        <ol marker="labeltextrmalph">
-          <li>
-            <p>
-              <m>1\in\mathbb{N}</m>, and
-            </p>
-          </li>
-          <li>
-            <p>
-              for all <m>n\in\mathbb{N}</m>,
-              we have <m>n+1\in\mathbb{N}</m>.
-            </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-  </definition>
-  <p>
-    Notice the similarity between the definition of the natural numbers presented above and the Axiom of Induction given in <xref ref="sec_Intro_to_Induction">Section</xref>.
-    Of course, we use the standard numeral system to represent the natural numbers,
-    so that <m>\mathbb{N}= \{1,2,3,4,5,6,7,8,9,10\ldots\}</m>.
-  </p>
-  <p>
-    Given the natural numbers, Axiom<nbsp/>F3/<xref ref="thm_unique_additive_identity">Theorem</xref>
-    and Axiom<nbsp/>F4/<xref ref="thm_unique_additive_inverse">Theorem</xref>
-    together with the operation of addition allow us to define the <term>integers</term>,
-    denoted by <m>\mathbb{Z}</m>, in the obvious way.
-    That is, the integers consist of the natural numbers together with the additive identity and all of the additive inverses of the natural numbers.
-  </p>
-  <p>
-    We now introduce some common notation that you are likely familiar with.
-    Take a moment to think about why the following is a definition as opposed to an axiom or theorem.
-  </p>
-  <definition xml:id="def_real_number_notation">
-    <statement>
-      <p>
-        For every <m>a,b\in\mathbb{R}</m> and
-        <m>n\in\mathbb{Z}</m>, we define the following:
-        <ol marker="labeltextrmalph">
-          <li>
-            <p>
-              <m>\tcboxmath{a-b\coloneqq a+(-b)}</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\tcboxmath{\displaystyle\frac{a}{b}\coloneqq ab^{-1}}</m> (for <m>b\neq 0</m>)
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\tcboxmath{\displaystyle a^n\coloneqq \begin{cases}\overbrace{aa\cdots a}^n, \amp \text{ if } n\in \mathbb{N}\\ 1, \amp \text{ if } n=0\text{ and } a\neq 0\\ \displaystyle\frac{1}{a^{-n}}, \amp \text{ if } -n\in \mathbb{N}\text{ and } a\neq 0 \end{cases} }</m>
-            </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-  </definition>
-  <p>
-    The set of <term>rational numbers</term>,
-    denoted by <m>\mathbb{Q}</m>,
-    is defined to be the collection of all real numbers having the form given in Part<nbsp/>(b) of <xref ref="def_real_number_notation">Definition</xref>.
-    The <term>irrational numbers</term>
-    are defined to be <m>\mathbb{R}\setminus\mathbb{Q}</m>.
-  </p>
-  <p>
-    Using the Field Axioms,
-    we can prove each of the statements in the following theorem.
-  </p>
-  <theorem xml:id="thm_consequences_of_axioms">
-    <statement>
-      <p>
-        For all <m>a,b,c\in\mathbb{R}</m>, we have the following:
-        <ol marker="labeltextrmalph">
-          <li>
-            <p>
-              <m>a=b</m> if and only if <m>a+c=b+c</m>;
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>0a=0</m>;
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>-a=(-1)a</m>;
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>(-1)^2 = 1</m>;
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>-(-a)=a</m>;
-            </p>
-          </li>
-          <li>
-            <p>
-              If <m>a\neq 0</m>, then <m>(a^{-1})^{-1}=a</m>;
-            </p>
-          </li>
-          <li>
-            <p>
-              If <m>a\neq 0</m> and <m>ab = ac</m>, then <m>b = c</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              If <m>ab=0</m>, then either <m>a=0</m> or <m>b=0</m>.
-            </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    Carefully prove the next theorem by explicitly citing where you are utilizing the Field Axioms and <xref ref="thm_consequences_of_axioms">Theorem</xref>.
-  </p>
-  <theorem>
-    <statement>
-      <p>
-        For all <m>a,b\in\mathbb{R}</m>,
-        we have <m>(a+b)(a-b)=a^2-b^2</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    We now introduce the Order Axioms of the real numbers.
-  </p>
-  <paragraphs xml:id="axiom_order_axioms">
-    <title>Axioms</title>
-    <p>
-      [Order Axioms] For <m>a,b,c\in \mathbb{R}</m>,
-      there is a relation <m>\tcboxmath{\lt }</m> on <m>\mathbb{R}</m> satisfying:
-      <ol>
-        <li>
-          <title>(O1)</title>
-          <p>
-            (Trichotomy Law) If <m>a\neq b</m>,
-            then either <m>a\lt b</m> or <m>b\lt a</m> but not both;
-          </p>
-        </li>
-        <li>
-          <title>(O2)</title>
-          <p>
-            (Transitivity) If <m>a\lt b</m> and <m>b\lt c</m>, then <m>a\lt c</m>;
-          </p>
-        </li>
-        <li>
-          <title>(O3)</title>
-          <p>
-            If <m>a\lt b</m>, then <m>a+c\lt b+c</m>;
-          </p>
-        </li>
-        <li>
-          <title>(O4)</title>
-          <p>
-            If <m>a\lt b</m> and <m>0\lt c</m>, then <m>ac\lt bc</m>;
-          </p>
-        </li>
-      </ol>
-    </p>
-  </paragraphs>
-  <p>
-    Given Axioms<nbsp/>O1<ndash/>O4, we say that the real numbers are a
-    <term>linearly ordered field</term>.
-    We call numbers greater than zero <term>positive</term>
-    and those greater than or equal to zero <term>nonnegative</term>.
-    There are similar definitions for
-    <term>negative</term> and <term>nonpositive</term>.
-  </p>
-  <p>
-    Notice that the Order Axioms are phrased in terms of
-    <q><m>\lt</m></q>. We would also like to be able to utilize
-    <q><m>></m></q>,
-    <q><m>\leq</m></q>, and
-    <q><m>\geq</m></q>.
-  </p>
-  <definition>
-    <statement>
-      <p>
-        For <m>a,b\in\mathbb{R}</m>, we define:
-        <ol marker="labeltextrmalph">
-          <li>
-            <p>
-              <m>\tcboxmath{a>b}</m> if <m>b\lt a</m>;
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\tcboxmath{a\leq b}</m> if <m>a\lt b</m> or <m>a=b</m>;
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\tcboxmath{a\geq b}</m> if <m>b\leq a</m>.
-            </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-  </definition>
-  <p>
-    Notice that we took the existence of the inequalities
-    <q><m>\lt</m></q>,
-    <q><m>></m></q>,
-    <q><m>\leq</m></q>, and
-    <q><m>\geq</m></q>
-    on the real numbers for granted when we defined intervals of real numbers in <xref ref="def_intervals">Definition</xref>.
-  </p>
-  <p>
-    Using the Order Axioms, we can prove many familiar facts.
-  </p>
-  <theorem>
-    <statement>
-      <p>
-        For all <m>a,b\in\mathbb{R}</m>,
-        if <m>a,b>0</m>, then <m>a+b>0</m>;
-        and if <m>a,b\lt 0</m>, then <m>a+b\lt 0</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    The next result extends Axiom<nbsp/>O3.
-  </p>
-  <theorem>
-    <statement>
-      <p>
-        For all <m>a,b,c,d\in\mathbb{R}</m>,
-        if <m>a\lt b</m> and <m>c\lt d</m>, then <m>a+c\lt b+d</m>.
-      </p>
-    </statement>
-  </theorem>
-  <theorem xml:id="thm_additive_inverse_of_a_positive_is_negative">
-    <statement>
-      <p>
-        For all <m>a\in\mathbb{R}</m>,
-        <m>a>0</m> if and only if <m>-a\lt 0</m>.
-      </p>
-    </statement>
-  </theorem>
-  <theorem>
-    <statement>
-      <p>
-        If <m>a</m>, <m>b</m>, <m>c</m>,
-        and <m>d</m> are positive real numbers such that <m>a\lt b</m> and <m>c\lt d</m>,
-        then <m>ac\lt bd</m>.
-      </p>
-    </statement>
-  </theorem>
-  <theorem>
-    <statement>
-      <p>
-        For all <m>a,b\in\mathbb{R}</m>, we have the following:
-        <ol marker="labeltextrmalph">
-          <li>
-            <p>
-              <m>ab>0</m> if and only if either <m>a,b>0</m> or <m>a,b\lt 0</m>;
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>ab\lt 0</m> if and only if
-              <m>a\lt 0\lt b</m> or <m>b\lt 0\lt a</m>.
-            </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-  </theorem>
-  <theorem>
-    <statement>
-      <p>
-        For all positive real numbers <m>a</m> and <m>b</m>,
-        <m>a\lt b</m> if and only if <m>a^2\lt b^2</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    Consider using three cases when approaching the proof of the following theorem.
-  </p>
-  <theorem>
-    <statement>
-      <p>
-        For all <m>a\in\mathbb{R}</m>, we have <m>a^2\geq 0</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    It might come as a surprise that the following result requires proof.
-  </p>
-  <theorem xml:id="thm_0_1">
-    <statement>
-      <p>
-        We have <m>0\lt 1</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    The previous theorem together with <xref ref="thm_additive_inverse_of_a_positive_is_negative">Theorem</xref>
-    implies that <m>-1\lt 0</m> as you expect.
-    It also follows from Axiom<nbsp/>O3 that for all
-    <m>n\in\mathbb{Z}</m>, we have <m>n\lt n+1</m>.
-    We assume that there are no integers between <m>n</m> and <m>n+1</m>.
-  </p>
-  <theorem>
-    <statement>
-      <p>
-        For all <m>a\in\mathbb{R}</m>, if <m>a>0</m>,
-        then <m>a^{-1}>0</m>, and if <m>a\lt 0</m>, then <m>a^{-1}\lt 0</m>.
-      </p>
-    </statement>
-  </theorem>
-  <theorem xml:id="thm_switch_inequality_using_negative">
-    <statement>
-      <p>
-        For all <m>a,b\in \mathbb{R}</m>,
-        if <m>a\lt b</m>, then <m>-b\lt -a</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    The last few results allow us to take for granted our usual understanding of which real numbers are positive and which are negative.
-    The next theorem yields a result that extends <xref ref="thm_switch_inequality_using_negative">Theorem</xref>.
-  </p>
-  <theorem>
-    <statement>
-      <p>
-        For all <m>a,b,c\in \mathbb{R}</m>,
-        if <m>a\lt b</m> and <m>c\lt 0</m>, then <m>bc\lt ac</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    There is a special function that we can now introduce.
-  </p>
-  <definition>
-    <statement>
-      <p>
-        Given <m>a\in\mathbb{R}</m>,
-        we define the <term>absolute value</term> of <m>a</m>, denoted <m>|a|</m>, via
-        <me>
-          \tcboxmath{|a|\coloneqq \begin{cases}a, \amp  \text{ if } a\geq 0\\ -a, \amp  \text{ if } a\lt 0. \end{cases} }
-        </me>
-      </p>
-    </statement>
-  </definition>
-  <theorem>
-    <statement>
-      <p>
-        For all <m>a\in\mathbb{R}</m>,
-        <m>|a|\geq 0</m> with equality only if <m>a=0</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    We can interpret <m>|a|</m> as the distance between <m>a</m> and 0 as depicted in <xref ref="fig_abs_value_as_distance">Figure</xref>.
-  </p>
-  <figure xml:id="fig_distanceA">
-    <caption>Visual representation of <m>|a|</m>.</caption>
-    \subcaptionbox{<m>a>0</m> }[.48\linewidth]{
-    <image>
+<p>In the language of abstract algebra, Axioms<nbsp/>F1<ndash/>F4 and<nbsp/>F5<ndash/>F8 make each of <m>\mathbb{R}</m> and
+<m>\mathbb{R}\setminus\{0\}</m> an abelian group under addition and multiplication,
+respectively.
+Axiom<nbsp/>F9 provides a way for the operations of addition and multiplication to interact.
+Collectively, Axioms<nbsp/>F1<ndash/>F9 make the real numbers a <term>field</term>.
+Axioms<nbsp/>F3 and F7 state the existence of additive and multiplicative identities,
+but these axioms do not assume that the elements are the unique elements with the specified properties.
+However, we can prove that this is the case.
+That is, <m>0</m> and <m>1</m> of
+<m>\mathbb{R}</m> are the unique <term>additive</term>
+and <term>multiplicative identities</term> in <m>\mathbb{R}</m>.
+To prove the following theorem,
+suppose <m>0</m> and <m>0'</m> are both additive identities in
+<m>\mathbb{R}</m> and then show that <m>0=0'</m>.
+This shows that there can only be one additive identity.
+It is important to point out that we are not proving that the number <m>0</m> introduced in Axiom<nbsp/>F3 is unique,
+but rather there is a unique number with the property specified in Axiom<nbsp/>F3.
+</p>
+
+<theorem xml:id="thm_unique_additive_identity">
+<statement>
+<p>There exists a unique additive identity of <m>\mathbb{R}</m>.</p>
+</statement>
+</theorem>
+
+<p>To prove the next theorem,
+mimic the approach you used to prove <xref ref="thm_unique_additive_identity">Theorem</xref>.</p>
+
+<theorem xml:id="thm_unique_multiplicative_identity">
+<statement>
+<p>There exists a unique multiplicative identity of <m>\mathbb{R}</m>.</p>
+</statement>
+</theorem>
+
+<p>Similar to Axioms<nbsp/>F3 and F7, Axioms<nbsp/>F4 and F8 state the existence of additive and multiplicative inverses,
+but these axioms do not assume that these elements are the unique elements with the specified properties.
+However, we can prove that for every <m>a\in\mathbb{R}</m>,
+the elements <m>-a</m> and <m>a^{-1}</m>
+(as long as <m>a\neq 0</m>)
+are the unique <term>additive</term>
+and <term>multiplicative inverses</term>, respectively.</p>
+
+<theorem xml:id="thm_unique_additive_inverse">
+<statement>
+<p>Every real number has a unique additive inverse.</p>
+</statement>
+</theorem>
+
+<theorem>
+<statement>
+<p>Every nonzero real number has a unique multiplicative inverse.</p>
+</statement>
+</theorem>
+
+<p>In light of the last two theorems,
+we now know that sticking a minus sign in front of <m>a\in\mathbb{R}</m> or raising
+<m>a\in\mathbb{R}\setminus\{0\}</m> to <m>-1</m> each correspond to an operation that yields a unique element with the corresponding inverse property.</p>
+
+<p>Since we are taking a formal axiomatic approach to the real numbers,
+we should make it clear how the natural numbers are embedded in <m>\mathbb{R}</m>.</p>
+
+<definition>
+<statement>
+<p>We define the <term>natural numbers</term>,
+denoted by <m>\mathbb{N}</m>,
+to be the smallest subset of <m>\mathbb{R}</m> satisfying:
+<ol marker="labeltextrmalph">
+<li><p><m>1\in\mathbb{N}</m>, and</p></li>
+<li><p>for all <m>n\in\mathbb{N}</m>, we have <m>n+1\in\mathbb{N}</m>.</p></li>
+</ol>
+</p>
+</statement>
+</definition>
+
+<p>Notice the similarity between the definition of the natural numbers presented above and the Axiom of Induction given in <xref ref="sec_Intro_to_Induction">Section</xref>.
+Of course, we use the standard numeral system to represent the natural numbers,
+so that <m>\mathbb{N}= \{1,2,3,4,5,6,7,8,9,10\ldots\}</m>.</p>
+
+<p>Given the natural numbers, Axiom<nbsp/>F3/<xref ref="thm_unique_additive_identity">Theorem</xref>
+and Axiom<nbsp/>F4/<xref ref="thm_unique_additive_inverse">Theorem</xref>
+together with the operation of addition allow us to define the <term>integers</term>,
+denoted by <m>\mathbb{Z}</m>, in the obvious way.
+That is, the integers consist of the natural numbers together with the additive identity and all of the additive inverses of the natural numbers.</p>
+
+<p>We now introduce some common notation that you are likely familiar with.
+Take a moment to think about why the following is a definition as opposed to an axiom or theorem.</p>
+
+<definition xml:id="def_real_number_notation">
+<statement>
+<p>For every <m>a,b\in\mathbb{R}</m> and
+<m>n\in\mathbb{Z}</m>, we define the following:
+<ol marker="labeltextrmalph">
+<li><p><m>\tcboxmath{a-b\coloneqq a+(-b)}</m></p></li>
+<li><p><m>\tcboxmath{\displaystyle\frac{a}{b}\coloneqq ab^{-1}}</m> (for <m>b\neq 0</m>)</p></li>
+<li><p><m>\tcboxmath{\displaystyle a^n\coloneqq \begin{cases}\overbrace{aa\cdots a}^n, \amp \text{ if } n\in \mathbb{N}\\ 1, \amp \text{ if } n=0\text{ and } a\neq 0\\ \displaystyle\frac{1}{a^{-n}}, \amp \text{ if } -n\in \mathbb{N}\text{ and } a\neq 0 \end{cases} }</m></p></li>
+</ol>
+</p>
+</statement>
+</definition>
+
+<p>The set of <term>rational numbers</term>,
+denoted by <m>\mathbb{Q}</m>,
+is defined to be the collection of all real numbers having the form given in Part<nbsp/>(b) of <xref ref="def_real_number_notation">Definition</xref>.
+The <term>irrational numbers</term>
+are defined to be <m>\mathbb{R}\setminus\mathbb{Q}</m>.</p>
+
+<p>Using the Field Axioms,
+we can prove each of the statements in the following theorem.</p>
+
+<theorem xml:id="thm_consequences_of_axioms">
+<statement>
+<p>For all <m>a,b,c\in\mathbb{R}</m>, we have the following:
+<ol marker="labeltextrmalph">
+<li><p><m>a=b</m> if and only if <m>a+c=b+c</m>;</p></li>
+<li><p><m>0a=0</m>;</p></li>
+<li><p><m>-a=(-1)a</m>;</p></li>
+<li><p><m>(-1)^2 = 1</m>;</p></li>
+<li><p><m>-(-a)=a</m>;</p></li>
+<li><p>If <m>a\neq 0</m>, then <m>(a^{-1})^{-1}=a</m>;</p></li>
+<li><p>If <m>a\neq 0</m> and <m>ab = ac</m>, then <m>b = c</m>.</p></li>
+<li><p>If <m>ab=0</m>, then either <m>a=0</m> or <m>b=0</m>.</p></li>
+</ol>
+</p>
+</statement>
+</theorem>
+
+<p>Carefully prove the next theorem by explicitly citing where you are utilizing the Field Axioms and <xref ref="thm_consequences_of_axioms">Theorem</xref>.</p>
+
+<theorem>
+<statement>
+<p>For all <m>a,b\in\mathbb{R}</m>,
+we have <m>(a+b)(a-b)=a^2-b^2</m>.</p>
+</statement>
+</theorem>
+
+<p>We now introduce the Order Axioms of the real numbers.</p>
+
+<axiom xml:id="axiom_order_axioms">
+<creator>Order Axioms</creator>
+<statement>
+<p>For <m>a,b,c\in \mathbb{R}</m>, there is a relation <m>\tcboxmath{\lt }</m> on <m>\mathbb{R}</m> satisfying:
+<ol>
+<li><p>(O1) (Trichotomy Law) If <m>a\neq b</m>,
+then either <m>a\lt b</m> or <m>b\lt a</m> but not both;</p></li>
+<li><p>(O2) (Transitivity) If <m>a\lt b</m> and <m>b\lt c</m>, then <m>a\lt c</m>;</p></li>
+<li><p>(O3) If <m>a\lt b</m>, then <m>a+c\lt b+c</m>;</p></li>
+<li><p>(O4) If <m>a\lt b</m> and <m>0\lt c</m>, then <m>ac\lt bc</m>;</p></li>
+</ol>
+</p>
+</statement>
+</axiom>
+
+<p>Given Axioms<nbsp/>O1<ndash/>O4, we say that the real numbers are a
+<term>linearly ordered field</term>.
+We call numbers greater than zero <term>positive</term>
+and those greater than or equal to zero <term>nonnegative</term>.
+There are similar definitions for
+<term>negative</term> and <term>nonpositive</term>.</p>
+
+<p>Notice that the Order Axioms are phrased in terms of
+<q><m>\lt</m></q>. We would also like to be able to utilize
+<q><m>></m></q>,
+<q><m>\leq</m></q>, and
+<q><m>\geq</m></q>.</p>
+
+<definition>
+<statement>
+<p>For <m>a,b\in\mathbb{R}</m>, we define:
+<ol marker="labeltextrmalph">
+<li><p><m>\tcboxmath{a>b}</m> if <m>b\lt a</m>;</p></li>
+<li><p><m>\tcboxmath{a\leq b}</m> if <m>a\lt b</m> or <m>a=b</m>;</p></li>
+<li><p><m>\tcboxmath{a\geq b}</m> if <m>b\leq a</m>.</p></li>
+</ol>
+</p>
+</statement>
+</definition>
+
+<p>Notice that we took the existence of the inequalities
+<q><m>\lt</m></q>,
+<q><m>></m></q>,
+<q><m>\leq</m></q>, and
+<q><m>\geq</m></q>
+on the real numbers for granted when we defined intervals of real numbers in <xref ref="def_intervals">Definition</xref>.</p>
+
+<p>Using the Order Axioms, we can prove many familiar facts.</p>
+
+<theorem>
+<statement>
+<p>For all <m>a,b\in\mathbb{R}</m>,
+if <m>a,b>0</m>, then <m>a+b>0</m>;
+and if <m>a,b\lt 0</m>, then <m>a+b\lt 0</m>.</p>
+</statement>
+</theorem>
+
+<p>The next result extends Axiom<nbsp/>O3.</p>
+
+<theorem>
+<statement>
+<p>For all <m>a,b,c,d\in\mathbb{R}</m>,
+if <m>a\lt b</m> and <m>c\lt d</m>, then <m>a+c\lt b+d</m>.</p>
+</statement>
+</theorem>
+
+<theorem xml:id="thm_additive_inverse_of_a_positive_is_negative">
+<statement>
+<p>For all <m>a\in\mathbb{R}</m>,
+<m>a>0</m> if and only if <m>-a\lt 0</m>.</p>
+</statement>
+</theorem>
+
+<theorem>
+<statement>
+<p>If <m>a</m>, <m>b</m>, <m>c</m>,
+and <m>d</m> are positive real numbers such that <m>a\lt b</m> and <m>c\lt d</m>,
+then <m>ac\lt bd</m>.</p>
+</statement>
+</theorem>
+
+<theorem>
+<statement>
+<p>For all <m>a,b\in\mathbb{R}</m>, we have the following:
+<ol marker="labeltextrmalph">
+<li><p><m>ab>0</m> if and only if either <m>a,b>0</m> or <m>a,b\lt 0</m>;</p></li>
+<li><p><m>ab\lt 0</m> if and only if <m>a\lt 0\lt b</m> or <m>b\lt 0\lt a</m>.</p></li>
+</ol>
+</p>
+</statement>
+</theorem>
+
+<theorem>
+<statement>
+<p>For all positive real numbers <m>a</m> and <m>b</m>,
+<m>a\lt b</m> if and only if <m>a^2\lt b^2</m>.</p>
+</statement>
+</theorem>
+
+<p>Consider using three cases when approaching the proof of the following theorem.</p>
+
+<theorem>
+<statement>
+<p>For all <m>a\in\mathbb{R}</m>, we have <m>a^2\geq 0</m>.</p>
+</statement>
+</theorem>
+
+<p>It might come as a surprise that the following result requires proof.</p>
+
+<theorem xml:id="thm_0_1">
+<statement>
+<p>We have <m>0\lt 1</m>.</p>
+</statement>
+</theorem>
+
+<p>The previous theorem together with <xref ref="thm_additive_inverse_of_a_positive_is_negative">Theorem</xref>
+implies that <m>-1\lt 0</m> as you expect.
+It also follows from Axiom<nbsp/>O3 that for all
+<m>n\in\mathbb{Z}</m>, we have <m>n\lt n+1</m>.
+We assume that there are no integers between <m>n</m> and <m>n+1</m>.</p>
+
+<theorem>
+<statement>
+<p>For all <m>a\in\mathbb{R}</m>, if <m>a>0</m>,
+then <m>a^{-1}>0</m>, and if <m>a\lt 0</m>, then <m>a^{-1}\lt 0</m>.</p>
+</statement>
+</theorem>
+
+<theorem xml:id="thm_switch_inequality_using_negative">
+<statement>
+<p>For all <m>a,b\in \mathbb{R}</m>,
+if <m>a\lt b</m>, then <m>-b\lt -a</m>.</p>
+</statement>
+</theorem>
+
+<p>The last few results allow us to take for granted our usual understanding of which real numbers are positive and which are negative.
+The next theorem yields a result that extends <xref ref="thm_switch_inequality_using_negative">Theorem</xref>.</p>
+
+<theorem>
+<statement>
+<p>For all <m>a,b,c\in \mathbb{R}</m>,
+if <m>a\lt b</m> and <m>c\lt 0</m>, then <m>bc\lt ac</m>.</p>
+</statement>
+</theorem>
+
+<p>There is a special function that we can now introduce.</p>
+
+<definition>
+<statement>
+<p>Given <m>a\in\mathbb{R}</m>,
+we define the <term>absolute value</term> of <m>a</m>, denoted <m>|a|</m>, via
+<me>
+  \tcboxmath{|a|\coloneqq \begin{cases}a, \amp  \text{ if } a\geq 0\\ -a, \amp  \text{ if } a\lt 0. \end{cases} }
+</me>
+</p>
+</statement>
+</definition>
+
+<theorem>
+<statement>
+<p>For all <m>a\in\mathbb{R}</m>,
+<m>|a|\geq 0</m> with equality only if <m>a=0</m>.</p>
+</statement>
+</theorem>
+
+<p>We can interpret <m>|a|</m> as the distance between <m>a</m> and 0 as depicted in <xref ref="fig_abs_value_as_distance">Figure</xref>.</p>
+
+<figure xml:id="fig_distanceA">
+<caption>Visual representation of <m>|a|</m>.</caption>
+\subcaptionbox{<m>a>0</m> }[.48\linewidth]{
+<image>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
 \draw[shift={(0,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(0\)};
 \draw[shift={(1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(a\)};
 \draw[decorate] (0,.15)--node[above=2.5mm]{\(|a|\)}(1,.15);\end{tikzpicture}]]>
 </latex-image>
-    </image>
-    }
-    \subcaptionbox{<m>a\lt 0</m> }[.48\linewidth]{
-    <image>
+</image>
+}
+\subcaptionbox{<m>a\lt 0</m> }[.48\linewidth]{
+<image>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
 \draw[shift={(0,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(0\)};
 \draw[shift={(-1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(a\)};
 \draw[decorate] (-1,.15)--node[above=2.5mm]{\(|a|\)}(0,.15);\end{tikzpicture}]]>
 </latex-image>
-    </image>
-    }
-  </figure>
-  <theorem>
-    <statement>
-      <p>
-        For all <m>a,b\in\mathbb{R}</m>,
-        we have <m>|a-b|=|b-a|</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    Given two points <m>a</m> and <m>b</m>,
-    <m>|a-b|</m>, and hence <m>|b-a|</m> by the previous theorem,
-    is the distance between <m>a</m> and <m>b</m> as shown in <xref ref="fig_distance_between_a_and_b">Figure</xref>.
-  </p>
-  <figure xml:id="fig_distance_between_a_and_b">
-    <caption>Visual representation of <m>|a-b|</m>.</caption>
-    <image>
+</image>
+}
+</figure>
+
+<theorem>
+<statement>
+<p>For all <m>a,b\in\mathbb{R}</m>,
+we have <m>|a-b|=|b-a|</m>.</p>
+</statement>
+</theorem>
+
+<p>Given two points <m>a</m> and <m>b</m>,
+<m>|a-b|</m>, and hence <m>|b-a|</m> by the previous theorem,
+is the distance between <m>a</m> and <m>b</m> as shown in <xref ref="fig_distance_between_a_and_b">Figure</xref>.</p>
+
+<figure xml:id="fig_distance_between_a_and_b">
+<caption>Visual representation of <m>|a-b|</m>.</caption>
+<image width="50%" xml:id="distance_between_a_and_b">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
+\begin{tikzpicture}[scale=1.5,decoration={brace,amplitude=5},text height=1.5ex,text depth=.25ex]
+\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
 \draw[shift={(-1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(a\)};
 \draw[shift={(1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(b\)};
-\draw[decorate] (-1,.15)--node[above=1mm]{\(|a-b|\)}(1,.15);\end{tikzpicture}]]>
+\draw[decorate] (-1,.15)--node[above=1mm]{\(|a-b|\)}(1,.15);
+\end{tikzpicture}
 </latex-image>
-    </image>
-  </figure>
-  <theorem>
-    <statement>
-      <p>
-        For all <m>a,b\in\mathbb{R}</m>, <m>|ab|=|a||b|</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    In the next theorem, writing
-    <m>\pm a\leq b</m> is an abbreviation for <m>a\leq b</m> and <m>-a\leq b</m>.
-  </p>
-  <theorem>
-    <statement>
-      <p>
-        For all <m>a,b\in\mathbb{R}</m>,
-        if <m>\pm a\leq b</m>, then <m>|a|\leq b</m>.
-      </p>
-    </statement>
-  </theorem>
-  <theorem>
-    <statement>
-      <p>
-        For all <m>a\in\mathbb{R}</m>, <m>|a|^2=a^2</m>.
-      </p>
-    </statement>
-  </theorem>
-  <theorem xml:id="thm_plus_minus_less_than_or_equal_to_abs_value">
-    <statement>
-      <p>
-        For all <m>a\in\mathbb{R}</m>, <m>\pm a\leq |a|</m>.
-      </p>
-    </statement>
-  </theorem>
-  <theorem xml:id="thm_abs_value_less_than_or_equal_to_iff_squeezed_by_plus_minus">
-    <statement>
-      <p>
-        For all <m>a,r\in\mathbb{R}</m> with <m>r</m> nonnegative,
-        <m>|a|\leq r</m> if and only if <m>-r\leq a\leq r</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    The letter <m>r</m> was used in the previous theorem because it is the first letter of the word
-    <q>radius</q>. If <m>r</m> is positive,
-    we can think of the interval <m>(-r,r)</m> as the interior of a one-dimensional circle with radius <m>r</m> centered at 0.
-    <xref ref="fig_abs_value_less_than_or_equal_to_iff_squeezed_by_plus_minus">Figure</xref>
-    provides a visual interpretation of <xref ref="thm_abs_value_less_than_or_equal_to_iff_squeezed_by_plus_minus">Theorem</xref>.
-  </p>
-  <figure xml:id="fig_abs_value_less_than_or_equal_to_iff_squeezed_by_plus_minus">
-    <caption>Visual representation of <m>|a|\leq r</m>.</caption>
-    <image>
+</image>
+</figure>
+
+<theorem>
+<statement>
+<p>For all <m>a,b\in\mathbb{R}</m>, <m>|ab|=|a||b|</m>.</p>
+</statement>
+</theorem>
+
+<p>In the next theorem, writing
+<m>\pm a\leq b</m> is an abbreviation for <m>a\leq b</m> and <m>-a\leq b</m>.</p>
+<theorem>
+<statement>
+<p>For all <m>a,b\in\mathbb{R}</m>,
+if <m>\pm a\leq b</m>, then <m>|a|\leq b</m>.</p>
+</statement>
+</theorem>
+
+<theorem>
+<statement>
+<p>For all <m>a\in\mathbb{R}</m>, <m>|a|^2=a^2</m>.</p>
+</statement>
+</theorem>
+
+<theorem xml:id="thm_plus_minus_less_than_or_equal_to_abs_value">
+<statement>
+<p>For all <m>a\in\mathbb{R}</m>, <m>\pm a\leq |a|</m>.</p>
+</statement>
+</theorem>
+
+<theorem xml:id="thm_abs_value_less_than_or_equal_to_iff_squeezed_by_plus_minus">
+<statement>
+<p>For all <m>a,r\in\mathbb{R}</m> with <m>r</m> nonnegative,
+<m>|a|\leq r</m> if and only if <m>-r\leq a\leq r</m>.</p>
+</statement>
+</theorem>
+
+<p>The letter <m>r</m> was used in the previous theorem because it is the first letter of the word
+<q>radius</q>. If <m>r</m> is positive,
+we can think of the interval <m>(-r,r)</m> as the interior of a one-dimensional circle with radius <m>r</m> centered at 0.
+<xref ref="fig_abs_value_less_than_or_equal_to_iff_squeezed_by_plus_minus">Figure</xref>
+provides a visual interpretation of <xref ref="thm_abs_value_less_than_or_equal_to_iff_squeezed_by_plus_minus">Theorem</xref>.</p>
+
+<figure xml:id="fig_abs_value_less_than_or_equal_to_iff_squeezed_by_plus_minus">
+<caption>Visual representation of <m>|a|\leq r</m>.</caption>
+<image width="50%" xml:id="abs_value_less_than_or_equal_to_iff_squeezed_by_plus_minus">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
+\begin{tikzpicture}[scale=1.5,decoration={brace,amplitude=5},text height=1.5ex,text depth=.25ex]
+\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
 \draw[shift={(0,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(0\)};
 \draw[shift={(1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(r\)};
 \draw[shift={(-1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(-r\)};
 \draw[shift={(-.6,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(a\)};
 \draw[decorate] (0,.15)--node[above=2.5mm]{\(r\)}(1,.15);
 \draw[decorate] (-1,.15)--node[above=2.5mm]{\(r\)}(0,.15);
-\draw[decorate] (0,-.4)--node[below=2.5mm]{\(|a|\)}(-.6,-.4);\end{tikzpicture}]]>
+\draw[decorate] (0,-.4)--node[below=2.5mm]{\(|a|\)}(-.6,-.4);
+\end{tikzpicture}
 </latex-image>
-    </image>
-  </figure>
-  <corollary xml:id="cor_distance_between_two_points_less_than_or_equal_to">
-    <statement>
-      <p>
-        For all <m>a,b,r\in\mathbb{R}</m> with <m>r</m> nonnegative,
-        <m>|a-b|\leq r</m> if and only if <m>b-r\leq a\leq b+r</m>.
-      </p>
-    </statement>
-  </corollary>
-  <p>
-    Since <m>|a-b|</m> represents the distance between <m>a</m> and <m>b</m>,
-    we can interpret <m>|a-b|\leq r</m> as saying that the distance between <m>a</m> and <m>b</m> is less than or equal to <m>r</m>.
-    In other words, <m>a</m> is within <m>r</m> units of <m>b</m>.
-    See <xref ref="fig_visual_of__a-b__r">Figure</xref>.
-  </p>
-  <figure xml:id="fig_visual_of__a-b__r">
-    <caption>Visual representation of <m>|a-b|\leq r</m>.</caption>
-    <image>
+</image>
+</figure>
+
+<corollary xml:id="cor_distance_between_two_points_less_than_or_equal_to">
+<statement>
+<p>For all <m>a,b,r\in\mathbb{R}</m> with <m>r</m> nonnegative,
+<m>|a-b|\leq r</m> if and only if <m>b-r\leq a\leq b+r</m>.</p>
+</statement>
+</corollary>
+
+<p>Since <m>|a-b|</m> represents the distance between <m>a</m> and <m>b</m>,
+we can interpret <m>|a-b|\leq r</m> as saying that the distance between <m>a</m> and <m>b</m> is less than or equal to <m>r</m>.
+In other words, <m>a</m> is within <m>r</m> units of <m>b</m>.
+See <xref ref="fig_visual_of__a-b__r">Figure</xref>.</p>
+
+<figure xml:id="fig_visual_of__a-b__r">
+<caption>Visual representation of <m>|a-b|\leq r</m>.</caption>
+<image width="50%" xml:id="visual_of__a-b__r">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
+\begin{tikzpicture}[scale=1.5,decoration={brace,amplitude=5},text height=1.5ex,text depth=.25ex]
+\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
 \draw[shift={(0,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(b\)};
 \draw[shift={(1.25,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(b+r\)};
 \draw[shift={(-1.25,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(b-r\)};
 \draw[shift={(-.7,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(a\)};
 \draw[decorate] (0,.15)--node[above=2.5mm]{\(r\)}(1.25,.15);
 \draw[decorate] (-1.25,.15)--node[above=2.5mm]{\(r\)}(0,.15);
-\draw[decorate] (0,-.4)--node[below=2.5mm]{\(|a-b|\)}(-.7,-.4);\end{tikzpicture}]]>
+\draw[decorate] (0,-.4)--node[below=2.5mm]{\(|a-b|\)}(-.7,-.4);
+\end{tikzpicture}
 </latex-image>
-    </image>
-  </figure>
-  <p>
-    Consider using <xref ref="thm_plus_minus_less_than_or_equal_to_abs_value">Theorems</xref>
-    and <xref ref="thm_abs_value_less_than_or_equal_to_iff_squeezed_by_plus_minus"></xref>
-    when attacking the next result,
-    which is known as the <term>Triangle Inequality</term>.
-    This result can be extremely useful in some contexts.
-  </p>
-  <theorem xml:id="thm_triangle_inequality">
-    <title>Triangle Inequality</title>
-    <statement>
-      <p>
-        For all <m>a,b\in\mathbb{R}</m>, <m>|a+b|\leq |a|+|b|</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    <xref ref="fig_triangle_inequality">Figure</xref>
-    depicts two of the cases for the Triangle Inequality.
-  </p>
-  <figure xml:id="fig_triangle_A">
-    <caption>Visual representation of two of the cases for the Triangle Inequality.</caption>
-    \subcaptionbox{<m>a\geq 0, b\geq 0</m> }[.48\linewidth]{
-    <image>
+</image>
+</figure>
+
+<p>Consider using <xref ref="thm_plus_minus_less_than_or_equal_to_abs_value">Theorems</xref>
+and <xref ref="thm_abs_value_less_than_or_equal_to_iff_squeezed_by_plus_minus"></xref>
+when attacking the next result,
+which is known as the <term>Triangle Inequality</term>.
+This result can be extremely useful in some contexts.</p>
+
+<theorem xml:id="thm_triangle_inequality">
+<title>Triangle Inequality</title>
+<statement>
+<p>For all <m>a,b\in\mathbb{R}</m>, <m>|a+b|\leq |a|+|b|</m>.</p>
+</statement>
+</theorem>
+
+<p><xref ref="fig_triangle_inequality">Figure</xref>
+depicts two of the cases for the Triangle Inequality.</p>
+
+<figure xml:id="fig_triangle_A">
+<caption>Visual representation of two of the cases for the Triangle Inequality.</caption>
+\subcaptionbox{<m>a\geq 0, b\geq 0</m> }[.48\linewidth]{
+<image>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
 \draw[shift={(-1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(0\)};
@@ -736,10 +515,10 @@
 \draw[decorate] (.3,-.4)--node[below=2.5mm]{\(|b|\)}(-1,-.4);
 \draw[decorate] (1,-.4)--node[below=2.5mm]{\(|a|\)}(.3,-.4);\end{tikzpicture}]]>
 </latex-image>
-    </image>
-    }
-    \subcaptionbox{<m>a\lt 0,b\geq 0</m> }[.48\linewidth]{
-    <image>
+</image>
+}
+\subcaptionbox{<m>a\lt 0,b\geq 0</m> }[.48\linewidth]{
+<image>
 <latex-image>
 <![CDATA[\begin{tikzpicture}\draw [thick,stealth-stealth] (-1.5,0) -- (1.5,0);
 \draw[shift={(-1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(a\)};
@@ -750,36 +529,32 @@
 \draw[decorate] (-.5,-.4)--node[below=2.5mm]{\(|a|\)}(-1,-.4);
 \draw[decorate] (1,-.4)--node[below=2.5mm]{\(|b|\)}(-.5,-.4);\end{tikzpicture}]]>
 </latex-image>
-    </image>
-    }
-  </figure>
-  <problem>
-    <statement>
-      <p>
-        Under what conditions do we have equality for the Triangle Inequality?
-      </p>
-    </statement>
-  </problem>
-  <p>
-    Where did the Triangle Inequality get its name?
-    Why
-    <q>Triangle</q>? For any triangle
-    (including degenerate triangles),
-    the sum of the lengths of any two sides must be greater than or equal to the length of the remaining side.
-    That is, if <m>x</m>, <m>y</m>,
-    and <m>z</m> are the lengths of the sides of the triangle,
-    then <m>z\leq x+y</m>,
-    where we have equality only in the degenerate case of a triangle with no area.
-    In linear algebra,
-    the Triangle Inequality is a theorem about lengths of vectors.
-    If <m>\mathbf{a}</m> and <m>\mathbf{b}</m> are vectors in <m>\mathbb{R}^n</m>,
-    then the Triangle Inequality states that <m>\lVert \mathbf{a}+\mathbf{b}\rVert \leq \lVert\mathbf{a}\rVert +\lVert\mathbf{b}\rVert</m>.
-    Note that <m>\lVert \mathbf{a}\rVert</m> denotes the length of vector <m>\mathbf{a}</m>.
-    See <xref ref="fig_triangle_inequality_2d">Figure</xref>.
-    The version of the Triangle Inequality that we presented in <xref ref="thm_triangle_inequality">Theorem</xref>
-    is precisely the one-dimensional version of the Triangle Inequality in terms of vectors.
-  </p>
-  
+</image>
+}
+</figure>
+
+<problem>
+<statement>
+<p>Under what conditions do we have equality for the Triangle Inequality?</p>
+</statement>
+</problem>
+
+<p>Where did the Triangle Inequality get its name? Why <q>Triangle</q>? For any triangle
+(including degenerate triangles),
+the sum of the lengths of any two sides must be greater than or equal to the length of the remaining side.
+That is, if <m>x</m>, <m>y</m>,
+and <m>z</m> are the lengths of the sides of the triangle,
+then <m>z\leq x+y</m>,
+where we have equality only in the degenerate case of a triangle with no area.
+In linear algebra,
+the Triangle Inequality is a theorem about lengths of vectors.
+If <m>\mathbf{a}</m> and <m>\mathbf{b}</m> are vectors in <m>\mathbb{R}^n</m>,
+then the Triangle Inequality states that <m>\lVert \mathbf{a}+\mathbf{b}\rVert \leq \lVert\mathbf{a}\rVert +\lVert\mathbf{b}\rVert</m>.
+Note that <m>\lVert \mathbf{a}\rVert</m> denotes the length of vector <m>\mathbf{a}</m>.
+See <xref ref="fig_triangle_inequality_2d">Figure</xref>.
+The version of the Triangle Inequality that we presented in <xref ref="thm_triangle_inequality">Theorem</xref>
+is precisely the one-dimensional version of the Triangle Inequality in terms of vectors.</p>
+
 <figure xml:id="fig_triangle_inequality_2d">
 <caption>Triangle Inequality in terms of vectors.</caption>
 <image width="50%" xml:id="triangle_inequality_2d">
@@ -796,319 +571,244 @@
 </image>
 </figure>
 
-  <p>
-    The next theorem is sometimes called the
-    <term>Reverse Triangle Inequality</term>.
-  </p>
-  <theorem>
-    <title>Reverse Triangle Inequality</title>
-    <statement>
-      <p>
-        For all <m>a,b\in\mathbb{R}</m>,
-        <m>|a-b|\geq \left||a|-|b| \right|</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    Before we introduce the Completeness Axiom,
-    we need some additional terminology.
-  </p>
-  <definition>
-    <statement>
-      <p>
-        Let <m>A\subseteq \mathbb{R}</m>.
-        A point <m>b</m> is called an <term>upper bound</term> of <m>A</m> if for all <m>a\in A</m>,
-        <m>a\leq b</m>.
-        The set <m>A</m> is said to be <term>bounded above</term> if it has an upper bound.
-      </p>
-    </statement>
-  </definition>
-  <problem>
-    <statement>
-      <p>
-        The notion of a <term>lower bound</term>
-        and the property of a set being
-        <term>bounded below</term> are defined similarly.
-        Try defining them.
-      </p>
-    </statement>
-  </problem>
-  <problem xml:id="prob_find_upper_bounds">
-    <statement>
-      <p>
-        Find all upper bounds and all lower bounds for each of the following sets when they exist.
-        <ol marker="labeltextrmalph">
-          <li>
-            <p>
-              <m>\{5,11,17,42,103\}</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\mathbb{N}</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\mathbb{Z}</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>(0,1]</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>(0,1]\cap \mathbb{Q}</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>(0,\infty)</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\{42\}</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\{\frac{1}{n}\mid n\in\mathbb{N}\}</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\{\frac{1}{n}\mid n\in\mathbb{N}\}\cup\{0\}</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\emptyset</m>
-            </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-  </problem>
-  <definition>
-    <statement>
-      <p>
-        A set <m>A\subseteq \mathbb{R}</m> is <term>bounded</term> if <m>A</m> is bounded above and below.
-      </p>
-    </statement>
-  </definition>
-  <p>
-    Notice that a set <m>A\subseteq\mathbb{R}</m> is bounded if and only if it is a subset of some bounded closed interval.
-  </p>
-  <definition>
-    <statement>
-      <p>
-        Let <m>A\subseteq \mathbb{R}</m>.
-        A point <m>p</m> is a <term>supremum</term>
-        (or <term>least upper bound</term>)
-        of <m>A</m> if <m>p</m> is an upper bound of <m>A</m> and <m>p\leq b</m> for every upper bound <m>b</m> of <m>A</m>.
-        Analogously, a point <m>p</m> is an <term>infimum</term>
-        (or <term>greatest lower bound</term>)
-        of <m>A</m> if <m>p</m> is a lower bound of <m>A</m> and <m>p\geq b</m> for every lower bound <m>b</m> of <m>A</m>.
-      </p>
-    </statement>
-  </definition>
-  <p>
-    Our next result tells us that a supremum of a set and an infimum of a set are unique when they exist.
-  </p>
-  <theorem>
-    <statement>
-      <p>
-        If <m>A\subseteq \mathbb{R}</m> such that a supremum (respectively,
-        infimum) of <m>A</m> exists,
-        then the supremum (respectively,
-        infimum) of <m>A</m> is unique.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    In light of the previous theorem,
-    if the supremum of <m>A</m> exists,
-    it is denoted by <m>\tcboxmath{\sup(A)}</m>.
-    Similarly, if the infimum of <m>A</m> exists,
-    it is denoted by <m>\tcboxmath{\inf(A)}</m>.
-  </p>
-  <problem>
-    <statement>
-      <p>
-        Find the supremum and the infimum of each of the sets in <xref ref="prob_find_upper_bounds">Problem</xref> when they exist.
-      </p>
-    </statement>
-  </problem>
-  <p>
-    It is important to recognize that the supremum or infimum of a set may or may not be contained in the set.
-    In particular,
-    we have the following theorem concerning suprema and maximums.
-    The analogous result holds for infima and minimums.
-  </p>
-  <theorem>
-    <statement>
-      <p>
-        Let <m>A\subseteq \mathbb{R}</m>.
-        Then <m>A</m> has a maximum if and only if <m>A</m> has a supremum and <m>\sup(A)\in A</m>,
-        in which case the <m>\max(A)=\sup(A)</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    Intuitively,
-    a point is the supremum of a set <m>A</m> if and only if no point smaller than the supremum can be an upper bound of <m>A</m>.
-    The next result makes this more precise.
-  </p>
-  <theorem xml:id="thm_scoot_in_characterization_of_sup">
-    <statement>
-      <p>
-        Let <m>A\subseteq \mathbb{R}</m> such that <m>A</m> is bounded above and let <m>b</m> be an upper bound of <m>A</m>.
-        Then <m>b</m> is the supremum of <m>A</m> if and only if for every <m>\varepsilon >0</m>,
-        there exists <m>a\in A</m> such that <m>b-\varepsilon \lt a</m>.
-      </p>
-    </statement>
-  </theorem>
-  <problem>
-    <statement>
-      <p>
-        State and prove the analogous result to <xref ref="thm_scoot_in_characterization_of_sup">Theorem</xref> involving infimum.
-      </p>
-    </statement>
-  </problem>
-  <p>
-    The following axiom states that every nonempty subset of the real numbers that has an upper bound has a least upper bound.
-  </p>
-  <axiom xml:id="axiom_completeness">
-    <title>Completeness Axiom</title>
-    <statement>
-      <p>
-        If <m>A</m> is a nonempty subset of
-        <m>\mathbb{R}</m> that is bounded above,
-        then <m>\sup(A)</m> exists.
-      </p>
-    </statement>
-  </axiom>
-  <p>
-    Given the Completeness Axiom,
-    we say that the real numbers satisfy the
-    <term>least upper bound property</term>.
-    It is worth mentioning that we do not need the Completeness Axiom to conclude that every nonempty subset of the integers that is bounded above has a supremum,
-    as this follows from <xref ref="thm_reverse_WOP">Theorem</xref>
-    (a generalized version of the Well-Ordering Principle).
-  </p>
-  <p>
-    Certainly, the real numbers also satisfy the analogous result involving infimum.
-  </p>
-  <theorem>
-    <statement>
-      <p>
-        If <m>A</m> is a nonempty subset of
-        <m>\mathbb{R}</m> that is bounded below,
-        then <m>\inf(A)</m> exists.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    Our next result, called the <term>Archimedean Property</term>,
-    tells us that for every real number,
-    we can always find a natural number that is larger.
-    To prove this theorem,
-    consider a proof by contradiction and then utilize the Completeness Axiom and <xref ref="thm_scoot_in_characterization_of_sup">Theorem</xref>.
-  </p>
-  <theorem>
-    <title>Archimedean Property</title>
-    <statement>
-      <p>
-        For every <m>x\in\mathbb{R}</m>,
-        there exists <m>n\in\mathbb{N}</m> such that <m>x\lt n</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    More generally, we can
-    <q>squeeze</q>
-    every real number between a pair of integers.
-    The next result is sometimes referred to at the
-    <term>Generalized Archimedean Property</term>.
-  </p>
-  <theorem>
-    <title>Generalized Archimedean Property</title>
-    <statement>
-      <p>
-        For every <m>x\in\mathbb{R}</m>,
-        there exists <m>k,n\in\mathbb{Z}</m> such that <m>k\lt x\lt n</m>.
-      </p>
-    </statement>
-  </theorem>
-  <theorem xml:id="thm_small_reciprocal">
-    <statement>
-      <p>
-        For any positive real number <m>x</m>,
-        there exists <m>N\in \mathbb{N}</m> such that <m>0\lt \frac{1}{N}\lt x</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    The next theorem strengthens the Generalized Archimedean Property and says that every real number is either an integer or lies between a pair of consecutive integers.
-    To prove this theorem, let
-    <m>x\in\mathbb{R}</m> and define <m>L=\{k\in\mathbb{Z}\mid k\leq x\}</m>.
-    Use the Generalized Archimedean Property to conclude that <m>L</m> is nonempty and then utilize <xref ref="thm_reverse_WOP">Theorem</xref>.
-  </p>
-  <theorem xml:id="thm_squeeze_with_consecutive_integers">
-    <statement>
-      <p>
-        For every <m>x\in\mathbb{R}</m>,
-        there exists <m>n\in \mathbb{Z}</m> such that <m>n\leq x\lt n+1</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    To prove the next theorem, let <m>a\lt b</m>,
-    utilize <xref ref="thm_small_reciprocal">Theorem</xref>
-    on <m>b-a</m> to obtain <m>N\in\mathbb{N}</m> such that <m>\frac{1}{N}\lt b-a</m>,
-    and then apply <xref ref="thm_squeeze_with_consecutive_integers">Theorem</xref>
-    to <m>Na</m> to conclude that there exists
-    <m>n\in\mathbb{N}</m> such that <m>n\leq Na\lt n+1</m>.
-    Lastly, argue that <m>\frac{n+1}{N}</m> is the rational number you seek.
-  </p>
-  <theorem xml:id="thm_rationals_dense">
-    <statement>
-      <p>
-        If <m>(a,b)</m> is an open interval,
-        then there exists a rational number <m>p</m> such that <m>p\in(a,b)</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    Recall that the real numbers consist of rational and irrational numbers.
-    Two examples of an irrational number that you are likely familiar with are <m>\pi</m> and <m>\sqrt{2}</m>.
-    In <xref ref="sec_Irrationality_of_Root_2">Section</xref>,
-    we will prove that <m>\sqrt{2}</m> is irrational,
-    but for now we will take this fact for granted.
-    It turns out that <m>\sqrt{2}\approx 1.41421356237\in (1,2)</m>.
-    This provides an example of an irrational number occurring between a pair of distinct rational numbers.
-    The following theorem is a good challenge to generalize this.
-  </p>
-  <theorem xml:id="thm_irrationals_dense">
-    <statement>
-      <p>
-        If <m>(a,b)</m> is an open interval,
-        then there exists an irrational number <m>p</m> such that <m>p\in(a,b)</m>.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    Repeated applications of the previous two theorems implies that every open interval contains infinitely many rational numbers and infinitely many irrational numbers.
-    In light of these two theorems,
-    we say that both the rationals and irrationals are
-    <term>dense</term> in the real numbers.
-  </p>
-  <p>
-    \epigraph{If people do not believe that mathematics is simple,
-    it is only because they do not realize how complicated life is.}{John von Neumann,
-    mathematician}
-  </p>
+<p>The next theorem is sometimes called the
+<term>Reverse Triangle Inequality</term>.</p>
+
+<theorem>
+<title>Reverse Triangle Inequality</title>
+<statement>
+<p>For all <m>a,b\in\mathbb{R}</m>,
+<m>|a-b|\geq \left||a|-|b| \right|</m>.</p>
+</statement>
+</theorem>
+
+<p>Before we introduce the Completeness Axiom,
+we need some additional terminology.</p>
+
+<definition>
+<statement>
+<p>Let <m>A\subseteq \mathbb{R}</m>.
+A point <m>b</m> is called an <term>upper bound</term> of <m>A</m> if for all <m>a\in A</m>,
+<m>a\leq b</m>.
+The set <m>A</m> is said to be <term>bounded above</term> if it has an upper bound.</p>
+</statement>
+</definition>
+
+<problem>
+<statement>
+<p>The notion of a <term>lower bound</term>
+and the property of a set being
+<term>bounded below</term> are defined similarly.
+Try defining them.</p>
+</statement>
+</problem>
+
+<problem xml:id="prob_find_upper_bounds">
+<statement>
+<p>Find all upper bounds and all lower bounds for each of the following sets when they exist.
+<ol marker="labeltextrmalph">
+<li><p><m>\{5,11,17,42,103\}</m></p></li>
+<li><p><m>\mathbb{N}</m></p></li>
+<li><p><m>\mathbb{Z}</m></p></li>
+<li><p><m>(0,1]</m></p></li>
+<li><p><m>(0,1]\cap \mathbb{Q}</m></p></li>
+<li><p><m>(0,\infty)</m></p></li>
+<li><p><m>\{42\}</m></p></li>
+<li><p><m>\{\frac{1}{n}\mid n\in\mathbb{N}\}</m></p></li>
+<li><p><m>\{\frac{1}{n}\mid n\in\mathbb{N}\}\cup\{0\}</m></p></li>
+<li><p><m>\emptyset</m></p></li>
+</ol>
+</p>
+</statement>
+</problem>
+
+<definition>
+<statement>
+<p>A set <m>A\subseteq \mathbb{R}</m> is <term>bounded</term> if <m>A</m> is bounded above and below.</p>
+</statement>
+</definition>
+
+<p>Notice that a set <m>A\subseteq\mathbb{R}</m> is bounded if and only if it is a subset of some bounded closed interval.</p>
+
+<definition>
+<statement>
+<p>Let <m>A\subseteq \mathbb{R}</m>.
+A point <m>p</m> is a <term>supremum</term>
+(or <term>least upper bound</term>)
+of <m>A</m> if <m>p</m> is an upper bound of <m>A</m> and <m>p\leq b</m> for every upper bound <m>b</m> of <m>A</m>.
+Analogously, a point <m>p</m> is an <term>infimum</term>
+(or <term>greatest lower bound</term>)
+of <m>A</m> if <m>p</m> is a lower bound of <m>A</m> and <m>p\geq b</m> for every lower bound <m>b</m> of <m>A</m>.</p>
+</statement>
+</definition>
+
+<p>Our next result tells us that a supremum of a set and an infimum of a set are unique when they exist.</p>
+
+<theorem>
+<statement>
+<p>If <m>A\subseteq \mathbb{R}</m> such that a supremum (respectively,
+infimum) of <m>A</m> exists,
+then the supremum (respectively,
+infimum) of <m>A</m> is unique.</p>
+</statement>
+</theorem>
+
+<p>In light of the previous theorem,
+if the supremum of <m>A</m> exists,
+it is denoted by <m>\tcboxmath{\sup(A)}</m>.
+Similarly, if the infimum of <m>A</m> exists,
+it is denoted by <m>\tcboxmath{\inf(A)}</m>.</p>
+
+<problem>
+<statement>
+<p>Find the supremum and the infimum of each of the sets in <xref ref="prob_find_upper_bounds">Problem</xref> when they exist.</p>
+</statement>
+</problem>
+
+<p>It is important to recognize that the supremum or infimum of a set may or may not be contained in the set.
+In particular,
+we have the following theorem concerning suprema and maximums.
+The analogous result holds for infima and minimums.</p>
+
+<theorem>
+<statement>
+<p>Let <m>A\subseteq \mathbb{R}</m>.
+Then <m>A</m> has a maximum if and only if <m>A</m> has a supremum and <m>\sup(A)\in A</m>,
+in which case the <m>\max(A)=\sup(A)</m>.</p>
+</statement>
+</theorem>
+
+<p>Intuitively,
+a point is the supremum of a set <m>A</m> if and only if no point smaller than the supremum can be an upper bound of <m>A</m>.
+The next result makes this more precise.</p>
+
+<theorem xml:id="thm_scoot_in_characterization_of_sup">
+<statement>
+<p>Let <m>A\subseteq \mathbb{R}</m> such that <m>A</m> is bounded above and let <m>b</m> be an upper bound of <m>A</m>.
+Then <m>b</m> is the supremum of <m>A</m> if and only if for every <m>\varepsilon >0</m>,
+there exists <m>a\in A</m> such that <m>b-\varepsilon \lt a</m>.</p>
+</statement>
+</theorem>
+
+<problem>
+<statement>
+<p>State and prove the analogous result to <xref ref="thm_scoot_in_characterization_of_sup">Theorem</xref> involving infimum.</p>
+</statement>
+</problem>
+
+<p>The following axiom states that every nonempty subset of the real numbers that has an upper bound has a least upper bound.</p>
+
+<axiom xml:id="axiom_completeness">
+<creator>Completeness Axiom</creator>
+<statement>
+<p>If <m>A</m> is a nonempty subset of
+<m>\mathbb{R}</m> that is bounded above,
+then <m>\sup(A)</m> exists.</p>
+</statement>
+</axiom>
+
+<p>Given the Completeness Axiom,
+we say that the real numbers satisfy the
+<term>least upper bound property</term>.
+It is worth mentioning that we do not need the Completeness Axiom to conclude that every nonempty subset of the integers that is bounded above has a supremum,
+as this follows from <xref ref="thm_reverse_WOP">Theorem</xref>
+(a generalized version of the Well-Ordering Principle).</p>
+
+<p>Certainly, the real numbers also satisfy the analogous result involving infimum.</p>
+
+<theorem>
+<statement>
+<p>If <m>A</m> is a nonempty subset of
+<m>\mathbb{R}</m> that is bounded below,
+then <m>\inf(A)</m> exists.</p>
+</statement>
+</theorem>
+
+<p>Our next result, called the <term>Archimedean Property</term>,
+tells us that for every real number,
+we can always find a natural number that is larger.
+To prove this theorem,
+consider a proof by contradiction and then utilize the Completeness Axiom and <xref ref="thm_scoot_in_characterization_of_sup">Theorem</xref>.</p>
+
+<theorem>
+<title>Archimedean Property</title>
+<statement>
+<p>For every <m>x\in\mathbb{R}</m>,
+there exists <m>n\in\mathbb{N}</m> such that <m>x\lt n</m>.</p>
+</statement>
+</theorem>
+
+<p>More generally, we can
+<q>squeeze</q>
+every real number between a pair of integers.
+The next result is sometimes referred to at the
+<term>Generalized Archimedean Property</term>.</p>
+
+<theorem>
+<title>Generalized Archimedean Property</title>
+<statement>
+<p>For every <m>x\in\mathbb{R}</m>,
+there exists <m>k,n\in\mathbb{Z}</m> such that <m>k\lt x\lt n</m>.</p>
+</statement>
+</theorem>
+
+<theorem xml:id="thm_small_reciprocal">
+<statement>
+<p>For any positive real number <m>x</m>,
+there exists <m>N\in \mathbb{N}</m> such that <m>0\lt \frac{1}{N}\lt x</m>.</p>
+</statement>
+</theorem>
+
+<p>The next theorem strengthens the Generalized Archimedean Property and says that every real number is either an integer or lies between a pair of consecutive integers.
+To prove this theorem, let
+<m>x\in\mathbb{R}</m> and define <m>L=\{k\in\mathbb{Z}\mid k\leq x\}</m>.
+Use the Generalized Archimedean Property to conclude that <m>L</m> is nonempty and then utilize <xref ref="thm_reverse_WOP">Theorem</xref>.</p>
+
+<theorem xml:id="thm_squeeze_with_consecutive_integers">
+<statement>
+<p>For every <m>x\in\mathbb{R}</m>,
+there exists <m>n\in \mathbb{Z}</m> such that <m>n\leq x\lt n+1</m>.</p>
+</statement>
+</theorem>
+
+<p>To prove the next theorem, let <m>a\lt b</m>,
+utilize <xref ref="thm_small_reciprocal">Theorem</xref>
+on <m>b-a</m> to obtain <m>N\in\mathbb{N}</m> such that <m>\frac{1}{N}\lt b-a</m>,
+and then apply <xref ref="thm_squeeze_with_consecutive_integers">Theorem</xref>
+to <m>Na</m> to conclude that there exists
+<m>n\in\mathbb{N}</m> such that <m>n\leq Na\lt n+1</m>.
+Lastly, argue that <m>\frac{n+1}{N}</m> is the rational number you seek.</p>
+
+<theorem xml:id="thm_rationals_dense">
+<statement>
+<p>If <m>(a,b)</m> is an open interval,
+then there exists a rational number <m>p</m> such that <m>p\in(a,b)</m>.</p>
+</statement>
+</theorem>
+
+<p>Recall that the real numbers consist of rational and irrational numbers.
+Two examples of an irrational number that you are likely familiar with are <m>\pi</m> and <m>\sqrt{2}</m>.
+In <xref ref="sec_Irrationality_of_Root_2">Section</xref>,
+we will prove that <m>\sqrt{2}</m> is irrational,
+but for now we will take this fact for granted.
+It turns out that <m>\sqrt{2}\approx 1.41421356237\in (1,2)</m>.
+This provides an example of an irrational number occurring between a pair of distinct rational numbers.
+The following theorem is a good challenge to generalize this.</p>
+
+<theorem xml:id="thm_irrationals_dense">
+<statement>
+<p>If <m>(a,b)</m> is an open interval,
+then there exists an irrational number <m>p</m> such that <m>p\in(a,b)</m>.</p>
+</statement>
+</theorem>
+
+<p>Repeated applications of the previous two theorems implies that every open interval contains infinitely many rational numbers and infinitely many irrational numbers.
+In light of these two theorems,
+we say that both the rationals and irrationals are
+<term>dense</term> in the real numbers.</p>
+
+<p>\epigraph{If people do not believe that mathematics is simple,
+it is only because they do not realize how complicated life is.}{John von Neumann,
+mathematician}</p>
+
 </section>
