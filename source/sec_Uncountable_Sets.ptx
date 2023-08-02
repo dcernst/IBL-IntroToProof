@@ -128,7 +128,7 @@
     Since the interval <m>(0,1)</m> is uncountable and <m>(0,1)\subseteq \mathbb{R}</m>,
     it follows immediately from <xref ref="thm_containsUncountableSubset">Theorem</xref>
     that <m>\mathbb{R}</m> is also uncountable.
-    The next theorem tells that <m>(0,1)</m> and
+    The next theorem tells us that <m>(0,1)</m> and
     <m>\mathbb{R}</m> actually have the same cardinality!
     To prove this, consider the function
     <m>f:(0,1)\to \mathbb{R}</m> defined via <m>f(x)=\tan\left(\pi x-\frac{\pi}{2}\right)</m>.
