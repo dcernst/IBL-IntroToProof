@@ -17,7 +17,7 @@
     so it is at least plausible that <m>(0,1)</m> is uncountable.
     The following problem outlines the proof of <xref ref="thm__0_1_uncountable">Theorem</xref>.
     Our approach is often referred to as
-    <em>Cantor's Diagonalization Argument</em>,
+    <term>Cantor's Diagonalization Argument</term>,
     named after German mathematician
     <url href="https://en.wikipedia.org/wiki/Georg_Cantor">Georg Cantor</url>
     (1845<ndash/>1918).
@@ -28,7 +28,7 @@
     However, there may be more than one way to write a given number in decimal form.
     For example, <m>0.2</m> equals <m>0.1\overline{99}</m>.
     A number <m>0.a_1a_2a_3\ldots</m> in <m>(0,1)</m> is said to be in
-    <em>standard decimal form</em>
+    <term>standard decimal form</term>
     if there is no <m>k</m> such that for all <m>i>k</m>, <m>a_i=9</m>.
     That is, a number is in standard decimal form if and only if its decimal expansion does not end with a repeating sequence of 9's.
     For example,
@@ -142,7 +142,7 @@
     </statement>
   </theorem>
   <p>
-    The <em>continuum hypothesis</em><mdash/>originally proposed by Cantor in 1878<mdash/>states that there is no set whose cardinality is strictly between that of the natural numbers and the real numbers.
+    The <term>continuum hypothesis</term><mdash/>originally proposed by Cantor in 1878<mdash/>states that there is no set whose cardinality is strictly between that of the natural numbers and the real numbers.
     Cantor unsuccessfully attempted to prove the continuum hypothesis for several years.
     It follows from the work of
     <url href="https://en.wikipedia.org/wiki/Paul_Cohen">Paul Cohen</url>
