@@ -28,11 +28,11 @@
   <definition>
     <statement>
       <p>
-        A set <m>A</m> is finite if <m>A=\emptyset</m> or
+        A set <m>A</m> is <term>finite</term> if <m>A=\emptyset</m> or
         <m>\card(A)=\card([n])</m> for some <m>n\in\mathbb{N}</m>.
         If <m>A=\emptyset</m>,
-        then we say that <m>A</m> has cardinality 0 and if <m>\card(A)=\card([n])</m>,
-        then we say that <m>A</m> has cardinality <m>n</m>.
+        then we say that <m>A</m> has <term>cardinality <m>0</m></term>  and if <m>\card(A)=\card([n])</m>,
+        then we say that <m>A</m> has <term>cardinality</term> <m>n</m></term> .
       </p>
     </statement>
   </definition>
@@ -109,7 +109,7 @@
   </theorem>
   <p>
     The next theorem,
-    called the <em>Pigeonhole Principle</em>, is surprisingly useful.
+    called the <term>Pigeonhole Principle</term>, is surprisingly useful.
     It puts restrictions on when we may have an injective function.
     The name of the theorem is inspired by the following idea: If <m>n</m> pigeons wish to roost in a house with <m>k</m> pigeonholes and <m>n>k</m>,
     then it must be the case that at least one hole contains more than one pigeon.

@@ -7,7 +7,7 @@
   <definition xml:id="def_infiniteSet">
     <statement>
       <p>
-        A set <m>A</m> is infinite if <m>A</m> is not finite.
+        A set <m>A</m> is <term>infinite</term>  if <m>A</m> is not finite.
       </p>
     </statement>
   </definition>

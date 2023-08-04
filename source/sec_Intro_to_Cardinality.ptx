@@ -33,7 +33,7 @@
     <statement>
       <p>
         Let <m>A</m> and <m>B</m> be sets.
-        We say that <m>A</m> and <m>B</m> have the same cardinality if there exists a bijection between <m>A</m> and <m>B</m>.
+        We say that <m>A</m> and <m>B</m> have the same <term>cardinality</term> if there exists a bijection between <m>A</m> and <m>B</m>.
         In this case, we write <m>\tcboxmath{\card(A)=\card(B)}</m>.
       </p>
     </statement>
@@ -346,7 +346,7 @@
       <p>
         Let <m>A</m> and <m>B</m> be sets.
         If there is an injective function from <m>A</m> to <m>B</m>,
-        then we say that the cardinality of <m>A</m> is less than or equal to the cardinality of <m>B</m>.
+        then we say that the cardinality of <m>A</m> is <term>less than or equal to the cardinality of <m>B</m></term>.
         In this case, we write <m>\tcboxmath{\card(A)\leq\card(B)}</m>.
       </p>
     </statement>
@@ -405,8 +405,8 @@
     As a reminder, the statements <m>\card(A)= \card(B)</m> and
     <m>\card(A)\leq \card(B)</m> are symbolic ways of asserting the existence of certain types of functions from <m>A</m> to <m>B</m>.
     When we write <m>\card(A)\lt \card(B)</m>,
-    we are saying something much stronger than ``There exists a function
-    <m>f:A\to B</m> that is injective but not surjective." The statement
+    we are saying something much stronger than <q>There exists a function
+    <m>f:A\to B</m> that is injective but not surjective.</q> The statement
     <m>\card(A)\lt \card(B)</m> is asserting that <em>every</em>
     injective function from <m>A</m> to <m>B</m> is not surjective.
     In general, it is difficult to prove statements like

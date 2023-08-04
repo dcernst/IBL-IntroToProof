@@ -11,9 +11,8 @@
     <statement>
       <p>
         If <m>A</m> is a set such that <m>\card(A)=\card(\mathbb{N})</m>,
-        then we say that <m>A</m> is denumerable and has cardinality <m>\mathbf{\aleph_0}</m>
-        (read
-        <q>aleph naught</q>).
+        then we say that <m>A</m> is <term>denumerable</term> and has <term>cardinality <m>\mathbf{\aleph_0}</m></term>
+        (read <q>aleph naught</q>).
       </p>
     </statement>
   </definition>
@@ -31,8 +30,8 @@
   <definition xml:id="def_countable">
     <statement>
       <p>
-        A set <m>A</m> is called countable if <m>A</m> is finite or denumerable.
-        A set is called uncountable if it is not countable.
+        A set <m>A</m> is called <term>countable</term> if <m>A</m> is finite or denumerable.
+        A set is called <term>uncountable</term> if it is not countable.
       </p>
     </statement>
   </definition>
