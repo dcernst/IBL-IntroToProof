@@ -32,7 +32,7 @@
         <m>\card(A)=\card([n])</m> for some <m>n\in\mathbb{N}</m>.
         If <m>A=\emptyset</m>,
         then we say that <m>A</m> has <term>cardinality <m>0</m></term>  and if <m>\card(A)=\card([n])</m>,
-        then we say that <m>A</m> has <term>cardinality</term> <m>n</m></term> .
+        then we say that <m>A</m> has <term>cardinality <m>n</m></term> .
       </p>
     </statement>
   </definition>
