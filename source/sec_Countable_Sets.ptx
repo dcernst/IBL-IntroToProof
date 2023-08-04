@@ -240,9 +240,9 @@
 
 <figure xml:id="fig_zig_zag">
 <caption>Inspiration for one possible approach to proving <xref ref="thm_countable_union_of_countable_sets">Theorem</xref>.</caption>
-<image>
+<image width="90%" xml:id="zig_zag">
 <latex-image>
-\begin{tikzpicture}
+\begin{tikzpicture}[xscale=2.1,->,>=stealth,shorten >=.5pt,label distance=-.9mm,semithick]
 \node[smallvert,label=below:{\scriptsize \(b_{1,1}\)}] at (1,1) (b11) {};
 \node[smallvert,label=below:{\scriptsize \(b_{1,2}\)}] at (2,1) (b12) {};
 \node[smallvert,label=below:{\scriptsize \(b_{1,3}\)}] at (3,1) (b13) {};

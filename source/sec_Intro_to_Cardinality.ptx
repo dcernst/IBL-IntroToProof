@@ -143,9 +143,9 @@
 
 <figure xml:id="fig_lattice_path">
 <caption>A North-East lattice path from <m>(0,0)</m> to <m>(4,3)</m>.</caption>
-<image>
+<image width="50%" xml:id="lattice_path">
 <latex-image>
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=1.2,-,semithick]
 \node[smallvert,label=below:{\((0,0)\)}] at (0,0) (1) {};
 \node[smallvert] at (1,0) (2) {};
 \node[smallvert] at (1,1) (3) {};
