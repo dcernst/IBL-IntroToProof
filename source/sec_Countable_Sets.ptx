@@ -318,9 +318,17 @@
       </p>
     </statement>
   </theorem>
-  <p>
+  <!-- <p>
     \epigraph{Vulnerability is not winning or losing;
     it's having the courage to show up and be seen when we have no control over the outcome.}{Bren&#xe9; Brown,
     storyteller &amp; author}
-  </p>
+  </p> -->
+  <blockquote>
+   <p>
+    Vulnerability is not winning or losing;
+    it's having the courage to show up and be seen when we have no control over the outcome.
+   </p> 
+   <attribution>Bren&#xe9; Brown,
+    storyteller &amp; author</attribution>
+  </blockquote>
 </section>
