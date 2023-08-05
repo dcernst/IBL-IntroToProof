@@ -1,12 +1,18 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chap_ThreeFamousTheorems">
   <title>Three Famous Theorems</title>
   <introduction>
-    <p>
+    <!-- <p>
       \epigraph{A mathematician, like a painter or a poet, is a maker of patterns.
       If his patterns are more permanent than theirs,
       it is because they are made with ideas.}{G.H.<nbsp/>Hardy,
       mathematician}
-    </p>
+    </p> -->
+
+<blockquote>
+<p>A mathematician, like a painter or a poet, is a maker of patterns. If his patterns are more permanent than theirs, it is because they are made with ideas.</p>
+<attribution>G.H.<nbsp/>Hardy, mathematician</attribution>
+</blockquote>
+
     <p>
       In the last few chapters,
       we have encountered all of the major proof techniques one needs in mathematics and enhanced our proof-writing skills.

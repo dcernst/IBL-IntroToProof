@@ -1,10 +1,15 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chap_Functions">
   <title>Functions</title>
   <introduction>
-    <p>
+    <!-- <p>
       \epigraph{I write one page of masterpiece to ninety-one pages of shit.}{Ernest Hemingway,
       novelist &amp; journalist}
-    </p>
+    </p> -->
+<blockquote>
+<p>I write one page of masterpiece to ninety-one pages of shit.</p>
+<attribution>Ernest Hemingway,
+    novelist &amp; journalist</attribution>
+</blockquote>   
     <p>
       In this chapter,
       we will introduce the concept of function as a special type of relation.

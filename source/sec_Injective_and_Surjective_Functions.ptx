@@ -19,16 +19,16 @@
         <ol marker="labeltextrmalph">
           <li>
             <p>
-              The function <m>f</m> is said to be <em>injective</em>
-              (or <em>one-to-one</em>)
+              The function <m>f</m> is said to be <term>injective</term>
+              (or <term>one-to-one</term>)
               if for all <m>y\in \range(f)</m>,
               there is a unique <m>x\in X</m> such that <m>y=f(x)</m>.
             </p>
           </li>
           <li>
             <p>
-              The function <m>f</m> is said to be <em>surjective</em>
-              (or <em>onto</em>)
+              The function <m>f</m> is said to be <term>surjective</term>
+              (or <term>onto</term>)
               if for all <m>y\in Y</m>,
               there exists <m>x\in X</m> such that <m>y=f(x)</m>.
             </p>
@@ -36,7 +36,7 @@
           <li>
             <p>
               If <m>f</m> is both injective and surjective,
-              we say that <m>f</m> is <em>bijective</em>.
+              we say that <m>f</m> is <term>bijective</term>.
             </p>
           </li>
         </ol>
@@ -141,11 +141,11 @@
         Fill in the blank with the appropriate word.
       </p>
       <blockquote>
-        The function <m>f:X\to \mathbb{R}</m> is <em><nbsp/> <nbsp/> <nbsp/> <nbsp/>   <nbsp/> <nbsp/> <nbsp/> <nbsp/> </em> if and only if every horizontal line hits the graph of <m>f</m> <em>at most once</em>.
+        The function <m>f:X\to \mathbb{R}</m> is <c><nbsp/> <nbsp/> <nbsp/> <nbsp/>   <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> </c> if and only if every horizontal line hits the graph of <m>f</m> <em>at most once</em>.
       </blockquote>
       <p>
         This statement is often called the
-        <em>horizontal line test</em>.
+        <term>horizontal line test</term>.
         Explain why the horizontal line test is true.
       </p>
     </statement>
@@ -157,7 +157,7 @@
         Fill in the blank with the appropriate word.
       </p>
       <blockquote>
-        The function <m>f:X\to \mathbb{R}</m> is <em><nbsp/> <nbsp/> <nbsp/> <nbsp/>   <nbsp/> <nbsp/> <nbsp/> <nbsp/> </em> if and only if every horizontal line hits the graph of <m>f</m> <em>at least once</em>.
+        The function <m>f:X\to \mathbb{R}</m> is <c><nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/>   <nbsp/> <nbsp/> <nbsp/> <nbsp/> </c> if and only if every horizontal line hits the graph of <m>f</m> <em>at least once</em>.
       </blockquote>
       <p>
         Explain why this statement is true.
@@ -171,7 +171,7 @@
         Fill in the blank with the appropriate word.
       </p>
       <blockquote>
-        The function <m>f:X\to \mathbb{R}</m> is <em><nbsp/> <nbsp/> <nbsp/> <nbsp/>   <nbsp/> <nbsp/> <nbsp/> <nbsp/> </em> if and only if every horizontal line hits the graph of <m>f</m> <em>exactly once</em>.
+        The function <m>f:X\to \mathbb{R}</m> is <c><nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/>   <nbsp/> <nbsp/> <nbsp/> <nbsp/> </c> if and only if every horizontal line hits the graph of <m>f</m> <em>exactly once</em>.
       </blockquote>
       <p>
         Explain why this statement is true.
@@ -236,83 +236,46 @@
       </p>
     </proof>
   </paragraphs>
-  <problem xml:id="prob_injective_surjective_functions">
-    <statement>
-      <p>
-        Determine whether each of the following functions is injective,
-        surjective, both, or neither.
-        In each case,
-        you should provide a proof or a counterexample as appropriate.
-        <ol marker="labeltextrmalph">
-          <li>
-            <p>
-              Define <m>f:\mathbb{R}\to \mathbb{R}</m> via <m>f(x)=x^{2}</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              Define <m>g:\mathbb{R}\to [0,\infty)</m> via <m>g(x)=x^{2}</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              Define <m>h:\mathbb{R}\to \mathbb{R}</m> via <m>h(x)=x^{3}</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              Define <m>k:\mathbb{R}\to \mathbb{R}</m> via <m>k(x)=x^{3}-x</m>
-            </p>
-          </li>
-          <li xml:id="circles">
-            <p>
-              Define <m>c: \mathbb{R}\times \mathbb{R}\to \mathbb{R}</m> via <m>c(x,y)=x^{2}+y^{2}</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              Define <m>f:\mathbb{N}\to \mathbb{N}\times \mathbb{N}</m> via <m>f(n)=(n,n)</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              Define <m>g:\mathbb{Z}\to \mathbb{Z}</m> via
-              <me>
-                g(n)=\begin{cases}\frac{n}{2}, \amp  \text{ if } n\text{ is even } \\ \frac{n+1}{2}, \amp  \text{ if } n\text{ is odd } \end{cases}
-              </me>
-            </p>
-          </li>
-          <li>
-            <p>
-              Define <m>\ell:\mathbb{Z}\to \mathbb{N}</m> via
-              <me>
-                \ell(n)=\begin{cases}2n+1, \amp  \text{ if } n\geq 0\\ -2n, \amp  \text{ if } n\lt 0 \end{cases}
-              </me>
-            </p>
-          </li>
-          <li>
-            <p>
-              The function <m>h</m> defined in <xref ref="prob_well_defined">Problem</xref>
-              <xref ref="mod_10_to_mod_10"></xref>.
-            </p>
-          </li>
-          <li>
-            <p>
-              The function <m>k</m> defined in <xref ref="prob_well_defined">Problem</xref>
-              <xref ref="mod_43_to_mod_43"></xref>.
-            </p>
-          </li>
-          <li>
-            <p>
-              The function <m>\ell</m> defined in <xref ref="prob_well_defined">Problem</xref>
-              <xref ref="mod_15_to_mod_15"></xref>.
-            </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-  </problem>
-  <problem>
+
+<problem xml:id="prob_injective_surjective_functions">
+<statement>
+<p>Determine whether each of the following functions is injective, surjective, both, or neither. In each case, you should provide a proof or a counterexample as appropriate.
+<ol marker="labeltextrmalph">
+<li><p>Define <m>f:\mathbb{R}\to \mathbb{R}</m> via <m>f(x)=x^{2}</m>
+</p></li>
+<li><p>Define <m>g:\mathbb{R}\to [0,\infty)</m> via <m>g(x)=x^{2}</m>
+</p></li>
+<li><p>Define <m>h:\mathbb{R}\to \mathbb{R}</m> via <m>h(x)=x^{3}</m>
+</p></li>
+<li><p>Define <m>k:\mathbb{R}\to \mathbb{R}</m> via <m>k(x)=x^{3}-x</m>
+</p></li>
+<li xml:id="circles"><p>Define <m>c: \mathbb{R}\times \mathbb{R}\to \mathbb{R}</m> via <m>c(x,y)=x^{2}+y^{2}</m>
+</p></li>
+<li><p>Define <m>f:\mathbb{N}\to \mathbb{N}\times \mathbb{N}</m> via <m>f(n)=(n,n)</m>
+</p></li>
+<li>
+<p>Define <m>g:\mathbb{Z}\to \mathbb{Z}</m> via
+<me>
+g(n)=\begin{cases}\frac{n}{2}, \amp  \text{ if } n\text{ is even } \\ \frac{n+1}{2}, \amp  \text{ if } n\text{ is odd } \end{cases}
+</me>
+</p></li>
+<li><p>Define <m>\ell:\mathbb{Z}\to \mathbb{N}</m> via
+<me>
+\ell(n)=\begin{cases}2n+1, \amp  \text{ if } n\geq 0\\ -2n, \amp  \text{ if } n\lt 0 \end{cases}
+</me>
+</p></li>
+<li><p>The function <m>h</m> defined in <xref ref="prob_well_defined">Problem</xref> <xref ref="mod_10_to_mod_10"></xref>.
+</p></li>
+<li><p>The function <m>k</m> defined in <xref ref="prob_well_defined">Problem</xref> <xref ref="mod_43_to_mod_43"></xref>.
+</p></li>
+<li><p>The function <m>\ell</m> defined in <xref ref="prob_well_defined">Problem</xref> <xref ref="mod_15_to_mod_15"></xref>.
+</p></li>
+</ol>
+</p>
+</statement>
+</problem>
+
+<problem>
     <statement>
       <p>
         Suppose <m>X</m> and <m>Y</m> are nonempty sets with <m>m</m> and <m>n</m> elements,
@@ -355,7 +318,7 @@
         Let <m>A</m> and <m>B</m> be nonempty sets and let <m>S</m> be a nonempty subset of <m>A\times B</m>.
         Define <m>\pi_{1}:S\to A</m> and <m>\pi_{2}:S\to B</m> via
         <m>\pi_{1}(a,b)=a</m> and <m>\pi_{2}(a,b)=b</m>.
-        We call <m>\pi_{1}</m> and <m>\pi_{2}</m> the <em>projections</em>
+        We call <m>\pi_{1}</m> and <m>\pi_{2}</m> the <term>projections</term>
         of <m>S</m> onto <m>A</m> and <m>B</m>, respectively.
         <ol marker="labeltextrmalph">
           <li>
@@ -389,7 +352,7 @@
   </theorem>
   <p>
     The function from the previous theorem is sometimes called the
-    <em>canonical projection map</em> induced by <m>\sim</m>.
+    <term>canonical projection map</term> induced by <m>\sim</m>.
   </p>
   <problem>
     <statement>
@@ -497,14 +460,14 @@
         </me>.
       </p>
       <p>
-        The function diagram for <m>\varphi</m> is given in <xref ref="fig_passengers_and_airplanes">Figure</xref>\subref{fig:passengers}, where we have highlighted the elements of the domain that map to the same element in the range by enclosing them in additional boxes.
+        The function diagram for <m>\varphi</m> is given in <xref ref="fig_passengers">Figure</xref>, where we have highlighted the elements of the domain that map to the same element in the range by enclosing them in additional boxes.
         We see that <m>\range(\varphi)=\{1,2,4\}</m>.
         The function diagram for the induced map
-        <m>\overline{\varphi}</m> that is depicted in <xref ref="fig_passengers_and_airplanes">Figure</xref>\subref{fig:airplanes} makes it clear that <m>\overline{\varphi}</m> is a bijection.
+        <m>\overline{\varphi}</m> that is depicted in <xref ref="fig_airplanes">Figure</xref> makes it clear that <m>\overline{\varphi}</m> is a bijection.
         Note that since <m>\varphi(a)=\varphi(b)</m> and <m>\varphi(d)=\varphi(e)=\varphi(f)</m>,
         it must be the case that <m>[a]=[b]</m> and
         <m>[d]=[e]=[f]</m> according to <xref ref="thm_related_if_and_only_if_same_class">Theorem</xref>.
-        Thus, the vertices labeled as <m>[a]</m> and <m>[d]</m> in <xref ref="fig_passengers_and_airplanes">Figure</xref>\subref{fig:airplanes} could have also been labeled as <m>[b]</m> and <m>[c]</m> or <m>[d]</m>,
+        Thus, the vertices labeled as <m>[a]</m> and <m>[d]</m> in <xref ref="fig_airplanes">Figure</xref> could have also been labeled as <m>[b]</m> and <m>[c]</m> or <m>[d]</m>,
         respectively.
         In terms of our passengers and airplanes analogy,
         <m>X=\{a,b,c,d,e,f\}</m> is the set of passengers,
@@ -518,12 +481,14 @@
     </statement>
   </example>
  
-<figure xml:id="fig_passengers">
+<figure xml:id="fig_passengers_and_airplanes">
 <caption>Example of a visual representation of <xref ref="thm_iso_theorem_for_sets">Theorem</xref>.</caption>
-  \subcaptionbox{ }[.48\linewidth]{
-<image>
+<sidebyside widths="48% 48%" valigns="middle middle">
+<figure xml:id="fig_passengers">
+<caption></caption>
+<image xml:id="passengers">
 <latex-image>
-\begin{tikzpicture}
+\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2cm,semithick,scale=1.2]
 \node[vert] (A) at (0,6) {\scriptsize \(a\)};
 \node[vert] (B) at (0,5) {\scriptsize \(b\)};
 \node[vert] (C) at (0,4) {\scriptsize \(c\)};
@@ -552,11 +517,13 @@
 \end{tikzpicture}
 </latex-image>
 </image>
-    }
-    \subcaptionbox{ }[.48\linewidth]{
-<image>
+</figure>
+
+<figure xml:id="fig_airplanes">
+<caption></caption>
+<image xml:id="airplanes">
 <latex-image>
-begin{tikzpicture}
+\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2cm,semithick,scale=1.2]
 \node[vert] (A) at (0,3) {\scriptsize \([a]\)};
 \node[vert] (B) at (0,2) {\scriptsize \([c]\)};
 \node[vert] (C) at (0,1) {\scriptsize \([d]\)};
@@ -575,7 +542,8 @@ begin{tikzpicture}
 \end{tikzpicture}
 </latex-image>
 </image>
-    }
+</figure>
+</sidebyside>
 </figure>
 
   <problem xml:id="prob_iso_theorem_for_sets">
@@ -649,11 +617,13 @@ begin{tikzpicture}
       </p>
     </statement>
   </problem>
-  <figure xml:id="fig_Z_to_Z_mod_4">
-    <caption>Function diagram for the function described in <xref ref="prob_Z_to_Z_mod_4">Problem</xref>.</caption>
-    <image>
+
+<figure xml:id="fig_Z_to_Z_mod_4">
+<caption>Function diagram for the function described in <xref ref="prob_Z_to_Z_mod_4">Problem</xref>.</caption>
+<image width="100%" xml:id="Z_to_Z_mod_4">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\node[vert] (A) at (4,0) {\scriptsize \(4\)};
+\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2cm,semithick,scale=1.2]
+\node[vert] (A) at (4,0) {\scriptsize \(4\)};
 \node[vert] (B) at (3,0) {\scriptsize \(3\)};
 \node[vert] (C) at (2,0) {\scriptsize \(2\)};
 \node[vert] (D) at (1,0) {\scriptsize \(1\)};
@@ -679,10 +649,12 @@ begin{tikzpicture}
 \node[draw,rounded corners,fit=(0) (1) (2) (3),minimum height=1.3cm,gray] {};
 \node (X) at (5.2,0) {\(\mathbb{Z}\)};
 \node (Y) at (2.6,-2.5) {\(Y\)};
-\path (X) edge [bend left] node {\(f\)} (Y);\end{tikzpicture}]]>
+\path (X) edge [bend left] node {\(f\)} (Y);
+\end{tikzpicture}
 </latex-image>
-    </image>
-  </figure>
+</image>
+</figure>
+
   <problem>
     <statement>
       <p>
@@ -709,7 +681,7 @@ begin{tikzpicture}
       </p>
     </statement>
   </problem>
-  <p>
+  <!-- <p>
     \epigraph{It is not the critic who counts;
     not the man who points out how the strong man stumbles,
     or where the doer of deeds could have done them better.
@@ -726,5 +698,24 @@ begin{tikzpicture}
     at least fails while daring greatly,
     so that his place shall never be with those cold and timid souls who neither know victory nor defeat.}{Theodore Roosevelt,
     statesman &amp; conservationist}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>It is not the critic who counts;
+    not the man who points out how the strong man stumbles,
+    or where the doer of deeds could have done them better.
+    The credit belongs to the man who is actually in the arena,
+    whose face is marred by dust and sweat and blood;
+    who strives valiantly; who errs,
+    who comes short again and again,
+    because there is no effort without error and shortcoming;
+    but who does actually strive to do the deeds;
+    who knows great enthusiasms, the great devotions;
+    who spends himself in a worthy cause;
+    who at the best knows in the end the triumph of high achievement,
+    and who at the worst, if he fails,
+    at least fails while daring greatly,
+    so that his place shall never be with those cold and timid souls who neither know victory nor defeat.</p>
+<attribution>Theodore Roosevelt, statesman &amp; conservationist</attribution>
+</blockquote>
 </section>

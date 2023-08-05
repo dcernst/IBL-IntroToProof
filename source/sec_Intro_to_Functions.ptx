@@ -16,15 +16,15 @@
     <statement>
       <p>
         Let <m>X</m> and <m>Y</m> be two nonempty sets.
-        A function <m>f</m> from <m>X</m> to <m>Y</m> is a relation from <m>X</m> to <m>Y</m> such that for every <m>x\in X</m>,
+        A <term>function</term> <m>f</m> from <m>X</m> to <m>Y</m> is a relation from <m>X</m> to <m>Y</m> such that for every <m>x\in X</m>,
         there exists a unique <m>y\in Y</m> such that <m>(x,y)\in f</m>.
-        The set <m>X</m> is called the domain of <m>f</m> and is denoted by <m>\tcboxmath{\dom(f)}</m>.
-        The set <m>Y</m> is called the codomain of <m>f</m> and is denoted by
+        The set <m>X</m> is called the <term>domain</term> of <m>f</m> and is denoted by <m>\tcboxmath{\dom(f)}</m>.
+        The set <m>Y</m> is called the <term>codomain</term> of <m>f</m> and is denoted by
         <m>\tcboxmath{\codom(f)}</m> while the subset of the codomain defined via
         <me>
           \tcboxmath{\range(f)\coloneqq \{y\in Y\mid \mbox{there exists } x\mbox{ such that }  (x,y)\in f\}}
         </me>
-        is called the range of <m>f</m> or the image of <m>X</m> under <m>f</m>.
+        is called the <term>range</term> of <m>f</m> or the <term>image</term> of <m>X</m> under <m>f</m>.
       </p>
     </statement>
   </definition>
@@ -35,17 +35,17 @@
     <q>Let <m>f:X\to Y</m> be the function defined via<ellipsis/></q>
     or
     <q>Define <m>f:X\to Y</m> via<ellipsis/></q>, where <m>f</m> is understood to be a function in the second statement.
-    Sometimes the word <em>mapping</em>
-    (or <em>map</em>)
+    Sometimes the word <term>mapping</term>
+    (or <term>map</term>)
     is used in place of the word function.
     If <m>(a,b)\in f</m> for a function <m>f</m>,
     we often write <m>\tcboxmath{f(a)=b}</m> and say that
     <q><m>f</m> maps <m>a</m> to <m>b</m></q>
     or
     <q><m>f</m> of <m>a</m> equals <m>b</m></q>. In this case, <m>a</m> may be called an
-    <em>input</em> of <m>f</m> and is the
-    <em>preimage</em> of <m>b</m> under <m>f</m> while <m>b</m> is called an <em>output</em>
-    of <m>f</m> and is the <em>image</em>
+    <term>input</term> of <m>f</m> and is the
+    <term>preimage</term> of <m>b</m> under <m>f</m> while <m>b</m> is called an <term>output</term>
+    of <m>f</m> and is the <term>image</term>
     of <m>a</m> under <m>f</m>.
     Note that the domain of a function is the set of inputs while the range is the set of outputs for the function.
   </p>
@@ -66,9 +66,9 @@
   <p>
     Since functions are special types of relations,
     we can represent them using digraphs and graphs when practical.
-    Digraphs for functions are often called <em>function</em>
-    (or <em>mapping</em>)
-    <em>diagrams</em>.
+    Digraphs for functions are often called <term>function</term>
+    (or <term>mapping</term>)
+    <term>diagrams</term>.
     When drawing function diagrams,
     it is standard practice to put the vertices for the domain on the left and the vertices for the codomain on the right,
     so that all directed edges point from left to right.
@@ -99,9 +99,9 @@
 
 <figure xml:id="fig_function_diagram">
 <caption>Function diagram for a function from <m>X=\{a,b,c,d,\}</m> to <m>Y=\{1,2,3,4\}</m>.</caption>
-<image>
+<image width="50%" xml:id="function_diagram">
 <latex-image>
-\begin{tikzpicture}
+\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2cm,semithick,scale=1.2]
 \node[vert] (A) at (0,4) {\scriptsize \(a\)};
 \node[vert] (B) at (0,3) {\scriptsize \(b\)};
 \node[vert] (C) at (0,2) {\scriptsize \(c\)};
@@ -157,7 +157,7 @@
   <problem xml:id="prob_lots_of_potential_functions">
     <statement>
       <p>
-        Let <m>X=\{\circ, \square,\triangle,\smiley\}</m> and <m>Y=\{a,b,c,d,e\}</m>.
+        Let <m>X=\{\circ, \square,\triangle,\alpha\}</m> and <m>Y=\{a,b,c,d,e\}</m>.
         For each of the following relations,
         draw the corresponding digraph and determine whether the relation represents a function from <m>X</m> to <m>Y</m>,
         <m>Y</m> to <m>X</m>,
@@ -167,12 +167,12 @@
         <ol marker="labeltextrmalph">
           <li>
             <p>
-              <m>f=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,d)\}</m>
+              <m>f=\{(\circ, a),(\square,b),(\triangle,c),(\alpha,d)\}</m>
             </p>
           </li>
           <li>
             <p>
-              <m>g=\{(\circ, a),(\square,b),(\triangle,c),(\smiley,c)\}</m>
+              <m>g=\{(\circ, a),(\square,b),(\triangle,c),(\alpha,c)\}</m>
             </p>
           </li>
           <li>
@@ -183,33 +183,33 @@
           <li>
             <p>
               <m>k=\{(\circ,
-              a),(\square,b),(\triangle,c),(\smiley,d),(\square,e)\}</m>
+              a),(\square,b),(\triangle,c),(\alpha,d),(\square,e)\}</m>
             </p>
           </li>
           <li>
             <p>
-              <m>l=\{(\circ, e),(\square,e),(\triangle,e),(\smiley,e)\}</m>
+              <m>l=\{(\circ, e),(\square,e),(\triangle,e),(\alpha,e)\}</m>
             </p>
           </li>
           <li>
             <p>
-              <m>m=\{(\circ, a),(\triangle,b),(\smiley,c)\}</m>
+              <m>m=\{(\circ, a),(\triangle,b),(\alpha,c)\}</m>
             </p>
           </li>
           <li xml:id="prob_identity">
             <p>
-              <m>i=\{(\circ,\circ),(\square, \square),(\triangle,\triangle),(\smiley,\smiley)\}</m>
+              <m>i=\{(\circ,\circ),(\square, \square),(\triangle,\triangle),(\alpha,\alpha)\}</m>
             </p>
           </li>
           <li xml:id="prob_happy">
             <p>
               Define the relation <m>\operatorname{happy}</m> from <m>Y</m> to <m>X</m> via
-              <m>(y,\smiley)\in\operatorname{happy}</m> for all <m>y\in Y</m>.
+              <m>(y,\alpha)\in\operatorname{happy}</m> for all <m>y\in Y</m>.
             </p>
           </li>
           <li xml:id="prob_nugget">
             <p>
-              <m>\operatorname{nugget}=\{(\circ,\circ),(\square, \square),(\triangle,\triangle),(\smiley,\square)\}</m>
+              <m>\operatorname{nugget}=\{(\circ,\circ),(\square, \square),(\triangle,\triangle),(\alpha,\square)\}</m>
             </p>
           </li>
         </ol>
@@ -237,7 +237,7 @@
     <statement>
       <p>
         In high school you may have been told that a graph represents a function if it passes the
-        <em>vertical line test</em>.
+        <term>vertical line test</term>.
         Carefully state what the vertical line test says and then explain why it works.
       </p>
     </statement>
@@ -269,7 +269,7 @@
     when we describe a function in terms of a formula,
     we are implicitly assuming that the domain is the largest allowable subset of
     <m>\mathbb{R}</m><mdash/>sometimes called the
-    <em>default domain</em><mdash/>that makes sense for the given formula while the codomain is <m>\mathbb{R}</m>.
+    <term>default domain</term><mdash/>that makes sense for the given formula while the codomain is <m>\mathbb{R}</m>.
   </p>
   <example>
     <statement>
@@ -324,7 +324,7 @@
       <p>
         If <m>X</m> and <m>Y</m> are nonempty sets such that <m>X\subseteq Y</m>,
         then the function <m>\iota:X\to Y</m> defined via
-        <m>\iota(x)=x</m> is called the inclusion map from <m>X</m> into <m>Y</m>.
+        <m>\iota(x)=x</m> is called the <term>inclusion map</term> from <m>X</m> into <m>Y</m>.
       </p>
     </statement>
   </definition>
@@ -351,7 +351,7 @@
       <p>
         If <m>X</m> is a nonempty set,
         then the function <m>i_X:X\to X</m> defined via
-        <m>i_X(x)=x</m> is called the identity map
+        <m>i_X(x)=x</m> is called the <term>identity map</term>
         (or identity function)
         on <m>X</m>.
       </p>
@@ -362,7 +362,7 @@
       <p>
         The relation defined in <xref ref="prob_lots_of_potential_functions">Problem</xref>
         <xref ref="prob_identity"></xref>
-        is the identity map on <m>X=\{\circ, \square,\triangle,\smiley\}</m>.
+        is the identity map on <m>X=\{\circ, \square,\triangle,\alpha\}</m>.
       </p>
     </statement>
   </example>
@@ -398,7 +398,7 @@
   <definition>
     <statement>
       <p>
-        Any function <m>f:X\to Y</m> defined via <m>f(x)=c</m> for a fixed <m>c\in Y</m> is called a constant function.
+        Any function <m>f:X\to Y</m> defined via <m>f(x)=c</m> for a fixed <m>c\in Y</m> is called a <term>constant function</term>.
       </p>
     </statement>
   </definition>
@@ -408,15 +408,15 @@
         The function defined in <xref ref="prob_lots_of_potential_functions">Problem</xref>
         <xref ref="prob_happy"></xref>
         is an example of a constant function.
-        Notice that we can succinctly describe this function using the formula <m>\operatorname{happy}(y)=\smiley</m>.
+        Notice that we can succinctly describe this function using the formula <m>\operatorname{happy}(y)=\alpha</m>.
       </p>
     </statement>
   </example>
   <definition>
     <statement>
       <p>
-        A piecewise-defined function
-        (or piecewise function)
+        A <term>piecewise-defined function</term>
+        (or <term>piecewise function</term>)
         is a function defined by specifying its output on a partition of the domain.
       </p>
     </statement>
@@ -501,11 +501,11 @@
     </statement>
   </problem>
   <p>
-    In mathematics, we say that an expression is <em>well defined</em>
-    (or <em>unambiguous</em>)
+    In mathematics, we say that an expression is <term>well defined</term>
+    (or <term>unambiguous</term>)
     if its definition yields a unique interpretation.
     Otherwise, we say that the expression is not well defined
-    (or is <em>ambiguous</em>).
+    (or is <term>ambiguous</term>).
     For example, if <m>a,b,c\in\mathbb{R}</m>,
     then the expression <m>abc</m> is well defined since it does not matter if we interpret this as <m>(ab)c</m> or <m>a(bc)</m> since the real numbers are associative under multiplication.
     This issue was lurking behind the scenes in the statement of <xref ref="thm_modular_sums_products">Theorem</xref>.
@@ -592,11 +592,20 @@
       </p>
     </statement>
   </problem>
-  <p>
+  <!-- <p>
     \epigraph{Don't let anyone rob you of your imagination,
     your creativity, or your curiosity.
     It's your place in the world; it's your life.
     Go on and do all you can with it,
     and make it the life you want to live.}{Mae Jemison, NASA astronaut}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>Don't let anyone rob you of your imagination,
+    your creativity, or your curiosity.
+    It's your place in the world; it's your life.
+    Go on and do all you can with it,
+    and make it the life you want to live.</p>
+<attribution>Mae Jemison, NASA astronaut</attribution>
+</blockquote>
 </section>

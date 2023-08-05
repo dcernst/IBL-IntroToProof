@@ -1,11 +1,16 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chap_RealNumbers">
   <title>The Real Numbers</title>
   <introduction>
-    <p>
+    <!-- <p>
       \epigraph{All truths are easy to understand once they are discovered;
       the point is to discover them.}{Galileo Galilei,
       astronomer &amp; physicist}
-    </p>
+    </p> -->
+
+<blockquote>
+<p>All truths are easy to understand once they are discovered; the point is to discover them.</p>
+<attribution>Galileo Galilei, astronomer &amp; physicist</attribution>
+</blockquote>
     <p>
       In this chapter we will take a deep dive into the structure of the real numbers by building up the multitude of properties you are familiar with by starting with a collection of fundamental axioms.
       Recall that an axiom is a statement that is assumed to be true without proof.

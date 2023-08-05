@@ -1,12 +1,16 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chap_Cardinality">
   <title>Cardinality</title>
   <introduction>
-    <p>
+    <!-- <p>
       \epigraph{I counted everything.
       I counted the steps to the road, the steps up to church,
       the number of dishes and silverware I washed <ellipsis/> anything that could be counted, I did.}{Katherine Johnson,
       mathematician}
-    </p>
+    </p> -->
+<blockquote>
+<p>I counted everything. I counted the steps to the road, the steps up to church, the number of dishes and silverware I washed <ellipsis/> anything that could be counted, I did.</p>
+<attribution>Katherine Johnson, mathematician</attribution>
+</blockquote>
     <p>
       In this chapter, we will explore the notion of cardinality,
       which formalizes what it means for two sets to be the same

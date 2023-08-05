@@ -3,34 +3,27 @@
   <p>
     There are two important types of sets related to functions.
   </p>
-  <definition>
-    <statement>
-      <p>
-        Let <m>f:X\to Y</m> be a function.
-        <ol marker="labeltextrmalph">
-          <li>
-            <p>
-              If <m>S\subseteq X</m>, the <em>image</em>
-              of <m>S</m> under <m>f</m> is defined via
-              <me>
-                \tcboxmath{f(S)\coloneqq \{f(x) \mid  x\in S\}}
-              </me>.
-            </p>
-          </li>
-          <li>
-            <p>
-              If <m>T\subseteq Y</m>, the <em>preimage</em>
-              (or <em>inverse image</em>)
-              of <m>T</m> under <m>f</m> is defined via
-              <me>
-                \tcboxmath{f^{-1}(T)\coloneqq \{x\in X \mid  f(x)\in T\}}
-              </me>.
-            </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-  </definition>
+  
+<definition>
+<statement>
+<p>Let <m>f:X\to Y</m> be a function.
+<ol marker="labeltextrmalph">
+<li><p>If <m>S\subseteq X</m>, the <term>image</term> of <m>S</m> under <m>f</m> is defined via
+<me>
+\tcboxmath{f(S)\coloneqq \{f(x) \mid  x\in S\}}
+</me>.
+</p></li>
+<li>
+<p>If <m>T\subseteq Y</m>, the <term>preimage</term> (or <term>inverse image</term>) of <m>T</m> under <m>f</m> is defined via
+<me>
+\tcboxmath{f^{-1}(T)\coloneqq \{x\in X \mid  f(x)\in T\}}
+</me>.
+</p></li>
+</ol>
+</p>
+</statement>
+</definition>
+
   <p>
     The image of a subset <m>S</m> of the domain is simply the subset of the codomain we obtain by mapping the elements of <m>S</m>.
     It is important to emphasize that the function <m>f</m> maps <em>elements</em>
@@ -358,7 +351,11 @@
       </p>
     </statement>
   </problem>
-  <p>
+  <!-- <p>
     \epigraph{The obstacle is the path.}{Zen saying, Author Unknown}
-  </p>
+  </p> -->
+<blockquote>
+<p>The obstacle is the path.</p>
+<attribution>Zen saying, Author Unknown</attribution>
+</blockquote>
 </section>

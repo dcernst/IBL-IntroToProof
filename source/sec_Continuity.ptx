@@ -7,7 +7,7 @@
   <definition>
     <statement>
       <p>
-        A real function is any function
+        A <term>real function</term> is any function
         <m>f:A\to \mathbb{R}</m> such that <m>A</m> is a nonempty subset of <m>\mathbb{R}</m>.
       </p>
     </statement>
@@ -15,7 +15,7 @@
   <p>
     There are several equivalent definitions of continuity for real functions.
     The following characterization is typically referred to as the
-    <em>epsilon-delta definition of continuity</em>.
+    <term>epsilon-delta definition of continuity</term>.
     Our definition mimics the definition of continuity used in metric spaces,
     which <m>\mathbb{R}</m> equipped with absolute value happens to be an example of.
     Recall that <m>|a-b|\lt r</m> means that the distance between <m>a</m> and <m>b</m> is less than <m>r</m>
@@ -25,14 +25,14 @@
     <statement>
       <p>
         Suppose <m>f</m> is a real function such that <m>a\in \dom(f)</m>.
-        We say that <m>f</m> is continuous at <m>a</m> if for every <m>\varepsilon>0</m>,
+        We say that <m>f</m> is <term>continuous at <m>a</m></term> if for every <m>\varepsilon>0</m>,
         there exists <m>\delta>0</m> such that if
         <m>x\in\dom(f)</m> and <m>|x-a|\lt \delta</m>,
         then <m>|f(x)-f(a)|\lt \varepsilon</m>.
         If <m>f</m> is continuous at every point in <m>B\subseteq\dom(f)</m>,
-        then we say that <m>f</m> is continuous on <m>B</m>.
+        then we say that <m>f</m> is <term>continuous on <m>B</m></term>.
         If <m>f</m> is continuous on its entire domain,
-        we simply say that <m>f</m> is continuous.
+        we simply say that <m>f</m> is <term>continuous</term>.
       </p>
     </statement>
   </definition>
@@ -57,11 +57,13 @@
     the function is continuous at <m>a</m> since given <m>\varepsilon>0</m>,
     we could find <m>\delta >0</m> so that the graph of the function never exits the top or bottom of the dashed box.
   </p>
-  <figure xml:id="fig_continuity">
-    <caption>Visual representation of continuity of <m>f</m> at <m>a</m>.</caption>
-    <image>
+
+<figure xml:id="fig_continuity">
+<caption>Visual representation of continuity of <m>f</m> at <m>a</m>.</caption>
+<image width="75%" xml:id="continuity">
 <latex-image>
-<![CDATA[\begin{tikzpicture}\draw [thick,-stealth] (-.5,0) -- (4,0);
+\begin{tikzpicture}[scale=1.5,decoration={brace,amplitude=5},text height=1.5ex,text depth=.25ex]
+\draw [thick,-stealth] (-.5,0) -- (4,0);
 \draw [thick,-stealth] (0,-.5) -- (0,4);
 \draw[thick,stealth-stealth,domain=-.5:3.7] plot(\x,{.2*\x*\x+1});
 \draw[shift={(2.6457,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\(a\)};
@@ -79,12 +81,14 @@
 \draw [decorate] (2.6457,-.5)--node[below=2.5mm]{\(\delta\)}(2,-.5);
 \draw [decorate] (3.2914,-.5)--node[below=2.5mm]{\(\delta\)}(2.6457,-.5);
 \draw [decorate] (-.9,2.4)--node[left=2.5mm]{\(\varepsilon\)}(-.9,3.6);
-\draw [decorate] (-.9,1.2)--node[left=2.5mm]{\(\varepsilon\)}(-.9,2.4);\end{tikzpicture}]]>
+\draw [decorate] (-.9,1.2)--node[left=2.5mm]{\(\varepsilon\)}(-.9,2.4);
+\end{tikzpicture}
 </latex-image>
-    </image>
-  </figure>
+</image>
+</figure>
+
   <p>
-    Perhaps you have encountered the phrase ``a function is continuous if you can draw its graph without lifting your pencil." While this description provides some intuition about what continuity of a function means,
+    Perhaps you have encountered the phrase <q>a function is continuous if you can draw its graph without lifting your pencil.</q> While this description provides some intuition about what continuity of a function means,
     it is neither accurate nor precise enough to capture the meaning of continuity.
   </p>
   <p>
@@ -217,7 +221,7 @@
   </problem>
   <p>
     After completing the next problem,
-    reflect on the statement ``a function is continuous if you can draw its graph without lifting your pencil."
+    reflect on the statement <q>a function is continuous if you can draw its graph without lifting your pencil.</q>
   </p>
   <problem>
     <statement>
@@ -293,7 +297,7 @@
     </statement>
   </problem>
   <p>
-    The previous problems once again calls into question the phrase ``a function is continuous if you can draw its graph without lifting your pencil."
+    The previous problems once again calls into question the phrase <q>a function is continuous if you can draw its graph without lifting your pencil.</q>
   </p>
   <problem>
     <statement>
@@ -417,7 +421,7 @@
   </p>
   <p>
     The next result is a special case of the well-known
-    <em>Intermediate Value Theorem</em>,
+    <term>Intermediate Value Theorem</term>,
     which states that if <m>f</m> is a continuous real function whose domain contains the interval <m>[a,b]</m>,
     then <m>f</m> attains every value between <m>f(a)</m> and <m>f(b)</m> at some point within the interval <m>[a,b]</m>.
     To prove the special case,
@@ -459,11 +463,19 @@
       </p>
     </statement>
   </problem>
-  <p>
+  <!-- <p>
     \epigraph{The miracle of the appropriateness of the language of mathematics for the formulation of the laws of physics is a wonderful gift which we neither understand nor deserve.
     We should be grateful for it and hope that it will remain valid in future research and that it will extend,
     for better or for worse,
     to our pleasure, even though perhaps also to our bafflement,
     to wide branches of learning.}{Eugene Paul Wigner, theoretical physicist}
-  </p>
+  </p> -->
+<blockquote>
+<p>The miracle of the appropriateness of the language of mathematics for the formulation of the laws of physics is a wonderful gift which we neither understand nor deserve.
+    We should be grateful for it and hope that it will remain valid in future research and that it will extend,
+    for better or for worse,
+    to our pleasure, even though perhaps also to our bafflement,
+    to wide branches of learning.</p>
+<attribution>Eugene Paul Wigner, theoretical physicist</attribution>
+</blockquote>
 </section>

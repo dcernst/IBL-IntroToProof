@@ -1,13 +1,19 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chap_SetTheory">
   <title>Set Theory</title>
   <introduction>
-    <p>
+    <!-- <p>
       \epigraph{Pass on what you have learned.
       Strength, mastery.
       But weakness, folly, failure also.
       Yes, failure most of all.
       The greatest teacher, failure is.}{Yoda, Jedi master}
-    </p>
+    </p> -->
+
+<blockquote>
+<p>Pass on what you have learned. Strength, mastery. But weakness, folly, failure also. Yes, failure most of all. The greatest teacher, failure is.</p>
+<attribution>Yoda, Jedi master</attribution>
+</blockquote>
+
     <p>
       At its essence, all of mathematics is built on set theory.
       In this chapter,

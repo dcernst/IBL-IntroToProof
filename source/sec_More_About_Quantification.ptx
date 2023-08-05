@@ -542,7 +542,6 @@
   <proof>
     <title>Proof of <xref ref="thm_nm_odd_implies_n_or_m_odd">Theorem</xref></title>
   <p>
-    <!-- <alert>Proof of <xref ref="thm_nm_odd_implies_n_or_m_odd">Theorem</xref></alert>. -->
     We will prove the contrapositive.
     Let <m>n,m\in\mathbb{Z}</m> and assume <m>n</m> is even or <m>m</m> is even.
     Without loss of generality, assume <m>n</m> is even.

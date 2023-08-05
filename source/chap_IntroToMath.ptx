@@ -1,10 +1,15 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chap_IntroToMath">
   <title>Mathematics and Logic</title>
   <introduction>
-    <p>
+    <!-- <p>
       \epigraph{Pure mathematics is the poetry of logical ideas.}{Albert Einstein,
       theoretical physicist}
-    </p>
+    </p> -->
+
+<blockquote>
+<p>Pure mathematics is the poetry of logical ideas.</p>
+<attribution>Albert Einstein, theoretical physicist</attribution>
+</blockquote>
     <p>
       Before you get started,
       make sure you have read <xref ref="chap_intro">Chapter</xref>,

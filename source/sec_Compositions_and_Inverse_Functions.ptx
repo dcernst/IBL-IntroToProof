@@ -8,7 +8,7 @@
       <p>
         If <m>f:X\to Y</m> and <m>g:Y\to Z</m> are functions,
         we define <m>g\circ f:X\to Z</m> via <m>\tcboxmath{(g\circ f)(x)=g(f(x))}</m>.
-        The function <m>g\circ f</m> is called the composition of <m>f</m> and <m>g</m>.
+        The function <m>g\circ f</m> is called the <term>composition</term> of <m>f</m> and <m>g</m>.
       </p>
     </statement>
   </definition>
@@ -25,9 +25,9 @@
 
 <figure xml:id="fig_function_composition">
 <caption>Visual representation of function composition.</caption>
-<image>
+<image width="50%" xml:id="function_composition">
 <latex-image>
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=.75,->,>=stealth,shorten >=1pt,auto,node distance=2cm,semithick]
 \node at (0,2.5) [below] {\scriptsize \(x\)};
 \node[smallvert] (A) at (0,2.5) {};
 \node at (3,2.5) [below] {\scriptsize \(f(x)\)};
@@ -97,7 +97,7 @@
         for all <m>x\in X</m>.
         Notice that <m>f\circ \iota</m> is simply the function <m>f</m> but with a smaller domain.
         In this case, we say that <m>f\circ \iota</m> is the
-        <em>restriction of <m>f</m> to <m>X</m></em>,
+        <term>restriction of <m>f</m> to <m>X</m></term>,
         which is often denoted by <m>\tcboxmath{f|_X}</m>.
       </p>
     </statement>
@@ -263,7 +263,7 @@
   </theorem>
   <p>
     The function <m>g</m> in the previous theorem is often called a
-    <em>left inverse</em> of <m>f</m>.
+    <term>left inverse</term> of <m>f</m>.
   </p>
   <theorem>
     <statement>
@@ -277,7 +277,7 @@
   </theorem>
   <p>
     The function <m>g</m> in the previous theorem is often called a
-    <em>right inverse</em> of <m>f</m>.
+    <term>right inverse</term> of <m>f</m>.
   </p>
   <problem>
     <statement>
@@ -343,14 +343,14 @@
     <q>cancel</q>
     each other out.
     In this case, we say that <m>g</m> is a
-    <em>two-sided inverse</em> of <m>f</m>.
+    <term>two-sided inverse</term> of <m>f</m>.
   </p>
   <definition xml:id="def_inverse_of_a_function">
     <statement>
       <p>
         Let <m>f:X\to Y</m> be a function.
         The relation <m>f^{-1}</m> from <m>Y</m> to <m>X</m>,
-        called <m>f</m> inverse, is defined via
+        called <m>f</m> <term>inverse</term>, is defined via
         <me>
           \tcboxmath{f^{-1}=\{(f(x),x)\in Y\times X\mid x\in X\}}
         </me>.
@@ -406,14 +406,14 @@
         Suppose <m>f:\mathbb{R}\to \mathbb{R}</m> is a function.
         Fill in the blank with the appropriate phrase.
       </p>
-      <blockquote>
-        The relation <m>f^{-1}</m> is a function if and only if every horizontal line hits the graph of <m>f</m> <em><nbsp/> <nbsp/> <nbsp/> <nbsp/>   <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/></em>.
-      </blockquote>
-      <p>
-        Explain why this statement is true.
-      </p>
-    </statement>
-  </problem>
+
+<blockquote>
+The relation <m>f^{-1}</m> is a function if and only if every horizontal line hits the graph of <m>f</m>  <c><nbsp/> <nbsp/> <nbsp/> <nbsp/>   <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/> <nbsp/></c>.
+</blockquote>
+<p>Explain why this statement is true.</p>
+</statement>
+</problem>
+
   <theorem xml:id="thm_comp_of_inverses">
     <statement>
       <p>
@@ -458,7 +458,7 @@
     and <xref ref="thm_comp_of_inverses">Theorem</xref>.
     That is, inverse functions are unique when they exist.
     When the relation <m>f^{-1}</m> is a function,
-    we call it the <em>inverse function</em> of <m>f</m>.
+    we call it the <term>inverse function</term> of <m>f</m>.
   </p>
   <problem>
     <statement>
@@ -511,8 +511,12 @@
     The previous theorem is sometimes referred to as the
     <q>socks and shoes theorem</q>. Do you see how it got this name?
   </p>
-  <p>
+  <!-- <p>
     \epigraph{The most difficult thing is the decision to act.
     The rest is merely tenacity.}{Amelia Earhart, aviation pioneer}
-  </p>
+  </p> -->
+<blockquote>
+<p>The most difficult thing is the decision to act. The rest is merely tenacity.</p>
+<attribution>Amelia Earhart, aviation pioneer</attribution>
+</blockquote>
 </section>

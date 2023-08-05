@@ -11,7 +11,7 @@
     <statement>
       <p>
         Let <m>\sim</m> be a relation on a set <m>A</m>.
-        Then <m>\sim</m> is called an equivalence relation on <m>A</m> if <m>\sim</m> is reflexive,
+        Then <m>\sim</m> is called an <term>equivalence relation</term> on <m>A</m> if <m>\sim</m> is reflexive,
         symmetric, and transitive.
       </p>
     </statement>
@@ -151,7 +151,7 @@
       <p>
         If <m>\sim</m> is an equivalence relation on a set <m>A</m>,
         then for each <m>a\in A</m>,
-        we refer to <m>\rel(a)</m> as the equivalence class of <m>a</m>.
+        we refer to <m>\rel(a)</m> as the <term>equivalence class</term> of <m>a</m>.
       </p>
     </statement>
   </definition>
@@ -160,7 +160,7 @@
     it is common to write each equivalence class <m>\rel(a)</m> as <m>\tcboxmath{[a]}</m>
     (or sometimes <m>\overline{a}</m>).
     The element <m>a</m> inside the square brackets is called the
-    <em>representative of the equivalence class</em> <m>[a]</m>.
+    <term>representative of the equivalence class</term> <m>[a]</m>.
     <xref ref="thm_related_if_and_only_if_same_class">Theorem</xref>
     implies that an equivalence class can be represented by any element of the equivalence class.
     For example, in <xref ref="prob_digraph">Problem</xref>,
@@ -171,7 +171,7 @@
     <q><m>A</m> modulo <m>\sim</m></q>
     or
     <q><m>A</m> mod <m>\sim</m></q>. The collection <m>A/\mathord\sim</m> is sometimes referred to as the
-    <em>quotient of <m>A</m> by <m>\sim</m></em>.
+    <term>quotient of <m>A</m> by <m>\sim</m></term>.
   </p>
   <example xml:id="ex_last_name">
     <statement>
@@ -198,7 +198,7 @@
         are the equivalence classes for
         <m>\equiv_5</m> on <m>\mathbb{Z}</m>.
         These equivalence classes are often called the
-        <em>congruence classes modulo 5</em>.
+        <term>congruence classes modulo 5</term>.
       </p>
     </statement>
   </example>
@@ -246,10 +246,14 @@
       </p>
     </statement>
   </problem>
-  <p>
+  <!-- <p>
     \epigraph{Mathematics has beauty and romance.
     It's not a boring place to be, the mathematical world.
     It's an extraordinary place;
     it's worth spending time there.}{Marcus du Sautoy, mathematician}
-  </p>
+  </p> -->
+<blockquote>
+<p>Mathematics has beauty and romance. It's not a boring place to be, the mathematical world. It's an extraordinary place; it's worth spending time there.</p>
+<attribution>Marcus du Sautoy, mathematician</attribution>
+</blockquote>
 </section>
