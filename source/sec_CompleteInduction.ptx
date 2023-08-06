@@ -210,8 +210,14 @@
       </p>
     </statement>
   </problem>
-  <p>
+  <!-- <p>
     \epigraph{Nothing that's worth anything is ever easy.}{Mike Hall,
     ultra-distance cyclist}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>Nothing that's worth anything is ever easy.</p>
+<attribution>Mike Hall, ultra-distance cyclist</attribution>
+</blockquote>
+
 </section>

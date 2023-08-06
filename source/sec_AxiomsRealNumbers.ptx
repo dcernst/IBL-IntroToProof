@@ -826,8 +826,12 @@ In light of these two theorems,
 we say that both the rationals and irrationals are
 <term>dense</term> in the real numbers.</p>
 
-<p>\epigraph{If people do not believe that mathematics is simple,
+<!-- <p>\epigraph{If people do not believe that mathematics is simple,
 it is only because they do not realize how complicated life is.}{John von Neumann,
-mathematician}</p>
+mathematician}</p> -->
 
+<blockquote>
+<p>If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.</p>
+<attribution>John von Neumann, mathematician</attribution>
+</blockquote>
 </section>

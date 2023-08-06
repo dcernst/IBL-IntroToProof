@@ -338,9 +338,15 @@
       </p>
     </statement>
   </problem>
-  <p>
+  <!-- <p>
     \epigraph{If there is no struggle,
     there is no progress.}{Frederick Douglass, writer &amp;
     statesman}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>If there is no struggle, there is no progress.</p>
+<attribution>Frederick Douglass, writer &amp; statesman</attribution>
+</blockquote>
+
 </section>

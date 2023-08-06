@@ -405,9 +405,15 @@
       </p>
     </statement>
   </theorem>
-  <p>
+  <!-- <p>
     \epigraph{Time spent thinking about a problem is always time well spent.
     Even if you seem to make no progress at all.}{Paul Zeitz,
     mathematician}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>Time spent thinking about a problem is always time well spent. Even if you seem to make no progress at all.</p>
+<attribution>Paul Zeitz, mathematician</attribution>
+</blockquote>
+
 </section>
