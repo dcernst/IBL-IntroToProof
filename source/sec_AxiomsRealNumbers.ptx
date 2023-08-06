@@ -62,26 +62,15 @@ Our axioms for the real numbers fall into three categories:
 <statement>
 <p>There exist operations <m>+</m> (addition) and <m>\cdot</m> (multiplication) on <m>\mathbb{R}</m> satisfying:</p>
 <dl>
-<dlentry>
-<dt><p>(F1) Associativity for Addition</p></dt> 
-<dd><p>For all <m>a,b, c\in \mathbb{R}</m> we have <m>(a+b)+c = a+(b+c)</m>;</p></dd>
-</dlentry>
-<dt>(F2) Commutativity for Addition</dt> 
-<dd>For all <m>a,b\in \mathbb{R}</m>, we have <m>a+b=b+a</m>;</dd>
-<dt>(F3) Additive Identity</dt> 
-<dd>There exists <m>0\in\mathbb{R}</m> such that for all <m>a\in\mathbb{R}</m>, <m>0+a=a</m>;</dd>
-<dt>(F4) Additive Inverses</dt> 
-<dd>For all <m>a\in\mathbb{R}</m> there exists <m>-a\in\mathbb{R}</m> such that <m>a+(-a)=0</m>;</dd>
-<dt>(F5) Associativity for Multiplication</dt>
-<dd>For all <m>a,b, c\in \mathbb{R}</m> we have <m>(ab)c = a(bc)</m>;</dd>
-<dt>(F6) Commutativity for Multiplication</dt>
-<dd>For all <m>a,b\in \mathbb{R}</m>, we have <m>ab=ba</m>;</dd>
-<dt>(F7) Multiplicative Identity</dt>
-<dd>There exists <m>1\in\mathbb{R}</m> such that <m>1\neq 0</m> and for all <m>a\in\mathbb{R}</m>, <m>1a=a</m>;</dd>
-<dt>(F8) Multiplicative Inverses</dt>
-<dd>For all <m>a\in\mathbb{R}\setminus\{0\}</m> there exists <m>a^{-1}\in\mathbb{R}</m> such that <m>aa^{-1}=1</m>.</dd>
-<dt>(F9) Distributive Property</dt>
-<dd>For all <m>a,b,c\in \mathbb{R}</m>, <m>a(b+c)=ab+ac</m>;</dd>
+<li><title>(F1)</title> (Associativity for Addition) For all <m>a,b, c\in \mathbb{R}</m> we have <m>(a+b)+c = a+(b+c)</m>;</li>
+<li><title>(F2)</title> (Commutativity for Addition) For all <m>a,b\in \mathbb{R}</m>, we have <m>a+b=b+a</m>;</li>
+<li><title>(F3)</title> (Additive Identity) There exists <m>0\in\mathbb{R}</m> such that for all <m>a\in\mathbb{R}</m>, <m>0+a=a</m>;</li>
+<li><title>(F4)</title> (Additive Inverses) For all <m>a\in\mathbb{R}</m> there exists <m>-a\in\mathbb{R}</m> such that <m>a+(-a)=0</m>;</li>
+<li><title>(F5)</title> (Associativity for Multiplication) For all <m>a,b, c\in \mathbb{R}</m> we have <m>(ab)c = a(bc)</m>;</li>
+<li><title>(F6)</title> (Commutativity for Multiplication) For all <m>a,b\in \mathbb{R}</m>, we have <m>ab=ba</m>;</li>
+<li><title>(F7)</title> (Multiplicative Identity) There exists <m>1\in\mathbb{R}</m> such that <m>1\neq 0</m> and for all <m>a\in\mathbb{R}</m>, <m>1a=a</m>;</li>
+<li><title>(F8)</title> (Multiplicative Inverses) For all <m>a\in\mathbb{R}\setminus\{0\}</m> there exists <m>a^{-1}\in\mathbb{R}</m> such that <m>aa^{-1}=1</m>.</li>
+<li><title>(F9)</title> (Distributive Property) For all <m>a,b,c\in \mathbb{R}</m>, <m>a(b+c)=ab+ac</m>;</li>
 </dl>
 </statement>
 </axiom>
@@ -152,7 +141,8 @@ we should make it clear how the natural numbers are embedded in <m>\mathbb{R}</m
 <p>We define the <term>natural numbers</term>,
 denoted by <m>\mathbb{N}</m>,
 to be the smallest subset of <m>\mathbb{R}</m> satisfying:
-<ol marker="labeltextrmalph">
+<!-- <ol marker="labeltextrmalph"> -->
+<ol marker="a">
 <li><p><m>1\in\mathbb{N}</m>, and</p></li>
 <li><p>for all <m>n\in\mathbb{N}</m>, we have <m>n+1\in\mathbb{N}</m>.</p></li>
 </ol>
@@ -226,15 +216,13 @@ we have <m>(a+b)(a-b)=a^2-b^2</m>.</p>
 <axiom xml:id="axiom_order_axioms">
 <creator>Order Axioms</creator>
 <statement>
-<p>For <m>a,b,c\in \mathbb{R}</m>, there is a relation <m>\tcboxmath{\lt }</m> on <m>\mathbb{R}</m> satisfying:
-<ol>
-<li><p>(O1) (Trichotomy Law) If <m>a\neq b</m>,
-then either <m>a\lt b</m> or <m>b\lt a</m> but not both;</p></li>
-<li><p>(O2) (Transitivity) If <m>a\lt b</m> and <m>b\lt c</m>, then <m>a\lt c</m>;</p></li>
-<li><p>(O3) If <m>a\lt b</m>, then <m>a+c\lt b+c</m>;</p></li>
-<li><p>(O4) If <m>a\lt b</m> and <m>0\lt c</m>, then <m>ac\lt bc</m>;</p></li>
-</ol>
-</p>
+<p>For <m>a,b,c\in \mathbb{R}</m>, there is a relation <m>\tcboxmath{\lt }</m> on <m>\mathbb{R}</m> satisfying:</p>
+<dl>
+<li><title>(O1)</title> (Trichotomy Law) If <m>a\neq b</m>, then either <m>a\lt b</m> or <m>b\lt a</m> but not both;</li>
+<li><title>(O2)</title> (Transitivity) If <m>a\lt b</m> and <m>b\lt c</m>, then <m>a\lt c</m>;</li>
+<li><title>(O3)</title> If <m>a\lt b</m>, then <m>a+c\lt b+c</m>;</li>
+<li><title>(O4)</title> If <m>a\lt b</m> and <m>0\lt c</m>, then <m>ac\lt bc</m>;</li>
+</dl>
 </statement>
 </axiom>
 
