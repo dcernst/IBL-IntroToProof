@@ -16,7 +16,21 @@ Our axioms for the real numbers fall into three categories:
 
 <p>We begin with the Field Axioms.</p>
 
-<axiom xml:id="axiom_field_axioms">
+<!-- Attempt at CSS for axioms
+/#axiom_field_axioms>div>ol>li {
+    /* delete default counter */
+    list-style-type: none !important;
+    /* create custom counter and set it to 0 */
+    counter-reset: elementcounter;
+  }
+#axiom_field_axioms>div>ol>li:before {
+    /* print out "F" followed by the current counter value */
+    content: "(F" counter(elementcounter) ") ";
+    /* increment counter */
+    counter-increment: elementcounter;
+  } -->
+
+<!-- <axiom xml:id="axiom_field_axioms">
 <creator>Field Axioms</creator>
 <statement>
 <p>There exist operations <m>+</m> (addition) and <m>\cdot</m> (multiplication) on <m>\mathbb{R}</m> satisfying:
@@ -40,6 +54,35 @@ Our axioms for the real numbers fall into three categories:
 </p></li>
 </ol>
 </p>
+</statement>
+</axiom> -->
+
+<axiom xml:id="axiom_field_axioms">
+<creator>Field Axioms</creator>
+<statement>
+<p>There exist operations <m>+</m> (addition) and <m>\cdot</m> (multiplication) on <m>\mathbb{R}</m> satisfying:</p>
+<dl>
+<dlentry>
+<dt><p>(F1) Associativity for Addition</p></dt> 
+<dd><p>For all <m>a,b, c\in \mathbb{R}</m> we have <m>(a+b)+c = a+(b+c)</m>;</p></dd>
+</dlentry>
+<dt>(F2) Commutativity for Addition</dt> 
+<dd>For all <m>a,b\in \mathbb{R}</m>, we have <m>a+b=b+a</m>;</dd>
+<dt>(F3) Additive Identity</dt> 
+<dd>There exists <m>0\in\mathbb{R}</m> such that for all <m>a\in\mathbb{R}</m>, <m>0+a=a</m>;</dd>
+<dt>(F4) Additive Inverses</dt> 
+<dd>For all <m>a\in\mathbb{R}</m> there exists <m>-a\in\mathbb{R}</m> such that <m>a+(-a)=0</m>;</dd>
+<dt>(F5) Associativity for Multiplication</dt>
+<dd>For all <m>a,b, c\in \mathbb{R}</m> we have <m>(ab)c = a(bc)</m>;</dd>
+<dt>(F6) Commutativity for Multiplication</dt>
+<dd>For all <m>a,b\in \mathbb{R}</m>, we have <m>ab=ba</m>;</dd>
+<dt>(F7) Multiplicative Identity</dt>
+<dd>There exists <m>1\in\mathbb{R}</m> such that <m>1\neq 0</m> and for all <m>a\in\mathbb{R}</m>, <m>1a=a</m>;</dd>
+<dt>(F8) Multiplicative Inverses</dt>
+<dd>For all <m>a\in\mathbb{R}\setminus\{0\}</m> there exists <m>a^{-1}\in\mathbb{R}</m> such that <m>aa^{-1}=1</m>.</dd>
+<dt>(F9) Distributive Property</dt>
+<dd>For all <m>a,b,c\in \mathbb{R}</m>, <m>a(b+c)=ab+ac</m>;</dd>
+</dl>
 </statement>
 </axiom>
   
