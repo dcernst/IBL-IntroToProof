@@ -25,19 +25,19 @@
           <li>
             <p>
               If <m>a\in \mathbb{Z}</m> such that <m>a</m> divides <m>n</m>,
-              then we say that <m>a</m> is a <em>factor</em> of <m>n</m>.
+              then we say that <m>a</m> is a <term>factor</term> of <m>n</m>.
             </p>
           </li>
           <li>
             <p>
               If <m>n\in \mathbb{N}</m> such that <m>n</m> has exactly two distinct positive factors (namely, 1 and <m>n</m> itself),
-              then <m>n</m> is called <em>prime</em>.
+              then <m>n</m> is called <term>prime</term>.
             </p>
           </li>
           <li>
             <p>
               If <m>n>1</m> such that <m>n</m> is not prime,
-              then <m>n</m> is called <em>composite</em>.
+              then <m>n</m> is called <term>composite</term>.
             </p>
           </li>
         </ol>
@@ -121,11 +121,11 @@
     <xref ref="thm_prodprimes">Theorem</xref>
     states that we can write every natural number greater than 1 as a product of primes,
     but it does not say that the primes and the number of times each prime appears are unique.
-    To prove uniqueness, we will need <em>Euclid's Lemma</em>
+    To prove uniqueness, we will need <term>Euclid's Lemma</term>
     (<xref ref="thm_Euclid">Theorem</xref>).
     To prove Euclid's Lemma,
     we will utilize a special case of
-    <em>B&#xe9;zout's Lemma</em>
+    <term>B&#xe9;zout's Lemma</term>
     (<xref ref="thm_Bezout">Theorem</xref>),
     the proof of which relies on the following result,
     known as the Division Algorithm.
@@ -216,10 +216,10 @@
   </proof>
   <p>
     In the Division Algorithm,
-    we call <m>n</m> the <em>dividend</em>,
-    <m>d</m> the <em>divisor</em>,
-    <m>q</m> the <em>quotient</em>,
-    and <m>r</m> the <em>remainder</em>.
+    we call <m>n</m> the <term>dividend</term>,
+    <m>d</m> the <term>divisor</term>,
+    <m>q</m> the <term>quotient</term>,
+    and <m>r</m> the <term>remainder</term>.
     It is worth pointing out that the Division Algorithm holds more generally where the divisor <m>d</m> is not required to be positive.
     In this case, we must replace
     <m>0\leq r\lt n</m> with <m>0\leq r\lt |n|</m>.
@@ -269,11 +269,11 @@
     <statement>
       <p>
         Let <m>m,n\in\mathbb{Z}</m> such that at least one of <m>m</m> or <m>n</m> is nonzero.
-        The greatest common divisor (gcd) of <m>m</m> and <m>n</m>,
+        The <term>greatest common divisor</term> (<term>gcd</term>) of <m>m</m> and <m>n</m>,
         denoted <m>\tcboxmath{\gcd(m,n)}</m>,
         is the largest positive integer that divides both <m>m</m> and <m>n</m>.
         If <m>\gcd(m,n)=1</m>,
-        we say that <m>m</m> and <m>n</m> are relatively prime.
+        we say that <m>m</m> and <m>n</m> are <term>relatively prime</term>.
       </p>
     </statement>
   </definition>

@@ -58,7 +58,7 @@ which is a collection of axioms for the natural numbers introduced in the 19th c
   </p>
 
   <axiom xml:id="axiom_induction">
-<creator>Axiom of Induction</creator>
+<title>Axiom of Induction</title>
 <statement>
   <p>
 Let <m>S\subseteq \mathbb{N}</m> such that both

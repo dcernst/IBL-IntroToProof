@@ -327,7 +327,7 @@
     we can now state this axiom precisely.
   </p>
   <axiom>
-    <creator>Axiom of Choice</creator>
+    <title>Axiom of Choice</title>
     <statement>
       <p>
         For every indexed collection <m>\{A_{\alpha}\}_{\alpha\in\Delta}</m> of nonempty sets,

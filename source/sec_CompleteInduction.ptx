@@ -68,47 +68,25 @@
     <q>look back</q>
     in the induction step.
   </p>
-  <paragraphs>
-    <title>Skeleton Proof</title>
-    <p>
-      [Proof of <m>(\forall n\in\mathbb{N})P(n)</m> by Complete Induction] Here is the general structure for a proof by complete induction.
-    </p>
-    <proof>
-      <p>
-        We proceed by induction.
-        <ol>
-          <li>
-            <title>(i)</title>
-            <p>
-              Base step: <em>[Verify that <m>P(1)</m> is true.
-              Depending on the statement,
-              you may also need to verify that <m>P(k)</m> is true for other specific values of <m>k</m>.]</em>
-            </p>
-          </li>
-          <li>
-            <title>(ii)</title>
-            <p>
-              Inductive step: <em>[Your goal is to prove
-              <q>For all <m>k\in\mathbb{N}</m>,
-              if for each <m>k \in \mathbb{N}</m>,
-              <m>P(j)</m> is true for all
-              <m>j\in \mathbb{N}</m> such that <m>j \leq k</m>,
-              then <m>P(k+1)</m> is true.</q>
-              ]</em> Let <m>k \in \mathbb{N}</m>.
-              Suppose <m>P(j)</m> is true for all <m>j \leq k</m>.
-              <em>[Do something to derive that <m>P(k+1)</m> is true.]</em>
-              Therefore, <m>P(k+1)</m> is true.
-            </p>
-          </li>
-        </ol>
-      </p>
-      <p>
-        Thus, by complete induction,
-        <m>P(n)</m> is true for all integers <m>n \ge a</m>.
-      </p>
-    </proof>
-  </paragraphs>
-  <p>
+
+<heuristic xml:id="skeleton_complete_induction">
+<title>Proof of <m>(\forall n\in\mathbb{N})P(n)</m> by Complete Induction</title>
+<statement>
+<p>Here is the general structure for a proof by complete induction.</p>
+</statement>
+
+<!-- <proof> -->
+<p><alert>Proof.</alert> We proceed by induction.
+<ol marker="i">
+<li><p>Base step: <em>[Verify that <m>P(1)</m> is true. Depending on the statement, you may also need to verify that <m>P(k)</m> is true for other specific values of <m>k</m>.]</em></p></li>
+<li><p>Inductive step: <em>[Your goal is to prove <q>For all <m>k\in\mathbb{N}</m>, if for each <m>k \in \mathbb{N}</m>, <m>P(j)</m> is true for all <m>j\in \mathbb{N}</m> such that <m>j \leq k</m>, then <m>P(k+1)</m> is true.</q>]</em> Let <m>k \in \mathbb{N}</m>. Suppose <m>P(j)</m> is true for all <m>j \leq k</m>. <em>[Do something to derive that <m>P(k+1)</m> is true.]</em> Therefore, <m>P(k+1)</m> is true.</p></li>
+</ol>
+</p>
+<p>Thus, by complete induction, <m>P(n)</m> is true for all integers <m>n \ge a</m>. </p>
+<!-- </proof> -->
+</heuristic>
+
+<p>
     When tackling the problems in this section,
     think carefully about how many base steps you must verify.
   </p>

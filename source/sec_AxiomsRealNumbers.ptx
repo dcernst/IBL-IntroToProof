@@ -31,7 +31,7 @@ Our axioms for the real numbers fall into three categories:
   } -->
 
 <!-- <axiom xml:id="axiom_field_axioms">
-<creator>Field Axioms</creator>
+<title>Field Axioms</title>
 <statement>
 <p>There exist operations <m>+</m> (addition) and <m>\cdot</m> (multiplication) on <m>\mathbb{R}</m> satisfying:
 <ol xml:id="fieldaxiomlist">
@@ -58,10 +58,10 @@ Our axioms for the real numbers fall into three categories:
 </axiom> -->
 
 <axiom xml:id="axiom_field_axioms">
-<creator>Field Axioms</creator>
+<title>Field Axioms</title>
 <statement>
-<p>There exist operations <m>+</m> (addition) and <m>\cdot</m> (multiplication) on <m>\mathbb{R}</m> satisfying:</p>
-<dl>
+<p>There exist operations <m>+</m> (addition) and <m>\cdot</m> (multiplication) on <m>\mathbb{R}</m> satisfying:
+<dl width="narrow">
 <li><title>(F1)</title> (Associativity for Addition) For all <m>a,b, c\in \mathbb{R}</m> we have <m>(a+b)+c = a+(b+c)</m>;</li>
 <li><title>(F2)</title> (Commutativity for Addition) For all <m>a,b\in \mathbb{R}</m>, we have <m>a+b=b+a</m>;</li>
 <li><title>(F3)</title> (Additive Identity) There exists <m>0\in\mathbb{R}</m> such that for all <m>a\in\mathbb{R}</m>, <m>0+a=a</m>;</li>
@@ -72,6 +72,7 @@ Our axioms for the real numbers fall into three categories:
 <li><title>(F8)</title> (Multiplicative Inverses) For all <m>a\in\mathbb{R}\setminus\{0\}</m> there exists <m>a^{-1}\in\mathbb{R}</m> such that <m>aa^{-1}=1</m>.</li>
 <li><title>(F9)</title> (Distributive Property) For all <m>a,b,c\in \mathbb{R}</m>, <m>a(b+c)=ab+ac</m>;</li>
 </dl>
+</p>
 </statement>
 </axiom>
   
@@ -214,7 +215,7 @@ we have <m>(a+b)(a-b)=a^2-b^2</m>.</p>
 <p>We now introduce the Order Axioms of the real numbers.</p>
 
 <axiom xml:id="axiom_order_axioms">
-<creator>Order Axioms</creator>
+<title>Order Axioms</title>
 <statement>
 <p>For <m>a,b,c\in \mathbb{R}</m>, there is a relation <m>\tcboxmath{\lt }</m> on <m>\mathbb{R}</m> satisfying:</p>
 <dl>
@@ -749,7 +750,7 @@ there exists <m>a\in A</m> such that <m>b-\varepsilon \lt a</m>.</p>
 <p>The following axiom states that every nonempty subset of the real numbers that has an upper bound has a least upper bound.</p>
 
 <axiom xml:id="axiom_completeness">
-<creator>Completeness Axiom</creator>
+<title>Completeness Axiom</title>
 <statement>
 <p>If <m>A</m> is a nonempty subset of
 <m>\mathbb{R}</m> that is bounded above,
