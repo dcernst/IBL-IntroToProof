@@ -412,7 +412,13 @@
     In general, it is difficult to prove statements like
     <m>\card(A)\neq \card(B)</m> or <m>\card(A)\lt \card(B)</m>.
   </p>
-  <p>
+  <!-- <p>
     \epigraph{You will become clever through your mistakes.}{German Proverb}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>You will become clever through your mistakes.</p>
+<attribution>German Proverb</attribution>
+</blockquote>
+
 </section>

@@ -658,8 +658,14 @@
       </tabular>
     </statement>
   </problem>
-  <p>
+  <!-- <p>
     \epigraph{In mathematics the art of proposing a question must be held of higher value than solving it.}{Georg Cantor,
     mathematician}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>In mathematics the art of proposing a question must be held of higher value than solving it.</p>
+<attribution>Georg Cantor, mathematician.</attribution>
+</blockquote>
+
 </section>

@@ -645,9 +645,15 @@
       </p>
     </statement>
   </problem>
-  <p>
+  <!-- <p>
     \epigraph{I didn't want to just know names of things.
     I remember really wanting to know how it all worked.}{Elizabeth Blackburn,
     biologist}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>I didn't want to just know names of things. I remember really wanting to know how it all worked.</p>
+<attribution>Elizabeth Blackburn, biologist</attribution>
+</blockquote>
+
 </section>

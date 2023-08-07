@@ -616,7 +616,7 @@
       </p>
     </statement>
   </theorem>
-  <p>
+  <!-- <p>
     \epigraph{With two published novels and a file full of ideas for others,
     the only thing I know about writing is this:
     it only happens when you sit down and do it.
@@ -625,5 +625,11 @@
     talking to other writers is important,
     but the only way you can produce good writing is to write.}{Jamie Beth Cohen,
     novelist}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>With two published novels and a file full of ideas for others, the only thing I know about writing is this: it only happens when you sit down and do it. Studying good writing is important, reading good writing is important, talking to other writers is important, but the only way you can produce good writing is to write.</p>
+<attribution>Jamie Beth Cohen, novelist</attribution>
+</blockquote>
+
 </section>

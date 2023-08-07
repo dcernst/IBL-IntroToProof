@@ -51,7 +51,6 @@
 <caption>The side and diagonal of a square are incommensurable.</caption>
 <image width="35%" xml:id="square">
 <latex-image>
-<!-- <![CDATA[ -->
 \begin{tikzpicture}[scale=3]
 \draw[thick] (0,0) rectangle (1,1);
 \draw[thick] (0,0) -- (1,1);
@@ -59,7 +58,6 @@
 \node [below] at (.5,0) {$a$};
 \node at (.67,.4) {$a\sqrt{2}$};
 \end{tikzpicture}
-<!-- ]]> -->
 </latex-image>
 </image>
 </figure>
@@ -121,10 +119,16 @@
     For example, <m>\pi</m> is irrational,
     but is not equal to the square root of a natural number.
   </p>
-  <p>
+  <!-- <p>
     \epigraph{Getting better is not pretty.
     To get good we have to be down to struggle,
     seek out challenges, make some mistakes,
     to train ugly.}{Trevor Ragan, \url{thelearnerlab.com}}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>Getting better is not pretty. To get good we have to be down to struggle, seek out challenges, make some mistakes, to train ugly.</p>
+<attribution>Trevor Ragan, <url href="thelearnerlab.com">thelearnerlab.com</url></attribution>
+</blockquote>
+
 </section>

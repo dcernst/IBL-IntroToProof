@@ -30,9 +30,15 @@
     Moreover, solving genuine problems is difficult and takes time.
     But it is also rewarding!
   </p>
-  <p>
+  <!-- <p>
     \epigraph{You may encounter many defeats,
     but you must not be defeated.}{Maya Angelou, poet &amp;
     activist}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>You may encounter many defeats, but you must not be defeated.</p>
+<attribution>Maya Angelou, poet &amp; activist</attribution>
+</blockquote>
+
 </section>

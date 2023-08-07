@@ -150,9 +150,15 @@
     One consequence of this is that there are different sizes of infinity and no largest infinity.
     Mathematics is awesome.
   </p>
-  <p>
+  <!-- <p>
     \epigraph{The master has failed more times than the beginner has even tried.}{Stephen McCranie,
     author &amp;
     illustrator}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>The master has failed more times than the beginner has even tried.</p>
+<attribution>Stephen McCranie, author &amp; illustrator</attribution>
+</blockquote>
+
 </section>

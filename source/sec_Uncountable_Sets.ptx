@@ -295,11 +295,14 @@
     and there is
     <q>no largest infinity</q>.
   </p>
-  <p>
+  <!-- <p>
     \epigraph{If you want to sharpen a sword,
     you have to remove a little metal.}{Author Unknown}
-  </p>
-  <p>
-    \appendix
-  </p>
+  </p> -->
+
+<blockquote>
+<p>If you want to sharpen a sword, you have to remove a little metal.</p>
+<attribution>Author Unknown</attribution>
+</blockquote>
+
 </section>

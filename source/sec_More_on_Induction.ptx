@@ -247,8 +247,14 @@ and some of which are not
   </p>
 </statement>
   </problem>
-  <p>
+  <!-- <p>
 \epigraph{If you don't learn to fail,
 you will fail to learn.}{Manu Kapur, learning scientist}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>If you don't learn to fail, you will fail to learn.</p>
+<attribution>Manu Kapur, learning scientist</attribution>
+</blockquote>
+
 </section>

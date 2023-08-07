@@ -492,8 +492,14 @@
       </p>
     </statement>
   </problem>
-  <p>
+  <!-- <p>
     \epigraph{Without change something sleeps inside us, and seldom awakens.
     The sleeper must awaken.}{<em>Dune</em> by Frank Herbert}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>Without change something sleeps inside us, and seldom awakens. The sleeper must awaken.</p>
+<attribution><alert>Dune</alert> by Frank Herbert</attribution>
+</blockquote>
+
 </section>

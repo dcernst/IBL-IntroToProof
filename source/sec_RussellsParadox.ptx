@@ -105,10 +105,16 @@
     includes a few more examples of paradoxes,
     which you are encouraged to ponder.
   </p>
-  <p>
+  <!-- <p>
     \epigraph{In times of change,
     learners inherit the earth,
     while the learned find themselves beautifully equipped to deal with a world that no longer exists.}{Eric Hoffer,
     moral and social philosopher}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>In times of change, learners inherit the earth, while the learned find themselves beautifully equipped to deal with a world that no longer exists.</p>
+<attribution>Eric Hoffer, moral and social philosopher</attribution>
+</blockquote>
+
 </section>

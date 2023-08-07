@@ -497,8 +497,14 @@ consider how you might prove a true proposition of the form
 If a proposition is false, then its negation is true.
 How would you go about negating a statement involving quantifiers?
   </p>
-  <p>
+  <!-- <p>
 \epigraph{Like what you do,
 and then you will do your best.}{Katherine Johnson, mathematician}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>Like what you do, and then you will do your best.</p>
+<attribution>Katherine Johnson, mathematician</attribution>
+</blockquote>
+
 </section>

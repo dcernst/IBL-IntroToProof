@@ -298,8 +298,14 @@
       </p>
     </statement>
   </theorem>
-  <p>
+  <!-- <p>
     \epigraph{Making learning easy does not necessarily ease learning.}{Manu Kapur,
     learning scientist}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>Making learning easy does not necessarily ease learning.</p>
+<attribution>anu Kapur, learning scientist</attribution>
+</blockquote>
+
 </section>

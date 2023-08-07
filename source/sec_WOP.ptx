@@ -160,9 +160,15 @@
     <term>upper bound</term> for <m>A</m>.
     We will study lower and upper bounds in more detail in <xref ref="sec_AxiomsRealNumbers">Section</xref>.
   </p>
-  <p>
+  <!-- <p>
     \epigraph{Life is like riding a bicycle.
     To keep your balance you must keep moving.}{Albert Einstein,
     theoretical physicist}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>Life is like riding a bicycle. To keep your balance you must keep moving.</p>
+<attribution>Albert Einstein, theoretical physicist</attribution>
+</blockquote>
+
 </section>

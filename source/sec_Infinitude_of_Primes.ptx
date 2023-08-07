@@ -96,8 +96,13 @@
       </p>
     </statement>
   </problem>
-  <p>
+  <!-- <p>
     \epigraph{It does not matter how slowly you go as long as you do not stop.}{Confucius,
     philosopher}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>It does not matter how slowly you go as long as you do not stop.</p>
+<attribution>Confucius, philosopher</attribution>
+</blockquote>
 </section>
