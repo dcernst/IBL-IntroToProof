@@ -12,12 +12,12 @@
     <statement>
       <p>
         Let <m>A</m> and <m>B</m> be sets.
-        A relation <m>R</m> from <m>A</m> to <m>B</m> is a subset of <m>A \times B</m>.
+        A <term>relation</term> <m>R</m> from <m>A</m> to <m>B</m> is a subset of <m>A \times B</m>.
         If <m>R</m> is a relation from <m>A</m> to <m>B</m> and <m>(a,b)\in {R}</m>,
-        then we say that <m>a</m> is related to <m>b</m> and we may write
+        then we say that <m>a</m> is <term>related to</term> <m>b</m> and we may write
         <m>\tcboxmath{aR b}</m> in place of <m>(a,b)\in{R}</m>.
         If <m>R</m> is a relation from <m>A</m> to the same set <m>A</m>,
-        then we say that <m>R</m> is a relation on <m>A</m>.
+        then we say that <m>R</m> is a <term>relation on</term> <m>A</m>.
       </p>
     </statement>
   </definition>
@@ -375,13 +375,13 @@ edge [bend left]  node {} (A)
       <p>
         Let <m>R</m> be a relation on a set <m>A</m>.
         For each <m>a\in A</m>,
-        we define the set of relatives of <m>a</m> with respect to <m>R</m> via
+        we define the <term>set of relatives of <m>a</m> with respect to <m>R</m></term> via
         <me>
           \tcboxmath{\rel(a,R)\coloneqq \{b\in A\mid aR b\}}
         </me>.
       </p>
       <p>
-        We also define the collection of the sets of relatives with respect to <m>R</m> by
+        We also define the <term>collection of the sets of relatives with respect to <m>R</m></term> by
         <me>
           \tcboxmath{\Rel(R)\coloneqq \{\rel(a)\mid a\in A\}}
         </me>.
