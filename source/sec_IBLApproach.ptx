@@ -100,10 +100,15 @@
     But make no mistake,
     the journey is vastly more important than the destinations.
   </p>
-  <p>
+  <!-- <p>
     \epigraph{Don't fear failure.
     Not failure, but low aim, is the crime.
     In great attempts it is glorious even to fail.}{Bruce Lee,
     martial artist &amp; actor}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>Don't fear failure. Not failure, but low aim, is the crime. In great attempts it is glorious even to fail.</p>
+<attribution>Bruce Lee, martial artist &amp; actor</attribution>
+</blockquote>
 </section>

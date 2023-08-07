@@ -259,8 +259,14 @@
       </p>
     </statement>
   </problem>
-  <p>
+  <!-- <p>
     \epigraph{An ounce of practice is worth more than tons of preaching.}{Mahatma Gandhi,
     political activist}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>An ounce of practice is worth more than tons of preaching.</p>
+<attribution>Mahatma Gandhi, political activist</attribution>
+</blockquote>
+
 </section>

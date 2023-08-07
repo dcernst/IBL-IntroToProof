@@ -352,7 +352,12 @@
     When proving these theorems,
     be on the lookout for where you are invoking the Axiom of Choice.
   </p>
-  <p>
+  <!-- <p>
     \epigraph{All sorts of things can happen when you're open to new ideas and playing around with things.}{Stephanie Kwolek, chemist}
-  </p>
+  </p> -->
+
+<blockquote>
+<p>All sorts of things can happen when you're open to new ideas and playing around with things.</p>
+<attribution>Stephanie Kwolek, chemist</attribution>
+</blockquote>
 </section>
