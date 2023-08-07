@@ -13,14 +13,14 @@
         <ol marker="labeltextrmalph">
           <li>
             <p>
-              We say that <m>r</m> is <em>rational</em> if <m>r=\frac{m}{n}</m>,
+              We say that <m>r</m> is <term>rational</term> if <m>r=\frac{m}{n}</m>,
               where <m>m,n\in\mathbb{Z}</m> and <m>n\neq 0</m>.
             </p>
           </li>
           <li>
             <p>
               In contrast, we say that <m>r</m> is
-              <em>irrational</em> if it is not rational.
+              <term>irrational</term> if it is not rational.
             </p>
           </li>
         </ol>
