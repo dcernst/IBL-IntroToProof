@@ -24,27 +24,17 @@
       </p>
     </statement>
   </definition>
-  <p>
-    Not surprisingly, maximums and minimums are unique when they exist.
-    It might be helpful to review Skeleton <xref ref="skeleton_uniqueness">Proof</xref>
-    prior to attacking the next result.
-  </p>
-  <theorem>
-    <statement>
-      <p>
-        If <m>A\subseteq \mathbb{R}</m> such that the maximum (respectively,
-        minimum) of <m>A</m> exists,
-        then the maximum (respectively,
-        minimum) of <m>A</m> is unique.
-      </p>
-    </statement>
-  </theorem>
-  <p>
-    If the maximum of a set <m>A</m> exists,
-    then it is denoted by <m>\tcboxmath{\max(A)}</m>.
-    Similarly, if the minimum of a set <m>A</m> exists,
-    then it is denoted by <m>\tcboxmath{\min(A)}</m>.
-  </p>
+  
+<p>Not surprisingly, maximums and minimums are unique when they exist. It might be helpful to review <xref ref="skeleton_uniqueness">Skeleton Proof</xref> prior to attacking the next result.</p>
+
+<theorem>
+<statement>
+<p>If <m>A\subseteq \mathbb{R}</m> such that the maximum (respectively, minimum) of <m>A</m> exists, then the maximum (respectively, minimum) of <m>A</m> is unique.</p>
+</statement>
+</theorem>
+
+<p>If the maximum of a set <m>A</m> exists, then it is denoted by <m>\tcboxmath{\max(A)}</m>. Similarly, if the minimum of a set <m>A</m> exists, then it is denoted by <m>\tcboxmath{\min(A)}</m>.</p>
+
   <problem xml:id="prob_find_max_and_min">
     <statement>
       <p>

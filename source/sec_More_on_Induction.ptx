@@ -45,79 +45,48 @@ gives a process for proving statements of the form:
 As before, hypothesis (i) is called the <term>base step</term>,
 and (ii) is called the <term>inductive step</term>.
   </p>
-  <paragraphs>
-<title>Skeleton Proof</title>
-<p>
-  [Proof of <m>(\forall n \in \mathbb{Z})(n \geq a \implies P(n))</m> by Induction] Here is the general structure for a proof by induction when the base case does not necessarily involve <m>a=1</m>.
-</p>
+
+<heuristic xml:id="skeleton_induction_greater_than_a">
+<title>Proof of <m>(\forall n \in \mathbb{Z})(n \geq a \implies P(n))</m> by Induction</title>
+<statement>
+<p>Here is the general structure for a proof by induction when the base case does not necessarily involve <m>a=1</m>.</p>
+
 <proof>
-  <p>
-We proceed by induction.
-<ol>
-  <li>
-<title>(i)</title>
-<p>
-  Base step: <em>[Verify that <m>P(a)</m> is true.
-  This often, but not always,
-  amounts to plugging <m>n=a</m> into two sides of some claimed equation and <em>verifying</em>
-  that both sides are actually equal.]</em>
-</p>
-  </li>
-  <li>
-<title>(ii)</title>
-<p>
-  Inductive step: <em>[Your goal is to prove
-  <q>For all <m>k\geq a</m>,
-  if <m>P(k)</m> is true, then <m>P(k+1)</m> is true.</q>
-  ]</em> Let <m>k \geq a</m> be an integer and assume that <m>P(k)</m> is true.
-  <em>[Do something to derive that <m>P(k+1)</m> is true.]</em>
-  Therefore, <m>P(k+1)</m> is true.
-</p>
-  </li>
+<p>We proceed by induction.
+<ol marker="i">
+<li><p>Base step: <em>[Verify that <m>P(a)</m> is true. This often, but not always, amounts to plugging <m>n=a</m> into two sides of some claimed equation and verifying that both sides are actually equal.]</em></p></li>
+<li><p>Inductive step: <em>[Your goal is to prove <q>For all <m>k\geq a</m>, if <m>P(k)</m> is true, then <m>P(k+1)</m> is true.</q>]</em> Let <m>k \geq a</m> be an integer and assume that <m>P(k)</m> is true. <em>[Do something to derive that <m>P(k+1)</m> is true.]</em> Therefore, <m>P(k+1)</m> is true.</p></li>
 </ol>
-  </p>
-  <p>
-Thus, by induction,
-<m>P(n)</m> is true for all integers <m>n \ge a</m>.
-  </p>
+</p>
+
+<p>Thus, by induction, <m>P(n)</m> is true for all integers <m>n \ge a</m>.</p>
 </proof>
-  </paragraphs>
-  <p>
-We encountered the next theorem back in <xref ref="sec_PowerSets">Section</xref>
-(see <xref ref="conjecture_PowerSets">Conjecture</xref>),
-but we did not prove it.
-When proving this theorem using induction,
-you will need to argue that if you add one more element to a finite set,
-then you end up with twice as many subsets.
-For your base case, consider the empty set.
-  </p>
-  <theorem xml:id="thm_size_of_power_set_for_finite_sets">
-<statement>
-  <p>
-If <m>A</m> is a finite set with <m>n</m> elements,
-then <m>\mathcal{P}(A)</m> is a set with <m>2^{n}</m> elements.
-  </p>
 </statement>
-  </theorem>
-  <theorem xml:id="thm_n_2_n">
+</heuristic>
+
+<p>We encountered the next theorem back in <xref ref="sec_PowerSets">Section</xref> (see <xref ref="conjecture_PowerSets">Conjecture</xref>), but we did not prove it. When proving this theorem using induction, you will need to argue that if you add one more element to a finite set, then you end up with twice as many subsets. For your base case consider the empty set.</p>
+
+<theorem xml:id="thm_size_of_power_set_for_finite_sets">
 <statement>
-  <p>
-For all integers <m>n \ge 0</m>, <m>n\lt 2^n</m>.
-  </p>
+<p>If <m>A</m> is a finite set with <m>n</m> elements, then <m>\mathcal{P}(A)</m> is a set with <m>2^{n}</m> elements.</p>
 </statement>
-  </theorem>
-  <p>
-One consequence of the previous two theorems is that the power set of a finite set always consists of more elements than the original set.
-  </p>
-  <theorem>
+</theorem>
+
+<theorem xml:id="thm_n_2_n">
 <statement>
-  <p>
-For all integers <m>n \ge 0</m>,
-<m>4</m> divides <m>9^n - 5</m>.
-  </p>
+<p>For all integers <m>n \ge 0</m>, <m>n\lt 2^n</m>.</p>
 </statement>
-  </theorem>
-  <theorem>
+</theorem>
+
+<p>One consequence of the previous two theorems is that the power set of a finite set always consists of more elements than the original set.</p>
+
+<theorem>
+<statement>
+<p>For all integers <m>n \ge 0</m>, <m>4</m> divides <m>9^n - 5</m>.</p>
+</statement>
+</theorem>
+
+<theorem>
 <statement>
   <p>
 For all integers <m>n \ge 0</m>,

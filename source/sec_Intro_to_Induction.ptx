@@ -145,59 +145,35 @@ with <em>inductive reasoning</em>
 associated with the natural sciences.
 Inductive reasoning is a scientific method whereby one induces general principles from observations.
 On the other hand,
-mathematical induction is a deductive form of reasoning used to establish the validity of a proposition.
-  </p>
-  <paragraphs>
-<title>Skeleton Proof</title>
-<p>
-  [Proof of <m>(\forall n\in\mathbb{N})P(n)</m> by Induction] Here is the general structure for a proof by induction.
-</p>
-<proof>
-  <p>
-We proceed by induction.
-<ol>
-  <li>
-<title>(i)</title>
-<p>
-  Base step: <em>[Verify that <m>P(1)</m> is true.
-  This often, but not always,
-  amounts to plugging <m>n=1</m> into two sides of some claimed equation and <em>verifying</em>
-  that both sides are actually equal.]</em>
-</p>
-  </li>
-  <li>
-<title>(ii)</title>
-<p>
-  Inductive step: <em>[Your goal is to prove
-  <q>For all <m>k\in\mathbb{N}</m>,
-  if <m>P(k)</m> is true, then <m>P(k+1)</m> is true.</q>
-  ]</em> Let <m>k\in\mathbb{N}</m> and assume that <m>P(k)</m> is true.
-  <em>[Do something to derive that <m>P(k+1)</m> is true.]</em>
-  Therefore, <m>P(k+1)</m> is true.
-</p>
-  </li>
-</ol>
-  </p>
-  <p>
-Thus, by induction, <m>P(n)</m> is true for all <m>n\in\mathbb{N}</m>.
-  </p>
-</proof>
-  </paragraphs>
-  <p>
-Prove the next few theorems using induction.
-The first result may look familiar from calculus.
-Recall that <m>\displaystyle \sum_{i=1}^{n}i=1+2+3+\cdots +n</m>,
-by definition.
-  </p>
-  <theorem>
+mathematical induction is a deductive form of reasoning used to establish the validity of a proposition.</p>
+  
+<heuristic xml:id="skeleton_induction">
+<title>Proof of <m>(\forall n\in\mathbb{N})P(n)</m> by Induction</title>
 <statement>
-  <p>
-For all <m>n\in\mathbb{N}</m>,
-<m>\displaystyle \sum_{i=1}^{n}i=\frac{n(n+1)}{2}</m>.
-  </p>
+<p>Here is the general structure for a proof by induction.</p>
+
+<proof>
+<p>We proceed by induction.
+<ol marker="i">
+<li><p>Base step: <em>[Verify that <m>P(1)</m> is true. This often, but not always, amounts to plugging <m>n=1</m> into two sides of some claimed equation and verifying that both sides are actually equal.]</em>
+</p></li>
+<li><p>Inductive step: <em>[Your goal is to prove <q>For all <m>k\in\mathbb{N}</m>, if <m>P(k)</m> is true, then <m>P(k+1)</m> is true.</q>]</em> Let <m>k\in\mathbb{N}</m> and assume that <m>P(k)</m> is true. <em>[Do something to derive that <m>P(k+1)</m> is true.]</em> Therefore, <m>P(k+1)</m> is true.</p></li>
+</ol>
+</p>
+<p>Thus, by induction, <m>P(n)</m> is true for all <m>n\in\mathbb{N}</m>.</p>
+</proof>
 </statement>
-  </theorem>
-  <theorem>
+</heuristic>
+
+<p>Prove the next few theorems using induction. The first result may look familiar from calculus. Recall that <m>\displaystyle \sum_{i=1}^{n}i=1+2+3+\cdots +n</m>, by definition.</p>
+
+<theorem>
+<statement>
+<p>For all <m>n\in\mathbb{N}</m>, <m>\displaystyle \sum_{i=1}^{n}i=\frac{n(n+1)}{2}</m>.</p>
+</statement>
+</theorem>
+
+<theorem>
 <statement>
   <p>
 For all <m>n\in\mathbb{N}</m>, 3 divides <m>4^{n}-1</m>.

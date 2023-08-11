@@ -614,174 +614,69 @@ edge [bend left]  node {} (A)
       </p>
     </statement>
   </problem>
-  <p>
-    Below, we provide skeleton proofs for proving that a relation is reflexive,
-    symmetric,
-    or transitive.
-    Notice that the skeleton proof for proving that a relation is reflexive is a special case of Skeleton <xref ref="skeleton_for_all">Proof</xref>.
-    Similarly, the skeleton proofs involving symmetric and transitive are both special cases of Skeleton <xref ref="skeleton_for_all_direct_proof">Proof</xref>.
-    It is important to point out that every relation on the empty set is vacuously reflexive,
-    symmetric, and transitive.
-    In the skeleton proofs below,
-    we are implicitly assuming that the set in question is nonempty.
-    In some circumstances,
-    it may be necessary to mention the possibility of the empty set.
-  </p>
-  <paragraphs>
-    <title>Skeleton Proof</title>
-    <p>
-      [Proof that a relation is reflexive] Here is the general structure for proving that a relation is reflexive.
-    </p>
-    <proof>
-      <p>
-        Assume <m>R</m> is a relation on <m>A</m> defined by (or satisfying)<ellipsis/>
-        <em>[Use the given definition
-        (or describe the given property)
-        of <m>R</m>]</em>.
-        Let <m>a\in A</m>.
-        <m>\ldots</m> <em>[Use the definition
-        (or property)
-        of <m>R</m> to verify that <m>aR a</m>]</em> <m>\ldots</m> Therefore,
-        the relation <m>R</m> is reflexive on <m>A</m>.
-      </p>
-    </proof>
-  </paragraphs>
-  <paragraphs>
-    <title>Skeleton Proof</title>
-    <p>
-      [Proof that a relation is symmetric] Here is the general structure for proving that a relation is symmetric.
-    </p>
-    <proof>
-      <p>
-        Assume <m>R</m> is a relation on <m>A</m> defined by (or satisfying)<ellipsis/>
-        <em>[Use the given definition
-        (or describe the given property)
-        of <m>R</m>]</em>.
-        Let <m>a, b\in A</m> and suppose <m>aR b</m>.
-        <m>\ldots</m> <em></em>[Use assumption that <m>aR b</m> with definition (or property)
-      </p>
-      <p>
-        of <m>R</m> to verify that <m>bR a</m>]} <m>\ldots</m> Therefore,
-        the relation <m>R</m> is symmetric on <m>A</m>.
-      </p>
-    </proof>
-  </paragraphs>
-  <paragraphs>
-    <title>Skeleton Proof</title>
-    <p>
-      [Proof that a relation is transitive] Here is the general structure for proving that a relation is transitive.
-    </p>
-    <proof>
-      <p>
-        Assume <m>R</m> is a relation on <m>A</m> defined by (or satisfying)<ellipsis/>
-        <em>[Use the given definition
-        (or describe the given property)
-        of <m>R</m>]</em>.
-        Let <m>a, b, c\in A</m> and suppose <m>aR b</m> and <m>bR c</m>.
-        <m>\ldots</m> <em></em>[Use assumption that <m>aR b</m> and <m>bR c</m> with definition
-      </p>
-      <p>
-        (or property) of <m>R</m> to verify that <m>aR c</m>]} <m>\ldots</m> Therefore,
-        the relation <m>R</m> is transitive on <m>A</m>.
-      </p>
-    </proof>
-  </paragraphs>
-  <problem xml:id="prob_lots_of_relations">
-    <statement>
-      <p>
-        Determine whether each of the following relations is reflexive,
-        symmetric,
-        or transitive.
-        In each case,
-        you should either provide a specific counterexample or a proof.
-        <ol marker="labeltextrmalph">
-          <li>
-            <p>
-              Consider the relation <m>T</m> described in <xref ref="ex_Twitter">Example</xref>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Consider the relation <m>F</m> described in <xref ref="prob_facebook">Problem</xref>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Consider the relation <m>\equiv_5</m> described in <xref ref="prob_mod_5">Problem</xref>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Let <m>P</m> be the set of all people and define <m>H</m> via <m>xHy</m> if <m>x</m> and <m>y</m> have the same height.
-            </p>
-          </li>
-          <li>
-            <p>
-              Let <m>P</m> be the set of all people and define <m>T</m> via <m>xTy</m> if <m>x</m> is taller than <m>y</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Consider the relation
-              <q>divides</q>
-              on <m>\mathbb{N}</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Let <m>L</m> be the set of lines and define <m>||</m> via
-              <m>l_1||l_2</m> if <m>l_1</m> is parallel to <m>l_2</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Let <m>C[0,1]</m> be the set of continuous functions on <m>[0,1]</m>.
-              Define <m>f\sim g</m> if
-              <me>
-                \int_0^1|f(x)|\ dx=\int_0^1|g(x)|\ dx
-              </me>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Define <m>R</m> on <m>\mathbb{N}</m> via <m>nR m</m> if <m>n+m</m> is even.
-            </p>
-          </li>
-          <li>
-            <p>
-              Define <m>D</m> on <m>\mathbb{R}</m> via <m>(x,y)\in D</m> if <m>x=2y</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Define <m>F</m> on <m>\mathbb{Z}\times \left(\mathbb{Z}\setminus \{0\}\right)</m> via <m>(a,b)F(c,d)</m> if <m>ad=bc</m>.
-              Do you recognize this relation?
-              Think about fractions.
-            </p>
-          </li>
-          <li>
-            <p>
-              Define <m>\sim</m> on <m>\mathbb{R}^2</m> via
-              <m>(x_1,y_1)\sim (x_2,y_2)</m> if <m>x_1^2+y_1^2=x_2^2+y_2^2</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Define <m>S</m> on <m>\mathbb{R}</m> via <m>xS y</m> if <m>\lfloor x\rfloor =\lfloor y\rfloor</m>,
-              where <m>\lfloor x\rfloor</m> is the greatest integer less than or equal to <m>x</m> (e.g., <m>\lfloor \pi\rfloor=3</m>,
-              <m>\lfloor -1.5\rfloor=-2</m>,
-              and <m>\lfloor 4\rfloor=4</m>).
-            </p>
-          </li>
-          <li>
-            <p>
-              Define <m>C</m> on <m>\mathbb{R}</m> via <m>xCy</m> if <m>|x-y|\lt 1</m>.
-            </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-  </problem>
+  
+<p>Below, we provide skeleton proofs for proving that a relation is reflexive, symmetric, or transitive. Notice that the skeleton proof for proving that a relation is reflexive is a special case of <xref ref="skeleton_for_all">Skeleton Proof</xref>. Similarly, the skeleton proofs involving symmetric and transitive are both special cases of <xref ref="skeleton_for_all_direct_proof">Skeleton Proof</xref>. It is important to point out that every relation on the empty set is vacuously reflexive, symmetric, and transitive. In the skeleton proofs below, we are implicitly assuming that the set in question is nonempty. In some circumstances, it may be necessary to mention the possibility of the empty set.</p>
+
+<heuristic xml:id="skeleton_reflexive">
+<title>Proof that a relation is reflexive</title>
+<statement>
+<p>Here is the general structure for proving that a relation is reflexive.</p>
+
+<proof>
+<p>Assume <m>R</m> is a relation on <m>A</m> defined by (or satisfying)<ellipsis/> <em>[Use the given definition (or describe the given property) of <m>R</m>]</em>. Let <m>a\in A</m>. <m>\ldots</m> <em>[Use the definition (or property) of <m>R</m> to verify that <m>aR a</m>]</em> <m>\ldots</m> Therefore, the relation <m>R</m> is reflexive on <m>A</m>.</p>
+</proof>
+</statement>
+</heuristic>
+
+<heuristic xml:id="skeleton_symmetric">
+<title>Proof that a relation is symmetric</title>
+<statement>
+<p>Here is the general structure for proving that a relation is symmetric.</p>
+
+<proof>
+<p>Assume <m>R</m> is a relation on <m>A</m> defined by (or satisfying)<ellipsis/> <em>[Use the given definition (or describe the given property) of <m>R</m>]</em>. Let <m>a, b\in A</m> and suppose <m>aR b</m>. <m>\ldots</m> <em></em>[Use assumption that <m>aR b</m> with definition (or property) of <m>R</m> to verify that <m>bR a</m>] <m>\ldots</m> Therefore, the relation <m>R</m> is symmetric on <m>A</m>.</p>
+</proof>
+</statement>
+</heuristic>
+
+<heuristic xml:id="skeleton_transitive">
+<title>Proof that a relation is transitive</title>
+<statement>
+<p>Here is the general structure for proving that a relation is transitive.</p>
+
+<proof>
+<p>Assume <m>R</m> is a relation on <m>A</m> defined by (or satisfying)<ellipsis/> <em>[Use the given definition (or describe the given property) of <m>R</m>]</em>. Let <m>a, b, c\in A</m> and suppose <m>aR b</m> and <m>bR c</m>. <m>\ldots</m> <em></em>[Use assumption that <m>aR b</m> and <m>bR c</m> with definition (or property) of <m>R</m> to verify that <m>aR c</m>] <m>\ldots</m> Therefore, the relation <m>R</m> is transitive on <m>A</m>.</p>
+</proof>
+</statement>
+</heuristic>
+
+<problem xml:id="prob_lots_of_relations">
+<statement>
+<p>Determine whether each of the following relations is reflexive, symmetric, or transitive. In each case, you should either provide a specific counterexample or a proof.
+<ol marker="labeltextrmalph">
+<li><p>Consider the relation <m>T</m> described in <xref ref="ex_Twitter">Example</xref>.</p></li>
+<li><p>Consider the relation <m>F</m> described in <xref ref="prob_facebook">Problem</xref>.</p></li>
+<li><p>Consider the relation <m>\equiv_5</m> described in <xref ref="prob_mod_5">Problem</xref>.</p></li>
+<li><p>Let <m>P</m> be the set of all people and define <m>H</m> via <m>xHy</m> if <m>x</m> and <m>y</m> have the same height.</p></li>
+<li><p>Let <m>P</m> be the set of all people and define <m>T</m> via <m>xTy</m> if <m>x</m> is taller than <m>y</m>.</p></li>
+<li><p>Consider the relation <q>divides</q> on <m>\mathbb{N}</m>.</p></li>
+<li><p>Let <m>L</m> be the set of lines and define <m>||</m> via <m>l_1||l_2</m> if <m>l_1</m> is parallel to <m>l_2</m>.</p></li>
+<li><p>Let <m>C[0,1]</m> be the set of continuous functions on <m>[0,1]</m>. Define <m>f\sim g</m> if
+<me>
+\int_0^1|f(x)|\ dx=\int_0^1|g(x)|\ dx
+</me>.
+</p></li>
+<li><p>Define <m>R</m> on <m>\mathbb{N}</m> via <m>nR m</m> if <m>n+m</m> is even.</p></li>
+<li><p>Define <m>D</m> on <m>\mathbb{R}</m> via <m>(x,y)\in D</m> if <m>x=2y</m>.</p></li>
+<li><p>Define <m>F</m> on <m>\mathbb{Z}\times \left(\mathbb{Z}\setminus \{0\}\right)</m> via <m>(a,b)F(c,d)</m> if <m>ad=bc</m>. Do you recognize this relation? Think about fractions.</p></li>
+<li><p>Define <m>\sim</m> on <m>\mathbb{R}^2</m> via <m>(x_1,y_1)\sim (x_2,y_2)</m> if <m>x_1^2+y_1^2=x_2^2+y_2^2</m>.</p></li>
+<li><p>Define <m>S</m> on <m>\mathbb{R}</m> via <m>xS y</m> if <m>\lfloor x\rfloor =\lfloor y\rfloor</m>, where <m>\lfloor x\rfloor</m> is the greatest integer less than or equal to <m>x</m> (e.g., <m>\lfloor \pi\rfloor=3</m>, <m>\lfloor -1.5\rfloor=-2</m>, and <m>\lfloor 4\rfloor=4</m>).</p></li>
+<li><p>Define <m>C</m> on <m>\mathbb{R}</m> via <m>xCy</m> if <m>|x-y|\lt 1</m>.</p></li>
+</ol>
+</p>
+</statement>
+</problem>
+
   <!-- <p>
     \epigraph{Most of what we believe,
     we believe because it was told to us by someone we trusted.

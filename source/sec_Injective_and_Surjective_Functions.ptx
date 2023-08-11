@@ -192,50 +192,30 @@
     One could approach proving that a function is injective by utilizing a proof by contradiction,
     but this is not usually necessary.
   </p>
-  <paragraphs>
-    <title>Skeleton Proof</title>
-    <p>
-      [Proof that a function is injective] Here is the general structure for proving that a function is injective.
-    </p>
-    <proof>
-      <p>
-        Assume <m>f:X\to Y</m> is a function defined by (or satisfying)<ellipsis/>
-        <em>[Use the given definition
-        (or describe the given property)
-        of <m>f</m>]</em>.
-        Let <m>x_1,x_2\in X</m> and suppose <m>f(x_1)=f(x_2)</m>.
-        <m>\ldots</m> <em>[Use the definition
-        (or property)
-        of <m>f</m> to verify that <m>x_1=x_2</m>]</em> <m>\ldots</m> Therefore,
-        the function <m>f</m> is injective.
-      </p>
-    </proof>
-  </paragraphs>
-  <p>
-    How do we prove that a function <m>f</m> is surjective?
-    We would need to argue that every element in the codomain is also in the range.
-    Sometimes, the proof that a particular function is surjective is extremely short,
-    so do not second guess yourself if you find yourself in this situation.
-  </p>
-  <paragraphs>
-    <title>Skeleton Proof</title>
-    <p>
-      [Proof that a function is surjective] Here is the general structure for proving that a function is surjective.
-    </p>
-    <proof>
-      <p>
-        Assume <m>f:X\to Y</m> is a function defined by (or satisfying)<ellipsis/>
-        <em>[Use the given definition
-        (or describe the given property)
-        of <m>f</m>]</em>.
-        Let <m>y\in Y</m>.
-        <m>\ldots</m> <em>[Use the definition
-        (or property)
-        of <m>f</m> to find some <m>x\in X</m> such that <m>f(x)=y</m>]</em> <m>\ldots</m> Therefore,
-        the function <m>f</m> is surjective.
-      </p>
-    </proof>
-  </paragraphs>
+
+<heuristic xml:id="skeleton_injective">
+<title>Proof that a function is injective</title>
+<statement>
+<p>Here is the general structure for proving that a function is injective..</p>
+
+<proof>
+<p>Assume <m>f:X\to Y</m> is a function defined by (or satisfying)<ellipsis/> <em>[Use the given definition (or describe the given property) of <m>f</m>]</em>. Let <m>x_1,x_2\in X</m> and suppose <m>f(x_1)=f(x_2)</m>. <m>\ldots</m> <em>[Use the definition (or property) of <m>f</m> to verify that <m>x_1=x_2</m>]</em> <m>\ldots</m> Therefore, the function <m>f</m> is injective.</p>
+</proof>
+</statement>
+</heuristic>
+
+<p>How do we prove that a function <m>f</m> is surjective? We would need to argue that every element in the codomain is also in the range. Sometimes, the proof that a particular function is surjective is extremely short, so do not second guess yourself if you find yourself in this situation.</p>
+
+<heuristic xml:id="skeleton_surjective">
+<title>Proof that a function is surjective</title>
+<statement>
+<p>Here is the general structure for proving that a function is surjective.</p>
+
+<proof>
+<p>Assume <m>f:X\to Y</m> is a function defined by (or satisfying)<ellipsis/><em>[Use the given definition (or describe the given property) of <m>f</m>]</em>. Let <m>y\in Y</m>. <m>\ldots</m> <em>[Use the definition (or property) <m>f</m> to find some <m>x\in X</m> such that <m>f(x)=y</m>]</em> <m>\ldots</m> Therefore, the function <m>f</m> is surjective.</p>
+</proof>
+</statement>
+</heuristic>
 
 <problem xml:id="prob_injective_surjective_functions">
 <statement>

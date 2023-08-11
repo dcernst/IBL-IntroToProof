@@ -73,32 +73,28 @@
 <title>Proof of <m>(\forall n\in\mathbb{N})P(n)</m> by Complete Induction</title>
 <statement>
 <p>Here is the general structure for a proof by complete induction.</p>
-</statement>
 
-<!-- <proof> -->
-<p><alert>Proof.</alert> We proceed by induction.
+<proof>
+<!-- <p><alert>Proof.</alert>  -->
+<p>We proceed by induction.
 <ol marker="i">
 <li><p>Base step: <em>[Verify that <m>P(1)</m> is true. Depending on the statement, you may also need to verify that <m>P(k)</m> is true for other specific values of <m>k</m>.]</em></p></li>
 <li><p>Inductive step: <em>[Your goal is to prove <q>For all <m>k\in\mathbb{N}</m>, if for each <m>k \in \mathbb{N}</m>, <m>P(j)</m> is true for all <m>j\in \mathbb{N}</m> such that <m>j \leq k</m>, then <m>P(k+1)</m> is true.</q>]</em> Let <m>k \in \mathbb{N}</m>. Suppose <m>P(j)</m> is true for all <m>j \leq k</m>. <em>[Do something to derive that <m>P(k+1)</m> is true.]</em> Therefore, <m>P(k+1)</m> is true.</p></li>
 </ol>
 </p>
 <p>Thus, by complete induction, <m>P(n)</m> is true for all integers <m>n \ge a</m>. </p>
-<!-- </proof> -->
+</proof>
+</statement>
 </heuristic>
 
-<p>
-    When tackling the problems in this section,
-    think carefully about how many base steps you must verify.
-  </p>
-  <theorem>
-    <statement>
-      <p>
-        Define a sequence of numbers by <m>a_1 = 1</m>, <m>a_2 = 3</m>,
-        and <m>a_n = 3a_{n-1} - 2a_{n-2}</m> for all natural numbers <m>n \geq 3</m>.
-        Then <m>a_n = 2^n - 1</m> for all <m>n \in \mathbb{N}</m>.
-      </p>
-    </statement>
-  </theorem>
+<p>When tackling the problems in this section, think carefully about how many base steps you must verify.</p>
+
+<theorem>
+<statement>
+<p>Define a sequence of numbers by <m>a_1 = 1</m>, <m>a_2 = 3</m>, and <m>a_n = 3a_{n-1} - 2a_{n-2}</m> for all natural numbers <m>n \geq 3</m>. Then <m>a_n = 2^n - 1</m> for all <m>n \in \mathbb{N}</m>.</p>
+</statement>
+</theorem>
+
   <theorem>
     <statement>
       <p>

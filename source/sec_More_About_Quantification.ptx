@@ -284,109 +284,70 @@
       </p>
     </statement>
   </problem>
-  <p>
-    At this point,
-    we should be able to use our understanding of quantification to construct counterexamples to complicated false propositions and proofs of complicated true propositions.
-    Here are some general proof structures for various logical forms.
-  </p>
-  <paragraphs xml:id="skeleton_for_all">
-    <title>Skeleton Proof</title>
-    <p>
-      [Direct Proof of <m>(\forall x)P(x)</m>] Here is the general structure for a direct proof of the proposition <m>(\forall x)P(x)</m>.
-      Assume <m>U</m> is the universe of discourse.
-    </p>
-    <proof>
-      <p>
-        <em>[State any upfront assumptions.]</em> Let <m>x \in U</m>.
-        <m>\ldots</m> <em>[Use definitions and known results.]</em>
-        <m>\ldots</m> Therefore, <m>P(x)</m> is true.
-        Since <m>x</m> was arbitrary,
-        for all <m>x</m>, <m>P(x)</m>.
-      </p>
-    </proof>
-  </paragraphs>
-  <p>
-    Combining Skeleton <xref ref="skeleton_for_all">Proof</xref>
-    with Skeleton <xref ref="skeleton_direct_proof">Proof</xref>,
-    we obtain the following skeleton proof.
-  </p>
-  <paragraphs xml:id="skeleton_for_all_direct_proof">
-    <title>Skeleton Proof</title>
-    <p>
-      [Proof of <m>(\forall x)(A(x)\implies B(x))</m>] Below is the general structure for a direct proof of the proposition <m>(\forall x)(A(x)\implies B(x)</m>.
-      Assume <m>U</m> is the universe of discourse.
-    </p>
-    <proof>
-      <p>
-        <em>[State any upfront assumptions.]</em> Let <m>x \in U</m>.
-        Assume <m>A(x)</m>.
-        <m>\ldots</m> <em>[Use definitions and known results to derive <m>B(x)</m>]</em>
-        <m>\ldots</m> Therefore, <m>B(x)</m>.
-      </p>
-    </proof>
-  </paragraphs>
-  <paragraphs>
-    <title>Skeleton Proof</title>
-    <p>
-      [Proof of <m>(\forall x)P(x)</m> by Contradiction] Here is the general structure for a proof of the proposition <m>(\forall x)P(x)</m> via contradiction.
-      Assume <m>U</m> is the universe of discourse.
-    </p>
-    <proof>
-      <p>
-        <em>[State any upfront assumptions.]</em>
-        For sake of a contradiction,
-        assume that there exists <m>x\in U</m> such that <m>\neg P(x)</m>.
-        <m>\ldots</m> <em>[Do something to derive a contradiction.]</em>
-        <m>\ldots</m> This is a contradiction.
-        Therefore, for all <m>x</m>, <m>P(x)</m> is true.
-      </p>
-    </proof>
-  </paragraphs>
-  <paragraphs xml:id="skeleton_exists">
-    <title>Skeleton Proof</title>
-    <p>
-      [Direct Proof of <m>(\exists x)P(x)</m>] Here is the general structure for a direct proof of the proposition <m>(\exists x)P(x)</m>.
-      Assume <m>U</m> is the universe of discourse.
-    </p>
-    <proof>
-      <p>
-        <em>[State any upfront assumptions.]</em>
-        <m>\ldots</m> <m>\ldots</m> <em>[Use definitions, axioms,
-        and previous results to deduce that an <m>x</m> exists for which <m>P(x)</m> is true;
-        or if you have an <m>x</m> that works,
-        just verify that it does.]</em> <m>\ldots</m> Therefore,
-        there exists <m>x\in U</m> such that <m>P(x)</m>.
-      </p>
-    </proof>
-  </paragraphs>
-  <paragraphs>
-    <title>Skeleton Proof</title>
-    <p>
-      [Proof of <m>(\exists x)P(x)</m> by Contradiction] Below is the general structure for a proof of the proposition <m>(\exists x)P(x)</m> via contradiction.
-      Assume <m>U</m> is the universe of discourse.
-    </p>
-    <proof>
-      <p>
-        <em>[State any upfront assumptions.]</em>
-        For sake of a contradiction,
-        assume that for all <m>x\in U</m>, <m>\neg P(x)</m>.
-        <m>\ldots</m> <em>[Do something to derive a contradiction.]</em>
-        <m>\ldots</m> This is a contradiction.
-        Therefore, there exists <m>x\in U</m> such that <m>P(x)</m>.
-      </p>
-    </proof>
-  </paragraphs>
-  <p>
-    Note that if <m>Q(x)</m> is a predicate for which <m>(\forall x)Q(x)</m> is false,
-    then a counterexample to this proposition amounts to showing <m>(\exists x)(\neg Q(x))</m>,
-    which can be proved by following the structure of Skeleton <xref ref="skeleton_exists">Proof</xref>.
-  </p>
-  <p>
-    It is important to point out that sometimes we will have to combine various proof techniques in a single proof.
-    For example,
-    if you wanted to prove a proposition of the form <m>(\forall x)(P(x) \implies Q(x)</m>) by contradiction,
-    we would start by assuming that there exists <m>x</m> in the universe of discourse such that <m>P(x)</m> and <m>\neg Q(x)</m>.
-  </p>
+  
+<p>At this point, we should be able to use our understanding of quantification to construct counterexamples to complicated false propositions and proofs of complicated true propositions. Here are some general proof structures for various logical forms.</p>
+  
+<heuristic xml:id="skeleton_for_all">
+<title>Direct Proof of <m>(\forall x)P(x)</m></title>
+<statement>
+<p>Here is the general structure for a direct proof of the proposition <m>(\forall x)P(x)</m>. Assume <m>U</m> is the universe of discourse.</p>
+
+<proof>
+<p><em>[State any upfront assumptions.]</em> Let <m>x \in U</m>. <m>\ldots</m> <em>[Use definitions and known results.]</em><m>\ldots</m> Therefore, <m>P(x)</m> is true. Since <m>x</m> was arbitrary, for all <m>x</m>, <m>P(x)</m>.</p>
+</proof>
+</statement>
+</heuristic>
+
+<p>Combining <xref ref="skeleton_for_all"> Skeleton Proof</xref> with <xref ref="skeleton_direct_proof">Skeleton Proof</xref>, we obtain the following skeleton proof.</p>
+
+<heuristic xml:id="skeleton_for_all_direct_proof">
+<title>Proof of <m>(\forall x)(A(x)\implies B(x))</m></title>
+<statement>
+<p>Below is the general structure for a direct proof of the proposition <m>(\forall x)(A(x)\implies B(x)</m>. Assume <m>U</m> is the universe of discourse.</p>
+
+<proof>
+<p><em>[State any upfront assumptions.]</em> Let <m>x \in U</m>. Assume <m>A(x)</m>. <m>\ldots</m> <em>[Use definitions and known results to derive <m>B(x)</m>]</em> <m>\ldots</m> Therefore, <m>B(x)</m>.</p>
+</proof>
+</statement>
+</heuristic>
+
+<heuristic xml:id="skeleton_for_all_contradiction">
+<title>Proof of <m>(\forall x)P(x)</m> by Contradiction</title>
+<statement>
+<p>Here is the general structure for a proof of the proposition <m>(\forall x)P(x)</m> via contradiction. Assume <m>U</m> is the universe of discourse.</p>
+
+<proof>
+<p><em>[State any upfront assumptions.]</em> For sake of a contradiction, assume that there exists <m>x\in U</m> such that <m>\neg P(x)</m>. <m>\ldots</m> <em>[Do something to derive a contradiction.]</em> <m>\ldots</m> This is a contradiction.Therefore, for all <m>x</m>, <m>P(x)</m> is true.</p>
+</proof>
+</statement>
+</heuristic>
+
+<heuristic xml:id="skeleton_exists">
+<title>Direct Proof of <m>(\exists x)P(x)</m></title>
+<statement>
+<p>Here is the general structure for a direct proof of the proposition <m>(\exists x)P(x)</m>. Assume <m>U</m> is the universe of discourse.</p>
+
+<proof>
+<p><em>[State any upfront assumptions.]</em> <m>\ldots</m> <m>\ldots</m> <em>[Use definitions, axioms, and previous results to deduce that an <m>x</m> exists for which <m>P(x)</m> is true; or if you have an <m>x</m> that works, just verify that it does.]</em> <m>\ldots</m> Therefore, there exists <m>x\in U</m> such that <m>P(x)</m>.</p>
+</proof>
+</statement>
+</heuristic>
+
+<heuristic xml:id="skeleton_exists_contradiction">
+<title>Proof of <m>(\exists x)P(x)</m> by Contradiction</title>
+<statement>
+<p>Below is the general structure for a proof of the proposition <m>(\exists x)P(x)</m> via contradiction. Assume <m>U</m> is the universe of discourse.</p>
+
+<proof>
+<p><em>[State any upfront assumptions.]</em> For sake of a contradiction, assume that for all <m>x\in U</m>, <m>\neg P(x)</m> <m>\ldots</m> <em>[Do something to derive a contradiction.]</em> <m>\ldots</m> This is a contradiction. Therefore, there exists <m>x\in U</m> such that <m>P(x)</m>.</p>
+</proof>
+</statement>
+</heuristic>
+
+<p>Note that if <m>Q(x)</m> is a predicate for which <m>(\forall x)Q(x)</m> is false, then a counterexample to this proposition amounts to showing <m>(\exists x)(\neg Q(x))</m>, which can be proved by following the structure of <xref ref="skeleton_exists">Skeleton Proof</xref>.</p>
+
+<p>It is important to point out that sometimes we will have to combine various proof techniques in a single proof. For example, if you wanted to prove a proposition of the form <m>(\forall x)(P(x) \implies Q(x)</m>) by contradiction, we would start by assuming that there exists <m>x</m> in the universe of discourse such that <m>P(x)</m> and <m>\neg Q(x)</m>.</p>
+
   <problem>
     <statement>
       <p>
@@ -448,51 +409,20 @@
       </p>
     </statement>
   </problem>
-  <problem>
-    <statement>
-      <p>
-        Explain why the following
-        <q>proof</q>
-        is not a valid argument.
-        <ol>
-          <li class="custom-list-style-type" label="">
-            <p>
-              <em>Claim.</em> For all <m>x,y\in \mathbb{Z}</m>,
-              if <m>x</m> and <m>y</m> are even, then <m>x+y</m> is even.
-              <em>
-              <q>Proof.</q>
-              </em> Suppose <m>x,
-              y \in \mathbb{Z}</m> such that <m>x</m> and <m>y</m> are even.
-              For sake of a contradiction, assume that <m>x+y</m> is odd.
-              Then there exists <m>k \in \mathbb{Z}</m> such that <m>x+y=2k+1</m>.
-              This implies that <m>(x+y)-2k=1</m>.
-              We see that the left side of the equation is even because it is the difference of even numbers.
-              However, the right side is odd.
-              Since an even number cannot equal an odd number, we have a contradiction.
-              Therefore, <m>x+y</m> is even.
-            </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-  </problem>
-  <p>
-    Sometimes it is useful to split the universe of discourse into multiple collections to deal with separately.
-    When doing this,
-    it is important to make sure that your cases are exhaustive (i.e., every possible element of the universe of discourse has been accounted for).
-    Ideally, your cases will also be disjoint (i.e., you have not considered the same element more than once).
-    For example,
-    if our universe of discourse is the set of integers,
-    we can separately consider even versus odd integers.
-    If our universe of discourse is the set of real numbers,
-    we might want to consider rational versus irrational numbers,
-    or possibly negative versus zero versus and positive.
-    Attacking a proof in this way,
-    is often referred to as a <em>proof by cases</em>
-    (or <em>proof by exhaustion</em>).
-    A proof by cases may also be useful when dealing with hypotheses involving
-    <q>or</q>. Note that the use of a proof by cases is justified by <xref ref="thm_logical_form_for_cases">Theorem</xref>.
-  </p>
+  
+<problem>
+<statement>
+<p>Explain why the following <q>proof</q> is not a valid argument.</p>
+    
+<p><alert>Claim.</alert> For all <m>x,y\in \mathbb{Z}</m>, if <m>x</m> and <m>y</m> are even, then <m>x+y</m> is even.</p>
+
+<p><alert><q>Proof.</q></alert> Suppose <m>x, y \in \mathbb{Z}</m> such that <m>x</m> and <m>y</m> are even. For sake of a contradiction, assume that <m>x+y</m> is odd. Then there exists <m>k \in \mathbb{Z}</m> such that <m>x+y=2k+1</m>. This implies that <m>(x+y)-2k=1</m>. We see that the left side of the equation is even because it is the difference of even numbers. However, the right side is odd. Since an even number cannot equal an odd number, we have a contradiction. Therefore, <m>x+y</m> is even.</p>
+
+</statement>
+</problem>
+  
+<p>Sometimes it is useful to split the universe of discourse into multiple collections to deal with separately. When doing this, it is important to make sure that your cases are exhaustive (i.e., every possible element of the universe of discourse has been accounted for). Ideally, your cases will also be disjoint (i.e., you have not considered the same element more than once). For example, if our universe of discourse is the set of integers, we can separately consider even versus odd integers. If our universe of discourse is the set of real numbers, we might want to consider rational versus irrational numbers, or possibly negative versus zero versus and positive. Attacking a proof in this way, is often referred to as a <term>proof by cases</term> (or <term>proof by exhaustion</term>). A proof by cases may also be useful when dealing with hypotheses involving <q>or</q>. Note that the use of a proof by cases is justified by <xref ref="thm_logical_form_for_cases">Theorem</xref>.</p>
+
   <p>
     If you decide to approach a proof using cases,
     be sure to inform the reader that you are doing so and organize your proof in a sensible way.
@@ -539,25 +469,16 @@
     here is a proof of <xref ref="thm_nm_odd_implies_n_or_m_odd">Theorem</xref> that utilizes this approach.
   </p>
 
-  <proof>
-    <title>Proof of <xref ref="thm_nm_odd_implies_n_or_m_odd">Theorem</xref></title>
-  <p>
-    We will prove the contrapositive.
-    Let <m>n,m\in\mathbb{Z}</m> and assume <m>n</m> is even or <m>m</m> is even.
-    Without loss of generality, assume <m>n</m> is even.
-    Then there exists <m>k\in\mathbb{Z}</m> such that <m>n=2k</m>.
-    We see that
-    <me>
-      nm=(2k)m=2(km)
-    </me>.
-  </p>
-  <p>
-    Since both <m>k</m> and <m>m</m> are integers, <m>km</m> is an integer.
-    This shows that <m>nm</m> is even.
-    We have proved the contrapositive,
-    and hence for all <m>n,m\in\mathbb{Z}</m>,
-    if <m>nm</m> is odd, then <m>n</m> is odd and <m>m</m> is odd.
-  </p>
+<proof>
+<title>Proof of <xref ref="thm_nm_odd_implies_n_or_m_odd">Theorem</xref></title>
+<p>We will prove the contrapositive. Let <m>n,m\in\mathbb{Z}</m> and assume <m>n</m> is even or <m>m</m> is even. Without loss of generality, assume <m>n</m> is even. Then there exists <m>k\in\mathbb{Z}</m> such that <m>n=2k</m>. We see that
+<me>
+nm=(2k)m=2(km)
+</me>.
+</p>
+
+<p>Since both <m>k</m> and <m>m</m> are integers, <m>km</m> is an integer. This shows that <m>nm</m> is even. We have proved the contrapositive, and hence for all <m>n,m\in\mathbb{Z}</m>, if <m>nm</m> is odd, then <m>n</m> is odd and <m>m</m> is odd.
+</p>
 </proof>
 
   <p>
@@ -584,38 +505,28 @@
     It is common to use <m>\tcboxmath{\exists!}</m> as a symbolic abbreviation for
     <q>there exists a unique<ellipsis/> such that</q>.
   </p>
-  <paragraphs xml:id="skeleton_uniqueness">
-    <title>Skeleton Proof</title>
-    <p>
-      [Direct Proof of <m>(\exists! x)P(x)</m>] Here is the general structure for a direct proof of the proposition <m>(\exists! x)P(x)</m>.
-      Assume <m>U</m> is the universe of discourse.
-    </p>
-    <proof>
-      <p>
-        <em>[State any upfront assumptions.]</em>
-        <m>\ldots</m> <m>\ldots</m> <em>[Use definitions, axioms,
-        and previous results to deduce that an <m>x</m> exists for which <m>P(x)</m> is true;
-        or if you have an <m>x</m> that works,
-        just verify that it does.]</em> <m>\ldots</m> Therefore,
-        there exists <m>x\in U</m> such that <m>P(x)</m>.
-        Now, suppose <m>x_1,x_2\in U</m> such that <m>P(x_1)</m> and <m>P(x_2)</m>.
-        <m>\ldots</m> <em>[Prove that <m>x_1=x_2</m>.]</em>
-        <m>\ldots</m> This implies that there exists a unique <m>x</m> such that <m>P(x)</m>.
-      </p>
-    </proof>
-  </paragraphs>
-  <p>
-    The next theorem provides an opportunity to practice proving uniqueness.
-  </p>
-  <theorem>
-    <statement>
-      <p>
-        If <m>c,a,r\in\mathbb{R}</m> such that <m>c\neq 0</m> and <m>r\neq a/c</m>,
-        then there exists a unique
-        <m>x\in\mathbb{R}</m> such that <m>(ax+1)/(cx)=r</m>.
-      </p>
-    </statement>
-  </theorem>
+
+<heuristic xml:id="skeleton_uniqueness">
+<title>Direct Proof of <m>(\exists! x)P(x)</m></title>
+<statement>
+<p>Here is the general structure for a direct proof of the proposition <m>(\exists! x)P(x)</m>. Assume <m>U</m> is the universe of discourse.</p>
+
+<proof>
+<p><em>[State any upfront assumptions.]</em> <m>\ldots</m> <m>\ldots</m> <em>[Use definitions, axioms, and previous results to deduce that an <m>x</m> exists for which <m>P(x)</m> is true; or if you have an <m>x</m> that works, just verify that it does.]</em> <m>\ldots</m> Therefore, there exists <m>x\in U</m> such that <m>P(x)</m>. Now, suppose <m>x_1,x_2\in U</m> such that <m>P(x_1)</m> and <m>P(x_2)</m>. <m>\ldots</m> <em>[Prove that <m>x_1=x_2</m>.]</em> <m>\ldots</m> This implies that there exists a unique <m>x</m> such that <m>P(x)</m>.</p>
+</proof>
+</statement>
+</heuristic>
+
+<p>The next theorem provides an opportunity to practice proving uniqueness.</p>
+
+<theorem>
+<statement>
+<p>If <m>c,a,r\in\mathbb{R}</m> such that <m>c\neq 0</m> and <m>r\neq a/c</m>, then there exists a unique <m>x\in\mathbb{R}</m> such that <m>(ax+1)/(cx)=r</m>.</p>
+</statement>
+</theorem>
+
+
+
   <!-- <p>
     \epigraph{With two published novels and a file full of ideas for others,
     the only thing I know about writing is this:
