@@ -195,23 +195,13 @@ p_{n}</m> be <m>n</m> distinct points arranged on a circle.
 Then the number of line segments joining all pairs of points is <m>\frac{n^{2}-n}{2}</m>.
   </p>
 </statement>
-  </theorem>
-  <problem xml:id="prob_L-shapes">
+</theorem>
+
+<problem xml:id="prob_L-shapes">
 <statement>
-  <p>
-Consider a grid of squares that is <m>2^n</m> squares wide by <m>2^n</m> squares long,
-where <m>n\in\mathbb{N}</m>.
-One of the squares has been cut out,
-but you do not know which one!
-You have a bunch of L-shapes made up of <m>3</m> squares.
-Prove that you can perfectly cover this chessboard with the L-shapes
-(with no overlap)
-for any <m>n\in\mathbb{N}</m>.
-<xref ref="fig_L-shapes">Figure</xref>
-depicts one possible covering for the case involving <m>n=2</m>.
-  </p>
+<p>Consider a grid of squares that is <m>2^n</m> squares wide by <m>2^n</m> squares long, where <m>n\in\mathbb{N}</m>. One of the squares has been cut out, but you do not know which one! You have a bunch of L-shapes made up of <m>3</m> squares. Prove that you can perfectly cover this chessboard with the L-shapes (with no overlap) for any <m>n\in\mathbb{N}</m>. <xref ref="fig_L-shapes">Figure</xref> depicts one possible covering for the case involving <m>n=2</m> and a fixed cut-out square.</p>
 </statement>
-  </problem>
+</problem>
   
 <figure xml:id="fig_L-shapes">
 <caption>One possible covering for the case involving <m>n=2</m> for <xref ref="prob_L-shapes">Problem</xref>.</caption>
