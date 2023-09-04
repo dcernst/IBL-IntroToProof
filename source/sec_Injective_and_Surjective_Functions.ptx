@@ -219,7 +219,7 @@
 
 <problem xml:id="prob_injective_surjective_functions">
 <statement>
-<p>Determine whether each of the following functions is injective, surjective, both, or neither. In each case, you should provide a proof or a counterexample as appropriate.
+<p>Determine whether each of the following functions is injective, surjective, both, or neither. In each case, you should provide a proof or a counterexample as appropriate. <i>Note:</i> You are probably not in a position to write a careful argument for surjectivity for <xref ref="surjective_hard">Part</xref>.
 <ol marker="labeltextrmalph">
 <li><p>Define <m>f:\mathbb{R}\to \mathbb{R}</m> via <m>f(x)=x^{2}</m>
 </p></li>
@@ -227,7 +227,7 @@
 </p></li>
 <li><p>Define <m>h:\mathbb{R}\to \mathbb{R}</m> via <m>h(x)=x^{3}</m>
 </p></li>
-<li><p>Define <m>k:\mathbb{R}\to \mathbb{R}</m> via <m>k(x)=x^{3}-x</m>
+<li xml:id="surjective_hard"><p>Define <m>k:\mathbb{R}\to \mathbb{R}</m> via <m>k(x)=x^{3}-x</m>
 </p></li>
 <li xml:id="circles"><p>Define <m>c: \mathbb{R}\times \mathbb{R}\to \mathbb{R}</m> via <m>c(x,y)=x^{2}+y^{2}</m>
 </p></li>
