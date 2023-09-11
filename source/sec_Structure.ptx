@@ -11,13 +11,13 @@
     All of these tasks will almost always be challenging.
   </p>
   <p>
-    The items labeled as <em>Definition</em> and <em>Example</em>
+    The items labeled as <term>Definition</term> and <term>Example</term>
     are meant to be read and digested.
-    However, the items labeled as <em>Problem</em>, <em>Theorem</em>,
-    and <em>Corollary</em> require action on your part.
-    Items labeled as <em>Problem</em> are sort of a mixed bag.
+    However, the items labeled as <term>Problem</term>, <term>Theorem</term>,
+    and <term>Corollary</term> require action on your part.
+    Items labeled as <term>Problem</term> are sort of a mixed bag.
     Some Problems are computational in nature and aimed at improving your understanding of a particular concept while others ask you to provide a counterexample for a statement if it is false or to provide a proof if the statement is true.
-    Items with the <em>Theorem</em> and <em>Corollary</em>
+    Items with the <term>Theorem</term> and <term>Corollary</term>
     designation are mathematical facts and the intention is for you to produce a valid proof of the given statement.
     The main difference between a theorem and a corollary is that corollaries are typically statements that follow quickly from a previous theorem.
     In general, you should expect corollaries to have very short proofs.
@@ -35,7 +35,7 @@
   <p>
     Discussion of new topics is typically kept at a minimum and there are very few examples in this book.
     This is intentional.
-    One of the objectives of the items labeled as <em>Problem</em>
+    One of the objectives of the items labeled as <term>Problem</term>
     is for you to produce the examples needed to internalize unfamiliar concepts.
     The overarching goal of this book is to help you develop a deep and meaningful understanding of the processes of producing mathematics by putting you in direct contact with mathematical phenomena.
   </p>

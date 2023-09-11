@@ -58,15 +58,15 @@
           In this case, you should reference the statement by number,
           but it is also helpful to the reader to summarize the statement you are citing.
           For example,
-          you might write something like, ``According to <xref ref="thm_two_consecutive_ints">Theorem</xref>,
+          you might write something like, <q>According to <xref ref="thm_two_consecutive_ints">Theorem</xref>,
           the sum of two consecutive integers is odd,
-          and so<ellipsis/>" or ``By the definition of divides
+          and so<ellipsis/></q> or <q>By the definition of divides
           (<xref ref="def_divides">Definition</xref>),
-          it follows that<ellipsis/>". One thing worth pointing out is that if we are citing a definition,
+          it follows that<ellipsis/></q>. One thing worth pointing out is that if we are citing a definition,
           theorem, or problem by number, we should capitalize
           <q>Definition</q>,
           <q>Theorem</q>, or
-          <q>Problem</q>, respectively (e.g., ``According to <xref ref="thm_two_consecutive_ints">Theorem</xref><ellipsis/>").
+          <q>Problem</q>, respectively (e.g., <q>According to <xref ref="thm_two_consecutive_ints">Theorem</xref><ellipsis/></q>).
           Otherwise, we do not capitalize these words (e.g.,
           <q>By the definition of divides<ellipsis/></q>).
         </p>
@@ -101,7 +101,7 @@
           <q>proof box</q>
           (<m>\square</m> or <m>\blacksquare</m>).
           This little square at end of a proof is sometimes called a
-          <em>tombstone</em> or <em>Halmos symbol</em>
+          <term>tombstone</term> or <term>Halmos symbol</term>
           after Hungarian-born American mathematician
           <url href="https://en.wikipedia.org/wiki/Paul_Halmos">Paul Halmos</url>
           (1916<ndash/>2006).
