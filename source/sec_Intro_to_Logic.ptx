@@ -1,201 +1,57 @@
 <section xml:id="sec_Intro_to_Logic">
-  <title>Introduction to Logic</title>
-  <p>
-    In the previous section,
-    we jumped in head first and attempted to prove several theorems in the context of number theory without a formal understanding of what it was we were doing.
-    Likely, many issues bubbled to the surface.
-    What is a proof?
-    What sorts of statements require proof?
-    What should a proof entail?
-    How should a proof be structured?
-    Let's take a step back and do a more careful examination of what it is we are actually doing.
-    In the the next two sections,
-    we will introduce the basics of
-    <em>propositional logic</em><mdash/>also referred to as
-    <em>propositional calculus</em>
-    or sometimes <em>zeroth-order logic</em>.
-  </p>
-  <definition>
-    <statement>
-      <p>
-        A proposition is a sentence that is either true or false but never both.
-        The truth value
-        (or logical value)
-        of a proposition refers to its attribute of being true or false.
-      </p>
-    </statement>
-  </definition>
-  <p>
-    For example, the sentence
-    <q>All dogs have four legs</q>
-    <nbsp/>is a false proposition.
-    However, the perfectly good sentence
-    <q><m>x=1</m></q>
-    is <em>not</em> a proposition all by itself since we do not actually know what <m>x</m> is.
-  </p>
-  <problem>
-    <statement>
-      <p>
-        Determine whether each of the following is a proposition.
-        Explain your reasoning.
-        <ol marker="labeltextrmalph">
-          <li>
-            <p>
-              All cars are red.
-            </p>
-          </li>
-          <li>
-            <p>
-              Every person whose name begins with J has the name Joe.
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>x^2=4</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              There exists a real number <m>x</m> such that <m>x^2=4</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              For all real numbers <m>x</m>, <m>x^2=4</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\sqrt{2}</m> is an irrational number.
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>p</m> is prime.
-            </p>
-          </li>
-          <li>
-            <p>
-              Is it raining?
-            </p>
-          </li>
-          <li>
-            <p>
-              It will rain tomorrow.
-            </p>
-          </li>
-          <li>
-            <p>
-              Led Zeppelin is the best band of all time.
-            </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-  </problem>
-  <p>
-    The last two sentences in the previous problem may stir debate.
-    It is not so important that we come to consensus as to whether either of these two sentences is actually a proposition or not.
-    The good news is that in mathematics we do not encounter statements whose truth value is dependent on either the future or opinion.
-  </p>
-  <p>
-    Given two propositions, we can form more complicated propositions using
-    <em>logical connectives</em>.
-  </p>
-  <definition xml:id="def_logical_connectives">
-    <statement>
-      <p>
-        Let <m>A</m> and <m>B</m> be propositions.
-        <ol marker="labeltextrmalph">
-          <li>
-            <p>
-              The proposition
-              <q><em>not <m>A</m></em></q>
-              is true if <m>A</m> is false;
-              expressed symbolically as <m>\tcboxmath{\neg A}</m> and called the
-              <em>negation</em> of <m>A</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              The proposition
-              <q><em><m>A</m> and <m>B</m></em></q>
-              is true if both <m>A</m> and <m>B</m> are true;
-              expressed symbolically as <m>\tcboxmath{A \wedge B}</m> and called the <em>conjunction</em>
-              of <m>A</m> and <m>B</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              The proposition
-              <q><em><m>A</m> or <m>B</m></em></q>
-              is true if at least one of <m>A</m> or <m>B</m> is true;
-              expressed symbolically as <m>\tcboxmath{A \vee B}</m> and called the <em>disjunction</em>
-              of <m>A</m> and <m>B</m>.
-            </p>
-          </li>
-          <li xml:id="def_conditional">
-            <p>
-              The proposition
-              <q><em>If <m>A</m>, then <m>B</m></em></q>
-              is true if both <m>A</m> and <m>B</m> are true, or <m>A</m> is false;
-              expressed symbolically as <m>\tcboxmath{A \implies B}</m> and called a
-              <em>conditional proposition</em>
-              (or <em>implication</em>).
-              In this case, <m>A</m> is called the <em>hypothesis</em>
-              and <m>B</m> is called the <em>conclusion</em>.
-              Note that <m>A \implies B</m> may also be read as
-              <q><m>A</m> implies <m>B</m></q>,
-              <q><m>A</m> only if <m>B</m></q>,
-              <q><m>B</m> if <m>A</m></q>, or
-              <q><m>B</m> whenever <m>A</m></q>.
-            </p>
-          </li>
-          <li xml:id="def_logically_equivalent">
-            <p>
-              The proposition
-              <q><em><m>A</m> if and only if <m>B</m></em></q>
-              (alternatively,
-              <q><em><m>A</m> is necessary and sufficient for <m>B</m></em></q>
-              ) is true if both <m>A</m> and <m>B</m> have the same truth value;
-              expressed symbolically as <m>\tcboxmath{A\logeq B}</m> and called a
-              <em>biconditional proposition</em>.
-              If <m>A\logeq B</m> is true,
-              we say that <m>A</m> and <m>B</m> are
-              <em>logically equivalent</em>.
-            </p>
-          </li>
-        </ol>
-      </p>
-      <p>
-        Each of the boxed propositions is called a compound proposition,
-        where <m>A</m> and <m>B</m> are referred to as the components of the compound proposition.
-      </p>
-    </statement>
-  </definition>
-  <p>
-    It is worth pointing out that definitions in mathematics are typically written in the form
-    <q><m>B</m> if <m>A</m></q>
-    (or
-    <q><m>B</m> provided that <m>A</m></q>
-    or
-    <q><m>B</m> whenever <m>A</m></q>),
-    where <m>B</m> contains the term or phrase we are defining and <m>A</m> provides the meaning of the concept we are defining.
-    In the case of definitions, we should always interpret
-    <q><m>B</m> if <m>A</m></q>
-    as describing precisely the collection of
-    <q>objects</q>
-    (e.g., numbers, sets, functions,
-    etc.) that should be identified with the term or phrase we are defining.
-    That is, if an object does not meet the condition specified in <m>A</m>,
-    then it is never referred to by the term or phrase we are defining.
-    Some authors will write definitions in the form
-    <q><m>B</m> if and only if <m>A</m></q>. However, a definition is not at all the same kind of statement as a usual biconditional since one of the two sides is undefined until the definition is made.
-    A definition is really a statement that the newly defined term or phrase is synonymous with a previously defined concept.
-  </p>
-  <p>
-    We can form complicated compound propositions with several components by utilizing logical connectives.
-  </p>
+<title>Introduction to Logic</title>
+
+<p>In the previous section, we jumped in head first and attempted to prove several theorems in the context of number theory without a formal understanding of what it was we were doing. Likely, many issues bubbled to the surface. What is a proof? What sorts of statements require proof? What should a proof entail? How should a proof be structured? Let's take a step back and do a more careful examination of what it is we are actually doing. In the the next two sections, we will introduce the basics of <term>propositional logic</term><mdash/>also referred to as <term>propositional calculus</term> or sometimes <term>zeroth-order logic</term>.</p>
+
+<definition>
+<statement>
+<p>A <term>proposition</term> is a sentence that is either true or false but never both. The <term>truth value</term> (or <term>logical value</term>) of a proposition refers to its attribute of being true or false.</p>
+</statement>
+</definition>
+
+<p>For example, the sentence <q>All dogs have four legs</q><nbsp/>is a false proposition. However, the perfectly good sentence <q><m>x=1</m></q> is <em>not</em> a proposition all by itself since we do not actually know what <m>x</m> is.</p>
+
+<problem>
+<statement>
+<p>Determine whether each of the following is a proposition. Explain your reasoning.
+<ol marker="labeltextrmalph">
+<li><p>All cars are red.</p></li>
+<li><p>Every person whose name begins with J has the name Joe.</p></li>
+<li><p><m>x^2=4</m>.</p></li><li><p>There exists a real number <m>x</m> such that <m>x^2=4</m>.</p></li>
+<li><p>For all real numbers <m>x</m>, <m>x^2=4</m>.</p></li>
+<li><p><m>\sqrt{2}</m> is an irrational number.</p></li>
+<li><p><m>p</m> is prime.</p></li>
+<li><p>Is it raining?</p></li>
+<li><p>It will rain tomorrow.</p></li>
+<li><p>Led Zeppelin is the best band of all time.</p></li>
+</ol>
+</p>
+</statement>
+</problem>
+
+<p>The last two sentences in the previous problem may stir debate. It is not so important that we come to consensus as to whether either of these two sentences is actually a proposition or not. The good news is that in mathematics we do not encounter statements whose truth value is dependent on either the future or opinion.</p>
+
+<p>Given two propositions, we can form more complicated propositions using <term>logical connectives</term>.</p>
+
+<definition xml:id="def_logical_connectives">
+<statement>
+<p>Let <m>A</m> and <m>B</m> be propositions.
+<ol marker="labeltextrmalph">
+<li><p>The proposition <q><term>not <m>A</m></term></q> is true if <m>A</m> is false; expressed symbolically as <m>\tcboxmath{\neg A}</m> and called the <term>negation</term> of <m>A</m>.</p></li>
+<li><p>The proposition <q><term><m>A</m> and <m>B</m></term></q> is true if both <m>A</m> and <m>B</m> are true; expressed symbolically as <m>\tcboxmath{A \wedge B}</m> and called the <term>conjunction</term>  of <m>A</m> and <m>B</m>.</p></li>
+<li><p>The proposition <q><term><m>A</m> or <m>B</m></term></q> is true if at least one of <m>A</m> or <m>B</m> is true; expressed symbolically as <m>\tcboxmath{A \vee B}</m> and called the <term>disjunction</term> of <m>A</m> and <m>B</m>.</p></li>
+ <li xml:id="def_conditional"><p> The proposition <q><term>If <m>A</m>, then <m>B</m></term></q> is true if both <m>A</m> and <m>B</m> are true, or <m>A</m> is false; expressed symbolically as <m>\tcboxmath{A \implies B}</m> and called a <term>conditional proposition</term> (or <term>implication</term>). In this case, <m>A</m> is called the <term>hypothesis</term> and <m>B</m> is called the <term>conclusion</term>. Note that <m>A \implies B</m> may also be read as <q><m>A</m> implies <m>B</m></q>, <q><m>A</m> only if <m>B</m></q>, <q><m>B</m> if <m>A</m></q>, or <q><m>B</m> whenever <m>A</m></q>.</p></li>
+<li xml:id="def_logically_equivalent"><p>The proposition <q><term><m>A</m> if and only if <m>B</m></term></q> (alternatively, <q><term><m>A</m> is necessary and sufficient for <m>B</m></term></q>) is true if both <m>A</m> and <m>B</m> have the same truth value; expressed symbolically as <m>\tcboxmath{A\logeq B}</m> and called a <term>biconditional proposition</term>.  If <m>A\logeq B</m> is true, we say that <m>A</m> and <m>B</m> are <term>logically equivalent</term>.</p></li>
+</ol>
+</p>
+<p>Each of the boxed propositions is called a compound proposition, where <m>A</m> and <m>B</m> are referred to as the components of the compound proposition.</p>
+</statement>
+</definition>
+
+<p>It is worth pointing out that definitions in mathematics are typically written in the form <q><m>B</m> if <m>A</m></q> (or <q><m>B</m> provided that <m>A</m></q> or <q><m>B</m> whenever <m>A</m></q>), where <m>B</m> contains the term or phrase we are defining and <m>A</m> provides the meaning of the concept we are defining. In the case of definitions, we should always interpret <q><m>B</m> if <m>A</m></q> as describing precisely the collection of <q>objects</q> (e.g., numbers, sets, functions, etc.) that should be identified with the term or phrase we are defining. That is, if an object does not meet the condition specified in <m>A</m>, then it is never referred to by the term or phrase we are defining. Some authors will write definitions in the form <q><m>B</m> if and only if <m>A</m></q>. However, a definition is not at all the same kind of statement as a usual biconditional since one of the two sides is undefined until the definition is made. A definition is really a statement that the newly defined term or phrase is synonymous with a previously defined concept.</p>
+
+<p>We can form complicated compound propositions with several components by utilizing logical connectives.</p>
+
   <problem xml:id="prob_translations">
     <statement>
       <p>
@@ -244,47 +100,56 @@
       </p>
     </statement>
   </problem>
-  <definition>
-    <statement>
-      <p>
-        A truth table for a compound proposition is a table that illustrates all possible combinations of truth values for the components of the compound proposition together with the resulting truth value for each combination.
-      </p>
-    </statement>
-  </definition>
-  <example>
-    <statement>
-      <p>
-        If <m>A</m> and <m>B</m> are propositions,
-        then the truth table for the compound proposition
-        <m>A\wedge B</m> is given by the following.
-      </p>
-      <tabular>
-        {@ccc@}
-        \toprule
-        <m>A</m>  &amp;  <m>B</m> &amp; <m>A \wedge B</m>
-        \midrule
-        T &amp; T &amp; T
-        T &amp; F &amp; F
-        F &amp; T &amp; F
-        F &amp; F &amp; F
-        \bottomrule
-      </tabular>
-      <p>
-        Notice that we have columns for each of <m>A</m> and <m>B</m>.
-        The rows for these two columns correspond to all possible combinations of truth values for <m>A</m> and <m>B</m>.
-        The third column yields the truth value of
-        <m>A\wedge B</m> given the possible truth values for <m>A</m> and <m>B</m>.
-      </p>
-    </statement>
-  </example>
-  <p>
-    Each component of a compound proposition has two possible truth values,
-    namely true or false.
-    Thus, if a compound proposition is built from <m>n</m> component propositions,
-    then the truth table will require <m>2^n</m> rows.
-  </p>
-  <problem>
-    <statement>
+
+<definition>
+<statement>
+<p>A <term>truth table</term> for a compound proposition is a table that illustrates all possible combinations of truth values for the components of the compound proposition together with the resulting truth value for each combination.</p>
+</statement>
+</definition>
+
+<example>
+<statement>
+<p>If <m>A</m> and <m>B</m> are propositions, then the truth table for the compound proposition <m>A\wedge B</m> is given by the following.</p>
+
+<table>
+<title>Truth table for <m>A\wedge B</m></title>
+<tabular halign="center">
+<row header="yes" bottom="minor" >
+      <cell><m>A</m></cell>
+      <cell><m>B</m></cell>
+      <cell><m>A\wedge B</m></cell>
+</row>
+<row>
+      <cell>T</cell>
+      <cell>T</cell>
+      <cell>T</cell>
+</row>
+<row>
+      <cell>T</cell>
+      <cell>F</cell>
+      <cell>F</cell>
+</row>
+<row>
+      <cell>F</cell>
+      <cell>T</cell>
+      <cell>F</cell>
+</row>
+<row>
+      <cell>F</cell>
+      <cell>F</cell>
+      <cell>F</cell>
+</row>
+</tabular>
+</table>
+
+<p>Notice that we have columns for each of <m>A</m> and <m>B</m>. The rows for these two columns correspond to all possible combinations of truth values for <m>A</m> and <m>B</m>. The third column yields the truth value of <m>A\wedge B</m> given the possible truth values for <m>A</m> and <m>B</m>.</p>
+</statement>
+</example>
+
+<p>Each component of a compound proposition has two possible truth values, namely true or false. Thus, if a compound proposition is built from <m>n</m> component propositions, then the truth table will require <m>2^n</m> rows.</p>
+
+<problem>
+<statement>
       <p>
         Create a truth table for each of the following compound propositions.
         You should add additional columns to your tables as needed to assist you with intermediate steps.
@@ -386,7 +251,7 @@
   </theorem>
   <p>
     The next theorem, referred to as
-    <em>De Morgan's Law</em>,
+    <term>De Morgan's Law</term>,
     provides a method for negating a compound proposition involving a conjunction.
   </p>
   <theorem xml:id="thm_De_Morgan">
