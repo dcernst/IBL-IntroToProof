@@ -111,8 +111,9 @@
 <statement>
 <p>If <m>A</m> and <m>B</m> are propositions, then the truth table for the compound proposition <m>A\wedge B</m> is given by the following.</p>
 
-<table>
-<title>Truth table for <m>A\wedge B</m></title>
+<!-- <table>
+<title>Truth table for <m>A\wedge B</m></title> -->
+
 <tabular halign="center">
 <row header="yes" bottom="minor" >
       <cell><m>A</m></cell>
@@ -140,7 +141,8 @@
       <cell>F</cell>
 </row>
 </tabular>
-</table>
+
+<!-- </table> -->
 
 <p>Notice that we have columns for each of <m>A</m> and <m>B</m>. The rows for these two columns correspond to all possible combinations of truth values for <m>A</m> and <m>B</m>. The third column yields the truth value of <m>A\wedge B</m> given the possible truth values for <m>A</m> and <m>B</m>.</p>
 </statement>
@@ -148,39 +150,19 @@
 
 <p>Each component of a compound proposition has two possible truth values, namely true or false. Thus, if a compound proposition is built from <m>n</m> component propositions, then the truth table will require <m>2^n</m> rows.</p>
 
-<problem>
+<problem xml:id="prob_truth_tables">
 <statement>
-      <p>
-        Create a truth table for each of the following compound propositions.
-        You should add additional columns to your tables as needed to assist you with intermediate steps.
-        For example,
-        you might need four columns for the third and fourth compound propositions below.
-        <ol marker="labeltextrmalph">
-          <li>
-            <p>
-              <m>\neg A</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>A \vee B</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\neg (A \wedge B)</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\neg A \wedge \neg B</m>
-            </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-  </problem>
-  <problem xml:id="prob_coach_lie">
+<p>Create a truth table for each of the following compound propositions. You should add additional columns to your tables as needed to assist you with intermediate steps. For example, you might need four columns for the third and fourth compound propositions below.</p>
+<ol marker="a">
+<li><p><m>\neg A</m></p></li>
+<li><p><m>A \vee B</m></p></li>
+<li><p><m>\neg (A \wedge B)</m></p></li>
+<li><p><m>\neg A \wedge \neg B</m></p></li>
+</ol>
+</statement>
+</problem>
+
+<problem xml:id="prob_coach_lie">
     <statement>
       <p>
         A coach promises her players,
