@@ -130,9 +130,8 @@ and <term>multiplicative inverses</term>, respectively.</p>
 </statement>
 </theorem>
 
-<p>In light of the last two theorems,
-we now know that sticking a minus sign in front of <m>a\in\mathbb{R}</m> or raising
-<m>a\in\mathbb{R}\setminus\{0\}</m> to <m>-1</m> each correspond to an operation that yields a unique element with the corresponding inverse property.</p>
+<p>In light of the last two theorems, we now know that sticking a minus sign in front of <m>a\in\mathbb{R}</m> or raising
+<m>a\in\mathbb{R}\setminus\{0\}</m> to <m>-1</m> each correspond to an operation that yields a unique element with the corresponding inverse property. Note that since <m>0+0=0$</m>and additive inverses are unique, it must be the case that <m>-0=0</m>.</p>
 
 <p>Since we are taking a formal axiomatic approach to the real numbers,
 we should make it clear how the natural numbers are embedded in <m>\mathbb{R}</m>.</p>
@@ -342,8 +341,7 @@ then <m>a^{-1}>0</m>, and if <m>a\lt 0</m>, then <m>a^{-1}\lt 0</m>.</p>
 
 <theorem xml:id="thm_switch_inequality_using_negative">
 <statement>
-<p>For all <m>a,b\in \mathbb{R}</m>,
-if <m>a\lt b</m>, then <m>-b\lt -a</m>.</p>
+<p>For all <m>a,b\in \mathbb{R}</m>, if <m>a\lt b</m>, then <m>-b\lt -a</m>. Moreover, if <m>a,b\in \mathbb{R}\setminus\{0\}</m> with <m>a\lt b</m>, then <m>b^{-1}\lt a^{-1}</m>.</p>
 </statement>
 </theorem>
 
