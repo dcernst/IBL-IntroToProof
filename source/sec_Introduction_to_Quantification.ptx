@@ -2,16 +2,16 @@
 <title>Introduction to Quantification</title>
 <p>
 In this section and the next,
-we introduce <em>first-order logic</em><mdash/>also referred to as
-<em>predicate logic</em>,
-<em>quantificational logic</em>,
-and <em>first-order predicate calculus</em>.
+we introduce <term>first-order logic</term><mdash/>also referred to as
+<term>predicate logic</term>,
+<term>quantificational logic</term>,
+and <term>first-order predicate calculus</term>.
 The sentence
 <q><m>x>0</m></q>
 is not itself a proposition because its truth value depends on <m>x</m>.
-In this case, we say that <m>x</m> is a <em>free variable</em>.
-A sentence with at least one free variable is called a <em>predicate</em>
-(or <em>open sentence</em>).
+In this case, we say that <m>x</m> is a <term>free variable</term>.
+A sentence with at least one free variable is called a <term>predicate</term>
+(or <term>open sentence</term>).
 To turn a predicate into a proposition,
 we must either substitute values for each free variable or
 <q>quantify</q>
@@ -97,9 +97,9 @@ What would it take to justify your answers?
 <statement>
   <p>
 <q>For all</q>
-is the universal quantifier and
+is the <term>universal quantifier</term> and
 <q>there exists<ellipsis/> such that</q>
-is the existential quantifier.
+is the <term>existential quantifier</term>.
   </p>
 </statement>
   </definition>
@@ -121,7 +121,7 @@ It is important to note that the existential quantifier is making a claim about
 <q>exactly one.</q>
   </p>
   <p>
-Variables that are quantified with a universal or existential quantifier are said to be <em>bound</em>.
+Variables that are quantified with a universal or existential quantifier are said to be <term>bound</term>.
 To be a proposition, <em>all</em>
 variables of a predicate must be bound.
   </p>
@@ -139,7 +139,7 @@ but otherwise, we must write clearly:
 or
 <q>For all <m>x\in\mathbb{N}</m>, <m>x>0</m>.</q>
 The collection of intended values for a variable is called the
-<em>universe of discourse</em>.
+<term>universe of discourse</term>.
   </p>
   <problem>
 <statement>

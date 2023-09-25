@@ -9,7 +9,7 @@
   <definition>
     <statement>
       <p>
-        Two quantified propositions are logically equivalent if they have the same truth value in every universe of discourse.
+        Two quantified propositions are <term>logically equivalent</term> if they have the same truth value in every universe of discourse.
       </p>
     </statement>
   </definition>
@@ -44,7 +44,7 @@
     <q>All cars are red</q>
     and
     <q>All natural numbers are positive</q>. Both of these are instances of the
-    <em>logical form</em> <m>(\forall x)P(x)</m>.
+    <term>logical form</term> <m>(\forall x)P(x)</m>.
     It turns out that the first proposition is false and the second is true;
     however, it does not make sense to attach a truth value to the logical form.
     A logical form is a blueprint for particular propositions.
