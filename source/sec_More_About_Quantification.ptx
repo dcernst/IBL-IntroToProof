@@ -253,7 +253,7 @@
           <li class="custom-list-style-type" label="">
             <p>
               <q>For all goofy wobblers <m>x</m>,
-              there exists a dinglehopper <m>y</m> such that if <m>x</m> is a not a nugget,
+              there exists a dinglehopper <m>y</m> such that if <m>x</m> is not a nugget,
               then <m>y</m> is a doofus.</q>
             </p>
           </li>
