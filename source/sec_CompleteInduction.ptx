@@ -52,7 +52,7 @@
   <p>
     In the inductive step, you need to reach <m>P(k+1)</m>,
     and you should ask yourself which of the previous cases you need to get there.
-    If all you need, is the statement <m>P(k)</m>,
+    If all you need is the statement <m>P(k)</m>,
     then ordinary induction is the way to go.
     If two preceding cases, <m>P(k - 1)</m> and <m>P(k)</m>,
     are necessary to reach <m>P(k + 1)</m>,
