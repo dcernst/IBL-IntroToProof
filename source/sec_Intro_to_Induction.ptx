@@ -43,7 +43,7 @@ In fact, the second claim is not even true.
 If <m>n=41</m>, then <m>n^{2}+n+41=41^{2}+41+41=41(41+1+1)</m>,
 which is not prime since it has 41 as a factor.
 It turns out that the first claim is true,
-but what we wrote cannot be a proof since the same type of reasoning when applied to the second claim seems to prove something that isn not actually true.
+but what we wrote cannot be a proof since the same type of reasoning when applied to the second claim seems to prove something that is not actually true.
 We need a rigorous way of capturing
 <q>and so on</q>
 and a way to verify whether it really is
