@@ -141,7 +141,7 @@
       <p>
         Consider a grid of squares that is <m>2</m> squares wide and <m>n</m> squares long.
         Using <m>n</m> dominoes that are <m>1</m> square by <m>2</m> squares,
-        there are many ways to perfectly cover this chessboard with no overlap.
+        there are many ways to perfectly cover this grid with no overlap.
         How many?
         Prove your answer.
       </p>
