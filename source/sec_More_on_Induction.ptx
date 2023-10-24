@@ -144,15 +144,16 @@ For all integers <m>n \ge 1</m>,
   </p>
 </statement>
   </theorem>
-  <theorem xml:id="abcdefg">
+
+<theorem xml:id="thm_div_by_8">
 <statement>
-  <p>
-\label{thm:3^{2n}-1 div by 8} For all integers <m>n \ge 0</m>,
-<m>3^{2n}-1</m> is divisible by <m>8</m>.
-  </p>
+<p>
+For all integers <m>n \ge 0</m>, <m>3^{2n}-1</m> is divisible by <m>8</m>.
+</p>
 </statement>
-  </theorem>
-  <theorem>
+</theorem>
+
+<theorem>
 <statement>
   <p>
 For all integers <m>n \ge 2</m>, <m>2^n \lt (n+1)!</m>.

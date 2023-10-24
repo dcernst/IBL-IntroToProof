@@ -470,7 +470,7 @@
     </statement>
   </theorem>
   <p>
-    Let's revisit <xref ref="thm_3__2n">Theorem</xref>-1 div by 8}, which we originally proved by induction.
+    Let's revisit <xref ref="thm_div_by_8">Theorem</xref>, which we originally proved by induction.
   </p>
   <problem>
     <statement>
