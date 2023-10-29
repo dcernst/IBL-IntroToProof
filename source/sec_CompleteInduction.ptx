@@ -163,7 +163,7 @@
           </li>
           <li>
             <p>
-              Swap the the digit immediately to the right of the leftmost occurrence of 1.
+              Swap the digit immediately to the right of the leftmost occurrence of 1.
               For example, we can do <m>011011\to 010011</m>.
             </p>
           </li>

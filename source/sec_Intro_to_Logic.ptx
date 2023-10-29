@@ -1,7 +1,7 @@
 <section xml:id="sec_Intro_to_Logic">
 <title>Introduction to Logic</title>
 
-<p>In the previous section, we jumped in head first and attempted to prove several theorems in the context of number theory without a formal understanding of what it was we were doing. Likely, many issues bubbled to the surface. What is a proof? What sorts of statements require proof? What should a proof entail? How should a proof be structured? Let's take a step back and do a more careful examination of what it is we are actually doing. In the the next two sections, we will introduce the basics of <term>propositional logic</term><mdash/>also referred to as <term>propositional calculus</term> or sometimes <term>zeroth-order logic</term>.</p>
+<p>In the previous section, we jumped in head first and attempted to prove several theorems in the context of number theory without a formal understanding of what it was we were doing. Likely, many issues bubbled to the surface. What is a proof? What sorts of statements require proof? What should a proof entail? How should a proof be structured? Let's take a step back and do a more careful examination of what it is we are actually doing. In the next two sections, we will introduce the basics of <term>propositional logic</term><mdash/>also referred to as <term>propositional calculus</term> or sometimes <term>zeroth-order logic</term>.</p>
 
 <definition>
 <statement>
