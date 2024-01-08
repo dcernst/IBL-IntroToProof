@@ -1,0 +1,176 @@
+\begin{section}{Techniques for Proving Conditional Propositions}\label{sec:Techniques_for_Proving_Conditional_Propositions}
+
+Each of the theorems that we proved in Section~\ref{sec:baby_number_theory} are examples of conditional propositions. However, some of the statements were disguised as such. For example, Theorem~\ref{thm:two consecutive ints} states, ``The sum of two consecutive integers is odd." We can reword this theorem as, ``If $n\in\mathbb{Z}$, then $n+(n+1)$ is odd."
+
+\begin{problem}\label{prob:reword as conditional}
+Reword Theorem~\ref{thm:sum of three consecutive integers} so that it explicitly reads as a conditional proposition.
+\end{problem}
+
+Each of the proofs that you produced in Section~\ref{sec:baby_number_theory} had the same format, which we refer to as a \textbf{direct proof}. 
+
+\begin{skeleton}[Proof of $A\implies B$ by direct proof]\label{skeleton:direct proof}
+
+If you want to prove the implication $A\implies B$ via a direct proof, then the structure of the proof is as follows.
+
+\begin{mdframed}[style=skeleton]
+%\begin{minipage}{6in}
+%\vspace{.1in}
+\begin{proof}
+\emph{[State any upfront assumptions.]} Assume $A$.
+\begin{center}
+$\ldots$ \ \emph{[Use definitions and known results to derive $B$]} \ $\ldots$\\
+\end{center}
+\noindent Therefore, $B$.
+\end{proof}
+%\end{minipage}
+\end{mdframed}
+%\end{center}
+\end{skeleton}
+
+Take a few minutes to review the proofs that you wrote in Section~\ref{sec:baby_number_theory} and see if you can witness the structure of Skeleton Proof~\ref{skeleton:direct proof} in your proofs. 
+
+The upshot of Theorem~\ref{thm:contrapos} is that if you want to prove a conditional proposition, you can prove its contrapositive instead. This approach is called a \textbf{proof by contraposition}.
+
+\begin{skeleton}[Proof of $A\implies B$ by contraposition]\label{pf by contraposition}
+If you want to prove the implication $A\implies B$ by proving its contrapositive $\neg B\implies \neg A$ instead, then the structure of the proof is as follows.
+
+\begin{mdframed}[style=skeleton]
+\begin{proof}
+\emph{[State any upfront assumptions.]} We will utilize a proof by contraposition.  Assume $\neg B$.
+\begin{center}
+$\ldots$ \ \emph{[Use definitions and known results to derive $\neg A$]} \ $\ldots$\\
+\end{center}
+\noindent Therefore, $\neg A$. We have proved the contrapositive, and hence if $A$, then $B$.
+\end{proof}
+\end{mdframed}
+\end{skeleton}
+
+We have introduced the logical symbols $\neg$, $\wedge$, $\vee$, $\implies$, and $\logeq$  since it provides a convenient way of discussing the formality of logic.  However, when writing mathematical proofs, you should avoid using these symbols.
+
+\begin{problem}
+Consider the following statement: If $x\in\mathbb{Z}$ such that $x^2$ is odd, then $x$ is odd.
+The items below can be assembled to form a proof of this statement, but they are currently out of order.  Put them in the proper order.
+\begin{enumerate}
+\item Assume that $x$ is an even integer.
+\item We will utilize a proof by contraposition.
+\item Thus, $x^2$ is twice an integer.
+\item Since $x=2k$, we have that $x^2 =(2k)^2 =4k^2$.
+\item Since $k$ is an integer, $2k^2$ is also an integer.
+\item By the definition of even, there is an integer $k$ such that $x=2k$.
+\item We have proved the contrapositive, and hence the desired statement is true.
+\item Assume $x\in \mathbb{Z}$.
+\item By the definition of even integer, $x^2$ is an even integer.
+%\item The contrapositive is ``If $x$ is an even integer, then $x^2$ is an even integer."
+\item Notice that $x^2 = 2(2k^2)$.
+\end{enumerate}
+\end{problem}
+
+Prove the next two theorems by proving the contrapositive of the given statement. 
+
+\begin{theorem}\label{thm:n^2 even implies n even}
+If $n\in\mathbb{Z}$ such that $n^2$ is even, then $n$ is even.
+\end{theorem}
+
+\begin{theorem}\label{thm:nm even implies n or m even}
+If $n,m\in\mathbb{Z}$ such that $nm$ is even, then $n$ is even or $m$ is even.
+\end{theorem}
+
+%So far we have discussed how to negate propositions of the form $A$, $A\wedge B$, and $A\vee B$ for propositions $A$ and $B$.  However, we have yet to discuss how to negate propositions of the form $A\implies B$.  Prove the following result with a truth table.
+%
+%\begin{theorem}\label{thm:ImplicationAsDisjuction}
+%If $A$ and $B$ are propositions, then the implication $A\implies B$ is logically equivalent to the disjunction $\neg A \vee B$.
+%\end{theorem}
+%
+%The next result follows quickly from Theorem~\ref{thm:ImplicationAsDisjuction} together with De Morgan's Law. You can also verify this result using a truth table.
+%
+%\begin{corollary}\label{cor:NegateImplication}
+%If $A$ and $B$ are propositions, then $\neg(A \implies B)$ is logically equivalent to $A \wedge \neg B$.
+%\end{corollary}
+%
+%\begin{problem}\label{prob:Darth Vader}
+%Let $A$ and $B$ be the propositions ``$\sqrt{2}$ is an irrational number'' and ``Every rectangle is a trapezoid,'' respectively.
+%\begin{enumerate}[label=\textrm{(\alph*)}]
+%\item Express $A\implies B$ as an English sentence involving the disjunction ``or.''
+%\item Express $\neg(A\implies B)$ as an English sentence involving the conjunction ``and.''
+%\end{enumerate}
+%\end{problem}
+%
+%\begin{problem}
+%It turns out that the proposition ``If $.\overline{99}=\frac{9}{10}+\frac{9}{100}+\frac{9}{1000}+\cdots$, then $.\overline{99}\neq 1$'' is false. Write its  negation as a conjunction.
+%\end{problem}
+%
+%Recall that a proposition is exclusively either true or false---it can never be both.
+%
+%\begin{definition}
+%A compound proposition that is always false is called a \textbf{contradiction}.  A compound proposition that is always true is called a \textbf{tautology}.
+%\end{definition}
+%
+%\begin{theorem}
+%If $A$ is a proposition, then the proposition $\neg A\wedge A$ is a contradiction.
+%\end{theorem}
+%
+%\begin{problem}
+%Provide an example of a tautology using arbitrary propositions and any of the logical connectives $\neg$, $\wedge$, and $\vee$.  Prove that your example is in fact a tautology.
+%\end{problem}
+
+Suppose that we want to prove some proposition $P$ (which might be something like $A\implies B$ or even more complicated).  One approach, called \textbf{proof by contradiction}, is to assume $\neg P$ and then logically deduce a contradiction of the form $Q\wedge \neg Q$, where $Q$ is some proposition.  Since this is absurd, the assumption $\neg P$ must have been false, so $P$ is true.  The tricky part about a proof by contradiction is that it is not usually obvious what the statement $Q$ should be.
+
+\begin{skeleton}[Proof of $P$ by contradiction]
+Here is what the general structure for a proof by contradiction looks like if we are trying to prove the proposition $P$.
+
+\begin{mdframed}[style=skeleton]
+\begin{proof}
+\emph{[State any upfront assumptions.]} For sake of a contradiction, assume $\neg P$.
+\begin{center}
+$\ldots$ \ \emph{[Use definitions and known results to derive\\ some $Q$ and its negation $\neg Q$.]} \ $\ldots$\\
+\end{center}
+\noindent This is a contradiction. Therefore, $P$.
+\end{proof}
+\end{mdframed}
+\end{skeleton}
+
+Proof by contradiction can be useful for proving statements of the form $A\implies B$, where $\neg B$ is easier to ``get your hands on,'' because $\neg(A \implies B)$ is logically equivalent to $A \wedge \neg B$ (see Corollary~\ref{cor:NegateImplication}).
+
+\begin{skeleton}[Proof of $A\implies B$ by contradiction]\label{pf by contradiction for implication}
+If you want to prove the implication $A\implies B$ via a proof by contradiction, then the structure of the proof is as follows.
+
+\begin{mdframed}[style=skeleton]
+\begin{proof}
+\emph{[State any upfront assumptions.]} For sake of a contradiction, assume $A$ and $\neg B$.
+\begin{center}
+$\ldots$ \ \emph{[Use definitions and known results to derive\\ some $Q$ and its negation $\neg Q$.]} \ $\ldots$\\
+\end{center}
+\noindent This is a contradiction.  Therefore, if $A$, then $B$.
+\end{proof}
+\end{mdframed}
+\end{skeleton}
+
+\begin{problem}
+Assume that $x\in\mathbb{Z}$.  Consider the following proposition: If $x$ is odd, then 2 does not divide $x$.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Prove the contrapositive of this statement.
+\item Prove the statement using a proof by contradiction.
+\end{enumerate}
+\end{problem}
+
+Prove the following theorem via a proof by contradiction. Afterward, consider the difficulties one might encounter when trying to prove the result more directly. The given statement is not true if we replace $\mathbb{N}$ with $\mathbb{Z}$. Do you see why?
+
+\begin{theorem}\label{thm:natural divisor less than or equal to natural dividend}
+Assume that $x,y\in\mathbb{N}$. If $x$ divides $y$, then $x\leq y$.
+\end{theorem}
+
+Oftentimes a conditional proposition can be proved via a direct proof and by using a proof by contradiction.  Most mathematicians view a direct proof to be more elegant than a proof by contradiction. When approaching the proof of a conditional proposition, you should strive for a direct proof.  In general, if you are attempting to prove $A\implies B$ using a proof by contradiction and you end up with $\neg B$ and $B$ (which yields a contradiction), then this is evidence that a proof by contradiction was unnecessary.  On the other hand, if you end up with $\neg Q$ and $Q$, where $Q$ is not the same as $B$, then a proof by contradiction is a reasonable approach.
+
+In light of Theorem~\ref{thm:logical form for iff}, if we want to prove a biconditional of the form $A\logeq B$, we need to prove both $A\implies B$ and $B\implies A$.  You should always make it clear to the reader when you are proving each implication. One approach is to label each subproof with ``$(\implies)$" and ``$(\Longleftarrow)$" (including the parentheses), respectively.  Occasionally, you will discover that the proof of one implication is exactly the reverse of the proof of the other implication.  If this happens to be the case, you may skip writing two subproofs and simply write a single proof that chains together each step using biconditionals.  Such proofs will almost always be shorter, but can be challenging to write in an eloquent way.  It is always a safe bet to write a separate subproof for each implication.
+
+When proving each implication of a biconditional, you may choose to utilize a direct proof, a proof by contraposition, or a proof by contradiction.  For example, you could prove the first implication using a proof by contradiction and a direct proof for the second implication.
+
+The following theorem provides an opportunity to gain some experience with writing proofs of biconditional statements.
+
+\begin{theorem}
+Let $n\in\mathbb{Z}$. Then $n$ is even if and only if 4 divides $n^2$.
+\end{theorem} 
+
+\epigraph{Making learning easy does not necessarily ease learning.}{Manu Kapur, learning scientist}
+
+\end{section}

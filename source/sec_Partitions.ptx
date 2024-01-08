@@ -183,7 +183,7 @@
           \sim\ =\{(1,1),(1,2),(2,1), (2,2),(3,3),(4,4),(4,5),(5,4),(5,5),(6,6),(5,6),(6,5),(4,6),(6,4)\}
         </me>
         on the set <m>A=\{1,2,3,4,5,6\}</m>.
-        Find the partition determined by <m>\Rel(\sim)</m>.
+        Find $<m>A/\mathord\sim</m> and verify that it is a partition.
       </p>
     </statement>
   </problem>
@@ -229,7 +229,7 @@
       <p>
         Consider <xref ref="prob_find_sim_from_Rel">Problem</xref>.
         Find the relation on <m>A</m> associated to
-        <m>\Rel(\sim)</m> and compare with what you obtained for <m>R</m> in <xref ref="prob_find_sim_from_Rel">Problem</xref>.
+        <m>\Rel(R)</m> and compare with what you obtained for <m>R</m> in <xref ref="prob_find_sim_from_Rel">Problem</xref>.
       </p>
     </statement>
   </problem>

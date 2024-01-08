@@ -98,7 +98,7 @@
   </example>
 
 <figure xml:id="fig_function_diagram">
-<caption>Function diagram for a function from <m>X=\{a,b,c,d,\}</m> to <m>Y=\{1,2,3,4\}</m>.</caption>
+<caption>Function diagram for a function from <m>X=\{a,b,c,d\}</m> to <m>Y=\{1,2,3,4\}</m>.</caption>
 <image width="50%" xml:id="function_diagram">
 <latex-image>
 \begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2cm,semithick,scale=1.2]

@@ -1,0 +1,55 @@
+\begin{section}{The Well-Ordering Principle}\label{sec:WOP}
+
+The penultimate theorem of this chapter is known as the \textbf{Well-Ordering Principle}. As you shall see, this seemingly obvious theorem requires a bit of work to prove. It is worth noting that in some axiomatic systems, the Well-Ordering Principle is sometimes taken as an axiom.  However, in our case, the result follows from complete induction. Before stating the Well-Ordering Principle, we need an additional definition.
+
+\begin{definition}
+Let $A\subseteq \mathbb{R}$ and $m\in A$. Then $m$ is called a \textbf{maximum} (or \textbf{greatest element}) of $A$ if for all $a\in A$, we have $a\leq m$. Similarly, $m$ is called \textbf{minimum} (or \textbf{least element}) of $A$ if for all $a\in A$, we have $m\leq a$.
+\end{definition}
+
+Not surprisingly, maximums and minimums are unique when they exist. It might be helpful to review Skeleton Proof~\ref{skeleton:uniqueness} prior to attacking the next result.
+
+\begin{theorem}
+If $A\subseteq \mathbb{R}$ such that the maximum (respectively, minimum) of $A$ exists, then the maximum (respectively, minimum) of $A$ is unique.
+\end{theorem}
+
+If the maximum of a set $A$ exists, then it is denoted by $\tcboxmath{\max(A)}$. Similarly, if the minimum of a set $A$ exists, then it is denoted by $\tcboxmath{\min(A)}$.
+
+\begin{problem}\label{prob:find max and min}
+Find the maximum and the minimum for each of the following sets when they exist.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\{5,11,17,42,103\}$ 
+\item $\mathbb{N}$
+\item $\mathbb{Z}$
+\item $(0,1]$
+\item $(0,1]\cap \mathbb{Q}$
+\item $(0,\infty)$
+\item $\{42\}$
+\item $\{\frac{1}{n}\mid n\in\mathbb{N}\}$
+\item $\{\frac{1}{n}\mid n\in\mathbb{N}\}\cup\{0\}$
+\item $\emptyset$
+\end{enumerate}
+\end{problem}
+
+To prove the Well-Ordering Principle, consider a proof by contradiction. Suppose $S$ is a nonempty subset of $\mathbb{N}$ that does not have a least element.  Define the proposition $P(n)\coloneqq $``$n$ is not an element of $S$" and then use complete induction to prove the result.
+
+\begin{theorem}[Well-Ordering Principle]\label{thm:WOP}
+Every nonempty subset of the natural numbers has a least element.
+\end{theorem}
+
+It turns out that the Well-Ordering Principle (Theorem~\ref{thm:WOP}) and the Axiom of Induction (Axiom~\ref{axiom:induction}) are equivalent.  In other words, one can prove the Well-Ordering Principle from the Axiom of Induction, as we have done, but one can also prove the Axiom of Induction if the Well-Ordering Principle is assumed.
+
+The final two theorems of this section can be thought of as generalized versions of the Well-Ordering Principle.
+
+\begin{theorem}\label{thm:generalized WOP}
+If $A$ is a nonempty subset of the integers and there exists $l\in \mathbb{Z}$ such that $l\leq a$ for all $a\in A$, then $A$ contains a least element.
+\end{theorem}
+
+\begin{theorem}\label{thm:reverse WOP}
+If $A$ is a nonempty subset of the integers and there exists $u\in \mathbb{Z}$ such that $a\leq u$ for all $a\in A$, then $A$ contains a greatest element.
+\end{theorem}
+
+The element $l$ in Theorem~\ref{thm:generalized WOP} is referred to as a \textbf{lower bound} for $A$ while the element $u$ in Theorem~\ref{thm:reverse WOP} is called an \textbf{upper bound} for $A$. We will study lower and upper bounds in more detail in Section~\ref{sec:AxiomsRealNumbers}.
+
+\epigraph{Life is like riding a bicycle. To keep your balance you must keep moving.}{Albert Einstein, theoretical physicist}
+
+\end{section}

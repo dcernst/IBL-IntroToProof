@@ -1,0 +1,229 @@
+\begin{section}{Introduction to Logic}\label{sec:Intro_to_Logic}
+
+In the previous section, we jumped in head first and attempted to prove several theorems in the context of number theory without a formal understanding of what it was we were doing. Likely, many issues bubbled to the surface. What is a proof? What sorts of statements require proof? What should a proof entail?  How should a proof be structured? Let's take a step back and do a more careful examination of what it is we are actually doing. In the next two sections, we will introduce the basics of \textbf{propositional logic}---also referred to as \textbf{propositional calculus} or sometimes \textbf{zeroth-order logic}.
+
+\begin{definition}
+A \textbf{proposition} is a sentence that is either true or false but never both. The \textbf{truth value} (or \textbf{logical value}) of a proposition refers to its attribute of being true or false.
+\end{definition}
+
+For example, the sentence ``All dogs have four legs''~is a false proposition.  However, the perfectly good sentence ``$x=1$'' is \emph{not} a proposition all by itself since we do not actually know what $x$ is.
+
+\begin{problem} Determine whether each of the following is a proposition. Explain your reasoning.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item All cars are red.
+\item Every person whose name begins with J has the name Joe.
+\item $x^2=4$.
+\item There exists a real number $x$ such that $x^2=4$.
+\item For all real numbers $x$, $x^2=4$.
+\item $\sqrt{2}$ is an irrational number.
+\item $p$ is prime.
+\item Is it raining?
+\item It will rain tomorrow.
+\item Led Zeppelin is the best band of all time.
+\end{enumerate}
+\end{problem}
+
+The last two sentences in the previous problem may stir debate. It is not so important that we come to consensus as to whether either of these two sentences is actually a proposition or not. The good news is that in mathematics we do not encounter statements whose truth value is dependent on either the future or opinion.
+
+Given two propositions, we can form more complicated propositions using \textbf{logical connectives}.
+
+\begin{definition}\label{def:logical connectives}
+Let $A$ and $B$ be propositions.  
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item The proposition ``\textbf{not $A$}" is true if $A$ is false; expressed symbolically as 
+$\tcboxmath{\neg A}$ and called the \textbf{negation} of $A$.
+\item The proposition ``\textbf{$A$ and $B$}'' is true if both $A$ and $B$ are true; expressed symbolically as $\tcboxmath{A \wedge B}$ and called the \textbf{conjunction} of $A$ and $B$.
+\item The proposition ``\textbf{$A$ or $B$}'' is true if at least one of $A$ or $B$ is true; expressed symbolically as $\tcboxmath{A \vee B}$ and called the \textbf{disjunction} of $A$ and $B$.
+\item\label{def:conditional} The proposition ``\textbf{If $A$, then $B$}'' is true if both $A$ and $B$ are true, or $A$ is false; expressed symbolically as $\tcboxmath{A \implies B}$ and called a \textbf{conditional proposition} (or \textbf{implication}). In this case, $A$ is called the \textbf{hypothesis} and $B$ is called the \textbf{conclusion}. Note that $A \implies B$ may also be read as ``$A$ implies $B$", ``$A$ only if $B$", ``$B$ if $A$", or ``$B$ whenever $A$". 
+\item\label{def:logically equivalent} The proposition ``\textbf{$A$ if and only if $B$}" (alternatively, ``\textbf{$A$ is necessary and sufficient for $B$}") is true if both $A$ and $B$ have the same truth value; expressed symbolically as $\tcboxmath{A\logeq B}$ and called a \textbf{biconditional proposition}. If $A\logeq B$ is true, we say that $A$ and $B$ are \textbf{logically equivalent}.
+\end{enumerate}
+Each of the boxed propositions is called a \textbf{compound proposition}, where $A$ and $B$ are referred to as the \textbf{components} of the compound proposition.
+\end{definition}
+
+It is worth pointing out that definitions in mathematics are typically written in the form ``$B$ if $A$" (or ``$B$ provided that $A$" or ``$B$ whenever $A$"), where $B$ contains the term or phrase we are defining and $A$ provides the meaning of the concept we are defining. In the case of definitions, we should always interpret ``$B$ if $A$" as describing precisely the collection of ``objects" (e.g., numbers, sets, functions, etc.) that should be identified with the term or phrase we are defining.  That is, if an object does not meet the condition specified in $A$, then it is never referred to by the term or phrase we are defining. Some authors will write definitions in the form ``$B$ if and only if $A$". However, a definition is not at all the same kind of statement as a usual biconditional since one of the two sides is undefined until the definition is made. A definition is really a statement that the newly defined term or phrase is synonymous with a previously defined concept.
+
+We can form complicated compound propositions with several components by utilizing logical connectives.
+
+%\begin{problem}
+%Describe the meaning of $\neg (A \wedge B)$ and $\neg (A \vee B)$.
+%\end{problem}
+
+\begin{problem}\label{prob:translations}
+Let $A$ represent ``6 is an even integer'' and $B$ represent ``4 divides 6.''  Express each of the following compound propositions in an ordinary English sentence and then determine its truth value.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+  \item $A \wedge B$
+  \item $A \vee B$
+  \item $\neg A$
+  \item $\neg B$
+  \item $\neg (A \wedge B)$
+  \item $\neg (A \vee B)$
+  \item $A \implies B$
+\end{enumerate}
+\end{problem}
+
+\begin{definition}
+A \textbf{truth table} for a compound proposition is a table that illustrates all possible combinations of truth values for the components of the compound proposition together with the resulting truth value for each combination. 
+\end{definition}
+
+\begin{example}
+If $A$ and $B$ are propositions, then the truth table for the compound proposition $A\wedge B$ is given by the following.
+\begin{center}
+\begin{tabular}{@{}ccc@{}}
+\toprule
+$A$  &  $B$ & $A \wedge B$  \\
+\midrule
+T & T & T  \\ 
+T & F & F  \\ 
+F & T & F  \\ 
+F & F & F  \\
+\bottomrule
+\end{tabular}
+\end{center}
+Notice that we have columns for each of $A$ and $B$.  The rows for these two columns correspond to all possible combinations of truth values for $A$ and $B$.  The third column yields the truth value of $A\wedge B$ given the possible truth values for $A$ and $B$.
+\end{example}
+
+Each component of a compound proposition has two possible truth values, namely true or false. Thus, if a compound proposition is built from $n$ component propositions, then the truth table will require $2^n$ rows.
+
+\begin{problem}
+Create a truth table for each of the following compound propositions. You should add additional columns to your tables as needed to assist you with intermediate steps. For example, you might need four columns for the third and fourth compound propositions below.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\neg A$
+\item $A \vee B$
+\item $\neg (A \wedge B)$
+\item $\neg A \wedge \neg B$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}\label{prob:coach lie}
+A coach promises her players, ``If we win tonight, then I will buy you pizza tomorrow.''  Determine the cases in which the players can rightly claim to have been lied to. If the team lost the game and the coach decided to buy them pizza anyway, was she lying?
+\end{problem}
+
+\begin{problem}
+Use Definition~\ref{def:logical connectives}\ref{def:conditional} to construct a truth table for $A \implies B$. Compare your truth table with Problem~\ref{prob:coach lie}. The combination you should pay particular attention to is when the hypothesis is false while the conclusion is true.
+\end{problem}
+
+In accordance with Definition~\ref{def:logical connectives}\ref{def:conditional}, a conditional proposition $A\implies B$ is only false when the hypothesis is true and the conclusion is false.  Perhaps you are bothered by the fact that $A\implies B$ is true when $A$ is false no matter what the truth value of $B$ is.  The thing to keep in mind is that the truth value of $A\implies B$ relies on a very specific definition and may not always agree with the colloquial use of ``If\ldots, then\ldots" statements that we encounter in everyday language. For example, if someone says, ``If you break the rules, then you will be punished", the speaker likely intends the statement to be interpreted as ``You will be punished if and only if you break the rules." In logic and mathematics, we aim to remove such ambiguity by explicitly saying exactly what we mean. For our purposes, we should view a conditional proposition as a contract or obligation.  If the hypothesis is false and the conclusion is true, the contract is not violated. On the other hand, if the hypothesis is true and the conclusion is false, then the contract is broken.
+
+We can often prove facts concerning logical statements using truth tables.  Recall that two propositions $P$ and $Q$ (both of which might be complicated compound propositions) are logically equivalent if $P\logeq Q$ is true (see Definition~\ref{def:logical connectives}\ref{def:logically equivalent}). This happens when $P$ and $Q$ have the same truth value. We can verify whether $P$ and $Q$ have the same truth value by constructing a truth table that includes columns for each of the components of $P$ and $Q$, listing all possible combinations of their truth values, together with columns for $P$ and $Q$ that lists their resulting truth values.  If the truth values in the columns for $P$ and $Q$ agree, then $P$ and $Q$ are logically equivalent, and otherwise they are not logically equivalent.  When constructing truth tables to verify whether $P$ and $Q$ are logically equivalent, you should add any necessary intermediate columns to aid in your ``calculations". Use truth tables when attempting to justify the next few problems.
+
+\begin{theorem}
+If $A$ is a proposition, then $\neg(\neg A)$ is logically equivalent to $A$.
+\end{theorem}
+
+The next theorem, referred to as \textbf{De Morgan's Law}, provides a method for negating a compound proposition involving a conjunction.
+
+\begin{theorem}[De Morgan's Law]\label{thm:De Morgan}
+If $A$ and $B$ are propositions, then $\neg(A \wedge B)$ is logically equivalent to $\neg A \vee \neg B$.
+\end{theorem}
+
+\begin{problem}[De Morgan's Law]\label{prob:De Morgan}
+Let $A$ and $B$ be propositions.  Conjecture a statement similar to Theorem~\ref{thm:De Morgan} for the proposition $\neg(A\vee B)$ and then prove it. This is also called De Morgan's Law.
+\end{problem}
+
+We will make use of both versions De Morgan's Law on on a regular basis. Sometimes conjunctions and disjunctions are ``buried" in a mathematical statement, which makes negating statements tricky business. Keep this in mind when approaching the next problem.
+
+\begin{problem}\label{prob:negation}
+Let $x$ be your favorite real number.  Negate each of the following statements.  Note that the statement in Part~(b) involves a conjunction.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $x<-1$ or $x\geq 3$.
+\item $0\leq x< 1$.
+\end{enumerate}
+\end{problem}
+
+\begin{theorem}\label{thm:logical form for iff}
+If $A$ and $B$ are propositions, then $A\logeq B$ is logically equivalent to $(A\implies B)\wedge (B\implies A)$.
+\end{theorem}
+
+\begin{theorem}\label{thm:logical form for cases}
+If $A$, $B$, and $C$ are propositions, then $(A\vee B)\implies C$ is logically equivalent to $(A\implies C)\wedge (B\implies C)$.
+\end{theorem}
+
+We already introduced the following notion in the discussion following Theorem~\ref{thm:divides sum}
+
+\begin{definition}\label{def:converse}
+If $A$ and $B$ are propositions, then the \textbf{converse} of $A \implies B$ is $B \implies A$.
+\end{definition}
+
+\begin{problem}\label{prob:converse}
+Provide an example of a true conditional proposition whose converse is false.
+\end{problem}
+
+\begin{definition}\label{def:inverse}
+If $A$ and $B$ are propositions, then the \textbf{inverse} of $A \implies B$ is $\neg A \implies \neg B$.
+\end{definition}
+
+\begin{problem}\label{prob:inverse}
+Provide an example of a true conditional proposition whose inverse is false.
+\end{problem}
+
+Based on Problems~\ref{prob:converse} and \ref{prob:inverse}, we can conclude that the converse and inverse of a conditional proposition do not necessarily have the same truth value as the original statement.  Moreover, the converse and inverse of a conditional proposition do not necessarily have the same truth value as each other.
+
+\begin{problem}\label{prob:converse and inverse}
+If possible, provide an example of a conditional proposition whose converse is true but whose inverse is false. If this is not possible, explain why.
+\end{problem}
+
+What if we swap the roles of the hypothesis and conclusion of a conditional proposition \emph{and} negate each?
+
+\begin{definition}
+If $A$ and $B$ are propositions, then the \textbf{contrapositive} of $A \implies B$ is $\neg B \implies \neg A$.
+\end{definition}
+
+\begin{problem}
+Let $A$ and $B$ represent the statements from Problem~\ref{prob:translations}.  Express each of the following in an ordinary English sentence.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item The converse of $A \implies B$.
+\item The contrapositive of $A \implies B$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Find the converse and the contrapositive of the following statement: ``If Dana lives in Flagstaff, then Dana lives in Arizona."
+\end{problem}
+
+Use a truth table to prove the following theorem.
+
+\begin{theorem}\label{thm:contrapos}
+If $A$ and $B$ are propositions, then ${A\implies B}$ is logically equivalent to its contrapositive.
+\end{theorem}
+
+So far we have discussed how to negate propositions of the form $A$, $A\wedge B$, and $A\vee B$ for propositions $A$ and $B$.  However, we have yet to discuss how to negate propositions of the form $A\implies B$.  Prove the following result with a truth table.
+
+\begin{theorem}\label{thm:ImplicationAsDisjuction}
+If $A$ and $B$ are propositions, then the implication $A\implies B$ is logically equivalent to the disjunction $\neg A \vee B$.
+\end{theorem}
+
+The next result follows quickly from Theorem~\ref{thm:ImplicationAsDisjuction} together with De Morgan's Law. You can also verify this result using a truth table.
+
+\begin{corollary}\label{cor:NegateImplication}
+If $A$ and $B$ are propositions, then $\neg(A \implies B)$ is logically equivalent to $A \wedge \neg B$.
+\end{corollary}
+
+\begin{problem}\label{prob:Darth Vader}
+Let $A$ and $B$ be the propositions ``$\sqrt{2}$ is an irrational number'' and ``Every rectangle is a trapezoid,'' respectively.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item Express $A\implies B$ as an English sentence involving the disjunction ``or.''
+\item Express $\neg(A\implies B)$ as an English sentence involving the conjunction ``and.''
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+It turns out that the proposition ``If $.\overline{99}=\frac{9}{10}+\frac{9}{100}+\frac{9}{1000}+\cdots$, then $.\overline{99}\neq 1$'' is false. Write its  negation as a conjunction.
+\end{problem}
+
+Recall that a proposition is exclusively either true or false---it can never be both.
+
+\begin{definition}
+A compound proposition that is always false is called a \textbf{contradiction}.  A compound proposition that is always true is called a \textbf{tautology}.
+\end{definition}
+
+\begin{theorem}
+If $A$ is a proposition, then the proposition $\neg A\wedge A$ is a contradiction.
+\end{theorem}
+
+\begin{problem}
+Provide an example of a tautology using arbitrary propositions and any of the logical connectives $\neg$, $\wedge$, and $\vee$.  Prove that your example is in fact a tautology.
+\end{problem}
+
+\epigraph{I didn't want to just know names of things. I remember really wanting to know how it all worked.}{Elizabeth Blackburn, biologist}
+
+\end{section}

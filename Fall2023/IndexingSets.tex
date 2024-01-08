@@ -1,0 +1,159 @@
+\begin{section}{Indexing Sets}\label{sec:Indexing_Sets}
+
+Suppose we consider the following collection of open intervals:
+\[
+(0,1), (0,1/2), (0,1/4), \ldots, (0,1/2^{n-1}), \ldots
+\]
+This collection has a natural way for us to ``index" the sets:
+\[
+I_1=(0,1), I_2=(0,1/2), \ldots, I_n=(0,1/2^{n-1}), \ldots
+\]
+In this case the sets are \textbf{indexed} by the set $\mathbb{N}$.  The subscripts are taken from the \textbf{index set}.  If we wanted to talk about an arbitrary set from this indexed collection, we could use the notation $I_n$.
+
+Let's consider another example:
+\[
+\{a\}, \{a,b\}, \{a,b,c\}, \ldots, \{a,b,c,\ldots,z\}
+\]
+An obvious way to index these sets is as follows:
+\[
+A_1=\{a\}, A_2=\{a,b\}, A_3=\{a,b,c\}, \ldots, A_{26}=\{a,b,c,\ldots,z\}
+\]
+In this case, the collection of sets is indexed by $\{1,2,\ldots, 26\}$.
+
+Using indexing sets in mathematics is an extremely useful notational tool, but it is important to keep straight the difference between the sets that are being indexed, the elements in each set being indexed, the indexing set, and the elements of the indexing set.
+
+Any set (finite or infinite) can be used as an indexing set. Often capital Greek letters are used to denote arbitrary indexing sets and small Greek letters to represent elements of these sets. If the indexing set is a subset of $\mathbb{R}$, then it is common to use Roman letters as individual indices. Of course, these are merely conventions, not rules.
+\begin{itemize}
+\item If $\Delta$ is a set and we have a collection of sets indexed by $\Delta$, then we may write $\{S_{\alpha}\}_{\alpha\in \Delta}$ to refer to this collection. We read this as ``the set of $S$-sub-alphas over alpha in Delta.''
+\item If a collection of sets is indexed by $\mathbb{N}$, then we may write $\{U_n\}_{n\in\mathbb{N}}$ or $\{U_n\}_{n=1}^{\infty}$.
+\item Borrowing from this idea, a collection $\{A_1,\ldots,A_{26}\}$ may be written as $\{A_n\}_{n=1}^{26}$.
+\end{itemize}
+
+\begin{definition}
+Let $\{A_{\alpha}\}_{\alpha\in\Delta}$ be a collection of sets.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item The \textbf{union of the entire collection} is defined via
+\[
+\tcboxmath{\bigcup_{\alpha\in\Delta} A_{\alpha}\coloneqq \{x\mid x\in A_{\alpha} \mbox{ for some }\alpha\in \Delta\}}.
+\]
+
+\item The \textbf{intersection of the entire collection} is defined via
+\[
+\tcboxmath{\bigcap_{\alpha\in\Delta} A_{\alpha}\coloneqq \{x\mid x\in A_{\alpha} \mbox{ for all }\alpha\in \Delta\}}.
+\]
+\end{enumerate}
+\end{definition}
+
+In the special case that $\Delta=\mathbb{N}$, we write
+\[
+\bigcup_{n=1}^{\infty}A_n= \{ x \mid  x \in A_n \mbox{ for some } n \in \mathbb{N}\}= A_1\cup A_2 \cup A_3 \cup \cdots
+\] 
+and
+\[
+\bigcap_{n=1}^{\infty}A_n= \{ x \mid  x \in A_n \mbox{ for all } n \in \mathbb{N}\} = A_1\cap A_2 \cap A_3 \cap \cdots
+\] 
+Similarly, if $\Delta=\{1,2,3,4\}$, then
+\[
+\bigcup_{n=1}^{4}A_n= A_1\cup A_2 \cup A_3 \cup A_4 \quad \text{and} \quad
+\bigcap_{n=1}^{4}A_n= A_1\cap A_2 \cap A_3 \cap A_4.
+\] 
+Notice the difference between ``$\bigcup$" and ``$\cup$" (respectively, ``$\bigcap$" and ``$\cap$").  %The larger versions of the union and intersection symbols very much like the notation that you've likely seen for sums (e.g., $\sum_{i=1}^\infty i^2$).
+
+\begin{problem}
+Let $\{I_n\}_{n\in\mathbb{N}}$ be the collection of open intervals from the beginning of the section.  Find each of the following.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\displaystyle \bigcup_{n\in\mathbb{N}}I_n$
+\item $\displaystyle \bigcap_{n\in\mathbb{N}}I_n$
+\end{enumerate}
+\end{problem}
+
+%\begin{problem}
+%Repeat the previous problem, but assume that the sets are closed intervals.
+%\end{problem}
+
+\begin{problem}
+Let $\{A_n\}_{n=1}^{26}$ be the collection from earlier in the section.  Find each of the following.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\displaystyle \bigcup_{n=1}^{26}A_n$
+\item $\displaystyle \bigcap_{n=1}^{26}A_n$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Let $S_n = \{x \in \mathbb{R} \ \mid  \ n-1<x<n \}$, where $n\in \mathbb{N}$.  Find each of the following.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\displaystyle \bigcup_{n=1}^{\infty}S_n$
+\item $\displaystyle \bigcap_{n=1}^{\infty}S_n$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Let $T_n = \{x \in \mathbb{R} \ \mid  \ -\frac{1}{n}<x< \frac{1}{n} \}$, where $n\in \mathbb{N}$.  Find each of the following.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\displaystyle \bigcup_{n=1}^{\infty}T_n$
+\item $\displaystyle \bigcap_{n=1}^{\infty}T_n$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+For each $r\in\mathbb{Q}$ (the rational numbers), let $N_r$ be the set containing all real numbers \emph{except} $r$.  Find each of the following.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\displaystyle \bigcup_{r\in\mathbb{Q}}N_r$
+\item $\displaystyle \bigcap_{r\in\mathbb{Q}}N_r$
+\end{enumerate}
+\end{problem}
+
+\begin{definition}
+A collection of sets $\{A_{\alpha}\}_{\alpha\in\Delta}$ is \textbf{pairwise disjoint} if $A_{\alpha} \cap A_{\beta}=\emptyset$ for $\alpha\neq \beta$.
+\end{definition}
+
+\begin{problem}
+Provide an example of a collection of sets $\{A_{\alpha}\}_{\alpha\in\Delta}$ that is not pairwise disjoint even though $\bigcap_{\alpha\in\Delta}A_{\alpha}=\emptyset$.
+\end{problem}
+
+%\begin{problem}
+%Draw a Venn diagram of a collection of 3 sets that are pairwise disjoint.
+%\end{problem}
+
+\begin{problem}
+For each of the following, provide an example of a collection of sets with the stated property.
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item A collection of three subsets of $\mathbb{R}$ such that the collection is not pairwise disjoint, the union equals $\mathbb{R}$, and the intersection of the collection is empty.
+\item A collection of infinitely many subsets of $\mathbb{R}$ such that the collection is not pairwise disjoint, the union equals $\mathbb{R}$, and the intersection of the collection is empty.
+\item A collection of infinitely many subsets of $\mathbb{R}$ such that the collection is pairwise disjoint, the union equals $\mathbb{R}$, and the intersection of the collection is empty.
+\end{enumerate}
+\end{problem}
+
+%\begin{problem}
+%Provide an example of a collection of three sets, say $\{A_1, A_2, A_3\}$, such that the collection is \emph{not} pairwise disjoint, but $\bigcap_{n=1}^3 A_n=\emptyset$.
+%\end{problem}
+
+%For each of the next two theorems, you can choose to prove either part (a) or part (b).
+
+\begin{theorem}[Generalized Distribution of Union and Intersection]
+Let $\{A_{\alpha}\}_{\alpha\in\Delta}$ be a collection of sets and let $B$ be any set.  Then
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\displaystyle B \cup \left(\bigcap_{\alpha\in\Delta}A_{\alpha}\right)=\bigcap_{\alpha\in\Delta}(B\cup A_{\alpha})$, and
+\item $\displaystyle B \cap \left(\bigcup_{\alpha\in\Delta}A_{\alpha}\right)=\bigcup_{\alpha\in\Delta}(B\cap A_{\alpha})$.
+\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Generalized De Morgan's Law]
+Let $\{A_{\alpha}\}_{\alpha\in\Delta}$ be a collection of sets.  Then
+\begin{enumerate}[label=\textrm{(\alph*)}]
+\item $\displaystyle \left(\bigcup_{\alpha\in\Delta} A_{\alpha}\right)^C=\bigcap_{\alpha\in\Delta}A_{\alpha}^{C}$, and
+\item $\displaystyle \left(\bigcap_{\alpha\in\Delta} A_{\alpha}\right)^C=\bigcup_{\alpha\in\Delta}A_{\alpha}^{C}$.
+\end{enumerate}
+\end{theorem}
+
+At the end of Section~\ref{sec:RussellsParadox}, we mentioned the Axiom of Choice.  Using the language of indexing sets, we can now state this axiom precisely.
+
+\begin{axiom}[Axiom of Choice]
+For every indexed collection $\{A_{\alpha}\}_{\alpha\in\Delta}$ of nonempty sets, there exists an indexed collection $\{a_{\alpha}\}_{\alpha\in\Delta}$ of elements such that $a_{\alpha}\in A_{\alpha}$ for each $\alpha\in \Delta$.
+\end{axiom}
+
+Intuitively, the Axiom of Choice guarantees the existence of mathematical objects that are obtained by a sequence of choices. It applies to both the finite and infinite setting. As an analogy, we can think of each $A_{\alpha}$ as a drawer in a dresser and each $a_{\alpha}$ as an article of clothing chosen from the drawer identified with $A_{\alpha}$. The Axiom of Choice is surprisingly powerful, sometimes leading to unexpected consequences. It often gets used in subtle ways that mathematicians are not always explicit with.  We will require the Axiom of Choice when proving Theorems~\ref{thm:infiniteSetTFAE} and~\ref{thm:countable union of countable sets}. When proving these theorems, be on the lookout for where you are invoking the Axiom of Choice.
+
+\epigraph{All sorts of things can happen when you're open to new ideas and playing around with things.}{Stephanie Kwolek, chemist}
+
+\end{section}
