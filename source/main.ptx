@@ -5,6 +5,8 @@
 <rename element="fact">Skeleton Proof</rename> -->
 <rename element="heuristic">Skeleton Proof</rename>
 
+<!-- <numbering><figures/></numbering> -->
+
 <macros>
 \newcommand{\dom}{\operatorname{Dom}}
 \newcommand{\codom}{\operatorname{Codom}}
