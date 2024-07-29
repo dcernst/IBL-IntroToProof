@@ -3,7 +3,7 @@
 
 <p>In the previous section, we jumped in head first and attempted to prove several theorems in the context of number theory without a formal understanding of what it was we were doing. Likely, many issues bubbled to the surface. What is a proof? What sorts of statements require proof? What should a proof entail? How should a proof be structured? Let's take a step back and do a more careful examination of what it is we are actually doing. In the next two sections, we will introduce the basics of <term>propositional logic</term><mdash/>also referred to as <term>propositional calculus</term> or sometimes <term>zeroth-order logic</term>.</p>
 
-<definition>
+<definition xml:id="def_proposition">
 <statement>
 <p>A <term>proposition</term> is a sentence that is either true or false but never both. The <term>truth value</term> (or <term>logical value</term>) of a proposition refers to its attribute of being true or false.</p>
 </statement>

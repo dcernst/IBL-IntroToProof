@@ -110,10 +110,9 @@
   </p>
   <p>
     Our first theorem concerning the integers is stated below.
-    A <term>theorem</term> is a mathematical statement that is proved using rigorous mathematical reasoning.
-    As with most theorems in this book,
-    your task is to try your hand at proving the following theorem.
-    Give it a try.
+    A <term>theorem</term> is a mathematical statement that is proved using rigorous mathematical reasoning. A synonym for theorem is <term>proposition</term>. However, in formal mathematics research papers, the term <q>theorem</q> is typically reserved for the most important results while <q>proposition</q> is used for other interesting but generally less important results. To complicate matters, the term <q>proposition</q> has a second yet related meaning, which we will encounter in <xref ref="def_proposition">Definition</xref>. In this book, we will utilize the theorem designation for true mathematical statements. In contrast, as in <xref ref="def_proposition">Definition</xref>, we will use proposition to describe a sentence that is either true or false (but never both). See <xref ref="appendix_fancy_math_terms">Appendix</xref> for a list of fancy mathematical terms that includes theorem and proposition.
+
+    As with most theorems in this book, your task is to try your hand at proving the following theorem. Give it a try.
   </p>
   <theorem xml:id="thm_n_even_implies_n_2_even">
     <statement>
