@@ -427,42 +427,21 @@
       </p>
     </statement>
   </problem>
-  <problem>
-    <statement>
-      <p>
-        Determine whether each of the following sets is open, closed, both,
-        or neither.
-        <ol marker="labeltextrmalph">
-          <li>
-            <p>
-              <m>\displaystyle V=\bigcup_{n=2}^{\infty} \left(n - \frac{1}{2},n\right)</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\displaystyle W=\bigcap_{n=2}^{\infty} \left(n - \frac{1}{2},n\right)</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\displaystyle X=\bigcap_{n=1}^{\infty} \left(-\frac{1}{n}, \frac{1}{n}\right)</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\displaystyle Y=\bigcap_{n=1}^{\infty} \left(-n, n\right)</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>Z=(0,1)\cap \mathbb{Q}</m>
-            </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-  </problem>
-  <problem>
+  
+<problem>
+<statement>
+<p>Determine whether each of the following sets is open, closed, both, or neither.</p>
+<ol marker="labeltextrmalph">
+<li><p><m>\displaystyle V=\bigcup_{n=2}^{\infty} \left(n - \frac{1}{2},n\right)</m></p></li>
+<li><p><m>\displaystyle W=\bigcap_{n=2}^{\infty} \left(n - \frac{1}{2},n\right)</m></p></li>
+<li><p><m>\displaystyle X=\bigcap_{n=1}^{\infty} \left(-\frac{1}{n}, \frac{1}{n}\right)</m></p></li>
+<li><p><m>\displaystyle Y=\bigcap_{n=1}^{\infty} \left(-n, n\right)</m></p></li>
+<li><p><m>Z=(0,1)\cap \mathbb{Q}</m></p></li>
+</ol>
+</statement>
+</problem>
+  
+<problem>
     <statement>
       <p>
         Prove or provide a counterexample: Every non-closed set has at least one accumulation point.

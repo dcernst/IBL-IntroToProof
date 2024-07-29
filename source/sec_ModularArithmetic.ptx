@@ -369,9 +369,9 @@
         Let's compute <m>[8^{179}]_7</m>.
         We see that
         <md>
-          <mrow>_7 \amp  = ([8]_7)^{179} \amp  (\text{ <xref ref="cor_modular_power">Corollary</xref> } )</mrow>
-          <mrow>\amp  = ([1]_7)^{179} \amp  (\text{ <xref ref="thm_cong_classes_equal">Theorem</xref> } )</mrow>
-          <mrow>\amp  = [1^{179}]_7 \amp  (\text{ <xref ref="cor_modular_power">Corollary</xref> } )</mrow>
+          <mrow>[8^{179}]_7 \amp  = ([8]_7)^{179} \amp  (<xref ref="cor_modular_power">Corollary</xref>)</mrow>
+          <mrow>\amp  = ([1]_7)^{179} \amp  (<xref ref="thm_cong_classes_equal">Theorem</xref>)</mrow>
+          <mrow>\amp  = [1^{179}]_7 \amp  (<xref ref="cor_modular_power">Corollary</xref>)</mrow>
           <mrow>\amp  = [1]_7</mrow>
         </md>.
       </p>

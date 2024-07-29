@@ -358,7 +358,7 @@
   <problem>
     <statement>
       <p>
-        Let <m>A=\{\circ, \triangle, \blacktriangle, \square, \blacksquare, \bigstar, \smiley, \frownie\}</m>.
+        Let <m>A=\{\circ, \triangle, \blacktriangle, \square, \blacksquare, \bigstar, \odot, \nabla\}</m>.
         Make up a partition <m>\Omega</m> on <m>A</m> and then draw the digraph corresponding to <m>R_{\Omega}</m>.
       </p>
     </statement>
