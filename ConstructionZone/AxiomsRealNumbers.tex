@@ -63,7 +63,7 @@ We define the \textbf{natural numbers}, denoted by $\mathbb{N}$, to be the small
 
 Notice the similarity between the definition of the natural numbers presented above and the Axiom of Induction given in Section~\ref{sec:Intro_to_Induction}. Of course, we use the standard numeral system to represent the natural numbers, so that $\mathbb{N}= \{1,2,3,4,5,6,7,8,9,10\ldots\}$.
 
-Given the natural numbers, Axiom~F3/Theorem~\ref{thm:unique additive identity} and Axiom~F4/Theorem~\ref{thm:unique additive inverse} together with the operation of addition allow us to define the \textbf{integers}, denoted by $\mathbb{Z}$, in the obvious way.  That is, the integers consist of the natural numbers together with the additive identity and all of the additive inverses of the natural numbers.
+Given the natural numbers, Axiom~F3/Theorem~\ref{thm:unique additive identity} and Axiom~F4/Theorem~\ref{thm:unique additive inverse} together with the operation of addition allow us to define the \textbf{integers}, denoted by $\tcboxmath{\mathbb{Z}}$, in the obvious way.  That is, the integers consist of the natural numbers together with the additive identity and all of the additive inverses of the natural numbers.
 
 We now introduce some common notation that you are likely familiar with.  Take a moment to think about why the following is a definition as opposed to an axiom or theorem.
 
@@ -80,7 +80,11 @@ For every $a,b\in\mathbb{R}$ and $n\in\mathbb{Z}$, we define the following:
 \end{enumerate}
 \end{definition}
 
-The set of \textbf{rational numbers}, denoted by $\mathbb{Q}$, is defined to be the collection of all real numbers having the form given in Part~(b) of Definition~\ref{def:real number notation}.  The \textbf{irrational numbers} are defined to be $\mathbb{R}\setminus\mathbb{Q}$.
+The set of \textbf{rational numbers}, denoted by $\mathbb{Q}$, is defined to be the collection of all real numbers having the form given in Part~(b) of Definition~\ref{def:real number notation} with the additional requirement that $a$ and $b$ be integers.  That is,
+\[
+\tcboxmath{\mathbb{Q}:=\left\{\frac{a}{b}\mid a,b\in\mathbb{Z} \text{ and } b\neq 0\right\}}.
+\]
+The \textbf{irrational numbers} are defined to be $\mathbb{R}\setminus\mathbb{Q}$.
 
 Using the Field Axioms, we can prove each of the statements in the following theorem.
 

@@ -178,7 +178,10 @@ Take a moment to think about why the following is a definition as opposed to an 
 
 <p>The set of <term>rational numbers</term>,
 denoted by <m>\mathbb{Q}</m>,
-is defined to be the collection of all real numbers having the form given in Part<nbsp/>(b) of <xref ref="def_real_number_notation">Definition</xref>.
+is defined to be the collection of all real numbers having the form given in Part<nbsp/>(b) of <xref ref="def_real_number_notation">Definition</xref> with the additional requirement that <m>a</m> and <m>b</m> be integers.  That is,
+<me>
+\tcboxmath{\mathbb{Q}:=\left\{\frac{a}{b}\mid a,b\in\mathbb{Z} \text{ and } b\neq 0\right\}}.
+</me>
 The <term>irrational numbers</term>
 are defined to be <m>\mathbb{R}\setminus\mathbb{Q}</m>.</p>
 
