@@ -220,7 +220,7 @@ we have <m>(a+b)(a-b)=a^2-b^2</m>.</p>
 <title>Order Axioms</title>
 <statement>
 <p>For <m>a,b,c\in \mathbb{R}</m>, there is a relation <m>\tcboxmath{\lt }</m> on <m>\mathbb{R}</m> satisfying:</p>
-<dl>
+<dl width="narrow">
 <li><title>(O1)</title> (Trichotomy Law) If <m>a\neq b</m>, then either <m>a\lt b</m> or <m>b\lt a</m> but not both;</li>
 <li><title>(O2)</title> (Transitivity) If <m>a\lt b</m> and <m>b\lt c</m>, then <m>a\lt c</m>;</li>
 <li><title>(O3)</title> If <m>a\lt b</m>, then <m>a+c\lt b+c</m>;</li>
