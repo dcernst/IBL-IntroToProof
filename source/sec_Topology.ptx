@@ -509,7 +509,7 @@
           </li>
           <li>
             <p>
-              <m>\left{\frac{1}{n}\mid n\in\mathbb{N}\right\}</m>
+              <m>\left\{\frac{1}{n}\mid n\in\mathbb{N}\right\}</m>
             </p>
           </li>
           <li>
