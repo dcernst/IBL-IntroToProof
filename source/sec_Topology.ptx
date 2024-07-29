@@ -39,7 +39,7 @@
   <definition xml:id="def_open">
     <statement>
       <p>
-        A set <m>U</m> is called an open set if for every <m>x \in U</m>,
+        A set <m>U</m> is called an <term>open</term> set if for every <m>x \in U</m>,
         there exists a bounded open interval <m>(a,b)</m> containing <m>x</m> such that <m>(a,b)\subseteq U</m>.
       </p>
     </statement>
@@ -218,7 +218,7 @@
     <statement>
       <p>
         Suppose <m>A\subseteq \mathbb{R}</m>.
-        A point <m>p\in \mathbb{R}</m> is an accumulation point of <m>A</m> if for every bounded open interval <m>(a,b)</m> containing <m>p</m>,
+        A point <m>p\in \mathbb{R}</m> is an <term>accumulation point</term> of <m>A</m> if for every bounded open interval <m>(a,b)</m> containing <m>p</m>,
         there exists a point <m>q \in (a,b)\cap A</m> such that <m>q\neq p</m>.
       </p>
     </statement>
@@ -297,7 +297,7 @@
   <definition>
     <statement>
       <p>
-        A set <m>A\subseteq \mathbb{R}</m> is called closed if <m>A</m> contains all of its accumulation points.
+        A set <m>A\subseteq \mathbb{R}</m> is called <term>closed</term> if <m>A</m> contains all of its accumulation points.
       </p>
     </statement>
   </definition>
@@ -457,7 +457,7 @@
   <definition>
     <statement>
       <p>
-        A set <m>K\subseteq\mathbb{R}</m> is called compact if <m>K</m> is both closed and bounded.
+        A set <m>K\subseteq\mathbb{R}</m> is called <term>compact</term> if <m>K</m> is both closed and bounded.
       </p>
     </statement>
   </definition>
@@ -559,11 +559,11 @@
   <definition>
     <statement>
       <p>
-        A set <m>A\subseteq \mathbb{R}</m> is disconnected if there exists two disjoint open sets <m>U_1</m> and <m>U_2</m> such that <m>A\cap U_1</m> and
+        A set <m>A\subseteq \mathbb{R}</m> is <term>disconnected</term> if there exists two disjoint open sets <m>U_1</m> and <m>U_2</m> such that <m>A\cap U_1</m> and
         <m>A\cap U_2</m> are nonempty but <m>A\subseteq U_1\cup U_2</m> (equivalently,
         <m>A=(A\cap U_1)\cup(A\cap U_2)</m>).
         If a set is not disconnected,
-        then we say that it is connected.
+        then we say that it is <term>connected</term>.
       </p>
     </statement>
   </definition>
