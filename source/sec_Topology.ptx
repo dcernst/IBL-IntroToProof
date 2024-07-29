@@ -85,12 +85,12 @@
           </li>
           <li>
             <p>
-              <m>\{\frac{1}{n}\mid n\in \mathbb{N}\}</m>
+              <m>\left\{\frac{1}{n}\mid n\in \mathbb{N}\right\}</m>
             </p>
           </li>
           <li>
             <p>
-              <m>\{\frac{1}{n}\mid n\in \mathbb{N}\}\cup \{0\}</m>
+              <m>\left\{\frac{1}{n}\mid n\in \mathbb{N}\right\}\cup \{0\}</m>
             </p>
           </li>
           <li>
@@ -419,6 +419,7 @@
       </p>
     </statement>
   </theorem>
+
   <problem xml:id="prob_union_of_closed_sets">
     <statement>
       <p>
@@ -428,16 +429,17 @@
     </statement>
   </problem>
   
-<problem>
+<problem xml:id="prob_open_or_closed">
 <statement>
-<p>Determine whether each of the following sets is open, closed, both, or neither.</p>
+<p>Determine whether each of the following sets is open, closed, both, or neither.
 <ol marker="labeltextrmalph">
-<li><p><m>\displaystyle V=\bigcup_{n=2}^{\infty} \left(n - \frac{1}{2},n\right)</m></p></li>
-<li><p><m>\displaystyle W=\bigcap_{n=2}^{\infty} \left(n - \frac{1}{2},n\right)</m></p></li>
-<li><p><m>\displaystyle X=\bigcap_{n=1}^{\infty} \left(-\frac{1}{n}, \frac{1}{n}\right)</m></p></li>
-<li><p><m>\displaystyle Y=\bigcap_{n=1}^{\infty} \left(-n, n\right)</m></p></li>
+<li><m>V=\bigcup_{n=2}^{\infty} \left(n - \frac{1}{2},n\right)</m></li>
+<li><p><m>W=\bigcap_{n=2}^{\infty} \left(n - \frac{1}{2},n\right)</m></p></li>
+<li><p><m>X=\bigcap_{n=1}^{\infty} \left(-\frac{1}{n}, \frac{1}{n}\right)</m></p></li>
+<li><p><m>Y=\bigcap_{n=1}^{\infty} \left(-n, n\right)</m></p></li>
 <li><p><m>Z=(0,1)\cap \mathbb{Q}</m></p></li>
 </ol>
+</p>
 </statement>
 </problem>
   
@@ -507,12 +509,12 @@
           </li>
           <li>
             <p>
-              <m>\{\frac{1}{n}\mid n\in\mathbb{N}\}</m>
+              <m>\left{\frac{1}{n}\mid n\in\mathbb{N}\right\}</m>
             </p>
           </li>
           <li>
             <p>
-              <m>[0,1]\cup\{1+\frac{1}{n}\mid n\in\mathbb{N}\}</m>
+              <m>[0,1]\cup\left\{1+\frac{1}{n}\mid n\in\mathbb{N}\right\}</m>
             </p>
           </li>
           <li>
