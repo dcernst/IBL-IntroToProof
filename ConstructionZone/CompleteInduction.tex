@@ -11,7 +11,7 @@ Let $P(1), P(2), P(3), \ldots$ be a sequence of statements, one for each natural
 Then $P(n)$ is true for all $n\in\mathbb{N}$.
 \end{theorem}
 
-Note the difference between ordinary induction (Theorems~\ref{thm:PMI} and \ref{thm:PMI2}) and complete induction. For the induction step of complete induction, we are not only assuming that $P(k)$ is true, but rather that $P(j)$ is true for all $j$ from 1 to $k$.  Despite the name, complete induction is not any stronger or more powerful than ordinary induction.  It is worth pointing out that anytime ordinary induction is an appropriate proof technique, so is complete induction. So, when should we use complete induction?
+Note the difference between ordinary induction (Theorems~\ref{thm:PMI} and \ref{thm:PMI2}) and complete induction. For the induction step of complete induction, we are not only assuming that $P(k)$ is true, but rather that $P(j)$ is true for all $j$ from $m$ to $k$.  Despite the name, complete induction is not any stronger or more powerful than ordinary induction.  It is worth pointing out that anytime ordinary induction is an appropriate proof technique, so is complete induction. So, when should we use complete induction?
 
 In the inductive step, you need to reach $P(k+1)$, and you should ask yourself which of the previous cases you need to get there. If all you need is the statement $P(k)$, then ordinary induction is the way to go. If, for example, two preceding cases, $P(k - 1)$ and $P(k)$, are necessary to reach $P(k + 1)$, then complete induction is appropriate. In the extreme, if one needs the full range of preceding cases (i.e., all statements $P(1), P(2),\ldots,P(k)$), then again complete induction should be utilized.
 

@@ -39,7 +39,7 @@
     and complete induction.
     For the induction step of complete induction,
     we are not only assuming that <m>P(k)</m> is true,
-    but rather that <m>P(j)</m> is true for all <m>j</m> from 1 to <m>k</m>.
+    but rather that <m>P(j)</m> is true for all <m>j</m> from <m>m</m> to <m>k</m>.
     Despite the name,
     complete induction is not any stronger or more powerful than ordinary induction.
     It is worth pointing out that anytime ordinary induction is an appropriate proof technique,
