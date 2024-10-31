@@ -17,15 +17,12 @@
         <ol marker="labeltextrmroman">
           <li>
             <p>
-              <m>P(1)</m> is true, and
+              <m>P(1),P(2),\ldots, P(m)</m> is true for some <m>m\geq 1</m>, and
             </p>
           </li>
           <li>
             <p>
-              For all <m>k \in \mathbb{N}</m>,
-              if <m>P(j)</m> is true for all
-              <m>j\in \mathbb{N}</m> such that <m>j \leq k</m>,
-              then <m>P(k+1)</m> is true.
+              For all <m>k \in \mathbb{N}</m> with <m>m\leq k</m>, if <m>P(j)</m> is true for all <m>j\in \mathbb{N}</m> such that <m>m\leq j \leq k</m>, then <m>P(k+1)</m> is true.
             </p>
           </li>
         </ol>
@@ -54,7 +51,7 @@
     and you should ask yourself which of the previous cases you need to get there.
     If all you need is the statement <m>P(k)</m>,
     then ordinary induction is the way to go.
-    If two preceding cases, <m>P(k - 1)</m> and <m>P(k)</m>,
+    If, for example, two preceding cases, <m>P(k - 1)</m> and <m>P(k)</m>,
     are necessary to reach <m>P(k + 1)</m>,
     then complete induction is appropriate.
     In the extreme,
@@ -64,7 +61,7 @@
   <p>
     Note that in situations where complete induction is appropriate,
     it might be the case that you need to verify more than one case in the base step.
-    The number of base cases to be checked depends on how one needs to
+    The number of base cases to be checked depends on how far one needs to
     <q>look back</q>
     in the induction step.
   </p>
@@ -76,10 +73,10 @@
 
 <proof>
 <!-- <p><alert>Proof.</alert>  -->
-<p>We proceed by induction.
+<p>We proceed by complete induction.
 <ol marker="i">
-<li><p>Base step: <em>[Verify that <m>P(1)</m> is true. Depending on the statement, you may also need to verify that <m>P(k)</m> is true for other specific values of <m>k</m>.]</em></p></li>
-<li><p>Inductive step: <em>[Your goal is to prove <q>For all <m>k\in\mathbb{N}</m>, if <m>P(j)</m> is true for all <m>j\in \mathbb{N}</m> such that <m>j \leq k</m>, then <m>P(k+1)</m> is true.</q>]</em> Let <m>k \in \mathbb{N}</m>. Suppose <m>P(j)</m> is true for all <m>j \leq k</m>. <em>[Do something to derive that <m>P(k+1)</m> is true.]</em> Therefore, <m>P(k+1)</m> is true.</p></li>
+<li><p>Base step: <em>[Verify that each of the statements <m>P(1),P(2),\ldots, P(m)</m> are true.  The value of <m>m</m> depends on the statement.]</em></p></li>
+<li><p>Inductive step: <em>[Your goal is to prove <q>For all <m>k\in\mathbb{N}</m> with <m>m\leq k</m>, if <m>P(j)</m> is true for all <m>j\in \mathbb{N}</m> such that <m>m\leq j \leq k</m>, then <m>P(k+1)</m> is true.</q>]</em> Let <m>k \in \mathbb{N}</m> with <m>m\leq k</m> and suppose <m>P(j)</m> is true for all <m>m\leq j \leq k</m>. <em>[Do something to derive that <m>P(k+1)</m> is true.]</em> Therefore, <m>P(k+1)</m> is true.</p></li>
 </ol>
 </p>
 <p>Thus, by complete induction, <m>P(n)</m> is true for all <m>n \in \mathbb{N}</m>. </p>

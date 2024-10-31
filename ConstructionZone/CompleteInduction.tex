@@ -5,28 +5,28 @@ There is another formulation of induction, where the inductive step begins with 
 \begin{theorem}[Principle of Complete Mathematical Induction]
 Let $P(1), P(2), P(3), \ldots$ be a sequence of statements, one for each natural number.  Assume that
 \begin{enumerate}[label=\textrm{(\roman*)}]
-\item $P(1)$ is true, and
-\item For all $k \in \mathbb{N}$, if $P(j)$ is true for all $j\in \mathbb{N}$ such that $j \leq k$, then $P(k+1)$ is true.  
+\item $P(1),P(2),\ldots, P(m)$ is true for some $m\geq 1$, and
+\item For all $k \in \mathbb{N}$ with $m\leq k$, if $P(j)$ is true for all $j\in \mathbb{N}$ such that $m\leq j \leq k$, then $P(k+1)$ is true.  
 \end{enumerate}
 Then $P(n)$ is true for all $n\in\mathbb{N}$.
 \end{theorem}
 
 Note the difference between ordinary induction (Theorems~\ref{thm:PMI} and \ref{thm:PMI2}) and complete induction. For the induction step of complete induction, we are not only assuming that $P(k)$ is true, but rather that $P(j)$ is true for all $j$ from 1 to $k$.  Despite the name, complete induction is not any stronger or more powerful than ordinary induction.  It is worth pointing out that anytime ordinary induction is an appropriate proof technique, so is complete induction. So, when should we use complete induction?
 
-In the inductive step, you need to reach $P(k+1)$, and you should ask yourself which of the previous cases you need to get there. If all you need is the statement $P(k)$, then ordinary induction is the way to go. If two preceding cases, $P(k - 1)$ and $P(k)$, are necessary to reach $P(k + 1)$, then complete induction is appropriate. In the extreme, if one needs the full range of preceding cases (i.e., all statements $P(1), P(2),\ldots,P(k)$), then again complete induction should be utilized.
+In the inductive step, you need to reach $P(k+1)$, and you should ask yourself which of the previous cases you need to get there. If all you need is the statement $P(k)$, then ordinary induction is the way to go. If, for example, two preceding cases, $P(k - 1)$ and $P(k)$, are necessary to reach $P(k + 1)$, then complete induction is appropriate. In the extreme, if one needs the full range of preceding cases (i.e., all statements $P(1), P(2),\ldots,P(k)$), then again complete induction should be utilized.
 
-Note that in situations where complete induction is appropriate, it might be the case that you need to verify more than one case in the base step. The number of base cases to be checked depends on how one needs to ``look back" in the induction step.
+Note that in situations where complete induction is appropriate, it might be the case that you need to verify more than one case in the base step. The number of base cases to be checked depends on how far one needs to ``look back" in the induction step.
 
 \begin{skeleton}[Proof of $(\forall n\in\mathbb{N})P(n)$ by Complete Induction]
 Here is the general structure for a proof by complete induction.
 
 \begin{mdframed}[style=skeleton]
 \begin{proof}
-We proceed by induction.
+We proceed by strong induction.
 \begin{enumerate}\setlength{\itemsep}{0in}
-\item[(i)] Base step: \emph{[Verify that $P(1)$ is true.  Depending on the statement, you may also need to verify that $P(k)$ is true for other specific values of $k$.]}
+\item[(i)] Base step: \emph{[Verify that each of the statements $P(1),P(2),\ldots, P(m)$ are true.  The value of $m$ depends on the statement.]}
 
-\item[(ii)] Inductive step:  \emph{[Your goal is to prove ``For all $k\in\mathbb{N}$, if $P(j)$ is true for all $j\in \mathbb{N}$ such that $j \leq k$, then $P(k+1)$ is true.'']} Let $k \in \mathbb{N}$.  Suppose $P(j)$ is true for all $j \leq k$. \emph{[Do something to derive that $P(k+1)$ is true.]} Therefore, $P(k+1)$ is true.
+\item[(ii)] Inductive step:  \emph{[Your goal is to prove ``For all $k\in\mathbb{N}$ with $m\leq k$, if $P(j)$ is true for all $j\in \mathbb{N}$ such that $m\leq j \leq k$, then $P(k+1)$ is true.'']} Let $k \in \mathbb{N}$ with $m\leq k$ and suppose $P(j)$ is true for all $m\leq j \leq k$. \emph{[Do something to derive that $P(k+1)$ is true.]} Therefore, $P(k+1)$ is true.
 \end{enumerate}
 Thus, by complete induction, $P(n)$ is true for all $n \in\mathbb{N}$.
 \end{proof}
