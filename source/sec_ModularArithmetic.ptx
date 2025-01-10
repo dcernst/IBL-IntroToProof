@@ -322,13 +322,11 @@
     </statement>
   </theorem>
   <p>
-    One consequence of <xref ref="thm_modular_add_comm_assoc"></xref> <xref ref="modular_add_assoc"></xref>
-    and <xref ref="thm_modular_mult_comm_assoc"></xref>
-    <xref ref="modular_mult_assoc"></xref>
+    One consequence of <xref ref="thm_modular_add_comm_assoc"></xref><xref ref="modular_add_assoc"></xref>
+    and <xref ref="thm_modular_mult_comm_assoc"></xref><xref ref="modular_mult_assoc"></xref>
     is that parentheses are not needed when adding or multiplying congruence classes.
-    The next theorem follows from <xref ref="def_modular_arithmetic">Definition</xref> together with <xref ref="thm_modular_add_comm_assoc"></xref>, <xref ref="modular_add_assoc"></xref>,
-    and <xref ref="thm_modular_mult_comm_assoc"></xref>
-    <xref ref="modular_mult_assoc"></xref> and induction on <m>k</m>.
+    The next theorem follows from <xref ref="def_modular_arithmetic">Definition</xref> together with <xref ref="thm_modular_add_comm_assoc"></xref><xref ref="modular_add_assoc"></xref>
+    and <xref ref="thm_modular_mult_comm_assoc"></xref><xref ref="modular_mult_assoc"></xref> and induction on <m>k</m>.
   </p>
   <theorem xml:id="thm_modular_sums_products">
     <statement>
