@@ -1,7 +1,7 @@
 <section xml:id="sec_Partitions">
   <title>Partitions</title>
   <p>
-    <xref ref="thm_related_if_and_only_if_same_class">Theorems</xref>
+    <xref ref="thm_related_if_and_only_if_same_class"></xref>
     and <xref ref="thm_equiv_yields_partition"></xref>
     imply that if <m>\sim</m> is an equivalence relation on a set <m>A</m>,
     then <m>\sim</m> breaks <m>A</m> up into pairwise disjoint
