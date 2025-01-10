@@ -122,7 +122,7 @@
       <p>
         For <m>n\in \mathbb{N}</m>,
         let <m>\tcboxmath{[a]_n}</m> denote the equivalence class of <m>a</m> with respect to <m>\equiv_n</m>
-        (see <xref ref="def_relatives">Definitions</xref>
+        (see <xref ref="def_relatives"></xref>
         and <xref ref="def_equivalence_class"></xref>).
         The equivalence class <m>[a]_n</m> is called the congruence
         (or residue)
