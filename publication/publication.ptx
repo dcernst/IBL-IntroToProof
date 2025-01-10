@@ -104,7 +104,12 @@
     <!-- also @knowls, @toc, and @banner, although no          -->
     <!-- alternative styles exist yet for those.               -->
     <!-- <css style="default" colors="blue_red" /> -->
-    <css style="oscarlevin"/>
+
+    <!-- old -->
+    <!-- <css style="oscarlevin"/> -->
+
+    <!-- new -->
+    <css theme="denver"/>
     <!-- Search can be default or none, or you can use a Google-cx number to use google's search
     feature (but then variant should be set to none to avoid conflict) -->
     <search variant="default" />
