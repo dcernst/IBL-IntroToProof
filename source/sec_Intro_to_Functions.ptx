@@ -517,7 +517,7 @@
     <me>
       [a_1]_n [a_2]_n \cdots  [a_k]_n
     </me>
-    are well defined in <m>\mathbb{Z}/n\mathbb{Z}</m> in light of <xref ref="thm_modular_add_comm_assoc">Theorems</xref>
+    are well defined in <m>\mathbb{Z}/n\mathbb{Z}</m> in light of <xref ref="thm_modular_add_comm_assoc"></xref>
     <xref ref="modular_add_assoc"></xref>
     and <xref ref="thm_modular_mult_comm_assoc"></xref>
     <xref ref="modular_mult_assoc"></xref>.

@@ -283,7 +283,7 @@
     </statement>
   </problem>
   <p>
-    Consider using <xref ref="thm_rationals_dense">Theorems</xref>
+    Consider using <xref ref="thm_rationals_dense"></xref>
     and <xref ref="thm_irrationals_dense"></xref> when proving the next result.
   </p>
   <theorem>
@@ -400,7 +400,7 @@
     </statement>
   </theorem>
   <p>
-    The next two theorems are analogous to <xref ref="thm_union_of_open_sets">Theorems</xref>
+    The next two theorems are analogous to <xref ref="thm_union_of_open_sets"></xref>
     and <xref ref="thm_finite_intersection_of_open_sets"></xref>.
   </p>
   <theorem xml:id="thm_intersection_of_closed_sets">

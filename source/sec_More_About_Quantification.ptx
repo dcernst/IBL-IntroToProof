@@ -493,7 +493,7 @@ nm=(2k)m=2(km)
     For example,
     in <xref ref="sec_AxiomsRealNumbers">Section</xref>,
     you will be asked to prove that both the additive and multiplicative identities (i.e, 0 and 1) are unique
-    (see <xref ref="thm_unique_additive_identity">Theorems</xref>
+    (see <xref ref="thm_unique_additive_identity"></xref>
     and <xref ref="thm_unique_multiplicative_identity"></xref>).
     As another example, the Fundamental Theorem of Arithmetic
     (see <xref ref="thm_FTA">Theorem</xref>)

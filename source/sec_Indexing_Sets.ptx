@@ -347,7 +347,7 @@
     The Axiom of Choice is surprisingly powerful,
     sometimes leading to unexpected consequences.
     It often gets used in subtle ways that mathematicians are not always explicit with.
-    We will require the Axiom of Choice when proving <xref ref="thm_infiniteSetTFAE">Theorems</xref>
+    We will require the Axiom of Choice when proving <xref ref="thm_infiniteSetTFAE"></xref>
     and <xref ref="thm_countable_union_of_countable_sets"></xref>.
     When proving these theorems,
     be on the lookout for where you are invoking the Axiom of Choice.

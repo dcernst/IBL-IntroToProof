@@ -102,7 +102,7 @@
   <p>
     The previous two examples illustrate an important distinction between finite sets and infinite sets,
     namely infinite sets can be in bijection with proper subsets of themselves!
-    <xref ref="thm_cardinalityProperSubsetsFinite">Theorems</xref>
+    <xref ref="thm_cardinalityProperSubsetsFinite"></xref>
     and <xref ref="thm_infiniteSetTFAE"></xref> will make this idea explicit.
   </p>
   <example>

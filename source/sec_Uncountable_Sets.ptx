@@ -260,7 +260,7 @@
     we can always increase the cardinality by considering its power set.
     That is, if <m>A</m> is a set,
     <m>\mathcal{P}(A)</m> has strictly greater cardinality than <m>A</m> itself.
-    For finite sets, Cantor's theorem follows from <xref ref="thm_size_of_power_set_for_finite_sets">Theorems</xref>
+    For finite sets, Cantor's theorem follows from <xref ref="thm_size_of_power_set_for_finite_sets"></xref>
     and <xref ref="thm_n_2_n"></xref>
     (both of which we proved via induction).
     Perhaps much more surprising is that Cantor discovered an elegant argument that is applicable to any set,

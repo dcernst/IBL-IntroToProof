@@ -526,7 +526,7 @@ See <xref ref="fig_visual_of__a-b__r">Figure</xref>.</p>
 </image>
 </figure>
 
-<p>Consider using <xref ref="thm_plus_minus_less_than_or_equal_to_abs_value">Theorems</xref>
+<p>Consider using <xref ref="thm_plus_minus_less_than_or_equal_to_abs_value"></xref>
 and <xref ref="thm_abs_value_less_than_or_equal_to_iff_squeezed_by_plus_minus"></xref>
 when attacking the next result,
 which is known as the <term>Triangle Inequality</term>.

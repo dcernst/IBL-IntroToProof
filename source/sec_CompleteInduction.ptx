@@ -34,7 +34,7 @@
   </theorem>
   <p>
     Note the difference between ordinary induction
-    (<xref ref="thm_PMI">Theorems</xref>
+    (<xref ref="thm_PMI"></xref>
     and <xref ref="thm_PMI2"></xref>)
     and complete induction.
     For the induction step of complete induction,

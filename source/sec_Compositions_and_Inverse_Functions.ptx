@@ -451,7 +451,7 @@ The relation <m>f^{-1}</m> is a function if and only if every horizontal line hi
     </statement>
   </theorem>
   <p>
-    The upshot of <xref ref="thm_comp_of_inverses">Theorems</xref>
+    The upshot of <xref ref="thm_comp_of_inverses"></xref>
     and <xref ref="thm_unique_inverse"></xref>
     is that if <m>f^{-1}</m> is a function,
     then it is the only one satisfying the two-sided inverse property exhibited in <xref ref="cor_two-sided_inverse">Corollary</xref>
