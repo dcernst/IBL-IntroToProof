@@ -106,10 +106,11 @@
     <!-- <css style="default" colors="blue_red" /> -->
 
     <!-- old -->
-    <!-- <css style="oscarlevin"/> -->
+    <css style="oscarlevin"/>
 
     <!-- new -->
-    <css theme="denver"/>
+    <!-- <css theme="denver"/> -->
+
     <!-- Search can be default or none, or you can use a Google-cx number to use google's search
     feature (but then variant should be set to none to avoid conflict) -->
     <search variant="default" />
