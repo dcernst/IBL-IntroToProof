@@ -310,7 +310,7 @@
     </statement>
   </problem>
   <p>
-    The upshot of Parts<nbsp/>(i) and<nbsp/>(l) of <xref ref="prob_open_or_not">Problems</xref>
+    The upshot of Parts<nbsp/>(i) and<nbsp/>(l) of <xref ref="prob_open_or_not"></xref>
     and <xref ref="prob_closed_or_not"></xref>
     is that <m>\mathbb{R}</m> and
     <m>\emptyset</m> are both open and closed.

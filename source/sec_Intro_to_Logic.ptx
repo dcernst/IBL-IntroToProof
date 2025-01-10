@@ -334,7 +334,7 @@
     </statement>
   </problem>
   <p>
-    Based on <xref ref="prob_converse">Problems</xref> and <xref ref="prob_inverse"></xref>, we can conclude that the converse and inverse of a conditional proposition do not necessarily have the same truth value as the original statement.
+    Based on <xref ref="prob_converse"></xref> and <xref ref="prob_inverse"></xref>, we can conclude that the converse and inverse of a conditional proposition do not necessarily have the same truth value as the original statement.
   </p>
   <problem xml:id="prob_converse_and_inverse">
     <statement>
