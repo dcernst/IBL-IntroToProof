@@ -69,8 +69,8 @@ Our axioms for the real numbers fall into three categories:
 <li><title>(F5)</title> (Associativity for Multiplication) For all <m>a,b, c\in \mathbb{R}</m> we have <m>(ab)c = a(bc)</m>;</li>
 <li><title>(F6)</title> (Commutativity for Multiplication) For all <m>a,b\in \mathbb{R}</m>, we have <m>ab=ba</m>;</li>
 <li><title>(F7)</title> (Multiplicative Identity) There exists <m>1\in\mathbb{R}</m> such that <m>1\neq 0</m> and for all <m>a\in\mathbb{R}</m>, <m>1a=a</m>;</li>
-<li><title>(F8)</title> (Multiplicative Inverses) For all <m>a\in\mathbb{R}\setminus\{0\}</m> there exists <m>a^{-1}\in\mathbb{R}</m> such that <m>aa^{-1}=1</m>.</li>
-<li><title>(F9)</title> (Distributive Property) For all <m>a,b,c\in \mathbb{R}</m>, <m>a(b+c)=ab+ac</m>;</li>
+<li><title>(F8)</title> (Multiplicative Inverses) For all <m>a\in\mathbb{R}\setminus\{0\}</m> there exists <m>a^{-1}\in\mathbb{R}</m> such that <m>aa^{-1}=1</m>;</li>
+<li><title>(F9)</title> (Distributive Property) For all <m>a,b,c\in \mathbb{R}</m>, <m>a(b+c)=ab+ac</m>.</li>
 </dl>
 </p>
 </statement>
@@ -220,12 +220,14 @@ we have <m>(a+b)(a-b)=a^2-b^2</m>.</p>
 <title>Order Axioms</title>
 <statement>
 <p>For <m>a,b,c\in \mathbb{R}</m>, there is a relation <m>\tcboxmath{\lt }</m> on <m>\mathbb{R}</m> satisfying:</p>
+<p>
 <dl width="narrow">
 <li><title>(O1)</title> (Trichotomy Law) If <m>a\neq b</m>, then either <m>a\lt b</m> or <m>b\lt a</m> but not both;</li>
 <li><title>(O2)</title> (Transitivity) If <m>a\lt b</m> and <m>b\lt c</m>, then <m>a\lt c</m>;</li>
 <li><title>(O3)</title> If <m>a\lt b</m>, then <m>a+c\lt b+c</m>;</li>
-<li><title>(O4)</title> If <m>a\lt b</m> and <m>0\lt c</m>, then <m>ac\lt bc</m>;</li>
+<li><title>(O4)</title> If <m>a\lt b</m> and <m>0\lt c</m>, then <m>ac\lt bc</m>.</li>
 </dl>
+</p>
 </statement>
 </axiom>
 

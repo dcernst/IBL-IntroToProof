@@ -153,12 +153,14 @@
 <problem xml:id="prob_truth_tables">
 <statement>
 <p>Create a truth table for each of the following compound propositions. You should add additional columns to your tables as needed to assist you with intermediate steps. For example, you might need four columns for the third and fourth compound propositions below.</p>
+<p>
 <ol marker="a">
 <li><p><m>\neg A</m></p></li>
 <li><p><m>A \vee B</m></p></li>
 <li><p><m>\neg (A \wedge B)</m></p></li>
 <li><p><m>\neg A \wedge \neg B</m></p></li>
 </ol>
+</p>
 </statement>
 </problem>
 
