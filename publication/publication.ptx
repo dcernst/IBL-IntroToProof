@@ -117,7 +117,7 @@
     <!-- Embedded calculators.  For math, this could be geogebra-classic, geogebra-graphing,
     geogebra-geometry, and geogebra-3d.  For ActiveCode, you can specify a language (python,
     javascript, etc).  -->
-    <calculator model="none" activecode="none" />
+    <calculator model="none" activecode="none" /> 
     <!-- Set the base URL of where the online version is hosted to have links in other formats -->
     <!-- <baseurl href="changetomywebsite.org"/> -->
     <!-- Control behavior of online WeBWorK, per type: -->
