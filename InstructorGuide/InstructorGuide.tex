@@ -216,7 +216,20 @@ You will have to decide how firm of a stance you want to take on phrases like ``
 
 \blankline
 
-To save some time, notice that I wrote, ``For the remainder of this section, you may assume that every integer is either even or odd but never both" in the paragraph below \textbf{Definition~2.1}.  This is something you should point out to students and be sure to tell them that officially this is something one would need to prove. We will be more careful in later chapters.
+To save some time, notice that I wrote the following in the paragraph below \textbf{Definition~2.1}.
+\begin{quote}
+\emph{``For the remainder of this section, you may assume that every integer is either even or odd but never both''}
+\end{quote}
+This is something you should point out to students and be sure to tell them that officially this is something one would need to prove. If you want to handle this more carefully, one approach would be to proof that $0$ is even, $1$ is odd, and then prove that each integer is never both even and odd using a proof by contradiction (a method that isn't covered until \textbf{Section~2.3}).
+
+\blankline
+
+A very critical issue naturally arises when proving \textbf{Theorem~2.2}. Namely, one needs to know that the integers are closed under multiplication.  The absence of discussion about this issue in the book itself is intentional at this point.  While discussing the proof of \textbf{Theorem~2.2} with students, I make sure we discuss the importance of knowing that the product of two integers is an integer.  At this point, we agree (at least for now) that we will take the following items for granted:
+\begin{enumerate}
+\item We are allowed to do basic arithmetic and assume closure, associativity, and commutativity of the integers (or real numbers) under addition, subtraction, and multiplication.
+\item If we encounter a specific integer (e.g. $0$, $1$, $-3$, $8$, etc.), we can freely state whether it is odd or even.
+\end{enumerate}
+Most students are either unfamiliar with the words ``closure'', ``associativity'', and ``commutativity'' or have forgotten their precise meaning. I will use these words, reminding them what they mean, but at this point, I'm not concerned with whether they fully digest which word means what. For the rest of this chapter, I make a point of emphasizing when we are making use of closure in a proof. Time permitting, I will also point out to them that the integers are not closed under division and that the natural numbers are not closed under subtraction nor division.
 
 \blankline
 
@@ -228,7 +241,7 @@ To save some time, notice that I wrote, ``For the remainder of this section, you
 
 \blankline
 
-The same two approaches could be employed in the proof of \textbf{Theorem~2.10}.  In fact, perhaps I should have called Theorem~2.10 a corollary.
+The same two approaches could be employed in the proof of \textbf{Theorem~2.10}.  In fact, perhaps I should have called \textbf{Theorem~2.10} a corollary.
 
 \blankline
 
