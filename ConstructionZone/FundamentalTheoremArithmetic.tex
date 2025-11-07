@@ -67,18 +67,18 @@ This implies that $r' = n-d(q+1)$.  Since $0\leq r'<r$, we have produced an elem
 It remains to show that $q$ and $r$ are unique.  Suppose $q_1,q_2, r_1,r_2\in\mathbb{Z}$ such that $n=dq_1+r_1$ and $n=dq_2+r_2$ and $0\leq r_1,r_2<d$.  Without loss of generality, suppose $r_2\geq r_1$, so that $0\leq r_2-r_1<d$. Since $dq_1+r_1=dq_2+r_2$, we see that $r_2-r_1=d(q_1-q_2)$. But then $d$ divides $r_2-r_1$. If $r_2-r_1>0$, then by Theorem~\ref{thm:natural divisor less than or equal to natural dividend}, it must be the case that $r_2-r_1\geq d$.  However, we know $0\leq r_2-r_1<d$, and so we must have $r_2-r_1=0$. Therefore, $r_1=r_2$, which in turn implies $q_1=q_2$.  We have shown that $q$ and $r$ are unique.
 \end{proof}
 
-In the Division Algorithm, we call $n$ the \textbf{dividend}, $d$ the \textbf{divisor}, $q$ the \textbf{quotient}, and $r$ the \textbf{remainder}.  It is worth pointing out that the Division Algorithm holds more generally where the divisor $d$ is not required to be positive. In this case, we must replace $0\leq r<n$ with $0\leq r<|n|$. 
+In the Division Algorithm, we call $n$ the \textbf{dividend}, $d$ the \textbf{divisor}, $q$ the \textbf{quotient}, and $r$ the \textbf{remainder}.  It is worth pointing out that the Division Algorithm holds more generally where the divisor $d$ is not required to be positive. In this case, we must replace $0\leq r<d$ with $0\leq r<|d|$. 
 
 Contrary to its name, our statement of the Division Algorithm is not actually an algorithm, but this is the theorem's traditional name. However, there is an algorithm buried in this theorem. If $n$ is nonnegative, repeatedly subtract $d$ from $n$ until we obtain an integer value that lies between 0 (inclusive) and $d$ (exclusive). The resulting value is the remainder $r$ while the number of times that $d$ is subtracted is the quotient $q$. On the other hand, if $n$ is negative, repeatedly add $d$ to $n$ until we obtain an integer value that lies between 0 (inclusive) and $d$ (exclusive). Again, the resulting value is $r$. However, in this case, we take $-q$ to be the number of times that $d$ is added, so that $q$ (a negative value) is the quotient.
 
 \begin{problem}
-Suppose $n=27$ and $d=5$. Find the quotient and remainder that are guaranteed to exist by the Division Algorithm.  That is, find the unique $q,r\in\mathbb{Z}$ such that $0\leq r<n$ and $n=dq+r$.
+Suppose $n=27$ and $d=5$. Find the quotient and remainder that are guaranteed to exist by the Division Algorithm.  That is, find the unique $q,r\in\mathbb{Z}$ such that $0\leq r<d$ and $n=dq+r$.
 \end{problem}
 
 It is a little trickier to determine $q$ and $r$ when $n$ is negative.
 
 \begin{problem}
-Suppose $n=-26$ and $d=3$. Find the quotient and remainder that are guaranteed to exist by the Division Algorithm.  That is, find the unique $q,r\in\mathbb{Z}$ such that $0\leq r<n$ and $n=dq+r$.
+Suppose $n=-26$ and $d=3$. Find the quotient and remainder that are guaranteed to exist by the Division Algorithm.  That is, find the unique $q,r\in\mathbb{Z}$ such that $0\leq r<d$ and $n=dq+r$.
 \end{problem}
 
 It is useful to have some additional terminology.
