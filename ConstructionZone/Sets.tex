@@ -10,14 +10,18 @@ If we think of a set as a box potentially containing some stuff, then the empty 
 \]
 where $P(x)$ is some predicate statement involving $x$. The first part ``$x \in A$" denotes what type of $x$ is being considered.  The predicate to the right of the vertical bar (not to be confused with ``divides") determines the condition(s) that each $x$ must satisfy in order to be a member of the set.  This notation is read as ``The set of all $x$ in $A$ such that $P(x)$." As an example, the set $\{x\in \mathbb{N}\mid x \mbox{ is even and }x\geq 8\}$ describes the collection of even natural numbers that are greater than or equal to 8.
 
-There are a few sets that are commonly discussed in mathematics and have predefined symbols to denote them. We have already encountered the integers, natural numbers, and real numbers. Notice that our definition of the rational numbers uses set-builder notation.
+There are a few sets that are commonly discussed in mathematics and have predefined symbols to denote them. We have already encountered the integers, natural numbers, and real numbers.
 \begin{itemize}
 \item \textbf{Natural Numbers:} $\tcboxmath{\mathbb{N}\coloneqq \{1,2,3,\ldots\}}$. Some books will include zero in the set of natural numbers, but we do not.
 \item \textbf{Integers:} $\tcboxmath{\mathbb{Z}\coloneqq \{0, \pm 1, \pm2, \pm 3, \ldots\}}$.
-\item \textbf{Rational Numbers:} $\tcboxmath{\mathbb{Q}\coloneqq \{a/b \mid a, b \in \mathbb{Z} \text{ and } b \neq 0\}}$.
+\item \textbf{Rational Numbers:} $\tcboxmath{\mathbb{Q}\coloneqq \{x\in \mathbb{R} \mid \text{there exists }a, b \in \mathbb{Z} \text{ such that } b \neq 0\text{ and }x=a/b\}}$.
 \item \textbf{Real Numbers:} $\tcboxmath{\mathbb{R}}$ denotes the set of real numbers. We are taking for granted that you have some familiarity with this set. 
 \end{itemize}
-Since the set of natural numbers consists of the positive integers, the natural numbers are sometimes denoted by $\tcboxmath{\mathbb{Z}^+}$.
+Since the set of natural numbers consists of the positive integers, the natural numbers are sometimes denoted by $\tcboxmath{\mathbb{Z}^+}$. Notice that our definition of the rational numbers uses set-builder notation. This is often abbreviated as
+\[
+\mathbb{Q} = \{a/b \mid a, b \in \mathbb{Z} \text{ and } b \neq 0\}.
+\]
+Take a moment to convince yourself that this is a reasonable shorthand.
 
 \begin{problem}
 Unpack the meaning of each of the following sets and provide a description of the elements that each set contains.
